@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	
+	xmlns:Blocks-embedding="http://imce.jpl.nasa.gov/Blocks/Blocks-embedding#"
+	xmlns:mgss-service="http://imce.jpl.nasa.gov/mgss-service/mgss-service#"
+	xmlns:timeline="http://imce.jpl.nasa.gov/timeline/timeline#"
+	xmlns:PrimitiveTypes="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes#"
+	xmlns:math-embedding="http://imce.jpl.nasa.gov/math/math-embedding#"
+	xmlns:jeo-architecture="http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture#"
+	xmlns:state-analysis="http://imce.jpl.nasa.gov/state-analysis/state-analysis#"
+	xmlns:analysis="http://imce.jpl.nasa.gov/foundation/analysis/analysis#"
+	
+	xmlns:SysML="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#"
+	xmlns:annotation="http://imce.jpl.nasa.gov/foundation/annotation/annotation#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:state-analysis-implementation="http://imce.jpl.nasa.gov/state-analysis-implementation/state-analysis-implementation#"
+	xmlns:state-analysis-implementation-embedding="http://imce.jpl.nasa.gov/state-analysis-implementation/state-analysis-implementation-embedding#"
+	xmlns:mechanical="http://imce.jpl.nasa.gov/mechanical/mechanical#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:Blocks="http://imce.jpl.nasa.gov/Blocks/Blocks#"
+	xmlns:analysis-embedding="http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#"
+	xmlns:QUDV="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:state-analysis-embedding="http://imce.jpl.nasa.gov/state-analysis/state-analysis-embedding#"
+	xmlns:mission-embedding="http://imce.jpl.nasa.gov/foundation/mission/mission-embedding#"
+	xmlns:mgss-service-embedding="http://imce.jpl.nasa.gov/mgss-service/mgss-service-embedding#"
+	xmlns:base-embedding="http://imce.jpl.nasa.gov/foundation/base/base-embedding#"
+	xmlns:ieee-1471-embedding="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#"
+	xmlns:architectural-description-embedding="http://imce.jpl.nasa.gov/architectural-description/architectural-description-embedding#"
+	xmlns:math="http://imce.jpl.nasa.gov/math/math#"
+	xmlns:project="http://imce.jpl.nasa.gov/foundation/project/project#"
+	xmlns:timeline-embedding="http://imce.jpl.nasa.gov/timeline/timeline-embedding#"
+	xmlns:annotation-embedding="http://imce.jpl.nasa.gov/foundation/annotation/annotation-embedding#"
+	xmlns:jeo-architecture-embedding="http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture-embedding#"
+	
+	xmlns:electrical="http://imce.jpl.nasa.gov/electrical/electrical#"
+	xmlns:mission="http://imce.jpl.nasa.gov/foundation/mission/mission#"
+	xmlns:pbs="http://imce.jpl.nasa.gov/pbs/pbs#"
+	xmlns:mechanical-embedding="http://imce.jpl.nasa.gov/mechanical/mechanical-embedding#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:base="http://imce.jpl.nasa.gov/foundation/base/base#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:electrical-embedding="http://imce.jpl.nasa.gov/electrical/electrical-embedding#"
+	
+	xmlns:UML="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#"
+	xmlns:pbs-embedding="http://imce.jpl.nasa.gov/pbs/pbs-embedding#"
+	xmlns:ieee-1471="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#"
+	xmlns:architectural-description="http://imce.jpl.nasa.gov/architectural-description/architectural-description#"
+	xmlns:project-embedding="http://imce.jpl.nasa.gov/foundation/project/project-embedding#"
+	xmlns:StandardProfileL2="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#">
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$Date$</dc:date>
+	<owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$Revision$</owl:versionInfo>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;para&gt;The Product Breakdown Structure Ontology defines classes for the following canonical systems engineering hierarchy:
+&lt;itemizedlist&gt;
+&lt;listitem&gt;&lt;para&gt;&lt;classname&gt;mission:Mission&lt;/classname&gt;&lt;/para&gt;&lt;/listitem&gt;
+&lt;listitem&gt;&lt;para&gt;&lt;classname&gt;Segment&lt;/classname&gt;&lt;/para&gt;&lt;/listitem&gt;
+&lt;listitem&gt;&lt;para&gt;&lt;classname&gt;System&lt;/classname&gt;&lt;/para&gt;&lt;/listitem&gt;
+&lt;listitem&gt;&lt;para&gt;&lt;classname&gt;Module&lt;/classname&gt;&lt;/para&gt;&lt;/listitem&gt;
+&lt;listitem&gt;&lt;para&gt;&lt;classname&gt;Subsystem&lt;/classname&gt;&lt;/para&gt;&lt;/listitem&gt;
+&lt;listitem&gt;&lt;para&gt;&lt;classname&gt;Assembly&lt;/classname&gt;&lt;/para&gt;&lt;/listitem&gt;
+&lt;listitem&gt;&lt;para&gt;&lt;classname&gt;Subassembly&lt;/classname&gt;&lt;/para&gt;&lt;/listitem&gt;
+&lt;listitem&gt;&lt;para&gt;&lt;classname&gt;Part&lt;/classname&gt;&lt;/para&gt;&lt;/listitem&gt;
+&lt;/itemizedlist&gt;
+&lt;/para&gt;
+&lt;para&gt;Range restrictions ensure that each class may contain (or deploy, in the case of &lt;classname&gt;mission:Mission&lt;/classname&gt;) only classes one or two levels below it. For example, it is legal for a single Mission to deploy a Flight Segment, a Ground Segment, and a Launch System. Likewise, it is legal for a Spacecraft System to contain a Rover Module, a Lander Module, and a Telecommunication Subsystem. It is not legal for a Spacecraft System to contain a Part or for a Telecommunication Subsystem to contain a Module.
+&lt;/para&gt;</dc:description>
+	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copyright 2010-2011, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
+
+This software may be subject to U.S. export control laws. By accepting this software, the user agrees to comply with all applicable U.S. export laws and regulations. User has the responsibility to obtain export licenses,a or other export authority as may be required before exporting such information to foreign countries or providing access to foreign persons.</dc:rights>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Product Breakdown Structure Ontology</dc:title>
+	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Systems Engineering &amp; Formulation Division</dc:creator>
+	<owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/type">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/description">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/rights">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#topObjectProperty">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;property&gt;topObjectProperty&lt;/property&gt; is a common superproperty of all object properties defined in the Product Breakdown Structure Ontology.</dc:description>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#topDataProperty">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;property&gt;topDataProperty&lt;/property&gt; is a common superproperty of all datatype properties defined in the Product Breakdown Structure Ontology.</dc:description>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#Component">
+	<owl:disjointUnionOf rdf:nodeID="node1680pk85px20877"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20877">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#DeployedComponent"/>
+	<rdf:rest rdf:nodeID="node1680pk85px20878"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20878">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#NonDeployedComponent"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#Mission">
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20879"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20879">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#deploys"/>
+	<owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#DeployedComponent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#Assembly">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Assembly</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#ModuleChild"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#NonDeployedComponent"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#PartParent"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SubassemblyParent"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SubsystemChild"/>
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20880"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20880">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#isContainedIn"/>
+	<owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#AssemblyParent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#Assembly">
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20881"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20881">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#contains"/>
+	<owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#AssemblyChild"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#Assembly">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Module"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Part"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Segment"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Subassembly"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Subsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#System"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An &lt;classname&gt;Assembly&lt;/classname&gt; is a &lt;classname&gt;mission:Component&lt;/classname&gt; one level below a &lt;classname&gt;Subsystem&lt;/classname&gt;.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#AssemblyChild">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Component"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Thing"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An &lt;classname&gt;AssemblyChild&lt;/classname&gt; is a &lt;classname&gt;Component&lt;/classname&gt; that can be contained in an &lt;classname&gt;Assembly&lt;/classname&gt;.</dc:description>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#AssemblyParent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Component"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Thing"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An &lt;classname&gt;AssemblyParent&lt;/classname&gt; is a &lt;classname&gt;Component&lt;/classname&gt; that can contain an &lt;classname&gt;Assembly&lt;/classname&gt;.</dc:description>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#CommandDataHandlingSubsystem">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Command and Data Handling Subsystem</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SpacecraftSystemSubsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#GuidanceNavigationControlSubsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Harness"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#MechanicalSubsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#PowerSubsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#PropulsionSubsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SpacecraftFlightSoftware"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#TelecomSubsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#ThermalSubsystem"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#DeployedComponent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Component"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Thing"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#NonDeployedComponent"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;DeployedComponent&lt;/classname&gt; is a &lt;classname&gt;mission:Component&lt;/classname&gt; that can be deployed by a &lt;classname&gt;mission:Mission&lt;/classname&gt;.</dc:description>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#FlightSegment">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flight Segment</rdfs:label>
+	<owl:equivalentClass rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SpaceSegment"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Segment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#FlightSegmentSystem">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#System"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#GroundSegmentSystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#LaunchSegmentSystem"/>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#GroundDataSystem">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ground Data System</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#GroundSegmentSystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#MissionOperationsSystem"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#GroundSegment">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ground Segment</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Segment"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SpaceSegment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#GroundSegmentSystem">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#System"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#LaunchSegmentSystem"/>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#GuidanceNavigationControlSubsystem">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guidance, Navigation, and Control Subsystem</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SpacecraftSystemSubsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Harness"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#MechanicalSubsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#PowerSubsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#PropulsionSubsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SpacecraftFlightSoftware"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#TelecomSubsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#ThermalSubsystem"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#Harness">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harness</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SpacecraftSystemSubsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#MechanicalSubsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#PowerSubsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#PropulsionSubsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SpacecraftFlightSoftware"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#TelecomSubsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#ThermalSubsystem"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#LanderModule">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lander Module</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Module"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#LaunchSegment">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Launch Segment</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Segment"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SpaceSegment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#LaunchSegmentSystem">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#System"/>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#LaunchSystem">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Launch System</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#LaunchSegmentSystem"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#MechanicalSubsystem">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mechanical Subsystem</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SpacecraftSystemSubsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#PowerSubsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#PropulsionSubsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SpacecraftFlightSoftware"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#TelecomSubsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#ThermalSubsystem"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#MechanismsSubsystem">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mechanisms Subsystem</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SpacecraftSystemSubsystem"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#MissionOperationsSystem">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mission Operations System</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#GroundSegmentSystem"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#Module">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Module</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#AssemblyParent"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#NonDeployedComponent"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SegmentChild"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SubsystemParent"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SystemChild"/>
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20882"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20882">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#isContainedIn"/>
+	<owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#ModuleParent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#Module">
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20883"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20883">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#contains"/>
+	<owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#ModuleChild"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#Module">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Part"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Segment"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Subassembly"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Subsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#System"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;Module&lt;/classname&gt; is a &lt;classname&gt;mission:Component&lt;/classname&gt; one level below a &lt;classname&gt;System&lt;/classname&gt;.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#ModuleChild">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Component"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Thing"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;ModuleChild&lt;/classname&gt; is a &lt;classname&gt;Component&lt;/classname&gt; that can be contained in a &lt;classname&gt;Module&lt;/classname&gt;.</dc:description>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#ModuleParent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Component"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Thing"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;ModuleParent&lt;/classname&gt; is a &lt;classname&gt;Component&lt;/classname&gt; that can contain a &lt;classname&gt;Module&lt;/classname&gt;.</dc:description>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#NonDeployedComponent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Component"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Thing"/>
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20884"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20884">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#isDeployedBy"/>
+	<owl:onClass rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Mission"/>
+	<owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:maxQualifiedCardinality>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#NonDeployedComponent">
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;NonDeployedElement&lt;/classname&gt; is a &lt;classname&gt;mission:Component&lt;/classname&gt; that may not be deployed by a &lt;classname&gt;mission:Mission&lt;/classname&gt;</dc:description>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#Part">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Part</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#AssemblyChild"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#NonDeployedComponent"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#PartChild"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#PartParent"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SubassemblyChild"/>
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20885"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20885">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#isContainedIn"/>
+	<owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#PartParent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#Part">
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20886"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20886">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#contains"/>
+	<owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#PartChild"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#Part">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Segment"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Subassembly"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Subsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#System"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;Part&lt;/classname&gt; is a &lt;classname&gt;mission:Component&lt;/classname&gt; one level below a &lt;classname&gt;Subassembly&lt;/classname&gt;.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#PartChild">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Component"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Thing"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;PartChild&lt;/classname&gt; is a &lt;classname&gt;Component&lt;/classname&gt; that can be contained in a &lt;classname&gt;Part&lt;/classname&gt;.</dc:description>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#PartParent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Component"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Thing"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;PartParent&lt;/classname&gt; is a &lt;classname&gt;Component&lt;/classname&gt; that can contain a &lt;classname&gt;Part&lt;/classname&gt;.</dc:description>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#PayloadModule">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Payload Module</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Module"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#PayloadSystem">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Payload System</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#FlightSegmentSystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SpacecraftSystem"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#PenetratorModule">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Penetrator Module</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Module"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#PowerSubsystem">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Power Subsystem</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SpacecraftSystemSubsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#PropulsionSubsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SpacecraftFlightSoftware"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#TelecomSubsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#ThermalSubsystem"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#PropulsionSubsystem">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Propulsion Subsystem</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SpacecraftSystemSubsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SpacecraftFlightSoftware"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#TelecomSubsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#ThermalSubsystem"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#RoverModule">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rover Module</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Module"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#Segment">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Segment</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#DeployedComponent"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#ModuleParent"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SystemParent"/>
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20887"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20887">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#isContainedIn"/>
+	<owl:onClass rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Component"/>
+	<owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:maxQualifiedCardinality>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#Segment">
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20888"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20888">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#contains"/>
+	<owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SegmentChild"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#Segment">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Subassembly"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Subsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#System"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;Segment&lt;/classname&gt; is a toplevel&lt;classname&gt;mission:Component&lt;/classname&gt;.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#SegmentChild">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Component"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Thing"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;SegmentChild&lt;/classname&gt; is a &lt;classname&gt;Component&lt;/classname&gt; that can be contained in a &lt;classname&gt;Segment&lt;/classname&gt;.</dc:description>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#SpaceSegment">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Space Segment</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Segment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#SpacecraftFlightSoftware">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spacecraft Flight Software</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SpacecraftSystemSubsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#TelecomSubsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#ThermalSubsystem"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#SpacecraftSystem">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spacecraft System</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#FlightSegmentSystem"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#SpacecraftSystemSubsystem">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Subsystem"/>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#StructuresSubsystem">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Structures Subsystem</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SpacecraftSystemSubsystem"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#Subassembly">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subassembly</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#AssemblyChild"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#NonDeployedComponent"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#PartParent"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SubsystemChild"/>
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20889"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20889">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#contains"/>
+	<owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SubassemblyChild"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#Subassembly">
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20890"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20890">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#isContainedIn"/>
+	<owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SubassemblyParent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#Subassembly">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Subsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#System"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;Subassembly&lt;/classname&gt; is a &lt;classname&gt;mission:Component&lt;/classname&gt; one level below a &lt;classname&gt;Assembly&lt;/classname&gt;.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#SubassemblyChild">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Component"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Thing"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;SubassemblyChild&lt;/classname&gt; is a &lt;classname&gt;Component&lt;/classname&gt; that can be contained in a &lt;classname&gt;Subassembly&lt;/classname&gt;.</dc:description>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#SubassemblyParent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Component"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Thing"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;SubassemblyParent&lt;/classname&gt; is a &lt;classname&gt;Component&lt;/classname&gt; that can contain a &lt;classname&gt;Subassembly&lt;/classname&gt;.</dc:description>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#Subsystem">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subsystem</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#AssemblyParent"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#ModuleChild"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#NonDeployedComponent"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SubassemblyParent"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SystemChild"/>
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20891"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20891">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#isContainedIn"/>
+	<owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SubsystemParent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#Subsystem">
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20892"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20892">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#contains"/>
+	<owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SubsystemChild"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#Subsystem">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#System"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;Subsystem&lt;/classname&gt; is a &lt;classname&gt;mission:Component&lt;/classname&gt; one level below a &lt;classname&gt;Module&lt;/classname&gt;.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#SubsystemChild">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Component"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Thing"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;SubsystemChild&lt;/classname&gt; is a &lt;classname&gt;Component&lt;/classname&gt; that can be contained in a &lt;classname&gt;Subsystem&lt;/classname&gt;.</dc:description>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#SubsystemParent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Component"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Thing"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;SubsystemParent&lt;/classname&gt; is a &lt;classname&gt;Component&lt;/classname&gt; that can contain a &lt;classname&gt;Subsystem&lt;/classname&gt;.</dc:description>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#System">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">System</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#DeployedComponent"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#ModuleParent"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SegmentChild"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SubsystemParent"/>
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20893"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20893">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#isContainedIn"/>
+	<owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SystemParent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#System">
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20894"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20894">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#contains"/>
+	<owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SystemChild"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#System">
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;System&lt;/classname&gt; is a &lt;classname&gt;mission:Component&lt;/classname&gt; one level below a &lt;classname&gt;Segment&lt;/classname&gt;.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#SystemChild">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Component"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Thing"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;SystemChild&lt;/classname&gt; is a &lt;classname&gt;Component&lt;/classname&gt; that can be contained in a &lt;classname&gt;System&lt;/classname&gt;.</dc:description>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#SystemParent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Component"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#Thing"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;SystemParent&lt;/classname&gt; is a &lt;classname&gt;Component&lt;/classname&gt; that can contain or deploy a &lt;classname&gt;System&lt;/classname&gt;.</dc:description>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#TelecomSubsystem">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Telecommunication Subsystem</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SpacecraftSystemSubsystem"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#ThermalSubsystem"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#ThermalSubsystem">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thermal Subsystem</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/pbs/pbs#SpacecraftSystemSubsystem"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/pbs/pbs#Thing">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;classname&gt;Thing&lt;/classname&gt; is a common superclass of all classes defined in the Product Breakdown Structure ontology.</dc:description>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+</rdf:RDF>

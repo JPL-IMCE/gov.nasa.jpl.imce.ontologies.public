@@ -1,0 +1,605 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY pbs "http://imce.jpl.nasa.gov/pbs/pbs#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY math "http://imce.jpl.nasa.gov/math/math#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY Blocks "http://imce.jpl.nasa.gov/Blocks/Blocks#" >
+    <!ENTITY timeline "http://imce.jpl.nasa.gov/timeline/timeline#" >
+    <!ENTITY pbs-embedding "http://imce.jpl.nasa.gov/pbs/pbs-embedding#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY ieee-1471 "http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#" >
+    <!ENTITY math-embedding "http://imce.jpl.nasa.gov/math/math-embedding#" >
+    <!ENTITY base "http://imce.jpl.nasa.gov/foundation/base/base#" >
+    <!ENTITY time "http://imce.jpl.nasa.gov/foundation/time/time#" >
+    <!ENTITY mechanical "http://imce.jpl.nasa.gov/mechanical/mechanical#" >
+    <!ENTITY vandv "http://imce.jpl.nasa.gov/discipline/vandv/vandv#" >
+    <!ENTITY Blocks-embedding "http://imce.jpl.nasa.gov/Blocks/Blocks-embedding#" >
+    <!ENTITY mission "http://imce.jpl.nasa.gov/foundation/mission/mission#" >
+    <!ENTITY project "http://imce.jpl.nasa.gov/foundation/project/project#" >
+    <!ENTITY f6-asda "http://imce.jpl.nasa.gov/application/f6-asda/f6-asda#" >
+    <!ENTITY timeline-embedding "http://imce.jpl.nasa.gov/timeline/timeline-embedding#" >
+    <!ENTITY base-mapping "http://imce.jpl.nasa.gov/foundation/base/base-mapping#" >
+    <!ENTITY analysis "http://imce.jpl.nasa.gov/foundation/analysis/analysis#" >
+    <!ENTITY ieee-1471-embedding "http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#" >
+    <!ENTITY owl2-mof2 "http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#" >
+    <!ENTITY time-embedding "http://imce.jpl.nasa.gov/foundation/time/time-embedding#" >
+    <!ENTITY base-embedding "http://imce.jpl.nasa.gov/foundation/base/base-embedding#" >
+    <!ENTITY mechanical-embedding "http://imce.jpl.nasa.gov/mechanical/mechanical-embedding#" >
+    <!ENTITY vandv-embedding "http://imce.jpl.nasa.gov/discipline/vandv/vandv-embedding#" >
+    <!ENTITY annotation "http://imce.jpl.nasa.gov/foundation/annotation/annotation#" >
+    <!ENTITY electrical "http://imce.jpl.nasa.gov/discipline/electrical/electrical#" >
+    <!ENTITY UML "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#" >
+    <!ENTITY jeo-architecture "http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture#" >
+    <!ENTITY datatype-map "http://imce.jpl.nasa.gov/foundation/owl2-mof2/datatype-map#" >
+    <!ENTITY mgss-service-embedding "http://imce.jpl.nasa.gov/mgss-service/mgss-service-embedding#" >
+    <!ENTITY QUDV "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#" >
+    <!ENTITY project-embedding "http://imce.jpl.nasa.gov/foundation/project/project-embedding#" >
+    <!ENTITY mission-embedding "http://imce.jpl.nasa.gov/foundation/mission/mission-embedding#" >
+    <!ENTITY SysML "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#" >
+    <!ENTITY f6-asda-embedding "http://imce.jpl.nasa.gov/application/f6-asda/f6-asda-embedding#" >
+    <!ENTITY mgss-service "http://imce.jpl.nasa.gov/application/mgss-service/mgss-service#" >
+    <!ENTITY owl2-mof2-mapping "http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-mapping#" >
+    <!ENTITY analysis-embedding "http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#" >
+    <!ENTITY owl2-mof2-embedding "http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#" >
+    <!ENTITY state-analysis "http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#" >
+    <!ENTITY electrical-embedding "http://imce.jpl.nasa.gov/discipline/electrical/electrical-embedding#" >
+    <!ENTITY annotation-embedding "http://imce.jpl.nasa.gov/foundation/annotation/annotation-embedding#" >
+    <!ENTITY UML-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-embedding#" >
+    <!ENTITY jeo-architecture-embedding "http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture-embedding#" >
+    <!ENTITY UML-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#" >
+    <!ENTITY fault-management "http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#" >
+    <!ENTITY QUDV-mapping "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-mapping#" >
+    <!ENTITY QUDV-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-embedding#" >
+    <!ENTITY StandardProfileL2 "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#" >
+    <!ENTITY SysML-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#" >
+    <!ENTITY SysML-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-embedding#" >
+    <!ENTITY time-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#" >
+    <!ENTITY state-analysis-embedding "http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis-embedding#" >
+    <!ENTITY architectural-description "http://imce.jpl.nasa.gov/architectural-description/architectural-description#" >
+    <!ENTITY project-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#" >
+    <!ENTITY mission-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#" >
+    <!ENTITY fault-management-embedding "http://imce.jpl.nasa.gov/discipline/fault-management/fault-management-embedding#" >
+    <!ENTITY PrimitiveTypes "http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes#" >
+    <!ENTITY analysis-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#" >
+    <!ENTITY StandardProfileL2-mapping "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-mapping#" >
+    <!ENTITY StandardProfileL2-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-embedding#" >
+    <!ENTITY StandardProfileL2-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#" >
+    <!ENTITY electrical-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/electrical/electrical#" >
+    <!ENTITY architectural-description-embedding "http://imce.jpl.nasa.gov/architectural-description/architectural-description-embedding#" >
+    <!ENTITY PrimitiveTypes-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-embedding#" >
+    <!ENTITY PrimitiveTypes-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-metamodel#" >
+    <!ENTITY state-analysis-implementation "http://imce.jpl.nasa.gov/discipline/state-analysis-implementation/state-analysis-implementation#" >
+    <!ENTITY state-analysis-functional-design "http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#" >
+    <!ENTITY state-analysis-implementation-embedding "http://imce.jpl.nasa.gov/discipline/state-analysis-implementation/state-analysis-implementation-embedding#" >
+    <!ENTITY state-analysis-functional-design-embedding "http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design-embedding#" >
+]>
+
+
+<rdf:RDF xmlns="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#"
+     xml:base="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2"
+     xmlns:fault-management="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#"
+     xmlns:PrimitiveTypes-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-embedding#"
+     xmlns:Blocks-embedding="http://imce.jpl.nasa.gov/Blocks/Blocks-embedding#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:StandardProfileL2-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#"
+     xmlns:ieee-1471="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#"
+     xmlns:StandardProfileL2-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-embedding#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:project="http://imce.jpl.nasa.gov/foundation/project/project#"
+     xmlns:mechanical="http://imce.jpl.nasa.gov/mechanical/mechanical#"
+     xmlns:timeline-embedding="http://imce.jpl.nasa.gov/timeline/timeline-embedding#"
+     xmlns:mission-embedding="http://imce.jpl.nasa.gov/foundation/mission/mission-embedding#"
+     xmlns:architectural-description-embedding="http://imce.jpl.nasa.gov/architectural-description/architectural-description-embedding#"
+     xmlns:QUDV="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#"
+     xmlns:PrimitiveTypes-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-metamodel#"
+     xmlns:datatype-map="http://imce.jpl.nasa.gov/foundation/owl2-mof2/datatype-map#"
+     xmlns:state-analysis-functional-design="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#"
+     xmlns:QUDV-mapping="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-mapping#"
+     xmlns:owl2-mof2="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#"
+     xmlns:project-embedding="http://imce.jpl.nasa.gov/foundation/project/project-embedding#"
+     xmlns:owl2-mof2-mapping="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-mapping#"
+     xmlns:annotation-embedding="http://imce.jpl.nasa.gov/foundation/annotation/annotation-embedding#"
+     xmlns:math-embedding="http://imce.jpl.nasa.gov/math/math-embedding#"
+     xmlns:time-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#"
+     xmlns:state-analysis-implementation-embedding="http://imce.jpl.nasa.gov/discipline/state-analysis-implementation/state-analysis-implementation-embedding#"
+     xmlns:QUDV-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-embedding#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:electrical="http://imce.jpl.nasa.gov/discipline/electrical/electrical#"
+     xmlns:analysis="http://imce.jpl.nasa.gov/foundation/analysis/analysis#"
+     xmlns:state-analysis-embedding="http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis-embedding#"
+     xmlns:UML-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#"
+     xmlns:mission="http://imce.jpl.nasa.gov/foundation/mission/mission#"
+     xmlns:UML-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-embedding#"
+     xmlns:UML="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#"
+     xmlns:math="http://imce.jpl.nasa.gov/math/math#"
+     xmlns:electrical-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/electrical/electrical#"
+     xmlns:pbs="http://imce.jpl.nasa.gov/pbs/pbs#"
+     xmlns:PrimitiveTypes="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes#"
+     xmlns:analysis-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#"
+     xmlns:vandv-embedding="http://imce.jpl.nasa.gov/discipline/vandv/vandv-embedding#"
+     xmlns:mechanical-embedding="http://imce.jpl.nasa.gov/mechanical/mechanical-embedding#"
+     xmlns:f6-asda="http://imce.jpl.nasa.gov/application/f6-asda/f6-asda#"
+     xmlns:SysML="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#"
+     xmlns:time-embedding="http://imce.jpl.nasa.gov/foundation/time/time-embedding#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:SysML-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-embedding#"
+     xmlns:fault-management-embedding="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management-embedding#"
+     xmlns:pbs-embedding="http://imce.jpl.nasa.gov/pbs/pbs-embedding#"
+     xmlns:state-analysis-implementation="http://imce.jpl.nasa.gov/discipline/state-analysis-implementation/state-analysis-implementation#"
+     xmlns:jeo-architecture-embedding="http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture-embedding#"
+     xmlns:base-embedding="http://imce.jpl.nasa.gov/foundation/base/base-embedding#"
+     xmlns:StandardProfileL2="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#"
+     xmlns:SysML-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#"
+     xmlns:jeo-architecture="http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture#"
+     xmlns:mgss-service="http://imce.jpl.nasa.gov/application/mgss-service/mgss-service#"
+     xmlns:vandv="http://imce.jpl.nasa.gov/discipline/vandv/vandv#"
+     xmlns:StandardProfileL2-mapping="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-mapping#"
+     xmlns:annotation="http://imce.jpl.nasa.gov/foundation/annotation/annotation#"
+     xmlns:architectural-description="http://imce.jpl.nasa.gov/architectural-description/architectural-description#"
+     xmlns:Blocks="http://imce.jpl.nasa.gov/Blocks/Blocks#"
+     xmlns:mgss-service-embedding="http://imce.jpl.nasa.gov/mgss-service/mgss-service-embedding#"
+     xmlns:project-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#"
+     xmlns:mission-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#"
+     xmlns:ieee-1471-embedding="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#"
+     xmlns:base-mapping="http://imce.jpl.nasa.gov/foundation/base/base-mapping#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl2-mof2-embedding="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#"
+     xmlns:timeline="http://imce.jpl.nasa.gov/timeline/timeline#"
+     xmlns:electrical-embedding="http://imce.jpl.nasa.gov/discipline/electrical/electrical-embedding#"
+     xmlns:state-analysis="http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#"
+     xmlns:time="http://imce.jpl.nasa.gov/foundation/time/time#"
+     xmlns:state-analysis-functional-design-embedding="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design-embedding#"
+     xmlns:f6-asda-embedding="http://imce.jpl.nasa.gov/application/f6-asda/f6-asda-embedding#"
+     xmlns:analysis-embedding="http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:base="http://imce.jpl.nasa.gov/foundation/base/base#">
+    <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/discipline/electrical/electrical">
+        <dc:date rdf:datatype="&xsd;string">$Date$</dc:date>
+        <owl:versionInfo rdf:datatype="&xsd;string">$Revision$</owl:versionInfo>
+        <dc:rights rdf:datatype="&xsd;string">Copyright 2010-2011, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
+
+This software may be subject to U.S. export control laws. By accepting this software, the user agrees to comply with all applicable U.S. export laws and regulations. User has the responsibility to obtain export licenses,a or other export authority as may be required before exporting such information to foreign countries or providing access to foreign persons.</dc:rights>
+        <dc:type rdf:datatype="&xsd;string">Discipline</dc:type>
+        <dc:title rdf:datatype="&xsd;string">Electrical Ontology</dc:title>
+        <dc:creator rdf:datatype="&xsd;string">Systems Engineering &amp; Formulation Division</dc:creator>
+        <dc:description rdf:datatype="&xsd;string">The Electrical Ontology defines concepts and properties for electrical systems engineering.</dc:description>
+        <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="&dc;creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="&dc;date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="&dc;description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <owl:AnnotationProperty rdf:about="&dc;rights"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="&dc;title"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/type -->
+
+    <owl:AnnotationProperty rdf:about="&dc;type"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/electrical/electrical#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&electrical-backbone;topObjectProperty">
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/electrical/electrical#topReifiedObjectPropertySource -->
+
+    <owl:ObjectProperty rdf:about="&electrical-backbone;topReifiedObjectPropertySource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <rdfs:subPropertyOf rdf:resource="&electrical-backbone;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/electrical/electrical#topReifiedObjectPropertyTarget -->
+
+    <owl:ObjectProperty rdf:about="&electrical-backbone;topReifiedObjectPropertyTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <rdfs:subPropertyOf rdf:resource="&electrical-backbone;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#hasProvidesSource -->
+
+    <owl:ObjectProperty rdf:about="&electrical;hasProvidesSource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&electrical-backbone;topReifiedObjectPropertySource"/>
+        <rdfs:range rdf:resource="&electrical;ChannelInterface"/>
+        <rdfs:domain rdf:resource="&electrical;Provides"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#hasProvidesTarget -->
+
+    <owl:ObjectProperty rdf:about="&electrical;hasProvidesTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&electrical-backbone;topReifiedObjectPropertyTarget"/>
+        <rdfs:range rdf:resource="&electrical;LinkInterface"/>
+        <rdfs:domain rdf:resource="&electrical;Provides"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#isProvidedBy -->
+
+    <owl:ObjectProperty rdf:about="&electrical;isProvidedBy">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <annotation:isDerived rdf:datatype="&xsd;boolean">true</annotation:isDerived>
+        <rdfs:subPropertyOf rdf:resource="&electrical-backbone;topObjectProperty"/>
+        <rdfs:range rdf:resource="&electrical;ChannelInterface"/>
+        <rdfs:domain rdf:resource="&electrical;LinkInterface"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#provides -->
+
+    <owl:ObjectProperty rdf:about="&electrical;provides">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&electrical-backbone;topObjectProperty"/>
+        <rdfs:domain rdf:resource="&electrical;ChannelInterface"/>
+        <rdfs:range rdf:resource="&electrical;LinkInterface"/>
+        <owl:inverseOf rdf:resource="&electrical;isProvidedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/electrical/electrical#topDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="&electrical-backbone;topDataProperty">
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/electrical/electrical#Entity -->
+
+    <owl:Class rdf:about="&electrical-backbone;Entity">
+        <rdfs:subClassOf rdf:resource="&electrical-backbone;Thing"/>
+        <rdfs:subClassOf rdf:resource="&analysis;AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="&analysis;CharacterizedElement"/>
+        <rdfs:subClassOf rdf:resource="&base;PackagedElement"/>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/electrical/electrical#ReifiedObjectProperty -->
+
+    <owl:Class rdf:about="&electrical-backbone;ReifiedObjectProperty">
+        <rdfs:subClassOf rdf:resource="&electrical-backbone;Thing"/>
+        <rdfs:subClassOf rdf:resource="&analysis;AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="&analysis;CharacterizedElement"/>
+        <rdfs:subClassOf rdf:resource="&base;PackagedElement"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/electrical/electrical#StructuredDatatype -->
+
+    <owl:Class rdf:about="&electrical-backbone;StructuredDatatype">
+        <rdfs:subClassOf rdf:resource="&electrical-backbone;Thing"/>
+        <rdfs:subClassOf rdf:resource="&analysis;AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="&analysis;CharacterizedElement"/>
+        <rdfs:subClassOf rdf:resource="&base;PackagedElement"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/electrical/electrical#Thing -->
+
+    <owl:Class rdf:about="&electrical-backbone;Thing">
+        <dc:description rdf:datatype="&xsd;string">&lt;classname&gt;Thing&lt;/classname&gt; is a common superclass of all classes in the Electrical ontology.</dc:description>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Channel -->
+
+    <owl:Class rdf:about="&electrical;Channel">
+        <rdfs:subClassOf rdf:resource="&electrical-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="&mission;Junction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&mission;joins"/>
+                <owl:allValuesFrom rdf:resource="&electrical;ChannelInterface"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#ChannelInterface -->
+
+    <owl:Class rdf:about="&electrical;ChannelInterface">
+        <rdfs:subClassOf rdf:resource="&electrical;Interface"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&mission;isJoinedIn"/>
+                <owl:allValuesFrom rdf:resource="&electrical;Channel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Component -->
+
+    <owl:Class rdf:about="&electrical;Component">
+        <rdfs:subClassOf rdf:resource="&electrical-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="&mission;Component"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Contact -->
+
+    <owl:Class rdf:about="&electrical;Contact">
+        <rdfs:subClassOf rdf:resource="&electrical;Interface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#DataMessage -->
+
+    <owl:Class rdf:about="&electrical;DataMessage">
+        <rdfs:subClassOf rdf:resource="&electrical-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="&mission;Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Interface -->
+
+    <owl:Class rdf:about="&electrical;Interface">
+        <rdfs:subClassOf rdf:resource="&electrical-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="&mission;Interface"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&mission;isPresentedBy"/>
+                <owl:allValuesFrom rdf:resource="&electrical;Component"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Link -->
+
+    <owl:Class rdf:about="&electrical;Link">
+        <rdfs:subClassOf rdf:resource="&electrical-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="&mission;Junction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&mission;joins"/>
+                <owl:allValuesFrom rdf:resource="&electrical;LinkInterface"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#LinkInterface -->
+
+    <owl:Class rdf:about="&electrical;LinkInterface">
+        <rdfs:subClassOf rdf:resource="&electrical;Interface"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&mission;isJoinedIn"/>
+                <owl:allValuesFrom rdf:resource="&electrical;Link"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Medium -->
+
+    <owl:Class rdf:about="&electrical;Medium">
+        <rdfs:subClassOf rdf:resource="&electrical;Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Provides -->
+
+    <owl:Class rdf:about="&electrical;Provides">
+        <rdfs:subClassOf rdf:resource="&electrical-backbone;ReifiedObjectProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#SignalFlow -->
+
+    <owl:Class rdf:about="&electrical;SignalFlow">
+        <rdfs:subClassOf rdf:resource="&electrical-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="&mission;Flow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/base/base#PackagedElement -->
+
+    <owl:Class rdf:about="&base;PackagedElement"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl#r">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#s">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#t">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&electrical;hasProvidesTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&electrical;hasProvidesSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&electrical;provides"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

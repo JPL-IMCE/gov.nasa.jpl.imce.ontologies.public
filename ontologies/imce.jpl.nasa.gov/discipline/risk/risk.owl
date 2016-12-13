@@ -1,0 +1,1286 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY risk "http://imce.jpl.nasa.gov/discipline/risk/risk#" >
+    <!ENTITY annotation "http://imce.jpl.nasa.gov/foundation/annotation/annotation#" >
+    <!ENTITY risk-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/risk/risk#" >
+]>
+
+
+<rdf:RDF xmlns="http://imce.jpl.nasa.gov/discipline/risk/riskX#"
+     xml:base="http://imce.jpl.nasa.gov/discipline/risk/riskX"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:risk="http://imce.jpl.nasa.gov/discipline/risk/risk#"
+     xmlns:annotation="http://imce.jpl.nasa.gov/foundation/annotation/annotation#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:risk-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/risk/risk#">
+    <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/discipline/risk/risk">
+        <dc:date rdf:datatype="&xsd;string">$Date$</dc:date>
+        <owl:versionInfo rdf:datatype="&xsd;string">$Revision$</owl:versionInfo>
+        <dc:rights rdf:datatype="&xsd;string">Copyright 2010-2015, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
+
+This software may be subject to U.S. export control laws. By accepting this software, the user agrees to comply with all applicable U.S. export laws and regulations. User has the responsibility to obtain export licenses,a or other export authority as may be required before exporting such information to foreign countries or providing access to foreign persons.</dc:rights>
+        <dc:title rdf:datatype="&xsd;string">Risk Ontology</dc:title>
+        <dc:creator rdf:datatype="&xsd;string">Systems Engineering &amp; Formulation Division</dc:creator>
+        <dc:description rdf:datatype="&xsd;string">The Risk Ontology defines concepts and properties for risk management.</dc:description>
+        <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#isAbstract -->
+
+    <owl:AnnotationProperty rdf:about="&annotation;isAbstract"/>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#noMapping -->
+
+    <owl:AnnotationProperty rdf:about="&annotation;noMapping"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="&dc;creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="&dc;date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="&dc;description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <owl:AnnotationProperty rdf:about="&dc;rights"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/risk/risk#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&risk-backbone;topObjectProperty">
+        <dc:description rdf:datatype="&xsd;string">&lt;property&gt;topObjectProperty&lt;/property&gt; is a common superproperty of all object properties defined in the $Date$.</dc:description>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/risk/risk#topReifiedObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&risk-backbone;topReifiedObjectProperty">
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <rdfs:subPropertyOf rdf:resource="&risk-backbone;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/risk/risk#topReifiedObjectPropertySource -->
+
+    <owl:ObjectProperty rdf:about="&risk-backbone;topReifiedObjectPropertySource">
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <rdfs:subPropertyOf rdf:resource="&risk-backbone;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/risk/risk#topReifiedObjectPropertyTarget -->
+
+    <owl:ObjectProperty rdf:about="&risk-backbone;topReifiedObjectPropertyTarget">
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <rdfs:subPropertyOf rdf:resource="&risk-backbone;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/risk/risk#topReifiedStructuredDataProperty -->
+
+    <owl:ObjectProperty rdf:about="&risk-backbone;topReifiedStructuredDataProperty">
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <rdfs:subPropertyOf rdf:resource="&risk-backbone;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/risk/risk#topReifiedStructuredDataPropertySource -->
+
+    <owl:ObjectProperty rdf:about="&risk-backbone;topReifiedStructuredDataPropertySource">
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <rdfs:subPropertyOf rdf:resource="&risk-backbone;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/risk/risk#topReifiedStructuredDataPropertyTarget -->
+
+    <owl:ObjectProperty rdf:about="&risk-backbone;topReifiedStructuredDataPropertyTarget">
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <rdfs:subPropertyOf rdf:resource="&risk-backbone;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/risk/risk#topUnreifiedObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&risk-backbone;topUnreifiedObjectProperty">
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <rdfs:subPropertyOf rdf:resource="&risk-backbone;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#contains -->
+
+    <owl:ObjectProperty rdf:about="&risk;contains">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">contains</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&risk-backbone;topReifiedObjectProperty"/>
+        <rdfs:range rdf:resource="&risk;Fault"/>
+        <rdfs:domain rdf:resource="&risk;FaultContainmentRegion"/>
+        <owl:inverseOf rdf:resource="&risk;isContainedIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#hasChildNode -->
+
+    <owl:ObjectProperty rdf:about="&risk;hasChildNode">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">has child node</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&risk-backbone;topReifiedObjectProperty"/>
+        <rdfs:range rdf:resource="&risk;FaultTreeNode"/>
+        <rdfs:domain rdf:resource="&risk;Gate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#hasContainsSource -->
+
+    <owl:ObjectProperty rdf:about="&risk;hasContainsSource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&risk-backbone;topReifiedObjectPropertySource"/>
+        <rdfs:domain rdf:resource="&risk;Contains"/>
+        <rdfs:range rdf:resource="&risk;FaultContainmentRegion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#hasContainsTarget -->
+
+    <owl:ObjectProperty rdf:about="&risk;hasContainsTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&risk-backbone;topReifiedObjectPropertyTarget"/>
+        <rdfs:domain rdf:resource="&risk;Contains"/>
+        <rdfs:range rdf:resource="&risk;Fault"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#hasDecisionTreeChildNode -->
+
+    <owl:ObjectProperty rdf:about="&risk;hasDecisionTreeChildNode">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">has decision tree child node</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&risk-backbone;topReifiedObjectProperty"/>
+        <rdfs:range rdf:resource="&risk;DecisionTreeNode"/>
+        <rdfs:domain rdf:resource="&risk;NonterminalDecisionTreeNode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#hasFirstDecision -->
+
+    <owl:ObjectProperty rdf:about="&risk;hasFirstDecision">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">has first decision</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&risk-backbone;topReifiedObjectProperty"/>
+        <rdfs:range rdf:resource="&risk;DecisionNode"/>
+        <rdfs:domain rdf:resource="&risk;DecisionTree"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#hasHasChildNodeSource -->
+
+    <owl:ObjectProperty rdf:about="&risk;hasHasChildNodeSource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&risk-backbone;topReifiedObjectPropertySource"/>
+        <rdfs:range rdf:resource="&risk;Gate"/>
+        <rdfs:domain rdf:resource="&risk;HasChildNode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#hasHasChildNodeTarget -->
+
+    <owl:ObjectProperty rdf:about="&risk;hasHasChildNodeTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&risk-backbone;topReifiedObjectPropertyTarget"/>
+        <rdfs:range rdf:resource="&risk;FaultTreeNode"/>
+        <rdfs:domain rdf:resource="&risk;HasChildNode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#hasHasDecisionTreeChildNodeSource -->
+
+    <owl:ObjectProperty rdf:about="&risk;hasHasDecisionTreeChildNodeSource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&risk-backbone;topReifiedObjectPropertySource"/>
+        <rdfs:domain rdf:resource="&risk;HasDecisionTreeChildNode"/>
+        <rdfs:range rdf:resource="&risk;NonterminalDecisionTreeNode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#hasHasDecisionTreeChildNodeTarget -->
+
+    <owl:ObjectProperty rdf:about="&risk;hasHasDecisionTreeChildNodeTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&risk-backbone;topReifiedObjectPropertyTarget"/>
+        <rdfs:range rdf:resource="&risk;DecisionTreeNode"/>
+        <rdfs:domain rdf:resource="&risk;HasDecisionTreeChildNode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#hasHasFirstDecisionSource -->
+
+    <owl:ObjectProperty rdf:about="&risk;hasHasFirstDecisionSource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&risk-backbone;topReifiedObjectPropertySource"/>
+        <rdfs:range rdf:resource="&risk;DecisionTree"/>
+        <rdfs:domain rdf:resource="&risk;HasFirstDecision"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#hasHasFirstDecisionTarget -->
+
+    <owl:ObjectProperty rdf:about="&risk;hasHasFirstDecisionTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&risk-backbone;topReifiedObjectPropertyTarget"/>
+        <rdfs:range rdf:resource="&risk;DecisionNode"/>
+        <rdfs:domain rdf:resource="&risk;HasFirstDecision"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#hasHasTopNodeSource -->
+
+    <owl:ObjectProperty rdf:about="&risk;hasHasTopNodeSource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&risk-backbone;topReifiedObjectPropertySource"/>
+        <rdfs:range rdf:resource="&risk;FaultTree"/>
+        <rdfs:domain rdf:resource="&risk;HasTopNode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#hasHasTopNodeTarget -->
+
+    <owl:ObjectProperty rdf:about="&risk;hasHasTopNodeTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&risk-backbone;topReifiedObjectPropertyTarget"/>
+        <rdfs:range rdf:resource="&risk;FaultTreeNode"/>
+        <rdfs:domain rdf:resource="&risk;HasTopNode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#hasTopNode -->
+
+    <owl:ObjectProperty rdf:about="&risk;hasTopNode">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">has top node</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&risk-backbone;topReifiedObjectProperty"/>
+        <rdfs:domain rdf:resource="&risk;FaultTree"/>
+        <rdfs:range rdf:resource="&risk;FaultTreeNode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#isContainedIn -->
+
+    <owl:ObjectProperty rdf:about="&risk;isContainedIn">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">is contained in</rdfs:label>
+        <annotation:isDerived rdf:datatype="&xsd;boolean">true</annotation:isDerived>
+        <rdfs:subPropertyOf rdf:resource="&risk-backbone;topReifiedObjectProperty"/>
+        <rdfs:domain rdf:resource="&risk;Fault"/>
+        <rdfs:range rdf:resource="&risk;FaultContainmentRegion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/risk/risk#topDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="&risk-backbone;topDataProperty">
+        <dc:description rdf:datatype="&xsd;string">&lt;property&gt;topDataProperty&lt;/property&gt; is a common superproperty of all datatype properties defined in the $Date$.</dc:description>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/risk/risk#Aspect -->
+
+    <owl:Class rdf:about="&risk-backbone;Aspect">
+        <rdfs:subClassOf rdf:resource="&risk-backbone;Thing"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/risk/risk#Entity -->
+
+    <owl:Class rdf:about="&risk-backbone;Entity">
+        <rdfs:subClassOf rdf:resource="&risk-backbone;Thing"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/risk/risk#ReifiedObjectProperty -->
+
+    <owl:Class rdf:about="&risk-backbone;ReifiedObjectProperty">
+        <rdfs:subClassOf rdf:resource="&risk-backbone;Thing"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/risk/risk#ReifiedStructuredDataProperty -->
+
+    <owl:Class rdf:about="&risk-backbone;ReifiedStructuredDataProperty">
+        <rdfs:subClassOf rdf:resource="&risk-backbone;Thing"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/risk/risk#StructuredDatatype -->
+
+    <owl:Class rdf:about="&risk-backbone;StructuredDatatype">
+        <rdfs:subClassOf rdf:resource="&risk-backbone;Thing"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/risk/risk#Thing -->
+
+    <owl:Class rdf:about="&risk-backbone;Thing">
+        <dc:description rdf:datatype="&xsd;string">&lt;classname&gt;Thing&lt;/classname&gt; is a common superclass of all classes defined in the $Date$.</dc:description>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#ChanceNode -->
+
+    <owl:Class rdf:about="&risk;ChanceNode">
+        <rdfs:label rdf:datatype="&xsd;string">Chance Node</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&risk;DecisionTreeNode"/>
+        <rdfs:subClassOf rdf:resource="&risk;NonterminalDecisionTreeNode"/>
+        <dc:description rdf:datatype="&xsd;string">Indicates that there are multiple possible outcomes for this path. 
+A chance node represents a probabilistic event.  The branches following the node represent each of the probable outcomes.  They are characterized by a text and a probability.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#Component -->
+
+    <owl:Class rdf:about="&risk;Component">
+        <rdfs:label rdf:datatype="&xsd;string">Component</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&risk-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Component"/>
+        <dc:description rdf:datatype="&xsd;string">(1) A constituent element of a system or subsystem.  (2) An assembly or any combination of parts, subassemblies, assemblies mounted together, such as a transmitter or cryogenic pump. (3) Any part of a complete item whether loaded with explosives (commonly called “live”, inert (not containing explosives), or empty.
+
+&lt;variablelist&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Type&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+system, subsystem or atomic level. 
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Testing Strategy&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+strategy used to test the component. 
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Effect of Failure&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+the fault containment region in the event of its failure and the related fault propagation mechanisms. 
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Relationships&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;the gate  to which it is connected in a fault tree. 
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Mitigation Strategy&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+strategy used for mitigating its faults or failures. 
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Criticality of Failure&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+level of risk that it imposes on the system if it fails. 
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;State&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+failed, degraded, faulty, up – indicates the state of the component in question. 
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Failure Mode&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+The various failure behaviors of the component. 
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Failure Effect&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;the effect of various failure modes for the component. 
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Failure Criticality&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+level of criticality to the system if the component fails.
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;/variablelist&gt;</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#Contains -->
+
+    <owl:Class rdf:about="&risk;Contains">
+        <rdfs:label rdf:datatype="&xsd;string">Contains</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&risk-backbone;ReifiedObjectProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#DecisionNode -->
+
+    <owl:Class rdf:about="&risk;DecisionNode">
+        <rdfs:label rdf:datatype="&xsd;string">Decision Node</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&risk;DecisionTreeNode"/>
+        <rdfs:subClassOf rdf:resource="&risk;NonterminalDecisionTreeNode"/>
+        <dc:description rdf:datatype="&xsd;string">Indicates that there are multiple paths that the decision maker can take.
+&lt;variablelist&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Options&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+Each of these paths is an option.  Each option is characterized by a cost for going down that path.
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;/variablelist&gt;</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#DecisionTree -->
+
+    <owl:Class rdf:about="&risk;DecisionTree">
+        <rdfs:label rdf:datatype="&xsd;string">Decision Tree</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&risk-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Explanation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#DecisionTreeNode -->
+
+    <owl:Class rdf:about="&risk;DecisionTreeNode">
+        <rdfs:label rdf:datatype="&xsd;string">Decision Tree Node</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&risk-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#IdentifiedElement"/>
+        <dc:description rdf:datatype="&xsd;string">&lt;variablelist&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Utility&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+The value of the final outcome of each path for the decision maker.
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;/variablelist&gt;</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#EndNode -->
+
+    <owl:Class rdf:about="&risk;EndNode">
+        <rdfs:label rdf:datatype="&xsd;string">End Node</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&risk;DecisionTreeNode"/>
+        <dc:description rdf:datatype="&xsd;string">Final outcome of the path. The end node is characterized by a final outcome for the path that it represents and the likelihood of that outcome occurring.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#Event -->
+
+    <owl:Class rdf:about="&risk;Event">
+        <rdfs:label rdf:datatype="&xsd;string">Event</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&risk-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#IdentifiedElement"/>
+        <dc:description rdf:datatype="&xsd;string">A real-time occurrence describing one discrete action, typically an error, failure, or malfunction.  Examples: pipe broke, power lost, lightning stuck and person opened valve.
+&lt;variablelist&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Types&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+Initiating, Basic, Top, Aggravtive, Mitigative
+
+
+&lt;variablelist&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Initiating&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+The events which initiate the process which forms a scenario that leads to an off-nominal state.
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Basic&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+The bottom or “leaf” events of a fault tree.  The limit of resolution of the fault tree.  Examples of basic events are component failures and human errors.
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Top&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+The top most event of a fault tree or success tree.  Also called the undesired event in the case of a fault tree.
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Mitigative&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+An event which mitigates a fault.
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Aggravative&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+An event which aggravates a fault.
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;/variablelist&gt;
+
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Probability&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+The likelihood or distribution for the occurrence of the event. 
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Sequence&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+Every event can occur before or after a different event. 
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Time of Occurrence&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+Instant in time in which the event occurs. 
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Relationship&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+In the case of events associated with fault trees (such as a basic event), this refers to the fault tree gate to which the event is fed. In the case of an event tree, it refers to the initiating event of the event tree in question.
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;/variablelist&gt;</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#EventSequenceDiagram -->
+
+    <owl:Class rdf:about="&risk;EventSequenceDiagram">
+        <rdfs:label rdf:datatype="&xsd;string">Event Sequence Diagram</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&risk-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Explanation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#FFA -->
+
+    <owl:Class rdf:about="&risk;FFA">
+        <rdfs:label rdf:datatype="&xsd;string">FFA</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&risk-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Explanation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#FMECA -->
+
+    <owl:Class rdf:about="&risk;FMECA">
+        <rdfs:label rdf:datatype="&xsd;string">FMECA</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&risk-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Explanation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#Fault -->
+
+    <owl:Class rdf:about="&risk;Fault">
+        <rdfs:label rdf:datatype="&xsd;string">Fault</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&risk-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#IdentifiedElement"/>
+        <dc:description rdf:datatype="&xsd;string">An undesired system state and/or the immediate cause of failure (e.g. maladjustment, misalignment, defect, or other).  The definition of the term “fault” envelopes the word “failure”, since faults include other undesired events such as software anomalies and operational anomalies.  (2) An inherent defect in a product which may or may not ever manifest, such as a bug in software code.
+&lt;variablelist&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Propagation&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+the mechanism by which it propagates: active, dormant, triggered. 
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Type&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+Physical, logical, temporal
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Trigger&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+The element that triggers the fault.  This can be due to the environment, the operating conditions, or a design issue. 
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Detection Strategy&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+The strategy used for detecting the fault. 
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Diagnosis Approach&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+The approach used for the diagnosis of the fault.
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Containment Approach&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+The approach used for the containment of the fault. 
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Masking Approach&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+The approach used for masking the fault. 
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Compensation Approach&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+The approach used for compensating for the fault.  This could include the redundancies in the system that compensate for the occurrence of the fault. 
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Repair Strategy&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+The strategy used for repairing the system from the fault in question. 
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Containment Region&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+The region in which the fault is contained.  The fault does not propagate outside of the fault containment region. 
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Coverage Parameter&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+Probability that the fault will be covered and not propagate and cause system level failure.
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;/variablelist&gt;</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#FaultContainmentRegion -->
+
+    <owl:Class rdf:about="&risk;FaultContainmentRegion">
+        <rdfs:label rdf:datatype="&xsd;string">Fault Containment Region</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&risk-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#IdentifiedElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#FaultTree -->
+
+    <owl:Class rdf:about="&risk;FaultTree">
+        <rdfs:label rdf:datatype="&xsd;string">Fault Tree</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&risk-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Explanation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#FaultTreeNode -->
+
+    <owl:Class rdf:about="&risk;FaultTreeNode">
+        <rdfs:label rdf:datatype="&xsd;string">Fault Tree Node</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&risk-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#IdentifiedElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#Function -->
+
+    <owl:Class rdf:about="&risk;Function">
+        <rdfs:label rdf:datatype="&xsd;string">Function</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&risk-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Function"/>
+        <dc:description rdf:datatype="&xsd;string">&lt;para&gt;
+&lt;variablelist&gt;
+
+&lt;varlistentry&gt;
+&lt;term&gt;Operational Mode&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+applicable phase
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+
+&lt;varlistentry&gt;
+&lt;term&gt;Sequence&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+Another function; the functions that occur after and before.  
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+
+&lt;varlistentry&gt;
+&lt;term&gt;Relationship&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+Components, other functions 
+
+&lt;itemizedlist&gt;
+&lt;listitem&gt;&lt;para&gt;
+functions that it decomposes into.
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;listitem&gt;&lt;para&gt;
+components that are assigned for performing those functions.  
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/itemizedlist&gt;
+
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+
+&lt;varlistentry&gt;
+&lt;term&gt;Nominal Behavior&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+this describes how the function is meant to behave in nominal conditions. 
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+
+&lt;varlistentry&gt;
+&lt;term&gt;Off-Nominal Behavior&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+A list of possible off-nominal behaviors. 
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+
+&lt;varlistentry&gt;
+&lt;term&gt;Failure Mode&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+The various failure behaviors for the function. 
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+
+&lt;varlistentry&gt;
+&lt;term&gt;Failure Effect&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+The effect of the failure on the system. 
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+
+&lt;varlistentry&gt;
+&lt;term&gt;Failure Criticality&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+level of criticality to the system if the failure occurs.
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+
+&lt;/variablelist&gt;
+&lt;/para&gt;</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#Gate -->
+
+    <owl:Class rdf:about="&risk;Gate">
+        <rdfs:label rdf:datatype="&xsd;string">Gate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&risk-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#IdentifiedElement"/>
+        <dc:description rdf:datatype="&xsd;string">An artifact that takes as input one or more gates or basic events and produces as output a likelihood. 
+&lt;variablelist&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Type&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+AND, OR, PAND, FDEP, XOR, SEQ, 
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Location&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+Top, Middle
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Input&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+Another gate, basic events, components
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Output&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+Likelihood
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Relationship&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+&lt;classname&gt;Gate&lt;/classname&gt;, &lt;classname&gt;Component&lt;/classname&gt;
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Mitigation Strategy&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+The strategy that is used to mitigate the occurrence of the failure of the module that is indicated by the gate. 
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;varlistentry&gt;
+&lt;term&gt;Coverage Parameter&lt;/term&gt;
+&lt;listitem&gt;&lt;para&gt;
+The likelihood that the failure of that module is covered, i.e. it does not propagate outside of that module.
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/varlistentry&gt;
+&lt;/variablelist&gt;</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#HasChildNode -->
+
+    <owl:Class rdf:about="&risk;HasChildNode">
+        <rdfs:label rdf:datatype="&xsd;string">Has Child Node</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&risk-backbone;ReifiedObjectProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#HasDecisionTreeChildNode -->
+
+    <owl:Class rdf:about="&risk;HasDecisionTreeChildNode">
+        <rdfs:label rdf:datatype="&xsd;string">Has Decision Tree Child Node</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&risk-backbone;ReifiedObjectProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#HasFirstDecision -->
+
+    <owl:Class rdf:about="&risk;HasFirstDecision">
+        <rdfs:label rdf:datatype="&xsd;string">Has First Decision</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&risk-backbone;ReifiedObjectProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#HasTopNode -->
+
+    <owl:Class rdf:about="&risk;HasTopNode">
+        <rdfs:label rdf:datatype="&xsd;string">Has Top Node</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&risk-backbone;ReifiedObjectProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#MasterLogicDiagram -->
+
+    <owl:Class rdf:about="&risk;MasterLogicDiagram">
+        <rdfs:label rdf:datatype="&xsd;string">Master Logic Diagram</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&risk-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Explanation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/risk/risk#NonterminalDecisionTreeNode -->
+
+    <owl:Class rdf:about="&risk;NonterminalDecisionTreeNode">
+        <rdfs:subClassOf rdf:resource="&risk-backbone;Aspect"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl#r">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#s">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#t">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&risk;hasHasDecisionTreeChildNodeTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&risk;hasHasDecisionTreeChildNodeSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&risk;hasDecisionTreeChildNode"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&risk;hasHasChildNodeSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&risk;hasHasChildNodeTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&risk;hasChildNode"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&risk;contains"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&risk;hasContainsSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&risk;hasContainsTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&risk;hasHasFirstDecisionSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&risk;hasHasFirstDecisionTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&risk;hasFirstDecision"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&risk;hasTopNode"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&risk;hasHasTopNodeTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&risk;hasHasTopNodeSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	
+	xmlns:mgss-service="http://imce.jpl.nasa.gov/mgss-service/mgss-service#"
+	xmlns:PrimitiveTypes="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/PrimitiveTypes#"
+	xmlns:timeline="http://imce.jpl.nasa.gov/timeline/timeline#"
+	xmlns:analysis="http://imce.jpl.nasa.gov/foundation/analysis/analysis#"
+	xmlns:state-analysis="http://imce.jpl.nasa.gov/state-analysis/state-analysis#"
+	xmlns:jeo-architecture="http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture#"
+	xmlns:SysML="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:state-analysis-implementation="http://imce.jpl.nasa.gov/state-analysis-implementation/state-analysis-implementation#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:Blocks="http://imce.jpl.nasa.gov/Blocks/Blocks#"
+	xmlns:QUDV="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:math="http://imce.jpl.nasa.gov/math/math#"
+	xmlns:project="http://imce.jpl.nasa.gov/foundation/project/project#"
+	
+	xmlns:electrical="http://imce.jpl.nasa.gov/electrical/electrical#"
+	xmlns:mission="http://imce.jpl.nasa.gov/foundation/mission/mission#"
+	xmlns:pbs="http://imce.jpl.nasa.gov/pbs/pbs#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:base="http://imce.jpl.nasa.gov/foundation/base/base#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	
+	xmlns:UML="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#"
+	xmlns:architectural-description="http://imce.jpl.nasa.gov/architectural-description/architectural-description#"
+	xmlns:ieee-1471="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#"
+	
+	xmlns:mechanical="http://imce.jpl.nasa.gov/mechanical/mechanical#"
+	xmlns:annotation="http://imce.jpl.nasa.gov/foundation/annotation/annotation#">
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/mechanical/mechanical">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$Date$</dc:date>
+	<owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$Revision$</owl:versionInfo>
+	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copyright 2010-2011, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
+
+This software may be subject to U.S. export control laws. By accepting this software, the user agrees to comply with all applicable U.S. export laws and regulations. User has the responsibility to obtain export licenses, or other export authority as may be required before exporting such information to foreign countries or providing access to foreign persons.</dc:rights>
+	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Discipline</dc:type>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mechanical Systems Ontology</dc:title>
+	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Systems Engineering &amp; Formulation Division</dc:creator>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Mechanical Systems Ontology defines concepts and properties in the mechanical engineering domain.</dc:description>
+	<owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/mechanical/mechanical#hasMass">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Quantity"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/mechanical/mechanical#MassPropertiesCharacterization"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/mechanical/mechanical#topDataProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/mechanical/mechanical#topDataProperty">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;property&gt;topDataProperty&lt;/property&gt; is a common superproperty of all properties defined in the Mechanical Systems ontology.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/mechanical/mechanical#Actuator">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/mechanical/mechanical#Thing"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Component"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/mechanical/mechanical#ApplyTorque">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/mechanical/mechanical#Thing"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Function"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/mechanical/mechanical#MassPropertiesCharacterization">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Characterization"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/mechanical/mechanical#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/mechanical/mechanical#MountingPlate">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/mechanical/mechanical#Thing"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Interface"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/mechanical/mechanical#Thing">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;classname&gt;Thing&lt;/classname&gt; is a common superclass of all classes defined in the Mechanical ontology.</dc:description>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/mechanical/mechanical#topObjectProperty">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;property&gt;topObjectProperty&lt;/property&gt; is a common superproperty of all object properties defined in the Mechanical Systems Ontology.</dc:description>
+</rdf:Description>
+
+</rdf:RDF>

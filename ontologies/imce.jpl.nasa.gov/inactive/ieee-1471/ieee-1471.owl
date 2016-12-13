@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	
+	xmlns:Blocks-embedding="http://imce.jpl.nasa.gov/Blocks/Blocks-embedding#"
+	xmlns:mgss-service="http://imce.jpl.nasa.gov/mgss-service/mgss-service#"
+	xmlns:timeline="http://imce.jpl.nasa.gov/timeline/timeline#"
+	xmlns:PrimitiveTypes="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes#"
+	xmlns:math-embedding="http://imce.jpl.nasa.gov/math/math-embedding#"
+	xmlns:jeo-architecture="http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture#"
+	xmlns:state-analysis="http://imce.jpl.nasa.gov/state-analysis/state-analysis#"
+	xmlns:analysis="http://imce.jpl.nasa.gov/foundation/analysis/analysis#"
+	
+	xmlns:SysML="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#"
+	xmlns:annotation="http://imce.jpl.nasa.gov/foundation/annotation/annotation#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:state-analysis-implementation="http://imce.jpl.nasa.gov/state-analysis-implementation/state-analysis-implementation#"
+	xmlns:state-analysis-implementation-embedding="http://imce.jpl.nasa.gov/state-analysis-implementation/state-analysis-implementation-embedding#"
+	xmlns:mechanical="http://imce.jpl.nasa.gov/mechanical/mechanical#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:Blocks="http://imce.jpl.nasa.gov/Blocks/Blocks#"
+	xmlns:analysis-embedding="http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#"
+	xmlns:QUDV="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:state-analysis-embedding="http://imce.jpl.nasa.gov/state-analysis/state-analysis-embedding#"
+	xmlns:mission-embedding="http://imce.jpl.nasa.gov/foundation/mission/mission-embedding#"
+	xmlns:mgss-service-embedding="http://imce.jpl.nasa.gov/mgss-service/mgss-service-embedding#"
+	xmlns:base-embedding="http://imce.jpl.nasa.gov/foundation/base/base-embedding#"
+	xmlns:ieee-1471-embedding="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#"
+	xmlns:architectural-description-embedding="http://imce.jpl.nasa.gov/architectural-description/architectural-description-embedding#"
+	xmlns:math="http://imce.jpl.nasa.gov/math/math#"
+	xmlns:project="http://imce.jpl.nasa.gov/foundation/project/project#"
+	xmlns:timeline-embedding="http://imce.jpl.nasa.gov/timeline/timeline-embedding#"
+	xmlns:annotation-embedding="http://imce.jpl.nasa.gov/foundation/annotation/annotation-embedding#"
+	xmlns:jeo-architecture-embedding="http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture-embedding#"
+	
+	xmlns:electrical="http://imce.jpl.nasa.gov/electrical/electrical#"
+	xmlns:mission="http://imce.jpl.nasa.gov/foundation/mission/mission#"
+	xmlns:pbs="http://imce.jpl.nasa.gov/pbs/pbs#"
+	xmlns:mechanical-embedding="http://imce.jpl.nasa.gov/mechanical/mechanical-embedding#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:base="http://imce.jpl.nasa.gov/foundation/base/base#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:electrical-embedding="http://imce.jpl.nasa.gov/electrical/electrical-embedding#"
+	
+	xmlns:UML="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#"
+	xmlns:pbs-embedding="http://imce.jpl.nasa.gov/pbs/pbs-embedding#"
+	xmlns:ieee-1471="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#"
+	xmlns:architectural-description="http://imce.jpl.nasa.gov/architectural-description/architectural-description#"
+	xmlns:project-embedding="http://imce.jpl.nasa.gov/foundation/project/project-embedding#"
+	xmlns:StandardProfileL2="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#">
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$Date$</dc:date>
+	<owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$Revision$</owl:versionInfo>
+	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copyright 2010-2011, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
+
+This software may be subject to U.S. export control laws. By accepting this software, the user agrees to comply with all applicable U.S. export laws and regulations. User has the responsibility to obtain export licenses, or other export authority as may be required before exporting such information to foreign countries or providing access to foreign persons.</dc:rights>
+	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Foundation</dc:type>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IEEE 1471 Ontology</dc:title>
+	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Systems Engineering &amp; Formulation Division</dc:creator>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The IEEE 1471 Ontology includes concepts and properties defined in IEEE
+Std 1471-2000: &lt;emphasis&gt;IEEE Recommended Practice for
+Architectural Description of Software-Intensive Systems&lt;/emphasis&gt;.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/type">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Viewpoint">
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A viewpoint is a specification of the conventions for constructing and using a view. A pattern or template from which to develop individual views by establishing the purposes and audience for a view and the techniques for its creation and analysis.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/description">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/rights">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#aggregates">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#ArchitecturalDescription"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Model"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#conformsTo">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#View"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Viewpoint"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#consistsOf">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Model"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#View"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#describedBy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#ArchitecturalDescription"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Architecture"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#establishesMethodsFor">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Model"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Viewpoint"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#fulfills">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Mission"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#System"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#has">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#hasArchitecture">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Architecture"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#System"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#has"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#hasConcern">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Concern"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Stakeholder"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#has"/>
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#isImportantTo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#hasSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#LibraryViewpoint"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Viewpoint"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#has"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#hasStakeholder">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Stakeholder"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#System"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#identifies">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#identifiesConcern">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#ArchitecturalDescription"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Concern"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#identifies"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#identifiesStakeholder">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#ArchitecturalDescription"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Stakeholder"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#identifies"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#influences">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Environment"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#System"/>
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#inhabits"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#inhabits">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Environment"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#System"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#isAddressedTo">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Stakeholder"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Viewpoint"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#isImportantTo">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Concern"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Stakeholder"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#organizedBy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#ArchitecturalDescription"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#View"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#participatesIn">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#participatesInArchitecturalDescription">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#ArchitecturalDescription"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Model"/>
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#aggregates"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#participatesIn"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#participatesInView">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Model"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#View"/>
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#consistsOf"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#participatesIn"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#provides">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The domain and range are reversed in IEEE 1471. That seems wrong.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#ArchitecturalDescription"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Rationale"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#selects">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#ArchitecturalDescription"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Viewpoint"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#topObjectProperty">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;property&gt;topObjectProperty&lt;/property&gt; is a common superproperty of all object properties defined in the IEEE 1471 Ontology.</dc:description>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#usedToCover">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Concern"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Viewpoint"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#topDataProperty">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;property&gt;topDataProperty&lt;/property&gt; is a common superproperty of all datatype properties defined in the IEEE 1471 Ontology.</dc:description>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#ArchitecturalDescription">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Thing"/>
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20705"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20705">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#identifiesConcern"/>
+	<owl:someValuesFrom rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Concern"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#ArchitecturalDescription">
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20706"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20706">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#organizedBy"/>
+	<owl:someValuesFrom rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#View"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#ArchitecturalDescription">
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20707"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20707">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#aggregates"/>
+	<owl:someValuesFrom rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Model"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#ArchitecturalDescription">
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20708"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20708">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#identifiesStakeholder"/>
+	<owl:someValuesFrom rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Stakeholder"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#ArchitecturalDescription">
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20709"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20709">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#selects"/>
+	<owl:someValuesFrom rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Viewpoint"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#ArchitecturalDescription">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Architecture"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Concern"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Environment"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Mission"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Model"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Rationale"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Stakeholder"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#System"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#View"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Viewpoint"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An architectural description is a collection of products to document an architecture.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Architecture">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Thing"/>
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20710"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20710">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#describedBy"/>
+	<owl:onClass rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#ArchitecturalDescription"/>
+	<owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Architecture">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Concern"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Environment"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Mission"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Model"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Rationale"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Stakeholder"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#System"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#View"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Viewpoint"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An architecture is the fundamental organization of a system embodied in its components, their relationships to each other, and to the environment, and the principles guiding its design and evolution.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Concern">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Thing"/>
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20711"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20711">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#isImportantTo"/>
+	<owl:someValuesFrom rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Stakeholder"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Concern">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Environment"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Mission"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Model"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Rationale"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Stakeholder"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#System"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#View"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Viewpoint"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Concerns are those interests which pertain to the system’s development, its operation or any other aspects that are critical or otherwise important to one or more stakeholders. Concerns include system considerations such as performance, reliability, security, distribution, and evolvability.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Environment">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Thing"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Mission"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Model"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Rationale"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Stakeholder"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#System"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#View"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Viewpoint"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A system inhabits an environment. A system’s environment can influence that system. The environment, or context, determines the setting and circumstances of developmental, operational, political, and other influences upon that system. The environment can include other systems that interact with the system of interest, either directly via interfaces or indirectly in other ways. The environment determines the boundaries that define the scope of the system of interest relative to other systems.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#LibraryViewpoint">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Viewpoint"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A viewpoint definition may originate with an AD, or it may have been defined elsewhere. A viewpoint that is defined elsewhere is referred to in this recommended practice as a library viewpoint.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Mission">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Thing"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Model"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Rationale"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Stakeholder"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#System"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#View"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Viewpoint"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A mission is a use or operation for which a system is intended by one or more stakeholders to meet some set of objectives.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Model">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Thing"/>
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20712"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20712">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#participatesInArchitecturalDescription"/>
+	<owl:onClass rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#ArchitecturalDescription"/>
+	<owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Model">
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20713"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20713">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#participatesInView"/>
+	<owl:someValuesFrom rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#View"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Model">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Rationale"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Stakeholder"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#System"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#View"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Viewpoint"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An architectural model is developed using the methods established by its associated architectural viewpoint.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Rationale">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Thing"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Stakeholder"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#System"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#View"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Viewpoint"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An architectural description includes the rationale for its selection of architectural views.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Stakeholder">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Thing"/>
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20714"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20714">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#hasConcern"/>
+	<owl:someValuesFrom rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Concern"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Stakeholder">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#System"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#View"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Viewpoint"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A stakeholder is an individual, team, or organization (or classes thereof) with interests in, or concerns relative to, a system.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#System">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Thing"/>
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20715"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20715">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#hasArchitecture"/>
+	<owl:onClass rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Architecture"/>
+	<owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#System">
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20716"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20716">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#hasStakeholder"/>
+	<owl:someValuesFrom rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Stakeholder"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#System">
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20717"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20717">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#fulfills"/>
+	<owl:someValuesFrom rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Mission"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#System">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#View"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Viewpoint"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A system is a collection of components organized to accomplish a specific function or set of functions.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Thing">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;classname&gt;Thing&lt;/classname&gt; is a common superclass of every class defined in the IEEE 1471 ontology.</dc:description>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#View">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Thing"/>
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20718"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20718">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#consistsOf"/>
+	<owl:someValuesFrom rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Model"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#View">
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20719"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20719">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#conformsTo"/>
+	<owl:onClass rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Viewpoint"/>
+	<owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#View">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Viewpoint"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A view is a representation of a whole system from the perspective of a related set of concerns.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Viewpoint">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Thing"/>
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20720"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20720">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#usedToCover"/>
+	<owl:someValuesFrom rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Concern"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Viewpoint">
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20721"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20721">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#establishesMethodsFor"/>
+	<owl:someValuesFrom rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Model"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Viewpoint">
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20722"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20722">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#isAddressedTo"/>
+	<owl:someValuesFrom rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Stakeholder"/>
+</rdf:Description>
+
+</rdf:RDF>

@@ -1,0 +1,1029 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY annotation "http://imce.jpl.nasa.gov/foundation/annotation/annotation#" >
+    <!ENTITY Metrology-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#" >
+    <!ENTITY Metrology-metamodel-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#" >
+]>
+
+
+<rdf:RDF xmlns="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#"
+     xml:base="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel"
+     xmlns:annotation="http://imce.jpl.nasa.gov/foundation/annotation/annotation#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:Metrology-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Metrology-metamodel-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel">
+        <owl:imports rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology"/>
+        <owl:imports rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&Metrology-metamodel-backbone;topObjectProperty">
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topReifiedObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&Metrology-metamodel-backbone;topReifiedObjectProperty">
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <rdfs:subPropertyOf rdf:resource="&Metrology-metamodel-backbone;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topReifiedObjectPropertySource -->
+
+    <owl:ObjectProperty rdf:about="&Metrology-metamodel-backbone;topReifiedObjectPropertySource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <rdfs:subPropertyOf rdf:resource="&Metrology-metamodel-backbone;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topReifiedObjectPropertyTarget -->
+
+    <owl:ObjectProperty rdf:about="&Metrology-metamodel-backbone;topReifiedObjectPropertyTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <rdfs:subPropertyOf rdf:resource="&Metrology-metamodel-backbone;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topReifiedStructuredDataProperty -->
+
+    <owl:ObjectProperty rdf:about="&Metrology-metamodel-backbone;topReifiedStructuredDataProperty">
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <rdfs:subPropertyOf rdf:resource="&Metrology-metamodel-backbone;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topReifiedStructuredDataPropertySource -->
+
+    <owl:ObjectProperty rdf:about="&Metrology-metamodel-backbone;topReifiedStructuredDataPropertySource">
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <rdfs:subPropertyOf rdf:resource="&Metrology-metamodel-backbone;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topReifiedStructuredDataPropertyTarget -->
+
+    <owl:ObjectProperty rdf:about="&Metrology-metamodel-backbone;topReifiedStructuredDataPropertyTarget">
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <rdfs:subPropertyOf rdf:resource="&Metrology-metamodel-backbone;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topUnreifiedObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&Metrology-metamodel-backbone;topUnreifiedObjectProperty">
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <rdfs:subPropertyOf rdf:resource="&Metrology-metamodel-backbone;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="&Metrology-metamodel-backbone;topDataProperty">
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Aspect -->
+
+    <owl:Class rdf:about="&Metrology-metamodel-backbone;Aspect">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Thing"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity -->
+
+    <owl:Class rdf:about="&Metrology-metamodel-backbone;Entity">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Thing"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#ObjectPropertyDependentRangeType -->
+
+    <owl:Class rdf:about="&Metrology-metamodel-backbone;ObjectPropertyDependentRangeType">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#ReifiedObjectProperty -->
+
+    <owl:Class rdf:about="&Metrology-metamodel-backbone;ReifiedObjectProperty">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Thing"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#ReifiedStructuredDataProperty -->
+
+    <owl:Class rdf:about="&Metrology-metamodel-backbone;ReifiedStructuredDataProperty">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Thing"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#StructuredDatatype -->
+
+    <owl:Class rdf:about="&Metrology-metamodel-backbone;StructuredDatatype">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Thing"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Thing -->
+
+    <owl:Class rdf:about="&Metrology-metamodel-backbone;Thing">
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#InstanceSpecification.MeasurementResult -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#InstanceSpecification.MeasurementResult">
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isMetaclassSpecificExtension rdf:datatype="&xsd;boolean">true</annotation:isMetaclassSpecificExtension>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:implementationElementId>_Metrology4MD__5-MeasurementResult</annotation:implementationElementId>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Property.Quantity -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Property.Quantity">
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isMetaclassSpecificExtension rdf:datatype="&xsd;boolean">true</annotation:isMetaclassSpecificExtension>
+        <annotation:implementationElementId>_Metrology4MD__5-Quantity</annotation:implementationElementId>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Quantity.InfluenceQuantity -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Quantity.InfluenceQuantity">
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:isMetaclassSpecificExtension rdf:datatype="&xsd;boolean">true</annotation:isMetaclassSpecificExtension>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:implementationElementId>_Metrology4MD__5-InfluenceQuantity</annotation:implementationElementId>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Quantity.InputQuantity -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Quantity.InputQuantity">
+        <annotation:isMetaclassSpecificExtension rdf:datatype="&xsd;boolean">true</annotation:isMetaclassSpecificExtension>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:implementationElementId>_Metrology4MD__5-InputQuantity</annotation:implementationElementId>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Quantity.Measurand -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Quantity.Measurand">
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:isMetaclassSpecificExtension rdf:datatype="&xsd;boolean">true</annotation:isMetaclassSpecificExtension>
+        <annotation:implementationElementId>_Metrology4MD__5-Measurand</annotation:implementationElementId>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty">
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:isMetaclassSpecificExtension rdf:datatype="&xsd;boolean">true</annotation:isMetaclassSpecificExtension>
+        <annotation:implementationElementId>_Metrology4MD__5-MeasurementUncertainty</annotation:implementationElementId>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification">
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isMetaclassSpecificExtension rdf:datatype="&xsd;boolean">true</annotation:isMetaclassSpecificExtension>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:implementationElementId>_Metrology4MD__5-QuantityValueSpecification</annotation:implementationElementId>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueType.MasurementScale -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueType.MasurementScale">
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isMetaclassSpecificExtension rdf:datatype="&xsd;boolean">true</annotation:isMetaclassSpecificExtension>
+        <annotation:implementationElementId>_Metrology4MD__5-MasurementScale</annotation:implementationElementId>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#DataType.ValueType.MasurementScale -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;DataType.ValueType.MasurementScale">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueType.MasurementScale"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#DataType.ValueType"/>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:implementationElementId>_Metrology4MD__5-MasurementScale</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Duration.MeasurementUncertainty -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;Duration.MeasurementUncertainty">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#Duration"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:implementationElementId>_Metrology4MD__5-MeasurementUncertainty</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Duration.QuantityValueSpecification -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;Duration.QuantityValueSpecification">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#Duration"/>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:implementationElementId>_Metrology4MD__5-QuantityValueSpecification</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#DurationInterval.MeasurementUncertainty -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;DurationInterval.MeasurementUncertainty">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#DurationInterval"/>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:implementationElementId>_Metrology4MD__5-MeasurementUncertainty</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#DurationInterval.QuantityValueSpecification -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;DurationInterval.QuantityValueSpecification">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#DurationInterval"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:implementationElementId>_Metrology4MD__5-QuantityValueSpecification</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#ElementValue.MeasurementUncertainty -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;ElementValue.MeasurementUncertainty">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#ElementValue"/>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:implementationElementId>_Metrology4MD__5-MeasurementUncertainty</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#ElementValue.QuantityValueSpecification -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;ElementValue.QuantityValueSpecification">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#ElementValue"/>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:implementationElementId>_Metrology4MD__5-QuantityValueSpecification</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Enumeration.ValueType.MasurementScale -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;Enumeration.ValueType.MasurementScale">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueType.MasurementScale"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Enumeration.ValueType"/>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:implementationElementId>_Metrology4MD__5-MasurementScale</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#EnumerationLiteral.MeasurementResult -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;EnumerationLiteral.MeasurementResult">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#InstanceSpecification.MeasurementResult"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#EnumerationLiteral"/>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:implementationElementId>_Metrology4MD__5-MeasurementResult</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Expression.MeasurementUncertainty -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;Expression.MeasurementUncertainty">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#Expression"/>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:implementationElementId>_Metrology4MD__5-MeasurementUncertainty</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Expression.QuantityValueSpecification -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;Expression.QuantityValueSpecification">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#Expression"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:implementationElementId>_Metrology4MD__5-QuantityValueSpecification</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#InstanceSpecification.MeasurementResult -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;InstanceSpecification.MeasurementResult">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#InstanceSpecification.MeasurementResult"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#InstanceSpecification"/>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:implementationElementId>_Metrology4MD__5-MeasurementResult</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#InstanceValue.MeasurementUncertainty -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;InstanceValue.MeasurementUncertainty">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#InstanceValue"/>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:implementationElementId>_Metrology4MD__5-MeasurementUncertainty</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#InstanceValue.QuantityValueSpecification -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;InstanceValue.QuantityValueSpecification">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#InstanceValue"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:implementationElementId>_Metrology4MD__5-QuantityValueSpecification</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Interval.MeasurementUncertainty -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;Interval.MeasurementUncertainty">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#Interval"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:implementationElementId>_Metrology4MD__5-MeasurementUncertainty</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Interval.QuantityValueSpecification -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;Interval.QuantityValueSpecification">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#Interval"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:implementationElementId>_Metrology4MD__5-QuantityValueSpecification</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#LiteralBoolean.MeasurementUncertainty -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;LiteralBoolean.MeasurementUncertainty">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#LiteralBoolean"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:implementationElementId>_Metrology4MD__5-MeasurementUncertainty</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#LiteralBoolean.QuantityValueSpecification -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;LiteralBoolean.QuantityValueSpecification">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#LiteralBoolean"/>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:implementationElementId>_Metrology4MD__5-QuantityValueSpecification</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#LiteralInteger.MeasurementUncertainty -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;LiteralInteger.MeasurementUncertainty">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#LiteralInteger"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:implementationElementId>_Metrology4MD__5-MeasurementUncertainty</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#LiteralInteger.QuantityValueSpecification -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;LiteralInteger.QuantityValueSpecification">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#LiteralInteger"/>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:implementationElementId>_Metrology4MD__5-QuantityValueSpecification</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#LiteralNull.MeasurementUncertainty -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;LiteralNull.MeasurementUncertainty">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#LiteralNull"/>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:implementationElementId>_Metrology4MD__5-MeasurementUncertainty</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#LiteralNull.QuantityValueSpecification -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;LiteralNull.QuantityValueSpecification">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#LiteralNull"/>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:implementationElementId>_Metrology4MD__5-QuantityValueSpecification</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#LiteralReal.MeasurementUncertainty -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;LiteralReal.MeasurementUncertainty">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#LiteralReal"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:implementationElementId>_Metrology4MD__5-MeasurementUncertainty</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#LiteralReal.QuantityValueSpecification -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;LiteralReal.QuantityValueSpecification">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#LiteralReal"/>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:implementationElementId>_Metrology4MD__5-QuantityValueSpecification</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#LiteralString.MeasurementUncertainty -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;LiteralString.MeasurementUncertainty">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#LiteralString"/>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:implementationElementId>_Metrology4MD__5-MeasurementUncertainty</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#LiteralString.QuantityValueSpecification -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;LiteralString.QuantityValueSpecification">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#LiteralString"/>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:implementationElementId>_Metrology4MD__5-QuantityValueSpecification</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#LiteralUnlimitedNatural.MeasurementUncertainty -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;LiteralUnlimitedNatural.MeasurementUncertainty">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#LiteralUnlimitedNatural"/>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:implementationElementId>_Metrology4MD__5-MeasurementUncertainty</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#LiteralUnlimitedNatural.QuantityValueSpecification -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;LiteralUnlimitedNatural.QuantityValueSpecification">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#LiteralUnlimitedNatural"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:implementationElementId>_Metrology4MD__5-QuantityValueSpecification</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#OpaqueExpression.MeasurementUncertainty -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;OpaqueExpression.MeasurementUncertainty">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#OpaqueExpression"/>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:implementationElementId>_Metrology4MD__5-MeasurementUncertainty</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#OpaqueExpression.QuantityValueSpecification -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;OpaqueExpression.QuantityValueSpecification">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#OpaqueExpression"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:implementationElementId>_Metrology4MD__5-QuantityValueSpecification</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;Port.Quantity">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Property.Quantity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#Port"/>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:implementationElementId>_Metrology4MD__5-Quantity</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity.InfluenceQuantity -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;Port.Quantity.InfluenceQuantity">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Quantity.InfluenceQuantity"/>
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel;Port.Quantity"/>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:implementationElementId>_Metrology4MD__5-InfluenceQuantity</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity.InputQuantity -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;Port.Quantity.InputQuantity">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Quantity.InputQuantity"/>
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel;Port.Quantity"/>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:implementationElementId>_Metrology4MD__5-InputQuantity</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity.Measurand -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;Port.Quantity.Measurand">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Quantity.Measurand"/>
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel;Port.Quantity"/>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:implementationElementId>_Metrology4MD__5-Measurand</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#PrimitiveType.ValueType.MasurementScale -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;PrimitiveType.ValueType.MasurementScale">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueType.MasurementScale"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#PrimitiveType.ValueType"/>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:implementationElementId>_Metrology4MD__5-MasurementScale</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;Property.Quantity">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Property.Quantity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#Property"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:implementationElementId>_Metrology4MD__5-Quantity</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity.InfluenceQuantity -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;Property.Quantity.InfluenceQuantity">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Quantity.InfluenceQuantity"/>
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel;Property.Quantity"/>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:implementationElementId>_Metrology4MD__5-InfluenceQuantity</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity.InputQuantity -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;Property.Quantity.InputQuantity">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Quantity.InputQuantity"/>
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel;Property.Quantity"/>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:implementationElementId>_Metrology4MD__5-InputQuantity</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity.Measurand -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;Property.Quantity.Measurand">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Quantity.Measurand"/>
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel;Property.Quantity"/>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:implementationElementId>_Metrology4MD__5-Measurand</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#StringExpression.MeasurementUncertainty -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;StringExpression.MeasurementUncertainty">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#StringExpression"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:implementationElementId>_Metrology4MD__5-MeasurementUncertainty</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#StringExpression.QuantityValueSpecification -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;StringExpression.QuantityValueSpecification">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#StringExpression"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:implementationElementId>_Metrology4MD__5-QuantityValueSpecification</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeExpression.MeasurementUncertainty -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;TimeExpression.MeasurementUncertainty">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#TimeExpression"/>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:implementationElementId>_Metrology4MD__5-MeasurementUncertainty</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeExpression.QuantityValueSpecification -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;TimeExpression.QuantityValueSpecification">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#TimeExpression"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:implementationElementId>_Metrology4MD__5-QuantityValueSpecification</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeInterval.MeasurementUncertainty -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;TimeInterval.MeasurementUncertainty">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#TimeInterval"/>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:implementationElementId>_Metrology4MD__5-MeasurementUncertainty</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeInterval.QuantityValueSpecification -->
+
+    <owl:Class rdf:about="&Metrology-metamodel;TimeInterval.QuantityValueSpecification">
+        <rdfs:subClassOf rdf:resource="&Metrology-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#TimeInterval"/>
+        <annotation:isStereotypeMetaclass rdf:datatype="&xsd;boolean">true</annotation:isStereotypeMetaclass>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:implementationElementId>_Metrology4MD__5-QuantityValueSpecification</annotation:implementationElementId>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#MeasurementUncertainty">
+        <annotation:isStereotype rdf:datatype="&xsd;boolean">true</annotation:isStereotype>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.JPL.Metrology-packagedElement.MeasurementUncertainty</annotation:omgElementId>
+        <annotation:implementationElementId>_Metrology4MD__5-MeasurementUncertainty</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#InputQuantity">
+        <annotation:isStereotype rdf:datatype="&xsd;boolean">true</annotation:isStereotype>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.JPL.Metrology-packagedElement.InputQuantity</annotation:omgElementId>
+        <annotation:implementationElementId>_Metrology4MD__5-InputQuantity</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#MasurementScale">
+        <annotation:isStereotype rdf:datatype="&xsd;boolean">true</annotation:isStereotype>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.JPL.Metrology-packagedElement.MasurementScale</annotation:omgElementId>
+        <annotation:implementationElementId>_Metrology4MD__5-MasurementScale</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#InfluenceQuantity">
+        <annotation:isStereotype rdf:datatype="&xsd;boolean">true</annotation:isStereotype>
+        <annotation:implementationElementId>_Metrology4MD__5-InfluenceQuantity</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.JPL.Metrology-packagedElement.InfluenceQuantity</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#MeasurementModel">
+        <annotation:isStereotype rdf:datatype="&xsd;boolean">true</annotation:isStereotype>
+        <annotation:implementationElementId>_Metrology4MD__5-MeasurementModel</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.JPL.Metrology-packagedElement.MeasurementModel</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#A_quantityValues_measurementScale.measurementScale">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.JPL.Metrology-packagedElement.Association.A_quantityValues_measurementScale-ownedEnd.Property.measurementScale</annotation:omgElementId>
+        <annotation:implementationElementId>_Metrology4MD__5-A_quantityValues_measurementScale-measurementScale</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Quantity">
+        <annotation:isStereotype rdf:datatype="&xsd;boolean">true</annotation:isStereotype>
+        <annotation:implementationElementId>_Metrology4MD__5-Quantity</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.JPL.Metrology-packagedElement.Quantity</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#A_measurementUncertainty_quantityValueSpecification.quantityValueSpecification">
+        <annotation:implementationElementId>_Metrology4MD__5-A_measurementUncertainty_quantityValueSpecification-quantityValueSpecification</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.JPL.Metrology-packagedElement.Association.A_measurementUncertainty_quantityValueSpecification-ownedEnd.Property.quantityValueSpecification</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#a_quantityValues_measurementScale">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.JPL.Metrology-packagedElement.Association.A_quantityValues_measurementScale</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#a_measurementUncertainty_quantityValueSpecification">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.JPL.Metrology-packagedElement.Association.A_measurementUncertainty_quantityValueSpecification</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#A_measurementUncertainty_quantityValueSpecification.measurementUncertainty">
+        <annotation:implementationElementId>_Metrology4MD__5-QuantityValueSpecification-measurementUncertainty</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.JPL.Metrology-packagedElement.QuantityValueSpecification-ownedAttribute.Property.measurementUncertainty</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#QuantityValueSpecification">
+        <annotation:isStereotype rdf:datatype="&xsd;boolean">true</annotation:isStereotype>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.JPL.Metrology-packagedElement.QuantityValueSpecification</annotation:omgElementId>
+        <annotation:implementationElementId>_Metrology4MD__5-QuantityValueSpecification</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#A_measurementUncertainty_quantityValueSpecification">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.JPL.Metrology-packagedElement.Association.A_measurementUncertainty_quantityValueSpecification</annotation:omgElementId>
+        <annotation:implementationElementId>_Metrology4MD__5-A_measurementUncertainty_quantityValueSpecification</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#MeasurementResult">
+        <annotation:isStereotype rdf:datatype="&xsd;boolean">true</annotation:isStereotype>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.JPL.Metrology-packagedElement.MeasurementResult</annotation:omgElementId>
+        <annotation:implementationElementId>_Metrology4MD__5-MeasurementResult</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#A_quantityValues_measurementScale">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.JPL.Metrology-packagedElement.Association.A_quantityValues_measurementScale</annotation:omgElementId>
+        <annotation:implementationElementId>_Metrology4MD__5-A_quantityValues_measurementScale</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ConstraintBlock.MeasurementModel">
+        <annotation:isMetaclassSpecificExtension rdf:datatype="&xsd;boolean">true</annotation:isMetaclassSpecificExtension>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:implementationElementId>_Metrology4MD__5-MeasurementModel</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#A_quantityValues_measurementScale.quantityValues">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.JPL.Metrology-packagedElement.MasurementScale-ownedAttribute.Property.quantityValues</annotation:omgElementId>
+        <annotation:implementationElementId>_Metrology4MD__5-MasurementScale-quantityValues</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Measurand">
+        <annotation:isStereotype rdf:datatype="&xsd;boolean">true</annotation:isStereotype>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.JPL.Metrology-packagedElement.Measurand</annotation:omgElementId>
+        <annotation:implementationElementId>_Metrology4MD__5-Measurand</annotation:implementationElementId>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.5-SNAPSHOT) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,431 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY pbs "http://imce.jpl.nasa.gov/pbs/pbs#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY math "http://imce.jpl.nasa.gov/math/math#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY Blocks "http://imce.jpl.nasa.gov/Blocks/Blocks#" >
+    <!ENTITY UML "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#" >
+    <!ENTITY pbs-embedding "http://imce.jpl.nasa.gov/pbs/pbs-embedding#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY timeline "http://imce.jpl.nasa.gov/timeline/timeline#" >
+    <!ENTITY QUDV "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#" >
+    <!ENTITY SysML "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#" >
+    <!ENTITY ieee-1471 "http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#" >
+    <!ENTITY math-embedding "http://imce.jpl.nasa.gov/math/math-embedding#" >
+    <!ENTITY base "http://imce.jpl.nasa.gov/foundation/base/base#" >
+    <!ENTITY mechanical "http://imce.jpl.nasa.gov/mechanical/mechanical#" >
+    <!ENTITY electrical "http://imce.jpl.nasa.gov/electrical/electrical#" >
+    <!ENTITY Blocks-embedding "http://imce.jpl.nasa.gov/Blocks/Blocks-embedding#" >
+    <!ENTITY mgss-service "http://imce.jpl.nasa.gov/mgss-service/mgss-service#" >
+    <!ENTITY UML-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-embedding#" >
+    <!ENTITY project "http://imce.jpl.nasa.gov/foundation/project/project#" >
+    <!ENTITY mission "http://imce.jpl.nasa.gov/foundation/mission/mission#" >
+    <!ENTITY timeline-embedding "http://imce.jpl.nasa.gov/timeline/timeline-embedding#" >
+    <!ENTITY analysis "http://imce.jpl.nasa.gov/foundation/analysis/analysis#" >
+    <!ENTITY QUDV-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-embedding#" >
+    <!ENTITY StandardProfileL2 "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#" >
+    <!ENTITY SysML-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-embedding#" >
+    <!ENTITY ieee-1471-embedding "http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#" >
+    <!ENTITY base-embedding "http://imce.jpl.nasa.gov/foundation/base/base-embedding#" >
+    <!ENTITY electrical-embedding "http://imce.jpl.nasa.gov/electrical/electrical-embedding#" >
+    <!ENTITY mechanical-embedding "http://imce.jpl.nasa.gov/mechanical/mechanical-embedding#" >
+    <!ENTITY annotation "http://imce.jpl.nasa.gov/foundation/annotation/annotation#" >
+    <!ENTITY jeo-architecture "http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture#" >
+    <!ENTITY mgss-service-embedding "http://imce.jpl.nasa.gov/mgss-service/mgss-service-embedding#" >
+    <!ENTITY mission-embedding "http://imce.jpl.nasa.gov/foundation/mission/mission-embedding#" >
+    <!ENTITY project-embedding "http://imce.jpl.nasa.gov/foundation/project/project-embedding#" >
+    <!ENTITY PrimitiveTypes "http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes#" >
+    <!ENTITY analysis-embedding "http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#" >
+    <!ENTITY StandardProfileL2-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-embedding#" >
+    <!ENTITY owl2-mof2 "http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#" >
+    <!ENTITY state-analysis "http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#" >
+    <!ENTITY annotation-embedding "http://imce.jpl.nasa.gov/foundation/annotation/annotation-embedding#" >
+    <!ENTITY jeo-architecture-embedding "http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture-embedding#" >
+    <!ENTITY PrimitiveTypes-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-embedding#" >
+    <!ENTITY state-analysis-embedding "http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis-embedding#" >
+    <!ENTITY architectural-description "http://imce.jpl.nasa.gov/architectural-description/architectural-description#" >
+    <!ENTITY architectural-description-embedding "http://imce.jpl.nasa.gov/architectural-description/architectural-description-embedding#" >
+    <!ENTITY state-analysis-implementation "http://imce.jpl.nasa.gov/discipline/state-analysis-implementation/state-analysis-implementation#" >
+    <!ENTITY state-analysis-functional-design "http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#" >
+    <!ENTITY state-analysis-implementation-embedding "http://imce.jpl.nasa.gov/discipline/state-analysis-implementation/state-analysis-implementation-embedding#" >
+    <!ENTITY state-analysis-functional-design-embedding "http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design-embedding#" >
+	<!ENTITY state-analysis-functional-design-embedding-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design-embedding#" >
+	<!ENTITY owl2-mof2-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#" >
+]>
+
+
+<rdf:RDF xmlns="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design-embedding#"
+     xml:base="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design-embedding"
+     xmlns:mgss-service-embedding="http://imce.jpl.nasa.gov/mgss-service/mgss-service-embedding#"
+     xmlns:mission-embedding="http://imce.jpl.nasa.gov/foundation/mission/mission-embedding#"
+     xmlns:base-embedding="http://imce.jpl.nasa.gov/foundation/base/base-embedding#"
+     xmlns:state-analysis="http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#"
+     xmlns:Blocks-embedding="http://imce.jpl.nasa.gov/Blocks/Blocks-embedding#"
+     xmlns:SysML="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#"
+     xmlns:annotation="http://imce.jpl.nasa.gov/foundation/annotation/annotation#"
+     xmlns:state-analysis-implementation="http://imce.jpl.nasa.gov/discipline/state-analysis-implementation/state-analysis-implementation#"
+     xmlns:owl2-mof2="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#"
+     xmlns:project-embedding="http://imce.jpl.nasa.gov/foundation/project/project-embedding#"
+     xmlns:ieee-1471-embedding="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:mechanical="http://imce.jpl.nasa.gov/mechanical/mechanical#"
+     xmlns:electrical-embedding="http://imce.jpl.nasa.gov/electrical/electrical-embedding#"
+     xmlns:Blocks="http://imce.jpl.nasa.gov/Blocks/Blocks#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:mechanical-embedding="http://imce.jpl.nasa.gov/mechanical/mechanical-embedding#"
+     xmlns:jeo-architecture-embedding="http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture-embedding#"
+     xmlns:StandardProfileL2-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-embedding#"
+     xmlns:project="http://imce.jpl.nasa.gov/foundation/project/project#"
+     xmlns:pbs="http://imce.jpl.nasa.gov/pbs/pbs#"
+     xmlns:SysML-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-embedding#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:timeline-embedding="http://imce.jpl.nasa.gov/timeline/timeline-embedding#"
+     xmlns:UML="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#"
+     xmlns:architectural-description="http://imce.jpl.nasa.gov/architectural-description/architectural-description#"
+     xmlns:state-analysis-implementation-embedding="http://imce.jpl.nasa.gov/discipline/state-analysis-implementation/state-analysis-implementation-embedding#"
+     xmlns:ieee-1471="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#"
+     xmlns:mgss-service="http://imce.jpl.nasa.gov/mgss-service/mgss-service#"
+     xmlns:StandardProfileL2="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#"
+     xmlns:PrimitiveTypes="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes#"
+     xmlns:timeline="http://imce.jpl.nasa.gov/timeline/timeline#"
+     xmlns:jeo-architecture="http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture#"
+     xmlns:analysis="http://imce.jpl.nasa.gov/foundation/analysis/analysis#"
+     xmlns:math-embedding="http://imce.jpl.nasa.gov/math/math-embedding#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:QUDV-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-embedding#"
+     xmlns:analysis-embedding="http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#"
+     xmlns:QUDV="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#"
+     xmlns:state-analysis-functional-design="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#"
+     xmlns:state-analysis-functional-design-embedding="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design-embedding#"
+     xmlns:PrimitiveTypes-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-embedding#"
+     xmlns:UML-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-embedding#"
+     xmlns:math="http://imce.jpl.nasa.gov/math/math#"
+     xmlns:electrical="http://imce.jpl.nasa.gov/electrical/electrical#"
+     xmlns:architectural-description-embedding="http://imce.jpl.nasa.gov/architectural-description/architectural-description-embedding#"
+     xmlns:annotation-embedding="http://imce.jpl.nasa.gov/foundation/annotation/annotation-embedding#"
+     xmlns:mission="http://imce.jpl.nasa.gov/foundation/mission/mission#"
+     xmlns:state-analysis-embedding="http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis-embedding#"
+     xmlns:base="http://imce.jpl.nasa.gov/foundation/base/base#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:pbs-embedding="http://imce.jpl.nasa.gov/pbs/pbs-embedding#"
+	xmlns:state-analysis-functional-design-embedding-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design-embedding#"
+	xmlns:owl2-mof2-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#">
+    <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design-embedding">
+        <dc:date rdf:datatype="&xsd;string">$Date$</dc:date>
+        <owl:versionInfo rdf:datatype="&xsd;string">$Revision$</owl:versionInfo>
+        <dc:rights rdf:datatype="&xsd;string">Copyright 2010-2011, by the California Institute of Technology. ALL RIGHTS
+   RESERVED. United States Government Sponsorship acknowledged. Any commercial
+   use must be negotiated with the Office of Technology Transfer at the
+   California Institute of Technology. This software may be subject to U.S.
+   export control laws. By accepting this software, the user agrees to comply
+   with all applicable U.S. export laws and regulations. User has the
+   responsibility to obtain export licenses, or other export authority as may be
+   required before exporting such information to foreign countries or providing
+   access to foreign persons.</dc:rights>
+        <dc:creator rdf:datatype="&xsd;string">Systems Engineering &amp; Formulation Division</dc:creator>
+        <owl:imports rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design"/>
+        <owl:imports rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis-embedding"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasDerivesValueFromSource -->
+
+    <rdf:Description rdf:about="&state-analysis-functional-design;hasDerivesValueFromSource">
+        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencySource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasDerivesValueFromTarget -->
+
+    <rdf:Description rdf:about="&state-analysis-functional-design;hasDerivesValueFromTarget">
+        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencyTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasHasAchieverSource -->
+
+    <rdf:Description rdf:about="&state-analysis-functional-design;hasHasAchieverSource">
+        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencySource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasHasAchieverTarget -->
+
+    <rdf:Description rdf:about="&state-analysis-functional-design;hasHasAchieverTarget">
+        <rdfs:subPropertyOf rdf:resource="&owl2-mof2-backbone;topReifiedObjectPropertyTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasHasControllerTarget -->
+
+    <rdf:Description rdf:about="&state-analysis-functional-design;hasHasControllerTarget">
+        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencyTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasInvokesFunctionSource -->
+
+    <rdf:Description rdf:about="&state-analysis-functional-design;hasInvokesFunctionSource">
+        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencySource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasInvokesFunctionTarget -->
+
+    <rdf:Description rdf:about="&state-analysis-functional-design;hasInvokesFunctionTarget">
+        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencyTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasIsEstimatedByTarget -->
+
+    <rdf:Description rdf:about="&state-analysis-functional-design;hasIsEstimatedByTarget">
+        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencyTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasIsProxyForSource -->
+
+    <rdf:Description rdf:about="&state-analysis-functional-design;hasIsProxyForSource">
+        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencySource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasIsProxyForTarget -->
+
+    <rdf:Description rdf:about="&state-analysis-functional-design;hasIsProxyForTarget">
+        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencyTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasSpecifiesSource -->
+
+    <rdf:Description rdf:about="&state-analysis-functional-design;hasSpecifiesSource">
+        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencySource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasSpecifiesTarget -->
+
+    <rdf:Description rdf:about="&state-analysis-functional-design;hasSpecifiesTarget">
+        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencyTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design-embedding#topReifiedObjectPropertySource -->
+
+    <owl:ObjectProperty rdf:about="&state-analysis-functional-design-embedding-backbone;topReifiedObjectPropertySource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <rdfs:subPropertyOf rdf:resource="&state-analysis-functional-design-embedding-backbone;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design-embedding#topReifiedObjectPropertyTarget -->
+
+    <owl:ObjectProperty rdf:about="&state-analysis-functional-design-embedding-backbone;topReifiedObjectPropertyTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <rdfs:subPropertyOf rdf:resource="&state-analysis-functional-design-embedding-backbone;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design-embedding#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&state-analysis-functional-design-embedding-backbone;topObjectProperty">
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design-embedding#topDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="&state-analysis-functional-design-embedding-backbone;topDataProperty">
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#DerivesValueFrom -->
+
+    <rdf:Description rdf:about="&state-analysis-functional-design;DerivesValueFrom">
+        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#HasAchiever -->
+
+    <rdf:Description rdf:about="&state-analysis-functional-design;HasAchiever">
+        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#InvokesFunction -->
+
+    <rdf:Description rdf:about="&state-analysis-functional-design;InvokesFunction">
+        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#IsProxyFor -->
+
+    <rdf:Description rdf:about="&state-analysis-functional-design;IsProxyFor">
+        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Specifies -->
+
+    <rdf:Description rdf:about="&state-analysis-functional-design;Specifies">
+        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design-embedding#Entity -->
+
+    <owl:Class rdf:about="&state-analysis-functional-design-embedding-backbone;Entity">
+        <rdfs:subClassOf rdf:resource="&state-analysis-functional-design-embedding-backbone;Thing"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design-embedding#ReifiedObjectProperty -->
+
+    <owl:Class rdf:about="&state-analysis-functional-design-embedding-backbone;ReifiedObjectProperty">
+        <rdfs:subClassOf rdf:resource="&state-analysis-functional-design-embedding-backbone;Thing"/>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design-embedding#StructuredDatatype -->
+
+    <owl:Class rdf:about="&state-analysis-functional-design-embedding-backbone;StructuredDatatype">
+        <rdfs:subClassOf rdf:resource="&state-analysis-functional-design-embedding-backbone;Thing"/>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design-embedding#Thing -->
+
+    <owl:Class rdf:about="&state-analysis-functional-design-embedding-backbone;Thing">
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="&state-analysis-functional-design;FunctionalAdapter">
+        <annotation:hasIcon rdf:datatype="&xsd;anyURI">icons/hwa14.svg</annotation:hasIcon>
+    </rdf:Description>
+    <rdf:Description rdf:about="&state-analysis-functional-design;FunctionalStateVariable">
+        <annotation:hasIcon rdf:datatype="&xsd;anyURI">icons/isv.svg</annotation:hasIcon>
+    </rdf:Description>
+    <rdf:Description rdf:about="&state-analysis;GraphStateVariable">
+        <dc:description rdf:datatype="&xsd;string">Graph State Variable is not really a State Variable itself, but an aggregator of state variables that describe relations (frame transformations) between Landmark nodes.</dc:description>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

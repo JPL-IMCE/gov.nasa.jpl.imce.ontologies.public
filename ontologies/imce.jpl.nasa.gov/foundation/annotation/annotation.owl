@@ -1,0 +1,517 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://imce.jpl.nasa.gov/foundation/annotation/annotation#"
+     xml:base="http://imce.jpl.nasa.gov/foundation/annotation/annotation"
+     xmlns:annotation="http://imce.jpl.nasa.gov/foundation/annotation/annotation#"
+     xmlns:annotation-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation">
+        <owl:imports rdf:resource="http://www.w3.org/2001/XMLSchema"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Systems Engineering &amp; Formulation Division</dc:creator>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Annotation Ontology defines common annotation properties used by IMCE ontologies.</dc:description>
+        <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Annotation Ontology</dc:title>
+        <noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</noMapping>
+        <category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Foundation</category>
+        <dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copyright 2010-2014, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
+
+This software may be subject to U.S. export control laws. By accepting this software, the user agrees to comply with all applicable U.S. export laws and regulations. User has the responsibility to obtain export licenses,a or other export authority as may be required before exporting such information to foreign countries or providing access to foreign persons.</dc:rights>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$Date$</dc:date>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$Revision$</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#bundledOntologyVersionInfo -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#bundledOntologyVersionInfo">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#bundlesGroup -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#bundlesGroup">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#category -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#category"/>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#companionOwnershipRelation -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#companionOwnershipRelation">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#hasContext -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#hasContext">
+        <dc:description xml:lang="en">Connects a nested child OWL ontology graph (domain) to its unique OWL class in its nesting parent OWL ontology (range). There must be a dual annotation:hasGraph(range, domain) annotation.</dc:description>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#hasDiagramCustomization -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#hasDiagramCustomization">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#hasGraph -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#hasGraph">
+        <dc:description xml:lang="en">Connects an OWL class in a nesting parent OWL ontology graph (domain) to its unique nested child OWL ontology graph (range). There must be a dual annotation:hasContext(range, domain) annotation.</dc:description>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#hasIRIHashPrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#hasIRIHashPrefix">
+        <rdfs:comment xml:lang="en">For an ontology, the hasRelativeIRI is split into two parts: hasIRIHashPrefix (non-hashed) and hashIRIHasSuffix (hashed with the SHA-256 algorithm)</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#hasIRIHashSuffix -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#hasIRIHashSuffix">
+        <rdfs:comment xml:lang="en">For an ontology, the hasRelativeIRI is split into two parts: hasIRIHashPrefix (non-hashed) and hashIRIHasSuffix (hashed with the SHA-256 algorithm)</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#hasIcon -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#hasIcon">
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The domain of hasIcon is a metaclass, i.e., a specialization of one of the UML metaclasses -- i.e., UML;Element.
+
+The domain metaclass will be mapped into a stereotype extending the specialized metaclass or stereotype.
+
+The range of hasIcon is the location of an SVG file relative to the location of the ontology defining the domain metaclass.</dc:description>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#hasMagicDrawDiagramCustomization -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#hasMagicDrawDiagramCustomization">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/annotation/annotation#hasDiagramCustomization"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#hasOTIToolSpecificID -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#hasOTIToolSpecificID">
+        <rdfs:comment xml:lang="en">Corresponds to tbox:hasOTIToolSpecificID</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#hasOTIToolSpecificURL -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#hasOTIToolSpecificURL">
+        <rdfs:comment xml:lang="en">Corresponds to tbox:hasOTIToolSpecificURL</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#hasRelativeIRI -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#hasRelativeIRI">
+        <rdfs:comment xml:lang="en">The ontology ID IRI relative to the IMCE catalog URI prefix (i.e: http://imce.jpl.nasa.gov)</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#hasRestrictedSourceProperty -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#hasRestrictedSourceProperty">
+        <dc:description xml:lang="en">Domain = a restricted target object property (reified relationship patern)
+Range = a restricted source object property (reified relationship pattern)</dc:description>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#hasRestrictedTargetProperty -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#hasRestrictedTargetProperty">
+        <dc:description xml:lang="en">Domain = a restricted source object property (reified relationship patern)
+Range = a restricted target object property (reified relationship pattern)</dc:description>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#hasUUID -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#hasUUID">
+        <rdfs:comment xml:lang="en">Corresponds to tbox:hasUUID</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#implementationElementId -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#implementationElementId"/>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#importsBundle -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#importsBundle">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#isAbstract -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#isAbstract">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#isDeprecated -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#isDeprecated">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#isDerived -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#isDerived">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#isEmbedding -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#isEmbedding">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#isExtension -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#isExtension">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#isLibrary -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#isLibrary">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#isMetaclass -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#isMetaclass">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#isMetaclassSpecificExtension -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#isMetaclassSpecificExtension">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#isMetamodel -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#isMetamodel">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#isNonNormative -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#isNonNormative">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#isStereotype -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#isStereotype">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#isStereotypeMetaclass -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#isStereotypeMetaclass">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#isStructuredDataType -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#isStructuredDataType">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#isView -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#isView">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#noMapping -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#noMapping">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">noMapping applies to an ontology O
+
+If applied and noMapping=true, it means that ontology O whose IRI is I has no mapping ontology I-embedding.
+
+By default, noMapping=false.
+
+An ontology without a noMapping annotation is equivalent to an ontology with a noMapping=false annotation.</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#omgElementId -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#omgElementId"/>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#xmi2xsdDataTypeMapping -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#xmi2xsdDataTypeMapping">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#topObjectProperty">
+        <isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isAbstract>
+        <noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</noMapping>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;property&gt;topObjectProperty&lt;/property&gt; is a common superproperty of all object properties defined in the Annotation Ontology.</dc:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#topReifiedObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#topReifiedObjectProperty">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#topObjectProperty"/>
+        <isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isAbstract>
+        <noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</noMapping>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#topStructuredDataProperty -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#topStructuredDataProperty">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#topObjectProperty"/>
+        <isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isAbstract>
+        <noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</noMapping>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#topDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#topDataProperty">
+        <isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isAbstract>
+        <noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</noMapping>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;property&gt;topDataProperty&lt;/property&gt; is a common superproperty of all datatype properties defined in the Annotation Ontology.</dc:description>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#Entity -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#Entity">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#Thing"/>
+        <isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isAbstract>
+        <noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</noMapping>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#ReifiedObjectProperty -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#ReifiedObjectProperty">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#Thing"/>
+        <isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isAbstract>
+        <noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</noMapping>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#StructuredDatatype -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#StructuredDatatype">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#Thing"/>
+        <isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isAbstract>
+        <isStructuredDataType rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isStructuredDataType>
+        <noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</noMapping>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#Thing -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#Thing">
+        <isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isAbstract>
+        <noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</noMapping>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;classname&gt;Thing&lt;/classname&gt; is a common superclass of all classes defined in the Annotation Ontology.</dc:description>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+

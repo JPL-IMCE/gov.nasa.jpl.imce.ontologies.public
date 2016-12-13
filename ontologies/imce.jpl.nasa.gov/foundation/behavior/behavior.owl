@@ -1,0 +1,2582 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://imce.jpl.nasa.gov/foundation/behavior/behavior#"
+     xml:base="http://imce.jpl.nasa.gov/foundation/behavior/behavior"
+     xmlns:annotation="http://imce.jpl.nasa.gov/foundation/annotation/annotation#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:analysis="http://imce.jpl.nasa.gov/foundation/analysis/analysis#"
+     xmlns:mission="http://imce.jpl.nasa.gov/foundation/mission/mission#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:behavior="http://imce.jpl.nasa.gov/foundation/behavior/behavior#"
+     xmlns:behavior-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:base="http://imce.jpl.nasa.gov/foundation/base/base#">
+    <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior">
+        <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis"/>
+        <dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Foundation</dc:type>
+        <dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copyright 2010-2014, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
+
+This software may be subject to U.S. export control laws. By accepting this software, the user agrees to comply with all applicable U.S. export laws and regulations. User has the responsibility to obtain export licenses,a or other export authority as may be required before exporting such information to foreign countries or providing access to foreign persons.</dc:rights>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$Date$</dc:date>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flight Systems Engineering, Integration, &amp; Test Section</dc:creator>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$Revision$</owl:versionInfo>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Behavior Ontology defines concepts and properties for describing behavior. The complete documentation for this ontology is hosted on the MBSE CoP website at: https://mbse.jpl.nasa.gov/confluence/display/IMCECOP/Behavior+Pattern+-+V1.0.</dc:description>
+        <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Behavior Ontology</dc:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#AbstractValueType -->
+
+    <rdfs:Datatype rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AbstractValueType"/>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeAutomatonConfigurationValueType -->
+
+    <rdfs:Datatype rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeAutomatonConfigurationValueType">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Attribute Automaton Configuration Value Type</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AbstractValueType"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeValueType -->
+
+    <rdfs:Datatype rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeValueType">
+        <owl:equivalentClass rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AbstractValueType"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topObjectProperty">
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectProperty">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topObjectProperty"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectPropertySource -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectPropertySource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topObjectProperty"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectPropertyTarget -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectPropertyTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topObjectProperty"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedStructuredDataProperty -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedStructuredDataProperty">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topObjectProperty"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedStructuredDataPropertySource -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedStructuredDataPropertySource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topObjectProperty"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedStructuredDataPropertyTarget -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedStructuredDataPropertyTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topObjectProperty"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topUnreifiedObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topUnreifiedObjectProperty">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topObjectProperty"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#constrains -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#constrains">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedStructuredDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeConstraint"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#StateVariableConstraintParticipant"/>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">constrains</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#exposes -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#exposes">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#PropertySurrogate"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Property"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;PropertySurrogate&lt;/classname&gt; &lt;replaceable&gt;s&lt;/replaceable&gt; &lt;property&gt;exposes&lt;/property&gt; a &lt;classname&gt;Property&lt;/classname&gt; &lt;replaceable&gt;p&lt;/replaceable&gt; if an only if &lt;replaceable&gt;s&lt;/replaceable&gt; represents &lt;replaceable&gt;p&lt;/replaceable&gt; in an &lt;classname&gt;Interaction&lt;/classname&gt;.</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasAttribute -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasAttribute">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedStructuredDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeGroup"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Attribute"/>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has attribute</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasAttributeGroup -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasAttributeGroup">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topUnreifiedObjectProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionRole"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeGroup"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has Attribute Group</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasConstrainsSource -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasConstrainsSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedStructuredDataPropertySource"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Constrains"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeConstraint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasConstrainsTarget -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasConstrainsTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedStructuredDataPropertyTarget"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Constrains"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#StateVariableConstraintParticipant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasElementBehavior -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasElementBehavior">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topUnreifiedObjectProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorOwner"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehavior"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has Element Behavior</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasElementBehaviorClass -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasElementBehaviorClass">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorOwner"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorClass"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has Element Behavior Class</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has element behavior class</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasExposesSource -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasExposesSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectPropertySource"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Exposes"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#PropertySurrogate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasExposesTarget -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasExposesTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectPropertyTarget"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Exposes"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasAttributeSource -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasAttributeSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedStructuredDataPropertySource"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasAttribute"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasAttributeTarget -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasAttributeTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedStructuredDataPropertyTarget"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasAttribute"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Attribute"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasElementBehaviorClassSource -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasElementBehaviorClassSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectPropertySource"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasElementBehaviorClass"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorOwner"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasElementBehaviorClassTarget -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasElementBehaviorClassTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectPropertyTarget"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasElementBehaviorClass"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorClass"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasInteractionBehaviorClassSource -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasInteractionBehaviorClassSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectPropertySource"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasInteractionBehaviorClass"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Interaction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasInteractionBehaviorClassTarget -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasInteractionBehaviorClassTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectPropertyTarget"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasInteractionBehaviorClass"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehaviorClass"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasRegionSource -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasRegionSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectPropertySource"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasRegion"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeAutomaton"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasRegionTarget -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasRegionTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectPropertyTarget"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasRegion"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AutomatonRegion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasStateSource -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasStateSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectPropertySource"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasState"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AutomatonRegion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasStateTarget -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasStateTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectPropertyTarget"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasState"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AutomatonState"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasTransitionSource -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasTransitionSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectPropertySource"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasTransition"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AutomatonRegion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasTransitionTarget -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasTransitionTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectPropertyTarget"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasTransition"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AutomatonTransition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasInteractionBehavior -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasInteractionBehavior">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topUnreifiedObjectProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Interaction"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehavior"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has Interaction Behavior</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasInteractionBehaviorClass -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasInteractionBehaviorClass">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Interaction"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehaviorClass"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has Interaction Behavior Class</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has interaction behavior class</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasInteractionRole -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasInteractionRole">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topUnreifiedObjectProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Interaction"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionRole"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has Interaction Role</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasPlaysRoleOfSource -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasPlaysRoleOfSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectPropertySource"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#PlaysRoleOf"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeConstraintParticipant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasPlaysRoleOfTarget -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasPlaysRoleOfTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectPropertyTarget"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#PlaysRoleOf"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Attribute"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasPresentsSource -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasPresentsSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectPropertySource"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Presents"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#PropertyGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasPresentsTarget -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasPresentsTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectPropertyTarget"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Presents"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionTerminal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasReferencesSource -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasReferencesSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectPropertySource"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#References"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorCharacterization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasReferencesTarget -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasReferencesTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectPropertyTarget"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#References"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#PropertyGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasRegion -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasRegion">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeAutomaton"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AutomatonRegion"/>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has region</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasState -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasState">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AutomatonRegion"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AutomatonState"/>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has state</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasTransition -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasTransition">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AutomatonRegion"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AutomatonTransition"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has transition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasUsesSource -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasUsesSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedStructuredDataPropertySource"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Uses"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeConstraint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasUsesTarget -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasUsesTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedStructuredDataPropertyTarget"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Uses"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ParameterConstraintParticipant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#joins -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#joins">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topUnreifiedObjectProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Interaction"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeGroup"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An &lt;classname&gt;Interaction&lt;/classname&gt; &lt;replaceable&gt;i&lt;/replaceable&gt; &lt;property&gt;joins&lt;/property&gt; an &lt;classname&gt;AttributeGroup&lt;/classname&gt; &lt;replaceable&gt;a&lt;/replaceable&gt; if an only if the &lt;classname&gt;BehavingElement&lt;/classname&gt;s associated with &lt;replaceable&gt;a&lt;/replaceable&gt; are involved in the interaction represented by &lt;replaceable&gt;i&lt;/replaceable&gt;.</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">joins</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#playsRoleOf -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#playsRoleOf">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeConstraintParticipant"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Attribute"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An &lt;classname&gt;AttributeConstraintParticipant&lt;/classname&gt; &lt;replaceable&gt;p&lt;/replaceable&gt; &lt;property&gt;playsRoleOf&lt;/property&gt; an &lt;classname&gt;Attribute&lt;/classname&gt; &lt;replaceable&gt;a&lt;/replaceable&gt; if an only if it represents &lt;replaceable&gt;a&lt;/replaceable&gt; in an &lt;classname&gt;AttributeConstraint&lt;/classname&gt;.</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plays role of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#presents -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#presents">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#PropertyGroup"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionTerminal"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;PropertyGroup&lt;/classname&gt; &lt;replaceable&gt;g&lt;/replaceable&gt; &lt;property&gt;presents&lt;/property&gt; an &lt;classname&gt;InteractionTerminal&lt;/classname&gt; &lt;replaceable&gt;i&lt;/replaceable&gt; if and only if &lt;classname&gt;Attribute&lt;/classname&gt;s of &lt;replaceable&gt;g&lt;/replaceable&gt; are directly influenced by &lt;classname&gt;Attribute&lt;/classname&gt;s of other &lt;classname&gt;BehavingElement&lt;/classname&gt;s.</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">presents</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#references -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#references">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedObjectProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorCharacterization"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#PropertyGroup"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An &lt;classname&gt;ElementBehaviorCharacterization&lt;/classname&gt; &lt;replaceable&gt;c&lt;/replaceable&gt; &lt;property&gt;references&lt;/property&gt; a &lt;classname&gt;PropertyGroup&lt;/classname&gt; &lt;replaceable&gt;g&lt;/replaceable&gt; if an only if &lt;classname&gt;ElementBehaviorConstraint&lt;/classname&gt;s of &lt;replaceable&gt;c&lt;/replaceable&gt; constrain or use &lt;classname&gt;Propert&lt;/classname&gt;ies of &lt;replaceable&gt;g&lt;/replaceable&gt;.</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">references</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#uses -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#uses">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topReifiedStructuredDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeConstraint"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ParameterConstraintParticipant"/>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+        <rdfs:label>uses</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topDataProperty">
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasConfiguration -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasConfiguration">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeAutomaton"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeAutomatonConfigurationValueType"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has Configuration</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has configuration</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasValueType -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasValueType">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AbstractValueTypedAttribute"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AbstractValueType"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has value type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Aspect -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Aspect">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Entity -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Entity">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#ReifiedObjectProperty -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#ReifiedObjectProperty">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#ReifiedStructuredDataProperty -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#ReifiedStructuredDataProperty">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#StructuredDatatype -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#StructuredDatatype">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Thing"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Thing -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Thing">
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#Characterization -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Characterization">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Characterization</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#AbstractValueTypedAttribute -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AbstractValueTypedAttribute">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Entity"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An&lt;classname&gt;AbstractValueTypedAttribute&lt;/classname&gt; is an abstract class that represents the behavior attributes and features that can be typed by &lt;classname&gt;AbstractValueType&lt;/classname&gt; through the &lt;property&gt;hasValueType&lt;/property&gt;.</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abstract Value Typed Attribute</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#Aspect -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Aspect">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeGroup"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorOwner"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aspect</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#Attribute -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Attribute">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AbstractValueTypedAttribute"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;classname&gt;Attribute&lt;/classname&gt; is the abstract class that generalizes &lt;classname&gt;Property&lt;/classname&gt; (&lt;classname&gt;StateVariable&lt;/classname&gt;s and &lt;classname&gt;Parameter&lt;/classname&gt;s) and &lt;classname&gt;PropertySurrogate&lt;/classname&gt;(&lt;classname&gt;StateVariableSurrogate&lt;/classname&gt;s and &lt;classname&gt;ParameterSurrogate&lt;/classname&gt;s).</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Attribute</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeAutomaton -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeAutomaton">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Entity"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An &lt;classname&gt;AttributeAutomatonConstraint&lt;/classname&gt; can be used to specify the &lt;classname&gt;Codomain&lt;/classname&gt; of a discrete &lt;classname&gt;StateVariable&lt;/classname&gt; using &lt;classname&gt;AutomatonState&lt;/classname&gt;s.
+It can also represents behavior constraints that are more amenable to an automata form.</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Attribute Automaton</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeConstraint -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeConstraint">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Characterization"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;classname&gt;AttributeConstraint&lt;/classname&gt; is the abstract class that generalizes &lt;classname&gt;ElementBehaviorConstraint&lt;/classname&gt; and &lt;classname&gt;InteractionBehaviorConstraint&lt;/classname&gt;.</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Attribute Constraint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeConstraintParticipant -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeConstraintParticipant">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AbstractValueTypedAttribute"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;classname&gt;AttributeConstraintParticipant&lt;/classname&gt; is the abstract class that generalizes &lt;classname&gt;StateVariableConstraintParticipant&lt;/classname&gt; and &lt;classname&gt;ParameterConstraintParticipant&lt;/classname&gt;.</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Attribute Constraint Participant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeGroup -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeGroup">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Aspect"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;classname&gt;AttributeGroup&lt;/classname&gt; is the abstract class that generalizes &lt;classname&gt;PropertyGroup&lt;/classname&gt; and &lt;classname&gt;InteractionTerminal&lt;/classname&gt;.</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Attribute Group</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#AutomatonRegion -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AutomatonRegion">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Entity"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An &lt;classname&gt;AutomatonRegion&lt;/classname&gt; groups &lt;classname&gt;AutomatonState&lt;/classname&gt;s of an &lt;classname&gt;AttributeAutomatonConstraint&lt;/classname&gt;.</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Automaton Region</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#AutomatonState -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AutomatonState">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Entity"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An &lt;classname&gt;AutomatonState&lt;/classname&gt; represents a state of a &lt;classname&gt;StateVariable&lt;/classname&gt;, i.e., a possible value of the quantity of a &lt;classname&gt;BehavingElement&lt;/classname&gt;, and in effect an element of the &lt;classname&gt;Codomain&lt;/classname&gt; of a &lt;classname&gt;StateVariable&lt;/classname&gt;.</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Automaton State</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#AutomatonTransition -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AutomatonTransition">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Entity"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Automaton Transition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#BehavingElement -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#BehavingElement">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Aspect"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;BehavingElement&lt;/classname&gt; is an abstract classifier that specifies which system elements have some behavior characterization.</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Behaving Element</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#Constrains -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Constrains">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#ReifiedStructuredDataProperty"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Constrains</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehavior -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehavior">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Entity"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Element Behavior</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorAutomaton -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorAutomaton">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeAutomaton"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorClass"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Element Behavior Automaton</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorAutomatonElement -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorAutomatonElement">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehavior"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Element Behavior Automaton Element</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorCharacterization -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorCharacterization">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Characterization"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorOwner"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasElementBehaviorClass"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorConstraint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An &lt;classname&gt;ElementBehaviorCharacterization&lt;/classname&gt; groups &lt;classname&gt;ElementBehaviorConstraint&lt;/classname&gt;s through the &lt;property&gt;hasConstraint&lt;/property&gt;. It also &lt;property&gt;references&lt;/property&gt; &lt;classname&gt;PropertyGroup&lt;/classname&gt;s of which the &lt;classname&gt;Attributes&lt;/classname&gt;s are of interest in the scope of the &lt;classname&gt;ElementBehaviorConstraint&lt;/classname&gt;s.</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Element Behavior Characterization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorClass -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorClass">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehavior"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Element Behavior Class</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorConstraint -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorConstraint">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeConstraint"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorClass"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;classname&gt;ElementBehaviorConstraint&lt;/classname&gt; specifies how the dynamic state of a &lt;classname&gt;BehavingElement&lt;/classname&gt; is allowed to evolve in time.
+It is expressed by &lt;property&gt;constrain&lt;/property&gt;ing &lt;classname&gt;StateVariableConstraintParticipant&lt;/classname&gt;s and &lt;property&gt;us&lt;/property&gt;ing &lt;classname&gt;ParameterConstraintParticipant&lt;/classname&gt;s.</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Element Behavior Constraint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorOwner -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorOwner">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Aspect"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Element Behavior Owner</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorRegion -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorRegion">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AutomatonRegion"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorAutomatonElement"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Element Behavior Region</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorState -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorState">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AutomatonState"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorAutomatonElement"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Element Behavior State</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorTransition -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorTransition">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AutomatonTransition"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorAutomatonElement"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Element Behavior Transition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#Exposes -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Exposes">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#ReifiedObjectProperty"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exposes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasAttribute -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasAttribute">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#ReifiedStructuredDataProperty"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Has Attribute</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasElementBehaviorClass -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasElementBehaviorClass">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#ReifiedObjectProperty"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Has Element Behavior Class</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasInteractionBehaviorClass -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasInteractionBehaviorClass">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#ReifiedObjectProperty"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Has Interaction Behavior Class</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasRegion -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasRegion">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#ReifiedObjectProperty"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Has Region</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasState -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasState">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#ReifiedObjectProperty"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Has State</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasTransition -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasTransition">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#ReifiedObjectProperty"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Has Transition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#Interaction -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Interaction">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Entity"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An &lt;classname&gt;Interaction&lt;/classname&gt; is a link that &lt;property&gt;joins&lt;/property&gt; &lt;classname&gt;InteractionTerminal&lt;/classname&gt;s, representing the context of the interaction among the associated &lt;classname&gt;BehavingElement&lt;/classname&gt;s.
+An &lt;classname&gt;Interaction&lt;/classname&gt; groups &lt;classname&gt;InteractionBehaviorConstraint&lt;/classname&gt;s through the &lt;property&gt;hasConstraint&lt;/property&gt;.</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehavior -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehavior">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Entity"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interaction Behavior</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehaviorAutomaton -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehaviorAutomaton">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeAutomaton"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehaviorClass"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interaction Behavior Automaton</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehaviorAutomatonElement -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehaviorAutomatonElement">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehavior"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interaction Behavior Automaton Element</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehaviorClass -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehaviorClass">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehavior"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interaction Behavior Class</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehaviorConstraint -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehaviorConstraint">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeConstraint"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehaviorClass"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;classname&gt;InteractionBehaviorConstraint&lt;/classname&gt; specifies how different &lt;classname&gt;BehavingElement&lt;/classname&gt;s interact with one another.
+It is expressed by &lt;property&gt;constrain&lt;/property&gt;ing &lt;classname&gt;StateVariableConstraintParticipant&lt;/classname&gt;s and &lt;property&gt;us&lt;/property&gt;ing &lt;classname&gt;ParameterConstraintParticipant&lt;/classname&gt;s.</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interaction Behavior Constraint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehaviorRegion -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehaviorRegion">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AutomatonRegion"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehaviorAutomatonElement"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interaction Behavior Region</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehaviorState -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehaviorState">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AutomatonState"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehaviorAutomatonElement"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interaction Behavior State</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehaviorTransition -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehaviorTransition">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AutomatonTransition"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehaviorAutomatonElement"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interaction Behavior Transition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionRole -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionRole">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Entity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interaction Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionTerminal -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionTerminal">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeGroup"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasAttribute"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#PropertySurrogate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An &lt;classname&gt;InteractionTerminal&lt;/classname&gt; is a construct that acts as a filter for selecting the &lt;classname&gt;StateVariable&lt;/classname&gt;s and &lt;classname&gt;Parameter&lt;/classname&gt;s of one &lt;classname&gt;BehavingElement&lt;/classname&gt; involved in an interaction with other &lt;classname&gt;BehavingElement&lt;/classname&gt;s.</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interaction Terminal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#Parameter -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Parameter">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Property"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;Parameter&lt;/classname&gt;is a quantity of a &lt;classname&gt;BehavingElement&lt;/classname&gt; that does not dynamically change in time.</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parameter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#ParameterConstraintParticipant -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ParameterConstraintParticipant">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeConstraintParticipant"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;ParameterConstraintParticipant&lt;/classname&gt; is a property &lt;property&gt;use&lt;/property&gt;d by an &lt;classname&gt;AttributeConstraint&lt;/classname&gt; (&lt;classname&gt;ElementBehaviorConstraint&lt;/classname&gt; or &lt;classname&gt;InteractionBehaviorConstraint&lt;/classname&gt;).
+When &lt;property&gt;use&lt;/property&gt;d by an &lt;classname&gt;ElementBehaviorConstraint&lt;/classname&gt;, it &lt;property&gt;playsRoleOf&lt;/property&gt; a &lt;classname&gt;Parameter&lt;/classname&gt;, and when &lt;property&gt;use&lt;/property&gt;d by an &lt;classname&gt;InteractionBehaviorConstraint&lt;/classname&gt;, it &lt;property&gt;playsRoleOf&lt;/property&gt; a &lt;classname&gt;ParameterSurrogate&lt;/classname&gt;.</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parameter Constraint Participant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#ParameterSurrogate -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ParameterSurrogate">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#PropertySurrogate"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;ParameterSurrogate&lt;/classname&gt; is a property of an &lt;classname&gt;InteractionTerminal&lt;/classname&gt; and &lt;property&gt;exposes&lt;/property&gt; a &lt;classname&gt;Parameter&lt;/classname&gt; of the &lt;classname&gt;PropertyGroup&lt;/classname&gt; its &lt;classname&gt;InteractionTerminal&lt;/classname&gt; &lt;property&gt;presents&lt;/property&gt;.</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parameter Surrogate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#PlaysRoleOf -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#PlaysRoleOf">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#ReifiedObjectProperty"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Plays Role Of</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#Presents -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Presents">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#ReifiedObjectProperty"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Presents</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#Property -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Property">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Attribute"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;classname&gt;Property&lt;/classname&gt; is the abstract class that generalizes &lt;classname&gt;StateVariable&lt;/classname&gt; and &lt;classname&gt;Parameter&lt;/classname&gt;.</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#PropertyGroup -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#PropertyGroup">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Characterization"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeGroup"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasAttribute"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An &lt;classname&gt;PropertyGroup&lt;/classname&gt; is a construct that acts as a grouping mechanism for &lt;classname&gt;StateVariale&lt;/classname&gt;s or &lt;classname&gt;Parameter&lt;/classname&gt;s. The meaning of the grouping is left to the modeler&apos;s intent.</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Property Group</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#PropertySurrogate -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#PropertySurrogate">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Attribute"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;classname&gt;PropertySurrogate&lt;/classname&gt; is the abstract class that generalizes &lt;classname&gt;StateVariableSurrogate&lt;/classname&gt; and &lt;classname&gt;ParameterSurrogate&lt;/classname&gt;.</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Property Surrogate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#References -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#References">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#ReifiedObjectProperty"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">References</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#StateVariable -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#StateVariable">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Property"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;StateVariable&lt;/classname&gt; is a variable that represents a particular quantity (as per ISO-80000) of a &lt;classname&gt;BeahvingElement&lt;/classname&gt; that changes with time.
+It is the Cartesian product of its &lt;classname&gt;TimeDomain&lt;/classname&gt; and &lt;classname&gt;Codomain&lt;/classname&gt;.</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">State Variable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#StateVariableConstraintParticipant -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#StateVariableConstraintParticipant">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeConstraintParticipant"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;StateVariableConstraintParticipant&lt;/classname&gt; is a property &lt;property&gt;constrain&lt;/property&gt;ed by an &lt;classname&gt;AttributeConstraint&lt;/classname&gt; (&lt;classname&gt;ElementBehaviorConstraint&lt;/classname&gt; or &lt;classname&gt;InteractionBehaviorConstraint&lt;/classname&gt;).
+When &lt;property&gt;constrain&lt;/property&gt;ed by an &lt;classname&gt;ElementBehaviorConstraint&lt;/classname&gt;, it &lt;property&gt;playsRoleOf&lt;/property&gt; a &lt;classname&gt;StateVariable&lt;/classname&gt;, and when &lt;property&gt;constrain&lt;/property&gt;ed by an &lt;classname&gt;InteractionBehaviorConstraint&lt;/classname&gt;, it &lt;property&gt;playsRoleOf&lt;/property&gt; a &lt;classname&gt;StateVariableSurrogate&lt;/classname&gt;.</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">State Variable Constraint Participant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#StateVariableSurrogate -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#StateVariableSurrogate">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#PropertySurrogate"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;StateVariableSurrogate&lt;/classname&gt; is a property of an &lt;classname&gt;InteractionTerminal&lt;/classname&gt; and &lt;property&gt;exposes&lt;/property&gt; a &lt;classname&gt;StateVariable&lt;/classname&gt; of the &lt;classname&gt;PropertyGroup&lt;/classname&gt; its &lt;classname&gt;InteractionTerminal&lt;/classname&gt; &lt;property&gt;presents&lt;/property&gt;.</dc:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">State Variable Surrogate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#Uses -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Uses">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#ReifiedStructuredDataProperty"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uses</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#Environment -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#Environment">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#BehavingElement"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Environment</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#PerformingElement -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#PerformingElement">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#BehavingElement"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Performing Element</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl#A">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#R">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#O">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#S">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#T">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#I">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#G">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#r">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#t">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasAttributeSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasAttributeTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasAttribute"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasElementBehaviorClassSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasElementBehaviorClassTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasElementBehaviorClass"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasInteractionBehaviorClassSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasInteractionBehaviorClassTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasInteractionBehaviorClass"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasRegionSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasRegionTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasRegion"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasStateSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasStateTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasState"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasTransitionSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasHasTransitionTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasTransition"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasPlaysRoleOfSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasPlaysRoleOfTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#playsRoleOf"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasPresentsSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasPresentsTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#presents"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasReferencesSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasReferencesTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#references"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasUsesSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasUsesTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#uses"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeAutomaton"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#A"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AutomatonRegion"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#R"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorOwner"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#O"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorTransition"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#T"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasElementBehaviorClass"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl#O"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl#A"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasRegion"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl#A"/>
+                                                                <swrl:argument2 rdf:resource="urn:swrl#R"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasTransition"/>
+                                                                        <swrl:argument1 rdf:resource="urn:swrl#R"/>
+                                                                        <swrl:argument2 rdf:resource="urn:swrl#T"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasElementBehavior"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#O"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#T"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeAutomaton"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#A"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AutomatonRegion"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#R"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Interaction"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#I"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehaviorState"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#S"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasInteractionBehaviorClass"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl#I"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl#A"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasRegion"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl#A"/>
+                                                                <swrl:argument2 rdf:resource="urn:swrl#R"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasState"/>
+                                                                        <swrl:argument1 rdf:resource="urn:swrl#R"/>
+                                                                        <swrl:argument2 rdf:resource="urn:swrl#S"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasInteractionBehavior"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#I"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#S"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeAutomaton"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#A"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AutomatonRegion"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#R"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorOwner"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#O"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorState"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#S"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasElementBehaviorClass"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl#O"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl#A"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasRegion"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl#A"/>
+                                                                <swrl:argument2 rdf:resource="urn:swrl#R"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasState"/>
+                                                                        <swrl:argument1 rdf:resource="urn:swrl#R"/>
+                                                                        <swrl:argument2 rdf:resource="urn:swrl#S"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasElementBehavior"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#O"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#S"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeAutomaton"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#A"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AutomatonRegion"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#R"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Interaction"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#I"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehaviorTransition"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#T"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasInteractionBehaviorClass"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl#I"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl#A"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasRegion"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl#A"/>
+                                                                <swrl:argument2 rdf:resource="urn:swrl#R"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasTransition"/>
+                                                                        <swrl:argument1 rdf:resource="urn:swrl#R"/>
+                                                                        <swrl:argument2 rdf:resource="urn:swrl#T"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasInteractionBehavior"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#I"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#T"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeGroup"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#G"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Interaction"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#I"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionRole"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#R"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasAttributeGroup"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#R"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl#G"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasInteractionRole"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl#I"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl#R"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#joins"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#I"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#G"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorAutomaton"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#A"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorOwner"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#O"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorRegion"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#R"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasElementBehaviorClass"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#O"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl#A"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasRegion"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl#A"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl#R"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasElementBehavior"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#O"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#R"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Interaction"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#I"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehaviorAutomaton"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#A"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehaviorRegion"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#R"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasInteractionBehaviorClass"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#I"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl#A"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasRegion"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl#A"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl#R"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasInteractionBehavior"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#I"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#R"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasConstrainsSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasConstrainsTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#constrains"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasExposesSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasExposesTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#exposes"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+

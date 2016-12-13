@@ -1,0 +1,367 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management-embedding#"
+     xml:base="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management-embedding"
+     xmlns:annotation="http://imce.jpl.nasa.gov/foundation/annotation/annotation#"
+     xmlns:fault-management="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#"
+     xmlns:fault-management-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fault-management/fault-management#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:fault-management-embedding-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fault-management/fault-management-embedding#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:fault-management-embedding="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management-embedding#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:UML="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#"
+     xmlns:owl2-mof2="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:behavior="http://imce.jpl.nasa.gov/foundation/behavior/behavior#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management-embedding">
+        <owl:imports rdf:resource="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management"/>
+        <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior-embedding"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+   $Date$
+  </dc:date>
+        <dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+   Copyright 2010-2011, by the California Institute of Technology. ALL RIGHTS
+   RESERVED. United States Government Sponsorship acknowledged. Any commercial
+   use must be negotiated with the Office of Technology Transfer at the
+   California Institute of Technology. This software may be subject to U.S.
+   export control laws. By accepting this software, the user agrees to comply
+   with all applicable U.S. export laws and regulations. User has the
+   responsibility to obtain export licenses,a or other export authority as may
+   be required before exporting such information to foreign countries or
+   providing access to foreign persons.
+  </dc:rights>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+   $Revision$
+  </owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#isAbstract -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#isAbstract"/>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#noMapping -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#noMapping"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#noMapping -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasAppliesInSource -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasAppliesInSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasAppliesInTarget -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasAppliesInTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasAvoidsSource -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasAvoidsSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasAvoidsTarget -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasAvoidsTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasDetectsSource -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasDetectsSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasDetectsTarget -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasDetectsTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasEncompassesSource -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasEncompassesSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryCompositeAssociationSource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasEncompassesTarget -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasEncompassesTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryCompositeAssociationTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasIsAccomplishedBySource -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasIsAccomplishedBySource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasIsAccomplishedByTarget -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasIsAccomplishedByTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasIsAssociatedWithSource -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasIsAssociatedWithSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasIsAssociatedWithTarget -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasIsAssociatedWithTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasIsPerformedBySource -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasIsPerformedBySource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasIsPerformedByTarget -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasIsPerformedByTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasIsValidForSource -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasIsValidForSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasIsValidForTarget -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasIsValidForTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasMitigatesSource -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasMitigatesSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasMitigatesTarget -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#hasMitigatesTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fault-management/fault-management#StructuredDatatype -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fault-management/fault-management#StructuredDatatype">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryAssociationEndType"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#DataType"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#AppliesIn -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#AppliesIn">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#Avoids -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#Avoids">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#DetectionMechanism -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#DetectionMechanism">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Component.Block"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#Detects -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#Detects">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#Encompasses -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#Encompasses">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryCompositeAssociation"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#IsAccomplishedBy -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#IsAccomplishedBy">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#IsAssociatedWith -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#IsAssociatedWith">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#IsPerformedBy -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#IsPerformedBy">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#IsValidFor -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#IsValidFor">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#Mitigates -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#Mitigates">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#Mitigation -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#Mitigation">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Component.Block"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#ModeContext -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#ModeContext">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Component.Block"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#Prevention -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#Prevention">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Component.Block"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#Region -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#Region">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Component.Block"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+

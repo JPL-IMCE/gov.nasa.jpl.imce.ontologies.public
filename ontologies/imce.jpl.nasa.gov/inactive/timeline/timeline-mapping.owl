@@ -1,0 +1,1433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	
+	xmlns:Blocks-embedding="http://imce.jpl.nasa.gov/Blocks/Blocks-embedding#"
+	xmlns:mgss-service="http://imce.jpl.nasa.gov/mgss-service/mgss-service#"
+	xmlns:timeline="http://imce.jpl.nasa.gov/timeline/timeline#"
+	xmlns:PrimitiveTypes="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes#"
+	xmlns:math-embedding="http://imce.jpl.nasa.gov/math/math-embedding#"
+	xmlns:jeo-architecture="http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture#"
+	xmlns:state-analysis="http://imce.jpl.nasa.gov/state-analysis/state-analysis#"
+	xmlns:analysis="http://imce.jpl.nasa.gov/foundation/analysis/analysis#"
+	
+	xmlns:SysML="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#"
+	xmlns:annotation="http://imce.jpl.nasa.gov/foundation/annotation/annotation#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:state-analysis-implementation="http://imce.jpl.nasa.gov/state-analysis-implementation/state-analysis-implementation#"
+	xmlns:state-analysis-implementation-embedding="http://imce.jpl.nasa.gov/state-analysis-implementation/state-analysis-implementation-embedding#"
+	xmlns:mechanical="http://imce.jpl.nasa.gov/mechanical/mechanical#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:Blocks="http://imce.jpl.nasa.gov/Blocks/Blocks#"
+	xmlns:analysis-embedding="http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#"
+	xmlns:QUDV="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:state-analysis-embedding="http://imce.jpl.nasa.gov/state-analysis/state-analysis-embedding#"
+	xmlns:mission-embedding="http://imce.jpl.nasa.gov/foundation/mission/mission-embedding#"
+	xmlns:mgss-service-embedding="http://imce.jpl.nasa.gov/mgss-service/mgss-service-embedding#"
+	xmlns:base-embedding="http://imce.jpl.nasa.gov/foundation/base/base-embedding#"
+	xmlns:ieee-1471-embedding="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#"
+	xmlns:architectural-description-embedding="http://imce.jpl.nasa.gov/architectural-description/architectural-description-embedding#"
+	xmlns:math="http://imce.jpl.nasa.gov/math/math#"
+	xmlns:project="http://imce.jpl.nasa.gov/foundation/project/project#"
+	xmlns:timeline-embedding="http://imce.jpl.nasa.gov/timeline/timeline-embedding#"
+	xmlns:annotation-embedding="http://imce.jpl.nasa.gov/foundation/annotation/annotation-embedding#"
+	xmlns:jeo-architecture-embedding="http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture-embedding#"
+	
+	xmlns:electrical="http://imce.jpl.nasa.gov/electrical/electrical#"
+	xmlns:mission="http://imce.jpl.nasa.gov/foundation/mission/mission#"
+	xmlns:pbs="http://imce.jpl.nasa.gov/pbs/pbs#"
+	xmlns:mechanical-embedding="http://imce.jpl.nasa.gov/mechanical/mechanical-embedding#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:base="http://imce.jpl.nasa.gov/foundation/base/base#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:electrical-embedding="http://imce.jpl.nasa.gov/electrical/electrical-embedding#"
+	
+	xmlns:UML="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#"
+	xmlns:pbs-embedding="http://imce.jpl.nasa.gov/pbs/pbs-embedding#"
+	xmlns:ieee-1471="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#"
+	xmlns:architectural-description="http://imce.jpl.nasa.gov/architectural-description/architectural-description#"
+	xmlns:project-embedding="http://imce.jpl.nasa.gov/foundation/project/project-embedding#"
+	xmlns:StandardProfileL2="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#">
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$Date$</dc:date>
+	<owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$Revision$</owl:versionInfo>
+	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copyright 2010-2011, by the California Institute of Technology. ALL RIGHTS
+   RESERVED. United States Government Sponsorship acknowledged. Any commercial
+   use must be negotiated with the Office of Technology Transfer at the
+   California Institute of Technology. This software may be subject to U.S.
+   export control laws. By accepting this software, the user agrees to comply
+   with all applicable U.S. export laws and regulations. User has the
+   responsibility to obtain export licenses, or other export authority as may be
+   required before exporting such information to foreign countries or providing
+   access to foreign persons.</dc:rights>
+	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Systems Engineering &amp; Formulation Division</dc:creator>
+	<owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base-embedding"/>
+	<owl:imports rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasStartsTarget">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#Constraint">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Block"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasStartsSource">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#Event">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Block"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasStartsAtTarget">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#MeasuredThing">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Block"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasStartsAtSource">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#MeasuringThing">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Block"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasSnapshotsTarget">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#Model">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Block"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#Thing">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#NamedElement"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasSnapshotsSource">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#TimelineVersion">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Block"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasRelatesTarget">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#Variable">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Block"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Block">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#AssertedBy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasAssertedBySource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#AssertedBy"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#ValueConstraint"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasAssertedByTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#AssertedBy"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Event"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#assertedBy">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20459"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20459">
+	<rdf:first rdf:nodeID="node1680pk85px20460"/>
+	<rdf:rest rdf:nodeID="node1680pk85px20461"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20460">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasAssertedBySource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20461">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasAssertedByTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/2002/07/owl#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Asserts">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasAssertsSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Asserts"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Event"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasAssertsTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Asserts"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#ValueConstraint"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#asserts">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20462"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20462">
+	<rdf:first rdf:nodeID="node1680pk85px20463"/>
+	<rdf:rest rdf:nodeID="node1680pk85px20464"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20463">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasAssertsSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20464">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasAssertsTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/2002/07/owl#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#AtomicConstitutes">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasAtomicConstitutesSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#AtomicConstitutes"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#AtomicConstraint"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasAtomicConstitutesTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#AtomicConstitutes"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#CompoundConstraint"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#atomicConstitutes">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20465"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20465">
+	<rdf:first rdf:nodeID="node1680pk85px20466"/>
+	<rdf:rest rdf:nodeID="node1680pk85px20467"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20466">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasAtomicConstitutesSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20467">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasAtomicConstitutesTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/2002/07/owl#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#BasedAt">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasBasedAtSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#BasedAt"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TemporalReferenceFrame"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasBasedAtTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#BasedAt"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#EpochOrigin"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#basedAt">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20468"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20468">
+	<rdf:first rdf:nodeID="node1680pk85px20469"/>
+	<rdf:rest rdf:nodeID="node1680pk85px20470"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20469">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasBasedAtSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20470">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasBasedAtTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/2002/07/owl#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#BasisOf">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasBasisOfSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#BasisOf"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#EpochOrigin"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasBasisOfTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#BasisOf"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TemporalReferenceFrame"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#basisOf">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20471"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20471">
+	<rdf:first rdf:nodeID="node1680pk85px20472"/>
+	<rdf:rest rdf:nodeID="node1680pk85px20473"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20472">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasBasisOfSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20473">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasBasisOfTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/2002/07/owl#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#ConsistsOf">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasConsistsOfSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#ConsistsOf"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Timeline"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasConsistsOfTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#ConsistsOf"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Event"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#consistsOf">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20474"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20474">
+	<rdf:first rdf:nodeID="node1680pk85px20475"/>
+	<rdf:rest rdf:nodeID="node1680pk85px20476"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20475">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasConsistsOfSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20476">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasConsistsOfTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/2002/07/owl#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#ConsistsOfAtomic">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasConsistsOfAtomicSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#ConsistsOfAtomic"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#CompoundConstraint"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasConsistsOfAtomicTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#ConsistsOfAtomic"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#AtomicConstraint"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#consistsOfAtomic">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20477"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20477">
+	<rdf:first rdf:nodeID="node1680pk85px20478"/>
+	<rdf:rest rdf:nodeID="node1680pk85px20479"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20478">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasConsistsOfAtomicSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20479">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasConsistsOfAtomicTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/2002/07/owl#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#ConsistsOfVersions">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasConsistsOfVersionsSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#ConsistsOfVersions"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Timeline"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasConsistsOfVersionsTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#ConsistsOfVersions"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TimelineVersion"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#consistsOfVersions">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20480"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20480">
+	<rdf:first rdf:nodeID="node1680pk85px20481"/>
+	<rdf:rest rdf:nodeID="node1680pk85px20482"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20481">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasConsistsOfVersionsSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20482">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasConsistsOfVersionsTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/2002/07/owl#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#ConstrainedBy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasConstrainedBySource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#ConstrainedBy"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Variable"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasConstrainedByTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#ConstrainedBy"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#AtomicConstraint"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#constrainedBy">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20483"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20483">
+	<rdf:first rdf:nodeID="node1680pk85px20484"/>
+	<rdf:rest rdf:nodeID="node1680pk85px20485"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20484">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasConstrainedBySource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20485">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasConstrainedByTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/2002/07/owl#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Constrains">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasConstrainsSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Constrains"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#AtomicConstraint"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasConstrainsTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Constrains"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Variable"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#constrains">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20486"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20486">
+	<rdf:first rdf:nodeID="node1680pk85px20487"/>
+	<rdf:rest rdf:nodeID="node1680pk85px20488"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20487">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasConstrainsSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20488">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasConstrainsTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/2002/07/owl#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Ends">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasEndsSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Ends"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#InstantaneousEvent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasEndsTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Ends"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#DurativeEvent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#ends">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20489"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20489">
+	<rdf:first rdf:nodeID="node1680pk85px20490"/>
+	<rdf:rest rdf:nodeID="node1680pk85px20491"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20490">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasEndsSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20491">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasEndsTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/2002/07/owl#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#EndsAt">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasEndsAtSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#EndsAt"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#DurativeEvent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasEndsAtTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#EndsAt"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#InstantaneousEvent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#endsAt">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20492"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20492">
+	<rdf:first rdf:nodeID="node1680pk85px20493"/>
+	<rdf:rest rdf:nodeID="node1680pk85px20494"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20493">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasEndsAtSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20494">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasEndsAtTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/2002/07/owl#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#ExistsOn">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasExistsOnSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#ExistsOn"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Event"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasExistsOnTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#ExistsOn"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Timeline"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#existsOn">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20495"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20495">
+	<rdf:first rdf:nodeID="node1680pk85px20496"/>
+	<rdf:rest rdf:nodeID="node1680pk85px20497"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20496">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasExistsOnSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20497">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasExistsOnTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/2002/07/owl#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#MeasuredBy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasMeasuredBySource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#MeasuredBy"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#MeasuredThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasMeasuredByTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#MeasuredBy"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#MeasuringThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#measuredBy">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20498"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20498">
+	<rdf:first rdf:nodeID="node1680pk85px20499"/>
+	<rdf:rest rdf:nodeID="node1680pk85px20500"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20499">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasMeasuredBySource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20500">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasMeasuredByTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/2002/07/owl#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Measures">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasMeasuresSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Measures"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#MeasuringThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasMeasuresTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Measures"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#MeasuredThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#measures">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20501"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20501">
+	<rdf:first rdf:nodeID="node1680pk85px20502"/>
+	<rdf:rest rdf:nodeID="node1680pk85px20503"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20502">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasMeasuresSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20503">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasMeasuresTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/2002/07/owl#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Orders">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasOrdersSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Orders"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TemporalReferenceFrame"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasOrdersTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Orders"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Timeline"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#orders">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20504"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20504">
+	<rdf:first rdf:nodeID="node1680pk85px20505"/>
+	<rdf:rest rdf:nodeID="node1680pk85px20506"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20505">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasOrdersSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20506">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasOrdersTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/2002/07/owl#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#OwnedBy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasOwnedBySource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#OwnedBy"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TemporalConstraint"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasOwnedByTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#OwnedBy"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Timeline"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#ownedBy">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20507"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20507">
+	<rdf:first rdf:nodeID="node1680pk85px20508"/>
+	<rdf:rest rdf:nodeID="node1680pk85px20509"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20508">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasOwnedBySource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20509">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasOwnedByTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/2002/07/owl#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Owns">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasOwnsSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Owns"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Timeline"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasOwnsTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Owns"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TemporalConstraint"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#owns">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20510"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20510">
+	<rdf:first rdf:nodeID="node1680pk85px20511"/>
+	<rdf:rest rdf:nodeID="node1680pk85px20512"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20511">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasOwnsSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20512">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasOwnsTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/2002/07/owl#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#ReferencedBy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasReferencedBySource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#ReferencedBy"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TimeVariable"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasReferencedByTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#ReferencedBy"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#AtomicValueConstraint"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#referencedBy">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20513"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20513">
+	<rdf:first rdf:nodeID="node1680pk85px20514"/>
+	<rdf:rest rdf:nodeID="node1680pk85px20515"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20514">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasReferencedBySource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20515">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasReferencedByTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/2002/07/owl#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#ReferencedTo">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasReferencedToSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#ReferencedTo"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Timeline"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasReferencedToTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#ReferencedTo"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TemporalReferenceFrame"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#referencedTo">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20516"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20516">
+	<rdf:first rdf:nodeID="node1680pk85px20517"/>
+	<rdf:rest rdf:nodeID="node1680pk85px20518"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20517">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasReferencedToSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20518">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasReferencedToTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/2002/07/owl#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#References">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasReferencesSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#References"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#AtomicValueConstraint"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasReferencesTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#References"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TimeVariable"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#references">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20519"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20519">
+	<rdf:first rdf:nodeID="node1680pk85px20520"/>
+	<rdf:rest rdf:nodeID="node1680pk85px20521"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20520">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasReferencesSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20521">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasReferencesTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/2002/07/owl#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#RelatedBy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasRelatedBySource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#RelatedBy"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Event"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasRelatedByTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#RelatedBy"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TemporalConstraint"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#relatedBy">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20522"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20522">
+	<rdf:first rdf:nodeID="node1680pk85px20523"/>
+	<rdf:rest rdf:nodeID="node1680pk85px20524"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20523">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasRelatedBySource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20524">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasRelatedByTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/2002/07/owl#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Relates">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasRelatesSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Relates"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TemporalConstraint"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasRelatesTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Relates"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Event"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#relates">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20525"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20525">
+	<rdf:first rdf:nodeID="node1680pk85px20526"/>
+	<rdf:rest rdf:nodeID="node1680pk85px20527"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20526">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasRelatesSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20527">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasRelatesTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/2002/07/owl#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Snapshots">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasSnapshotsSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Snapshots"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TimelineVersion"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasSnapshotsTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Snapshots"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Timeline"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#snapshots">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20528"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20528">
+	<rdf:first rdf:nodeID="node1680pk85px20529"/>
+	<rdf:rest rdf:nodeID="node1680pk85px20530"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20529">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasSnapshotsSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20530">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasSnapshotsTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/2002/07/owl#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Starts">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasStartsSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Starts"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#InstantaneousEvent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasStartsTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Starts"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#DurativeEvent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#starts">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20531"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20531">
+	<rdf:first rdf:nodeID="node1680pk85px20532"/>
+	<rdf:rest rdf:nodeID="node1680pk85px20533"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20532">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasStartsSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20533">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasStartsTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/2002/07/owl#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#StartsAt">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasStartsAtSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#StartsAt"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#DurativeEvent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasStartsAtTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#StartsAt"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#InstantaneousEvent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#startsAt">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20534"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20534">
+	<rdf:first rdf:nodeID="node1680pk85px20535"/>
+	<rdf:rest rdf:nodeID="node1680pk85px20536"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20535">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasStartsAtSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20536">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasStartsAtTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/2002/07/owl#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Thing">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topDataProperty">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#AssertedBy">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Asserts">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#AtomicConstitutes">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#BasedAt">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#BasisOf">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#ConsistsOf">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#ConsistsOfAtomic">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#ConsistsOfVersions">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#ConstrainedBy">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Constrains">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Ends">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#EndsAt">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#ExistsOn">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#MeasuredBy">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Measures">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Orders">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#OwnedBy">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Owns">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#ReferencedBy">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#ReferencedTo">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#References">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#RelatedBy">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Relates">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Snapshots">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Starts">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#StartsAt">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasAssertedBySource">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasAssertedByTarget">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasAssertsSource">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasAssertsTarget">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasAtomicConstitutesSource">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasAtomicConstitutesTarget">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasBasedAtSource">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasBasedAtTarget">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasBasisOfSource">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasBasisOfTarget">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasConsistsOfAtomicSource">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasConsistsOfAtomicTarget">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasConsistsOfSource">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasConsistsOfTarget">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasConsistsOfVersionsSource">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasConsistsOfVersionsTarget">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasConstrainedBySource">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasConstrainedByTarget">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasConstrainsSource">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasConstrainsTarget">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasEndsAtSource">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasEndsAtTarget">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasEndsSource">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasEndsTarget">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasExistsOnSource">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasExistsOnTarget">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasMeasuredBySource">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasMeasuredByTarget">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasMeasuresSource">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasMeasuresTarget">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasOrdersSource">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasOrdersTarget">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasOwnedBySource">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasOwnedByTarget">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasOwnsSource">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasOwnsTarget">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasReferencedBySource">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasReferencedByTarget">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasReferencedToSource">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasReferencedToTarget">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasReferencesSource">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasReferencesTarget">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasRelatedBySource">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasRelatedByTarget">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline-embedding#hasRelatesSource">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline-embedding#topObjectProperty"/>
+</rdf:Description>
+
+</rdf:RDF>

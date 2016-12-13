@@ -1,0 +1,1028 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	
+	xmlns:Blocks-embedding="http://imce.jpl.nasa.gov/Blocks/Blocks-embedding#"
+	xmlns:mgss-service="http://imce.jpl.nasa.gov/mgss-service/mgss-service#"
+	xmlns:timeline="http://imce.jpl.nasa.gov/timeline/timeline#"
+	xmlns:PrimitiveTypes="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes#"
+	xmlns:math-embedding="http://imce.jpl.nasa.gov/math/math-embedding#"
+	xmlns:jeo-architecture="http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture#"
+	xmlns:state-analysis="http://imce.jpl.nasa.gov/state-analysis/state-analysis#"
+	xmlns:analysis="http://imce.jpl.nasa.gov/foundation/analysis/analysis#"
+	
+	xmlns:SysML="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#"
+	xmlns:annotation="http://imce.jpl.nasa.gov/foundation/annotation/annotation#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:state-analysis-implementation="http://imce.jpl.nasa.gov/state-analysis-implementation/state-analysis-implementation#"
+	xmlns:state-analysis-implementation-embedding="http://imce.jpl.nasa.gov/state-analysis-implementation/state-analysis-implementation-embedding#"
+	xmlns:mechanical="http://imce.jpl.nasa.gov/mechanical/mechanical#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:Blocks="http://imce.jpl.nasa.gov/Blocks/Blocks#"
+	xmlns:analysis-embedding="http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#"
+	xmlns:QUDV="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:state-analysis-embedding="http://imce.jpl.nasa.gov/state-analysis/state-analysis-embedding#"
+	xmlns:mission-embedding="http://imce.jpl.nasa.gov/foundation/mission/mission-embedding#"
+	xmlns:mgss-service-embedding="http://imce.jpl.nasa.gov/mgss-service/mgss-service-embedding#"
+	xmlns:base-embedding="http://imce.jpl.nasa.gov/foundation/base/base-embedding#"
+	xmlns:ieee-1471-embedding="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#"
+	xmlns:architectural-description-embedding="http://imce.jpl.nasa.gov/architectural-description/architectural-description-embedding#"
+	xmlns:math="http://imce.jpl.nasa.gov/math/math#"
+	xmlns:project="http://imce.jpl.nasa.gov/foundation/project/project#"
+	xmlns:timeline-embedding="http://imce.jpl.nasa.gov/timeline/timeline-embedding#"
+	xmlns:annotation-embedding="http://imce.jpl.nasa.gov/foundation/annotation/annotation-embedding#"
+	xmlns:jeo-architecture-embedding="http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture-embedding#"
+	
+	xmlns:electrical="http://imce.jpl.nasa.gov/electrical/electrical#"
+	xmlns:mission="http://imce.jpl.nasa.gov/foundation/mission/mission#"
+	xmlns:pbs="http://imce.jpl.nasa.gov/pbs/pbs#"
+	xmlns:mechanical-embedding="http://imce.jpl.nasa.gov/mechanical/mechanical-embedding#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:base="http://imce.jpl.nasa.gov/foundation/base/base#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:electrical-embedding="http://imce.jpl.nasa.gov/electrical/electrical-embedding#"
+	
+	xmlns:UML="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#"
+	xmlns:pbs-embedding="http://imce.jpl.nasa.gov/pbs/pbs-embedding#"
+	xmlns:ieee-1471="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#"
+	xmlns:architectural-description="http://imce.jpl.nasa.gov/architectural-description/architectural-description#"
+	xmlns:project-embedding="http://imce.jpl.nasa.gov/foundation/project/project-embedding#"
+	xmlns:StandardProfileL2="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#">
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$Date$</dc:date>
+	<owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$Revision$</owl:versionInfo>
+	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copyright 2010-2011, by the California Institute of Technology. ALL RIGHTS
+   RESERVED. United States Government Sponsorship acknowledged. Any commercial
+   use must be negotiated with the Office of Technology Transfer at the
+   California Institute of Technology. This software may be subject to U.S.
+   export control laws. By accepting this software, the user agrees to comply
+   with all applicable U.S. export laws and regulations. User has the
+   responsibility to obtain export licenses, or other export authority as may be
+   required before exporting such information to foreign countries or providing
+   access to foreign persons.</dc:rights>
+	<owl:imports rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471"/>
+	<owl:imports rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/rights">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#aggregates">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20952"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20952">
+	<rdf:first rdf:nodeID="node1680pk85px20951"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20951">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasAggregatesSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20952">
+	<rdf:rest rdf:nodeID="node1680pk85px20953"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20953">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasAggregatesTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#conformsTo">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20955"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20955">
+	<rdf:first rdf:nodeID="node1680pk85px20954"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20954">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasConformsToSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20955">
+	<rdf:rest rdf:nodeID="node1680pk85px20956"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20956">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasConformsToTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#consistsOf">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20958"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20958">
+	<rdf:first rdf:nodeID="node1680pk85px20957"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20957">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasConsistsOfSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20958">
+	<rdf:rest rdf:nodeID="node1680pk85px20959"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20959">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasConsistsOfTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#describedBy">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20961"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20961">
+	<rdf:first rdf:nodeID="node1680pk85px20960"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20960">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasDescribedBySource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20961">
+	<rdf:rest rdf:nodeID="node1680pk85px20962"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20962">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasDescribedByTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#establishesMethodsFor">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20964"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20964">
+	<rdf:first rdf:nodeID="node1680pk85px20963"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20963">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasEstablishesMethodsForSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20964">
+	<rdf:rest rdf:nodeID="node1680pk85px20965"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20965">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasEstablishesMethodsForTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#fulfills">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20967"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20967">
+	<rdf:first rdf:nodeID="node1680pk85px20966"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20966">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasFulfillsSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20967">
+	<rdf:rest rdf:nodeID="node1680pk85px20968"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20968">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasFulfillsTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#has">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20970"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20970">
+	<rdf:first rdf:nodeID="node1680pk85px20969"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20969">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasHasSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20970">
+	<rdf:rest rdf:nodeID="node1680pk85px20971"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20971">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasHasTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#hasArchitecture">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20973"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20973">
+	<rdf:first rdf:nodeID="node1680pk85px20972"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20972">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasHasArchitectureSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20973">
+	<rdf:rest rdf:nodeID="node1680pk85px20974"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20974">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasHasArchitectureTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#hasConcern">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20976"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20976">
+	<rdf:first rdf:nodeID="node1680pk85px20975"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20975">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasHasConcernSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20976">
+	<rdf:rest rdf:nodeID="node1680pk85px20977"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20977">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasHasConcernTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#hasSource">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20979"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20979">
+	<rdf:first rdf:nodeID="node1680pk85px20978"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20978">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasHasSourceSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20979">
+	<rdf:rest rdf:nodeID="node1680pk85px20980"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20980">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasHasSourceTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#hasStakeholder">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20982"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20982">
+	<rdf:first rdf:nodeID="node1680pk85px20981"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20981">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasHasStakeholderSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20982">
+	<rdf:rest rdf:nodeID="node1680pk85px20983"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20983">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasHasStakeholderTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#identifies">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20985"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20985">
+	<rdf:first rdf:nodeID="node1680pk85px20984"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20984">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasIdentifiesSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20985">
+	<rdf:rest rdf:nodeID="node1680pk85px20986"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20986">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasIdentifiesTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#identifiesConcern">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20988"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20988">
+	<rdf:first rdf:nodeID="node1680pk85px20987"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20987">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasIdentifiesConcernSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20988">
+	<rdf:rest rdf:nodeID="node1680pk85px20989"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20989">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasIdentifiesConcernTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#identifiesStakeholder">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20991"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20991">
+	<rdf:first rdf:nodeID="node1680pk85px20990"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20990">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasIdentifiesStakeholderSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20991">
+	<rdf:rest rdf:nodeID="node1680pk85px20992"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20992">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasIdentifiesStakeholderTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#influences">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20994"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20994">
+	<rdf:first rdf:nodeID="node1680pk85px20993"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20993">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasInfluencesSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20994">
+	<rdf:rest rdf:nodeID="node1680pk85px20995"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20995">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasInfluencesTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#isAddressedTo">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px20997"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20997">
+	<rdf:first rdf:nodeID="node1680pk85px20996"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20996">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasIsAddressedToSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20997">
+	<rdf:rest rdf:nodeID="node1680pk85px20998"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20998">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasIsAddressedToTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#organizedBy">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px21000"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px21000">
+	<rdf:first rdf:nodeID="node1680pk85px20999"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20999">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasOrganizedBySource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px21000">
+	<rdf:rest rdf:nodeID="node1680pk85px21001"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px21001">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasOrganizedByTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#participatesIn">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px21003"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px21003">
+	<rdf:first rdf:nodeID="node1680pk85px21002"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px21002">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasParticipatesInSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px21003">
+	<rdf:rest rdf:nodeID="node1680pk85px21004"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px21004">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasParticipatesInTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#provides">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px21006"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px21006">
+	<rdf:first rdf:nodeID="node1680pk85px21005"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px21005">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasProvidesSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px21006">
+	<rdf:rest rdf:nodeID="node1680pk85px21007"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px21007">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasProvidesTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#selects">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px21009"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px21009">
+	<rdf:first rdf:nodeID="node1680pk85px21008"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px21008">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasSelectsSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px21009">
+	<rdf:rest rdf:nodeID="node1680pk85px21010"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px21010">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasSelectsTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#usedToCover">
+	<owl:propertyChainAxiom rdf:nodeID="node1680pk85px21012"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px21012">
+	<rdf:first rdf:nodeID="node1680pk85px21011"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px21011">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasUsedToCoverSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px21012">
+	<rdf:rest rdf:nodeID="node1680pk85px21013"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px21013">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasUsedToCoverTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasAggregatesSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#ArchitecturalDescription"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Aggregates"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasAggregatesTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Model"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Aggregates"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasConformsToSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#View"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#ConformsTo"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasConformsToTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Viewpoint"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#ConformsTo"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasConsistsOfSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#View"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#ConsistsOf"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasConsistsOfTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Model"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#ConsistsOf"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasDescribedBySource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Architecture"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#DescribedBy"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasDescribedByTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#ArchitecturalDescription"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#DescribedBy"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasEstablishesMethodsForSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Viewpoint"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#EstablishesMethodsFor"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasEstablishesMethodsForTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Model"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#EstablishesMethodsFor"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasFulfillsSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#System"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Fulfills"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasFulfillsTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Mission"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Fulfills"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasHasArchitectureSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#System"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#HasArchitecture"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasHasArchitectureTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Architecture"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#HasArchitecture"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasHasConcernSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Stakeholder"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#HasConcern"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasHasConcernTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Concern"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#HasConcern"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasHasSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Has"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasHasSourceSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Viewpoint"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#HasSource"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasHasSourceTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#LibraryViewpoint"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#HasSource"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasHasStakeholderSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#System"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#HasStakeholder"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasHasStakeholderTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Stakeholder"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#HasStakeholder"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasHasTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Has"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasIdentifiesConcernSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#ArchitecturalDescription"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#IdentifiesConcern"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasIdentifiesConcernTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Concern"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#IdentifiesConcern"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasIdentifiesSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Identifies"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasIdentifiesStakeholderSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#ArchitecturalDescription"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#IdentifiesStakeholder"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasIdentifiesStakeholderTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Stakeholder"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#IdentifiesStakeholder"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasIdentifiesTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Identifies"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasInfluencesSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Environment"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Influences"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasInfluencesTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#System"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Influences"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasIsAddressedToSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Viewpoint"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#IsAddressedTo"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasIsAddressedToTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Stakeholder"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#IsAddressedTo"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasOrganizedBySource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#ArchitecturalDescription"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#OrganizedBy"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasOrganizedByTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#View"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#OrganizedBy"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasParticipatesInSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#ParticipatesIn"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasParticipatesInTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#ParticipatesIn"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasProvidesSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#ArchitecturalDescription"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Provides"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasProvidesTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Rationale"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Provides"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasSelectsSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#ArchitecturalDescription"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Selects"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasSelectsTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Viewpoint"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Selects"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasUsedToCoverSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Viewpoint"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#UsedToCover"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#hasUsedToCoverTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Concern"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#UsedToCover"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topObjectProperty">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#topDataProperty">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#ArchitecturalDescription">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Block"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Architecture">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Block"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Concern">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Block"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Environment">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Block"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Mission">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Activity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Model">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Block"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Rationale">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Block"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Stakeholder">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Block"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#System">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Block"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Thing">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#NamedElement"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#View">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Block"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#Viewpoint">
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Block"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Aggregates">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#ConformsTo">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#ConsistsOf">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#DescribedBy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#EstablishesMethodsFor">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Fulfills">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Has">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#HasArchitecture">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Has"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#HasConcern">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Has"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#HasSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Has"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#HasStakeholder">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Has"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Identifies">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#IdentifiesConcern">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Identifies"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#IdentifiesStakeholder">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Identifies"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Influences">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#IsAddressedTo">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#OrganizedBy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#ParticipatesIn">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Provides">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Selects">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Thing">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#UsedToCover">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Block">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Activity">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+</rdf:RDF>

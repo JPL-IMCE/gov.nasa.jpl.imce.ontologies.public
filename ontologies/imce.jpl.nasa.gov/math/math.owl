@@ -1,0 +1,610 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY pbs "http://imce.jpl.nasa.gov/pbs/pbs#" >
+    <!ENTITY base "http://imce.jpl.nasa.gov/foundation/base/base#" >
+    <!ENTITY math "http://imce.jpl.nasa.gov/math/math#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY Blocks "http://imce.jpl.nasa.gov/Blocks/Blocks#" >
+    <!ENTITY mission "http://imce.jpl.nasa.gov/foundation/mission/mission#" >
+    <!ENTITY pbs-embedding "http://imce.jpl.nasa.gov/pbs/pbs-embedding#" >
+    <!ENTITY UML "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#" >
+    <!ENTITY project "http://imce.jpl.nasa.gov/foundation/project/project#" >
+    <!ENTITY base-embedding "http://imce.jpl.nasa.gov/foundation/base/base-embedding#" >
+    <!ENTITY analysis "http://imce.jpl.nasa.gov/foundation/analysis/analysis#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY math-embedding "http://imce.jpl.nasa.gov/math/math-embedding#" >
+    <!ENTITY timeline "http://imce.jpl.nasa.gov/timeline/timeline#" >
+    <!ENTITY QUDV "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#" >
+    <!ENTITY SysML "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#" >
+    <!ENTITY ieee-1471 "http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#" >
+    <!ENTITY annotation "http://imce.jpl.nasa.gov/foundation/annotation/annotation#" >
+    <!ENTITY electrical "http://imce.jpl.nasa.gov/electrical/electrical#" >
+    <!ENTITY mechanical "http://imce.jpl.nasa.gov/mechanical/mechanical#" >
+    <!ENTITY Blocks-embedding "http://imce.jpl.nasa.gov/Blocks/Blocks-embedding#" >
+    <!ENTITY project-embedding "http://imce.jpl.nasa.gov/foundation/project/project-embedding#" >
+    <!ENTITY mission-embedding "http://imce.jpl.nasa.gov/foundation/mission/mission-embedding#" >
+    <!ENTITY timeline-embedding "http://imce.jpl.nasa.gov/timeline/timeline-embedding#" >
+    <!ENTITY mgss-service "http://imce.jpl.nasa.gov/mgss-service/mgss-service#" >
+    <!ENTITY analysis-embedding "http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#" >
+    <!ENTITY ieee-1471-embedding "http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#" >
+    <!ENTITY mechanical-embedding "http://imce.jpl.nasa.gov/mechanical/mechanical-embedding#" >
+    <!ENTITY state-analysis "http://imce.jpl.nasa.gov/state-analysis/state-analysis#" >
+    <!ENTITY StandardProfileL2 "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#" >
+    <!ENTITY annotation-embedding "http://imce.jpl.nasa.gov/foundation/annotation/annotation-embedding#" >
+    <!ENTITY electrical-embedding "http://imce.jpl.nasa.gov/electrical/electrical-embedding#" >
+    <!ENTITY jeo-architecture "http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture#" >
+    <!ENTITY mgss-service-embedding "http://imce.jpl.nasa.gov/mgss-service/mgss-service-embedding#" >
+    <!ENTITY state-analysis-embedding "http://imce.jpl.nasa.gov/state-analysis/state-analysis-embedding#" >
+    <!ENTITY PrimitiveTypes "http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes#" >
+    <!ENTITY jeo-architecture-embedding "http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture-embedding#" >
+    <!ENTITY architectural-description "http://imce.jpl.nasa.gov/architectural-description/architectural-description#" >
+    <!ENTITY state-analysis-implementation "http://imce.jpl.nasa.gov/state-analysis-implementation/state-analysis-implementation#" >
+    <!ENTITY architectural-description-embedding "http://imce.jpl.nasa.gov/architectural-description/architectural-description-embedding#" >
+    <!ENTITY state-analysis-implementation-embedding "http://imce.jpl.nasa.gov/state-analysis-implementation/state-analysis-implementation-embedding#" >
+]>
+
+
+<rdf:RDF 
+     
+     xmlns:Blocks-embedding="http://imce.jpl.nasa.gov/Blocks/Blocks-embedding#"
+     xmlns:mgss-service="http://imce.jpl.nasa.gov/mgss-service/mgss-service#"
+     xmlns:StandardProfileL2="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#"
+     xmlns:timeline="http://imce.jpl.nasa.gov/timeline/timeline#"
+     xmlns:PrimitiveTypes="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes#"
+     xmlns:math-embedding="http://imce.jpl.nasa.gov/math/math-embedding#"
+     xmlns:jeo-architecture="http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture#"
+     xmlns:state-analysis="http://imce.jpl.nasa.gov/state-analysis/state-analysis#"
+     xmlns:analysis="http://imce.jpl.nasa.gov/foundation/analysis/analysis#"
+     xmlns:SysML="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#"
+     xmlns:annotation="http://imce.jpl.nasa.gov/foundation/annotation/annotation#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:state-analysis-implementation="http://imce.jpl.nasa.gov/state-analysis-implementation/state-analysis-implementation#"
+     xmlns:state-analysis-implementation-embedding="http://imce.jpl.nasa.gov/state-analysis-implementation/state-analysis-implementation-embedding#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:mechanical="http://imce.jpl.nasa.gov/mechanical/mechanical#"
+     xmlns:Blocks="http://imce.jpl.nasa.gov/Blocks/Blocks#"
+     xmlns:QUDV="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#"
+     xmlns:analysis-embedding="http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:state-analysis-embedding="http://imce.jpl.nasa.gov/state-analysis/state-analysis-embedding#"
+     xmlns:mission-embedding="http://imce.jpl.nasa.gov/foundation/mission/mission-embedding#"
+     xmlns:mgss-service-embedding="http://imce.jpl.nasa.gov/mgss-service/mgss-service-embedding#"
+     xmlns:base-embedding="http://imce.jpl.nasa.gov/foundation/base/base-embedding#"
+     xmlns:ieee-1471-embedding="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#"
+     xmlns:architectural-description-embedding="http://imce.jpl.nasa.gov/architectural-description/architectural-description-embedding#"
+     xmlns:math="http://imce.jpl.nasa.gov/math/math#"
+     xmlns:project="http://imce.jpl.nasa.gov/foundation/project/project#"
+     xmlns:annotation-embedding="http://imce.jpl.nasa.gov/foundation/annotation/annotation-embedding#"
+     xmlns:jeo-architecture-embedding="http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture-embedding#"
+     xmlns:timeline-embedding="http://imce.jpl.nasa.gov/timeline/timeline-embedding#"
+     
+     xmlns:electrical="http://imce.jpl.nasa.gov/electrical/electrical#"
+     xmlns:mission="http://imce.jpl.nasa.gov/foundation/mission/mission#"
+     xmlns:pbs="http://imce.jpl.nasa.gov/pbs/pbs#"
+     xmlns:mechanical-embedding="http://imce.jpl.nasa.gov/mechanical/mechanical-embedding#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:base="http://imce.jpl.nasa.gov/foundation/base/base#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     
+     xmlns:electrical-embedding="http://imce.jpl.nasa.gov/electrical/electrical-embedding#"
+     xmlns:UML="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#"
+     xmlns:ieee-1471="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#"
+     xmlns:pbs-embedding="http://imce.jpl.nasa.gov/pbs/pbs-embedding#"
+     xmlns:architectural-description="http://imce.jpl.nasa.gov/architectural-description/architectural-description#"
+     xmlns:project-embedding="http://imce.jpl.nasa.gov/foundation/project/project-embedding#">
+    <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/math/math">
+        <dc:date rdf:datatype="&xsd;string">$Date$</dc:date>
+        <owl:versionInfo rdf:datatype="&xsd;string">$Revision$</owl:versionInfo>
+        <dc:rights rdf:datatype="&xsd;string">Copyright 2010-2011, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
+
+This software may be subject to U.S. export control laws. By accepting this software, the user agrees to comply with all applicable U.S. export laws and regulations. User has the responsibility to obtain export licenses,a or other export authority as may be required before exporting such information to foreign countries or providing access to foreign persons.</dc:rights>
+        <dc:type rdf:datatype="&xsd;string">Discipline</dc:type>
+        <dc:title rdf:datatype="&xsd;string">Mathematics Ontology</dc:title>
+        <dc:creator rdf:datatype="&xsd;string">Systems Engineering &amp; Formulation Division</dc:creator>
+        <dc:description rdf:datatype="&xsd;string">The Mathematics Ontology defines foundation mathematical concepts that are common to multiple specialized ontologies. It is not by any means a comprehensive ontology for mathematics; its purpose is to define concepts and properties necessary for those disciplines.</dc:description>
+        <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis"/>
+        <owl:imports rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    <owl:AnnotationProperty rdf:about="&dc;creator"/>
+    <owl:AnnotationProperty rdf:about="&dc;type"/>
+    <owl:AnnotationProperty rdf:about="&dc;date"/>
+    <owl:AnnotationProperty rdf:about="&dc;description"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    <owl:AnnotationProperty rdf:about="&dc;title"/>
+    <owl:AnnotationProperty rdf:about="&dc;rights"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#hasCoordinate -->
+
+    <owl:ObjectProperty rdf:about="&math;hasCoordinate">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <dc:description rdf:datatype="&xsd;string">The &lt;property&gt;hasCoordinate&lt;/property&gt; property relates a &lt;classname&gt;Localization&lt;/classname&gt; to the &lt;classname&gt;Coordinate&lt;/classname&gt;s that comprise it.</dc:description>
+        <rdfs:range rdf:resource="&math;Coordinate"/>
+        <rdfs:domain rdf:resource="&math;Localization"/>
+        <rdfs:subPropertyOf rdf:resource="&math;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#hasCoordinateSystem -->
+
+    <owl:ObjectProperty rdf:about="&math;hasCoordinateSystem">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <dc:description rdf:datatype="&xsd;string">The &lt;property&gt;hasCoordinateSystem&lt;/property&gt; property relates a &lt;classname&gt;Localization&lt;/classname&gt; to its unique &lt;classname&gt;CoordinateSystem&lt;/classname&gt;.</dc:description>
+        <rdfs:range rdf:resource="&math;CoordinateSystem"/>
+        <rdfs:domain rdf:resource="&math;Localization"/>
+        <rdfs:subPropertyOf rdf:resource="&math;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#hasInverseTransform -->
+
+    <owl:ObjectProperty rdf:about="&math;hasInverseTransform">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <dc:description rdf:datatype="&xsd;string">The &lt;property&gt;hasInverseTransform&lt;/property&gt; relates two &lt;classname&gt;CoordinateSystemTransform&lt;/classname&gt;s that are inverses of each other.</dc:description>
+        <rdfs:domain rdf:resource="&math;CoordinateSystemTransform"/>
+        <rdfs:range rdf:resource="&math;CoordinateSystemTransform"/>
+        <owl:inverseOf rdf:resource="&math;hasInverseTransform"/>
+        <rdfs:subPropertyOf rdf:resource="&math;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#hasOrigin -->
+
+    <owl:ObjectProperty rdf:about="&math;hasOrigin">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <dc:description rdf:datatype="&xsd;string">The &lt;property&gt;hasOrigin&lt;/property&gt; property relates a &lt;classname&gt;CoordinateSystem&lt;/classname&gt; to its unique origin &lt;classname&gt;Point&lt;/classname&gt;.</dc:description>
+        <rdfs:domain rdf:resource="&math;CoordinateSystem"/>
+        <rdfs:range rdf:resource="&math;Point"/>
+        <rdfs:subPropertyOf rdf:resource="&math;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#isDefinedBy -->
+
+    <owl:ObjectProperty rdf:about="&math;isDefinedBy">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;CoordinateSystem&lt;/classname&gt; &lt;property&gt;isDefinedBy&lt;/property&gt; its &lt;classname&gt;CoordinateIndex&lt;/classname&gt;es (e.g., its axes).</dc:description>
+        <rdfs:range rdf:resource="&math;CoordinateIndex"/>
+        <rdfs:domain rdf:resource="&math;CoordinateSystem"/>
+        <rdfs:subPropertyOf rdf:resource="&math;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#localizes -->
+
+    <owl:ObjectProperty rdf:about="&math;localizes">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;Localization&lt;/classname&gt; &lt;property&gt;localizes&lt;/property&gt; a &lt;classname&gt;GeometricObject&lt;/classname&gt; in a particular &lt;classname&gt;CoordinateSystem&lt;/classname&gt;.</dc:description>
+        <rdfs:range rdf:resource="&math;GeometricObject"/>
+        <rdfs:domain rdf:resource="&math;Localization"/>
+        <rdfs:subPropertyOf rdf:resource="&math;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#localizesOnIndex -->
+
+    <owl:ObjectProperty rdf:about="&math;localizesOnIndex">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;Coordinate&lt;/classname&gt; &lt;property&gt;localizesOnIndex&lt;/property&gt; a &lt;classname&gt;Point&lt;/classname&gt; on a particular &lt;classname&gt;CoordinateIndex&lt;/classname&gt;.</dc:description>
+        <rdfs:domain rdf:resource="&math;Coordinate"/>
+        <rdfs:range rdf:resource="&math;CoordinateIndex"/>
+        <rdfs:subPropertyOf rdf:resource="&math;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#locates -->
+
+    <owl:ObjectProperty rdf:about="&math;locates">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;Location&lt;/classname&gt; &lt;property&gt;locates&lt;/property&gt; a &lt;classname&gt;Point&lt;/classname&gt; in a particular &lt;classname&gt;CoordinateSystem&lt;/classname&gt;.</dc:description>
+        <rdfs:domain rdf:resource="&math;Location"/>
+        <rdfs:range rdf:resource="&math;Point"/>
+        <rdfs:subPropertyOf rdf:resource="&math;localizes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&math;topObjectProperty">
+        <dc:description rdf:datatype="&xsd;string">&lt;property&gt;topObjectProperty&lt;/property&gt; is a common superproperty of all object properties defined in the Mathematics Ontology.</dc:description>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#transformsFrom -->
+
+    <owl:ObjectProperty rdf:about="&math;transformsFrom">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <dc:description rdf:datatype="&xsd;string">The &lt;property&gt;transformsFrom&lt;/property&gt; property identifies the domain of a &lt;classname&gt;CoordinateSetTransform&lt;/classname&gt;.</dc:description>
+        <rdfs:range rdf:resource="&math;CoordinateSystem"/>
+        <rdfs:domain rdf:resource="&math;CoordinateSystemTransform"/>
+        <rdfs:subPropertyOf rdf:resource="&math;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#transformsTo -->
+
+    <owl:ObjectProperty rdf:about="&math;transformsTo">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <dc:description rdf:datatype="&xsd;string">The &lt;property&gt;transformsTo&lt;/property&gt; property identifies the range of a &lt;classname&gt;CoordinateSystemTransform&lt;/classname&gt;.</dc:description>
+        <rdfs:range rdf:resource="&math;CoordinateSystem"/>
+        <rdfs:domain rdf:resource="&math;CoordinateSystemTransform"/>
+        <rdfs:subPropertyOf rdf:resource="&math;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#topDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="&math;topDataProperty">
+        <dc:description rdf:datatype="&xsd;string">&lt;property&gt;topDataProperty&lt;/property&gt; is a common superproperty of all datatype properties defined in the Mathematics Ontology.</dc:description>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#CartesianCoordinate -->
+
+    <owl:Class rdf:about="&math;CartesianCoordinate">
+        <rdfs:subClassOf rdf:resource="&math;Coordinate"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&math;localizesOnIndex"/>
+                <owl:allValuesFrom rdf:resource="&math;CartesianCoordinateIndex"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&math;SphericalCoordinate"/>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;CartesianCoordinate&lt;/classname&gt; locates a &lt;classname&gt;Point&lt;/classname&gt; in one &lt;classname&gt;Dimension&lt;/classname&gt; of a &lt;classname&gt;CartesianCoordinateSystem&lt;/classname&gt;.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#CartesianCoordinateIndex -->
+
+    <owl:Class rdf:about="&math;CartesianCoordinateIndex">
+        <rdfs:subClassOf rdf:resource="&math;CoordinateIndex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#CartesianCoordinateSystem -->
+
+    <owl:Class rdf:about="&math;CartesianCoordinateSystem">
+        <rdfs:subClassOf rdf:resource="&math;CoordinateSystem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&math;isDefinedBy"/>
+                <owl:allValuesFrom rdf:resource="&math;CartesianCoordinateIndex"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&math;SphericalCoordinateSystem"/>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;CartesianCoordinateSystem&lt;/classname&gt; is a system for locating &lt;classname&gt;Point&lt;/classname&gt;s using &lt;classname&gt;Coordinate&lt;/classname&gt;s measured along mutually orthogonal &lt;classname&gt;DirectedLine&lt;/classname&gt;s.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#CartesianLocation -->
+
+    <owl:Class rdf:about="&math;CartesianLocation">
+        <rdfs:subClassOf rdf:resource="&math;Location"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&math;hasCoordinateSystem"/>
+                <owl:allValuesFrom rdf:resource="&math;CartesianCoordinateSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&math;hasCoordinate"/>
+                <owl:allValuesFrom rdf:resource="&math;CartesianCoordinate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&math;SphericalLocation"/>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;CartesianLocation&lt;/classname&gt; locates a &lt;classname&gt;Point&lt;/classname&gt; in a &lt;classname&gt;CartesianCoordinateSystem&lt;/classname&gt;.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#Coordinate -->
+
+    <owl:Class rdf:about="&math;Coordinate">
+        <rdfs:subClassOf rdf:resource="&math;Thing"/>
+        <owl:disjointWith rdf:resource="&math;CoordinateIndex"/>
+        <owl:disjointWith rdf:resource="&math;CoordinateSystem"/>
+        <owl:disjointWith rdf:resource="&math;CoordinateSystemTransform"/>
+        <owl:disjointWith rdf:resource="&math;GeometricObject"/>
+        <owl:disjointWith rdf:resource="&math;Localization"/>
+        <owl:disjointWith rdf:resource="&math;Location"/>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;Coordinate&lt;/classname&gt; locates a &lt;classname&gt;Point&lt;/classname&gt; in one &lt;classname&gt;CoordinateDimension&lt;/classname&gt; of a &lt;classname&gt;CoordinateSystem&lt;/classname&gt;.</dc:description>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#CoordinateIndex -->
+
+    <owl:Class rdf:about="&math;CoordinateIndex">
+        <rdfs:subClassOf rdf:resource="&math;Thing"/>
+        <owl:disjointWith rdf:resource="&math;CoordinateSystem"/>
+        <owl:disjointWith rdf:resource="&math;CoordinateSystemTransform"/>
+        <owl:disjointWith rdf:resource="&math;GeometricObject"/>
+        <owl:disjointWith rdf:resource="&math;Localization"/>
+        <owl:disjointWith rdf:resource="&math;Location"/>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;CoordinateIndex&lt;/classname&gt; is a defining characteristic (e.g., an axis) of a &lt;classname&gt;CoordinateSystem&lt;/classname&gt;.</dc:description>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#CoordinateSystem -->
+
+    <owl:Class rdf:about="&math;CoordinateSystem">
+        <rdfs:subClassOf rdf:resource="&base;IdentifiedElement"/>
+        <rdfs:subClassOf rdf:resource="&math;Thing"/>
+        <owl:disjointWith rdf:resource="&math;CoordinateSystemTransform"/>
+        <owl:disjointWith rdf:resource="&math;GeometricObject"/>
+        <owl:disjointWith rdf:resource="&math;Localization"/>
+        <owl:disjointWith rdf:resource="&math;Location"/>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;CoordinateSystem&lt;/classname&gt; is a system for locating &lt;classname&gt;Point&lt;/classname&gt;s using &lt;classname&gt;Coordinate&lt;/classname&gt;s measured in some specified way.</dc:description>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#CoordinateSystemTransform -->
+
+    <owl:Class rdf:about="&math;CoordinateSystemTransform">
+        <rdfs:subClassOf rdf:resource="&base;IdentifiedElement"/>
+        <rdfs:subClassOf rdf:resource="&math;Thing"/>
+        <owl:disjointWith rdf:resource="&math;GeometricObject"/>
+        <owl:disjointWith rdf:resource="&math;Localization"/>
+        <owl:disjointWith rdf:resource="&math;Location"/>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;CoordinateSystemTransform&lt;/classname&gt; is a mathematical operation that maps &lt;classname&gt;Point&lt;/classname&gt;s in a domain &lt;classname&gt;CoordinateSystem&lt;/classname&gt; to points in a range &lt;classname&gt;CoordinateSystem&lt;/classname&gt;.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#DirectedAngle -->
+
+    <owl:Class rdf:about="&math;DirectedAngle">
+        <rdfs:subClassOf rdf:resource="&math;SphericalCoordinateIndex"/>
+        <owl:disjointWith rdf:resource="&math;DirectedLine"/>
+        <owl:disjointWith rdf:resource="&math;Radius"/>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;DirectedAngle&lt;/classname&gt; is a &lt;classname&gt;SphericalCoordinateDimension&lt;/classname&gt;.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#DirectedLine -->
+
+    <owl:Class rdf:about="&math;DirectedLine">
+        <rdfs:subClassOf rdf:resource="&math;CartesianCoordinateIndex"/>
+        <owl:disjointWith rdf:resource="&math;Radius"/>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;DirectedLine&lt;/classname&gt; is a &lt;classname&gt;CoordinateDimension&lt;/classname&gt; of a &lt;classname&gt;CartesianCoordinateSystem&lt;/classname&gt;.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#Ellipsoid -->
+
+    <owl:Class rdf:about="&math;Ellipsoid">
+        <rdfs:subClassOf rdf:resource="&math;GeometricObject"/>
+        <owl:disjointWith rdf:resource="&math;Point"/>
+        <dc:description rdf:datatype="&xsd;string">An &lt;classname&gt;Ellipsoid&lt;/classname&gt; is a closed type of quadric surface that is a higher dimensional analogue of an ellipse.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#GeometricObject -->
+
+    <owl:Class rdf:about="&math;GeometricObject">
+        <rdfs:subClassOf rdf:resource="&base;IdentifiedElement"/>
+        <rdfs:subClassOf rdf:resource="&math;Thing"/>
+        <owl:disjointWith rdf:resource="&math;Localization"/>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;GeometricObject&lt;/classname&gt; is a point or a set of points.</dc:description>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#Localization -->
+
+    <owl:Class rdf:about="&math;Localization">
+        <rdfs:subClassOf rdf:resource="&math;Thing"/>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;Localization&lt;/classname&gt; &lt;property&gt;localizes&lt;/property&gt; a &lt;classname&gt;GeometricObject&lt;/classname&gt; in a &lt;classname&gt;CoordinateSystem&lt;/classname&gt;.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#Location -->
+
+    <owl:Class rdf:about="&math;Location">
+        <rdfs:subClassOf rdf:resource="&math;Localization"/>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;Location&lt;/classname&gt; locates a &lt;classname&gt;Point&lt;/classname&gt; in a &lt;classname&gt;CoordinateSystem&lt;/classname&gt;.</dc:description>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#Point -->
+
+    <owl:Class rdf:about="&math;Point">
+        <rdfs:subClassOf rdf:resource="&math;GeometricObject"/>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;Point&lt;/classname&gt; is a zero-dimensional &lt;classname&gt;GeometricObject&lt;/classname&gt;.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#Radius -->
+
+    <owl:Class rdf:about="&math;Radius">
+        <rdfs:subClassOf rdf:resource="&math;SphericalCoordinateIndex"/>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;Radius&lt;/classname&gt; is a &lt;classname&gt;SphericalCoordinateDimension&lt;/classname&gt;.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#SphericalCoordinate -->
+
+    <owl:Class rdf:about="&math;SphericalCoordinate">
+        <rdfs:subClassOf rdf:resource="&math;Coordinate"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&math;localizesOnIndex"/>
+                <owl:allValuesFrom rdf:resource="&math;SphericalCoordinateIndex"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;SphericalCoordinate&lt;/classname&gt; locates a &lt;classname&gt;Point&lt;/classname&gt; in one &lt;classname&gt;Dimension&lt;/classname&gt; of a &lt;classname&gt;SphericalCoordinateSystem&lt;/classname&gt;.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#SphericalCoordinateIndex -->
+
+    <owl:Class rdf:about="&math;SphericalCoordinateIndex">
+        <rdfs:subClassOf rdf:resource="&math;CoordinateIndex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#SphericalCoordinateSystem -->
+
+    <owl:Class rdf:about="&math;SphericalCoordinateSystem">
+        <rdfs:subClassOf rdf:resource="&math;CoordinateSystem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&math;isDefinedBy"/>
+                <owl:allValuesFrom rdf:resource="&math;SphericalCoordinateIndex"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;SphericalCoordinateSystem&lt;/classname&gt; is a system for locating &lt;classname&gt;Point&lt;/classname&gt;s using &lt;classname&gt;Coordinate&lt;/classname&gt;s measured by a &lt;classname&gt;Radius&lt;/classname&gt; and one or more &lt;classname&gt;DirectedAngle&lt;/classname&gt;s.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#SphericalLocation -->
+
+    <owl:Class rdf:about="&math;SphericalLocation">
+        <rdfs:subClassOf rdf:resource="&math;Location"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&math;hasCoordinateSystem"/>
+                <owl:allValuesFrom rdf:resource="&math;SphericalCoordinateSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&math;hasCoordinate"/>
+                <owl:allValuesFrom rdf:resource="&math;SphericalCoordinate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;SphericalLocation&lt;/classname&gt; locates a &lt;classname&gt;Point&lt;/classname&gt; in a &lt;classname&gt;SphericalCoordinateSystem&lt;/classname&gt;.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/math/math#Thing -->
+
+    <owl:Class rdf:about="&math;Thing">
+        <dc:description rdf:datatype="&xsd;string">&lt;classname&gt;Thing&lt;/classname&gt; is a common superclass of all classes defined in the Mathematics Ontology.</dc:description>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

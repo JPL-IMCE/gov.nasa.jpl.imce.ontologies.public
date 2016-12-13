@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY mission "http://imce.jpl.nasa.gov/foundation/mission/mission#" >
+    <!ENTITY flight-subsystem "http://imce.jpl.nasa.gov/flight-subsystem/flight-subsystem#" >
+]>
+
+
+<rdf:RDF xmlns="http://imce.jpl.nasa.gov/flight-subsystem/flight-subsystem#"
+     xml:base="http://imce.jpl.nasa.gov/flight-subsystem/flight-subsystem"
+     xmlns:flight-subsystem="http://imce.jpl.nasa.gov/flight-subsystem/flight-subsystem#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:mission="http://imce.jpl.nasa.gov/foundation/mission/mission#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/flight-subsystem/flight-subsystem">
+        <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission"/>
+        <dc:rights rdf:datatype="&xsd;string">Copyright 2010-2011, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
+
+This software may be subject to U.S. export control laws. By accepting this software, the user agrees to comply with all applicable U.S. export laws and regulations. User has the responsibility to obtain export licenses, or other export authority as may be required before exporting such information to foreign countries or providing access to foreign persons.</dc:rights>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&dc;title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/flight-subsystem/flight-subsystem#Cabling -->
+
+    <owl:Class rdf:about="&flight-subsystem;Cabling">
+        <rdfs:subClassOf rdf:resource="&flight-subsystem;FlightSubsystem"/>
+        <dc:title rdf:datatype="&xsd;string">Cabling</dc:title>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/flight-subsystem/flight-subsystem#CommandDataHandling -->
+
+    <owl:Class rdf:about="&flight-subsystem;CommandDataHandling">
+        <rdfs:subClassOf rdf:resource="&flight-subsystem;FlightSubsystem"/>
+        <dc:title rdf:datatype="&xsd;string">Command and Data Handling</dc:title>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/flight-subsystem/flight-subsystem#FlightSubsystem -->
+
+    <owl:Class rdf:about="&flight-subsystem;FlightSubsystem">
+        <rdfs:subClassOf rdf:resource="&mission;Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/flight-subsystem/flight-subsystem#GuidanceNavigationControl -->
+
+    <owl:Class rdf:about="&flight-subsystem;GuidanceNavigationControl">
+        <rdfs:subClassOf rdf:resource="&flight-subsystem;FlightSubsystem"/>
+        <dc:title rdf:datatype="&xsd;string">Guidance, Navigation, and Control</dc:title>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/flight-subsystem/flight-subsystem#Mechanisms -->
+
+    <owl:Class rdf:about="&flight-subsystem;Mechanisms">
+        <rdfs:subClassOf rdf:resource="&flight-subsystem;FlightSubsystem"/>
+        <dc:title rdf:datatype="&xsd;string">Mechanisms</dc:title>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/flight-subsystem/flight-subsystem#Mobility -->
+
+    <owl:Class rdf:about="&flight-subsystem;Mobility">
+        <rdfs:subClassOf rdf:resource="&flight-subsystem;FlightSubsystem"/>
+        <dc:title rdf:datatype="&xsd;string">Mobility</dc:title>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/flight-subsystem/flight-subsystem#MotorControlAssembly -->
+
+    <owl:Class rdf:about="&flight-subsystem;MotorControlAssembly">
+        <rdfs:subClassOf rdf:resource="&flight-subsystem;FlightSubsystem"/>
+        <dc:title rdf:datatype="&xsd;string">Motor Control Assembly</dc:title>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/flight-subsystem/flight-subsystem#Power -->
+
+    <owl:Class rdf:about="&flight-subsystem;Power">
+        <rdfs:subClassOf rdf:resource="&flight-subsystem;FlightSubsystem"/>
+        <dc:title rdf:datatype="&xsd;string">Power</dc:title>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/flight-subsystem/flight-subsystem#Propulsion -->
+
+    <owl:Class rdf:about="&flight-subsystem;Propulsion">
+        <rdfs:subClassOf rdf:resource="&flight-subsystem;FlightSubsystem"/>
+        <dc:title rdf:datatype="&xsd;string">Propulsion</dc:title>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/flight-subsystem/flight-subsystem#Pyrotechnics -->
+
+    <owl:Class rdf:about="&flight-subsystem;Pyrotechnics">
+        <rdfs:subClassOf rdf:resource="&flight-subsystem;FlightSubsystem"/>
+        <dc:title rdf:datatype="&xsd;string">Pyrotechnics</dc:title>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/flight-subsystem/flight-subsystem#Structure -->
+
+    <owl:Class rdf:about="&flight-subsystem;Structure">
+        <rdfs:subClassOf rdf:resource="&flight-subsystem;FlightSubsystem"/>
+        <dc:title rdf:datatype="&xsd;string">Structure</dc:title>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/flight-subsystem/flight-subsystem#Telecommunications -->
+
+    <owl:Class rdf:about="&flight-subsystem;Telecommunications">
+        <rdfs:subClassOf rdf:resource="&flight-subsystem;FlightSubsystem"/>
+        <dc:title rdf:datatype="&xsd;string">Telecommunications</dc:title>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/flight-subsystem/flight-subsystem#TemperatureControl -->
+
+    <owl:Class rdf:about="&flight-subsystem;TemperatureControl">
+        <rdfs:subClassOf rdf:resource="&flight-subsystem;FlightSubsystem"/>
+        <dc:title rdf:datatype="&xsd;string">Temperature Control</dc:title>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#Component -->
+
+    <owl:Class rdf:about="&mission;Component"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0.1469) http://owlapi.sourceforge.net -->
+

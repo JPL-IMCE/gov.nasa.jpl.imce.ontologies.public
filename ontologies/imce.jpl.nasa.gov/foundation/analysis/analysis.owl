@@ -1,0 +1,2030 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY pbs "http://imce.jpl.nasa.gov/pbs/pbs#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY math "http://imce.jpl.nasa.gov/math/math#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY Blocks "http://imce.jpl.nasa.gov/Blocks/Blocks#" >
+    <!ENTITY timeline "http://imce.jpl.nasa.gov/timeline/timeline#" >
+    <!ENTITY pbs-embedding "http://imce.jpl.nasa.gov/pbs/pbs-embedding#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY ieee-1471 "http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#" >
+    <!ENTITY math-embedding "http://imce.jpl.nasa.gov/math/math-embedding#" >
+    <!ENTITY time "http://imce.jpl.nasa.gov/foundation/time/time#" >
+    <!ENTITY base "http://imce.jpl.nasa.gov/foundation/base/base#" >
+    <!ENTITY mechanical "http://imce.jpl.nasa.gov/mechanical/mechanical#" >
+    <!ENTITY vandv "http://imce.jpl.nasa.gov/discipline/vandv/vandv#" >
+    <!ENTITY Blocks-embedding "http://imce.jpl.nasa.gov/Blocks/Blocks-embedding#" >
+    <!ENTITY mission "http://imce.jpl.nasa.gov/foundation/mission/mission#" >
+    <!ENTITY project "http://imce.jpl.nasa.gov/foundation/project/project#" >
+    <!ENTITY f6-asda "http://imce.jpl.nasa.gov/application/f6-asda/f6-asda#" >
+    <!ENTITY timeline-embedding "http://imce.jpl.nasa.gov/timeline/timeline-embedding#" >
+    <!ENTITY analysis "http://imce.jpl.nasa.gov/foundation/analysis/analysis#" >
+    <!ENTITY base-mapping "http://imce.jpl.nasa.gov/foundation/base/base-mapping#" >
+    <!ENTITY ieee-1471-embedding "http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#" >
+    <!ENTITY owl2-mof2 "http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#" >
+    <!ENTITY time-embedding "http://imce.jpl.nasa.gov/foundation/time/time-embedding#" >
+    <!ENTITY base-embedding "http://imce.jpl.nasa.gov/foundation/base/base-embedding#" >
+    <!ENTITY mechanical-embedding "http://imce.jpl.nasa.gov/mechanical/mechanical-embedding#" >
+    <!ENTITY vandv-embedding "http://imce.jpl.nasa.gov/discipline/vandv/vandv-embedding#" >
+    <!ENTITY annotation "http://imce.jpl.nasa.gov/foundation/annotation/annotation#" >
+    <!ENTITY electrical "http://imce.jpl.nasa.gov/discipline/electrical/electrical#" >
+    <!ENTITY jeo-architecture "http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture#" >
+    <!ENTITY UML "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#" >
+    <!ENTITY datatype-map "http://imce.jpl.nasa.gov/foundation/owl2-mof2/datatype-map#" >
+    <!ENTITY mgss-service-embedding "http://imce.jpl.nasa.gov/mgss-service/mgss-service-embedding#" >
+    <!ENTITY QUDV "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#" >
+    <!ENTITY project-embedding "http://imce.jpl.nasa.gov/foundation/project/project-embedding#" >
+    <!ENTITY mission-embedding "http://imce.jpl.nasa.gov/foundation/mission/mission-embedding#" >
+    <!ENTITY SysML "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#" >
+    <!ENTITY mgss-service "http://imce.jpl.nasa.gov/application/mgss-service/mgss-service#" >
+    <!ENTITY f6-asda-embedding "http://imce.jpl.nasa.gov/application/f6-asda/f6-asda-embedding#" >
+    <!ENTITY owl2-mof2-mapping "http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-mapping#" >
+    <!ENTITY analysis-embedding "http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#" >
+    <!ENTITY state-analysis "http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#" >
+    <!ENTITY owl2-mof2-embedding "http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#" >
+    <!ENTITY Metrology "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#" >
+    <!ENTITY project-closure "http://imce.jpl.nasa.gov/foundation/project/project-bundle-closure#" >
+    <!ENTITY electrical-embedding "http://imce.jpl.nasa.gov/discipline/electrical/electrical-embedding#" >
+    <!ENTITY annotation-embedding "http://imce.jpl.nasa.gov/foundation/annotation/annotation-embedding#" >
+    <!ENTITY UML-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-embedding#" >
+    <!ENTITY jeo-architecture-embedding "http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture-embedding#" >
+    <!ENTITY UML-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#" >
+    <!ENTITY QUDV-mapping "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-mapping#" >
+    <!ENTITY fault-management "http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#" >
+    <!ENTITY QUDV-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-embedding#" >
+    <!ENTITY QUDV-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#" >
+    <!ENTITY StandardProfileL2 "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#" >
+    <!ENTITY SysML-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#" >
+    <!ENTITY SysML-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-embedding#" >
+    <!ENTITY base-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#" >
+    <!ENTITY time-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#" >
+    <!ENTITY state-analysis-embedding "http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis-embedding#" >
+    <!ENTITY Metrology-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-embedding#" >
+    <!ENTITY architectural-description "http://imce.jpl.nasa.gov/architectural-description/architectural-description#" >
+    <!ENTITY Metrology-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#" >
+    <!ENTITY project-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#" >
+    <!ENTITY mission-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#" >
+    <!ENTITY fault-management-embedding "http://imce.jpl.nasa.gov/discipline/fault-management/fault-management-embedding#" >
+    <!ENTITY architecture-framework "http://imce.jpl.nasa.gov/inactive/architecture-framework/architecture-framework#" >
+    <!ENTITY StandardProfileL2-mapping "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-mapping#" >
+    <!ENTITY state-analysis-closure "http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis-bundle-closure#" >
+    <!ENTITY analysis-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#" >
+    <!ENTITY Metrology-closure "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-bundle-closure#" >
+    <!ENTITY StandardProfileL2-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#" >
+    <!ENTITY owl2-mof2-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#" >
+    <!ENTITY StandardProfileL2-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-embedding#" >
+    <!ENTITY time-embedding-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time-embedding#" >
+    <!ENTITY base-embedding-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base-embedding#" >
+    <!ENTITY annotation-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#" >
+    <!ENTITY UML-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#" >
+    <!ENTITY architectural-description-embedding "http://imce.jpl.nasa.gov/architectural-description/architectural-description-embedding#" >
+    <!ENTITY mission-embedding-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#" >
+    <!ENTITY QUDV-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#" >
+    <!ENTITY project-embedding-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project-embedding#" >
+    <!ENTITY architecture-framework-embedding "http://imce.jpl.nasa.gov/inactive/architecture-framework/architecture-framework-embedding#" >
+    <!ENTITY SysML-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#" >
+    <!ENTITY PrimitiveTypes-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-embedding#" >
+    <!ENTITY analysis-embedding-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#" >
+    <!ENTITY PrimitiveTypes-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-metamodel#" >
+    <!ENTITY state-analysis-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#" >
+    <!ENTITY owl2-mof2-embedding-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#" >
+    <!ENTITY Metrology-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#" >
+    <!ENTITY state-analysis-implementation "http://imce.jpl.nasa.gov/discipline/state-analysis-implementation/state-analysis-implementation#" >
+    <!ENTITY UML-metamodel-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#" >
+    <!ENTITY QUDV-metamodel-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#" >
+    <!ENTITY StandardProfileL2-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#" >
+    <!ENTITY SysML-metamodel-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#" >
+    <!ENTITY state-analysis-functional-design "http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#" >
+    <!ENTITY state-analysis-embedding-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis/state-analysis-embedding#" >
+    <!ENTITY Metrology-metamodel-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#" >
+    <!ENTITY state-analysis-implementation-embedding "http://imce.jpl.nasa.gov/discipline/state-analysis-implementation/state-analysis-implementation-embedding#" >
+    <!ENTITY architecture-framework-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/inactive/architecture-framework/architecture-framework#" >
+    <!ENTITY PrimitiveTypes-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes#" >
+    <!ENTITY StandardProfileL2-metamodel-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#" >
+    <!ENTITY state-analysis-functional-design-embedding "http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design-embedding#" >
+    <!ENTITY architecture-framework-embedding-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/inactive/architecture-framework/architecture-framework-embedding#" >
+    <!ENTITY PrimitiveTypes-metamodel-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-metamodel#" >
+]>
+
+
+<rdf:RDF xmlns="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes#"
+     xml:base="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes"
+     xmlns:base-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#"
+     xmlns:Blocks-embedding="http://imce.jpl.nasa.gov/Blocks/Blocks-embedding#"
+     xmlns:StandardProfileL2-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#"
+     xmlns:state-analysis-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#"
+     xmlns:ieee-1471="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:StandardProfileL2-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-embedding#"
+     xmlns:mechanical="http://imce.jpl.nasa.gov/mechanical/mechanical#"
+     xmlns:mission-embedding="http://imce.jpl.nasa.gov/foundation/mission/mission-embedding#"
+     xmlns:state-analysis-functional-design="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#"
+     xmlns:datatype-map="http://imce.jpl.nasa.gov/foundation/owl2-mof2/datatype-map#"
+     xmlns:StandardProfileL2-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#"
+     xmlns:time-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#"
+     xmlns:UML-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#"
+     xmlns:electrical="http://imce.jpl.nasa.gov/discipline/electrical/electrical#"
+     xmlns:analysis="http://imce.jpl.nasa.gov/foundation/analysis/analysis#"
+     xmlns:state-analysis-embedding="http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis-embedding#"
+     xmlns:base-embedding-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base-embedding#"
+     xmlns:mission="http://imce.jpl.nasa.gov/foundation/mission/mission#"
+     xmlns:QUDV-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#"
+     xmlns:math="http://imce.jpl.nasa.gov/math/math#"
+     xmlns:vandv-embedding="http://imce.jpl.nasa.gov/discipline/vandv/vandv-embedding#"
+     xmlns:analysis-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#"
+     xmlns:Metrology-closure="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-bundle-closure#"
+     xmlns:SysML-metamodel-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#"
+     xmlns:analysis-embedding-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#"
+     xmlns:time-embedding="http://imce.jpl.nasa.gov/foundation/time/time-embedding#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:QUDV-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#"
+     xmlns:PrimitiveTypes-metamodel-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-metamodel#"
+     xmlns:pbs-embedding="http://imce.jpl.nasa.gov/pbs/pbs-embedding#"
+     xmlns:state-analysis-implementation="http://imce.jpl.nasa.gov/discipline/state-analysis-implementation/state-analysis-implementation#"
+     xmlns:jeo-architecture-embedding="http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture-embedding#"
+     xmlns:owl2-mof2-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#"
+     xmlns:owl2-mof2-embedding-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#"
+     xmlns:StandardProfileL2="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#"
+     xmlns:annotation-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#"
+     xmlns:project-embedding-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project-embedding#"
+     xmlns:mgss-service="http://imce.jpl.nasa.gov/application/mgss-service/mgss-service#"
+     xmlns:vandv="http://imce.jpl.nasa.gov/discipline/vandv/vandv#"
+     xmlns:UML-metamodel-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#"
+     xmlns:annotation="http://imce.jpl.nasa.gov/foundation/annotation/annotation#"
+     xmlns:architectural-description="http://imce.jpl.nasa.gov/architectural-description/architectural-description#"
+     xmlns:architecture-framework-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/inactive/architecture-framework/architecture-framework#"
+     xmlns:Blocks="http://imce.jpl.nasa.gov/Blocks/Blocks#"
+     xmlns:time-embedding-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time-embedding#"
+     xmlns:mgss-service-embedding="http://imce.jpl.nasa.gov/mgss-service/mgss-service-embedding#"
+     xmlns:project-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#"
+     xmlns:ieee-1471-embedding="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:project-closure="http://imce.jpl.nasa.gov/foundation/project/project-bundle-closure#"
+     xmlns:SysML-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#"
+     xmlns:owl2-mof2-embedding="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#"
+     xmlns:timeline="http://imce.jpl.nasa.gov/timeline/timeline#"
+     xmlns:state-analysis="http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#"
+     xmlns:state-analysis-functional-design-embedding="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design-embedding#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:fault-management="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#"
+     xmlns:PrimitiveTypes-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-embedding#"
+     xmlns:architecture-framework-embedding-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/inactive/architecture-framework/architecture-framework-embedding#"
+     xmlns:state-analysis-embedding-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis/state-analysis-embedding#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:project="http://imce.jpl.nasa.gov/foundation/project/project#"
+     xmlns:Metrology-metamodel-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#"
+     xmlns:timeline-embedding="http://imce.jpl.nasa.gov/timeline/timeline-embedding#"
+     xmlns:architectural-description-embedding="http://imce.jpl.nasa.gov/architectural-description/architectural-description-embedding#"
+     xmlns:QUDV="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#"
+     xmlns:PrimitiveTypes-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-metamodel#"
+     xmlns:QUDV-mapping="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-mapping#"
+     xmlns:owl2-mof2="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#"
+     xmlns:project-embedding="http://imce.jpl.nasa.gov/foundation/project/project-embedding#"
+     xmlns:owl2-mof2-mapping="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-mapping#"
+     xmlns:annotation-embedding="http://imce.jpl.nasa.gov/foundation/annotation/annotation-embedding#"
+     xmlns:math-embedding="http://imce.jpl.nasa.gov/math/math-embedding#"
+     xmlns:Metrology-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#"
+     xmlns:state-analysis-implementation-embedding="http://imce.jpl.nasa.gov/discipline/state-analysis-implementation/state-analysis-implementation-embedding#"
+     xmlns:QUDV-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-embedding#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:UML-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#"
+     xmlns:QUDV-metamodel-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#"
+     xmlns:UML-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-embedding#"
+     xmlns:Metrology-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#"
+     xmlns:UML="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#"
+     xmlns:StandardProfileL2-metamodel-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#"
+     xmlns:Metrology="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#"
+     xmlns:Metrology-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-embedding#"
+     xmlns:pbs="http://imce.jpl.nasa.gov/pbs/pbs#"
+     xmlns:mechanical-embedding="http://imce.jpl.nasa.gov/mechanical/mechanical-embedding#"
+     xmlns:f6-asda="http://imce.jpl.nasa.gov/application/f6-asda/f6-asda#"
+     xmlns:SysML="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:SysML-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-embedding#"
+     xmlns:fault-management-embedding="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management-embedding#"
+     xmlns:base-embedding="http://imce.jpl.nasa.gov/foundation/base/base-embedding#"
+     xmlns:SysML-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#"
+     xmlns:jeo-architecture="http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture#"
+     xmlns:StandardProfileL2-mapping="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-mapping#"
+     xmlns:PrimitiveTypes-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes#"
+     xmlns:mission-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#"
+     xmlns:architecture-framework-embedding="http://imce.jpl.nasa.gov/inactive/architecture-framework/architecture-framework-embedding#"
+     xmlns:base-mapping="http://imce.jpl.nasa.gov/foundation/base/base-mapping#"
+     xmlns:electrical-embedding="http://imce.jpl.nasa.gov/discipline/electrical/electrical-embedding#"
+     xmlns:time="http://imce.jpl.nasa.gov/foundation/time/time#"
+     xmlns:mission-embedding-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#"
+     xmlns:state-analysis-closure="http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis-bundle-closure#"
+     xmlns:architecture-framework="http://imce.jpl.nasa.gov/inactive/architecture-framework/architecture-framework#"
+     xmlns:f6-asda-embedding="http://imce.jpl.nasa.gov/application/f6-asda/f6-asda-embedding#"
+     xmlns:analysis-embedding="http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#"
+     xmlns:base="http://imce.jpl.nasa.gov/foundation/base/base#">
+    <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis">
+        <dc:date rdf:datatype="&xsd;string">$Date$</dc:date>
+        <owl:versionInfo rdf:datatype="&xsd;string">$Revision$</owl:versionInfo>
+        <dc:title rdf:datatype="&xsd;string">Analysis Ontology</dc:title>
+        <dc:rights rdf:datatype="&xsd;string">Copyright 2010-2014, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
+
+This software may be subject to U.S. export control laws. By accepting this software, the user agrees to comply with all applicable U.S. export laws and regulations. User has the responsibility to obtain export licenses, or other export authority as may be required before exporting such information to foreign countries or providing access to foreign persons.</dc:rights>
+        <dc:type rdf:datatype="&xsd;string">Foundation</dc:type>
+        <dc:creator rdf:datatype="&xsd;string">Systems Engineering &amp; Formulation Division</dc:creator>
+        <dc:description rdf:datatype="&xsd;string">The Analysis Ontology defines general concepts and properties for analyses (e.g., trade studies, driving requirements analysis, etc.). It provides a basis for specialization by domain experts.</dc:description>
+        <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="&dc;creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="&dc;date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="&dc;description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <owl:AnnotationProperty rdf:about="&dc;rights"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="&dc;title"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/type -->
+
+    <owl:AnnotationProperty rdf:about="&dc;type"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&analysis-backbone;topObjectProperty">
+        <dc:description rdf:datatype="&xsd;string">&lt;property&gt;topObjectProperty&lt;/property&gt; is a common superproperty of all object properties defined in the Analysis Ontology.</dc:description>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topReifiedObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&analysis-backbone;topReifiedObjectProperty">
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topReifiedObjectPropertySource -->
+
+    <owl:ObjectProperty rdf:about="&analysis-backbone;topReifiedObjectPropertySource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topReifiedObjectPropertyTarget -->
+
+    <owl:ObjectProperty rdf:about="&analysis-backbone;topReifiedObjectPropertyTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topReifiedStructuredDataProperty -->
+
+    <owl:ObjectProperty rdf:about="&analysis-backbone;topReifiedStructuredDataProperty">
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topReifiedStructuredDataPropertySource -->
+
+    <owl:ObjectProperty rdf:about="&analysis-backbone;topReifiedStructuredDataPropertySource">
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topReifiedStructuredDataPropertyTarget -->
+
+    <owl:ObjectProperty rdf:about="&analysis-backbone;topReifiedStructuredDataPropertyTarget">
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topUnreifiedObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&analysis-backbone;topUnreifiedObjectProperty">
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#analyzes -->
+
+    <owl:ObjectProperty rdf:about="&analysis;analyzes">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">analyzes</rdfs:label>
+        <dc:description>An &lt;classname&gt;Explanation&lt;/classname&gt; &lt;replaceable&gt;a&lt;/replaceable&gt; &lt;property&gt;analyzes&lt;/property&gt; some &lt;classname&gt;IdentifiedElement&lt;/classname&gt; &lt;replaceable&gt;e&lt;/replaceable&gt; if and only if &lt;replaceable&gt;a&lt;/replaceable&gt; considers or otherwise takes account of &lt;replaceable&gt;e&lt;/replaceable&gt;.</dc:description>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topReifiedObjectProperty"/>
+        <rdfs:range rdf:resource="&analysis;AnalyzedElement"/>
+        <rdfs:domain rdf:resource="&analysis;Explanation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#characterizes -->
+
+    <owl:ObjectProperty rdf:about="&analysis;characterizes">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">characterizes</rdfs:label>
+        <dc:description rdf:datatype="&xsd;string">A
+&lt;classname&gt;Characterization&lt;/classname&gt;
+&lt;replaceable&gt;c&lt;/replaceable&gt;
+&lt;property&gt;characterizes&lt;/property&gt;
+a
+&lt;classname&gt;CharacterizedElement&lt;/classname&gt;
+&lt;replaceable&gt;e&lt;/replaceable&gt;
+if and only if
+&lt;replaceable&gt;c&lt;/replaceable&gt;
+describes, delimits, or restricts
+&lt;replaceable&gt;e&lt;/replaceable&gt;.</dc:description>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topReifiedObjectProperty"/>
+        <rdfs:domain rdf:resource="&analysis;Characterization"/>
+        <rdfs:range rdf:resource="&analysis;CharacterizedElement"/>
+        <owl:inverseOf rdf:resource="&analysis;isCharacterizedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#constrains -->
+
+    <owl:ObjectProperty rdf:about="&analysis;constrains">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">constrains</rdfs:label>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;Constraint&lt;/classname&gt; &lt;replaceable&gt;c&lt;/replaceable&gt; &lt;property&gt;constrains&lt;/property&gt; some &lt;classname&gt;ConstrainedElement&lt;/classname&gt; &lt;replaceable&gt;e&lt;/replaceable&gt; if and only if &lt;replaceable&gt;c&lt;/replaceable&gt; imposes restrictions on one or more properties of  &lt;replaceable&gt;e&lt;/replaceable&gt;.</dc:description>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topReifiedObjectProperty"/>
+        <rdfs:range rdf:resource="&analysis;ConstrainedElement"/>
+        <rdfs:domain rdf:resource="&analysis;Constraint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#explains -->
+
+    <owl:ObjectProperty rdf:about="&analysis;explains">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">explains</rdfs:label>
+        <dc:description>An &lt;classname&gt;Explanation&lt;/classname&gt; &lt;replaceable&gt;a&lt;/replaceable&gt; &lt;property&gt;explains&lt;/property&gt; some &lt;classname&gt;SpecifiedElement&lt;/classname&gt; &lt;replaceable&gt;e&lt;/replaceable&gt; if and only if &lt;replaceable&gt;a&lt;/replaceable&gt; provides a rationale or justification for some design aspect of &lt;replaceable&gt;e&lt;/replaceable&gt;.</dc:description>
+        <rdfs:range rdf:resource="&analysis;CharacterizedElement"/>
+        <rdfs:domain rdf:resource="&analysis;Explanation"/>
+        <rdfs:subPropertyOf rdf:resource="&analysis;characterizes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasAnalyzesSource -->
+
+    <owl:ObjectProperty rdf:about="&analysis;hasAnalyzesSource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topReifiedObjectPropertySource"/>
+        <rdfs:domain rdf:resource="&analysis;Analyzes"/>
+        <rdfs:range rdf:resource="&analysis;Explanation"/>
+    </owl:ObjectProperty>
+    <rdf:Description>
+        <owl:inverseOf rdf:resource="&analysis;hasAnalyzesSource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasAnalyzesTarget -->
+
+    <owl:ObjectProperty rdf:about="&analysis;hasAnalyzesTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topReifiedObjectPropertyTarget"/>
+        <rdfs:range rdf:resource="&analysis;AnalyzedElement"/>
+        <rdfs:domain rdf:resource="&analysis;Analyzes"/>
+    </owl:ObjectProperty>
+    <rdf:Description>
+        <owl:inverseOf rdf:resource="&analysis;hasAnalyzesTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasCharacterizesSource -->
+
+    <owl:ObjectProperty rdf:about="&analysis;hasCharacterizesSource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topReifiedObjectPropertySource"/>
+        <rdfs:range rdf:resource="&analysis;Characterization"/>
+        <rdfs:domain rdf:resource="&analysis;Characterizes"/>
+    </owl:ObjectProperty>
+    <rdf:Description>
+        <owl:inverseOf rdf:resource="&analysis;hasCharacterizesSource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasCharacterizesTarget -->
+
+    <owl:ObjectProperty rdf:about="&analysis;hasCharacterizesTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topReifiedObjectPropertyTarget"/>
+        <rdfs:range rdf:resource="&analysis;CharacterizedElement"/>
+        <rdfs:domain rdf:resource="&analysis;Characterizes"/>
+    </owl:ObjectProperty>
+    <rdf:Description>
+        <owl:inverseOf rdf:resource="&analysis;hasCharacterizesTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasConstrainsSource -->
+
+    <owl:ObjectProperty rdf:about="&analysis;hasConstrainsSource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topReifiedObjectPropertySource"/>
+        <rdfs:domain rdf:resource="&analysis;Constrains"/>
+        <rdfs:range rdf:resource="&analysis;Constraint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasConstrainsTarget -->
+
+    <owl:ObjectProperty rdf:about="&analysis;hasConstrainsTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topReifiedObjectPropertyTarget"/>
+        <rdfs:range rdf:resource="&analysis;ConstrainedElement"/>
+        <rdfs:domain rdf:resource="&analysis;Constrains"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasCriterion -->
+
+    <owl:ObjectProperty rdf:about="&analysis;hasCriterion">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">has criterion</rdfs:label>
+        <dc:description>&lt;para&gt;A &lt;classname&gt;Metric&lt;/classname&gt;
+        &lt;replaceable&gt;m&lt;/replaceable&gt; &lt;property&gt;hasCriterion&lt;/property&gt; some
+        &lt;classname&gt;Criterion&lt;/classname&gt;
+        &lt;replaceable&gt;c&lt;/replaceable&gt; if and only if &lt;replaceable&gt;c&lt;/replaceable&gt; establishes a region of success for &lt;replaceable&gt;m&lt;/replaceable&gt;.&lt;/para&gt;</dc:description>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topReifiedObjectProperty"/>
+        <rdfs:range rdf:resource="&analysis;Criterion"/>
+        <rdfs:domain rdf:resource="&analysis;Metric"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasExplainsSource -->
+
+    <owl:ObjectProperty rdf:about="&analysis;hasExplainsSource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&analysis;Explains"/>
+        <rdfs:range rdf:resource="&analysis;Explanation"/>
+        <rdfs:subPropertyOf rdf:resource="&analysis;hasCharacterizesSource"/>
+    </owl:ObjectProperty>
+    <rdf:Description>
+        <owl:inverseOf rdf:resource="&analysis;hasExplainsSource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasExplainsTarget -->
+
+    <owl:ObjectProperty rdf:about="&analysis;hasExplainsTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&analysis;CharacterizedElement"/>
+        <rdfs:domain rdf:resource="&analysis;Explains"/>
+        <rdfs:subPropertyOf rdf:resource="&analysis;hasCharacterizesTarget"/>
+    </owl:ObjectProperty>
+    <rdf:Description>
+        <owl:inverseOf rdf:resource="&analysis;hasExplainsTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasHasCriterionSource -->
+
+    <owl:ObjectProperty rdf:about="&analysis;hasHasCriterionSource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topReifiedObjectPropertySource"/>
+        <rdfs:domain rdf:resource="&analysis;HasCriterion"/>
+        <rdfs:range rdf:resource="&analysis;Metric"/>
+    </owl:ObjectProperty>
+    <rdf:Description>
+        <owl:inverseOf rdf:resource="&analysis;hasHasCriterionSource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasHasCriterionTarget -->
+
+    <owl:ObjectProperty rdf:about="&analysis;hasHasCriterionTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topReifiedObjectPropertyTarget"/>
+        <rdfs:range rdf:resource="&analysis;Criterion"/>
+        <rdfs:domain rdf:resource="&analysis;HasCriterion"/>
+    </owl:ObjectProperty>
+    <rdf:Description>
+        <owl:inverseOf rdf:resource="&analysis;hasHasCriterionTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasHasMetricSource -->
+
+    <owl:ObjectProperty rdf:about="&analysis;hasHasMetricSource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topReifiedObjectPropertySource"/>
+        <rdfs:domain rdf:resource="&analysis;HasMetric"/>
+        <rdfs:range rdf:resource="&analysis;Quantity"/>
+    </owl:ObjectProperty>
+    <rdf:Description>
+        <owl:inverseOf rdf:resource="&analysis;hasHasMetricSource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasHasMetricTarget -->
+
+    <owl:ObjectProperty rdf:about="&analysis;hasHasMetricTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topReifiedObjectPropertyTarget"/>
+        <rdfs:domain rdf:resource="&analysis;HasMetric"/>
+        <rdfs:range rdf:resource="&analysis;Metric"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasHasValueSource -->
+
+    <owl:ObjectProperty rdf:about="&analysis;hasHasValueSource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topReifiedObjectPropertySource"/>
+        <rdfs:domain rdf:resource="&analysis;HasValue"/>
+        <rdfs:range rdf:resource="&analysis;Quantity"/>
+    </owl:ObjectProperty>
+    <rdf:Description>
+        <owl:inverseOf rdf:resource="&analysis;hasHasValueSource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasHasValueTarget -->
+
+    <owl:ObjectProperty rdf:about="&analysis;hasHasValueTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topReifiedObjectPropertyTarget"/>
+        <rdfs:domain rdf:resource="&analysis;HasValue"/>
+        <rdfs:range rdf:resource="&analysis;QuantityValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasLimitsSource -->
+
+    <owl:ObjectProperty rdf:about="&analysis;hasLimitsSource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&analysis;Assumption"/>
+        <rdfs:domain rdf:resource="&analysis;Limits"/>
+        <rdfs:subPropertyOf rdf:resource="&analysis;hasCharacterizesSource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasLimitsTarget -->
+
+    <owl:ObjectProperty rdf:about="&analysis;hasLimitsTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&analysis;CharacterizedElement"/>
+        <rdfs:domain rdf:resource="&analysis;Limits"/>
+        <rdfs:subPropertyOf rdf:resource="&analysis;hasCharacterizesTarget"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasMeasuresSource -->
+
+    <owl:ObjectProperty rdf:about="&analysis;hasMeasuresSource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topReifiedObjectPropertySource"/>
+        <rdfs:range rdf:resource="&analysis;Criterion"/>
+        <rdfs:domain rdf:resource="&analysis;Measures"/>
+    </owl:ObjectProperty>
+    <rdf:Description>
+        <owl:inverseOf rdf:resource="&analysis;hasMeasuresSource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasMeasuresTarget -->
+
+    <owl:ObjectProperty rdf:about="&analysis;hasMeasuresTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topReifiedObjectPropertyTarget"/>
+        <rdfs:range rdf:resource="&analysis;MeasuredElement"/>
+        <rdfs:domain rdf:resource="&analysis;Measures"/>
+    </owl:ObjectProperty>
+    <rdf:Description>
+        <owl:inverseOf rdf:resource="&analysis;hasMeasuresTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasMetric -->
+
+    <owl:ObjectProperty rdf:about="&analysis;hasMetric">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">has metric</rdfs:label>
+        <dc:description>&lt;para&gt;An &lt;classname&gt;Quantification&lt;/classname&gt;
+        &lt;replaceable&gt;q&lt;/replaceable&gt; &lt;property&gt;hasMetric&lt;/property&gt; some
+            &lt;classname&gt;Metric&lt;/classname&gt;
+        &lt;replaceable&gt;m&lt;/replaceable&gt; if and only if &lt;replaceable&gt;q&lt;/replaceable&gt; assigns a value to
+            &lt;replaceable&gt;m&lt;/replaceable&gt; for some aspect of a design.&lt;/para&gt;</dc:description>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topReifiedObjectProperty"/>
+        <rdfs:range rdf:resource="&analysis;Metric"/>
+        <rdfs:domain rdf:resource="&analysis;Quantity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasQuantifiesSource -->
+
+    <owl:ObjectProperty rdf:about="&analysis;hasQuantifiesSource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topReifiedObjectPropertySource"/>
+        <rdfs:domain rdf:resource="&analysis;Quantifies"/>
+        <rdfs:range rdf:resource="&analysis;Quantity"/>
+    </owl:ObjectProperty>
+    <rdf:Description>
+        <owl:inverseOf rdf:resource="&analysis;hasQuantifiesSource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasQuantifiesTarget -->
+
+    <owl:ObjectProperty rdf:about="&analysis;hasQuantifiesTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topReifiedObjectPropertyTarget"/>
+        <rdfs:domain rdf:resource="&analysis;Quantifies"/>
+        <rdfs:range rdf:resource="&mission;SpecifiedElement"/>
+    </owl:ObjectProperty>
+    <rdf:Description>
+        <owl:inverseOf rdf:resource="&analysis;hasQuantifiesTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasValidatesSource -->
+
+    <owl:ObjectProperty rdf:about="&analysis;hasValidatesSource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&analysis;Explanation"/>
+        <rdfs:domain rdf:resource="&analysis;Validates"/>
+        <rdfs:subPropertyOf rdf:resource="&analysis;hasExplainsSource"/>
+    </owl:ObjectProperty>
+    <rdf:Description>
+        <owl:inverseOf rdf:resource="&analysis;hasValidatesSource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasValidatesTarget -->
+
+    <owl:ObjectProperty rdf:about="&analysis;hasValidatesTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&analysis;CharacterizedElement"/>
+        <rdfs:domain rdf:resource="&analysis;Validates"/>
+        <rdfs:subPropertyOf rdf:resource="&analysis;hasExplainsTarget"/>
+    </owl:ObjectProperty>
+    <rdf:Description>
+        <owl:inverseOf rdf:resource="&analysis;hasValidatesTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasValue -->
+
+    <owl:ObjectProperty rdf:about="&analysis;hasValue">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">has value</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topReifiedObjectProperty"/>
+        <rdfs:domain rdf:resource="&analysis;Quantity"/>
+        <rdfs:range rdf:resource="&analysis;QuantityValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#isAnalyzedBy -->
+
+    <owl:ObjectProperty rdf:about="&analysis;isAnalyzedBy">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">is analyzed by</rdfs:label>
+        <annotation:isDerived rdf:datatype="&xsd;boolean">true</annotation:isDerived>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topReifiedObjectProperty"/>
+        <rdfs:domain rdf:resource="&analysis;AnalyzedElement"/>
+        <rdfs:range rdf:resource="&analysis;Explanation"/>
+        <owl:inverseOf rdf:resource="&analysis;analyzes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#isCharacterizedBy -->
+
+    <owl:ObjectProperty rdf:about="&analysis;isCharacterizedBy">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">is characterized by</rdfs:label>
+        <dc:description rdf:datatype="&xsd;string">See &lt;property&gt;characterizes&lt;/property&gt;.</dc:description>
+        <annotation:isDerived rdf:datatype="&xsd;boolean">true</annotation:isDerived>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topReifiedObjectProperty"/>
+        <rdfs:range rdf:resource="&analysis;Characterization"/>
+        <rdfs:domain rdf:resource="&analysis;CharacterizedElement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#isCriterionFor -->
+
+    <owl:ObjectProperty rdf:about="&analysis;isCriterionFor">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">is criterion for</rdfs:label>
+        <annotation:isDerived rdf:datatype="&xsd;boolean">true</annotation:isDerived>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topReifiedObjectProperty"/>
+        <rdfs:domain rdf:resource="&analysis;Criterion"/>
+        <rdfs:range rdf:resource="&analysis;Metric"/>
+        <owl:inverseOf rdf:resource="&analysis;hasCriterion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#isExplainedBy -->
+
+    <owl:ObjectProperty rdf:about="&analysis;isExplainedBy">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">is explained by</rdfs:label>
+        <dc:description rdf:datatype="&xsd;string">See &lt;property&gt;explains&lt;/property&gt;.</dc:description>
+        <annotation:isDerived rdf:datatype="&xsd;boolean">true</annotation:isDerived>
+        <rdfs:domain rdf:resource="&analysis;CharacterizedElement"/>
+        <rdfs:range rdf:resource="&analysis;Explanation"/>
+        <owl:inverseOf rdf:resource="&analysis;explains"/>
+        <rdfs:subPropertyOf rdf:resource="&analysis;isCharacterizedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#isLimitedBy -->
+
+    <owl:ObjectProperty rdf:about="&analysis;isLimitedBy">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">is limited by</rdfs:label>
+        <dc:description rdf:datatype="&xsd;string">See &lt;property&gt;limits&lt;/property&gt;.</dc:description>
+        <annotation:isDerived rdf:datatype="&xsd;boolean">true</annotation:isDerived>
+        <rdfs:range rdf:resource="&analysis;Assumption"/>
+        <rdfs:domain rdf:resource="&analysis;CharacterizedElement"/>
+        <rdfs:subPropertyOf rdf:resource="&analysis;isCharacterizedBy"/>
+        <owl:inverseOf rdf:resource="&analysis;limits"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#isMeasuredBy -->
+
+    <owl:ObjectProperty rdf:about="&analysis;isMeasuredBy">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">is measured by</rdfs:label>
+        <annotation:isDerived rdf:datatype="&xsd;boolean">true</annotation:isDerived>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topReifiedObjectProperty"/>
+        <rdfs:range rdf:resource="&analysis;Criterion"/>
+        <rdfs:domain rdf:resource="&analysis;MeasuredElement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#isQuantifiedBy -->
+
+    <owl:ObjectProperty rdf:about="&analysis;isQuantifiedBy">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">is quantified by</rdfs:label>
+        <annotation:isDerived rdf:datatype="&xsd;boolean">true</annotation:isDerived>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topReifiedObjectProperty"/>
+        <rdfs:range rdf:resource="&analysis;Quantity"/>
+        <rdfs:domain rdf:resource="&mission;SpecifiedElement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#isValidatedBy -->
+
+    <owl:ObjectProperty rdf:about="&analysis;isValidatedBy">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">is validated by</rdfs:label>
+        <dc:description rdf:datatype="&xsd;string">See &lt;property&gt;validates&lt;/property&gt;.</dc:description>
+        <annotation:isDerived rdf:datatype="&xsd;boolean">true</annotation:isDerived>
+        <rdfs:domain rdf:resource="&analysis;CharacterizedElement"/>
+        <rdfs:range rdf:resource="&analysis;Explanation"/>
+        <rdfs:subPropertyOf rdf:resource="&analysis;isExplainedBy"/>
+        <owl:inverseOf rdf:resource="&analysis;validates"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#limits -->
+
+    <owl:ObjectProperty rdf:about="&analysis;limits">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">limits</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">An
+&lt;classname&gt;Assumption&lt;/classname&gt;
+&lt;replaceable&gt;a&lt;/replaceable&gt;
+&lt;property&gt;limits&lt;/property&gt;
+a
+&lt;classname&gt;CharacterizedElement&lt;/classname&gt;
+&lt;replaceable&gt;e&lt;/replaceable&gt;
+if and only if
+&lt;replaceable&gt;a&lt;/replaceable&gt;
+is restricted in some fashion by
+&lt;replaceable&gt;e&lt;/replaceable&gt;.</rdfs:comment>
+        <rdfs:domain rdf:resource="&analysis;Assumption"/>
+        <rdfs:range rdf:resource="&analysis;CharacterizedElement"/>
+        <rdfs:subPropertyOf rdf:resource="&analysis;characterizes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#measures -->
+
+    <owl:ObjectProperty rdf:about="&analysis;measures">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">measures</rdfs:label>
+        <dc:description>&lt;para&gt;A &lt;classname&gt;Criterion&lt;/classname&gt;
+        &lt;replaceable&gt;c&lt;/replaceable&gt;
+        &lt;property&gt;measures&lt;/property&gt; some &lt;classname&gt;MeasuredElement&lt;/classname&gt;
+        &lt;replaceable&gt;e&lt;/replaceable&gt; if and only if &lt;replaceable&gt;c&lt;/replaceable&gt; defines a region for some &lt;classname&gt;Metric&lt;/classname&gt; that corresponds to success
+for &lt;replaceable&gt;e&lt;/replaceable&gt;.&lt;/para&gt;</dc:description>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topReifiedObjectProperty"/>
+        <rdfs:domain rdf:resource="&analysis;Criterion"/>
+        <rdfs:range rdf:resource="&analysis;MeasuredElement"/>
+        <owl:inverseOf rdf:resource="&analysis;isMeasuredBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#quantifies -->
+
+    <owl:ObjectProperty rdf:about="&analysis;quantifies">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">quantifies</rdfs:label>
+        <dc:description>&lt;para&gt;A &lt;classname&gt;Quantification&lt;/classname&gt;
+        &lt;replaceable&gt;q&lt;/replaceable&gt;
+        &lt;property&gt;quantifies&lt;/property&gt; some &lt;classname&gt;SpecifiedElement&lt;/classname&gt;
+        &lt;replaceable&gt;e&lt;/replaceable&gt; if and only if &lt;replaceable&gt;q&lt;/replaceable&gt; assigns a value to
+        some &lt;classname&gt;Metric&lt;/classname&gt;  for &lt;replaceable&gt;e&lt;/replaceable&gt;.&lt;/para&gt;</dc:description>
+        <rdfs:subPropertyOf rdf:resource="&analysis-backbone;topReifiedObjectProperty"/>
+        <rdfs:domain rdf:resource="&analysis;Quantity"/>
+        <owl:inverseOf rdf:resource="&analysis;isQuantifiedBy"/>
+        <rdfs:range rdf:resource="&mission;SpecifiedElement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#validates -->
+
+    <owl:ObjectProperty rdf:about="&analysis;validates">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">validates</rdfs:label>
+        <dc:description>An &lt;classname&gt;Explanation&lt;/classname&gt; &lt;replaceable&gt;a&lt;/replaceable&gt; &lt;property&gt;validates&lt;/property&gt; some &lt;classname&gt;SpecifiedElement&lt;/classname&gt; &lt;replaceable&gt;e&lt;/replaceable&gt; if and only if &lt;replaceable&gt;a&lt;/replaceable&gt; provides a definitive, determinative explanation for some design aspect of &lt;replaceable&gt;e&lt;/replaceable&gt;.</dc:description>
+        <rdfs:range rdf:resource="&analysis;CharacterizedElement"/>
+        <rdfs:domain rdf:resource="&analysis;Explanation"/>
+        <rdfs:subPropertyOf rdf:resource="&analysis;explains"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="&analysis-backbone;topDataProperty">
+        <dc:description rdf:datatype="&xsd;string">&lt;property&gt;topDataProperty&lt;/property&gt; is a common superproperty of all datatype properties defined in the Analysis Ontology.</dc:description>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#Aspect -->
+
+    <owl:Class rdf:about="&analysis-backbone;Aspect">
+        <rdfs:subClassOf rdf:resource="&analysis-backbone;Thing"/>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#Entity -->
+
+    <owl:Class rdf:about="&analysis-backbone;Entity">
+        <rdfs:subClassOf rdf:resource="&analysis-backbone;Thing"/>
+        <rdfs:subClassOf rdf:resource="&analysis;AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="&analysis;CharacterizedElement"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#ReifiedObjectProperty -->
+
+    <owl:Class rdf:about="&analysis-backbone;ReifiedObjectProperty">
+        <rdfs:subClassOf rdf:resource="&analysis-backbone;Thing"/>
+        <rdfs:subClassOf rdf:resource="&analysis;AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="&analysis;CharacterizedElement"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#ReifiedStructuredDataProperty -->
+
+    <owl:Class rdf:about="&analysis-backbone;ReifiedStructuredDataProperty">
+        <rdfs:subClassOf rdf:resource="&analysis-backbone;Thing"/>
+        <rdfs:subClassOf rdf:resource="&analysis;AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="&analysis;CharacterizedElement"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#StructuredDatatype -->
+
+    <owl:Class rdf:about="&analysis-backbone;StructuredDatatype">
+        <rdfs:subClassOf rdf:resource="&analysis-backbone;Thing"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#Thing -->
+
+    <owl:Class rdf:about="&analysis-backbone;Thing">
+        <dc:description rdf:datatype="&xsd;string">&lt;classname&gt;Thing&lt;/classname&gt; is a superclass of every class defined in the Analysis ontology.</dc:description>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#Aspect -->
+
+    <rdf:Description rdf:about="&base-backbone;Aspect">
+        <rdfs:subClassOf rdf:resource="&analysis;AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="&analysis;CharacterizedElement"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#Entity -->
+
+    <rdf:Description rdf:about="&base-backbone;Entity">
+        <rdfs:subClassOf rdf:resource="&analysis;AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="&analysis;CharacterizedElement"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#ReifiedObjectProperty -->
+
+    <rdf:Description rdf:about="&base-backbone;ReifiedObjectProperty">
+        <rdfs:subClassOf rdf:resource="&analysis;AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="&analysis;CharacterizedElement"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#ReifiedStructuredDataProperty -->
+
+    <rdf:Description rdf:about="&base-backbone;ReifiedStructuredDataProperty">
+        <rdfs:subClassOf rdf:resource="&analysis;AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="&analysis;CharacterizedElement"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#Aspect -->
+
+    <rdf:Description rdf:about="&mission-backbone;Aspect">
+        <rdfs:subClassOf rdf:resource="&analysis;AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="&analysis;CharacterizedElement"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#Entity -->
+
+    <rdf:Description rdf:about="&mission-backbone;Entity">
+        <rdfs:subClassOf rdf:resource="&analysis;AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="&analysis;CharacterizedElement"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#ReifiedObjectProperty -->
+
+    <rdf:Description rdf:about="&mission-backbone;ReifiedObjectProperty">
+        <rdfs:subClassOf rdf:resource="&analysis;AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="&analysis;CharacterizedElement"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#ReifiedStructuredDataProperty -->
+
+    <rdf:Description rdf:about="&mission-backbone;ReifiedStructuredDataProperty">
+        <rdfs:subClassOf rdf:resource="&analysis;AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="&analysis;CharacterizedElement"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#Analysis -->
+
+    <owl:Class rdf:about="&analysis;Analysis">
+        <rdfs:label rdf:datatype="&xsd;string">Analysis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&analysis;Explanation"/>
+        <dc:description rdf:datatype="&xsd;string">&lt;classname&gt;Analysis&lt;/classname&gt; is a deprecated synonym for &lt;classname&gt;Explanation&lt;/classname&gt;.</dc:description>
+        <annotation:isDeprecated rdf:datatype="&xsd;boolean">true</annotation:isDeprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement -->
+
+    <owl:Class rdf:about="&analysis;AnalyzedElement">
+        <rdfs:subClassOf rdf:resource="&analysis-backbone;Aspect"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#Analyzes -->
+
+    <owl:Class rdf:about="&analysis;Analyzes">
+        <rdfs:label rdf:datatype="&xsd;string">Analyzes</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&analysis-backbone;ReifiedObjectProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#Assumption -->
+
+    <owl:Class rdf:about="&analysis;Assumption">
+        <rdfs:label rdf:datatype="&xsd;string">Assumption</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&analysis;Characterization"/>
+        <dc:description rdf:datatype="&xsd;string">An &lt;classname&gt;Assumption&lt;/classname&gt; is &lt;classname&gt;Characterization&lt;/classname&gt; that is taken to be true for the purpose of analysis.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#Characterization -->
+
+    <owl:Class rdf:about="&analysis;Characterization">
+        <rdfs:label rdf:datatype="&xsd;string">Characterization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&analysis-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="&base;IdentifiedElement"/>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;Characterization&lt;/classname&gt; is an element that provides a parametric or other characterization of another model element. The canonical example of a &lt;classname&gt;Characterization&lt;/classname&gt; is a set of name/value pairs, but other characterizations (e.g., classification) are possible.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement -->
+
+    <owl:Class rdf:about="&analysis;CharacterizedElement">
+        <rdfs:subClassOf rdf:resource="&analysis-backbone;Aspect"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#Characterizes -->
+
+    <owl:Class rdf:about="&analysis;Characterizes">
+        <rdfs:label rdf:datatype="&xsd;string">Characterizes</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&analysis-backbone;ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="&mission;SpecifiedElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#ConstrainedElement -->
+
+    <owl:Class rdf:about="&analysis;ConstrainedElement">
+        <rdfs:subClassOf rdf:resource="&analysis-backbone;Aspect"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#Constrains -->
+
+    <owl:Class rdf:about="&analysis;Constrains">
+        <rdfs:label rdf:datatype="&xsd;string">Constrains</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&analysis-backbone;ReifiedObjectProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#Constraint -->
+
+    <owl:Class rdf:about="&analysis;Constraint">
+        <rdfs:label rdf:datatype="&xsd;string">Constraint</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&analysis-backbone;Entity"/>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;Constaint&lt;/classname&gt; is a container for one or more mathematical expressions asserting constraints on values.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#CostEstimate -->
+
+    <owl:Class rdf:about="&analysis;CostEstimate">
+        <rdfs:label rdf:datatype="&xsd;string">Cost Estimate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&analysis;Analysis"/>
+        <dc:description>A &lt;classname&gt;CostEstimate&lt;/classname&gt; is a kind of &lt;classname&gt;Explanation&lt;/classname&gt; that provides a cost estimate for the model elements it explains.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#Criterion -->
+
+    <owl:Class rdf:about="&analysis;Criterion">
+        <rdfs:label rdf:datatype="&xsd;string">Criterion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&analysis-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="&base;IdentifiedElement"/>
+        <dc:description>&lt;para&gt;A &lt;classname&gt;Criterion&lt;/classname&gt; establishes a region for some
+            &lt;classname&gt;Metric&lt;/classname&gt; that corresponds to success for some &lt;classname&gt;MeasuredElement&lt;/classname&gt;.&lt;/para&gt;
+    &lt;para&gt;A &lt;classname&gt;Criterion&lt;/classname&gt; for the &lt;classname&gt;Metric&lt;/classname&gt;
+        &lt;emphasis role=&quot;italic&quot;&gt;sample mass in kg&lt;/emphasis&gt; might be &lt;emphasis role=&quot;italic&quot;&gt;at
+            least 10 kg&lt;/emphasis&gt;.&lt;/para&gt;</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#DrivingRequirementsAnalysis -->
+
+    <owl:Class rdf:about="&analysis;DrivingRequirementsAnalysis">
+        <rdfs:label rdf:datatype="&xsd;string">Driving Requirements Analysis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&analysis;DrivingRequirementsExplanation"/>
+        <dc:description rdf:datatype="&xsd;string">&lt;classname&gt;DrivingRequirementsAnalysis&lt;/classname&gt; is a deprecated synonym for &lt;classname&gt;DrivingRequirementsExplanation&lt;/classname&gt;.</dc:description>
+        <annotation:isDeprecated rdf:datatype="&xsd;boolean">true</annotation:isDeprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#DrivingRequirementsExplanation -->
+
+    <owl:Class rdf:about="&analysis;DrivingRequirementsExplanation">
+        <rdfs:label rdf:datatype="&xsd;string">Driving Requirements Explanation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&analysis;Analysis"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&analysis;explains"/>
+                <owl:allValuesFrom rdf:resource="&mission;Requirement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A &lt;classname&gt;DrivingRequirementsAnalysis&lt;/classname&gt; provides the rationale for designating a set of &lt;classname&gt;Requirement&lt;/classname&gt;s as &lt;emphasis&gt;driving&lt;/emphasis&gt;, and makes the designation via the &lt;property&gt;explains&lt;/property&gt; property.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#Explains -->
+
+    <owl:Class rdf:about="&analysis;Explains">
+        <rdfs:label rdf:datatype="&xsd;string">Explains</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&analysis;Characterizes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#Explanation -->
+
+    <owl:Class rdf:about="&analysis;Explanation">
+        <rdfs:label rdf:datatype="&xsd;string">Explanation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&analysis;Characterization"/>
+        <rdfs:subClassOf rdf:resource="&base;AggregatedElement"/>
+        <dc:description>&lt;para&gt;An &lt;classname&gt;Explanation&lt;/classname&gt; is a product that captures or summarizes the results of
+        an analysis activity and relates it to one or more other model elements. It may
+        contain narrative prose directly or provide a reference to external products.&lt;/para&gt;
+    &lt;para&gt;Driving requirements analyses, trade studies, and cost estimates are all examples of
+            &lt;classname&gt;Explanation&lt;/classname&gt;.&lt;/para&gt;</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#Fact -->
+
+    <owl:Class rdf:about="&analysis;Fact">
+        <rdfs:label rdf:datatype="&xsd;string">Fact</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&analysis;Assumption"/>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;Fact&lt;/classname&gt; is an &lt;classname&gt;Assumption&lt;/classname&gt; that is true.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#HasCriterion -->
+
+    <owl:Class rdf:about="&analysis;HasCriterion">
+        <rdfs:label rdf:datatype="&xsd;string">Has Criterion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&analysis-backbone;ReifiedObjectProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#HasMetric -->
+
+    <owl:Class rdf:about="&analysis;HasMetric">
+        <rdfs:label rdf:datatype="&xsd;string">Has Metric</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&analysis-backbone;ReifiedObjectProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#HasValue -->
+
+    <owl:Class rdf:about="&analysis;HasValue">
+        <rdfs:label rdf:datatype="&xsd;string">Has Value</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&analysis-backbone;ReifiedObjectProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#KeyRequirementsAnalysis -->
+
+    <owl:Class rdf:about="&analysis;KeyRequirementsAnalysis">
+        <rdfs:label rdf:datatype="&xsd;string">Key Requirements Analysis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&analysis;KeyRequirementsExplanation"/>
+        <dc:description rdf:datatype="&xsd;string">&lt;classname&gt;KeyRequirementsAnalysis&lt;/classname&gt; is a deprecated synonym for &lt;classname&gt;KeyRequirementsExplanation&lt;/classname&gt;.</dc:description>
+        <annotation:isDeprecated rdf:datatype="&xsd;boolean">true</annotation:isDeprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#KeyRequirementsExplanation -->
+
+    <owl:Class rdf:about="&analysis;KeyRequirementsExplanation">
+        <rdfs:label rdf:datatype="&xsd;string">Key Requirements Explanation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&analysis;Analysis"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&analysis;explains"/>
+                <owl:allValuesFrom rdf:resource="&mission;Requirement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A &lt;classname&gt;KeyRequirementsAnalysis&lt;/classname&gt; provides the rationale for designating a set of &lt;classname&gt;Requirement&lt;/classname&gt;s as &lt;emphasis&gt;key&lt;/emphasis&gt;, and makes the designation via the &lt;property&gt;explains&lt;/property&gt; property.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#Limits -->
+
+    <owl:Class rdf:about="&analysis;Limits">
+        <rdfs:label rdf:datatype="&xsd;string">Limits</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&analysis;Characterizes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#MeasuredElement -->
+
+    <owl:Class rdf:about="&analysis;MeasuredElement">
+        <rdfs:label rdf:datatype="&xsd;string">Measured Element</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&analysis-backbone;Aspect"/>
+        <rdfs:subClassOf rdf:resource="&analysis;AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="&analysis;CharacterizedElement"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <dc:description>&lt;para&gt;A &lt;classname&gt;MeasuredElement&lt;/classname&gt; is a model element that may be measured by one or
+        more associated &lt;classname&gt;Metric&lt;/classname&gt;s. Both &lt;classname&gt;Objective&lt;/classname&gt;s and
+            &lt;classname&gt;Requirement&lt;/classname&gt;s&lt;/para&gt;
+    &lt;para&gt;are &lt;classname&gt;MeasuredElement&lt;/classname&gt;s.&lt;/para&gt;</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#Measures -->
+
+    <owl:Class rdf:about="&analysis;Measures">
+        <rdfs:label rdf:datatype="&xsd;string">Measures</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&analysis-backbone;ReifiedObjectProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#Metric -->
+
+    <owl:Class rdf:about="&analysis;Metric">
+        <rdfs:label rdf:datatype="&xsd;string">Metric</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&analysis-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="&base;IdentifiedElement"/>
+        <dc:description>&lt;para&gt;A &lt;classname&gt;Metric&lt;/classname&gt; establishes a method for quantifying achievement or
+        satisfaction of one or more &lt;classname&gt;MeasuredElement&lt;/classname&gt;s. Note that the
+        relationship is many to many: a given &lt;classname&gt;Metric&lt;/classname&gt; may jointly quantify
+        multiple &lt;classname&gt;MeasuredElement&lt;/classname&gt;s. Likewise, a
+            &lt;classname&gt;MeasuredElement&lt;/classname&gt; may be quantified by multiple
+            &lt;classname&gt;Metric&lt;/classname&gt;s.&lt;/para&gt;
+    &lt;para&gt;Appropriate &lt;classname&gt;Metric&lt;/classname&gt;s for the &lt;classname&gt;Objective&lt;/classname&gt;
+        &lt;emphasis role=&quot;italic&quot;&gt;image Martian north polar region&lt;/emphasis&gt; might include data
+        volumes at specified wavelength and resolution.&lt;/para&gt;</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#Quantifies -->
+
+    <owl:Class rdf:about="&analysis;Quantifies">
+        <rdfs:label rdf:datatype="&xsd;string">Quantifies</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&analysis-backbone;ReifiedObjectProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#Quantity -->
+
+    <owl:Class rdf:about="&analysis;Quantity">
+        <rdfs:label rdf:datatype="&xsd;string">Quantity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&analysis;Characterization"/>
+        <dc:description rdf:datatype="&xsd;string">&lt;para&gt;A &lt;classname&gt;Quantity&lt;/classname&gt; attaches a value for some
+            &lt;classname&gt;Metric&lt;/classname&gt; to one or more &lt;classname&gt;SpecifiedElement&lt;/classname&gt;s.
+        That is, it evaluates some aspect of a design by assigning a definite value to a specific
+            &lt;classname&gt;Metric&lt;/classname&gt;.&lt;/para&gt;</dc:description>
+        <rdfs:comment>TODO: analysis:Quantification subclass of qudv:Quantity</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#QuantityValue -->
+
+    <owl:Class rdf:about="&analysis;QuantityValue">
+        <rdfs:label rdf:datatype="&xsd;string">Quantity Value</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&analysis-backbone;Entity"/>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;QuantityValue&lt;/classname&gt; assigns a value to a &lt;classname&gt;Quantity&lt;/classname&gt;.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#TradeStudy -->
+
+    <owl:Class rdf:about="&analysis;TradeStudy">
+        <rdfs:label rdf:datatype="&xsd;string">Trade Study</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&analysis;Analysis"/>
+        <dc:description>A &lt;classname&gt;TradeStudy&lt;/classname&gt; explains some set of model elements and their properties through comparison with alternatives.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#Validates -->
+
+    <owl:Class rdf:about="&analysis;Validates">
+        <rdfs:label rdf:datatype="&xsd;string">Validates</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&analysis;Explains"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#Objective -->
+
+    <rdf:Description rdf:about="&mission;Objective">
+        <rdfs:subClassOf rdf:resource="&analysis;MeasuredElement"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#Requirement -->
+
+    <rdf:Description rdf:about="&mission;Requirement">
+        <rdfs:subClassOf rdf:resource="&analysis;MeasuredElement"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl#r">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#s">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#t">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&analysis;explains"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&analysis;hasExplainsSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&analysis;hasExplainsTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&analysis;hasValidatesSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&analysis;hasValidatesTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&analysis;validates"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&analysis;hasCriterion"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&analysis;hasHasCriterionSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&analysis;hasHasCriterionTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&analysis;measures"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&analysis;hasMeasuresTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&analysis;hasMeasuresSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&analysis;analyzes"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&analysis;hasAnalyzesTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&analysis;hasAnalyzesSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&analysis;hasHasMetricSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&analysis;hasHasMetricTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&analysis;hasMetric"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&analysis;characterizes"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&analysis;hasCharacterizesTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&analysis;hasCharacterizesSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&analysis;hasValue"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&analysis;hasHasValueTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&analysis;hasHasValueSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&analysis;hasLimitsTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&analysis;hasLimitsSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&analysis;limits"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&analysis;constrains"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&analysis;hasConstrainsTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&analysis;hasConstrainsSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&analysis;hasQuantifiesSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&analysis;hasQuantifiesTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&analysis;quantifies"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.5-SNAPSHOT) http://owlapi.sourceforge.net -->
+

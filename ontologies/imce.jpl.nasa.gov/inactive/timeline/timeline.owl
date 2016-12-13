@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	
+	xmlns:Blocks-embedding="http://imce.jpl.nasa.gov/Blocks/Blocks-embedding#"
+	xmlns:mgss-service="http://imce.jpl.nasa.gov/mgss-service/mgss-service#"
+	xmlns:timeline="http://imce.jpl.nasa.gov/timeline/timeline#"
+	xmlns:PrimitiveTypes="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes#"
+	xmlns:math-embedding="http://imce.jpl.nasa.gov/math/math-embedding#"
+	xmlns:jeo-architecture="http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture#"
+	xmlns:state-analysis="http://imce.jpl.nasa.gov/state-analysis/state-analysis#"
+	xmlns:analysis="http://imce.jpl.nasa.gov/foundation/analysis/analysis#"
+	
+	xmlns:SysML="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#"
+	xmlns:annotation="http://imce.jpl.nasa.gov/foundation/annotation/annotation#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:state-analysis-implementation="http://imce.jpl.nasa.gov/state-analysis-implementation/state-analysis-implementation#"
+	xmlns:state-analysis-implementation-embedding="http://imce.jpl.nasa.gov/state-analysis-implementation/state-analysis-implementation-embedding#"
+	xmlns:mechanical="http://imce.jpl.nasa.gov/mechanical/mechanical#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:Blocks="http://imce.jpl.nasa.gov/Blocks/Blocks#"
+	xmlns:analysis-embedding="http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#"
+	xmlns:QUDV="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:state-analysis-embedding="http://imce.jpl.nasa.gov/state-analysis/state-analysis-embedding#"
+	xmlns:mission-embedding="http://imce.jpl.nasa.gov/foundation/mission/mission-embedding#"
+	xmlns:mgss-service-embedding="http://imce.jpl.nasa.gov/mgss-service/mgss-service-embedding#"
+	xmlns:base-embedding="http://imce.jpl.nasa.gov/foundation/base/base-embedding#"
+	xmlns:ieee-1471-embedding="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#"
+	xmlns:architectural-description-embedding="http://imce.jpl.nasa.gov/architectural-description/architectural-description-embedding#"
+	xmlns:math="http://imce.jpl.nasa.gov/math/math#"
+	xmlns:project="http://imce.jpl.nasa.gov/foundation/project/project#"
+	xmlns:timeline-embedding="http://imce.jpl.nasa.gov/timeline/timeline-embedding#"
+	xmlns:annotation-embedding="http://imce.jpl.nasa.gov/foundation/annotation/annotation-embedding#"
+	xmlns:jeo-architecture-embedding="http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture-embedding#"
+	
+	xmlns:electrical="http://imce.jpl.nasa.gov/electrical/electrical#"
+	xmlns:mission="http://imce.jpl.nasa.gov/foundation/mission/mission#"
+	xmlns:pbs="http://imce.jpl.nasa.gov/pbs/pbs#"
+	xmlns:mechanical-embedding="http://imce.jpl.nasa.gov/mechanical/mechanical-embedding#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:base="http://imce.jpl.nasa.gov/foundation/base/base#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:electrical-embedding="http://imce.jpl.nasa.gov/electrical/electrical-embedding#"
+	
+	xmlns:UML="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#"
+	xmlns:pbs-embedding="http://imce.jpl.nasa.gov/pbs/pbs-embedding#"
+	xmlns:ieee-1471="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#"
+	xmlns:architectural-description="http://imce.jpl.nasa.gov/architectural-description/architectural-description#"
+	xmlns:project-embedding="http://imce.jpl.nasa.gov/foundation/project/project-embedding#"
+	xmlns:StandardProfileL2="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#">
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$Date$</dc:date>
+	<owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$Revision$</owl:versionInfo>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;para&gt;Timelines are aggregations of events (and constraints among those events) that are ordered by a specified native temporal reference. Timelines allow posting of both abstract and concrete constraints (e.g. x&gt;y and x=10) as well as temporal and value constraints (t&gt;10 and x&gt;10). Specific subtypes of timelines may restrict the allowed constraint language (e.g. linear timelines only allow totally ordered grounded temporal constraints.)&lt;/para&gt;
+&lt;para&gt;Timelines are a model for the temporal evolution of a system: they provide an abstraction of the changing state of the system that can be manipulated and reasoned about independently of the actual system.&lt;/para&gt;</dc:description>
+	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copyright 2010-2011, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
+
+This software may be subject to U.S. export control laws. By accepting this software, the user agrees to comply with all applicable U.S. export laws and regulations. User has the responsibility to obtain export licenses, or other export authority as may be required before exporting such information to foreign countries or providing access to foreign persons.</dc:rights>
+	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Discipline</dc:type>
+	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Systems Engineering &amp; Formulation Division</dc:creator>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Timeline Ontology</dc:title>
+	<owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/type">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/description">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#starts">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#assertedBy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Event"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#ValueConstraint"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#asserts">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Event"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#ValueConstraint"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#atomicConstitutes">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#AtomicConstraint"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#CompoundConstraint"/>
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#consistsOfAtomic"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#basedAt">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#EpochOrigin"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TemporalReferenceFrame"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#basisOf">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#EpochOrigin"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TemporalReferenceFrame"/>
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#basedAt"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#consistsOf">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Event"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Timeline"/>
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#existsOn"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#consistsOfAtomic">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#AtomicConstraint"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#CompoundConstraint"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#consistsOfVersions">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Timeline"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TimelineVersion"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#constrainedBy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#AtomicConstraint"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Variable"/>
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#constrains"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#constrains">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#AtomicConstraint"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Variable"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#ends">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#DurativeEvent"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#InstantaneousEvent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#endsAt">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#DurativeEvent"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#InstantaneousEvent"/>
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#ends"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#existsOn">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Event"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Timeline"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#measuredBy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#MeasuredThing"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#MeasuringThing"/>
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#measures"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#measures">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#MeasuredThing"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#MeasuringThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#orders">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TemporalReferenceFrame"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Timeline"/>
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#referencedTo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#ownedBy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TemporalConstraint"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Timeline"/>
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#owns"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#owns">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TemporalConstraint"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Timeline"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#referencedBy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#AtomicValueConstraint"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TimeVariable"/>
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#references"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#referencedTo">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TemporalReferenceFrame"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Timeline"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#references">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#AtomicValueConstraint"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TimeVariable"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#relatedBy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Event"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TemporalConstraint"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#relates">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Event"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TemporalConstraint"/>
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#relatedBy"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#snapshots">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Timeline"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TimelineVersion"/>
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#consistsOfVersions"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#starts">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#DurativeEvent"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#InstantaneousEvent"/>
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#startsAt"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#startsAt">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#DurativeEvent"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#InstantaneousEvent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#connective">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#CompoundConstraint"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topDataProperty">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#startsAt">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#AtomicConstraint">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Constraint"/>
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20396"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20396">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#references"/>
+	<owl:onClass rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TimeVariable"/>
+	<owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#AtomicConstraint">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#CompoundConstraint"/>
+	<dc:description>&lt;para&gt;An atomic constraint is the basic building block for more complex constraints and expresses a single simply expressible fact about the world.&lt;/para&gt;</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#AtomicTemporalConstraint">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#AtomicConstraint"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TemporalConstraint"/>
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20397"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20397">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#atomicConstitutes"/>
+	<owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#CompoundTemporalConstraint"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#AtomicTemporalConstraint">
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20398"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20398">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#constrains"/>
+	<owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TimeVariable"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#AtomicTemporalConstraint">
+	<dc:description>&lt;para&gt;An atomic temporal constraint is one that constrains just time variables between events and does not make statements about the state of the rest of the system directly. The function of temporal constraints can include existential constraints on the existence/applicability of its constrained events (e.g., choosing among different plan branches).&lt;/para&gt;</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#AtomicValueConstraint">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#AtomicConstraint"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#ValueConstraint"/>
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20399"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20399">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#atomicConstitutes"/>
+	<owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#CompoundValueConstraint"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#AtomicValueConstraint">
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20400"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20400">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#constrains"/>
+	<owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#StateVariable"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#AtomicValueConstraint">
+	<dc:description>&lt;para&gt;Value constraints express some simple constraint of system variables (i.e. the state of the system of interest). These constraints are the building blocks of event semantics and represent the lowest level facts about a system that can be described.&lt;/para&gt;
+&lt;para&gt;Note that some value constraints may express a time-sensitive fact about the world, e.g. that the temperature rises linearly at a rate of 1 degree C/min, and thus may be referenced to a time variable as well.&lt;/para&gt;</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#CompoundConstraint">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Constraint"/>
+	<dc:description>&lt;para&gt;A compound constraint joins together several more atomic constraints using some specified logical connective. Compound constraints may nest, with different logical connectives at each level (though strictly speaking only two nested levels are needed thanks to de Morgan's theorem). The leaves in a constraint tree are always atomic constraints.&lt;/para&gt;</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#CompoundTemporalConstraint">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#CompoundConstraint"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TemporalConstraint"/>
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20401"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20401">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#consistsOfAtomic"/>
+	<owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#AtomicTemporalConstraint"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#CompoundTemporalConstraint">
+	<dc:description>&lt;para&gt;A compound temporal constraint is one that contains multiple atomic constraints conjoined with a specified logical connective. For example, specifying view periods is a disjunction of conjunctions as in "(10&gt;t&gt;5) or (25&gt;t&gt;20)".&lt;/para&gt;</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#CompoundValueConstraint">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#CompoundConstraint"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#ValueConstraint"/>
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20402"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20402">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#consistsOfAtomic"/>
+	<owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#AtomicValueConstraint"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#CompoundValueConstraint">
+	<dc:description>&lt;para&gt;A compound value constraint is one that contains multiple atomic value constraints conjoined by some specified logical connective. For example, specifying flight rules about acceptable bus_voltage range might be a conjunction "(15&gt;v) and (v&gt;9)".&lt;/para&gt;</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#Constraint">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#IdentifiedElement"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Thing"/>
+	<dc:description>&lt;para&gt;A constraint is a (normally mathematical) description of the state of the world that is asserted by a timeline event. These constraints may be either in the temporal domain or the value domain. General constraints can be quite complex and are built of simpler statements called atomic constraints.&lt;/para&gt;</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#DurativeEvent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Event"/>
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20403"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20403">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#endsAt"/>
+	<owl:onClass rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#InstantaneousEvent"/>
+	<owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#DurativeEvent">
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20404"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20404">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#startsAt"/>
+	<owl:onClass rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#InstantaneousEvent"/>
+	<owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#DurativeEvent">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#InstantaneousEvent"/>
+	<dc:description>&lt;para&gt;Durative events are defined as persisting for some non-trivial length of time (though that exact length depends on the reference frame under consideration). These events assert their constraints over the entire length of their applicability.&lt;/para&gt;</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#EpochOrigin">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#InstantaneousEvent"/>
+	<dc:description>&lt;para&gt;The epoch origin is a special instantaneous event that sets the zero point for an entire temporal reference frame. The epoch origin is important for constraining other temporal specifications on the timeline, e.g. t=45s implicitly means 45s after the epoch in the relevant frame. Thus shifting the epoch origin allows moving the entire chain of events.&lt;/para&gt;</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#Event">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#IdentifiedElement"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Thing"/>
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20405"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20405">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#existsOn"/>
+	<owl:onClass rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Timeline"/>
+	<owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#Event">
+	<dc:description>&lt;para&gt;Events are the elementary components of timelines that allow for expressions of conjunctions of one or more temporal constraints and a set of value constraints (for example a conjunction such as "at all times between t=120 and t=240, the variable battery_soc satisfies the inequality batter_soc&gt;=30%). These conjunctive constraint blocks give timelines their useful temporal semantics that allow them to record both intended and measured reality.&lt;/para&gt;</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#InstantaneousEvent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Event"/>
+	<dc:description>&lt;para&gt;Instantaneous events are defined to have no applicable duration: they take effect during a single instant in time. However this is not to say that they do not have lasting effects; e.g. measuring the instantaneous battery state of charge to be 10 mWhr at t=10 has strong implications about the future state of charge.&lt;/para&gt;</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#MeasuredThing">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#IdentifiedElement"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#MeasuringThing">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#IdentifiedElement"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#Model">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#IdentifiedElement"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Thing"/>
+	<dc:description>&lt;para&gt;A model is an abstraction of a system that can be reasoned about without requiring the actual system be modified (or even exist).&lt;/para&gt;</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#StateVariable">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#MeasuredThing"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Variable"/>
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20406"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20406">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#measuredBy"/>
+	<owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#ValueReferenceFrame"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#StateVariable">
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20407"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20407">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#constrainedBy"/>
+	<owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#AtomicValueConstraint"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#StateVariable">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TimeVariable"/>
+	<dc:description>&lt;para&gt;The epoch origin is a special instantaneous event that sets the zero point for an entire temporal reference frame. The epoch origin is important for constraining other temporal specifications on the timeline, e.g. t=45s implicitly means 45s after the epoch in the relevant frame. Thus shifting the epoch origin allows moving the entire chain of events.&lt;/para&gt;</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#TemporalConstraint">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Constraint"/>
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20408"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20408">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#relates"/>
+	<owl:onClass rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Event"/>
+	<owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#TemporalConstraint">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#ValueConstraint"/>
+	<dc:description>&lt;para&gt;A temporal constraint describes the temporal state of the world during a timeline event; e.g. that event X is strictly after event Y, or that event X occurs at some time t&gt;10. Note that due to relativistic effects, temporal constraints are only meaningful in the context of their parent timeline's reference frame (or a strictly equivalent one) and thus cannot relate events on disparate timelines.&lt;/para&gt;</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#TemporalReferenceFrame">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#MeasuredThing"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#MeasuringThing"/>
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20409"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20409">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#measuredBy"/>
+	<owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TemporalUnitSystem"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#TemporalReferenceFrame">
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20410"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20410">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#measures"/>
+	<owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TimeVariable"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#TemporalReferenceFrame">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#ValueReferenceFrame"/>
+	<dc:description>&lt;para&gt;A temporal reference frame describes the (possibly non-inertial) frame from which all events of the timeline may be ordered in time. Note that some orderings (and thus constraints, even causal ones) may not be easily portable between reference frames due to relativistic effects.&lt;/para&gt;</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#TemporalUnitSystem">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#MeasuringThing"/>
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20411"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20411">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#measures"/>
+	<owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TemporalReferenceFrame"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#TemporalUnitSystem">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#ValueUnitSystem"/>
+	<dc:description>&lt;para&gt;A temporal unit system describes how time is measured within a temporal reference frame, and thus how to compare and order different values of absolute time specifications. For example, time might be represented in mean barycentric seconds or in SCLK ticks.&lt;/para&gt;</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#Thing">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;classname&gt;Thing&lt;/classname&gt; is a common superclass of all classes defined in the Timeline ontology.</dc:description>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#TimeVariable">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#MeasuredThing"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Variable"/>
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20412"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20412">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#constrainedBy"/>
+	<owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#AtomicTemporalConstraint"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#TimeVariable">
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20413"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20413">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#measuredBy"/>
+	<owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#TemporalReferenceFrame"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#Timeline">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Model"/>
+	<dc:description>&lt;para&gt;Timelines are aggregations of events (and constraints among those events) that are ordered by a specified native temporal reference. Timelines allow posting of both abstract and concrete constraints (e.g. x&gt;y and x=10) as well as temporal and value constraints (t&gt;10 and x&gt;10). Specific subtypes of timelines may restrict the allowed constraint language (e.g. linear timelines only allow totally ordered grounded temporal constraints.)&lt;/para&gt;
+&lt;para&gt;Timelines are a model for the temporal evolution of a system: they provide an abstraction of the changing state of the system that can be manipulated and reasoned about independently of the actual system.&lt;/para&gt;</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#TimelineVersion">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#IdentifiedElement"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#ValueConstraint">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Constraint"/>
+	<dc:description>&lt;para&gt;A value constraint describes the physical state of the world during a timeline event; e.g. the temperature falling at a constant rate of 10 degrees C per second, or the available buffer space being equal to 10344 bytes.&lt;/para&gt;</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#ValueReferenceFrame">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#MeasuredThing"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#MeasuringThing"/>
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20414"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20414">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#measuredBy"/>
+	<owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#ValueUnitSystem"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#ValueReferenceFrame">
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20415"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20415">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#measures"/>
+	<owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#StateVariable"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#ValueReferenceFrame">
+	<dc:description>&lt;para&gt;A value reference frame describes the measurement context for a system state variable.&lt;/para&gt;</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#ValueUnitSystem">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#MeasuringThing"/>
+	<rdfs:subClassOf rdf:nodeID="node1680pk85px20416"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1680pk85px20416">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#measures"/>
+	<owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#ValueReferenceFrame"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#ValueUnitSystem">
+	<dc:description>&lt;para&gt;A value unit system describes the measurement and comparison capabilities of a particular value reference frame; e.g. degrees kelvin temperature or radian angle measurement.&lt;/para&gt;</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#Variable">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#IdentifiedElement"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#topObjectProperty">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;property&gt;topObjectProperty&lt;/property&gt; is a common superproperty of all object properties defined in the Timeline Ontology.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#topDataProperty">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;property&gt;topDataProperty&lt;/property&gt; is a common superproperty of all datatype properties defined in the Timeline Ontology.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#connective">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#topDataProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#assertedBy">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#asserts">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#atomicConstitutes">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#basedAt">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#basisOf">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#consistsOf">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#consistsOfAtomic">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#consistsOfVersions">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#constrainedBy">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#constrains">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#ends">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#endsAt">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#existsOn">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#measuredBy">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#measures">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#orders">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#ownedBy">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#owns">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#referencedBy">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#referencedTo">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#references">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#relatedBy">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#relates">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/timeline/timeline#snapshots">
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/timeline/timeline#topObjectProperty"/>
+</rdf:Description>
+
+</rdf:RDF>

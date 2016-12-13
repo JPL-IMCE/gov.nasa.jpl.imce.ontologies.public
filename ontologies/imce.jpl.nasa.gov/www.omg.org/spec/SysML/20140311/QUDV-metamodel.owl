@@ -1,0 +1,951 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY annotation "http://imce.jpl.nasa.gov/foundation/annotation/annotation#" >
+    <!ENTITY QUDV-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#" >
+    <!ENTITY QUDV-metamodel-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#" >
+]>
+
+
+<rdf:RDF xmlns="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#"
+     xml:base="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel"
+     xmlns:annotation="http://imce.jpl.nasa.gov/foundation/annotation/annotation#"
+     xmlns:QUDV-metamodel-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:QUDV-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel">
+        <owl:imports rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV"/>
+        <owl:imports rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&QUDV-metamodel-backbone;topObjectProperty">
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topReifiedObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&QUDV-metamodel-backbone;topReifiedObjectProperty">
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <rdfs:subPropertyOf rdf:resource="&QUDV-metamodel-backbone;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topReifiedObjectPropertySource -->
+
+    <owl:ObjectProperty rdf:about="&QUDV-metamodel-backbone;topReifiedObjectPropertySource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <rdfs:subPropertyOf rdf:resource="&QUDV-metamodel-backbone;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topReifiedObjectPropertyTarget -->
+
+    <owl:ObjectProperty rdf:about="&QUDV-metamodel-backbone;topReifiedObjectPropertyTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <rdfs:subPropertyOf rdf:resource="&QUDV-metamodel-backbone;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topReifiedStructuredDataProperty -->
+
+    <owl:ObjectProperty rdf:about="&QUDV-metamodel-backbone;topReifiedStructuredDataProperty">
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <rdfs:subPropertyOf rdf:resource="&QUDV-metamodel-backbone;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topReifiedStructuredDataPropertySource -->
+
+    <owl:ObjectProperty rdf:about="&QUDV-metamodel-backbone;topReifiedStructuredDataPropertySource">
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <rdfs:subPropertyOf rdf:resource="&QUDV-metamodel-backbone;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topReifiedStructuredDataPropertyTarget -->
+
+    <owl:ObjectProperty rdf:about="&QUDV-metamodel-backbone;topReifiedStructuredDataPropertyTarget">
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <rdfs:subPropertyOf rdf:resource="&QUDV-metamodel-backbone;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topUnreifiedObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&QUDV-metamodel-backbone;topUnreifiedObjectProperty">
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <rdfs:subPropertyOf rdf:resource="&QUDV-metamodel-backbone;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="&QUDV-metamodel-backbone;topDataProperty">
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Aspect -->
+
+    <owl:Class rdf:about="&QUDV-metamodel-backbone;Aspect">
+        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Thing"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Entity -->
+
+    <owl:Class rdf:about="&QUDV-metamodel-backbone;Entity">
+        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Thing"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#ObjectPropertyDependentRangeType -->
+
+    <owl:Class rdf:about="&QUDV-metamodel-backbone;ObjectPropertyDependentRangeType">
+        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Entity"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#ReifiedObjectProperty -->
+
+    <owl:Class rdf:about="&QUDV-metamodel-backbone;ReifiedObjectProperty">
+        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Thing"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#ReifiedStructuredDataProperty -->
+
+    <owl:Class rdf:about="&QUDV-metamodel-backbone;ReifiedStructuredDataProperty">
+        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Thing"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#StructuredDatatype -->
+
+    <owl:Class rdf:about="&QUDV-metamodel-backbone;StructuredDatatype">
+        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Thing"/>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Thing -->
+
+    <owl:Class rdf:about="&QUDV-metamodel-backbone;Thing">
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#AffineConversionUnit -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#AffineConversionUnit">
+        <annotation:implementationElementId>_IMCE.QUDV__2-AffineConversionUnit</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.AffineConversionUnit</annotation:omgElementId>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#DerivedQuantityKind -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#DerivedQuantityKind">
+        <annotation:implementationElementId>_IMCE.QUDV__2-DerivedQuantityKind</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.DerivedQuantityKind</annotation:omgElementId>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#DerivedUnit -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#DerivedUnit">
+        <annotation:implementationElementId>_IMCE.QUDV__2-DerivedUnit</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.DerivedUnit</annotation:omgElementId>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Dimension -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Dimension">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.Block"/>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.Dimension</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-Dimension</annotation:implementationElementId>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#GeneralConversionUnit -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#GeneralConversionUnit">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.GeneralConversionUnit</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-GeneralConversionUnit</annotation:implementationElementId>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#LinearConversionUnit -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#LinearConversionUnit">
+        <annotation:implementationElementId>_IMCE.QUDV__2-LinearConversionUnit</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.LinearConversionUnit</annotation:omgElementId>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Prefix -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Prefix">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.Block"/>
+        <annotation:implementationElementId>_IMCE.QUDV__2-Prefix</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.Prefix</annotation:omgElementId>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#PrefixedUnit -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#PrefixedUnit">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.PrefixedUnit</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-PrefixedUnit</annotation:implementationElementId>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#QuantityKindFactor -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#QuantityKindFactor">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.Block"/>
+        <annotation:implementationElementId>_IMCE.QUDV__2-QuantityKindFactor</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.QuantityKindFactor</annotation:omgElementId>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SimpleQuantityKind -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SimpleQuantityKind">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.SimpleQuantityKind</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-SimpleQuantityKind</annotation:implementationElementId>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SimpleUnit -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SimpleUnit">
+        <annotation:implementationElementId>_IMCE.QUDV__2-SimpleUnit</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.SimpleUnit</annotation:omgElementId>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SystemOfQuantities -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SystemOfQuantities">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.Block"/>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.SystemOfQuantities</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-SystemOfQuantities</annotation:implementationElementId>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SystemOfUnits -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SystemOfUnits">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.Block"/>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.SystemOfUnits</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-SystemOfUnits</annotation:implementationElementId>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#UnitFactor -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#UnitFactor">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.Block"/>
+        <annotation:implementationElementId>_IMCE.QUDV__2-UnitFactor</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.UnitFactor</annotation:omgElementId>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#AffineConversionUnit -->
+
+    <owl:Class rdf:about="&QUDV-metamodel;AffineConversionUnit">
+        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#AffineConversionUnit"/>
+        <annotation:isLibrary rdf:datatype="&xsd;boolean">true</annotation:isLibrary>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#DerivedQuantityKind -->
+
+    <owl:Class rdf:about="&QUDV-metamodel;DerivedQuantityKind">
+        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#DerivedQuantityKind"/>
+        <annotation:isLibrary rdf:datatype="&xsd;boolean">true</annotation:isLibrary>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#DerivedUnit -->
+
+    <owl:Class rdf:about="&QUDV-metamodel;DerivedUnit">
+        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#DerivedUnit"/>
+        <annotation:isLibrary rdf:datatype="&xsd;boolean">true</annotation:isLibrary>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Dimension -->
+
+    <owl:Class rdf:about="&QUDV-metamodel;Dimension">
+        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Dimension"/>
+        <annotation:isLibrary rdf:datatype="&xsd;boolean">true</annotation:isLibrary>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#GeneralConversionUnit -->
+
+    <owl:Class rdf:about="&QUDV-metamodel;GeneralConversionUnit">
+        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#GeneralConversionUnit"/>
+        <annotation:isLibrary rdf:datatype="&xsd;boolean">true</annotation:isLibrary>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#LinearConversionUnit -->
+
+    <owl:Class rdf:about="&QUDV-metamodel;LinearConversionUnit">
+        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#LinearConversionUnit"/>
+        <annotation:isLibrary rdf:datatype="&xsd;boolean">true</annotation:isLibrary>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Prefix -->
+
+    <owl:Class rdf:about="&QUDV-metamodel;Prefix">
+        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Prefix"/>
+        <annotation:isLibrary rdf:datatype="&xsd;boolean">true</annotation:isLibrary>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#PrefixedUnit -->
+
+    <owl:Class rdf:about="&QUDV-metamodel;PrefixedUnit">
+        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#PrefixedUnit"/>
+        <annotation:isLibrary rdf:datatype="&xsd;boolean">true</annotation:isLibrary>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#QuantityKindFactor -->
+
+    <owl:Class rdf:about="&QUDV-metamodel;QuantityKindFactor">
+        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#QuantityKindFactor"/>
+        <annotation:isLibrary rdf:datatype="&xsd;boolean">true</annotation:isLibrary>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#SimpleQuantityKind -->
+
+    <owl:Class rdf:about="&QUDV-metamodel;SimpleQuantityKind">
+        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SimpleQuantityKind"/>
+        <annotation:isLibrary rdf:datatype="&xsd;boolean">true</annotation:isLibrary>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#SimpleUnit -->
+
+    <owl:Class rdf:about="&QUDV-metamodel;SimpleUnit">
+        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SimpleUnit"/>
+        <annotation:isLibrary rdf:datatype="&xsd;boolean">true</annotation:isLibrary>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#SystemOfQuantities -->
+
+    <owl:Class rdf:about="&QUDV-metamodel;SystemOfQuantities">
+        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SystemOfQuantities"/>
+        <annotation:isLibrary rdf:datatype="&xsd;boolean">true</annotation:isLibrary>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#SystemOfUnits -->
+
+    <owl:Class rdf:about="&QUDV-metamodel;SystemOfUnits">
+        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SystemOfUnits"/>
+        <annotation:isLibrary rdf:datatype="&xsd;boolean">true</annotation:isLibrary>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#UnitFactor -->
+
+    <owl:Class rdf:about="&QUDV-metamodel;UnitFactor">
+        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#UnitFactor"/>
+        <annotation:isLibrary rdf:datatype="&xsd;boolean">true</annotation:isLibrary>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#a_quantityKindFactor_quantityKind">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_quantityKindFactor_quantityKind</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#ConversionBasedUnit.isInvertible">
+        <annotation:implementationElementId>_IMCE.QUDV__2-ConversionBasedUnit-isInvertible</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.ConversionBasedUnit-ownedAttribute.Property.isInvertible</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_derivedQuantityKind_factor.derivedQuantityKind">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_derivedQuantityKind_factor-ownedEnd.Property.derivedQuantityKind</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_derivedQuantityKind_factor-derivedQuantityKind</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_systemOfUnits_unit.unit">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_systemOfUnits_unit-ownedEnd.Property.unit</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_systemOfUnits_unit-unit</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#AffineConversionUnit.factor">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.AffineConversionUnit-ownedAttribute.Property.factor</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-AffineConversionUnit-factor</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#a_systemOfQuantities_quantityKind">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_systemOfQuantities_quantityKind</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_dimension_factor">
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_dimension_factor</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_dimension_factor</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_unitFactor_unit.unitFactor">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_unitFactor_unit-ownedEnd.Property.unitFactor</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_unitFactor_unit-unitFactor</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_usedSystemOfQuantities_systemOfQuantities.systemOfQuantities">
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_usedSystemOfQuantities_systemOfQuantities-systemOfQuantities</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_usedSystemOfQuantities_systemOfQuantities-ownedEnd.Property.systemOfQuantities</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#QuantityKind">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.QuantityKind</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-QuantityKind</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#a_includedSystemOfQuantities_systemOfQuantities">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_includedSystemOfQuantities_systemOfQuantities</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_systemOfQuantities_baseQuantityKind.systemOfQuantities">
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_systemOfQuantities_baseQuantityKind-systemOfQuantities</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_systemOfQuantities_baseQuantityKind-ownedEnd.Property.systemOfQuantities</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_quantityKindFactor_quantityKind.quantityKind">
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_quantityKindFactor_quantityKind-quantityKind</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_quantityKindFactor_quantityKind-ownedEnd.Property.quantityKind</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_prefixedUnit_prefix.prefix">
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_prefixedUnit_prefix-prefix</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_prefixedUnit_prefix-ownedEnd.Property.prefix</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_generalQuantityKind_specificQuantityKind.general">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_generalQuantityKind_specificQuantityKind-ownedEnd.Property.general</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_generalQuantityKind_specificQuantityKind-general</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_systemOfUnits_baseUnit">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_systemOfUnits_baseUnit</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_systemOfUnits_baseUnit</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Prefix.factor">
+        <annotation:implementationElementId>_IMCE.QUDV__2-Prefix-factor</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.Prefix-ownedAttribute.Property.factor</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_quantityKindFactor_quantityKind">
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_quantityKindFactor_quantityKind</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_quantityKindFactor_quantityKind</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_systemOfUnits_systemOfQuantities.systemOfQuantities">
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_systemOfUnits_systemOfQuantities-systemOfQuantities</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_systemOfUnits_systemOfQuantities-ownedEnd.Property.systemOfQuantities</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_generalQuantityKind_specificQuantityKind.specific">
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_generalQuantityKind_specificQuantityKind-specific</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_generalQuantityKind_specificQuantityKind-ownedEnd.Property.specific</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#a_systemOfUnits_baseUnit">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_systemOfUnits_baseUnit</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#DerivedUnit.hasReducedFactors">
+        <annotation:implementationElementId>_IMCE.QUDV__2-DerivedUnit-hasReducedFactors</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.DerivedUnit-ownedAttribute.Property.hasReducedFactors</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_derivedUnit_factor.derivedUnit">
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_derivedUnit_factor-derivedUnit</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_derivedUnit_factor-ownedEnd.Property.derivedUnit</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_conversionBasedUnit_referenceUnit.referenceUnit">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_conversionBasedUnit_referenceUnit-ownedEnd.Property.referenceUnit</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_conversionBasedUnit_referenceUnit-referenceUnit</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#a_usedSystemOfUnits_systemOfUnits">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_usedSystemOfUnits_systemOfUnits</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_prefixedUnit_prefix.prefixedUnit">
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_prefixedUnit_prefix-prefixedUnit</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_prefixedUnit_prefix-ownedEnd.Property.prefixedUnit</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_systemOfUnits_prefix.systemOfUnits">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_systemOfUnits_prefix-ownedEnd.Property.systemOfUnits</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_systemOfUnits_prefix-systemOfUnits</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_conversionBasedUnit_referenceUnit">
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_conversionBasedUnit_referenceUnit</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_conversionBasedUnit_referenceUnit</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_systemOfQuantities_baseQuantityKind.baseQuantityKind">
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_systemOfQuantities_baseQuantityKind-baseQuantityKind</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_systemOfQuantities_baseQuantityKind-ownedEnd.Property.baseQuantityKind</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_systemOfQuantities_dimension.systemOfQuantities">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_systemOfQuantities_dimension-ownedEnd.Property.systemOfQuantities</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_systemOfQuantities_dimension-systemOfQuantities</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_systemOfUnits_prefix">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_systemOfUnits_prefix</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_systemOfUnits_prefix</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_quantityKindFactor_quantityKind.quantityKindFactor">
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_quantityKindFactor_quantityKind-quantityKindFactor</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_quantityKindFactor_quantityKind-ownedEnd.Property.quantityKindFactor</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SystemOfQuantities.description">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.SystemOfQuantities-ownedAttribute.Property.description</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-SystemOfQuantities-description</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_systemOfQuantities_dimension.dimension">
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_systemOfQuantities_dimension-dimension</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_systemOfQuantities_dimension-ownedEnd.Property.dimension</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_systemOfUnits_baseUnit.baseUnit">
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_systemOfUnits_baseUnit-baseUnit</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_systemOfUnits_baseUnit-ownedEnd.Property.baseUnit</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_derivedUnit_factor">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_derivedUnit_factor</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_derivedUnit_factor</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#UnitFactor.exponent">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.UnitFactor-ownedAttribute.Property.exponent</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-UnitFactor-exponent</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Unit">
+        <annotation:implementationElementId>_IMCE.QUDV__2-Unit</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.Unit</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_includedSystemOfUnits_systemOfUnits">
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_includedSystemOfUnits_systemOfUnits</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_includedSystemOfUnits_systemOfUnits</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_unitFactor_unit.unit">
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_unitFactor_unit-unit</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_unitFactor_unit-ownedEnd.Property.unit</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_systemOfQuantities_quantityKind.systemOfQuantities">
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_systemOfQuantities_quantityKind-systemOfQuantities</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_systemOfQuantities_quantityKind-ownedEnd.Property.systemOfQuantities</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_systemOfUnits_baseUnit.systemOfUnits">
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_systemOfUnits_baseUnit-systemOfUnits</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_systemOfUnits_baseUnit-ownedEnd.Property.systemOfUnits</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_systemOfUnits_systemOfQuantities.systemOfUnits">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_systemOfUnits_systemOfQuantities-ownedEnd.Property.systemOfUnits</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_systemOfUnits_systemOfQuantities-systemOfUnits</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_unitFactor_unit">
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_unitFactor_unit</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_unitFactor_unit</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Prefix.symbol">
+        <annotation:implementationElementId>_IMCE.QUDV__2-Prefix-symbol</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.Prefix-ownedAttribute.Property.symbol</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_conversionBasedUnit_referenceUnit.conversionBasedUnit">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_conversionBasedUnit_referenceUnit-ownedEnd.Property.conversionBasedUnit</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_conversionBasedUnit_referenceUnit-conversionBasedUnit</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_usedSystemOfQuantities_systemOfQuantities.usedSystemOfQuantities">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_usedSystemOfQuantities_systemOfQuantities-ownedEnd.Property.usedSystemOfQuantities</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_usedSystemOfQuantities_systemOfQuantities-usedSystemOfQuantities</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#a_usedSystemOfQuantities_systemOfQuantities">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_usedSystemOfQuantities_systemOfQuantities</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#a_systemOfQuantities_baseQuantityKind">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_systemOfQuantities_baseQuantityKind</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_systemOfQuantities_quantityKind.quantityKind">
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_systemOfQuantities_quantityKind-quantityKind</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_systemOfQuantities_quantityKind-ownedEnd.Property.quantityKind</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_includedSystemOfQuantities_systemOfQuantities">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_includedSystemOfQuantities_systemOfQuantities</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_includedSystemOfQuantities_systemOfQuantities</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#QuantityKindFactor.exponent">
+        <annotation:implementationElementId>_IMCE.QUDV__2-QuantityKindFactor-exponent</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.QuantityKindFactor-ownedAttribute.Property.exponent</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#a_includedSystemOfUnits_systemOfUnits">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_includedSystemOfUnits_systemOfUnits</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#a_systemOfQuantities_dimension">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_systemOfQuantities_dimension</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#a_noQuantityKind_prefixedUnit">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_noQuantityKind_prefixedUnit</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_dimension_factor.factor">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_dimension_factor-ownedEnd.Property.factor</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_dimension_factor-factor</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#a_generalQuantityKind_specificQuantityKind">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_generalQuantityKind_specificQuantityKind</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SystemOfUnits.description">
+        <annotation:implementationElementId>_IMCE.QUDV__2-SystemOfUnits-description</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.SystemOfUnits-ownedAttribute.Property.description</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#GeneralConversionUnit.expressionLanguageURI">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.GeneralConversionUnit-ownedAttribute.Property.expressionLanguageURI</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-GeneralConversionUnit-expressionLanguageURI</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_systemOfQuantities_baseQuantityKind">
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_systemOfQuantities_baseQuantityKind</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_systemOfQuantities_baseQuantityKind</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_quantityKind_measurementUnit">
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_quantityKind_measurementUnit</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_quantityKind_measurementUnit</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Unit.isUnitCountOfEntities">
+        <annotation:implementationElementId>_IMCE.QUDV__2-Unit-isUnitCountOfEntities</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.Unit-ownedAttribute.Property.isUnitCountOfEntities</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_noQuantityKind_prefixedUnit">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_noQuantityKind_prefixedUnit</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_noQuantityKind_prefixedUnit</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#a_derivedUnit_factor">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_derivedUnit_factor</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SystemOfUnits.definitionURI">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.SystemOfUnits-ownedAttribute.Property.definitionURI</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-SystemOfUnits-definitionURI</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_quantityKind_measurementUnit.measurementUnit">
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_quantityKind_measurementUnit-measurementUnit</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_quantityKind_measurementUnit-ownedEnd.Property.measurementUnit</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_systemOfUnits_prefix.prefix">
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_systemOfUnits_prefix-prefix</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_systemOfUnits_prefix-ownedEnd.Property.prefix</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_generalUnit_specificUnit">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_generalUnit_specificUnit</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_generalUnit_specificUnit</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_noQuantityKind_prefixedUnit.noQuantityKind">
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_noQuantityKind_prefixedUnit-noQuantityKind</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_noQuantityKind_prefixedUnit-ownedEnd.Property.noQuantityKind</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#AffineConversionUnit.offset">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.AffineConversionUnit-ownedAttribute.Property.offset</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-AffineConversionUnit-offset</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_usedSystemOfUnits_systemOfUnits.systemOfUnits">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_usedSystemOfUnits_systemOfUnits-ownedEnd.Property.systemOfUnits</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_usedSystemOfUnits_systemOfUnits-systemOfUnits</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#QuantityKind.isQuantityOfDimensionOne">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.QuantityKind-ownedAttribute.Property.isQuantityOfDimensionOne</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-QuantityKind-isQuantityOfDimensionOne</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Unit.isUnitForQuantityOfDimensionOne">
+        <annotation:implementationElementId>_IMCE.QUDV__2-Unit-isUnitForQuantityOfDimensionOne</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.Unit-ownedAttribute.Property.isUnitForQuantityOfDimensionOne</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SystemOfUnits.symbol">
+        <annotation:implementationElementId>_IMCE.QUDV__2-SystemOfUnits-symbol</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.SystemOfUnits-ownedAttribute.Property.symbol</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#GeneralConversionUnit.expression">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.GeneralConversionUnit-ownedAttribute.Property.expression</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-GeneralConversionUnit-expression</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_usedSystemOfUnits_systemOfUnits.usedSystemOfUnits">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_usedSystemOfUnits_systemOfUnits-ownedEnd.Property.usedSystemOfUnits</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_usedSystemOfUnits_systemOfUnits-usedSystemOfUnits</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#a_systemOfUnits_unit">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_systemOfUnits_unit</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_quantityKind_measurementUnit.quantityKind">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_quantityKind_measurementUnit-ownedEnd.Property.quantityKind</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_quantityKind_measurementUnit-quantityKind</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Rational.numerator">
+        <annotation:implementationElementId>_IMCE.QUDV__2-Rational-numerator</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.DataType.Rational-ownedAttribute.Property.numerator</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#a_prefixedUnit_prefix">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_prefixedUnit_prefix</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Dimension.symbolicExpression">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.Dimension-ownedAttribute.Property.symbolicExpression</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-Dimension-symbolicExpression</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_includedSystemOfUnits_systemOfUnits.systemOfUnits">
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_includedSystemOfUnits_systemOfUnits-systemOfUnits</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_includedSystemOfUnits_systemOfUnits-ownedEnd.Property.systemOfUnits</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#a_quantityKind_measurementUnit">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_quantityKind_measurementUnit</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_derivedQuantityKind_factor.factor">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_derivedQuantityKind_factor-ownedEnd.Property.factor</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_derivedQuantityKind_factor-factor</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_systemOfUnits_unit.systemOfUnits">
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_systemOfUnits_unit-systemOfUnits</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_systemOfUnits_unit-ownedEnd.Property.systemOfUnits</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Rational">
+        <annotation:isStructuredDataType rdf:datatype="&xsd;boolean">true</annotation:isStructuredDataType>
+        <annotation:implementationElementId>_IMCE.QUDV__2-Rational</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.DataType.Rational</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_generalQuantityKind_specificQuantityKind">
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_generalQuantityKind_specificQuantityKind</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_generalQuantityKind_specificQuantityKind</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_systemOfUnits_systemOfQuantities">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_systemOfUnits_systemOfQuantities</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_systemOfUnits_systemOfQuantities</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Rational.denominator">
+        <annotation:implementationElementId>_IMCE.QUDV__2-Rational-denominator</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.DataType.Rational-ownedAttribute.Property.denominator</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#ConversionBasedUnit">
+        <annotation:implementationElementId>_IMCE.QUDV__2-ConversionBasedUnit</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.ConversionBasedUnit</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_systemOfUnits_unit">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_systemOfUnits_unit</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_systemOfUnits_unit</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#LinearConversionUnit.factor">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.LinearConversionUnit-ownedAttribute.Property.factor</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-LinearConversionUnit-factor</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_generalUnit_specificUnit.specific">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_generalUnit_specificUnit-ownedEnd.Property.specific</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_generalUnit_specificUnit-specific</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#a_generalUnit_specificUnit">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_generalUnit_specificUnit</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_usedSystemOfUnits_systemOfUnits">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_usedSystemOfUnits_systemOfUnits</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_usedSystemOfUnits_systemOfUnits</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_generalUnit_specificUnit.general">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_generalUnit_specificUnit-ownedEnd.Property.general</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_generalUnit_specificUnit-general</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#QuantityKind.isNumberOfEntities">
+        <annotation:implementationElementId>_IMCE.QUDV__2-QuantityKind-isNumberOfEntities</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.QuantityKind-ownedAttribute.Property.isNumberOfEntities</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#a_conversionBasedUnit_referenceUnit">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_conversionBasedUnit_referenceUnit</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_usedSystemOfQuantities_systemOfQuantities">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_usedSystemOfQuantities_systemOfQuantities</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_usedSystemOfQuantities_systemOfQuantities</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SystemOfQuantities.definitionURI">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.SystemOfQuantities-ownedAttribute.Property.definitionURI</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-SystemOfQuantities-definitionURI</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_systemOfQuantities_dimension">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_systemOfQuantities_dimension</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_systemOfQuantities_dimension</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_includedSystemOfQuantities_systemOfQuantities.systemOfQuantities">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_includedSystemOfQuantities_systemOfQuantities-ownedEnd.Property.systemOfQuantities</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_includedSystemOfQuantities_systemOfQuantities-systemOfQuantities</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_includedSystemOfUnits_systemOfUnits.includedSystemOfUnits">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_includedSystemOfUnits_systemOfUnits-ownedEnd.Property.includedSystemOfUnits</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_includedSystemOfUnits_systemOfUnits-includedSystemOfUnits</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SystemOfQuantities.symbol">
+        <annotation:implementationElementId>_IMCE.QUDV__2-SystemOfQuantities-symbol</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Class.SystemOfQuantities-ownedAttribute.Property.symbol</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#a_systemOfUnits_systemOfQuantities">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_systemOfUnits_systemOfQuantities</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_derivedUnit_factor.factor">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_derivedUnit_factor-ownedEnd.Property.factor</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_derivedUnit_factor-factor</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#a_systemOfUnits_prefix">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_systemOfUnits_prefix</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#a_derivedQuantityKind_factor">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_derivedQuantityKind_factor</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_includedSystemOfQuantities_systemOfQuantities.includedSystemOfQuantities">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_includedSystemOfQuantities_systemOfQuantities-ownedEnd.Property.includedSystemOfQuantities</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_includedSystemOfQuantities_systemOfQuantities-includedSystemOfQuantities</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#a_dimension_factor">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_dimension_factor</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#a_unitFactor_unit">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_unitFactor_unit</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_derivedQuantityKind_factor">
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_derivedQuantityKind_factor</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_derivedQuantityKind_factor</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_noQuantityKind_prefixedUnit.prefixedUnit">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_noQuantityKind_prefixedUnit-ownedEnd.Property.prefixedUnit</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_noQuantityKind_prefixedUnit-prefixedUnit</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_systemOfQuantities_quantityKind">
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_systemOfQuantities_quantityKind</annotation:omgElementId>
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_systemOfQuantities_quantityKind</annotation:implementationElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_dimension_factor.dimension">
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_dimension_factor-dimension</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_dimension_factor-ownedEnd.Property.dimension</annotation:omgElementId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_prefixedUnit_prefix">
+        <annotation:implementationElementId>_IMCE.QUDV__2-A_prefixedUnit_prefix</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.Package.OMG_QUDV-packagedElement.Association.A_prefixedUnit_prefix</annotation:omgElementId>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.5-SNAPSHOT) http://owlapi.sourceforge.net -->
+

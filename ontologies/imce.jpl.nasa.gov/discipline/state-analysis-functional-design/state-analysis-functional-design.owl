@@ -1,0 +1,909 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#"
+	xmlns:mgss-service-embedding="http://imce.jpl.nasa.gov/mgss-service/mgss-service-embedding#"
+	xmlns:Blocks-embedding="http://imce.jpl.nasa.gov/Blocks/Blocks-embedding#"
+	xmlns:state-analysis-implementation="http://imce.jpl.nasa.gov/discipline/state-analysis-implementation/state-analysis-implementation#"
+	xmlns:StandardProfileL2-mapping="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-mapping#"
+	xmlns:ieee-1471-embedding="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#"
+	xmlns:mechanical="http://imce.jpl.nasa.gov/mechanical/mechanical#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:datatype-map="http://imce.jpl.nasa.gov/foundation/owl2-mof2/datatype-map#"
+	xmlns:Blocks="http://imce.jpl.nasa.gov/Blocks/Blocks#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:f6-asda-embedding="http://imce.jpl.nasa.gov/application/f6-asda/f6-asda-embedding#"
+	xmlns:mechanical-embedding="http://imce.jpl.nasa.gov/mechanical/mechanical-embedding#"
+	xmlns:jeo-architecture-embedding="http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture-embedding#"
+	xmlns:base-mapping="http://imce.jpl.nasa.gov/foundation/base/base-mapping#"
+	xmlns:StandardProfileL2-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-embedding#"
+	xmlns:pbs="http://imce.jpl.nasa.gov/pbs/pbs#"
+	xmlns:SysML-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-embedding#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:timeline-embedding="http://imce.jpl.nasa.gov/timeline/timeline-embedding#"
+	xmlns:state-analysis-implementation-embedding="http://imce.jpl.nasa.gov/discipline/state-analysis-implementation/state-analysis-implementation-embedding#"
+	xmlns:ieee-1471="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#"
+	xmlns:architectural-description="http://imce.jpl.nasa.gov/architectural-description/architectural-description#"
+	xmlns:mgss-service="http://imce.jpl.nasa.gov/application/mgss-service/mgss-service#"
+	xmlns:timeline="http://imce.jpl.nasa.gov/timeline/timeline#"
+	xmlns:owl2-mof2-mapping="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-mapping#"
+	xmlns:jeo-architecture="http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture#"
+	xmlns:math-embedding="http://imce.jpl.nasa.gov/math/math-embedding#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:QUDV-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-embedding#"
+	xmlns:QUDV="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#"
+	xmlns:f6-asda="http://imce.jpl.nasa.gov/application/f6-asda/f6-asda#"
+	xmlns:vandv="http://imce.jpl.nasa.gov/discipline/vandv/vandv#"
+	xmlns:PrimitiveTypes-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-embedding#"
+	xmlns:UML-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-embedding#"
+	xmlns:math="http://imce.jpl.nasa.gov/math/math#"
+	xmlns:architectural-description-embedding="http://imce.jpl.nasa.gov/architectural-description/architectural-description-embedding#"
+	xmlns:annotation-embedding="http://imce.jpl.nasa.gov/foundation/annotation/annotation-embedding#"
+	xmlns:fault-management="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:QUDV-mapping="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-mapping#"
+	xmlns:vandv-embedding="http://imce.jpl.nasa.gov/discipline/vandv/vandv-embedding#"
+	xmlns:pbs-embedding="http://imce.jpl.nasa.gov/pbs/pbs-embedding#"
+	xmlns:fault-management-embedding="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management-embedding#"
+	xmlns:annotation="http://imce.jpl.nasa.gov/foundation/annotation/annotation#"
+	xmlns:mission-embedding="http://imce.jpl.nasa.gov/foundation/mission/mission-embedding#"
+	xmlns:base-embedding="http://imce.jpl.nasa.gov/foundation/base/base-embedding#"
+	xmlns:mission="http://imce.jpl.nasa.gov/foundation/mission/mission#"
+	xmlns:base="http://imce.jpl.nasa.gov/foundation/base/base#"
+	xmlns:time="http://imce.jpl.nasa.gov/foundation/time/time#"
+	xmlns:analysis="http://imce.jpl.nasa.gov/foundation/analysis/analysis#"
+	xmlns:owl2-mof2="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#"
+	xmlns:owl2-mof2-embedding="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#"
+	xmlns:time-embedding="http://imce.jpl.nasa.gov/foundation/time/time-embedding#"
+	xmlns:SysML="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#"
+	xmlns:PrimitiveTypes="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes#"
+	xmlns:PrimitiveTypes-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-metamodel#"
+	xmlns:SysML-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#"
+	xmlns:StandardProfileL2="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#"
+	xmlns:StandardProfileL2-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#"
+	xmlns:UML="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#"
+	xmlns:UML-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#"
+	xmlns:project="http://imce.jpl.nasa.gov/foundation/project/project#"
+	xmlns:analysis-embedding="http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#"
+	xmlns:state-analysis-functional-design-embedding="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design-embedding#"
+	xmlns:state-analysis-embedding="http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis-embedding#"
+	xmlns:electrical="http://imce.jpl.nasa.gov/discipline/electrical/electrical#"
+	xmlns:project-embedding="http://imce.jpl.nasa.gov/foundation/project/project-embedding#"
+	xmlns:electrical-embedding="http://imce.jpl.nasa.gov/discipline/electrical/electrical-embedding#"
+	xmlns:state-analysis="http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#"
+	xmlns:state-analysis-functional-design="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#"
+	xmlns:base-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#"
+	xmlns:time-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#"
+	xmlns:state-analysis-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#"
+	xmlns:mission-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#"
+	xmlns:project-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#"
+	xmlns:analysis-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#">
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$Date$</dc:date>
+	<owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$Revision$</owl:versionInfo>
+	<dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copyright 2010-2011, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
+
+This software may be subject to U.S. export control laws. By accepting this software, the user agrees to comply with all applicable U.S. export laws and regulations. User has the responsibility to obtain export licenses, or other export authority as may be required before exporting such information to foreign countries or providing access to foreign persons.</dc:rights>
+	<dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Discipline</dc:type>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">State Analysis Functional Design Ontology</dc:title>
+	<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Systems Engineering &amp; Formulation Division</dc:creator>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The State Analysis FUnctional Design Ontology defines concepts and properties related to the functionl design of control systems following State Analysis methodology.</dc:description>
+	<owl:imports rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/type">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/description">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#derivesValueFrom">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A derived SV will usually derive its value from one or more Basis or Derived State Variables, but could also derive a value from a Proxy or Sim SV.
+All of these associations must be local (not sure how to assert that -- maybe we need generalized properties to reflect local and remote semantics).  Also, any value derived from a SimulationSV will also be a SimulationSV</rdfs:comment>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#DerivedStateVariable"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#FunctionalStateVariable"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#topObjectProperty"/>
+	<owl:propertyChainAxiom rdf:nodeID="node17e9co09ox111"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox111">
+	<rdf:first rdf:nodeID="node17e9co09ox112"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox112">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasDerivesValueFromSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox111">
+	<rdf:rest rdf:nodeID="node17e9co09ox113"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox113">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasDerivesValueFromTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasAchiever">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Achiever"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#FunctionalStateVariable"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#topObjectProperty"/>
+	<owl:propertyChainAxiom rdf:nodeID="node17e9co09ox114"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox114">
+	<rdf:first rdf:nodeID="node17e9co09ox115"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox115">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasHasAchieverSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox114">
+	<rdf:rest rdf:nodeID="node17e9co09ox116"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox116">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasHasAchieverTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasController">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A directly controllable state has a local controller associated with its implementation state variable.</dc:description>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ControllableStateVariable"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Controller"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasAchiever"/>
+	<owl:propertyChainAxiom rdf:nodeID="node17e9co09ox117"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox117">
+	<rdf:first rdf:nodeID="node17e9co09ox118"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox118">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasHasControllerSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox117">
+	<rdf:rest rdf:nodeID="node17e9co09ox119"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox119">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasHasControllerTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasDerivesValueFromSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#DerivedStateVariable"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#DerivesValueFrom"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#topReifiedObjectPropertySource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox120">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasDerivesValueFromSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasDerivesValueFromTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#DerivesValueFrom"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#FunctionalStateVariable"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#topReifiedObjectPropertyTarget"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasHasAchieverSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#FunctionalStateVariable"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#HasAchiever"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#topReifiedObjectPropertySource"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasHasAchieverTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Achiever"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#HasAchiever"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#topReifiedObjectPropertyTarget"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasHasControllerSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ControllableStateVariable"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#HasController"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasHasAchieverSource"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#topReifiedObjectPropertySource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox121">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasHasControllerSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasHasControllerTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Controller"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#HasController"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasHasAchieverTarget"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#topReifiedObjectPropertyTarget"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasInvokesFunctionSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#InvokesFunction"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#topReifiedObjectPropertySource"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#Goal"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox122">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasInvokesFunctionSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasInvokesFunctionTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#InvokesFunction"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#topReifiedObjectPropertyTarget"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Function"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasIsEstimatedBySource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#BasisStateVariable"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#IsEstimatedBy"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasHasAchieverSource"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#topReifiedObjectPropertySource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox123">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasIsEstimatedBySource"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasIsEstimatedByTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Estimator"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#IsEstimatedBy"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasHasAchieverTarget"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#topReifiedObjectPropertyTarget"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasIsProxyForSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#IsProxyFor"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ProxyStateVariable"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#topReifiedObjectPropertySource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox124">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasIsProxyForSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasIsProxyForTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#BasisStateVariable"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#IsProxyFor"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#topReifiedObjectPropertyTarget"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#topReifiedObjectPropertySource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+	<annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#topReifiedObjectPropertyTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+	<annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#topObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasSpecifiesSource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#FunctionalStateVariable"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Specifies"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#topReifiedObjectPropertySource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox125">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasSpecifiesSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasSpecifiesTarget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Specifies"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#topReifiedObjectPropertyTarget"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#StateVariable"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#implements">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#FunctionalStateVariable"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#topObjectProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#StateVariable"/>
+	<owl:propertyChainAxiom rdf:nodeID="node17e9co09ox126"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox126">
+	<rdf:first rdf:nodeID="node17e9co09ox127"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox127">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasSpecifiesSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox126">
+	<rdf:rest rdf:nodeID="node17e9co09ox128"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox128">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasSpecifiesTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#invokesFunction">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#topObjectProperty"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#Goal"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Function"/>
+	<owl:propertyChainAxiom rdf:nodeID="node17e9co09ox129"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox129">
+	<rdf:first rdf:nodeID="node17e9co09ox130"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox130">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasInvokesFunctionSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox129">
+	<rdf:rest rdf:nodeID="node17e9co09ox131"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox131">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasInvokesFunctionTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#isEstimatedBy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A basis state variable must have exactly one estimator</dc:description>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#BasisStateVariable"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Estimator"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasAchiever"/>
+	<owl:propertyChainAxiom rdf:nodeID="node17e9co09ox132"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox132">
+	<rdf:first rdf:nodeID="node17e9co09ox133"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox133">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasIsEstimatedBySource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox132">
+	<rdf:rest rdf:nodeID="node17e9co09ox134"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox134">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasIsEstimatedByTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#isProxyFor">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+	<rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#BasisStateVariable"/>
+	<rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ProxyStateVariable"/>
+	<rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#topObjectProperty"/>
+	<owl:propertyChainAxiom rdf:nodeID="node17e9co09ox135"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox135">
+	<rdf:first rdf:nodeID="node17e9co09ox136"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox136">
+	<owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasIsProxyForSource"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox135">
+	<rdf:rest rdf:nodeID="node17e9co09ox137"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node17e9co09ox137">
+	<rdf:first rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#hasIsProxyForTarget"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#topObjectProperty">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;property&gt;topObjectProperty&lt;/property&gt; is a common superproperty of all object properties defined in the State Analysis Implementation Ontology.</dc:description>
+	<annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</rdfs:comment>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#topDataProperty">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;property&gt;topDataProperty&lt;/property&gt; is a common superproperty of all datatype properties defined in the State Analysis Implementation Ontology.</dc:description>
+	<annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Achiever">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ControlSystemFunction"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An achiever is an active function responsible for achieving goals associated with a particular FunctionalStateVariable. Achievers can be either Estimators or Controllers.</dc:description>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#BasisStateVariable">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#FunctionalStateVariable"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Basis State Variable is a functional state variable that has a local estimator. Its value history contains state knowledge that expresses the control system's uncertainty with regard to the target state.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ControlSystemFunction">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Entity"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Component"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ControllableStateVariable">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#FunctionalStateVariable"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A FunctionalStateVariable having a local controller. Usually, the target class is also a BasisStateVariable, but could be a derived or proxy (cannot be a SimulationStateVariable).</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Controller">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Achiever"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Controller is an achiever responsible for achieving the control intent of a goal.
+Controllers can issue Commands to the System Under Control.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#DerivedStateVariable">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#FunctionalStateVariable"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A FunctionalStateVariable whose value is derived via some conversion function from the value of another state variable. Thus, a Derived State Variable has no estimator or value history. The value of a derived state variable can be knowledge or simulation truth depending on whether the source state variables are basis or simulation entities.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#DerivesValueFrom">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ReifiedObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Entity">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Thing"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#PackagedElement"/>
+	<annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Estimator">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Achiever"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Estimator is a functional achiever  responsible for updating the value history of one or more Functional State Variables. State values are determined (estimated) from evidence provided by other State Variables, Measurements, and Command histories according to the associated State Effects Model.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#FunctionalAdapter">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ControlSystemFunction"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A functional adapter is a kind of interface between the control system and system under control in state analysis.
+As with any other interface, it serves to document and model the details of a particular interface, and to act as a runtime portal for the transmission of Command and Measurement messages across the interface.
+A functional adapter may be allocated the responsibility for maintaining value histories of recent Command and Measurement values.</dc:description>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In some views of the control system a hardware adapter is considered to be part of the system under control; in others, part of the control system. In practice it may have parts on both sides of the fence. In this model we include it in the control system because it has to be implemented somewhere.</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#FunctionalStateVariable">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ControlSystemFunction"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Functional State Variable is the functional object that represents an analysis State Variable in the control system.
+Functional State Variables provide functional capabilities such as value history parameters, goal types, achiever associations, and so forth that are essential for functional-level analysis, simulation and verification. Functional State Variables may be realized in software, hardware, or any combination thereof. This abstract class serves as an abstract base for all functional state variable types.</dc:description>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Need to add an association to an analysis state variable that this functional entity represents.</rdfs:comment>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#GraphStateVariable">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ControlSystemFunction"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A functional GSV will generally map to a group defined in the analysis, but perhaps this is not strictly required.</rdfs:comment>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A functional version of a GraphStateVariable</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#HasAchiever">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ReifiedObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#HasController">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#HasAchiever"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#InvokesFunction">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ReifiedObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#IsEstimatedBy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#HasAchiever"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#IsProxyFor">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ReifiedObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ProxyStateVariable">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#FunctionalStateVariable"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ReifiedObjectProperty">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Thing"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#PackagedElement"/>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+	<annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#SimulationGenerator">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ControlSystemFunction"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An active function containing a simulation model that updates a SimulationStateVariable.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#SimulationStateVariable">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#FunctionalStateVariable"/>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A functional state variable whose value is being generated through a simulation process. These are used to represent states in a simulation system that models the system under control for a target control system. A complete system may have one BasisStateVariable in the control system and another SimulationStateVariable in the simulation system each representing the same analysis state variable in different roles.</dc:description>
+	<dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A remote interface adapter for another State Variable, usually a Basis State Variable, or Simulation State Variable. Its value history represents model truth, and so has no uncertainty.</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Specifies">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ReifiedObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#StructuredDatatype">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Thing"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
+	<rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#PackagedElement"/>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+	<annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Thing">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+	<annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+	<dc:description>Abstract superclass of all state analysis implementation artifacts</dc:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#StructuredDatatype">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#Entity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Achiever">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#FunctionalAdapter"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#FunctionalStateVariable"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#GraphStateVariable"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#StructuredDatatype">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#ReifiedObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Achiever">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#SimulationGenerator"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#StructuredDatatype">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#StructuredDatatype"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#StructuredDatatype"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#ReifiedObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#BasisStateVariable">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ControllableStateVariable"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#DerivedStateVariable"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#StructuredDatatype">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#Entity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#BasisStateVariable">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ProxyStateVariable"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#SimulationStateVariable"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#StructuredDatatype">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#StructuredDatatype"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#ReifiedObjectProperty"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#Entity"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#StructuredDatatype"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#ReifiedObjectProperty"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#Entity"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#IdentifiedElement"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#Container"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#ContainedElement"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#AggregatedElement"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#StructuredDatatype"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#ReifiedObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ControllableStateVariable">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#DerivedStateVariable"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ProxyStateVariable"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#SimulationStateVariable"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#StructuredDatatype">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#Entity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Controller">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Estimator"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Entity">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#Entity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ProxyStateVariable">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#SimulationStateVariable"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ReifiedObjectProperty">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#Entity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Entity">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#ReifiedObjectProperty"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#StructuredDatatype"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#Entity"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#ReifiedObjectProperty"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#StructuredDatatype"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ReifiedObjectProperty">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#ReifiedObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Entity">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project#Deliverable"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ReifiedObjectProperty">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#StructuredDatatype"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Entity">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project#Facility"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ReifiedObjectProperty">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#AggregatedElement"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#ContainedElement"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#Container"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#IdentifiedElement"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#DerivedStateVariable">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ProxyStateVariable"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Entity">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project#Organization"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#DerivedStateVariable">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#SimulationStateVariable"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Entity">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project#Policy"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project#ProducingElement"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ReifiedObjectProperty">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#Entity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Entity">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project#ProjectAndAboveAuthorizedElement"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#ReifiedObjectProperty"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project#Stakeholder"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ReifiedObjectProperty">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#ReifiedObjectProperty"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#StructuredDatatype"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Entity">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#StructuredDatatype"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project#SupplyingElement"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ReifiedObjectProperty">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#Entity"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#ReifiedObjectProperty"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#StructuredDatatype"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Entity">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#Entity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ReifiedObjectProperty">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#Entity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Entity">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#ReifiedObjectProperty"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#StructuredDatatype"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ReifiedObjectProperty">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#ReifiedObjectProperty"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#StructuredDatatype"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Entity">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ReifiedObjectProperty"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#StructuredDatatype"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ReifiedObjectProperty">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#Entity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#InvokesFunction">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#IsProxyFor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#FunctionalStateVariable">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#GraphStateVariable"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#HasController">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#IsEstimatedBy"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#GraphStateVariable">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#SimulationGenerator"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#HasAchiever">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#InvokesFunction"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#IsProxyFor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ReifiedObjectProperty">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#ReifiedObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#FunctionalAdapter">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#SimulationGenerator"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#InvokesFunction">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Specifies"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#IsProxyFor">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Specifies"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#HasAchiever">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Specifies"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#FunctionalAdapter">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#FunctionalStateVariable"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#GraphStateVariable"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#FunctionalStateVariable">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#SimulationGenerator"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ReifiedObjectProperty">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#StructuredDatatype"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Entity">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#Package"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#ReifiedObjectProperty">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#StructuredDatatype"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Entity">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#AggregatedElement"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#TraversingElement"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#StructuredDatatype"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#ReifiedObjectProperty"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Junction"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Interface"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#DerivesValueFrom">
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#InvokesFunction"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#Specifies"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#IsProxyFor"/>
+	<owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#HasAchiever"/>
+</rdf:Description>
+
+</rdf:RDF>

@@ -1,0 +1,1584 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY time "http://imce.jpl.nasa.gov/foundation/time/time#" >
+    <!ENTITY base "http://imce.jpl.nasa.gov/foundation/base/base#" >
+    <!ENTITY protege "http://protege.stanford.edu/plugins/owl/protege#" >
+    <!ENTITY xsp "http://www.owl-ontologies.com/2005/08/07/xsp.owl#" >
+    <!ENTITY analysis "http://imce.jpl.nasa.gov/foundation/analysis/analysis#" >
+    <!ENTITY annotation "http://imce.jpl.nasa.gov/foundation/annotation/annotation#" >
+    <!ENTITY p1 "http://www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-mapping#" >
+]>
+
+
+<rdf:RDF xmlns="http://imce.jpl.nasa.gov/foundation/time/time#"
+     xml:base="http://imce.jpl.nasa.gov/foundation/time/time"
+     xmlns:annotation="http://imce.jpl.nasa.gov/foundation/annotation/annotation#"
+     xmlns:p1="http://www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-mapping#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:analysis="http://imce.jpl.nasa.gov/foundation/analysis/analysis#"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:time="http://imce.jpl.nasa.gov/foundation/time/time#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:base="http://imce.jpl.nasa.gov/foundation/base/base#">
+    <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/foundation/time/time">
+        <rdfs:label rdf:datatype="&xsd;string">time</rdfs:label>
+        <dc:date rdf:datatype="&xsd;string">$Date$</dc:date>
+        <owl:versionInfo rdf:datatype="&xsd;string">$Revision$</owl:versionInfo>
+        <dc:rights rdf:datatype="&xsd;string">Copyright 2010-2015, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
+
+This software may be subject to U.S. export control laws. By accepting this software, the user agrees to comply with all applicable U.S. export laws and regulations. User has the responsibility to obtain export licenses, or other export authority as may be required before exporting such information to foreign countries or providing access to foreign persons.</dc:rights>
+        <dc:type rdf:datatype="&xsd;string">Foundation</dc:type>
+        <dc:creator rdf:datatype="&xsd;string">Systems Engineering &amp; Formulation Division</dc:creator>
+        <dc:description rdf:datatype="&xsd;string">The Time Ontology defines concepts and properties for temporal reasoning.</dc:description>
+        <dc:title rdf:datatype="&xsd;string">Time Ontology</dc:title>
+        <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#isAbstract -->
+
+    <owl:AnnotationProperty rdf:about="&annotation;isAbstract"/>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#noMapping -->
+
+    <owl:AnnotationProperty rdf:about="&annotation;noMapping"/>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#isSingleton -->
+
+    <owl:AnnotationProperty rdf:about="&time;isSingleton"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="&dc;description"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topObjectProperty">
+        <dc:description rdf:datatype="&xsd;string">&lt;property&gt;topObjectProperty&lt;/property&gt; is a common superproperty of all object properties defined in the time.</dc:description>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topReifiedObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topReifiedObjectProperty">
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topReifiedObjectPropertySource -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topReifiedObjectPropertySource">
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topReifiedObjectPropertyTarget -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topReifiedObjectPropertyTarget">
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topReifiedStructuredDataProperty -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topReifiedStructuredDataProperty">
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topReifiedStructuredDataPropertySource -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topReifiedStructuredDataPropertySource">
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topReifiedStructuredDataPropertyTarget -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topReifiedStructuredDataPropertyTarget">
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topUnreifiedObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topUnreifiedObjectProperty">
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#constrains -->
+
+    <owl:ObjectProperty rdf:about="&time;constrains">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">constrains</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topReifiedObjectProperty"/>
+        <rdfs:domain rdf:resource="&time;Constraint"/>
+        <rdfs:range rdf:resource="&time;Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#containsEvent -->
+
+    <owl:ObjectProperty rdf:about="&time;containsEvent">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">contains event</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topReifiedObjectProperty"/>
+        <rdfs:domain rdf:resource="&time;DurativeEvent"/>
+        <rdfs:range rdf:resource="&time;Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#containsTime -->
+
+    <owl:ObjectProperty rdf:about="&time;containsTime">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">contains time</rdfs:label>
+        <rdfs:domain rdf:resource="&time;CompositeTime"/>
+        <rdfs:range rdf:resource="&time;Time"/>
+        <rdfs:subPropertyOf rdf:resource="&time;containsEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#couplesTerm -->
+
+    <owl:ObjectProperty rdf:about="&time;couplesTerm">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">couples term</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topReifiedObjectProperty"/>
+        <rdfs:domain rdf:resource="&time;MathFunction"/>
+        <rdfs:range rdf:resource="&time;Term"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#endsWith -->
+
+    <owl:ObjectProperty rdf:about="&time;endsWith">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">ends with</rdfs:label>
+        <rdfs:domain rdf:resource="&time;DurativeEvent"/>
+        <rdfs:range rdf:resource="&time;InstantEvent"/>
+        <rdfs:subPropertyOf rdf:resource="&time;containsEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#hasConstrainsSource -->
+
+    <owl:ObjectProperty rdf:about="&time;hasConstrainsSource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topReifiedObjectPropertySource"/>
+        <rdfs:domain rdf:resource="&time;Constrains"/>
+        <rdfs:range rdf:resource="&time;Constraint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#hasConstrainsTarget -->
+
+    <owl:ObjectProperty rdf:about="&time;hasConstrainsTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topReifiedObjectPropertyTarget"/>
+        <rdfs:domain rdf:resource="&time;Constrains"/>
+        <rdfs:range rdf:resource="&time;Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#hasContainsEventSource -->
+
+    <owl:ObjectProperty rdf:about="&time;hasContainsEventSource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topReifiedObjectPropertySource"/>
+        <rdfs:domain rdf:resource="&time;ContainsEvent"/>
+        <rdfs:range rdf:resource="&time;DurativeEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#hasContainsEventTarget -->
+
+    <owl:ObjectProperty rdf:about="&time;hasContainsEventTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topReifiedObjectPropertyTarget"/>
+        <rdfs:domain rdf:resource="&time;ContainsEvent"/>
+        <rdfs:range rdf:resource="&time;Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#hasContainsTimeSource -->
+
+    <owl:ObjectProperty rdf:about="&time;hasContainsTimeSource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&time;CompositeTime"/>
+        <rdfs:domain rdf:resource="&time;ContainsTime"/>
+        <rdfs:subPropertyOf rdf:resource="&time;hasContainsEventSource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#hasContainsTimeTarget -->
+
+    <owl:ObjectProperty rdf:about="&time;hasContainsTimeTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&time;ContainsTime"/>
+        <rdfs:range rdf:resource="&time;Time"/>
+        <rdfs:subPropertyOf rdf:resource="&time;hasContainsEventTarget"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#hasCouplesTermSource -->
+
+    <owl:ObjectProperty rdf:about="&time;hasCouplesTermSource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topReifiedObjectPropertySource"/>
+        <rdfs:domain rdf:resource="&time;CouplesTerm"/>
+        <rdfs:range rdf:resource="&time;MathFunction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#hasCouplesTermTarget -->
+
+    <owl:ObjectProperty rdf:about="&time;hasCouplesTermTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topReifiedObjectPropertyTarget"/>
+        <rdfs:domain rdf:resource="&time;CouplesTerm"/>
+        <rdfs:range rdf:resource="&time;Term"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#hasDependentVariable -->
+
+    <owl:ObjectProperty rdf:about="&time;hasDependentVariable">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">has dependent variable</rdfs:label>
+        <rdfs:range rdf:resource="&time;DependentVariable"/>
+        <rdfs:domain rdf:resource="&time;Time"/>
+        <rdfs:subPropertyOf rdf:resource="&time;referencesVariable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#hasEndsWithSource -->
+
+    <owl:ObjectProperty rdf:about="&time;hasEndsWithSource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&time;DurativeEvent"/>
+        <rdfs:domain rdf:resource="&time;EndsWith"/>
+        <rdfs:subPropertyOf rdf:resource="&time;hasContainsEventSource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#hasEndsWithTarget -->
+
+    <owl:ObjectProperty rdf:about="&time;hasEndsWithTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&time;EndsWith"/>
+        <rdfs:range rdf:resource="&time;InstantEvent"/>
+        <rdfs:subPropertyOf rdf:resource="&time;hasContainsEventTarget"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#hasHasDependentVariableSource -->
+
+    <owl:ObjectProperty rdf:about="&time;hasHasDependentVariableSource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="&time;HasDependentVariable"/>
+        <rdfs:range rdf:resource="&time;Time"/>
+        <rdfs:subPropertyOf rdf:resource="&time;hasReferencesVariableSource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#hasHasDependentVariableTarget -->
+
+    <owl:ObjectProperty rdf:about="&time;hasHasDependentVariableTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&time;DependentVariable"/>
+        <rdfs:domain rdf:resource="&time;HasDependentVariable"/>
+        <rdfs:subPropertyOf rdf:resource="&time;hasReferencesVariableTarget"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#hasHasLowerBoundSource -->
+
+    <owl:ObjectProperty rdf:about="&time;hasHasLowerBoundSource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topReifiedObjectPropertySource"/>
+        <rdfs:domain rdf:resource="&time;HasLowerBound"/>
+        <rdfs:range rdf:resource="&time;Interval"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#hasHasLowerBoundTarget -->
+
+    <owl:ObjectProperty rdf:about="&time;hasHasLowerBoundTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topReifiedObjectPropertyTarget"/>
+        <rdfs:domain rdf:resource="&time;HasLowerBound"/>
+        <rdfs:range rdf:resource="&time;Term"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#hasHasReferenceTimeVariableSource -->
+
+    <owl:ObjectProperty rdf:about="&time;hasHasReferenceTimeVariableSource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="&time;HasReferenceTimeVariable"/>
+        <rdfs:range rdf:resource="&time;Time"/>
+        <rdfs:subPropertyOf rdf:resource="&time;hasReferencesVariableSource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#hasHasReferenceTimeVariableTarget -->
+
+    <owl:ObjectProperty rdf:about="&time;hasHasReferenceTimeVariableTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&time;HasReferenceTimeVariable"/>
+        <rdfs:range rdf:resource="&time;ReferenceTimeVariable"/>
+        <rdfs:subPropertyOf rdf:resource="&time;hasReferencesVariableTarget"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#hasHasUpperBoundSource -->
+
+    <owl:ObjectProperty rdf:about="&time;hasHasUpperBoundSource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topReifiedObjectPropertySource"/>
+        <rdfs:domain rdf:resource="&time;HasUpperBound"/>
+        <rdfs:range rdf:resource="&time;Interval"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#hasHasUpperBoundTarget -->
+
+    <owl:ObjectProperty rdf:about="&time;hasHasUpperBoundTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topReifiedObjectPropertyTarget"/>
+        <rdfs:domain rdf:resource="&time;HasUpperBound"/>
+        <rdfs:range rdf:resource="&time;Term"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#hasLowerBound -->
+
+    <owl:ObjectProperty rdf:about="&time;hasLowerBound">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">has lower bound</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topReifiedObjectProperty"/>
+        <rdfs:domain rdf:resource="&time;Interval"/>
+        <rdfs:range rdf:resource="&time;Term"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#hasOccursAtTimeSource -->
+
+    <owl:ObjectProperty rdf:about="&time;hasOccursAtTimeSource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="&time;InstantEvent"/>
+        <rdfs:domain rdf:resource="&time;OccursAtTime"/>
+        <rdfs:subPropertyOf rdf:resource="&time;hasReferencesVariableSource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#hasOccursAtTimeTarget -->
+
+    <owl:ObjectProperty rdf:about="&time;hasOccursAtTimeTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&time;OccursAtTime"/>
+        <rdfs:range rdf:resource="&time;TimeVariable"/>
+        <rdfs:subPropertyOf rdf:resource="&time;hasReferencesVariableTarget"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#hasReferenceTimeVariable -->
+
+    <owl:ObjectProperty rdf:about="&time;hasReferenceTimeVariable">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">has reference time variable</rdfs:label>
+        <rdfs:range rdf:resource="&time;ReferenceTimeVariable"/>
+        <rdfs:domain rdf:resource="&time;Time"/>
+        <rdfs:subPropertyOf rdf:resource="&time;referencesVariable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#hasReferencesVariableSource -->
+
+    <owl:ObjectProperty rdf:about="&time;hasReferencesVariableSource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topReifiedObjectPropertySource"/>
+        <rdfs:range rdf:resource="&time;Event"/>
+        <rdfs:domain rdf:resource="&time;ReferencesVariable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#hasReferencesVariableTarget -->
+
+    <owl:ObjectProperty rdf:about="&time;hasReferencesVariableTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topReifiedObjectPropertyTarget"/>
+        <rdfs:domain rdf:resource="&time;ReferencesVariable"/>
+        <rdfs:range rdf:resource="&time;Variable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#hasStartsWithSource -->
+
+    <owl:ObjectProperty rdf:about="&time;hasStartsWithSource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&time;DurativeEvent"/>
+        <rdfs:domain rdf:resource="&time;StartsWith"/>
+        <rdfs:subPropertyOf rdf:resource="&time;hasContainsEventSource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#hasStartsWithTarget -->
+
+    <owl:ObjectProperty rdf:about="&time;hasStartsWithTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&time;InstantEvent"/>
+        <rdfs:domain rdf:resource="&time;StartsWith"/>
+        <rdfs:subPropertyOf rdf:resource="&time;hasContainsEventTarget"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#hasUpperBound -->
+
+    <owl:ObjectProperty rdf:about="&time;hasUpperBound">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">has upper bound</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topReifiedObjectProperty"/>
+        <rdfs:domain rdf:resource="&time;Interval"/>
+        <rdfs:range rdf:resource="&time;Term"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#occursAtTime -->
+
+    <owl:ObjectProperty rdf:about="&time;occursAtTime">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">occurs at time</rdfs:label>
+        <rdfs:domain rdf:resource="&time;InstantEvent"/>
+        <rdfs:range rdf:resource="&time;TimeVariable"/>
+        <rdfs:subPropertyOf rdf:resource="&time;referencesVariable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#referencesVariable -->
+
+    <owl:ObjectProperty rdf:about="&time;referencesVariable">
+        <rdfs:label rdf:datatype="&xsd;string">references variable</rdfs:label>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topReifiedObjectProperty"/>
+        <rdfs:domain rdf:resource="&time;Event"/>
+        <rdfs:range rdf:resource="&time;Variable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#startsWith -->
+
+    <owl:ObjectProperty rdf:about="&time;startsWith">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">starts with</rdfs:label>
+        <rdfs:domain rdf:resource="&time;DurativeEvent"/>
+        <rdfs:range rdf:resource="&time;InstantEvent"/>
+        <rdfs:subPropertyOf rdf:resource="&time;containsEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topDataProperty">
+        <dc:description rdf:datatype="&xsd;string">&lt;property&gt;topDataProperty&lt;/property&gt; is a common superproperty of all datatype properties defined in the time.</dc:description>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#hasText -->
+
+    <owl:DatatypeProperty rdf:about="&time;hasText">
+        <rdfs:label rdf:datatype="&xsd;string">has text</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topDataProperty"/>
+        <rdfs:domain rdf:resource="&time;Constraint"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#isLowerBoundInclusive -->
+
+    <owl:DatatypeProperty rdf:about="&time;isLowerBoundInclusive">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">is lower bound inclusive</rdfs:label>
+        <dc:description rdf:datatype="&xsd;string">The &lt;property&gt;isLowerBoundInclusive&lt;/property&gt; indicates if an &lt;classname&gt;Interval&lt;/classname&gt;&apos;s lowerBound is meant to be inclusive or exclusive.</dc:description>
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topDataProperty"/>
+        <rdfs:domain rdf:resource="&time;Interval"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#isUpperBoundInclusive -->
+
+    <owl:DatatypeProperty rdf:about="&time;isUpperBoundInclusive">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">is upper bound inclusive</rdfs:label>
+        <dc:description rdf:datatype="&xsd;string">The &lt;property&gt;isUpperBoundInclusive&lt;/property&gt; indicates if an &lt;classname&gt;Interval&lt;/classname&gt;&apos;s upperBound is meant to be inclusive or exclusive.</dc:description>
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#topDataProperty"/>
+        <rdfs:domain rdf:resource="&time;Interval"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#Aspect -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#Aspect">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#Thing"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#Entity -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#Entity">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#Thing"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#ReifiedObjectProperty -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#ReifiedObjectProperty">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#Thing"/>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#ReifiedStructuredDataProperty -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#ReifiedStructuredDataProperty">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#Thing"/>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#StructuredDatatype -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#StructuredDatatype">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#Thing"/>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#Thing -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#Thing">
+        <dc:description rdf:datatype="&xsd;string">&lt;classname&gt;Thing&lt;/classname&gt; is a common superclass of all classes defined in the time.</dc:description>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#CompositeTime -->
+
+    <owl:Class rdf:about="&time;CompositeTime">
+        <rdfs:label rdf:datatype="&xsd;string">Composite Time</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&time;Time"/>
+        <dc:description rdf:datatype="&xsd;string">&lt;para&gt;A &lt;classname&gt;CompositeTime&lt;/classname&gt; is a &lt;classname&gt;Time&lt;/classname&gt; that has &lt;classname&gt;Time&lt;/classname&gt;s as its contained &lt;classname&gt;Event&lt;/classname&gt;s instead.&lt;/para&gt;
+&lt;para&gt;This can be used to capture Behaviors as a behavior is just a description of how multiple variables change together over time.&lt;/para&gt;</dc:description>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">false</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#Constant -->
+
+    <owl:Class rdf:about="&time;Constant">
+        <rdfs:label rdf:datatype="&xsd;string">Constant</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&time;Term"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">false</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#Constrains -->
+
+    <owl:Class rdf:about="&time;Constrains">
+        <rdfs:label rdf:datatype="&xsd;string">Constrains</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#ReifiedObjectProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#Constraint -->
+
+    <owl:Class rdf:about="&time;Constraint">
+        <rdfs:label rdf:datatype="&xsd;string">Constraint</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&time;MathFunction"/>
+        <dc:description rdf:datatype="&xsd;string">&lt;para&gt;A &lt;classname&gt;Constraint&lt;/classname&gt; is a thing that expresses a coupling between multiple &lt;classname&gt;Term&lt;/classname&gt;s.  This coupling has the effect of restricting the value of at least one &lt;classname&gt;Term&lt;/classname&gt;s. &lt;/para&gt;
+&lt;para&gt;&lt;classname&gt;Constraint&lt;/classname&gt;s are represented by a mathematical expression as a string where &lt;classname&gt;Term&lt;/classname&gt;-names are used to reference the corresponding &lt;classname&gt;Term&lt;/classname&gt;s.  The &lt;classname&gt;Constraint&lt;/classname&gt; separately has a relationship to each &lt;classname&gt;Term&lt;/classname&gt; which allows &lt;classname&gt;Term&lt;/classname&gt;s to be referenced by their shortName in the string representation of the constraint.&lt;/para&gt;</dc:description>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">false</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#ContainsEvent -->
+
+    <owl:Class rdf:about="&time;ContainsEvent">
+        <rdfs:label rdf:datatype="&xsd;string">Contains Event</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#ReifiedObjectProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#ContainsTime -->
+
+    <owl:Class rdf:about="&time;ContainsTime">
+        <rdfs:label rdf:datatype="&xsd;string">Contains Time</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="&time;ContainsEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#CouplesTerm -->
+
+    <owl:Class rdf:about="&time;CouplesTerm">
+        <rdfs:label rdf:datatype="&xsd;string">Couples Term</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#ReifiedObjectProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#DependentVariable -->
+
+    <owl:Class rdf:about="&time;DependentVariable">
+        <rdfs:label rdf:datatype="&xsd;string">Dependent Variable</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&time;Variable"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">false</annotation:isAbstract>
+        <isSingleton rdf:datatype="&xsd;boolean">true</isSingleton>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#DependentVariableConstraint -->
+
+    <owl:Class rdf:about="&time;DependentVariableConstraint">
+        <rdfs:label rdf:datatype="&xsd;string">Dependent Variable Constraint</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&time;Constraint"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">false</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#DurativeEvent -->
+
+    <owl:Class rdf:about="&time;DurativeEvent">
+        <rdfs:label rdf:datatype="&xsd;string">Durative Event</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&time;Event"/>
+        <owl:disjointWith rdf:resource="&time;InstantEvent"/>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;DurativeEvent&lt;/classname&gt; is an &lt;classname&gt;Event&lt;/classname&gt; that occurs over time.  It has a specified start &lt;classname&gt;InstantEvent&lt;/classname&gt; and a specified end &lt;classname&gt;InstantEvent&lt;/classname&gt;.  &lt;classname&gt;DurativeEvent&lt;/classname&gt;s can also contain other &lt;classname&gt;Event&lt;/classname&gt;s which makes it a recursive structure.</dc:description>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">false</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#EndsWith -->
+
+    <owl:Class rdf:about="&time;EndsWith">
+        <rdfs:label rdf:datatype="&xsd;string">Ends With</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="&time;ContainsEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#Event -->
+
+    <owl:Class rdf:about="&time;Event">
+        <rdfs:label rdf:datatype="&xsd;string">Event</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&time;TimeElement"/>
+        <owl:disjointWith rdf:resource="&time;Term"/>
+        <dc:description rdf:datatype="&xsd;string">An &lt;classname&gt;Event&lt;/classname&gt; is the an abstract concept that refers to a duration of time (a &lt;classname&gt;DurativeEvent&lt;/classname&gt;) or an instant in time (an &lt;classname&gt;InstantEvent&lt;/classname&gt;).</dc:description>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#HasDependentVariable -->
+
+    <owl:Class rdf:about="&time;HasDependentVariable">
+        <rdfs:label rdf:datatype="&xsd;string">Has Dependent Variable</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&time;ReferencesVariable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#HasLowerBound -->
+
+    <owl:Class rdf:about="&time;HasLowerBound">
+        <rdfs:label rdf:datatype="&xsd;string">Has Lower Bound</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#ReifiedObjectProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#HasReferenceTimeVariable -->
+
+    <owl:Class rdf:about="&time;HasReferenceTimeVariable">
+        <rdfs:label rdf:datatype="&xsd;string">Has Reference Time Variable</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&time;ReferencesVariable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#HasUpperBound -->
+
+    <owl:Class rdf:about="&time;HasUpperBound">
+        <rdfs:label rdf:datatype="&xsd;string">Has Upper Bound</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#ReifiedObjectProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#InstantEvent -->
+
+    <owl:Class rdf:about="&time;InstantEvent">
+        <rdfs:label rdf:datatype="&xsd;string">Instant Event</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&time;Event"/>
+        <dc:description rdf:datatype="&xsd;string">An &lt;classname&gt;InstantEvent&lt;/classname&gt; is an &lt;classname&gt;Event&lt;/classname&gt; that occurs at a specific instant in time and has no measurable duration.</dc:description>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">false</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#Interval -->
+
+    <owl:Class rdf:about="&time;Interval">
+        <rdfs:label rdf:datatype="&xsd;string">Interval</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&time;Term"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">false</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#MathFunction -->
+
+    <owl:Class rdf:about="&time;MathFunction">
+        <rdfs:label rdf:datatype="&xsd;string">Math Function</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&time;Term"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">false</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#OccursAtTime -->
+
+    <owl:Class rdf:about="&time;OccursAtTime">
+        <rdfs:label rdf:datatype="&xsd;string">Occurs At Time</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&time;ReferencesVariable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#ReferenceTimeVariable -->
+
+    <owl:Class rdf:about="&time;ReferenceTimeVariable">
+        <rdfs:label rdf:datatype="&xsd;string">Reference Time Variable</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&time;TimeVariable"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">false</annotation:isAbstract>
+        <isSingleton rdf:datatype="&xsd;boolean">true</isSingleton>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#ReferencesVariable -->
+
+    <owl:Class rdf:about="&time;ReferencesVariable">
+        <rdfs:label rdf:datatype="&xsd;string">References Variable</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#ReifiedObjectProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#StartsWith -->
+
+    <owl:Class rdf:about="&time;StartsWith">
+        <rdfs:label rdf:datatype="&xsd;string">Starts With</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="&time;ContainsEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#TemporalConstraint -->
+
+    <owl:Class rdf:about="&time;TemporalConstraint">
+        <rdfs:label rdf:datatype="&xsd;string">Temporal Constraint</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&time;Constraint"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">false</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#Term -->
+
+    <owl:Class rdf:about="&time;Term">
+        <rdfs:label rdf:datatype="&xsd;string">Term</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&time;TimeElement"/>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;Term&lt;/classname&gt; is TODO FIXME: Finish thought.</dc:description>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#Time -->
+
+    <owl:Class rdf:about="&time;Time">
+        <rdfs:label rdf:datatype="&xsd;string">Time</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&time;DurativeEvent"/>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;Time&lt;/classname&gt; is a &lt;classname&gt;DurativeEvent&lt;/classname&gt; that differs only in that it is meant to express the entirety of some desired log of some &lt;classname&gt;Variable&lt;/classname&gt; over time.  There is no &lt;emphasis&gt;real&lt;/emphasis&gt; distinction between a &lt;classname&gt;Time&lt;/classname&gt; and a &lt;classname&gt;DurativeEvent&lt;/classname&gt;, so it is up to the modeler to use the right type where appropriate.</dc:description>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">false</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#TimeElement -->
+
+    <owl:Class rdf:about="&time;TimeElement">
+        <rdfs:label rdf:datatype="&xsd;string">Time Element</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#Entity"/>
+        <rdfs:subClassOf rdf:resource="&base;IdentifiedElement"/>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;TimeElement&lt;/classname&gt; is the parent class for everything that will live in a &lt;classname&gt;Time&lt;/classname&gt;.  This class is probably superfluous as we can determine whether something is part of a &lt;classname&gt;Time&lt;/classname&gt; or not by starting with a &lt;classname&gt;Time&lt;/classname&gt; and finding all contained elements.</dc:description>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#TimeVariable -->
+
+    <owl:Class rdf:about="&time;TimeVariable">
+        <rdfs:label rdf:datatype="&xsd;string">Time Variable</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&time;Variable"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">false</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/time/time#Variable -->
+
+    <owl:Class rdf:about="&time;Variable">
+        <rdfs:label rdf:datatype="&xsd;string">Variable</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&time;Term"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl#r">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#s">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#t">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&time;endsWith"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&time;hasEndsWithSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&time;hasEndsWithTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&time;containsTime"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&time;hasContainsTimeSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&time;hasContainsTimeTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&time;hasConstrainsTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&time;hasConstrainsSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&time;constrains"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&time;hasReferencesVariableTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&time;hasReferencesVariableSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&time;referencesVariable"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&time;hasStartsWithTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&time;hasStartsWithSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&time;startsWith"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&time;hasHasUpperBoundTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&time;hasHasUpperBoundSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&time;hasUpperBound"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&time;hasHasReferenceTimeVariableTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&time;hasHasReferenceTimeVariableSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&time;hasReferenceTimeVariable"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&time;hasLowerBound"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&time;hasHasLowerBoundSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&time;hasHasLowerBoundTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&time;hasContainsEventTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&time;hasContainsEventSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&time;containsEvent"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&time;hasCouplesTermSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&time;hasCouplesTermTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&time;couplesTerm"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&time;hasHasDependentVariableTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&time;hasHasDependentVariableSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&time;hasDependentVariable"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&time;occursAtTime"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&time;hasOccursAtTimeTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&time;hasOccursAtTimeSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
