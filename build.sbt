@@ -1,132 +1,93 @@
+
+import java.io.File
 import sbt.Keys._
 import sbt._
 
-import gov.nasa.jpl.imce.sbt._
+licenses in GlobalScope += "Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0.html")
 
-import scala.xml.{Node => XNode}
-import scala.xml.transform._
+updateOptions := updateOptions.value.withCachedResolution(true)
 
-useGpg := true
+shellPrompt in ThisBuild := { state => Project.extract(state).currentRef.project + "> " }
 
-lazy val artifactZipFile = taskKey[File]("Location of the zip artifact file")
-
-lazy val root = Project("gov-nasa-jpl-imce-ontologies", file("."))
-  .enablePlugins(IMCEGitPlugin)
-  .enablePlugins(IMCEReleasePlugin)
-  .settings(IMCEReleasePlugin.packageReleaseProcessSettings: _*)
-  .settings(
-    IMCEKeys.licenseYearOrRange := "2009-2016",
-    IMCEKeys.organizationInfo := IMCEPlugin.Organizations.omf,
-    IMCEKeys.targetJDK := IMCEKeys.jdk18.value,
-
-    projectID := {
-      val previous = projectID.value
-      previous.extra(
-        "build.date.utc" -> buildUTCDate.value,
-        "artifact.kind" -> "omf.ontologies")
-    },
-
-    // disable using the Scala version in output paths and artifacts
-    crossPaths := false,
-
-    extractArchives := {},
-
-    artifactZipFile := {
-      import com.typesafe.sbt.packager.universal._
-      val artifactsDir=baseDirectory.value / "gov.nasa.jpl.imce.ontologies" / "ontologies" / "artifacts"
-      val targetDir = baseDirectory.value / "target"
-      val ontologiesDir= targetDir / "ontologies"
-
-      val bPath = artifactsDir / "bundles"
-      val bFiles = (PathFinder(bPath).*** --- bPath) pair Path.rebase(bPath, ontologiesDir)
-      IO.copy(bFiles, overwrite=true, preserveLastModified=true)
-      
-      val dPath = artifactsDir / "digests"
-      val dFiles = (PathFinder(dPath).*** --- dPath) pair Path.rebase(dPath, ontologiesDir)
-      IO.copy(dFiles, overwrite=true, preserveLastModified=true)
-
-      val ePath = artifactsDir / "entailments"
-      val eFiles = (PathFinder(ePath).*** --- ePath) pair Path.rebase(ePath, ontologiesDir)
-      IO.copy(eFiles, overwrite=true, preserveLastModified=true)
-
-      val oPath = artifactsDir / "ontologies"
-      val oFiles = (PathFinder(oPath).*** --- oPath) pair Path.rebase(oPath, ontologiesDir)
-      IO.copy(oFiles, overwrite=true, preserveLastModified=true)
-
-      val fileMappings = ontologiesDir.*** pair relativeTo(targetDir)
-      val zipFile: File = baseDirectory.value / "target" / s"imce-omf_ontologies-${version.value}.zip"
-
-      ZipHelper.zipNative(fileMappings, zipFile)
-
-      zipFile
-    },
-
-    addArtifact(Artifact("imce-omf_ontologies", "zip", "zip", Some("resource"), Seq(), None, Map()), artifactZipFile),
-
-    makePom <<= makePom dependsOn artifactZipFile,
-
-    // Disable (I suspect this causes a 409 Conflict with Artifactory)
-    /*
-    pomPostProcess <<= (pomPostProcess, baseDirectory) {
-      (previousPostProcess, base) => { (node: XNode) =>
-        val processedNode: XNode = previousPostProcess(node)
-        val mdUpdateDir = UpdateProperties(base)
-        val resultNode: XNode = new RuleTransformer(mdUpdateDir)(processedNode)
-        resultNode
-      }
-    },
-    */
-
-    sourceGenerators in Compile := Seq(),
-
-    managedSources in Compile := Seq(),
-
-    // disable publishing the main jar produced by `package`
-    publishArtifact in(Compile, packageBin) := false,
-
-    // disable publishing the main API jar
-    publishArtifact in(Compile, packageDoc) := false,
-
-    // disable publishing the main sources jar
-    publishArtifact in(Compile, packageSrc) := false,
-
-    // disable publishing the jar produced by `test:package`
-    publishArtifact in(Test, packageBin) := false,
-
-    // disable publishing the test API jar
-    publishArtifact in(Test, packageDoc) := false,
-
-    // disable publishing the test sources jar
-    publishArtifact in(Test, packageSrc) := false
-  )
-
-
-def UpdateProperties(base: File): RewriteRule = {
-
-  val targetDir = base / "target"
-  val oDir= targetDir / "ontologies"
-  val fileMappings = (oDir.*** pair relativeTo(targetDir)).sortBy(_._2)
-  val oFiles = fileMappings flatMap {
-    case (file, path) if ! file.isDirectory =>
-      Some(MD5File(name=path, md5=MD5.hashFile(file)))
-    case _ =>
-      None
-  }
-  val all = MD5SubDirectory(
-    name = "ontologies",
-    files = oFiles)
-
-  new RewriteRule {
-
-    import spray.json._
-    import MD5JsonProtocol._
-
-    override def transform(n: XNode): Seq[XNode]
-    = n match {
-      case <properties>{props@_*}</properties> =>
-        <properties>{props}<md5>{all.toJson}</md5></properties>
-      case _ =>
-        n
-    }
-  }
+resolvers := {
+  val previous = resolvers.value
+  if (git.gitUncommittedChanges.value)
+    Seq[Resolver](Resolver.mavenLocal) ++ previous
+  else
+    previous
 }
+
+lazy val imce_ontologies_public =
+  Project("gov-nasa-jpl-imce-ontologies-public", file("."))
+    .enablePlugins(AetherPlugin)
+    .enablePlugins(GitVersioning)
+    .enablePlugins(UniversalPlugin)
+    .settings(
+      projectID := {
+        val previous = projectID.value
+        previous.extra(
+          "artifact.kind" -> "ontologies")
+      },
+
+      // disable automatic dependency on the Scala library
+      autoScalaLibrary := false,
+
+      // disable using the Scala version in output paths and artifacts
+      crossPaths := false,
+
+      publishMavenStyle := true,
+
+      // do not include all repositories in the POM
+      pomAllRepositories := false,
+
+      // make sure no repositories show up in the POM file
+      pomIncludeRepository := { _ => false },
+
+      // disable publishing the main jar produced by `package`
+      publishArtifact in(Compile, packageBin) := false,
+
+      // disable publishing the main API jar
+      publishArtifact in(Compile, packageDoc) := false,
+
+      // disable publishing the main sources jar
+      publishArtifact in(Compile, packageSrc) := false,
+
+      // disable publishing the jar produced by `test:package`
+      publishArtifact in(Test, packageBin) := false,
+
+      // disable publishing the test API jar
+      publishArtifact in(Test, packageDoc) := false,
+
+      // disable publishing the test sources jar
+      publishArtifact in(Test, packageSrc) := false,
+
+      sourceGenerators in Compile := Seq(),
+
+      managedSources in Compile := Seq(),
+
+      com.typesafe.sbt.packager.Keys.topLevelDirectory in Universal := None,
+
+      // name the '*-resource.zip' in the same way as other artifacts
+      com.typesafe.sbt.packager.Keys.packageName in Universal :=
+        normalizedName.value + "-" + version.value + "-resource",
+
+      // contents of the '*-resource.zip' to be produced by 'universal:packageBin'
+      mappings in Universal in packageBin ++= {
+
+        val ontologyFiles =
+          (baseDirectory.value / "ontologies" ***).pair(relativeTo(baseDirectory.value)).sortBy(_._2)
+
+        ontologyFiles
+
+      },
+
+      artifacts += {
+        val n = (name in Universal).value
+        Artifact(n, "zip", "zip", Some("resource"), Seq(), None, Map())
+      },
+      packagedArtifacts += {
+        val p = (packageBin in Universal).value
+        val n = (name in Universal).value
+        Artifact(n, "zip", "zip", Some("resource"), Seq(), None, Map()) -> p
+      }
+    )

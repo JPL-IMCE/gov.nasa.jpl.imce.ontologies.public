@@ -17,6 +17,11 @@ organizationHomepage := Some(url("https://github.jpl.nasa.gov/imce"))
 
 git.remoteRepo := "git@github.jpl.nasa.gov/imce/gov.nasa.jpl.imce.ontologies.git"
 
+// publish to bintray.com via: `sbt publish`
+publishTo := Some(
+  "JPL-IMCE" at
+    s"https://api.bintray.com/content/jpl-imce/${organization.value}/${moduleName.value}/${version.value}")
+
 scmInfo := Some(ScmInfo(
   browseUrl = url(s"https://github.jpl.nasa.gov/imce/gov.nasa.jpl.imce.ontologies"),
   connection = "scm:"+git.remoteRepo.value))
@@ -41,5 +46,10 @@ developers := List(
     id="dwagner",
     name="David A. Wagner",
     email="david.a.wagner@jpl.nasa.gov",
-    url=url("https://gateway.jpl.nasa.gov/personal/dwagner/default.aspx")))
+    url=url("https://gateway.jpl.nasa.gov/personal/dwagner/default.aspx")),
+  Developer(
+    id="sherzig",
+    name="Sebastian J. Herzig",
+    email="sebastian.j.herzig@jpl.nasa.gov",
+    url=url("https://gateway.jpl.nasa.gov/personal/sherzig/default.aspx")))
 
