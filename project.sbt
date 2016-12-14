@@ -1,7 +1,7 @@
 
 sbtPlugin := false
 
-name := "gov.nasa.jpl.imce.ontologies"
+name := "gov.nasa.jpl.imce.ontologies.public"
 
 description := "JPL's Ontological Modeling Framework vocabularies for Integrated Model-Centric Engineering (IMCE)"
 
@@ -15,7 +15,7 @@ homepage := Some(url(s"https://github.jpl.nasa.gov/imce/${moduleName.value}"))
 
 organizationHomepage := Some(url("https://github.jpl.nasa.gov/imce"))
 
-git.remoteRepo := "git@github.jpl.nasa.gov/imce/gov.nasa.jpl.imce.ontologies.git"
+git.remoteRepo := "git@github.jpl.nasa.gov/imce/gov.nasa.jpl.imce.ontologies.public.git"
 
 // publish to bintray.com via: `sbt publish`
 publishTo := Some(
@@ -23,7 +23,7 @@ publishTo := Some(
     s"https://api.bintray.com/content/jpl-imce/${organization.value}/${moduleName.value}/${version.value}")
 
 scmInfo := Some(ScmInfo(
-  browseUrl = url(s"https://github.jpl.nasa.gov/imce/gov.nasa.jpl.imce.ontologies"),
+  browseUrl = url(s"https://github.jpl.nasa.gov/imce/gov.nasa.jpl.imce.ontologies.public"),
   connection = "scm:"+git.remoteRepo.value))
 
 developers := List(
