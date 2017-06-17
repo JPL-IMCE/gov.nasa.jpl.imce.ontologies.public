@@ -43,18 +43,12 @@
     <rdfs:Datatype rdf:about="&PrimitiveTypes;UnlimitedNatural">
         <owl:equivalentClass>
             <rdfs:Datatype>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&xsd;nonNegativeInteger"/>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&rdf;List"/>
-                                <rdf:first rdf:datatype="&xsd;string">*</rdf:first>
-                                <rdf:rest rdf:resource="&rdf;nil"/>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                </owl:unionOf>
+                <owl:onDatatype rdf:resource="&xsd;integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="&xsd;integer">-1</xsd:minInclusive>
+                    </rdf:Description>
+               </owl:withRestrictions>
             </rdfs:Datatype>
         </owl:equivalentClass>
     </rdfs:Datatype>
