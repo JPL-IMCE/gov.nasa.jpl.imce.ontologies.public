@@ -1564,7 +1564,9 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#QuantityKind -->
 
-    <owl:Class rdf:about="&SysML;QuantityKind"/>
+    <owl:Class rdf:about="&SysML;QuantityKind">
+        <rdfs:subClassOf rdf:resource="&SysML-backbone;Entity"/>
+    </owl:Class>
     
 
 
@@ -1700,7 +1702,9 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Unit -->
 
-    <owl:Class rdf:about="&SysML;Unit"/>
+    <owl:Class rdf:about="&SysML;Unit">
+        <rdfs:subClassOf rdf:resource="&SysML-backbone;Entity"/>
+    </owl:Class>
     
 
 
