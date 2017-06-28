@@ -38,9 +38,15 @@ closed terminology <http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUD
 
 	SystemOfQuantities extendsConcept QUDV:SystemOfQuantities
 
+	QUDV:Prefix extendsConcept SysML-metamodel:Class_Block
+
 	QuantityKindFactor extendsConcept QUDV:QuantityKindFactor
 
+	QUDV:QuantityKindFactor extendsConcept SysML-metamodel:Class_Block
+
 	SimpleQuantityKind extendsConcept QUDV:SimpleQuantityKind
+
+	QUDV:Dimension extendsConcept SysML-metamodel:Class_Block
 
 	LinearConversionUnit extendsConcept QUDV:LinearConversionUnit
 
@@ -50,13 +56,19 @@ closed terminology <http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUD
 
 	Prefix extendsConcept QUDV:Prefix
 
+	QUDV:SystemOfUnits extendsConcept SysML-metamodel:Class_Block
+
 	Dimension extendsConcept QUDV:Dimension
 
 	AffineConversionUnit extendsConcept QUDV:AffineConversionUnit
 
 	UnitFactor extendsConcept QUDV:UnitFactor
 
+	QUDV:UnitFactor extendsConcept SysML-metamodel:Class_Block
+
 	SimpleUnit extendsConcept QUDV:SimpleUnit
+
+	QUDV:SystemOfQuantities extendsConcept SysML-metamodel:Class_Block
 
 	DerivedUnit extendsConcept QUDV:DerivedUnit
 

@@ -6,4 +6,96 @@ closed terminology <http://imce.jpl.nasa.gov/foundation/project/project-embeddin
 
 	extends <http://imce.jpl.nasa.gov/discipline/mechanical/mechanical-embedding>
 
+	project:Policy extendsConcept SysML-metamodel:Component_Block
+
+	project:Deliverable extendsConcept SysML-metamodel:Component_Block
+
+	project:Process extendsConcept owl2-mof2:BinaryDependencyEndType
+
+	project:Process extendsConcept owl2-mof2:BinaryAssociationEndType
+
+	project:Delivers extendsRelationship owl2-mof2:StructuralOutFlowPropertyRelationship
+
+	project:Facility extendsConcept SysML-metamodel:Component_Block
+
+	project:Supplies extendsRelationship owl2-mof2:BinaryDependency
+
+	project:Person extendsConcept SysML-metamodel:Component_Block
+
+	project:InterchangePoint extendsConcept owl2-mof2:StructuralFullPortType
+
+	project:Stakeholder extendsConcept SysML-metamodel:Component_Block
+
+	project:Deliverable extendsConcept owl2-mof2:StructuralFlowPropertyType
+
+	project:Process extendsConcept owl2-mof2:StructuralFlowPropertyContainerType
+
+	project:Interchange extendsConcept owl2-mof2:BinaryDependencyEndType
+
+	project:DevelopmentState extendsConcept owl2-mof2:BinaryAssociationEndType
+
+	project:InterchangePoint extendsConcept SysML-metamodel:Component_Block
+
+	project:Involves extendsRelationship owl2-mof2:BinaryAssociationBlockEnd
+
+	project:Receives extendsRelationship owl2-mof2:StructuralInFlowPropertyRelationship
+
+	project:HasParticipant extendsRelationship owl2-mof2:StructuralInOutFlowPropertyRelationship
+
+	project:Organization extendsConcept SysML-metamodel:Component_Block
+
+	project:Realizes extendsRelationship owl2-mof2:BinaryDependency
+
+	project:Manifests extendsRelationship owl2-mof2:BinaryCompositeAssociation
+
+	project:Authorizes extendsRelationship owl2-mof2:BinaryDependency
+
+	project:Invokes extendsRelationship owl2-mof2:BinaryCompositeAssociation
+
+	project:Describes extendsRelationship owl2-mof2:BinaryDependency
+
+	project:Binds extendsRelationship owl2-mof2:BinaryDependency
+
+	project:DelegatesTo extendsRelationship owl2-mof2:BinaryDependency
+
+	project:Represents extendsRelationship owl2-mof2:BinaryDependency
+
+	project:Policy extendsConcept owl2-mof2:BinaryDependencyEndType
+
+	project:HasResponsibilityFor extendsRelationship owl2-mof2:BinaryDependency
+
+	project:Role extendsConcept UML-metamodel:Actor
+
+	project:InterchangePoint extendsConcept owl2-mof2:StructuralFlowPropertyContainerType
+
+	project:BelongsTo extendsRelationship owl2-mof2:BinaryDependency
+
+	project:Concern extendsConcept SysML-metamodel:Component_Block
+
+	project:Involves2 extendsRelationship owl2-mof2:BinaryAssociationBlockEnd2
+
+	project:HasRole extendsRelationship owl2-mof2:BinaryDependency
+
+	project:Executes extendsRelationship owl2-mof2:BinaryDependency
+
+	project:HasAssignment extendsRelationship owl2-mof2:BinaryDependency
+
+	project:Process extendsConcept owl2-mof2:StructuralFullPortEncapsulatedClassifierType
+
+	project:InterchangesThrough extendsRelationship owl2-mof2:StructuralFullPortRelationship
+
+	project:InterchangePoint extendsConcept owl2-mof2:BinaryAssociationEndType
+
+	project:Involves1 extendsRelationship owl2-mof2:BinaryAssociationBlockEnd1
+
+	project:Process extendsConcept SysML-metamodel:Component_Block
+
+	project:ReliesOn extendsRelationship owl2-mof2:BinaryDependency
+
+	project:Interchange extendsConcept owl2-mof2:StructuralFlowPropertyContainerType
+
+	project:Product extendsConcept SysML-metamodel:Component_Block
+
+	project:Interchange extendsConcept owl2-mof2:BinaryAssociationBlock
+
 }

@@ -290,7 +290,11 @@ closed terminology <http://imce.jpl.nasa.gov/foundation/project/project> {
 
 	InterchangePoint extendsAspect base:IdentifiedElement
 
+	mission:Component extendsAspect SuppliedElement
+
 	Authority extendsConcept base:Package
+
+	mission:Objective extendsAspect base:IdentifiedElement
 
 	Role extendsAspect base:IdentifiedElement
 
@@ -304,9 +308,19 @@ closed terminology <http://imce.jpl.nasa.gov/foundation/project/project> {
 
 	Supplies extendsAspect AssignedElement
 
+	mission:Mission extendsAspect SuppliedElement
+
+	mission:Function extendsAspect RealizedElement
+
+	mission:Objective extendsConcept Concern
+
 	WorkPackage extendsAspect RealizedElement
 
+	mission:Component extendsAspect DevelopedElement
+
 	Concern extendsAspect base:IdentifiedElement
+
+	mission:Interface extendsAspect DevelopedElement
 
 	Product extendsAspect DevelopedElement
 
@@ -336,13 +350,19 @@ closed terminology <http://imce.jpl.nasa.gov/foundation/project/project> {
 
 	Executes extendsAspect AssignedElement
 
+	mission:Junction extendsAspect RealizedElement
+
 	Involves2 extendsRelationship Involves
+
+	mission:Mission extendsAspect RealizedElement
 
 	Deliverable extendsAspect base:IdentifiedElement
 
 	WorkPackage extendsConcept base:Package
 
 	Facility extendsAspect base:IdentifiedElement
+
+	mission:Interface extendsAspect RealizedElement
 
 	Product extendsAspect base:AggregatedElement
 
@@ -353,6 +373,8 @@ closed terminology <http://imce.jpl.nasa.gov/foundation/project/project> {
 	Facility extendsAspect DevelopedElement
 
 	Process extendsAspect AssignedElement
+
+	mission:Component extendsAspect RealizedElement
 
 	WorkPackage extendsConcept Authority
 

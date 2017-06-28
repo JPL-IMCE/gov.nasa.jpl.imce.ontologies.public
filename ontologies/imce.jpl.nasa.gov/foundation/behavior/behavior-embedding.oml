@@ -38,4 +38,76 @@ closed terminology <http://imce.jpl.nasa.gov/foundation/behavior/behavior-embedd
 
 	extends <http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding>
 
+	behavior:Attribute extendsConcept owl2-mof2:StructuralBindingEndType
+
+	behavior:HasState extendsRelationship owl2-mof2:RegionOwnsState
+
+	behavior:HasRegion extendsRelationship owl2-mof2:StateMachineOwnsRegion
+
+	behavior:PropertyGroup extendsConcept owl2-mof2:StructuralFullPortEncapsulatedClassifierType
+
+	behavior:Presents extendsRelationship owl2-mof2:StructuralFullPortRelationship
+
+	behavior:HasInteractionBehaviorClass extendsRelationship owl2-mof2:BinaryCompositeAssociation
+
+	behavior:InteractionTerminal extendsConcept SysML-metamodel:Class_Block_InterfaceBlock
+
+	behavior:AbstractValueTypedAttribute extendsAspect owl2-mof2:StructuralPropertyAspect
+
+	behavior:AttributeAutomaton extendsConcept UML-metamodel:StateMachine
+
+	behavior:Property extendsConcept UML-metamodel:Property
+
+	behavior:AbstractValueTypedAttribute extendsConcept UML:Property
+
+	behavior:AttributeConstraintParticipant extendsConcept owl2-mof2:StructuralConnectionEndType
+
+	behavior:Interaction extendsConcept owl2-mof2:NAryRelationship
+
+	behavior:HasElementBehaviorClass extendsRelationship owl2-mof2:BinaryCompositeAssociation
+
+	behavior:Exposes extendsRelationship owl2-mof2:StructuralBindingRelationship
+
+	behavior:ElementBehaviorClass extendsConcept owl2-mof2:BinaryAssociationEndType
+
+	behavior:AutomatonState extendsConcept UML-metamodel:State
+
+	behavior:InteractionRole extendsConcept owl2-mof2:NAryRole
+
+	behavior:PlaysRoleOf extendsRelationship owl2-mof2:StructuralBindingRelationship
+
+	behavior:AutomatonTransition extendsConcept owl2-mof2:Transition
+
+	behavior:References extendsRelationship owl2-mof2:BinaryReferenceAssociation
+
+	behavior:AutomatonRegion extendsConcept UML-metamodel:Region
+
+	behavior:AutomatonState extendsConcept owl2-mof2:State
+
+	behavior:AutomatonTransition extendsConcept UML-metamodel:Transition
+
+	behavior:PropertySurrogate extendsConcept UML-metamodel:Port
+
+	behavior:AttributeConstraint extendsConcept owl2-mof2:ComponentConstraintBlock
+
+	behavior:InteractionBehaviorClass extendsConcept owl2-mof2:BinaryAssociationEndType
+
+	behavior:Interaction extendsConcept SysML:Block
+
+	behavior:AttributeConstraintParticipant extendsConcept owl2-mof2:StructuralBindingEndType
+
+	behavior:Interaction extendsConcept owl2-mof2:BinaryAssociationEndType
+
+	behavior:Attribute extendsConcept owl2-mof2:StructuralConnectionEndType
+
+	behavior:InteractionTerminal extendsConcept owl2-mof2:StructuralFullPortType
+
+	behavior:AutomatonRegion extendsConcept owl2-mof2:Region
+
+	behavior:InteractionTerminal extendsConcept owl2-mof2:BinaryAssociationEndType
+
+	behavior:HasTransition extendsRelationship owl2-mof2:RegionOwnsTransition
+
+	behavior:AttributeAutomaton extendsConcept owl2-mof2:StateMachine
+
 }
