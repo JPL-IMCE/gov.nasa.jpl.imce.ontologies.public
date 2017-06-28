@@ -1,0 +1,88 @@
+closed terminology <http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology> {
+
+	extends <http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV>
+
+	concept MeasurementUncertainty
+
+	concept QuantityValueSpecification
+
+	concept Property_Quantity
+
+	concept ValueType_MasurementScale
+
+	concept MeasurementResult
+
+	concept ValueSpecification_MeasurementUncertainty
+
+	concept InputQuantity
+
+	concept Quantity_InfluenceQuantity
+
+	concept MasurementScale
+
+	concept ConstraintBlock_MeasurementModel
+
+	concept Quantity_Measurand
+
+	concept ValueSpecification_QuantityValueSpecification
+
+	concept Quantity
+
+	concept InfluenceQuantity
+
+	concept MeasurementModel
+
+	concept Quantity_InputQuantity
+
+	concept Measurand
+
+	concept InstanceSpecification_MeasurementResult
+
+	reifiedRelationship A_measurementUncertainty_quantityValueSpecification {
+		functional
+		unreified = a_measurementUncertainty_quantityValueSpecification
+		source = QuantityValueSpecification
+		target = MeasurementUncertainty }
+
+	reifiedRelationship A_quantityValues_measurementScale {
+		unreified = a_quantityValues_measurementScale
+		source = MasurementScale
+		target = UML:ValueSpecification }
+
+	InputQuantity extendsConcept Quantity
+
+	InstanceSpecification_MeasurementResult extendsConcept MeasurementResult
+
+	MasurementScale extendsConcept SysML:ValueType
+
+	InstanceSpecification_MeasurementResult extendsConcept UML:InstanceSpecification
+
+	ValueSpecification_QuantityValueSpecification extendsConcept UML:ValueSpecification
+
+	Property_Quantity extendsConcept UML:Property
+
+	Property_Quantity extendsConcept Quantity
+
+	ValueType_MasurementScale extendsConcept MasurementScale
+
+	ValueSpecification_MeasurementUncertainty extendsConcept MeasurementUncertainty
+
+	Measurand extendsConcept Quantity
+
+	ConstraintBlock_MeasurementModel extendsConcept MeasurementModel
+
+	InfluenceQuantity extendsConcept Quantity
+
+	MeasurementModel extendsConcept SysML:ConstraintBlock
+
+	Quantity_InputQuantity extendsConcept InputQuantity
+
+	Quantity_Measurand extendsConcept Measurand
+
+	ValueSpecification_QuantityValueSpecification extendsConcept QuantityValueSpecification
+
+	Quantity_InfluenceQuantity extendsConcept InfluenceQuantity
+
+	ValueSpecification_MeasurementUncertainty extendsConcept UML:ValueSpecification
+
+}

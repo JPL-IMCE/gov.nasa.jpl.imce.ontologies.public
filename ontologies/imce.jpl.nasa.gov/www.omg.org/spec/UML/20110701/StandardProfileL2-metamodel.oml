@@ -1,0 +1,1003 @@
+closed terminology <http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel> {
+
+	extends <http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2>
+
+	extends <http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel>
+
+	concept Node_Metaclass
+
+	concept Activity_ImplementationClass
+
+	concept Device_Specification
+
+	concept InterfaceRealization_Refine
+
+	concept Component_Specification
+
+	concept Realization_Derive
+
+	concept AssociationClass_Focus
+
+	concept StateMachine_Utility
+
+	concept Node_Focus
+
+	concept Artifact_File_Library
+
+	concept Usage_Responsibility
+
+	concept Node_Utility
+
+	concept StateMachine_Focus
+
+	concept Operation_Destroy
+
+	concept OpaqueBehavior_Focus
+
+	concept Artifact_File_Executable
+
+	concept ExecutionEnvironment_Focus
+
+	concept PrimitiveType_Realization
+
+	concept OpaqueBehavior_Specification
+
+	concept Activity_Realization
+
+	concept AssociationClass_Specification
+
+	concept ExecutionEnvironment_Specification
+
+	concept Interaction_Utility
+
+	concept Node_Auxiliary
+
+	concept ExecutionEnvironment_Type
+
+	concept Interaction_ImplementationClass
+
+	concept ProtocolStateMachine_Type
+
+	concept ComponentRealization_Trace
+
+	concept Class_ImplementationClass
+
+	concept UseCase_Specification
+
+	concept PrimitiveType_Specification
+
+	concept AssociationClass_Realization
+
+	concept Reception_Create
+
+	concept ComponentRealization_Derive
+
+	concept Component_Realization
+
+	concept Component_Implement
+
+	concept Interaction_Type
+
+	concept AssociationClass_Type
+
+	concept ProtocolStateMachine_ImplementationClass
+
+	concept Operation_Create
+
+	concept Artifact_File_Document
+
+	concept DeploymentSpecification_Realization
+
+	concept OpaqueBehavior_Realization
+
+	concept Model_Framework
+
+	concept ExecutionEnvironment_Realization
+
+	concept Usage_Call
+
+	concept Artifact_Specification
+
+	concept AssociationClass_ImplementationClass
+
+	concept Profile_Framework
+
+	concept Reception_Destroy
+
+	concept FunctionBehavior_Auxiliary
+
+	concept Interface_Specification
+
+	concept OpaqueBehavior_Type
+
+	concept Substitution_Refine
+
+	concept Class_Auxiliary
+
+	concept FunctionBehavior_ImplementationClass
+
+	concept Association_Specification
+
+	concept Package_ModelLibrary
+
+	concept Activity_Utility
+
+	concept Interaction_Metaclass
+
+	concept Package_Framework
+
+	concept Interface_Realization
+
+	concept AssociationClass_Auxiliary
+
+	concept Collaboration_Specification
+
+	concept ProtocolStateMachine_Focus
+
+	concept Device_ImplementationClass
+
+	concept Collaboration_Realization
+
+	concept FunctionBehavior_Realization
+
+	concept Usage_Send
+
+	concept Abstraction_Refine
+
+	concept StateMachine_Specification
+
+	concept Interaction_Specification
+
+	concept Realization_Trace
+
+	concept ExecutionEnvironment_Utility
+
+	concept OpaqueBehavior_Utility
+
+	concept ExecutionEnvironment_ImplementationClass
+
+	concept ExecutionEnvironment_Auxiliary
+
+	concept Activity_Specification
+
+	concept Component_Auxiliary
+
+	concept Class_Realization
+
+	concept Usage_Instantiate
+
+	concept Signal_Specification
+
+	concept ExecutionEnvironment_Metaclass
+
+	concept Component_Entity
+
+	concept Node_Specification
+
+	concept Artifact_File_Script
+
+	concept Activity_Metaclass
+
+	concept CommunicationPath_Realization
+
+	concept Node_Realization
+
+	concept Model_ModelLibrary
+
+	concept ProtocolStateMachine_Realization
+
+	concept FunctionBehavior_Type
+
+	concept Node_Type
+
+	concept ProtocolStateMachine_Metaclass
+
+	concept StateMachine_Type
+
+	concept CommunicationPath_Specification
+
+	concept OpaqueBehavior_Auxiliary
+
+	concept Abstraction_Derive
+
+	concept Device_Realization
+
+	concept DataType_Specification
+
+	concept Component_Metaclass
+
+	concept FunctionBehavior_Utility
+
+	concept Class_Specification
+
+	concept Component_Service
+
+	concept ComponentRealization_Refine
+
+	concept Activity_Auxiliary
+
+	concept InformationItem_Realization
+
+	concept Artifact_File_Source
+
+	concept Component_Utility
+
+	concept DataType_Realization
+
+	concept Manifestation_Refine
+
+	concept StateMachine_Realization
+
+	concept Manifestation_Derive
+
+	concept InterfaceRealization_Trace
+
+	concept Substitution_Trace
+
+	concept Interaction_Auxiliary
+
+	concept ProtocolStateMachine_Utility
+
+	concept Component_Subsystem
+
+	concept FunctionBehavior_Focus
+
+	concept Actor_Realization
+
+	concept Realization_Refine
+
+	concept Component_Focus
+
+	concept OpaqueBehavior_ImplementationClass
+
+	concept Association_Realization
+
+	concept Manifestation_Trace
+
+	concept Signal_Realization
+
+	concept Interaction_Focus
+
+	concept Enumeration_Realization
+
+	concept Class_Focus
+
+	concept Component_Type
+
+	concept Device_Metaclass
+
+	concept Abstraction_Trace
+
+	concept StateMachine_Auxiliary
+
+	concept Class_Type
+
+	concept Usage_Create
+
+	concept Substitution_Derive
+
+	concept Class_Utility
+
+	concept Profile_ModelLibrary
+
+	concept OpaqueBehavior_Metaclass
+
+	concept InformationItem_Specification
+
+	concept Activity_Type
+
+	concept Artifact_File
+
+	concept Artifact_Realization
+
+	concept ProtocolStateMachine_Specification
+
+	concept Component_Process
+
+	concept FunctionBehavior_Metaclass
+
+	concept ProtocolStateMachine_Auxiliary
+
+	concept Node_ImplementationClass
+
+	concept InterfaceRealization_Derive
+
+	concept Component_ImplementationClass
+
+	concept Device_Auxiliary
+
+	concept StateMachine_ImplementationClass
+
+	concept FunctionBehavior_Specification
+
+	concept Device_Type
+
+	concept Activity_Focus
+
+	concept Enumeration_Specification
+
+	concept AssociationClass_Utility
+
+	concept Device_Focus
+
+	concept Class_Metaclass
+
+	concept Interaction_Realization
+
+	concept DeploymentSpecification_Specification
+
+	concept StateMachine_Metaclass
+
+	concept Device_Utility
+
+	concept UseCase_Realization
+
+	concept AssociationClass_Metaclass
+
+	concept Actor_Specification
+
+	DeploymentSpecification_Specification extendsConcept StandardProfileL2:Classifier_Specification
+
+	Device_Metaclass extendsConcept StandardProfileL2:Class_Metaclass
+
+	Activity_Specification extendsConcept StandardProfileL2:Classifier_Specification
+
+	OpaqueBehavior_Realization extendsConcept UML-metamodel:OpaqueBehavior
+
+	Node_Specification extendsConcept UML-metamodel:Node
+
+	Package_Framework extendsConcept StandardProfileL2:Package_Framework
+
+	Substitution_Derive extendsConcept StandardProfileL2:Abstraction_Derive
+
+	Component_Auxiliary extendsConcept UML-metamodel:Component
+
+	Artifact_File_Executable extendsConcept Artifact_File
+
+	Operation_Destroy extendsConcept UML-metamodel:Operation
+
+	Actor_Realization extendsConcept StandardProfileL2:Classifier_Realization
+
+	Activity_Specification extendsConcept UML-metamodel:Activity
+
+	DeploymentSpecification_Realization extendsConcept UML-metamodel:DeploymentSpecification
+
+	Signal_Realization extendsConcept StandardProfileL2:Classifier_Realization
+
+	OpaqueBehavior_Metaclass extendsConcept StandardProfileL2:Class_Metaclass
+
+	Substitution_Trace extendsConcept UML-metamodel:Substitution
+
+	InterfaceRealization_Refine extendsConcept StandardProfileL2:Abstraction_Refine
+
+	Component_Process extendsConcept StandardProfileL2:Component_Process
+
+	Signal_Specification extendsConcept UML-metamodel:Signal
+
+	Interaction_ImplementationClass extendsConcept StandardProfileL2:Class_ImplementationClass
+
+	Class_Metaclass extendsConcept UML-metamodel:Class
+
+	OpaqueBehavior_Focus extendsConcept StandardProfileL2:Class_Focus
+
+	Realization_Trace extendsConcept StandardProfileL2:Abstraction_Trace
+
+	DataType_Specification extendsConcept StandardProfileL2:Classifier_Specification
+
+	ExecutionEnvironment_Realization extendsConcept StandardProfileL2:Classifier_Realization
+
+	Reception_Create extendsConcept StandardProfileL2:BehavioralFeature_Create
+
+	OpaqueBehavior_Focus extendsConcept UML-metamodel:OpaqueBehavior
+
+	Interaction_Auxiliary extendsConcept UML-metamodel:Interaction
+
+	AssociationClass_Focus extendsConcept UML-metamodel:AssociationClass
+
+	Node_Auxiliary extendsConcept UML-metamodel:Node
+
+	ProtocolStateMachine_ImplementationClass extendsConcept UML-metamodel:ProtocolStateMachine
+
+	ExecutionEnvironment_Metaclass extendsConcept StandardProfileL2:Class_Metaclass
+
+	ProtocolStateMachine_Metaclass extendsConcept StandardProfileL2:Class_Metaclass
+
+	Package_ModelLibrary extendsConcept UML-metamodel:Package
+
+	FunctionBehavior_Metaclass extendsConcept UML-metamodel:FunctionBehavior
+
+	ExecutionEnvironment_Type extendsConcept StandardProfileL2:Class_Type
+
+	Activity_ImplementationClass extendsConcept UML-metamodel:Activity
+
+	Device_Utility extendsConcept StandardProfileL2:Class_Utility
+
+	ExecutionEnvironment_Focus extendsConcept StandardProfileL2:Class_Focus
+
+	Model_Framework extendsConcept StandardProfileL2:Package_Framework
+
+	Artifact_File_Library extendsConcept StandardProfileL2:File_Library
+
+	Actor_Specification extendsConcept UML-metamodel:Actor
+
+	Usage_Create extendsConcept StandardProfileL2:Usage_Create
+
+	FunctionBehavior_Type extendsConcept StandardProfileL2:Class_Type
+
+	ComponentRealization_Trace extendsConcept StandardProfileL2:Abstraction_Trace
+
+	Artifact_Realization extendsConcept UML-metamodel:Artifact
+
+	Realization_Derive extendsConcept StandardProfileL2:Abstraction_Derive
+
+	Actor_Realization extendsConcept UML-metamodel:Actor
+
+	InterfaceRealization_Trace extendsConcept StandardProfileL2:Abstraction_Trace
+
+	ExecutionEnvironment_Utility extendsConcept StandardProfileL2:Class_Utility
+
+	Component_Service extendsConcept StandardProfileL2:Component_Service
+
+	Class_Auxiliary extendsConcept UML-metamodel:Class
+
+	StateMachine_Specification extendsConcept StandardProfileL2:Classifier_Specification
+
+	Class_Realization extendsConcept UML-metamodel:Class
+
+	Activity_Utility extendsConcept UML-metamodel:Activity
+
+	ProtocolStateMachine_Auxiliary extendsConcept UML-metamodel:ProtocolStateMachine
+
+	Device_ImplementationClass extendsConcept UML-metamodel:Device
+
+	InterfaceRealization_Derive extendsConcept UML-metamodel:InterfaceRealization
+
+	ProtocolStateMachine_Specification extendsConcept UML-metamodel:ProtocolStateMachine
+
+	AssociationClass_Type extendsConcept StandardProfileL2:Class_Type
+
+	Node_Realization extendsConcept UML-metamodel:Node
+
+	FunctionBehavior_Focus extendsConcept StandardProfileL2:Class_Focus
+
+	Class_Metaclass extendsConcept StandardProfileL2:Class_Metaclass
+
+	Node_ImplementationClass extendsConcept UML-metamodel:Node
+
+	Actor_Specification extendsConcept StandardProfileL2:Classifier_Specification
+
+	Interaction_Utility extendsConcept UML-metamodel:Interaction
+
+	OpaqueBehavior_Metaclass extendsConcept UML-metamodel:OpaqueBehavior
+
+	Device_Specification extendsConcept StandardProfileL2:Classifier_Specification
+
+	Usage_Send extendsConcept StandardProfileL2:Usage_Send
+
+	FunctionBehavior_Metaclass extendsConcept StandardProfileL2:Class_Metaclass
+
+	ExecutionEnvironment_Specification extendsConcept StandardProfileL2:Classifier_Specification
+
+	Enumeration_Realization extendsConcept UML-metamodel:Enumeration
+
+	Artifact_File_Source extendsConcept StandardProfileL2:File_Source
+
+	DataType_Specification extendsConcept UML-metamodel:DataType
+
+	DeploymentSpecification_Realization extendsConcept StandardProfileL2:Classifier_Realization
+
+	StateMachine_Focus extendsConcept UML-metamodel:StateMachine
+
+	Interface_Realization extendsConcept UML-metamodel:Interface
+
+	FunctionBehavior_Type extendsConcept UML-metamodel:FunctionBehavior
+
+	AssociationClass_ImplementationClass extendsConcept StandardProfileL2:Class_ImplementationClass
+
+	Reception_Destroy extendsConcept UML-metamodel:Reception
+
+	Component_Realization extendsConcept UML-metamodel:Component
+
+	FunctionBehavior_Focus extendsConcept UML-metamodel:FunctionBehavior
+
+	Realization_Trace extendsConcept UML-metamodel:Realization
+
+	Interface_Specification extendsConcept StandardProfileL2:Classifier_Specification
+
+	InterfaceRealization_Trace extendsConcept UML-metamodel:InterfaceRealization
+
+	Artifact_File_Script extendsConcept StandardProfileL2:File_Script
+
+	Manifestation_Trace extendsConcept UML-metamodel:Manifestation
+
+	ExecutionEnvironment_Realization extendsConcept UML-metamodel:ExecutionEnvironment
+
+	Usage_Create extendsConcept UML-metamodel:Usage
+
+	AssociationClass_ImplementationClass extendsConcept UML-metamodel:AssociationClass
+
+	Usage_Instantiate extendsConcept UML-metamodel:Usage
+
+	ProtocolStateMachine_Specification extendsConcept StandardProfileL2:Classifier_Specification
+
+	AssociationClass_Utility extendsConcept UML-metamodel:AssociationClass
+
+	Association_Specification extendsConcept UML-metamodel:Association
+
+	Model_Framework extendsConcept UML-metamodel:Model
+
+	StateMachine_Auxiliary extendsConcept StandardProfileL2:Class_Auxiliary
+
+	ExecutionEnvironment_Auxiliary extendsConcept UML-metamodel:ExecutionEnvironment
+
+	DeploymentSpecification_Specification extendsConcept UML-metamodel:DeploymentSpecification
+
+	Association_Specification extendsConcept StandardProfileL2:Classifier_Specification
+
+	ExecutionEnvironment_Utility extendsConcept UML-metamodel:ExecutionEnvironment
+
+	AssociationClass_Utility extendsConcept StandardProfileL2:Class_Utility
+
+	Signal_Specification extendsConcept StandardProfileL2:Classifier_Specification
+
+	Activity_Metaclass extendsConcept UML-metamodel:Activity
+
+	Device_Auxiliary extendsConcept UML-metamodel:Device
+
+	FunctionBehavior_Specification extendsConcept StandardProfileL2:Classifier_Specification
+
+	OpaqueBehavior_Utility extendsConcept UML-metamodel:OpaqueBehavior
+
+	ProtocolStateMachine_Type extendsConcept StandardProfileL2:Class_Type
+
+	ComponentRealization_Refine extendsConcept UML-metamodel:ComponentRealization
+
+	Class_Type extendsConcept StandardProfileL2:Class_Type
+
+	ProtocolStateMachine_ImplementationClass extendsConcept StandardProfileL2:Class_ImplementationClass
+
+	StateMachine_Type extendsConcept StandardProfileL2:Class_Type
+
+	Package_Framework extendsConcept UML-metamodel:Package
+
+	PrimitiveType_Specification extendsConcept UML-metamodel:PrimitiveType
+
+	Artifact_File_Script extendsConcept Artifact_File
+
+	ProtocolStateMachine_Realization extendsConcept UML-metamodel:ProtocolStateMachine
+
+	Manifestation_Derive extendsConcept StandardProfileL2:Abstraction_Derive
+
+	Abstraction_Trace extendsConcept UML-metamodel:Abstraction
+
+	Activity_ImplementationClass extendsConcept StandardProfileL2:Class_ImplementationClass
+
+	Class_Focus extendsConcept StandardProfileL2:Class_Focus
+
+	StateMachine_Utility extendsConcept StandardProfileL2:Class_Utility
+
+	Node_Auxiliary extendsConcept StandardProfileL2:Class_Auxiliary
+
+	Component_Metaclass extendsConcept UML-metamodel:Component
+
+	Interaction_Metaclass extendsConcept StandardProfileL2:Class_Metaclass
+
+	Device_Type extendsConcept StandardProfileL2:Class_Type
+
+	Artifact_File extendsConcept StandardProfileL2:Artifact_File
+
+	ComponentRealization_Trace extendsConcept UML-metamodel:ComponentRealization
+
+	Component_Entity extendsConcept UML-metamodel:Component
+
+	Manifestation_Refine extendsConcept StandardProfileL2:Abstraction_Refine
+
+	Enumeration_Specification extendsConcept StandardProfileL2:Classifier_Specification
+
+	Component_Subsystem extendsConcept UML-metamodel:Component
+
+	Component_Utility extendsConcept UML-metamodel:Component
+
+	Realization_Derive extendsConcept UML-metamodel:Realization
+
+	Component_Auxiliary extendsConcept StandardProfileL2:Class_Auxiliary
+
+	Usage_Instantiate extendsConcept StandardProfileL2:Usage_Instantiate
+
+	Reception_Destroy extendsConcept StandardProfileL2:BehavioralFeature_Destroy
+
+	Abstraction_Refine extendsConcept UML-metamodel:Abstraction
+
+	Device_Utility extendsConcept UML-metamodel:Device
+
+	Component_Implement extendsConcept UML-metamodel:Component
+
+	InterfaceRealization_Refine extendsConcept UML-metamodel:InterfaceRealization
+
+	Device_Specification extendsConcept UML-metamodel:Device
+
+	AssociationClass_Metaclass extendsConcept StandardProfileL2:Class_Metaclass
+
+	Profile_Framework extendsConcept StandardProfileL2:Package_Framework
+
+	FunctionBehavior_Auxiliary extendsConcept StandardProfileL2:Class_Auxiliary
+
+	Activity_Focus extendsConcept UML-metamodel:Activity
+
+	Node_Type extendsConcept StandardProfileL2:Class_Type
+
+	ComponentRealization_Refine extendsConcept StandardProfileL2:Abstraction_Refine
+
+	ProtocolStateMachine_Utility extendsConcept UML-metamodel:ProtocolStateMachine
+
+	Activity_Auxiliary extendsConcept UML-metamodel:Activity
+
+	Interaction_Focus extendsConcept StandardProfileL2:Class_Focus
+
+	Interaction_Auxiliary extendsConcept StandardProfileL2:Class_Auxiliary
+
+	Interaction_ImplementationClass extendsConcept UML-metamodel:Interaction
+
+	Node_Focus extendsConcept UML-metamodel:Node
+
+	Component_Implement extendsConcept StandardProfileL2:Component_Implement
+
+	Model_ModelLibrary extendsConcept StandardProfileL2:Package_ModelLibrary
+
+	CommunicationPath_Realization extendsConcept StandardProfileL2:Classifier_Realization
+
+	Substitution_Trace extendsConcept StandardProfileL2:Abstraction_Trace
+
+	ProtocolStateMachine_Focus extendsConcept UML-metamodel:ProtocolStateMachine
+
+	Usage_Send extendsConcept UML-metamodel:Usage
+
+	Component_Specification extendsConcept StandardProfileL2:Classifier_Specification
+
+	Substitution_Derive extendsConcept UML-metamodel:Substitution
+
+	Class_Utility extendsConcept StandardProfileL2:Class_Utility
+
+	Component_Type extendsConcept UML-metamodel:Component
+
+	Class_Utility extendsConcept UML-metamodel:Class
+
+	Substitution_Refine extendsConcept UML-metamodel:Substitution
+
+	Artifact_File_Document extendsConcept StandardProfileL2:File_Document
+
+	Node_Utility extendsConcept StandardProfileL2:Class_Utility
+
+	Interaction_Realization extendsConcept StandardProfileL2:Classifier_Realization
+
+	InformationItem_Specification extendsConcept StandardProfileL2:Classifier_Specification
+
+	Interaction_Utility extendsConcept StandardProfileL2:Class_Utility
+
+	Interaction_Specification extendsConcept StandardProfileL2:Classifier_Specification
+
+	Interaction_Type extendsConcept StandardProfileL2:Class_Type
+
+	Artifact_File_Document extendsConcept Artifact_File
+
+	Artifact_Specification extendsConcept UML-metamodel:Artifact
+
+	Device_Realization extendsConcept UML-metamodel:Device
+
+	Device_Focus extendsConcept StandardProfileL2:Class_Focus
+
+	Operation_Destroy extendsConcept StandardProfileL2:BehavioralFeature_Destroy
+
+	PrimitiveType_Specification extendsConcept StandardProfileL2:Classifier_Specification
+
+	OpaqueBehavior_Auxiliary extendsConcept UML-metamodel:OpaqueBehavior
+
+	CommunicationPath_Specification extendsConcept StandardProfileL2:Classifier_Specification
+
+	FunctionBehavior_Utility extendsConcept StandardProfileL2:Class_Utility
+
+	Artifact_File_Executable extendsConcept StandardProfileL2:File_Executable
+
+	Profile_ModelLibrary extendsConcept UML-metamodel:Profile
+
+	OpaqueBehavior_Type extendsConcept UML-metamodel:OpaqueBehavior
+
+	Signal_Realization extendsConcept UML-metamodel:Signal
+
+	Component_Type extendsConcept StandardProfileL2:Class_Type
+
+	Collaboration_Specification extendsConcept UML-metamodel:Collaboration
+
+	StateMachine_Utility extendsConcept UML-metamodel:StateMachine
+
+	Interaction_Realization extendsConcept UML-metamodel:Interaction
+
+	Collaboration_Realization extendsConcept UML-metamodel:Collaboration
+
+	Node_Specification extendsConcept StandardProfileL2:Classifier_Specification
+
+	Class_ImplementationClass extendsConcept StandardProfileL2:Class_ImplementationClass
+
+	Operation_Create extendsConcept StandardProfileL2:BehavioralFeature_Create
+
+	Reception_Create extendsConcept UML-metamodel:Reception
+
+	InformationItem_Specification extendsConcept UML-metamodel:InformationItem
+
+	Node_Metaclass extendsConcept StandardProfileL2:Class_Metaclass
+
+	AssociationClass_Specification extendsConcept UML-metamodel:AssociationClass
+
+	Profile_ModelLibrary extendsConcept StandardProfileL2:Package_ModelLibrary
+
+	Activity_Focus extendsConcept StandardProfileL2:Class_Focus
+
+	Component_Entity extendsConcept StandardProfileL2:Component_Entity
+
+	Component_Service extendsConcept UML-metamodel:Component
+
+	StateMachine_ImplementationClass extendsConcept StandardProfileL2:Class_ImplementationClass
+
+	Interface_Specification extendsConcept UML-metamodel:Interface
+
+	ExecutionEnvironment_Auxiliary extendsConcept StandardProfileL2:Class_Auxiliary
+
+	OpaqueBehavior_ImplementationClass extendsConcept StandardProfileL2:Class_ImplementationClass
+
+	ProtocolStateMachine_Utility extendsConcept StandardProfileL2:Class_Utility
+
+	Component_Process extendsConcept UML-metamodel:Component
+
+	Manifestation_Refine extendsConcept UML-metamodel:Manifestation
+
+	Model_ModelLibrary extendsConcept UML-metamodel:Model
+
+	StateMachine_Specification extendsConcept UML-metamodel:StateMachine
+
+	Component_Focus extendsConcept StandardProfileL2:Class_Focus
+
+	StateMachine_Auxiliary extendsConcept UML-metamodel:StateMachine
+
+	DataType_Realization extendsConcept UML-metamodel:DataType
+
+	AssociationClass_Focus extendsConcept StandardProfileL2:Class_Focus
+
+	OpaqueBehavior_Specification extendsConcept StandardProfileL2:Classifier_Specification
+
+	PrimitiveType_Realization extendsConcept UML-metamodel:PrimitiveType
+
+	Class_Specification extendsConcept StandardProfileL2:Classifier_Specification
+
+	Node_Utility extendsConcept UML-metamodel:Node
+
+	Component_ImplementationClass extendsConcept StandardProfileL2:Class_ImplementationClass
+
+	Usage_Call extendsConcept UML-metamodel:Usage
+
+	Usage_Responsibility extendsConcept UML-metamodel:Usage
+
+	ExecutionEnvironment_Focus extendsConcept UML-metamodel:ExecutionEnvironment
+
+	OpaqueBehavior_Utility extendsConcept StandardProfileL2:Class_Utility
+
+	Abstraction_Trace extendsConcept StandardProfileL2:Abstraction_Trace
+
+	Association_Realization extendsConcept UML-metamodel:Association
+
+	Artifact_Specification extendsConcept StandardProfileL2:Classifier_Specification
+
+	ProtocolStateMachine_Focus extendsConcept StandardProfileL2:Class_Focus
+
+	Enumeration_Specification extendsConcept UML-metamodel:Enumeration
+
+	DataType_Realization extendsConcept StandardProfileL2:Classifier_Realization
+
+	ProtocolStateMachine_Auxiliary extendsConcept StandardProfileL2:Class_Auxiliary
+
+	InterfaceRealization_Derive extendsConcept StandardProfileL2:Abstraction_Derive
+
+	Device_ImplementationClass extendsConcept StandardProfileL2:Class_ImplementationClass
+
+	OpaqueBehavior_Specification extendsConcept UML-metamodel:OpaqueBehavior
+
+	OpaqueBehavior_ImplementationClass extendsConcept UML-metamodel:OpaqueBehavior
+
+	ProtocolStateMachine_Metaclass extendsConcept UML-metamodel:ProtocolStateMachine
+
+	Usage_Call extendsConcept StandardProfileL2:Usage_Call
+
+	AssociationClass_Type extendsConcept UML-metamodel:AssociationClass
+
+	AssociationClass_Realization extendsConcept StandardProfileL2:Classifier_Realization
+
+	FunctionBehavior_ImplementationClass extendsConcept UML-metamodel:FunctionBehavior
+
+	UseCase_Realization extendsConcept UML-metamodel:UseCase
+
+	Device_Realization extendsConcept StandardProfileL2:Classifier_Realization
+
+	FunctionBehavior_Specification extendsConcept UML-metamodel:FunctionBehavior
+
+	Artifact_File_Source extendsConcept Artifact_File
+
+	Package_ModelLibrary extendsConcept StandardProfileL2:Package_ModelLibrary
+
+	AssociationClass_Auxiliary extendsConcept StandardProfileL2:Class_Auxiliary
+
+	UseCase_Realization extendsConcept StandardProfileL2:Classifier_Realization
+
+	StateMachine_Metaclass extendsConcept StandardProfileL2:Class_Metaclass
+
+	StateMachine_Realization extendsConcept StandardProfileL2:Classifier_Realization
+
+	Component_Subsystem extendsConcept StandardProfileL2:Component_Subsystem
+
+	Device_Type extendsConcept UML-metamodel:Device
+
+	Artifact_Realization extendsConcept StandardProfileL2:Classifier_Realization
+
+	StateMachine_ImplementationClass extendsConcept UML-metamodel:StateMachine
+
+	ProtocolStateMachine_Realization extendsConcept StandardProfileL2:Classifier_Realization
+
+	CommunicationPath_Specification extendsConcept UML-metamodel:CommunicationPath
+
+	Collaboration_Specification extendsConcept StandardProfileL2:Classifier_Specification
+
+	PrimitiveType_Realization extendsConcept StandardProfileL2:Classifier_Realization
+
+	Device_Auxiliary extendsConcept StandardProfileL2:Class_Auxiliary
+
+	UseCase_Specification extendsConcept UML-metamodel:UseCase
+
+	Class_Auxiliary extendsConcept StandardProfileL2:Class_Auxiliary
+
+	FunctionBehavior_Utility extendsConcept UML-metamodel:FunctionBehavior
+
+	Component_Focus extendsConcept UML-metamodel:Component
+
+	InformationItem_Realization extendsConcept UML-metamodel:InformationItem
+
+	OpaqueBehavior_Auxiliary extendsConcept StandardProfileL2:Class_Auxiliary
+
+	OpaqueBehavior_Type extendsConcept StandardProfileL2:Class_Type
+
+	Class_Type extendsConcept UML-metamodel:Class
+
+	ComponentRealization_Derive extendsConcept UML-metamodel:ComponentRealization
+
+	Realization_Refine extendsConcept StandardProfileL2:Abstraction_Refine
+
+	Class_Realization extendsConcept StandardProfileL2:Classifier_Realization
+
+	Node_Focus extendsConcept StandardProfileL2:Class_Focus
+
+	Collaboration_Realization extendsConcept StandardProfileL2:Classifier_Realization
+
+	Substitution_Refine extendsConcept StandardProfileL2:Abstraction_Refine
+
+	Interaction_Focus extendsConcept UML-metamodel:Interaction
+
+	Manifestation_Trace extendsConcept StandardProfileL2:Abstraction_Trace
+
+	ExecutionEnvironment_Type extendsConcept UML-metamodel:ExecutionEnvironment
+
+	FunctionBehavior_Realization extendsConcept UML-metamodel:FunctionBehavior
+
+	Enumeration_Realization extendsConcept StandardProfileL2:Classifier_Realization
+
+	Component_ImplementationClass extendsConcept UML-metamodel:Component
+
+	Activity_Type extendsConcept UML-metamodel:Activity
+
+	StateMachine_Focus extendsConcept StandardProfileL2:Class_Focus
+
+	ExecutionEnvironment_ImplementationClass extendsConcept StandardProfileL2:Class_ImplementationClass
+
+	Artifact_File extendsConcept UML-metamodel:Artifact
+
+	Class_Focus extendsConcept UML-metamodel:Class
+
+	Node_Realization extendsConcept StandardProfileL2:Classifier_Realization
+
+	Activity_Realization extendsConcept StandardProfileL2:Classifier_Realization
+
+	FunctionBehavior_Auxiliary extendsConcept UML-metamodel:FunctionBehavior
+
+	ExecutionEnvironment_ImplementationClass extendsConcept UML-metamodel:ExecutionEnvironment
+
+	AssociationClass_Specification extendsConcept StandardProfileL2:Classifier_Specification
+
+	StateMachine_Metaclass extendsConcept UML-metamodel:StateMachine
+
+	Operation_Create extendsConcept UML-metamodel:Operation
+
+	Activity_Utility extendsConcept StandardProfileL2:Class_Utility
+
+	Class_Specification extendsConcept UML-metamodel:Class
+
+	Manifestation_Derive extendsConcept UML-metamodel:Manifestation
+
+	Component_Utility extendsConcept StandardProfileL2:Class_Utility
+
+	Usage_Responsibility extendsConcept StandardProfileL2:Usage_Responsibility
+
+	Realization_Refine extendsConcept UML-metamodel:Realization
+
+	AssociationClass_Realization extendsConcept UML-metamodel:AssociationClass
+
+	Abstraction_Derive extendsConcept UML-metamodel:Abstraction
+
+	Component_Metaclass extendsConcept StandardProfileL2:Class_Metaclass
+
+	Activity_Auxiliary extendsConcept StandardProfileL2:Class_Auxiliary
+
+	ExecutionEnvironment_Metaclass extendsConcept UML-metamodel:ExecutionEnvironment
+
+	ComponentRealization_Derive extendsConcept StandardProfileL2:Abstraction_Derive
+
+	ExecutionEnvironment_Specification extendsConcept UML-metamodel:ExecutionEnvironment
+
+	AssociationClass_Auxiliary extendsConcept UML-metamodel:AssociationClass
+
+	StateMachine_Type extendsConcept UML-metamodel:StateMachine
+
+	CommunicationPath_Realization extendsConcept UML-metamodel:CommunicationPath
+
+	Abstraction_Refine extendsConcept StandardProfileL2:Abstraction_Refine
+
+	Class_ImplementationClass extendsConcept UML-metamodel:Class
+
+	Activity_Metaclass extendsConcept StandardProfileL2:Class_Metaclass
+
+	InformationItem_Realization extendsConcept StandardProfileL2:Classifier_Realization
+
+	Interaction_Type extendsConcept UML-metamodel:Interaction
+
+	Node_Metaclass extendsConcept UML-metamodel:Node
+
+	Association_Realization extendsConcept StandardProfileL2:Classifier_Realization
+
+	Interaction_Specification extendsConcept UML-metamodel:Interaction
+
+	UseCase_Specification extendsConcept StandardProfileL2:Classifier_Specification
+
+	Artifact_File_Library extendsConcept Artifact_File
+
+	StateMachine_Realization extendsConcept UML-metamodel:StateMachine
+
+	Activity_Type extendsConcept StandardProfileL2:Class_Type
+
+	FunctionBehavior_Realization extendsConcept StandardProfileL2:Classifier_Realization
+
+	Abstraction_Derive extendsConcept StandardProfileL2:Abstraction_Derive
+
+	Device_Focus extendsConcept UML-metamodel:Device
+
+	Profile_Framework extendsConcept UML-metamodel:Profile
+
+	Interface_Realization extendsConcept StandardProfileL2:Classifier_Realization
+
+	FunctionBehavior_ImplementationClass extendsConcept StandardProfileL2:Class_ImplementationClass
+
+	OpaqueBehavior_Realization extendsConcept StandardProfileL2:Classifier_Realization
+
+	Activity_Realization extendsConcept UML-metamodel:Activity
+
+	Node_ImplementationClass extendsConcept StandardProfileL2:Class_ImplementationClass
+
+	ProtocolStateMachine_Type extendsConcept UML-metamodel:ProtocolStateMachine
+
+	AssociationClass_Metaclass extendsConcept UML-metamodel:AssociationClass
+
+	Component_Realization extendsConcept StandardProfileL2:Classifier_Realization
+
+	Node_Type extendsConcept UML-metamodel:Node
+
+	Device_Metaclass extendsConcept UML-metamodel:Device
+
+	Interaction_Metaclass extendsConcept UML-metamodel:Interaction
+
+	Component_Specification extendsConcept UML-metamodel:Component
+
+}

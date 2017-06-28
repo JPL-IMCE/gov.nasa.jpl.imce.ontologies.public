@@ -1,0 +1,365 @@
+closed terminology <http://imce.jpl.nasa.gov/foundation/project/project> {
+
+	extends <http://imce.jpl.nasa.gov/discipline/mechanical/mechanical>
+
+	extends <http://imce.jpl.nasa.gov/foundation/analysis/analysis>
+
+	concept Product
+
+	aspect RealizedElement
+
+	concept Concern
+
+	aspect AssignedElement
+
+	concept InterchangePoint
+
+	concept Facility
+
+	concept Person
+
+	concept Role
+
+	concept Stakeholder
+
+	concept Program
+
+	concept Project
+
+	concept Organization
+
+	aspect DevelopedElement
+
+	aspect SuppliedElement
+
+	concept Authority
+
+	concept Deliverable
+
+	concept Policy
+
+	concept DevelopmentState
+
+	concept Process
+
+	concept WorkPackage
+
+	concept Interchange
+
+	reifiedRelationship Involves {
+		asymmetric
+		irreflexive
+		unreified = involves
+		inverse = isInvolvedIn
+		source = Interchange
+		target = Process }
+
+	reifiedRelationship Binds {
+		asymmetric
+		irreflexive
+		unreified = binds
+		inverse = isBoundBy
+		source = Policy
+		target = mission:SpecifiedElement }
+
+	reifiedRelationship Receives {
+		asymmetric
+		irreflexive
+		unreified = receives
+		inverse = isReceivedBy
+		source = InterchangePoint
+		target = Deliverable }
+
+	reifiedRelationship Realizes {
+		asymmetric
+		irreflexive
+		unreified = realizes
+		inverse = isRealizedBy
+		source = RealizedElement
+		target = RealizedElement }
+
+	reifiedRelationship Invokes {
+		irreflexive
+		unreified = invokes
+		inverse = isInvokedBy
+		source = Process
+		target = Process }
+
+	reifiedRelationship HasRole {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = hasRole
+		inverse = isRoleOf
+		source = Person
+		target = Role }
+
+	reifiedRelationship HasResponsibilityFor {
+		inverseFunctional
+		unreified = hasResponsibilityFor
+		inverse = isResponsibilityOf
+		source = Organization
+		target = Authority }
+
+	reifiedRelationship BelongsTo {
+		unreified = belongsTo
+		source = Person
+		target = Organization }
+
+	reifiedRelationship Manifests {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = manifests
+		inverse = isManfestedBy
+		source = DevelopedElement
+		target = DevelopmentState }
+
+	reifiedRelationship DelegatesTo {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = delegatesTo
+		inverse = isDelegateOf
+		source = Role
+		target = Role }
+
+	reifiedRelationship Concurs {
+		asymmetric
+		irreflexive
+		unreified = concurs
+		inverse = isConcurredBy
+		source = Role
+		target = Product }
+
+	reifiedRelationship Supplies {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = supplies
+		inverse = isSuppliedBy
+		source = Authority
+		target = SuppliedElement }
+
+	reifiedRelationship Approves {
+		asymmetric
+		irreflexive
+		unreified = approves
+		inverse = isApprovedBy
+		source = Role
+		target = Product }
+
+	reifiedRelationship Delivers {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = delivers
+		inverse = isDeliveredBy
+		source = InterchangePoint
+		target = Deliverable }
+
+	reifiedRelationship Prepares {
+		asymmetric
+		irreflexive
+		unreified = prepares
+		inverse = isPreparedBy
+		source = Role
+		target = Product }
+
+	reifiedRelationship InterchangesThrough {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = interchangesThrough
+		inverse = isInterchangePointFor
+		source = Process
+		target = InterchangePoint }
+
+	reifiedRelationship Involves1 {
+		functional
+		asymmetric
+		irreflexive
+		unreified = involves1
+		inverse = isInvolvedIn1
+		source = Interchange
+		target = Process }
+
+	reifiedRelationship Authorizes {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = authorizes
+		source = Authority
+		target = Authority }
+
+	reifiedRelationship Involves2 {
+		functional
+		asymmetric
+		irreflexive
+		unreified = involves2
+		inverse = isInvolvedIn2
+		source = Interchange
+		target = Process }
+
+	reifiedRelationship ReliesOn {
+		asymmetric
+		irreflexive
+		unreified = reliesOn
+		inverse = isReliedOnBy
+		source = Authority
+		target = DevelopedElement }
+
+	reifiedRelationship Describes {
+		asymmetric
+		irreflexive
+		unreified = describes
+		inverse = isDescribedBy
+		source = Product
+		target = DevelopedElement }
+
+	reifiedRelationship Produces {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = produces
+		inverse = isProducedBy
+		source = Authority
+		target = Product }
+
+	reifiedRelationship HasParticipant {
+		asymmetric
+		irreflexive
+		unreified = hasParticipant
+		inverse = participatesIn
+		source = Interchange
+		target = Deliverable }
+
+	reifiedRelationship Executes {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = executes
+		inverse = isExecutedBy
+		source = Authority
+		target = Process }
+
+	reifiedRelationship HasAssignment {
+		asymmetric
+		irreflexive
+		unreified = hasAssignment
+		inverse = isAssignedTo
+		source = Role
+		target = AssignedElement }
+
+	reifiedRelationship Represents {
+		asymmetric
+		irreflexive
+		unreified = represents
+		inverse = isRepresentedBy
+		source = Stakeholder
+		target = Concern }
+
+	scalar date
+
+	entityScalarDataProperty isRequiredNotLaterThan {
+		domain Deliverable
+		range date
+	}
+
+	allEntities Project . Realizes in Project
+
+	allEntities WorkPackage . Supplies in mission:Component
+
+	allEntities Process . Realizes in Process
+
+	allEntities DevelopmentState . analysis:Characterizes in DevelopedElement
+
+	allEntities Product . base:Aggregates in Product
+
+	allEntities Project . Supplies in mission:Mission
+
+	allEntities Concern . base:Aggregates in Concern
+
+	allEntities WorkPackage . Realizes in WorkPackage
+
+	Project extendsAspect RealizedElement
+
+	Process extendsAspect base:IdentifiedElement
+
+	DevelopmentState extendsConcept Deliverable
+
+	InterchangePoint extendsAspect base:IdentifiedElement
+
+	Authority extendsConcept base:Package
+
+	Role extendsAspect base:IdentifiedElement
+
+	Receives extendsAspect AssignedElement
+
+	DevelopedElement extendsAspect AssignedElement
+
+	Concern extendsAspect analysis:MeasuredElement
+
+	Approves extendsRelationship HasAssignment
+
+	Supplies extendsAspect AssignedElement
+
+	WorkPackage extendsAspect RealizedElement
+
+	Concern extendsAspect base:IdentifiedElement
+
+	Product extendsAspect DevelopedElement
+
+	Program extendsConcept Authority
+
+	Executes extendsAspect mission:SpecifiedElement
+
+	Person extendsAspect base:IdentifiedElement
+
+	DevelopmentState extendsConcept analysis:Characterization
+
+	Produces extendsRelationship Supplies
+
+	Product extendsAspect SuppliedElement
+
+	Process extendsAspect RealizedElement
+
+	Concern extendsAspect base:AggregatedElement
+
+	Concurs extendsRelationship HasAssignment
+
+	Stakeholder extendsAspect base:IdentifiedElement
+
+	ReliesOn extendsAspect AssignedElement
+
+	Interchange extendsAspect base:IdentifiedElement
+
+	Executes extendsAspect AssignedElement
+
+	Involves2 extendsRelationship Involves
+
+	Deliverable extendsAspect base:IdentifiedElement
+
+	WorkPackage extendsConcept base:Package
+
+	Facility extendsAspect base:IdentifiedElement
+
+	Product extendsAspect base:AggregatedElement
+
+	Product extendsAspect base:IdentifiedElement
+
+	Project extendsConcept Authority
+
+	Facility extendsAspect DevelopedElement
+
+	Process extendsAspect AssignedElement
+
+	WorkPackage extendsConcept Authority
+
+	Prepares extendsRelationship HasAssignment
+
+	Involves1 extendsRelationship Involves
+
+	Delivers extendsAspect AssignedElement
+
+}

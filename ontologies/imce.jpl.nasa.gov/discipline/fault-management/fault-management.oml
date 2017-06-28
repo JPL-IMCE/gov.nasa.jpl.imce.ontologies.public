@@ -1,0 +1,174 @@
+closed terminology <http://imce.jpl.nasa.gov/discipline/fault-management/fault-management> {
+
+	extends <http://imce.jpl.nasa.gov/foundation/behavior/behavior>
+
+	extends <http://imce.jpl.nasa.gov/foundation/analysis/analysis>
+
+	concept ProtectedRegion
+
+	aspect CauseDependentItem
+
+	concept CauseExplanation
+
+	concept FaultContainmentRegion
+
+	concept BlockRedundancyExplanation
+
+	aspect Region
+
+	concept ViolationExplanation
+
+	aspect ModeDependentItem
+
+	aspect RedundancyExplanation
+
+	concept InterconnectionExplanation
+
+	concept PerformanceConstraint
+
+	concept Prevention
+
+	concept DetectionMechanism
+
+	concept Mitigation
+
+	concept ModeContext
+
+	concept Likelihood
+
+	concept FunctionalRedundancyExplanation
+
+	concept MissionImpact
+
+	reifiedRelationship Mitigates {
+		unreified = mitigates
+		source = Mitigation
+		target = ViolationExplanation }
+
+	reifiedRelationship AppliesIn {
+		unreified = appliesIn
+		source = ModeDependentItem
+		target = ModeContext }
+
+	reifiedRelationship Avoids {
+		unreified = avoids
+		source = Prevention
+		target = ViolationExplanation }
+
+	reifiedRelationship IsAccomplishedBy {
+		unreified = isAccomplishedBy
+		source = Mitigation
+		target = behavior:ElementBehavior }
+
+	reifiedRelationship IsValidFor {
+		unreified = isValidFor
+		source = CauseDependentItem
+		target = CauseExplanation }
+
+	reifiedRelationship IsAssociatedWith {
+		unreified = isAssociatedWith
+		source = Mitigation
+		target = DetectionMechanism }
+
+	reifiedRelationship Detects {
+		unreified = detects
+		source = DetectionMechanism
+		target = ViolationExplanation }
+
+	reifiedRelationship IsPerformedBy {
+		unreified = isPerformedBy
+		source = Mitigation
+		target = mission:PerformingElement }
+
+	reifiedRelationship Encompasses {
+		unreified = encompasses
+		source = Region
+		target = mission:Component }
+
+	unreifiedRelationship causes {
+		source = behavior:ElementBehavior
+		target = behavior:ElementBehavior }
+
+	unreifiedRelationship violates {
+		source = behavior:ElementBehavior
+		target = PerformanceConstraint }
+
+	unreifiedRelationship impairs {
+		source = behavior:ElementBehavior
+		target = mission:Function }
+
+	someEntities Likelihood . analysis:Analyzes in Prevention
+
+	someEntities MissionImpact . analysis:Analyzes in CauseExplanation
+
+	someEntities MissionImpact . analysis:Analyzes in ModeContext
+
+	allEntities MissionImpact . analysis:Characterizes in ViolationExplanation
+
+	allEntities FaultContainmentRegion . base:Contains in FaultContainmentRegion
+
+	allEntities Region . analysis:Analyzes in ModeContext
+
+	someEntities RedundancyExplanation . analysis:Explains in mission:Component
+
+	allEntities ViolationExplanation . analysis:Explains in behavior:ElementBehavior
+
+	someEntities Likelihood . analysis:Analyzes in CauseExplanation
+
+	allEntities InterconnectionExplanation . analysis:Explains in FaultContainmentRegion
+
+	someEntities CauseExplanation . analysis:Analyzes in ModeContext
+
+	allEntities RedundancyExplanation . analysis:Analyzes in mission:Function
+
+	someEntities CauseExplanation . analysis:Analyzes in behavior:ElementBehavior
+
+	someEntities RedundancyExplanation . analysis:Explains in FaultContainmentRegion
+
+	allEntities Likelihood . analysis:Characterizes in ViolationExplanation
+
+	allEntities CauseExplanation . analysis:Explains in behavior:ElementBehavior
+
+	allEntities ViolationExplanation . analysis:Analyzes in PerformanceConstraint
+
+	allEntities PerformanceConstraint . analysis:Characterizes in mission:Function
+
+	ProtectedRegion extendsAspect Region
+
+	Prevention extendsAspect CauseDependentItem
+
+	FaultContainmentRegion extendsAspect base:Container
+
+	PerformanceConstraint extendsConcept analysis:Characterization
+
+	CauseExplanation extendsConcept analysis:Explanation
+
+	FaultContainmentRegion extendsAspect Region
+
+	Likelihood extendsConcept analysis:Explanation
+
+	DetectionMechanism extendsAspect CauseDependentItem
+
+	Mitigation extendsAspect ModeDependentItem
+
+	DetectionMechanism extendsAspect ModeDependentItem
+
+	MissionImpact extendsConcept analysis:Explanation
+
+	BlockRedundancyExplanation extendsAspect RedundancyExplanation
+
+	FaultContainmentRegion extendsAspect base:ContainedElement
+
+	PerformanceConstraint extendsConcept behavior:AttributeConstraint
+
+	Prevention extendsAspect ModeDependentItem
+
+	ViolationExplanation extendsConcept analysis:Explanation
+
+	Mitigation extendsAspect CauseDependentItem
+
+	InterconnectionExplanation extendsConcept analysis:Explanation
+
+	FunctionalRedundancyExplanation extendsAspect RedundancyExplanation
+
+}

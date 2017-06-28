@@ -1,0 +1,19 @@
+annotationProperty omf:isAbstract=<http://imce.jpl.nasa.gov/foundation/omf/omf#isAbstract>
+
+closed terminology <http://imce.jpl.nasa.gov/foundation/omf/omf> {
+
+	extends <http://imce.jpl.nasa.gov/oml/oml>
+
+	scalarOneOfRestriction ExporterProvenance {
+		restrictedRange XMLSchema:string
+	}
+
+	scalarOneOfRestriction TerminologyKind {
+		restrictedRange XMLSchema:string
+	}
+
+	scalarOneOfRestriction ModelTerminologyGraphKind {
+		restrictedRange XMLSchema:string
+	}
+
+}

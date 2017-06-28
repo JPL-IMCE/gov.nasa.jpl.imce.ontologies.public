@@ -1,0 +1,207 @@
+closed terminology <http://imce.jpl.nasa.gov/discipline/mechanical/mechanical> {
+
+	extends <http://imce.jpl.nasa.gov/foundation/analysis/analysis>
+
+	extends <http://imce.jpl.nasa.gov/foundation/annotation/annotation>
+
+	concept Chamfer
+
+	concept PrimitiveFeatures
+
+	concept ADHCylinder
+
+	concept SimpleHole
+
+	concept TransformArray
+
+	aspect Section
+
+	concept Radiate
+
+	concept Revolve
+
+	concept Emboss
+
+	concept Feature
+
+	concept Geometry
+
+	concept Extrude
+
+	concept NxObject
+
+	concept Intersect
+
+	concept Block
+
+	concept Hole
+
+	concept Direction2
+
+	concept Body
+
+	concept RectangularArray
+
+	concept Threads
+
+	concept NotPart
+
+	concept BooleanFeature
+
+	concept Point
+
+	concept Axis
+
+	concept Sweep
+
+	concept SimpleScrewHole
+
+	concept Direction1
+
+	concept EdgeBlend
+
+	concept BodyFeature
+
+	concept CounterBoredHole
+
+	concept LinkedMirrorBody
+
+	concept Component
+
+	concept NxModel
+
+	concept Line
+
+	concept PatternFeature
+
+	concept Cylinder
+
+	aspect ContainingElement
+
+	concept ExtractedFace
+
+	concept ScrewHoleSeries
+
+	concept Curve
+
+	concept CircularArray
+
+	aspect TaggedElement
+
+	concept Sketch
+
+	concept LinearDirection
+
+	concept CombineBodyFeature
+
+	concept Subtract
+
+	concept Unite
+
+	concept LinkedCounterboredScrew
+
+	concept ArcCylinder
+
+	concept Arc
+
+	concept ThreadedHole
+
+	structure CountPitch
+
+	structure Assymetric
+
+	structure Spacing
+
+	structure MassProperties
+
+	structure Symmetric
+
+	structure CountSpan
+
+	structure Point3d
+
+	structure Position
+
+	structure Vector3d
+
+	structure CrossSection
+
+	structure OffsetAngle
+
+	structure PitchSpan
+
+	BooleanFeature extendsConcept Subtract
+
+	Line extendsAspect TaggedElement
+
+	BooleanFeature extendsConcept BodyFeature
+
+	Arc extendsAspect TaggedElement
+
+	Component extendsAspect ContainingElement
+
+	BodyFeature extendsConcept Feature
+
+	Extrude extendsAspect TaggedElement
+
+	PatternFeature extendsConcept Feature
+
+	Sweep extendsConcept BodyFeature
+
+	Emboss extendsConcept BooleanFeature
+
+	Hole extendsConcept BodyFeature
+
+	Line extendsConcept Geometry
+
+	SimpleHole extendsConcept Hole
+
+	ArcCylinder extendsConcept Cylinder
+
+	Component extendsConcept NxObject
+
+	Arc extendsConcept Geometry
+
+	Direction2 extendsConcept LinearDirection
+
+	Sketch extendsAspect TaggedElement
+
+	CounterBoredHole extendsConcept Hole
+
+	EdgeBlend extendsConcept BodyFeature
+
+	BooleanFeature extendsConcept Intersect
+
+	Section extendsAspect TaggedElement
+
+	NotPart extendsConcept NxObject
+
+	ThreadedHole extendsConcept Hole
+
+	Cylinder extendsConcept PrimitiveFeatures
+
+	Chamfer extendsConcept BodyFeature
+
+	Point extendsAspect TaggedElement
+
+	BooleanFeature extendsConcept CombineBodyFeature
+
+	Direction1 extendsConcept LinearDirection
+
+	ADHCylinder extendsConcept Cylinder
+
+	PrimitiveFeatures extendsConcept BodyFeature
+
+	Revolve extendsConcept BodyFeature
+
+	BooleanFeature extendsConcept Unite
+
+	Block extendsConcept PrimitiveFeatures
+
+	Extrude extendsConcept BodyFeature
+
+	Point extendsConcept Geometry
+
+	SimpleScrewHole extendsConcept Hole
+
+}

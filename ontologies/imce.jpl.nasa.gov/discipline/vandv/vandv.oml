@@ -1,0 +1,586 @@
+closed terminology <http://imce.jpl.nasa.gov/discipline/vandv/vandv> {
+
+	extends <http://imce.jpl.nasa.gov/foundation/project/project>
+
+	concept AnalysisExecutionRecord
+
+	aspect VerifiedElement
+
+	concept Plan
+
+	concept InspectionExecutionRecord
+
+	concept DemonstrationExecutionRecord
+
+	concept VerificationNonconformance
+
+	concept ValidationActivityCompletionData
+
+	concept TestAsYouFlyExceptionList
+
+	concept VerificationItem
+
+	aspect ApprovedElement
+
+	concept ValidationItemReviewAndClosure
+
+	aspect AuditedElement
+
+	concept VerificationItemReviewAndClosure
+
+	concept OtherExecutionRecord
+
+	concept IncompressibleTestList
+
+	concept Owner
+
+	aspect OwnedElement
+
+	concept ValidationItem
+
+	concept Activity
+
+	concept Venue
+
+	concept ExecutionRecord
+
+	concept Auditor
+
+	concept ActivityMatrix
+
+	concept TestAsYouFlyException
+
+	concept ValidationActivity
+
+	concept Item
+
+	concept TestProcedure
+
+	aspect ExternallyDocumentedElement
+
+	concept ActivityCompletionData
+
+	concept EvidenceExpected
+
+	concept Approver
+
+	concept ClosureEvidence
+
+	concept VerificationActivityCompletionData
+
+	concept ValidationNonconformance
+
+	concept ItemReviewAndClosure
+
+	concept TestExecutionRecord
+
+	concept VerificationActivityPlan
+
+	concept ValidationActivityPlan
+
+	concept Reviewer
+
+	concept Incompressible
+
+	concept ExecutionSubRecord
+
+	concept VerificationActivity
+
+	concept Milestone
+
+	concept ActivityPlan
+
+	concept ActivityGroup
+
+	concept Nonconformance
+
+	reifiedRelationship Corroborates {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = corroborates
+		source = VerificationActivity
+		target = VerificationItem }
+
+	reifiedRelationship Groups {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = groups
+		source = ActivityGroup
+		target = Activity }
+
+	reifiedRelationship IsExecutionSubRecordOf {
+		functional
+		asymmetric
+		irreflexive
+		unreified = isExecutionSubRecordOf
+		source = ExecutionSubRecord
+		target = ExecutionRecord }
+
+	reifiedRelationship Assesses {
+		functional
+		asymmetric
+		irreflexive
+		unreified = assesses
+		source = ExecutionSubRecord
+		target = Item }
+
+	reifiedRelationship StartsAfter {
+		asymmetric
+		irreflexive
+		unreified = startsAfter
+		source = Activity
+		target = Milestone }
+
+	reifiedRelationship Satisfies {
+		functional
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = satisfies
+		source = ClosureEvidence
+		target = Item }
+
+	reifiedRelationship FinshesBefore {
+		asymmetric
+		irreflexive
+		unreified = finishesBefore
+		source = Activity
+		target = Milestone }
+
+	reifiedRelationship IsRecordOf {
+		functional
+		asymmetric
+		irreflexive
+		unreified = isRecordOf
+		source = ExecutionRecord
+		target = Activity }
+
+	reifiedRelationship Verifies {
+		functional
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = verifies
+		source = VerificationItem
+		target = VerifiedElement }
+
+	reifiedRelationship Owns {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = owns
+		source = Owner
+		target = OwnedElement }
+
+	reifiedRelationship Reviews {
+		asymmetric
+		irreflexive
+		unreified = reviews
+		source = Reviewer
+		target = ClosureEvidence }
+
+	reifiedRelationship Validates {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = validates
+		source = ValidationActivity
+		target = ValidationItem }
+
+	reifiedRelationship Audits {
+		asymmetric
+		irreflexive
+		unreified = audits
+		source = Auditor
+		target = AuditedElement }
+
+	reifiedRelationship Includes {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = includes
+		source = TestAsYouFlyExceptionList
+		target = TestAsYouFlyException }
+
+	reifiedRelationship Expects {
+		asymmetric
+		irreflexive
+		unreified = expects
+		source = Activity
+		target = EvidenceExpected }
+
+	reifiedRelationship Approves {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = approves
+		source = Approver
+		target = ApprovedElement }
+
+	reifiedRelationship Describes {
+		functional
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = describes
+		source = ActivityPlan
+		target = Activity }
+
+	reifiedRelationship Contains {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = contains
+		source = IncompressibleTestList
+		target = Activity }
+
+	reifiedRelationship Summarizes {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = summarizes
+		source = ActivityMatrix
+		target = Activity }
+
+	reifiedRelationship OccursIn {
+		asymmetric
+		irreflexive
+		unreified = occursIn
+		source = Activity
+		target = Venue }
+
+	scalarOneOfRestriction priority {
+		restrictedRange XMLSchema:string
+	}
+
+	scalarOneOfRestriction verificationStatus {
+		restrictedRange XMLSchema:string
+	}
+
+	scalarOneOfRestriction completionStatus {
+		restrictedRange XMLSchema:string
+	}
+
+	scalarOneOfRestriction executionSubRecordStatus {
+		restrictedRange XMLSchema:string
+	}
+
+	scalarOneOfRestriction reviewStatus {
+		restrictedRange XMLSchema:string
+	}
+
+	scalarOneOfRestriction validationStatus {
+		restrictedRange XMLSchema:string
+	}
+
+	entityScalarDataProperty hasExecutionSubRecordStatus {
+		domain ExecutionSubRecord
+		range executionSubRecordStatus
+	}
+
+	entityScalarDataProperty isVerifiedByInheritance {
+		domain VerificationItem
+		range XMLSchema:boolean
+	}
+
+	entityScalarDataProperty hasValidationApproach {
+		domain ValidationItem
+		range XMLSchema:string
+	}
+
+	entityScalarDataProperty hasReviewStatus {
+		domain ItemReviewAndClosure
+		range reviewStatus
+	}
+
+	entityScalarDataProperty hasCompletionStatus {
+		domain ActivityCompletionData
+		range completionStatus
+	}
+
+	entityScalarDataProperty hasChildRequirementsVerificationStatus {
+		domain VerificationItemReviewAndClosure
+		range verificationStatus
+	}
+
+	entityScalarDataProperty hasClosureDate {
+		domain ItemReviewAndClosure
+		range project:date
+	}
+
+	entityScalarDataProperty isVerifiedByAnalysis {
+		domain VerificationItem
+		range XMLSchema:boolean
+	}
+
+	entityScalarDataProperty isVerifiedByHierarchy {
+		domain VerificationItem
+		range XMLSchema:boolean
+	}
+
+	entityScalarDataProperty isValidatedByTest {
+		domain ValidationItem
+		range XMLSchema:boolean
+	}
+
+	entityScalarDataProperty hasVerificationPriority {
+		domain VerificationItem
+		range priority
+	}
+
+	entityScalarDataProperty hasEndDate {
+		domain ExecutionRecord
+		range project:date
+	}
+
+	entityScalarDataProperty hasUserName {
+		domain ExecutionRecord
+		range XMLSchema:string
+	}
+
+	entityScalarDataProperty hasVenueType {
+		domain ExecutionRecord
+		range XMLSchema:string
+	}
+
+	entityScalarDataProperty isValidatedByDemonstration {
+		domain ValidationItem
+		range XMLSchema:boolean
+	}
+
+	entityScalarDataProperty isVerifiedByDemonstration {
+		domain VerificationItem
+		range XMLSchema:boolean
+	}
+
+	entityScalarDataProperty hasCompletionDate {
+		domain ActivityCompletionData
+		range project:date
+	}
+
+	entityScalarDataProperty isVerifiedByTest {
+		domain VerificationItem
+		range XMLSchema:boolean
+	}
+
+	entityScalarDataProperty isValidatedByAnalysis {
+		domain ValidationItem
+		range XMLSchema:boolean
+	}
+
+	entityScalarDataProperty hasVerificationApproach {
+		domain VerificationItem
+		range XMLSchema:string
+	}
+
+	entityScalarDataProperty hasClosureDescription {
+		domain ItemReviewAndClosure
+		range XMLSchema:string
+	}
+
+	entityScalarDataProperty isValidatedByInspection {
+		domain ValidationItem
+		range XMLSchema:boolean
+	}
+
+	entityScalarDataProperty hasValidationStatus {
+		domain ValidationItemReviewAndClosure
+		range validationStatus
+	}
+
+	entityScalarDataProperty hasExternalData {
+		domain ExternallyDocumentedElement
+		range XMLSchema:anyURI
+	}
+
+	entityScalarDataProperty isVerifiedByInspection {
+		domain VerificationItem
+		range XMLSchema:boolean
+	}
+
+	entityScalarDataProperty hasStartDate {
+		domain ExecutionRecord
+		range project:date
+	}
+
+	entityScalarDataProperty hasValidationPriority {
+		domain ValidationItem
+		range priority
+	}
+
+	entityScalarDataProperty hasVerificationStatus {
+		domain VerificationItemReviewAndClosure
+		range verificationStatus
+	}
+
+	entityScalarDataProperty hasReviewComments {
+		domain ItemReviewAndClosure
+		range XMLSchema:string
+	}
+
+	entityScalarDataProperty hasActivityPriority {
+		domain Activity
+		range priority
+	}
+
+	entityScalarDataProperty matchesExpectedEvidence {
+		domain ClosureEvidence
+		range XMLSchema:boolean
+	}
+
+	entityScalarDataProperty satisfiesVerificationItem {
+		domain ClosureEvidence
+		range XMLSchema:boolean
+	}
+
+	allEntities TestAsYouFlyException . analysis:Characterizes in Activity
+
+	allEntities ValidationItemReviewAndClosure . analysis:Characterizes in ValidationItem
+
+	allEntities ValidationActivityCompletionData . analysis:Characterizes in ValidationActivity
+
+	allEntities ValidationActivityPlan . Describes in ValidationActivity
+
+	allEntities VerificationActivityCompletionData . analysis:Characterizes in VerificationActivity
+
+	allEntities ItemReviewAndClosure . analysis:Characterizes in Item
+
+	allEntities VerificationItemReviewAndClosure . analysis:Characterizes in VerificationItem
+
+	allEntities Incompressible . analysis:Explains in VerificationActivity
+
+	allEntities VerificationActivityPlan . Describes in VerificationActivity
+
+	ActivityMatrix extendsAspect OwnedElement
+
+	ExecutionRecord extendsAspect ExternallyDocumentedElement
+
+	ActivityGroup extendsAspect OwnedElement
+
+	ClosureEvidence extendsAspect ExternallyDocumentedElement
+
+	ValidationItem extendsConcept Item
+
+	ApprovedElement extendsAspect project:AssignedElement
+
+	ValidationActivity extendsConcept Activity
+
+	ExecutionRecord extendsConcept project:Product
+
+	ActivityGroup extendsAspect base:IdentifiedElement
+
+	StartsAfter extendsRelationship project:Receives
+
+	ActivityCompletionData extendsConcept analysis:Characterization
+
+	ActivityMatrix extendsConcept project:Product
+
+	Approver extendsConcept project:Role
+
+	Incompressible extendsConcept analysis:Explanation
+
+	TestAsYouFlyExceptionList extendsAspect OwnedElement
+
+	ClosureEvidence extendsAspect AuditedElement
+
+	ClosureEvidence extendsConcept project:Product
+
+	VerificationActivityPlan extendsConcept ActivityPlan
+
+	AuditedElement extendsAspect project:AssignedElement
+
+	Auditor extendsConcept project:Role
+
+	Activity extendsAspect OwnedElement
+
+	TestAsYouFlyExceptionList extendsConcept project:Product
+
+	VerificationActivityCompletionData extendsConcept ActivityCompletionData
+
+	ValidationActivityPlan extendsConcept ActivityPlan
+
+	VerificationItem extendsConcept Item
+
+	Audits extendsRelationship project:HasAssignment
+
+	AnalysisExecutionRecord extendsConcept ExecutionRecord
+
+	Venue extendsConcept project:Facility
+
+	ActivityPlan extendsConcept project:Product
+
+	TestProcedure extendsAspect OwnedElement
+
+	VerificationActivity extendsConcept Activity
+
+	ActivityPlan extendsAspect OwnedElement
+
+	Reviewer extendsConcept project:Role
+
+	VerificationItemReviewAndClosure extendsConcept ItemReviewAndClosure
+
+	Approves extendsRelationship project:HasAssignment
+
+	InspectionExecutionRecord extendsConcept ExecutionRecord
+
+	TestExecutionRecord extendsConcept ExecutionRecord
+
+	TestAsYouFlyException extendsConcept analysis:Characterization
+
+	EvidenceExpected extendsConcept project:Product
+
+	Activity extendsConcept project:Process
+
+	Plan extendsConcept project:Product
+
+	Owns extendsRelationship project:HasAssignment
+
+	ItemReviewAndClosure extendsAspect AuditedElement
+
+	Owner extendsConcept project:Role
+
+	Nonconformance extendsConcept project:Product
+
+	IncompressibleTestList extendsAspect OwnedElement
+
+	Item extendsAspect base:IdentifiedElement
+
+	ItemReviewAndClosure extendsConcept analysis:Characterization
+
+	DemonstrationExecutionRecord extendsConcept ExecutionRecord
+
+	Plan extendsAspect ApprovedElement
+
+	ValidationNonconformance extendsConcept Nonconformance
+
+	Plan extendsAspect OwnedElement
+
+	OtherExecutionRecord extendsConcept ExecutionRecord
+
+	ValidationActivityCompletionData extendsConcept ActivityCompletionData
+
+	OwnedElement extendsAspect project:AssignedElement
+
+	Milestone extendsConcept project:DevelopmentState
+
+	Item extendsAspect OwnedElement
+
+	FinshesBefore extendsRelationship project:Delivers
+
+	IncompressibleTestList extendsConcept project:Product
+
+	TestProcedure extendsConcept project:Process
+
+	Reviews extendsRelationship project:HasAssignment
+
+	ValidationItemReviewAndClosure extendsConcept ItemReviewAndClosure
+
+	ItemReviewAndClosure extendsAspect ApprovedElement
+
+	ExecutionSubRecord extendsConcept project:Product
+
+	VerificationNonconformance extendsConcept Nonconformance
+
+}

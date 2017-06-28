@@ -1,0 +1,281 @@
+closed terminology <http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV> {
+
+	extends <http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML>
+
+	concept QuantityKind
+
+	concept PrefixedUnit
+
+	concept DerivedQuantityKind
+
+	concept SystemOfQuantities
+
+	concept GeneralConversionUnit
+
+	concept QuantityKindFactor
+
+	concept SimpleQuantityKind
+
+	concept Unit
+
+	concept SimpleUnit
+
+	concept Dimension
+
+	concept Prefix
+
+	concept AffineConversionUnit
+
+	concept DerivedUnit
+
+	concept SystemOfUnits
+
+	concept UnitFactor
+
+	concept LinearConversionUnit
+
+	concept ConversionBasedUnit
+
+	reifiedRelationship A_unitFactor_unit {
+		functional
+		unreified = a_unitFactor_unit
+		source = UnitFactor
+		target = Unit }
+
+	reifiedRelationship A_usedSystemOfUnits_systemOfUnits {
+		asymmetric
+		unreified = a_usedSystemOfUnits_systemOfUnits
+		source = SystemOfUnits
+		target = SystemOfUnits }
+
+	reifiedRelationship A_systemOfUnits_systemOfQuantities {
+		functional
+		unreified = a_systemOfUnits_systemOfQuantities
+		source = SystemOfUnits
+		target = SystemOfQuantities }
+
+	reifiedRelationship A_systemOfUnits_baseUnit {
+		inverseFunctional
+		unreified = a_systemOfUnits_baseUnit
+		source = SystemOfUnits
+		target = Unit }
+
+	reifiedRelationship A_noQuantityKind_prefixedUnit {
+		unreified = a_noQuantityKind_prefixedUnit
+		source = PrefixedUnit
+		target = QuantityKind }
+
+	reifiedRelationship A_systemOfQuantities_baseQuantityKind {
+		inverseFunctional
+		unreified = a_systemOfQuantities_baseQuantityKind
+		source = SystemOfQuantities
+		target = QuantityKind }
+
+	reifiedRelationship A_systemOfUnits_unit {
+		inverseFunctional
+		unreified = a_systemOfUnits_unit
+		source = SystemOfUnits
+		target = Unit }
+
+	reifiedRelationship A_derivedQuantityKind_factor {
+		inverseFunctional
+		unreified = a_derivedQuantityKind_factor
+		source = DerivedQuantityKind
+		target = QuantityKindFactor }
+
+	reifiedRelationship A_includedSystemOfQuantities_systemOfQuantities {
+		inverseFunctional
+		asymmetric
+		unreified = a_includedSystemOfQuantities_systemOfQuantities
+		source = SystemOfQuantities
+		target = SystemOfQuantities }
+
+	reifiedRelationship A_generalUnit_specificUnit {
+		asymmetric
+		unreified = a_generalUnit_specificUnit
+		source = Unit
+		target = Unit }
+
+	reifiedRelationship A_usedSystemOfQuantities_systemOfQuantities {
+		asymmetric
+		unreified = a_usedSystemOfQuantities_systemOfQuantities
+		source = SystemOfQuantities
+		target = SystemOfQuantities }
+
+	reifiedRelationship A_quantityKind_measurementUnit {
+		unreified = a_quantityKind_measurementUnit
+		source = Unit
+		target = QuantityKind }
+
+	reifiedRelationship A_quantityKindFactor_quantityKind {
+		functional
+		unreified = a_quantityKindFactor_quantityKind
+		source = QuantityKindFactor
+		target = QuantityKind }
+
+	reifiedRelationship A_derivedUnit_factor {
+		inverseFunctional
+		unreified = a_derivedUnit_factor
+		source = DerivedUnit
+		target = UnitFactor }
+
+	reifiedRelationship A_dimension_factor {
+		inverseFunctional
+		unreified = a_dimension_factor
+		source = Dimension
+		target = QuantityKindFactor }
+
+	reifiedRelationship A_includedSystemOfUnits_systemOfUnits {
+		asymmetric
+		unreified = a_includedSystemOfUnits_systemOfUnits
+		source = SystemOfUnits
+		target = SystemOfUnits }
+
+	reifiedRelationship A_generalQuantityKind_specificQuantityKind {
+		asymmetric
+		unreified = a_generalQuantityKind_specificQuantityKind
+		source = QuantityKind
+		target = QuantityKind }
+
+	reifiedRelationship A_systemOfQuantities_dimension {
+		unreified = a_systemOfQuantities_dimension
+		source = SystemOfQuantities
+		target = Dimension }
+
+	reifiedRelationship A_prefixedUnit_prefix {
+		functional
+		unreified = a_prefixedUnit_prefix
+		source = PrefixedUnit
+		target = Prefix }
+
+	reifiedRelationship A_conversionBasedUnit_referenceUnit {
+		functional
+		unreified = a_conversionBasedUnit_referenceUnit
+		source = ConversionBasedUnit
+		target = Unit }
+
+	reifiedRelationship A_systemOfQuantities_quantityKind {
+		inverseFunctional
+		unreified = a_systemOfQuantities_quantityKind
+		source = SystemOfQuantities
+		target = QuantityKind }
+
+	reifiedRelationship A_systemOfUnits_prefix {
+		inverseFunctional
+		unreified = a_systemOfUnits_prefix
+		source = SystemOfUnits
+		target = Prefix }
+
+	structure Rational
+
+	entityScalarDataProperty SystemOfUnits_symbol {
+		domain SystemOfUnits
+		range XMLSchema:string
+	}
+
+	entityScalarDataProperty SystemOfUnits_definitionURI {
+		domain SystemOfUnits
+		range XMLSchema:string
+	}
+
+	entityScalarDataProperty ConversionBasedUnit_isInvertible {
+		domain ConversionBasedUnit
+		range XMLSchema:boolean
+	}
+
+	entityScalarDataProperty DerivedUnit_hasReducedFactors {
+		domain DerivedUnit
+		range XMLSchema:boolean
+	}
+
+	entityScalarDataProperty SystemOfQuantities_description {
+		domain SystemOfQuantities
+		range XMLSchema:string
+	}
+
+	entityScalarDataProperty QuantityKind_isNumberOfEntities {
+		domain QuantityKind
+		range XMLSchema:boolean
+	}
+
+	entityScalarDataProperty Unit_isUnitForQuantityOfDimensionOne {
+		domain Unit
+		range XMLSchema:boolean
+	}
+
+	entityScalarDataProperty Prefix_symbol {
+		domain Prefix
+		range XMLSchema:string
+	}
+
+	entityScalarDataProperty GeneralConversionUnit_expressionLanguageURI {
+		domain GeneralConversionUnit
+		range XMLSchema:string
+	}
+
+	entityScalarDataProperty GeneralConversionUnit_expression {
+		domain GeneralConversionUnit
+		range XMLSchema:string
+	}
+
+	entityScalarDataProperty Unit_isUnitCountOfEntities {
+		domain Unit
+		range XMLSchema:boolean
+	}
+
+	entityScalarDataProperty SystemOfQuantities_symbol {
+		domain SystemOfQuantities
+		range XMLSchema:string
+	}
+
+	entityScalarDataProperty Dimension_symbolicExpression {
+		domain Dimension
+		range XMLSchema:string
+	}
+
+	entityScalarDataProperty QuantityKind_isQuantityOfDimensionOne {
+		domain QuantityKind
+		range XMLSchema:boolean
+	}
+
+	entityScalarDataProperty SystemOfUnits_description {
+		domain SystemOfUnits
+		range XMLSchema:string
+	}
+
+	entityScalarDataProperty SystemOfQuantities_definitionURI {
+		domain SystemOfQuantities
+		range XMLSchema:string
+	}
+
+	AffineConversionUnit extendsConcept ConversionBasedUnit
+
+	LinearConversionUnit extendsConcept ConversionBasedUnit
+
+	DerivedQuantityKind extendsConcept QuantityKind
+
+	A_systemOfQuantities_baseQuantityKind extendsRelationship A_systemOfQuantities_quantityKind
+
+	ConversionBasedUnit extendsConcept Unit
+
+	SimpleQuantityKind extendsConcept QuantityKind
+
+	A_noQuantityKind_prefixedUnit extendsRelationship A_quantityKind_measurementUnit
+
+	QuantityKind extendsConcept SysML:QuantityKind
+
+	A_quantityKind_measurementUnit extendsRelationship SysML:A_quantityKind_unit
+
+	Unit extendsConcept SysML:Unit
+
+	SimpleUnit extendsConcept Unit
+
+	DerivedUnit extendsConcept Unit
+
+	GeneralConversionUnit extendsConcept ConversionBasedUnit
+
+	A_systemOfUnits_baseUnit extendsRelationship A_systemOfUnits_unit
+
+	PrefixedUnit extendsConcept ConversionBasedUnit
+
+}

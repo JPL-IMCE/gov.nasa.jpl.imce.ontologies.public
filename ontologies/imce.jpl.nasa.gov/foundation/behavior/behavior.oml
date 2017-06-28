@@ -1,0 +1,271 @@
+closed terminology <http://imce.jpl.nasa.gov/foundation/behavior/behavior> {
+
+	extends <http://imce.jpl.nasa.gov/foundation/analysis/analysis>
+
+	concept Interaction
+
+	concept ElementBehaviorAutomaton
+
+	concept ElementBehaviorClass
+
+	concept StateVariableConstraintParticipant
+
+	concept AutomatonTransition
+
+	aspect AttributeGroup
+
+	concept InteractionBehaviorClass
+
+	concept InteractionBehaviorConstraint
+
+	concept ElementBehaviorCharacterization
+
+	concept StateVariableSurrogate
+
+	concept ParameterConstraintParticipant
+
+	concept ElementBehaviorState
+
+	concept AbstractValueTypedAttribute
+
+	concept AutomatonRegion
+
+	concept InteractionBehaviorAutomatonElement
+
+	concept AttributeConstraintParticipant
+
+	concept ParameterSurrogate
+
+	concept ElementBehaviorAutomatonElement
+
+	aspect Aspect
+
+	concept StateVariable
+
+	concept AttributeConstraint
+
+	concept InteractionBehaviorTransition
+
+	concept PropertyGroup
+
+	concept InteractionBehaviorState
+
+	concept Attribute
+
+	aspect BehavingElement
+
+	concept InteractionBehaviorRegion
+
+	concept ElementBehaviorTransition
+
+	concept AttributeAutomaton
+
+	aspect ElementBehaviorOwner
+
+	concept ElementBehavior
+
+	concept Property
+
+	concept Parameter
+
+	concept InteractionBehavior
+
+	concept AutomatonState
+
+	concept ElementBehaviorConstraint
+
+	concept PropertySurrogate
+
+	concept InteractionBehaviorAutomaton
+
+	concept ElementBehaviorRegion
+
+	concept InteractionTerminal
+
+	concept InteractionRole
+
+	reifiedRelationship HasState {
+		functional
+		inverseFunctional
+		unreified = hasState
+		source = AutomatonRegion
+		target = AutomatonState }
+
+	reifiedRelationship Presents {
+		unreified = presents
+		source = PropertyGroup
+		target = InteractionTerminal }
+
+	reifiedRelationship HasElementBehaviorClass {
+		inverseFunctional
+		unreified = hasElementBehaviorClass
+		source = ElementBehaviorOwner
+		target = ElementBehaviorClass }
+
+	reifiedRelationship References {
+		unreified = references
+		source = ElementBehaviorCharacterization
+		target = PropertyGroup }
+
+	reifiedRelationship Exposes {
+		functional
+		unreified = exposes
+		source = PropertySurrogate
+		target = Property }
+
+	reifiedRelationship HasRegion {
+		functional
+		inverseFunctional
+		unreified = hasRegion
+		source = AttributeAutomaton
+		target = AutomatonRegion }
+
+	reifiedRelationship HasTransition {
+		functional
+		inverseFunctional
+		unreified = hasTransition
+		source = AutomatonRegion
+		target = AutomatonTransition }
+
+	reifiedRelationship HasInteractionBehaviorClass {
+		unreified = hasInteractionBehaviorClass
+		source = Interaction
+		target = InteractionBehaviorClass }
+
+	reifiedRelationship PlaysRoleOf {
+		functional
+		unreified = playsRoleOf
+		source = AttributeConstraintParticipant
+		target = Attribute }
+
+	unreifiedRelationship hasInteractionBehavior {
+		source = Interaction
+		target = InteractionBehavior }
+
+	unreifiedRelationship hasInteractionRole {
+		source = Interaction
+		target = InteractionRole }
+
+	unreifiedRelationship joins {
+		source = Interaction
+		target = AttributeGroup }
+
+	unreifiedRelationship hasElementBehavior {
+		source = ElementBehaviorOwner
+		target = ElementBehavior }
+
+	unreifiedRelationship hasAttributeGroup {
+		source = InteractionRole
+		target = AttributeGroup }
+
+	synonymScalarRestriction AbstractValueType {
+		restrictedRange XMLSchema:string
+	}
+
+	synonymScalarRestriction AttributeValueType {
+		restrictedRange AbstractValueType
+	}
+
+	synonymScalarRestriction AttributeAutomatonConfigurationValueType {
+		restrictedRange AbstractValueType
+	}
+
+	entityScalarDataProperty hasConfiguration {
+		domain AttributeAutomaton
+		range AttributeAutomatonConfigurationValueType
+	}
+
+	entityScalarDataProperty hasValueType {
+		domain AbstractValueTypedAttribute
+		range AbstractValueType
+	}
+
+	allEntities ElementBehaviorCharacterization . HasElementBehaviorClass in ElementBehaviorConstraint
+
+	InteractionBehaviorClass extendsConcept InteractionBehavior
+
+	InteractionBehaviorRegion extendsConcept AutomatonRegion
+
+	ElementBehaviorTransition extendsConcept AutomatonTransition
+
+	AttributeConstraint extendsConcept analysis:Characterization
+
+	ElementBehaviorAutomaton extendsConcept ElementBehaviorClass
+
+	InteractionBehaviorConstraint extendsConcept InteractionBehaviorClass
+
+	AttributeConstraintParticipant extendsConcept AbstractValueTypedAttribute
+
+	InteractionBehaviorAutomaton extendsConcept InteractionBehaviorClass
+
+	PropertyGroup extendsAspect AttributeGroup
+
+	InteractionBehaviorAutomaton extendsConcept AttributeAutomaton
+
+	InteractionBehaviorState extendsConcept AutomatonState
+
+	InteractionBehaviorConstraint extendsConcept AttributeConstraint
+
+	ElementBehaviorState extendsConcept ElementBehaviorAutomatonElement
+
+	StateVariableSurrogate extendsConcept PropertySurrogate
+
+	ElementBehaviorCharacterization extendsAspect ElementBehaviorOwner
+
+	Attribute extendsConcept AbstractValueTypedAttribute
+
+	StateVariableConstraintParticipant extendsConcept AttributeConstraintParticipant
+
+	ElementBehaviorAutomatonElement extendsConcept ElementBehavior
+
+	ElementBehaviorTransition extendsConcept ElementBehaviorAutomatonElement
+
+	InteractionBehaviorState extendsConcept InteractionBehaviorAutomatonElement
+
+	ElementBehaviorClass extendsConcept ElementBehavior
+
+	ParameterSurrogate extendsConcept PropertySurrogate
+
+	ElementBehaviorConstraint extendsConcept ElementBehaviorClass
+
+	BehavingElement extendsAspect Aspect
+
+	Aspect extendsAspect AttributeGroup
+
+	Aspect extendsAspect ElementBehaviorOwner
+
+	InteractionBehaviorTransition extendsConcept AutomatonTransition
+
+	ElementBehaviorAutomaton extendsConcept AttributeAutomaton
+
+	Property extendsConcept Attribute
+
+	Parameter extendsConcept Property
+
+	StateVariable extendsConcept Property
+
+	ElementBehaviorState extendsConcept AutomatonState
+
+	ElementBehaviorConstraint extendsConcept AttributeConstraint
+
+	InteractionBehaviorTransition extendsConcept InteractionBehaviorAutomatonElement
+
+	PropertyGroup extendsConcept analysis:Characterization
+
+	InteractionTerminal extendsAspect AttributeGroup
+
+	ElementBehaviorRegion extendsConcept ElementBehaviorAutomatonElement
+
+	ParameterConstraintParticipant extendsConcept AttributeConstraintParticipant
+
+	ElementBehaviorCharacterization extendsConcept analysis:Characterization
+
+	InteractionBehaviorAutomatonElement extendsConcept InteractionBehavior
+
+	InteractionBehaviorRegion extendsConcept InteractionBehaviorAutomatonElement
+
+	PropertySurrogate extendsConcept Attribute
+
+	ElementBehaviorRegion extendsConcept AutomatonRegion
+
+}

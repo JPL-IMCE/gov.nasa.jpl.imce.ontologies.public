@@ -1,0 +1,63 @@
+closed terminology <http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel> {
+
+	extends <http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV>
+
+	extends <http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel>
+
+	concept PrefixedUnit
+
+	concept LinearConversionUnit
+
+	concept UnitFactor
+
+	concept Prefix
+
+	concept SimpleUnit
+
+	concept DerivedUnit
+
+	concept SystemOfUnits
+
+	concept DerivedQuantityKind
+
+	concept SystemOfQuantities
+
+	concept AffineConversionUnit
+
+	concept GeneralConversionUnit
+
+	concept Dimension
+
+	concept QuantityKindFactor
+
+	concept SimpleQuantityKind
+
+	SystemOfUnits extendsConcept QUDV:SystemOfUnits
+
+	GeneralConversionUnit extendsConcept QUDV:GeneralConversionUnit
+
+	SystemOfQuantities extendsConcept QUDV:SystemOfQuantities
+
+	QuantityKindFactor extendsConcept QUDV:QuantityKindFactor
+
+	SimpleQuantityKind extendsConcept QUDV:SimpleQuantityKind
+
+	LinearConversionUnit extendsConcept QUDV:LinearConversionUnit
+
+	PrefixedUnit extendsConcept QUDV:PrefixedUnit
+
+	DerivedQuantityKind extendsConcept QUDV:DerivedQuantityKind
+
+	Prefix extendsConcept QUDV:Prefix
+
+	Dimension extendsConcept QUDV:Dimension
+
+	AffineConversionUnit extendsConcept QUDV:AffineConversionUnit
+
+	UnitFactor extendsConcept QUDV:UnitFactor
+
+	SimpleUnit extendsConcept QUDV:SimpleUnit
+
+	DerivedUnit extendsConcept QUDV:DerivedUnit
+
+}
