@@ -1,220 +1,113 @@
 <?xml version="1.0"?>
-
-
-<!DOCTYPE rdf:RDF [
-    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
-    <!ENTITY pbs "http://imce.jpl.nasa.gov/pbs/pbs#" >
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY math "http://imce.jpl.nasa.gov/math/math#" >
-    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY Blocks "http://imce.jpl.nasa.gov/Blocks/Blocks#" >
-    <!ENTITY pbs-embedding "http://imce.jpl.nasa.gov/pbs/pbs-embedding#" >
-    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY timeline "http://imce.jpl.nasa.gov/timeline/timeline#" >
-    <!ENTITY ieee-1471 "http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#" >
-    <!ENTITY math-embedding "http://imce.jpl.nasa.gov/math/math-embedding#" >
-    <!ENTITY time "http://imce.jpl.nasa.gov/foundation/time/time#" >
-    <!ENTITY base "http://imce.jpl.nasa.gov/foundation/base/base#" >
-    <!ENTITY mechanical "http://imce.jpl.nasa.gov/mechanical/mechanical#" >
-    <!ENTITY vandv "http://imce.jpl.nasa.gov/discipline/vandv/vandv#" >
-    <!ENTITY Blocks-embedding "http://imce.jpl.nasa.gov/Blocks/Blocks-embedding#" >
-    <!ENTITY project "http://imce.jpl.nasa.gov/foundation/project/project#" >
-    <!ENTITY mission "http://imce.jpl.nasa.gov/foundation/mission/mission#" >
-    <!ENTITY timeline-embedding "http://imce.jpl.nasa.gov/timeline/timeline-embedding#" >
-    <!ENTITY f6-asda "http://imce.jpl.nasa.gov/application/f6-asda/f6-asda#" >
-    <!ENTITY base-mapping "http://imce.jpl.nasa.gov/foundation/base/base-mapping#" >
-    <!ENTITY analysis "http://imce.jpl.nasa.gov/foundation/analysis/analysis#" >
-    <!ENTITY ieee-1471-embedding "http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#" >
-    <!ENTITY time-embedding "http://imce.jpl.nasa.gov/foundation/time/time-embedding#" >
-    <!ENTITY owl2-mof2 "http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#" >
-    <!ENTITY base-embedding "http://imce.jpl.nasa.gov/foundation/base/base-embedding#" >
-    <!ENTITY mechanical-embedding "http://imce.jpl.nasa.gov/mechanical/mechanical-embedding#" >
-    <!ENTITY vandv-embedding "http://imce.jpl.nasa.gov/discipline/vandv/vandv-embedding#" >
-    <!ENTITY annotation "http://imce.jpl.nasa.gov/foundation/annotation/annotation#" >
-    <!ENTITY electrical "http://imce.jpl.nasa.gov/discipline/electrical/electrical#" >
-    <!ENTITY jeo-architecture "http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture#" >
-    <!ENTITY datatype-map "http://imce.jpl.nasa.gov/foundation/owl2-mof2/datatype-map#" >
-    <!ENTITY UML "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#" >
-    <!ENTITY mgss-service-embedding "http://imce.jpl.nasa.gov/mgss-service/mgss-service-embedding#" >
-    <!ENTITY mission-embedding "http://imce.jpl.nasa.gov/foundation/mission/mission-embedding#" >
-    <!ENTITY project-embedding "http://imce.jpl.nasa.gov/foundation/project/project-embedding#" >
-    <!ENTITY QUDV "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#" >
-    <!ENTITY mgss-service "http://imce.jpl.nasa.gov/application/mgss-service/mgss-service#" >
-    <!ENTITY f6-asda-embedding "http://imce.jpl.nasa.gov/application/f6-asda/f6-asda-embedding#" >
-    <!ENTITY SysML "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#" >
-    <!ENTITY analysis-embedding "http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#" >
-    <!ENTITY owl2-mof2-mapping "http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-mapping#" >
-    <!ENTITY owl2-mof2-embedding "http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#" >
-    <!ENTITY state-analysis "http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#" >
-    <!ENTITY project-closure "http://imce.jpl.nasa.gov/foundation/project/project-bundle-closure#" >
-    <!ENTITY Metrology "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#" >
-    <!ENTITY annotation-embedding "http://imce.jpl.nasa.gov/foundation/annotation/annotation-embedding#" >
-    <!ENTITY electrical-embedding "http://imce.jpl.nasa.gov/discipline/electrical/electrical-embedding#" >
-    <!ENTITY UML-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#" >
-    <!ENTITY UML-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-embedding#" >
-    <!ENTITY jeo-architecture-embedding "http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture-embedding#" >
-    <!ENTITY fault-management "http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#" >
-    <!ENTITY QUDV-mapping "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-mapping#" >
-    <!ENTITY QUDV-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-embedding#" >
-    <!ENTITY QUDV-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#" >
-    <!ENTITY SysML-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-embedding#" >
-    <!ENTITY base-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#" >
-    <!ENTITY SysML-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#" >
-    <!ENTITY time-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#" >
-    <!ENTITY state-analysis-embedding "http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis-embedding#" >
-    <!ENTITY Metrology-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-embedding#" >
-    <!ENTITY architectural-description "http://imce.jpl.nasa.gov/architectural-description/architectural-description#" >
-    <!ENTITY Metrology-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#" >
-    <!ENTITY project-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#" >
-    <!ENTITY mission-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#" >
-    <!ENTITY fault-management-embedding "http://imce.jpl.nasa.gov/discipline/fault-management/fault-management-embedding#" >
-    <!ENTITY state-analysis-closure "http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis-bundle-closure#" >
-    <!ENTITY StandardProfileL2-mapping "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-mapping#" >
-    <!ENTITY PrimitiveTypes "http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes#" >
-    <!ENTITY analysis-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#" >
-    <!ENTITY base-embedding-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base-embedding#" >
-    <!ENTITY owl2-mof2-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#" >
-    <!ENTITY StandardProfileL2-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#" >
-    <!ENTITY StandardProfileL2-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-embedding#" >
-    <!ENTITY time-embedding-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time-embedding#" >
-    <!ENTITY annotation-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#" >
-    <!ENTITY UML-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#" >
-    <!ENTITY architectural-description-embedding "http://imce.jpl.nasa.gov/architectural-description/architectural-description-embedding#" >
-    <!ENTITY QUDV-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#" >
-    <!ENTITY mission-embedding-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#" >
-    <!ENTITY project-embedding-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project-embedding#" >
-    <!ENTITY SysML-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#" >
-    <!ENTITY PrimitiveTypes-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-embedding#" >
-    <!ENTITY PrimitiveTypes-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-metamodel#" >
-    <!ENTITY analysis-embedding-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#" >
-    <!ENTITY state-analysis-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#" >
-    <!ENTITY owl2-mof2-embedding-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#" >
-    <!ENTITY Metrology-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#" >
-    <!ENTITY UML-metamodel-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#" >
-    <!ENTITY state-analysis-implementation "http://imce.jpl.nasa.gov/discipline/state-analysis-implementation/state-analysis-implementation#" >
-    <!ENTITY QUDV-metamodel-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#" >
-    <!ENTITY SysML-metamodel-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#" >
-    <!ENTITY StandardProfileL2-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#" >
-    <!ENTITY state-analysis-functional-design "http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#" >
-    <!ENTITY state-analysis-embedding-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis/state-analysis-embedding#" >
-    <!ENTITY Metrology-metamodel-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#" >
-    <!ENTITY state-analysis-implementation-embedding "http://imce.jpl.nasa.gov/discipline/state-analysis-implementation/state-analysis-implementation-embedding#" >
-    <!ENTITY PrimitiveTypes-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes#" >
-    <!ENTITY StandardProfileL2-metamodel-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#" >
-    <!ENTITY state-analysis-functional-design-embedding "http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design-embedding#" >
-    <!ENTITY PrimitiveTypes-metamodel-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-metamodel#" >
-]>
-
-
-<rdf:RDF xmlns="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#"
-     xml:base="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2"
-     xmlns:UML-metamodel-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#"
-     xmlns:mission-embedding="http://imce.jpl.nasa.gov/foundation/mission/mission-embedding#"
-     xmlns:StandardProfileL2-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#"
-     xmlns:QUDV-metamodel-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#"
-     xmlns:time-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#"
-     xmlns:Metrology-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#"
-     xmlns:annotation-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#"
-     xmlns:state-analysis="http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#"
-     xmlns:state-analysis-embedding-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis/state-analysis-embedding#"
-     xmlns:Blocks-embedding="http://imce.jpl.nasa.gov/Blocks/Blocks-embedding#"
-     xmlns:annotation="http://imce.jpl.nasa.gov/foundation/annotation/annotation#"
-     xmlns:state-analysis-implementation="http://imce.jpl.nasa.gov/discipline/state-analysis-implementation/state-analysis-implementation#"
-     xmlns:time="http://imce.jpl.nasa.gov/foundation/time/time#"
-     xmlns:electrical-embedding="http://imce.jpl.nasa.gov/discipline/electrical/electrical-embedding#"
-     xmlns:mechanical="http://imce.jpl.nasa.gov/mechanical/mechanical#"
-     xmlns:analysis-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#"
-     xmlns:datatype-map="http://imce.jpl.nasa.gov/foundation/owl2-mof2/datatype-map#"
-     xmlns:QUDV-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#"
-     xmlns:Blocks="http://imce.jpl.nasa.gov/Blocks/Blocks#"
-     xmlns:state-analysis-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#"
-     xmlns:f6-asda-embedding="http://imce.jpl.nasa.gov/application/f6-asda/f6-asda-embedding#"
-     xmlns:mechanical-embedding="http://imce.jpl.nasa.gov/mechanical/mechanical-embedding#"
+<rdf:RDF xmlns="http://imce.jpl.nasa.gov/foundation/project/project-embedding#"
+     xml:base="http://imce.jpl.nasa.gov/foundation/project/project-embedding"
      xmlns:base-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#"
-     xmlns:jeo-architecture-embedding="http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture-embedding#"
-     xmlns:Metrology-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#"
-     xmlns:StandardProfileL2-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-embedding#"
-     xmlns:project="http://imce.jpl.nasa.gov/foundation/project/project#"
-     xmlns:Metrology="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:SysML-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#"
-     xmlns:timeline-embedding="http://imce.jpl.nasa.gov/timeline/timeline-embedding#"
-     xmlns:state-analysis-implementation-embedding="http://imce.jpl.nasa.gov/discipline/state-analysis-implementation/state-analysis-implementation-embedding#"
-     xmlns:Metrology-metamodel-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#"
-     xmlns:owl2-mof2-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#"
-     xmlns:mgss-service="http://imce.jpl.nasa.gov/application/mgss-service/mgss-service#"
-     xmlns:PrimitiveTypes="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes#"
-     xmlns:timeline="http://imce.jpl.nasa.gov/timeline/timeline#"
-     xmlns:SysML-metamodel-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#"
-     xmlns:jeo-architecture="http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture#"
-     xmlns:state-analysis-closure="http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis-bundle-closure#"
-     xmlns:SysML-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#"
-     xmlns:owl2-mof2="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#"
+     xmlns:Blocks-embedding="http://imce.jpl.nasa.gov/Blocks/Blocks-embedding#"
      xmlns:StandardProfileL2-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#"
-     xmlns:QUDV="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#"
-     xmlns:analysis-embedding="http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#"
-     xmlns:vandv="http://imce.jpl.nasa.gov/discipline/vandv/vandv#"
-     xmlns:project-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#"
-     xmlns:time-embedding-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time-embedding#"
-     xmlns:state-analysis-functional-design-embedding="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design-embedding#"
-     xmlns:UML-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-embedding#"
-     xmlns:PrimitiveTypes-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-embedding#"
-     xmlns:math="http://imce.jpl.nasa.gov/math/math#"
-     xmlns:architectural-description-embedding="http://imce.jpl.nasa.gov/architectural-description/architectural-description-embedding#"
-     xmlns:state-analysis-embedding="http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis-embedding#"
-     xmlns:base="http://imce.jpl.nasa.gov/foundation/base/base#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:QUDV-mapping="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-mapping#"
-     xmlns:fault-management-embedding="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management-embedding#"
-     xmlns:Metrology-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-embedding#"
-     xmlns:mgss-service-embedding="http://imce.jpl.nasa.gov/mgss-service/mgss-service-embedding#"
-     xmlns:base-embedding="http://imce.jpl.nasa.gov/foundation/base/base-embedding#"
-     xmlns:SysML="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#"
-     xmlns:base-embedding-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base-embedding#"
-     xmlns:owl2-mof2-embedding="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#"
-     xmlns:StandardProfileL2-mapping="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-mapping#"
-     xmlns:project-embedding="http://imce.jpl.nasa.gov/foundation/project/project-embedding#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:ieee-1471-embedding="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:QUDV-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#"
-     xmlns:PrimitiveTypes-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes#"
-     xmlns:base-mapping="http://imce.jpl.nasa.gov/foundation/base/base-mapping#"
-     xmlns:pbs="http://imce.jpl.nasa.gov/pbs/pbs#"
-     xmlns:SysML-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-embedding#"
-     xmlns:UML="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#"
-     xmlns:UML-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#"
+     xmlns:state-analysis-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#"
      xmlns:ieee-1471="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#"
-     xmlns:architectural-description="http://imce.jpl.nasa.gov/architectural-description/architectural-description#"
-     xmlns:project-closure="http://imce.jpl.nasa.gov/foundation/project/project-bundle-closure#"
-     xmlns:owl2-mof2-mapping="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-mapping#"
+     xmlns:StandardProfileL2-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-embedding#"
+     xmlns:mechanical="http://imce.jpl.nasa.gov/mechanical/mechanical#"
+     xmlns:mission-embedding="http://imce.jpl.nasa.gov/foundation/mission/mission-embedding#"
+     xmlns:state-analysis-functional-design="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#"
+     xmlns:datatype-map="http://imce.jpl.nasa.gov/foundation/owl2-mof2/datatype-map#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:StandardProfileL2-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#"
+     xmlns:time-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#"
+     xmlns:UML-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#"
+     xmlns:electrical="http://imce.jpl.nasa.gov/discipline/electrical/electrical#"
      xmlns:analysis="http://imce.jpl.nasa.gov/foundation/analysis/analysis#"
+     xmlns:state-analysis-embedding="http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis-embedding#"
+     xmlns:base-embedding-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base-embedding#"
+     xmlns:mission="http://imce.jpl.nasa.gov/foundation/mission/mission#"
+     xmlns:QUDV-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#"
+     xmlns:math="http://imce.jpl.nasa.gov/math/math#"
+     xmlns:PrimitiveTypes="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes#"
+     xmlns:vandv-embedding="http://imce.jpl.nasa.gov/discipline/vandv/vandv-embedding#"
+     xmlns:analysis-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#"
+     xmlns:SysML-metamodel-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#"
      xmlns:analysis-embedding-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#"
-     xmlns:math-embedding="http://imce.jpl.nasa.gov/math/math-embedding#"
+     xmlns:time-embedding="http://imce.jpl.nasa.gov/foundation/time/time-embedding#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:mission-embedding-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#"
+     xmlns:QUDV-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#"
+     xmlns:PrimitiveTypes-metamodel-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-metamodel#"
+     xmlns:pbs-embedding="http://imce.jpl.nasa.gov/pbs/pbs-embedding#"
+     xmlns:state-analysis-implementation="http://imce.jpl.nasa.gov/discipline/state-analysis-implementation/state-analysis-implementation#"
+     xmlns:oml="http://imce.jpl.nasa.gov/oml/oml#"
+     xmlns:jeo-architecture-embedding="http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture-embedding#"
+     xmlns:owl2-mof2-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#"
+     xmlns:owl2-mof2-embedding-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#"
+     xmlns:annotation-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#"
+     xmlns:project-embedding-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project-embedding#"
+     xmlns:mgss-service="http://imce.jpl.nasa.gov/application/mgss-service/mgss-service#"
+     xmlns:vandv="http://imce.jpl.nasa.gov/discipline/vandv/vandv#"
+     xmlns:UML-metamodel-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#"
+     xmlns:annotation="http://imce.jpl.nasa.gov/foundation/annotation/annotation#"
+     xmlns:architectural-description="http://imce.jpl.nasa.gov/architectural-description/architectural-description#"
+     xmlns:Blocks="http://imce.jpl.nasa.gov/Blocks/Blocks#"
+     xmlns:time-embedding-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time-embedding#"
+     xmlns:mgss-service-embedding="http://imce.jpl.nasa.gov/mgss-service/mgss-service-embedding#"
+     xmlns:project-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#"
+     xmlns:ieee-1471-embedding="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:project-closure="http://imce.jpl.nasa.gov/foundation/project/project-bundle-closure#"
+     xmlns:SysML-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#"
+     xmlns:owl2-mof2-embedding="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#"
+     xmlns:timeline="http://imce.jpl.nasa.gov/timeline/timeline#"
+     xmlns:state-analysis="http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#"
+     xmlns:state-analysis-functional-design-embedding="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design-embedding#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:fault-management="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#"
+     xmlns:PrimitiveTypes-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-embedding#"
+     xmlns:state-analysis-embedding-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis/state-analysis-embedding#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:project="http://imce.jpl.nasa.gov/foundation/project/project#"
+     xmlns:Metrology-metamodel-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#"
+     xmlns:timeline-embedding="http://imce.jpl.nasa.gov/timeline/timeline-embedding#"
+     xmlns:architectural-description-embedding="http://imce.jpl.nasa.gov/architectural-description/architectural-description-embedding#"
+     xmlns:QUDV="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#"
+     xmlns:PrimitiveTypes-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-metamodel#"
+     xmlns:QUDV-mapping="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-mapping#"
+     xmlns:owl2-mof2="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#"
+     xmlns:project-embedding="http://imce.jpl.nasa.gov/foundation/project/project-embedding#"
+     xmlns:owl2-mof2-mapping="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-mapping#"
+     xmlns:annotation-embedding="http://imce.jpl.nasa.gov/foundation/annotation/annotation-embedding#"
+     xmlns:math-embedding="http://imce.jpl.nasa.gov/math/math-embedding#"
+     xmlns:Metrology-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#"
+     xmlns:state-analysis-implementation-embedding="http://imce.jpl.nasa.gov/discipline/state-analysis-implementation/state-analysis-implementation-embedding#"
      xmlns:QUDV-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-embedding#"
      xmlns:UML-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#"
-     xmlns:PrimitiveTypes-metamodel-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-metamodel#"
+     xmlns:QUDV-metamodel-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#"
+     xmlns:UML-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-embedding#"
+     xmlns:Metrology-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#"
+     xmlns:UML="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#"
+     xmlns:StandardProfileL2-metamodel-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#"
+     xmlns:Metrology="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#"
+     xmlns:Metrology-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-embedding#"
+     xmlns:pbs="http://imce.jpl.nasa.gov/pbs/pbs#"
+     xmlns:mechanical-embedding="http://imce.jpl.nasa.gov/mechanical/mechanical-embedding#"
      xmlns:f6-asda="http://imce.jpl.nasa.gov/application/f6-asda/f6-asda#"
-     xmlns:state-analysis-functional-design="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#"
-     xmlns:project-embedding-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project-embedding#"
-     xmlns:electrical="http://imce.jpl.nasa.gov/discipline/electrical/electrical#"
-     xmlns:annotation-embedding="http://imce.jpl.nasa.gov/foundation/annotation/annotation-embedding#"
-     xmlns:time-embedding="http://imce.jpl.nasa.gov/foundation/time/time-embedding#"
-     xmlns:mission="http://imce.jpl.nasa.gov/foundation/mission/mission#"
-     xmlns:fault-management="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#"
-     xmlns:owl2-mof2-embedding-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#"
-     xmlns:pbs-embedding="http://imce.jpl.nasa.gov/pbs/pbs-embedding#"
-     xmlns:vandv-embedding="http://imce.jpl.nasa.gov/discipline/vandv/vandv-embedding#"
+     xmlns:SysML="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:SysML-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-embedding#"
+     xmlns:fault-management-embedding="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management-embedding#"
+     xmlns:base-embedding="http://imce.jpl.nasa.gov/foundation/base/base-embedding#"
+     xmlns:SysML-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#"
+     xmlns:jeo-architecture="http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture#"
+     xmlns:StandardProfileL2-mapping="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-mapping#"
+     xmlns:PrimitiveTypes-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes#"
      xmlns:mission-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#"
-     xmlns:PrimitiveTypes-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-metamodel#"
-     xmlns:StandardProfileL2-metamodel-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#">
+     xmlns:base-mapping="http://imce.jpl.nasa.gov/foundation/base/base-mapping#"
+     xmlns:electrical-embedding="http://imce.jpl.nasa.gov/discipline/electrical/electrical-embedding#"
+     xmlns:time="http://imce.jpl.nasa.gov/foundation/time/time#"
+     xmlns:mission-embedding-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#"
+     xmlns:state-analysis-closure="http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis-bundle-closure#"
+     xmlns:f6-asda-embedding="http://imce.jpl.nasa.gov/application/f6-asda/f6-asda-embedding#"
+     xmlns:analysis-embedding="http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#"
+     xmlns:base="http://imce.jpl.nasa.gov/foundation/base/base#">
     <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/foundation/project/project-embedding">
-        <dc:date rdf:datatype="&xsd;string">$Date$</dc:date>
-        <owl:versionInfo rdf:datatype="&xsd;string">$Revision$</owl:versionInfo>
-        <dc:rights rdf:datatype="&xsd;string">Copyright 2010-2014, by the California Institute of Technology. ALL RIGHTS
+        <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding"/>
+        <dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copyright 2010-2014, by the California Institute of Technology. ALL RIGHTS
    RESERVED. United States Government Sponsorship acknowledged. Any commercial
    use must be negotiated with the Office of Technology Transfer at the
    California Institute of Technology. This software may be subject to U.S.
@@ -223,9 +116,8 @@
    responsibility to obtain export licenses, or other export authority as may be
    required before exporting such information to foreign countries or providing
    access to foreign persons.</dc:rights>
-        <owl:imports rdf:resource="http://imce.jpl.nasa.gov/discipline/mechanical/mechanical-embedding"/>
-        <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding"/>
-        <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$Date$</dc:date>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$Revision$</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -243,19 +135,19 @@
 
     <!-- http://purl.org/dc/elements/1.1/date -->
 
-    <owl:AnnotationProperty rdf:about="&dc;date"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
     
 
 
     <!-- http://purl.org/dc/elements/1.1/rights -->
 
-    <owl:AnnotationProperty rdf:about="&dc;rights"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
     
 
 
     <!-- http://www.w3.org/2002/07/owl#versionInfo -->
 
-    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
     
 
 
@@ -272,353 +164,353 @@
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasAuthorizesSource -->
 
-    <rdf:Description rdf:about="&project;hasAuthorizesSource">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencySource"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasAuthorizesSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasAuthorizesTarget -->
 
-    <rdf:Description rdf:about="&project;hasAuthorizesTarget">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencyTarget"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasAuthorizesTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasBelongsToSource -->
 
-    <rdf:Description rdf:about="&project;hasBelongsToSource">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencySource"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasBelongsToSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasBelongsToTarget -->
 
-    <rdf:Description rdf:about="&project;hasBelongsToTarget">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencyTarget"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasBelongsToTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasBindsSource -->
 
-    <rdf:Description rdf:about="&project;hasBindsSource">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencySource"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasBindsSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasBindsTarget -->
 
-    <rdf:Description rdf:about="&project;hasBindsTarget">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencyTarget"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasBindsTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasDelegatesToSource -->
 
-    <rdf:Description rdf:about="&project;hasDelegatesToSource">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencySource"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasDelegatesToSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasDelegatesToTarget -->
 
-    <rdf:Description rdf:about="&project;hasDelegatesToTarget">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencyTarget"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasDelegatesToTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasDeliversSource -->
 
-    <rdf:Description rdf:about="&project;hasDeliversSource">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasStructuralOutFlowPropertyRelationshipSource"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasDeliversSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasStructuralOutFlowPropertyRelationshipSource"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasDeliversTarget -->
 
-    <rdf:Description rdf:about="&project;hasDeliversTarget">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasStructuralOutFlowPropertyRelationshipTarget"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasDeliversTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasStructuralOutFlowPropertyRelationshipTarget"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasDescribesSource -->
 
-    <rdf:Description rdf:about="&project;hasDescribesSource">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencySource"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasDescribesSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasDescribesTarget -->
 
-    <rdf:Description rdf:about="&project;hasDescribesTarget">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencyTarget"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasDescribesTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasExecutesSource -->
 
-    <rdf:Description rdf:about="&project;hasExecutesSource">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencySource"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasExecutesSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasExecutesTarget -->
 
-    <rdf:Description rdf:about="&project;hasExecutesTarget">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencyTarget"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasExecutesTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasHasAssignmentSource -->
 
-    <rdf:Description rdf:about="&project;hasHasAssignmentSource">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencySource"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasHasAssignmentSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasHasAssignmentTarget -->
 
-    <rdf:Description rdf:about="&project;hasHasAssignmentTarget">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencyTarget"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasHasAssignmentTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasHasParticipantSource -->
 
-    <rdf:Description rdf:about="&project;hasHasParticipantSource">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasStructuralInOutFlowPropertyRelationshipSource"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasHasParticipantSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasStructuralInOutFlowPropertyRelationshipSource"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasHasParticipantTarget -->
 
-    <rdf:Description rdf:about="&project;hasHasParticipantTarget">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasStructuralInOutFlowPropertyRelationshipTarget"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasHasParticipantTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasStructuralInOutFlowPropertyRelationshipTarget"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasHasResponsibilityForSource -->
 
-    <rdf:Description rdf:about="&project;hasHasResponsibilityForSource">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencySource"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasHasResponsibilityForSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasHasResponsibilityForTarget -->
 
-    <rdf:Description rdf:about="&project;hasHasResponsibilityForTarget">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencyTarget"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasHasResponsibilityForTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasHasRoleSource -->
 
-    <rdf:Description rdf:about="&project;hasHasRoleSource">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencySource"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasHasRoleSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasHasRoleTarget -->
 
-    <rdf:Description rdf:about="&project;hasHasRoleTarget">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencyTarget"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasHasRoleTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasInterchangesThroughSource -->
 
-    <rdf:Description rdf:about="&project;hasInterchangesThroughSource">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasStructuralFullPortRelationshipSource"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasInterchangesThroughSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasStructuralFullPortRelationshipSource"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasInterchangesThroughTarget -->
 
-    <rdf:Description rdf:about="&project;hasInterchangesThroughTarget">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasStructuralFullPortRelationshipTarget"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasInterchangesThroughTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasStructuralFullPortRelationshipTarget"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasInvokesSource -->
 
-    <rdf:Description rdf:about="&project;hasInvokesSource">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryCompositeAssociationSource"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasInvokesSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryCompositeAssociationSource"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasInvokesTarget -->
 
-    <rdf:Description rdf:about="&project;hasInvokesTarget">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryCompositeAssociationTarget"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasInvokesTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryCompositeAssociationTarget"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasInvolves1Source -->
 
-    <rdf:Description rdf:about="&project;hasInvolves1Source">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryAssociationBlockEnd1Source"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasInvolves1Source">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryAssociationBlockEnd1Source"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasInvolves1Target -->
 
-    <rdf:Description rdf:about="&project;hasInvolves1Target">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryAssociationBlockEnd1Target"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasInvolves1Target">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryAssociationBlockEnd1Target"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasInvolves2Source -->
 
-    <rdf:Description rdf:about="&project;hasInvolves2Source">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryAssociationBlockEnd2Source"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasInvolves2Source">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryAssociationBlockEnd2Source"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasInvolves2Target -->
 
-    <rdf:Description rdf:about="&project;hasInvolves2Target">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryAssociationBlockEnd2Target"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasInvolves2Target">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryAssociationBlockEnd2Target"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasInvolvesSource -->
 
-    <rdf:Description rdf:about="&project;hasInvolvesSource">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryAssociationBlockEndSource"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasInvolvesSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryAssociationBlockEndSource"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasInvolvesTarget -->
 
-    <rdf:Description rdf:about="&project;hasInvolvesTarget">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryAssociationBlockEndTarget"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasInvolvesTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryAssociationBlockEndTarget"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasManifestsSource -->
 
-    <rdf:Description rdf:about="&project;hasManifestsSource">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryCompositeAssociationSource"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasManifestsSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryCompositeAssociationSource"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasManifestsTarget -->
 
-    <rdf:Description rdf:about="&project;hasManifestsTarget">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryCompositeAssociationTarget"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasManifestsTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryCompositeAssociationTarget"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasRealizesSource -->
 
-    <rdf:Description rdf:about="&project;hasRealizesSource">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencySource"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasRealizesSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasRealizesTarget -->
 
-    <rdf:Description rdf:about="&project;hasRealizesTarget">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencyTarget"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasRealizesTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasReceivesSource -->
 
-    <rdf:Description rdf:about="&project;hasReceivesSource">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasStructuralInFlowPropertyRelationshipSource"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasReceivesSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasStructuralInFlowPropertyRelationshipSource"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasReceivesTarget -->
 
-    <rdf:Description rdf:about="&project;hasReceivesTarget">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasStructuralInFlowPropertyRelationshipTarget"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasReceivesTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasStructuralInFlowPropertyRelationshipTarget"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasReliesOnSource -->
 
-    <rdf:Description rdf:about="&project;hasReliesOnSource">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencySource"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasReliesOnSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasReliesOnTarget -->
 
-    <rdf:Description rdf:about="&project;hasReliesOnTarget">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencyTarget"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasReliesOnTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasRepresentsSource -->
 
-    <rdf:Description rdf:about="&project;hasRepresentsSource">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencySource"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasRepresentsSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasRepresentsTarget -->
 
-    <rdf:Description rdf:about="&project;hasRepresentsTarget">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencyTarget"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasRepresentsTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasSuppliesSource -->
 
-    <rdf:Description rdf:about="&project;hasSuppliesSource">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencySource"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasSuppliesSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#hasSuppliesTarget -->
 
-    <rdf:Description rdf:about="&project;hasSuppliesTarget">
-        <rdfs:subPropertyOf rdf:resource="&owl2-mof2;hasBinaryDependencyTarget"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#hasSuppliesTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
+    </owl:ObjectProperty>
     
 
 
@@ -635,338 +527,338 @@
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#StructuredDatatype -->
 
-    <rdf:Description rdf:about="&project-backbone;StructuredDatatype">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryAssociationEndType"/>
-        <rdfs:subClassOf rdf:resource="&UML;DataType"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#StructuredDatatype">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryAssociationEndType"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#DataType"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#AssignedElement -->
 
-    <rdf:Description rdf:about="&project;AssignedElement">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryDependencyEndType"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#AssignedElement">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependencyEndType"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#Authorizes -->
 
-    <rdf:Description rdf:about="&project;Authorizes">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryDependency"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Authorizes">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependency"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#BelongsTo -->
 
-    <rdf:Description rdf:about="&project;BelongsTo">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryDependency"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#BelongsTo">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependency"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#Binds -->
 
-    <rdf:Description rdf:about="&project;Binds">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryDependency"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Binds">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependency"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#Concern -->
 
-    <rdf:Description rdf:about="&project;Concern">
-        <rdfs:subClassOf rdf:resource="&SysML-metamodel;Component.Block"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Concern">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Component.Block"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#DelegatesTo -->
 
-    <rdf:Description rdf:about="&project;DelegatesTo">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryDependency"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#DelegatesTo">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependency"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#Deliverable -->
 
-    <rdf:Description rdf:about="&project;Deliverable">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;StructuralFlowPropertyType"/>
-        <rdfs:subClassOf rdf:resource="&SysML-metamodel;Component.Block"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Deliverable">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#StructuralFlowPropertyType"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Component.Block"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#Delivers -->
 
-    <rdf:Description rdf:about="&project;Delivers">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;StructuralOutFlowPropertyRelationship"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Delivers">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#StructuralOutFlowPropertyRelationship"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#Describes -->
 
-    <rdf:Description rdf:about="&project;Describes">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryDependency"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Describes">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependency"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#DevelopedElement -->
 
-    <rdf:Description rdf:about="&project;DevelopedElement">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryAssociationEndType"/>
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryDependencyEndType"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#DevelopedElement">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryAssociationEndType"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependencyEndType"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#DevelopmentState -->
 
-    <rdf:Description rdf:about="&project;DevelopmentState">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryAssociationEndType"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#DevelopmentState">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryAssociationEndType"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#Executes -->
 
-    <rdf:Description rdf:about="&project;Executes">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryDependency"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Executes">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependency"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#Facility -->
 
-    <rdf:Description rdf:about="&project;Facility">
-        <rdfs:subClassOf rdf:resource="&SysML-metamodel;Component.Block"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Facility">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Component.Block"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#HasAssignment -->
 
-    <rdf:Description rdf:about="&project;HasAssignment">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryDependency"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#HasAssignment">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependency"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#HasParticipant -->
 
-    <rdf:Description rdf:about="&project;HasParticipant">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;StructuralInOutFlowPropertyRelationship"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#HasParticipant">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#StructuralInOutFlowPropertyRelationship"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#HasResponsibilityFor -->
 
-    <rdf:Description rdf:about="&project;HasResponsibilityFor">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryDependency"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#HasResponsibilityFor">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependency"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#HasRole -->
 
-    <rdf:Description rdf:about="&project;HasRole">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryDependency"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#HasRole">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependency"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#Interchange -->
 
-    <rdf:Description rdf:about="&project;Interchange">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryAssociationBlock"/>
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryDependencyEndType"/>
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;StructuralFlowPropertyContainerType"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Interchange">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryAssociationBlock"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependencyEndType"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#StructuralFlowPropertyContainerType"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#InterchangePoint -->
 
-    <rdf:Description rdf:about="&project;InterchangePoint">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryAssociationEndType"/>
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;StructuralFlowPropertyContainerType"/>
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;StructuralFullPortType"/>
-        <rdfs:subClassOf rdf:resource="&SysML-metamodel;Component.Block"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#InterchangePoint">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryAssociationEndType"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#StructuralFlowPropertyContainerType"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#StructuralFullPortType"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Component.Block"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#InterchangesThrough -->
 
-    <rdf:Description rdf:about="&project;InterchangesThrough">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryDependencyEndType"/>
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;StructuralFullPortRelationship"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#InterchangesThrough">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependencyEndType"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#StructuralFullPortRelationship"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#Invokes -->
 
-    <rdf:Description rdf:about="&project;Invokes">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryCompositeAssociation"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Invokes">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryCompositeAssociation"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#Involves -->
 
-    <rdf:Description rdf:about="&project;Involves">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryAssociationBlockEnd"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Involves">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryAssociationBlockEnd"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#Involves1 -->
 
-    <rdf:Description rdf:about="&project;Involves1">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryAssociationBlockEnd1"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Involves1">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryAssociationBlockEnd1"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#Involves2 -->
 
-    <rdf:Description rdf:about="&project;Involves2">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryAssociationBlockEnd2"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Involves2">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryAssociationBlockEnd2"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#Manifests -->
 
-    <rdf:Description rdf:about="&project;Manifests">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryCompositeAssociation"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Manifests">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryCompositeAssociation"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#Organization -->
 
-    <rdf:Description rdf:about="&project;Organization">
-        <rdfs:subClassOf rdf:resource="&SysML-metamodel;Component.Block"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Organization">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Component.Block"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#Person -->
 
-    <rdf:Description rdf:about="&project;Person">
-        <rdfs:subClassOf rdf:resource="&SysML-metamodel;Component.Block"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Person">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Component.Block"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#Policy -->
 
-    <rdf:Description rdf:about="&project;Policy">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryDependencyEndType"/>
-        <rdfs:subClassOf rdf:resource="&SysML-metamodel;Component.Block"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Policy">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependencyEndType"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Component.Block"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#Process -->
 
-    <rdf:Description rdf:about="&project;Process">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryAssociationEndType"/>
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryDependencyEndType"/>
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;StructuralFlowPropertyContainerType"/>
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;StructuralFullPortEncapsulatedClassifierType"/>
-        <rdfs:subClassOf rdf:resource="&SysML-metamodel;Component.Block"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Process">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryAssociationEndType"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependencyEndType"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#StructuralFlowPropertyContainerType"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#StructuralFullPortEncapsulatedClassifierType"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Component.Block"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#Product -->
 
-    <rdf:Description rdf:about="&project;Product">
-        <rdfs:subClassOf rdf:resource="&SysML-metamodel;Component.Block"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Product">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Component.Block"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#RealizedElement -->
 
-    <rdf:Description rdf:about="&project;RealizedElement">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryDependencyEndType"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#RealizedElement">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependencyEndType"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#Realizes -->
 
-    <rdf:Description rdf:about="&project;Realizes">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryDependency"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Realizes">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependency"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#Receives -->
 
-    <rdf:Description rdf:about="&project;Receives">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;StructuralInFlowPropertyRelationship"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Receives">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#StructuralInFlowPropertyRelationship"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#ReliesOn -->
 
-    <rdf:Description rdf:about="&project;ReliesOn">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryDependency"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#ReliesOn">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependency"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#Represents -->
 
-    <rdf:Description rdf:about="&project;Represents">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryDependency"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Represents">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependency"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#Role -->
 
-    <rdf:Description rdf:about="&project;Role">
-        <rdfs:subClassOf rdf:resource="&UML-metamodel;Actor"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Role">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#Actor"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#Stakeholder -->
 
-    <rdf:Description rdf:about="&project;Stakeholder">
-        <rdfs:subClassOf rdf:resource="&SysML-metamodel;Component.Block"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Stakeholder">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Component.Block"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#SuppliedElement -->
 
-    <rdf:Description rdf:about="&project;SuppliedElement">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryDependencyEndType"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#SuppliedElement">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependencyEndType"/>
+    </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#Supplies -->
 
-    <rdf:Description rdf:about="&project;Supplies">
-        <rdfs:subClassOf rdf:resource="&owl2-mof2;BinaryDependency"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Supplies">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependency"/>
+    </owl:Class>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 
