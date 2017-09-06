@@ -1868,6 +1868,7 @@ if and only if &lt;replaceable&gt;j&lt;/replaceable&gt; provides a medium or cha
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#Component">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#AggregatedElement"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#ContainedElement"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#Container"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#IdentifiedElement"/>
@@ -1876,7 +1877,19 @@ if and only if &lt;replaceable&gt;j&lt;/replaceable&gt; provides a medium or cha
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#SpecifiedElement"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#aggregates"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Component"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#contains"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Component"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#isAggregatedIn"/>
                 <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Component"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2537,6 +2550,50 @@ A &lt;classname&gt;Mission&lt;/classname&gt; may
     </rdf:Description>
     <rdf:Description rdf:about="urn:swrl#t">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#hasIsTraversedBySource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#hasIsTraversedByTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#isTraversedBy"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
@@ -3630,50 +3687,6 @@ A &lt;classname&gt;Mission&lt;/classname&gt; may
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                         <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#involves"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#hasIsTraversedBySource"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#hasIsTraversedByTarget"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#isTraversedBy"/>
                         <swrl:argument1 rdf:resource="urn:swrl#s"/>
                         <swrl:argument2 rdf:resource="urn:swrl#t"/>
                     </rdf:Description>
