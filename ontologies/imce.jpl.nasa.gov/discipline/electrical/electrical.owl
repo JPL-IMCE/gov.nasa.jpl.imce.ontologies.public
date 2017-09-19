@@ -8,7 +8,6 @@
     <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
     <!ENTITY pbs "http://imce.jpl.nasa.gov/pbs/pbs#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY oml "http://imce.jpl.nasa.gov/oml/oml#" >
     <!ENTITY math "http://imce.jpl.nasa.gov/math/math#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY Blocks "http://imce.jpl.nasa.gov/Blocks/Blocks#" >
@@ -83,8 +82,8 @@
 ]>
 
 
-<rdf:RDF xmlns="http://imce.jpl.nasa.gov/discipline/electrical/electrical#"
-     xml:base="http://imce.jpl.nasa.gov/discipline/electrical/electrical"
+<rdf:RDF xmlns="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#"
+     xml:base="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2"
      xmlns:fault-management="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#"
      xmlns:PrimitiveTypes-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-embedding#"
      xmlns:Blocks-embedding="http://imce.jpl.nasa.gov/Blocks/Blocks-embedding#"
@@ -135,7 +134,6 @@
      xmlns:fault-management-embedding="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management-embedding#"
      xmlns:pbs-embedding="http://imce.jpl.nasa.gov/pbs/pbs-embedding#"
      xmlns:state-analysis-implementation="http://imce.jpl.nasa.gov/discipline/state-analysis-implementation/state-analysis-implementation#"
-     xmlns:oml="http://imce.jpl.nasa.gov/oml/oml#"
      xmlns:jeo-architecture-embedding="http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture-embedding#"
      xmlns:base-embedding="http://imce.jpl.nasa.gov/foundation/base/base-embedding#"
      xmlns:StandardProfileL2="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#"
@@ -252,16 +250,6 @@ This software may be subject to U.S. export control laws. By accepting this soft
     
 
 
-    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/electrical/electrical#topReifiedObjectProperty -->
-
-    <owl:ObjectProperty rdf:about="&electrical-backbone;topReifiedObjectProperty">
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <rdfs:subPropertyOf rdf:resource="&electrical-backbone;topObjectProperty"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/electrical/electrical#topReifiedObjectPropertySource -->
 
     <owl:ObjectProperty rdf:about="&electrical-backbone;topReifiedObjectPropertySource">
@@ -286,42 +274,51 @@ This software may be subject to U.S. export control laws. By accepting this soft
     
 
 
-    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/electrical/electrical#topReifiedStructuredDataProperty -->
+    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#hasProvidesSource -->
 
-    <owl:ObjectProperty rdf:about="&electrical-backbone;topReifiedStructuredDataProperty">
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <rdfs:subPropertyOf rdf:resource="&electrical-backbone;topObjectProperty"/>
+    <owl:ObjectProperty rdf:about="&electrical;hasProvidesSource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&electrical-backbone;topReifiedObjectPropertySource"/>
+        <rdfs:range rdf:resource="&electrical;ChannelInterface"/>
+        <rdfs:domain rdf:resource="&electrical;Provides"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/electrical/electrical#topReifiedStructuredDataPropertySource -->
+    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#hasProvidesTarget -->
 
-    <owl:ObjectProperty rdf:about="&electrical-backbone;topReifiedStructuredDataPropertySource">
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <rdfs:subPropertyOf rdf:resource="&electrical-backbone;topObjectProperty"/>
+    <owl:ObjectProperty rdf:about="&electrical;hasProvidesTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&electrical-backbone;topReifiedObjectPropertyTarget"/>
+        <rdfs:range rdf:resource="&electrical;LinkInterface"/>
+        <rdfs:domain rdf:resource="&electrical;Provides"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/electrical/electrical#topReifiedStructuredDataPropertyTarget -->
+    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#isProvidedBy -->
 
-    <owl:ObjectProperty rdf:about="&electrical-backbone;topReifiedStructuredDataPropertyTarget">
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+    <owl:ObjectProperty rdf:about="&electrical;isProvidedBy">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <annotation:isDerived rdf:datatype="&xsd;boolean">true</annotation:isDerived>
         <rdfs:subPropertyOf rdf:resource="&electrical-backbone;topObjectProperty"/>
+        <rdfs:range rdf:resource="&electrical;ChannelInterface"/>
+        <rdfs:domain rdf:resource="&electrical;LinkInterface"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/electrical/electrical#topUnreifiedObjectProperty -->
+    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#provides -->
 
-    <owl:ObjectProperty rdf:about="&electrical-backbone;topUnreifiedObjectProperty">
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+    <owl:ObjectProperty rdf:about="&electrical;provides">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
         <rdfs:subPropertyOf rdf:resource="&electrical-backbone;topObjectProperty"/>
+        <rdfs:domain rdf:resource="&electrical;ChannelInterface"/>
+        <rdfs:range rdf:resource="&electrical;LinkInterface"/>
+        <owl:inverseOf rdf:resource="&electrical;isProvidedBy"/>
     </owl:ObjectProperty>
     
 
@@ -358,24 +355,13 @@ This software may be subject to U.S. export control laws. By accepting this soft
     
 
 
-    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/electrical/electrical#Aspect -->
-
-    <owl:Class rdf:about="&electrical-backbone;Aspect">
-        <rdfs:subClassOf rdf:resource="&electrical-backbone;Thing"/>
-        <rdfs:subClassOf rdf:resource="&analysis;AnalyzedElement"/>
-        <rdfs:subClassOf rdf:resource="&analysis;CharacterizedElement"/>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-    </owl:Class>
-    
-
-
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/electrical/electrical#Entity -->
 
     <owl:Class rdf:about="&electrical-backbone;Entity">
         <rdfs:subClassOf rdf:resource="&electrical-backbone;Thing"/>
         <rdfs:subClassOf rdf:resource="&analysis;AnalyzedElement"/>
         <rdfs:subClassOf rdf:resource="&analysis;CharacterizedElement"/>
+        <rdfs:subClassOf rdf:resource="&base;PackagedElement"/>
         <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
         <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
     </owl:Class>
@@ -388,18 +374,7 @@ This software may be subject to U.S. export control laws. By accepting this soft
         <rdfs:subClassOf rdf:resource="&electrical-backbone;Thing"/>
         <rdfs:subClassOf rdf:resource="&analysis;AnalyzedElement"/>
         <rdfs:subClassOf rdf:resource="&analysis;CharacterizedElement"/>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/electrical/electrical#ReifiedStructuredDataProperty -->
-
-    <owl:Class rdf:about="&electrical-backbone;ReifiedStructuredDataProperty">
-        <rdfs:subClassOf rdf:resource="&electrical-backbone;Thing"/>
-        <rdfs:subClassOf rdf:resource="&analysis;AnalyzedElement"/>
-        <rdfs:subClassOf rdf:resource="&analysis;CharacterizedElement"/>
+        <rdfs:subClassOf rdf:resource="&base;PackagedElement"/>
         <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
         <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
     </owl:Class>
@@ -412,6 +387,7 @@ This software may be subject to U.S. export control laws. By accepting this soft
         <rdfs:subClassOf rdf:resource="&electrical-backbone;Thing"/>
         <rdfs:subClassOf rdf:resource="&analysis;AnalyzedElement"/>
         <rdfs:subClassOf rdf:resource="&analysis;CharacterizedElement"/>
+        <rdfs:subClassOf rdf:resource="&base;PackagedElement"/>
         <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
         <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
     </owl:Class>
@@ -428,842 +404,202 @@ This software may be subject to U.S. export control laws. By accepting this soft
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#AD590Channel -->
+    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Channel -->
 
-    <owl:Class rdf:about="&electrical;AD590Channel">
-        <rdfs:label rdf:datatype="&xsd;string">AD590Channel</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;VoltageMeasurementInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#AnalogCurrentChannel -->
-
-    <owl:Class rdf:about="&electrical;AnalogCurrentChannel">
-        <rdfs:label rdf:datatype="&xsd;string">Analog Current Channel</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;CurrentMeasurementInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#AnalogPrtChannel -->
-
-    <owl:Class rdf:about="&electrical;AnalogPrtChannel">
-        <rdfs:label rdf:datatype="&xsd;string">Analog Prt Channel</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;VoltageMeasurementInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#AnalogVoltageChannel -->
-
-    <owl:Class rdf:about="&electrical;AnalogVoltageChannel">
-        <rdfs:label rdf:datatype="&xsd;string">Analog Voltage Channel</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;Voltage3.3VMeasurementInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Conditioned5VInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Conditioned5VInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Conditioned5VInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;Fixed5VInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#CurrentMeasurementInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;CurrentMeasurementInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Current Measurement Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;MeasurementInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#DataInterface1InterfaceSpecification -->
-
-    <owl:Class rdf:about="&electrical;DataInterface1InterfaceSpecification">
-        <rdfs:label rdf:datatype="&xsd;string">Data Interface1Interface Specification</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;MilStd1553TransformerInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="&electrical;UartInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#DataInterface2InterfaceSpecification -->
-
-    <owl:Class rdf:about="&electrical;DataInterface2InterfaceSpecification">
-        <rdfs:label rdf:datatype="&xsd;string">Data Interface2Interface Specification</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;MilStd1553TransformerInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#DifferentialDiscreteInterface -->
-
-    <owl:Class rdf:about="&electrical;DifferentialDiscreteInterface">
-        <rdfs:label rdf:datatype="&xsd;string">Differential Discrete Interface</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;DiscreteVoltageInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Digital3WireDriverInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Digital3WireDriverInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Digital3Wire Driver Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;DigitalDriverInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Digital3WireReceiverInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Digital3WireReceiverInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Digital3Wire Receiver Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;DigitalReceiverInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#DigitalDriverInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;DigitalDriverInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Digital Driver Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;DigitalInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#DigitalInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;DigitalInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Digital Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;InterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#DigitalReceiverInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;DigitalReceiverInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Digital Receiver Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;DigitalInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#DiscreteVoltageInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;DiscreteVoltageInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Discrete Voltage Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;InterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#DiscreteVoltageMeasurementInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;DiscreteVoltageMeasurementInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Discrete Voltage Measurement Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;Fused4AInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="&electrical;VoltageMeasurementInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Fixed10VInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Fixed10VInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Fixed10VInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;FixedVoltageInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Fixed12VInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Fixed12VInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Fixed12VInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;FixedVoltageInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Fixed2.5VInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Fixed2.5VInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Fixed2.5VInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;FixedVoltageInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Fixed28VInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Fixed28VInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Fixed28VInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;FixedVoltageInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Fixed3.3VInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Fixed3.3VInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Fixed3.3VInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;FixedVoltageInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Fixed4VInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Fixed4VInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Fixed4VInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;FixedVoltageInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Fixed5VInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Fixed5VInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Fixed5VInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;FixedVoltageInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Fixed70VInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Fixed70VInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Fixed70VInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;FixedVoltageInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#FixedVoltageInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;FixedVoltageInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Fixed Voltage Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;InterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Fused10AInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Fused10AInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Fused10AInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;FusedInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Fused20AInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Fused20AInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Fused20AInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;FusedInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Fused2AInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Fused2AInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Fused2AInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;FusedInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Fused4AInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Fused4AInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Fused4AInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;FusedInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#FusedInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;FusedInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Fused Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;InterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#HeaterInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;HeaterInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Heater Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;ResistiveInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#InterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;InterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Interface Circuit</rdfs:label>
+    <owl:Class rdf:about="&electrical;Channel">
         <rdfs:subClassOf rdf:resource="&electrical-backbone;Entity"/>
-        <rdfs:subClassOf rdf:resource="&mission;Interface"/>
+        <rdfs:subClassOf rdf:resource="&mission;Junction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&mission;joins"/>
+                <owl:allValuesFrom rdf:resource="&electrical;ChannelInterface"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#ChannelInterface -->
+
+    <owl:Class rdf:about="&electrical;ChannelInterface">
+        <rdfs:subClassOf rdf:resource="&electrical;Interface"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&mission;isJoinedIn"/>
+                <owl:allValuesFrom rdf:resource="&electrical;Channel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Component -->
+
+    <owl:Class rdf:about="&electrical;Component">
+        <rdfs:subClassOf rdf:resource="&electrical-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="&mission;Component"/>
         <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#LvdsDriverInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Contact -->
 
-    <owl:Class rdf:about="&electrical;LvdsDriverInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Lvds Driver Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;DigitalDriverInterfaceCircuit"/>
+    <owl:Class rdf:about="&electrical;Contact">
+        <rdfs:subClassOf rdf:resource="&electrical;Interface"/>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#LvdsInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#DataMessage -->
 
-    <owl:Class rdf:about="&electrical;LvdsInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Lvds Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;DigitalInterfaceCircuit"/>
+    <owl:Class rdf:about="&electrical;DataMessage">
+        <rdfs:subClassOf rdf:resource="&electrical-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="&mission;Item"/>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#LvdsRadioTzRadioTransceiverInterface -->
+    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Interface -->
 
-    <owl:Class rdf:about="&electrical;LvdsRadioTzRadioTransceiverInterface">
-        <rdfs:label rdf:datatype="&xsd;string">Lvds Radio Tz Radio Transceiver Interface</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;LvdsInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="&electrical;RadioTzRadioTransceiverInterface"/>
+    <owl:Class rdf:about="&electrical;Interface">
+        <rdfs:subClassOf rdf:resource="&electrical-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="&mission;Interface"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&mission;isPresentedBy"/>
+                <owl:allValuesFrom rdf:resource="&electrical;Component"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#LvdsReceiverInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Link -->
 
-    <owl:Class rdf:about="&electrical;LvdsReceiverInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Lvds Receiver Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;DigitalReceiverInterfaceCircuit"/>
+    <owl:Class rdf:about="&electrical;Link">
+        <rdfs:subClassOf rdf:resource="&electrical-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="&mission;Junction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&mission;joins"/>
+                <owl:allValuesFrom rdf:resource="&electrical;LinkInterface"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#LvdsSpacewireTransceiver -->
+    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#LinkInterface -->
 
-    <owl:Class rdf:about="&electrical;LvdsSpacewireTransceiver">
-        <rdfs:label rdf:datatype="&xsd;string">Lvds Spacewire Transceiver</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;LvdsInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="&electrical;SpacewireTransceiver"/>
+    <owl:Class rdf:about="&electrical;LinkInterface">
+        <rdfs:subClassOf rdf:resource="&electrical;Interface"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&mission;isJoinedIn"/>
+                <owl:allValuesFrom rdf:resource="&electrical;Link"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#LvdsUart2SignalFlowControlInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Medium -->
 
-    <owl:Class rdf:about="&electrical;LvdsUart2SignalFlowControlInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Lvds Uart2Signal Flow Control Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;LvdsUartInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="&electrical;Uart2SignalFlowControlInterfaceCircuit"/>
+    <owl:Class rdf:about="&electrical;Medium">
+        <rdfs:subClassOf rdf:resource="&electrical;Component"/>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#LvdsUartInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Provides -->
 
-    <owl:Class rdf:about="&electrical;LvdsUartInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Lvds Uart Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;LvdsInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="&electrical;UartInterfaceCircuit"/>
+    <owl:Class rdf:about="&electrical;Provides">
+        <rdfs:subClassOf rdf:resource="&electrical-backbone;ReifiedObjectProperty"/>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#MeasurementInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#SignalFlow -->
 
-    <owl:Class rdf:about="&electrical;MeasurementInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Measurement Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;InterfaceCircuit"/>
+    <owl:Class rdf:about="&electrical;SignalFlow">
+        <rdfs:subClassOf rdf:resource="&electrical-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="&mission;Flow"/>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#MilStd1553DirectInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/foundation/base/base#PackagedElement -->
 
-    <owl:Class rdf:about="&electrical;MilStd1553DirectInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Mil Std1553Direct Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;MilStd1553InterfaceCircuit"/>
-    </owl:Class>
+    <owl:Class rdf:about="&base;PackagedElement"/>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#MilStd1553InterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;MilStd1553InterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Mil Std1553Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;DigitalInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#MilStd1553InterfaceSpecification -->
-
-    <owl:Class rdf:about="&electrical;MilStd1553InterfaceSpecification">
-        <rdfs:label rdf:datatype="&xsd;string">Mil Std1553Interface Specification</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;MilStd1553TransformerInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="&electrical;UartInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#MilStd1553TerminationInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;MilStd1553TerminationInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Mil Std1553Termination Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;MilStd1553InterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#MilStd1553TransformerInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;MilStd1553TransformerInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Mil Std1553Transformer Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;MilStd1553InterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#PowerInputInterfaceSpecification -->
-
-    <owl:Class rdf:about="&electrical;PowerInputInterfaceSpecification">
-        <rdfs:label rdf:datatype="&xsd;string">Power Input Interface Specification</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;PoweredInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#PowerInterfaceSpecification -->
-
-    <owl:Class rdf:about="&electrical;PowerInterfaceSpecification">
-        <rdfs:label rdf:datatype="&xsd;string">Power Interface Specification</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;PoweredInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#PowerSupplyInterfaceSpecification -->
-
-    <owl:Class rdf:about="&electrical;PowerSupplyInterfaceSpecification">
-        <rdfs:label rdf:datatype="&xsd;string">Power Supply Interface Specification</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;PoweredInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#PoweredInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;PoweredInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Powered Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;InterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#PoweredInterfaceCircuitInterfaceSpecification -->
-
-    <owl:Class rdf:about="&electrical;PoweredInterfaceCircuitInterfaceSpecification">
-        <rdfs:label rdf:datatype="&xsd;string">Powered Interface Circuit Interface Specification</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;PoweredInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Prt4WireInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Prt4WireInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Prt4Wire Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;ResistiveInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#PrtInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;PrtInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Prt Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;ResistiveInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#PrtsInterfaceSpecification -->
-
-    <owl:Class rdf:about="&electrical;PrtsInterfaceSpecification">
-        <rdfs:label rdf:datatype="&xsd;string">Prts Interface Specification</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;PrtInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#PulsedInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;PulsedInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Pulsed Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;InterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#RadioTzMtifTransceiverInterface -->
-
-    <owl:Class rdf:about="&electrical;RadioTzMtifTransceiverInterface">
-        <rdfs:label rdf:datatype="&xsd;string">Radio Tz Mtif Transceiver Interface</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;DigitalInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#RadioTzRadioTransceiverInterface -->
-
-    <owl:Class rdf:about="&electrical;RadioTzRadioTransceiverInterface">
-        <rdfs:label rdf:datatype="&xsd;string">Radio Tz Radio Transceiver Interface</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;DigitalInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#RemoteSerialBusClientInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;RemoteSerialBusClientInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Remote Serial Bus Client Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;DigitalInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#RemoteSerialBusHostInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;RemoteSerialBusHostInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Remote Serial Bus Host Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;DigitalInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#ResistiveInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;ResistiveInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Resistive Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;InterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Rs422DriverInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Rs422DriverInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Rs422Driver Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;DigitalDriverInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Rs422InterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Rs422InterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Rs422Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;DigitalInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Rs422ReceiverInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Rs422ReceiverInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Rs422Receiver Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;DigitalReceiverInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#SingleEndedDiscreteInterface -->
-
-    <owl:Class rdf:about="&electrical;SingleEndedDiscreteInterface">
-        <rdfs:label rdf:datatype="&xsd;string">Single Ended Discrete Interface</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;DiscreteVoltageInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#SpacewireTransceiver -->
-
-    <owl:Class rdf:about="&electrical;SpacewireTransceiver">
-        <rdfs:label rdf:datatype="&xsd;string">Spacewire Transceiver</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;DigitalInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Switched28V10AInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Switched28V10AInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Switched28V10AInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;Fused20AInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="&electrical;Switched28VInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Switched28V1ADriverInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Switched28V1ADriverInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Switched28V1ADriver Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;Fused2AInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="&electrical;Switched28VInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Switched28V2AInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Switched28V2AInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Switched28V2AInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;Fused4AInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="&electrical;Switched28VInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Switched28V2APulsedInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Switched28V2APulsedInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Switched28V2APulsed Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;PulsedInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="&electrical;Switched28V2AInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Switched28V2ASwitchInterfaceSpecification -->
-
-    <owl:Class rdf:about="&electrical;Switched28V2ASwitchInterfaceSpecification">
-        <rdfs:label rdf:datatype="&xsd;string">Switched28V2ASwitch Interface Specification</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;Switched28V2AInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Switched28V2ASwitchedInterfaceCircuitInterfacesSpecification -->
-
-    <owl:Class rdf:about="&electrical;Switched28V2ASwitchedInterfaceCircuitInterfacesSpecification">
-        <rdfs:label rdf:datatype="&xsd;string">Switched28V2ASwitched Interface Circuit Interfaces Specification</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;Switched28V2AInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Switched28V5AFspSwitchCircuit -->
-
-    <owl:Class rdf:about="&electrical;Switched28V5AFspSwitchCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Switched28V5AFsp Switch Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;PoweredInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="&electrical;Switched28V5AInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Switched28V5AInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Switched28V5AInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Switched28V5AInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;Fused10AInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="&electrical;Switched28VInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Switched28V5ASwitchIntefaceSpecification -->
-
-    <owl:Class rdf:about="&electrical;Switched28V5ASwitchIntefaceSpecification">
-        <rdfs:label rdf:datatype="&xsd;string">Switched28V5ASwitch Inteface Specification</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;Switched28V5AInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Switched28VInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Switched28VInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Switched28VInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;Fixed28VInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="&electrical;SwitchedVoltageInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Switched70VInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Switched70VInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Switched70VInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;Fixed70VInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="&electrical;SwitchedVoltageInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#SwitchedVoltageInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;SwitchedVoltageInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Switched Voltage Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;FixedVoltageInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#ThermistorInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;ThermistorInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Thermistor Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;ResistiveInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Uart2SignalFlowControlInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Uart2SignalFlowControlInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Uart2Signal Flow Control Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;UartInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#UartInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;UartInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Uart Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;DigitalInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Variable28VInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Variable28VInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Variable28VInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;VariableVoltageInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Variable3.3VInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Variable3.3VInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Variable3.3VInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;VariableVoltageInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Variable70VInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Variable70VInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Variable70VInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;VariableVoltageInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#VariableCurrentInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;VariableCurrentInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Variable Current Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;InterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#VariableVoltageInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;VariableVoltageInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Variable Voltage Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;InterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Voltage10VMeasurementInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Voltage10VMeasurementInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Voltage10VMeasurement Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;VoltageMeasurementInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Voltage2.5VMeasurementInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Voltage2.5VMeasurementInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Voltage2.5VMeasurement Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;VoltageMeasurementInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Voltage3.3VDiscreteMeasurementInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Voltage3.3VDiscreteMeasurementInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Voltage3.3VDiscrete Measurement Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;Voltage3.3VMeasurementInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Voltage3.3VMeasurementInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Voltage3.3VMeasurementInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Voltage3.3VMeasurement Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;VoltageMeasurementInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#Voltage5VMeasurementInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;Voltage5VMeasurementInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Voltage5VMeasurement Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;VoltageMeasurementInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#VoltageMeasurementInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;VoltageMeasurementInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Voltage Measurement Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;MeasurementInterfaceCircuit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/electrical/electrical#1.5Fixed1.5VInterfaceCircuit -->
-
-    <owl:Class rdf:about="&electrical;1.5Fixed1.5VInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Fixed1.5VInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&electrical;FixedVoltageInterfaceCircuit"/>
-    </owl:Class>
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl#r">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#s">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#t">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&electrical;hasProvidesTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&electrical;hasProvidesSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&electrical;provides"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 3.4.5-SNAPSHOT) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
 
