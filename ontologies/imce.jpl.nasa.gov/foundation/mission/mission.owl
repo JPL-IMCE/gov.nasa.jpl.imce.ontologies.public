@@ -2810,7 +2810,7 @@ A &lt;classname&gt;Mission&lt;/classname&gt; may
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                         <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#specifies"/>
-                        <swrl:argument1 rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#c"/>
+                        <swrl:argument1 rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#r"/>
                         <swrl:argument2 rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#p"/>
                     </rdf:Description>
                 </rdf:first>
@@ -2830,7 +2830,20 @@ A &lt;classname&gt;Mission&lt;/classname&gt; may
                 </rdf:rest>
             </rdf:Description>
         </swrl:body>
-        <swrl:head rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#binds"/>
+                        <swrl:argument1 rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#r"/>
+                        <swrl:argument2 rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
@@ -2908,7 +2921,20 @@ A &lt;classname&gt;Mission&lt;/classname&gt; may
                 </rdf:rest>
             </rdf:Description>
         </swrl:body>
-        <swrl:head rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#binds"/>
+                        <swrl:argument1 rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#r"/>
+                        <swrl:argument2 rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
