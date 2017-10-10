@@ -1,90 +1,6 @@
 <?xml version="1.0"?>
-
-
-<!DOCTYPE rdf:RDF [
-    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
-    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
-    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
-    <!ENTITY pbs "http://imce.jpl.nasa.gov/pbs/pbs#" >
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY oml "http://imce.jpl.nasa.gov/oml/oml#" >
-    <!ENTITY math "http://imce.jpl.nasa.gov/math/math#" >
-    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY Blocks "http://imce.jpl.nasa.gov/Blocks/Blocks#" >
-    <!ENTITY timeline "http://imce.jpl.nasa.gov/timeline/timeline#" >
-    <!ENTITY pbs-embedding "http://imce.jpl.nasa.gov/pbs/pbs-embedding#" >
-    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY ieee-1471 "http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#" >
-    <!ENTITY math-embedding "http://imce.jpl.nasa.gov/math/math-embedding#" >
-    <!ENTITY base "http://imce.jpl.nasa.gov/foundation/base/base#" >
-    <!ENTITY time "http://imce.jpl.nasa.gov/foundation/time/time#" >
-    <!ENTITY mechanical "http://imce.jpl.nasa.gov/mechanical/mechanical#" >
-    <!ENTITY vandv "http://imce.jpl.nasa.gov/discipline/vandv/vandv#" >
-    <!ENTITY Blocks-embedding "http://imce.jpl.nasa.gov/Blocks/Blocks-embedding#" >
-    <!ENTITY mission "http://imce.jpl.nasa.gov/foundation/mission/mission#" >
-    <!ENTITY project "http://imce.jpl.nasa.gov/foundation/project/project#" >
-    <!ENTITY f6-asda "http://imce.jpl.nasa.gov/application/f6-asda/f6-asda#" >
-    <!ENTITY timeline-embedding "http://imce.jpl.nasa.gov/timeline/timeline-embedding#" >
-    <!ENTITY base-mapping "http://imce.jpl.nasa.gov/foundation/base/base-mapping#" >
-    <!ENTITY analysis "http://imce.jpl.nasa.gov/foundation/analysis/analysis#" >
-    <!ENTITY ieee-1471-embedding "http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#" >
-    <!ENTITY owl2-mof2 "http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#" >
-    <!ENTITY time-embedding "http://imce.jpl.nasa.gov/foundation/time/time-embedding#" >
-    <!ENTITY base-embedding "http://imce.jpl.nasa.gov/foundation/base/base-embedding#" >
-    <!ENTITY mechanical-embedding "http://imce.jpl.nasa.gov/mechanical/mechanical-embedding#" >
-    <!ENTITY vandv-embedding "http://imce.jpl.nasa.gov/discipline/vandv/vandv-embedding#" >
-    <!ENTITY annotation "http://imce.jpl.nasa.gov/foundation/annotation/annotation#" >
-    <!ENTITY fsee "http://imce.jpl.nasa.gov/discipline/fsee/fsee#" >
-    <!ENTITY UML "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#" >
-    <!ENTITY jeo-architecture "http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture#" >
-    <!ENTITY datatype-map "http://imce.jpl.nasa.gov/foundation/owl2-mof2/datatype-map#" >
-    <!ENTITY mgss-service-embedding "http://imce.jpl.nasa.gov/mgss-service/mgss-service-embedding#" >
-    <!ENTITY QUDV "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#" >
-    <!ENTITY project-embedding "http://imce.jpl.nasa.gov/foundation/project/project-embedding#" >
-    <!ENTITY mission-embedding "http://imce.jpl.nasa.gov/foundation/mission/mission-embedding#" >
-    <!ENTITY SysML "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#" >
-    <!ENTITY f6-asda-embedding "http://imce.jpl.nasa.gov/application/f6-asda/f6-asda-embedding#" >
-    <!ENTITY mgss-service "http://imce.jpl.nasa.gov/application/mgss-service/mgss-service#" >
-    <!ENTITY owl2-mof2-mapping "http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-mapping#" >
-    <!ENTITY analysis-embedding "http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#" >
-    <!ENTITY owl2-mof2-embedding "http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#" >
-    <!ENTITY state-analysis "http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#" >
-    <!ENTITY fsee-embedding "http://imce.jpl.nasa.gov/discipline/fsee/fsee-embedding#" >
-    <!ENTITY annotation-embedding "http://imce.jpl.nasa.gov/foundation/annotation/annotation-embedding#" >
-    <!ENTITY UML-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-embedding#" >
-    <!ENTITY jeo-architecture-embedding "http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture-embedding#" >
-    <!ENTITY UML-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#" >
-    <!ENTITY fault-management "http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#" >
-    <!ENTITY QUDV-mapping "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-mapping#" >
-    <!ENTITY QUDV-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-embedding#" >
-    <!ENTITY StandardProfileL2 "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#" >
-    <!ENTITY SysML-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#" >
-    <!ENTITY SysML-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-embedding#" >
-    <!ENTITY time-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#" >
-    <!ENTITY state-analysis-embedding "http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis-embedding#" >
-    <!ENTITY architectural-description "http://imce.jpl.nasa.gov/architectural-description/architectural-description#" >
-    <!ENTITY project-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#" >
-    <!ENTITY mission-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#" >
-    <!ENTITY fault-management-embedding "http://imce.jpl.nasa.gov/discipline/fault-management/fault-management-embedding#" >
-    <!ENTITY PrimitiveTypes "http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes#" >
-    <!ENTITY analysis-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#" >
-    <!ENTITY StandardProfileL2-mapping "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-mapping#" >
-    <!ENTITY StandardProfileL2-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-embedding#" >
-    <!ENTITY StandardProfileL2-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#" >
-    <!ENTITY fsee-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fsee/fsee#" >
-    <!ENTITY architectural-description-embedding "http://imce.jpl.nasa.gov/architectural-description/architectural-description-embedding#" >
-    <!ENTITY PrimitiveTypes-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-embedding#" >
-    <!ENTITY PrimitiveTypes-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-metamodel#" >
-    <!ENTITY state-analysis-implementation "http://imce.jpl.nasa.gov/discipline/state-analysis-implementation/state-analysis-implementation#" >
-    <!ENTITY state-analysis-functional-design "http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#" >
-    <!ENTITY state-analysis-implementation-embedding "http://imce.jpl.nasa.gov/discipline/state-analysis-implementation/state-analysis-implementation-embedding#" >
-    <!ENTITY state-analysis-functional-design-embedding "http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design-embedding#" >
-]>
-
-
-<rdf:RDF xmlns="http://imce.jpl.nasa.gov/discipline/fsee/fsee#"
-     xml:base="http://imce.jpl.nasa.gov/discipline/fsee/fsee"
+<rdf:RDF xmlns="http://imce.jpl.nasa.gov/discipline/fse/fse#"
+     xml:base="http://imce.jpl.nasa.gov/discipline/fse/fse"
      xmlns:fault-management="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#"
      xmlns:PrimitiveTypes-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-embedding#"
      xmlns:Blocks-embedding="http://imce.jpl.nasa.gov/Blocks/Blocks-embedding#"
@@ -104,7 +20,9 @@
      xmlns:state-analysis-functional-design="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#"
      xmlns:QUDV-mapping="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-mapping#"
      xmlns:owl2-mof2="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:project-embedding="http://imce.jpl.nasa.gov/foundation/project/project-embedding#"
+     xmlns:fse="http://imce.jpl.nasa.gov/discipline/fse/fse#"
      xmlns:owl2-mof2-mapping="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-mapping#"
      xmlns:annotation-embedding="http://imce.jpl.nasa.gov/foundation/annotation/annotation-embedding#"
      xmlns:math-embedding="http://imce.jpl.nasa.gov/math/math-embedding#"
@@ -112,15 +30,14 @@
      xmlns:state-analysis-implementation-embedding="http://imce.jpl.nasa.gov/discipline/state-analysis-implementation/state-analysis-implementation-embedding#"
      xmlns:QUDV-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-embedding#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
-     xmlns:fsee="http://imce.jpl.nasa.gov/discipline/fsee/fsee#"
      xmlns:analysis="http://imce.jpl.nasa.gov/foundation/analysis/analysis#"
      xmlns:state-analysis-embedding="http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis-embedding#"
      xmlns:UML-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#"
      xmlns:mission="http://imce.jpl.nasa.gov/foundation/mission/mission#"
      xmlns:UML-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-embedding#"
      xmlns:UML="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#"
+     xmlns:fse-embedding="http://imce.jpl.nasa.gov/discipline/fse/fse-embedding#"
      xmlns:math="http://imce.jpl.nasa.gov/math/math#"
-     xmlns:fsee-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fsee/fsee#"
      xmlns:pbs="http://imce.jpl.nasa.gov/pbs/pbs#"
      xmlns:PrimitiveTypes="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes#"
      xmlns:analysis-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#"
@@ -147,6 +64,7 @@
      xmlns:annotation="http://imce.jpl.nasa.gov/foundation/annotation/annotation#"
      xmlns:architectural-description="http://imce.jpl.nasa.gov/architectural-description/architectural-description#"
      xmlns:Blocks="http://imce.jpl.nasa.gov/Blocks/Blocks#"
+     xmlns:fse-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#"
      xmlns:mgss-service-embedding="http://imce.jpl.nasa.gov/mgss-service/mgss-service-embedding#"
      xmlns:project-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#"
      xmlns:mission-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#"
@@ -155,7 +73,6 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl2-mof2-embedding="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#"
      xmlns:timeline="http://imce.jpl.nasa.gov/timeline/timeline#"
-     xmlns:fsee-embedding="http://imce.jpl.nasa.gov/discipline/fsee/fsee-embedding#"
      xmlns:state-analysis="http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#"
      xmlns:time="http://imce.jpl.nasa.gov/foundation/time/time#"
      xmlns:state-analysis-functional-design-embedding="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design-embedding#"
@@ -163,17 +80,17 @@
      xmlns:analysis-embedding="http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:base="http://imce.jpl.nasa.gov/foundation/base/base#">
-    <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/discipline/fsee/fsee">
-        <dc:date rdf:datatype="&xsd;string">$Date$</dc:date>
-        <owl:versionInfo rdf:datatype="&xsd;string">$Revision$</owl:versionInfo>
-        <dc:rights rdf:datatype="&xsd;string">Copyright 2010-2011, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
+    <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse">
+        <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project"/>
+        <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flight System Electrical Ontology</dc:title>
+        <dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Discipline</dc:type>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Systems Engineering &amp; Formulation Division</dc:creator>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Flight System Electrical Ontology defines concepts and properties for flight system electrical engineering.</dc:description>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$Date$</dc:date>
+        <dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copyright 2010-2017, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
 
 This software may be subject to U.S. export control laws. By accepting this software, the user agrees to comply with all applicable U.S. export laws and regulations. User has the responsibility to obtain export licenses,a or other export authority as may be required before exporting such information to foreign countries or providing access to foreign persons.</dc:rights>
-        <dc:type rdf:datatype="&xsd;string">Discipline</dc:type>
-        <dc:title rdf:datatype="&xsd;string">Fsee Ontology</dc:title>
-        <dc:creator rdf:datatype="&xsd;string">Systems Engineering &amp; Formulation Division</dc:creator>
-        <dc:description rdf:datatype="&xsd;string">The Fsee Ontology defines concepts and properties for fsee systems engineering.</dc:description>
-        <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$Revision$</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -191,43 +108,43 @@ This software may be subject to U.S. export control laws. By accepting this soft
 
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
-    <owl:AnnotationProperty rdf:about="&dc;creator"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
     
 
 
     <!-- http://purl.org/dc/elements/1.1/date -->
 
-    <owl:AnnotationProperty rdf:about="&dc;date"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
     
 
 
     <!-- http://purl.org/dc/elements/1.1/description -->
 
-    <owl:AnnotationProperty rdf:about="&dc;description"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
     
 
 
     <!-- http://purl.org/dc/elements/1.1/rights -->
 
-    <owl:AnnotationProperty rdf:about="&dc;rights"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
     
 
 
     <!-- http://purl.org/dc/elements/1.1/title -->
 
-    <owl:AnnotationProperty rdf:about="&dc;title"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
     
 
 
     <!-- http://purl.org/dc/elements/1.1/type -->
 
-    <owl:AnnotationProperty rdf:about="&dc;type"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/type"/>
     
 
 
     <!-- http://www.w3.org/2002/07/owl#versionInfo -->
 
-    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
     
 
 
@@ -242,86 +159,86 @@ This software may be subject to U.S. export control laws. By accepting this soft
     
 
 
-    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fsee/fsee#topObjectProperty -->
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topObjectProperty -->
 
-    <owl:ObjectProperty rdf:about="&fsee-backbone;topObjectProperty">
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topObjectProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fsee/fsee#topReifiedObjectProperty -->
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topReifiedObjectProperty -->
 
-    <owl:ObjectProperty rdf:about="&fsee-backbone;topReifiedObjectProperty">
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <rdfs:subPropertyOf rdf:resource="&fsee-backbone;topObjectProperty"/>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topReifiedObjectProperty">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topObjectProperty"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fsee/fsee#topReifiedObjectPropertySource -->
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topReifiedObjectPropertySource -->
 
-    <owl:ObjectProperty rdf:about="&fsee-backbone;topReifiedObjectPropertySource">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <rdfs:subPropertyOf rdf:resource="&fsee-backbone;topObjectProperty"/>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topReifiedObjectPropertySource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fsee/fsee#topReifiedObjectPropertyTarget -->
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topReifiedObjectPropertyTarget -->
 
-    <owl:ObjectProperty rdf:about="&fsee-backbone;topReifiedObjectPropertyTarget">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <rdfs:subPropertyOf rdf:resource="&fsee-backbone;topObjectProperty"/>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topReifiedObjectPropertyTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fsee/fsee#topReifiedStructuredDataProperty -->
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topReifiedStructuredDataProperty -->
 
-    <owl:ObjectProperty rdf:about="&fsee-backbone;topReifiedStructuredDataProperty">
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <rdfs:subPropertyOf rdf:resource="&fsee-backbone;topObjectProperty"/>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topReifiedStructuredDataProperty">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topObjectProperty"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fsee/fsee#topReifiedStructuredDataPropertySource -->
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topReifiedStructuredDataPropertySource -->
 
-    <owl:ObjectProperty rdf:about="&fsee-backbone;topReifiedStructuredDataPropertySource">
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <rdfs:subPropertyOf rdf:resource="&fsee-backbone;topObjectProperty"/>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topReifiedStructuredDataPropertySource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topObjectProperty"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fsee/fsee#topReifiedStructuredDataPropertyTarget -->
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topReifiedStructuredDataPropertyTarget -->
 
-    <owl:ObjectProperty rdf:about="&fsee-backbone;topReifiedStructuredDataPropertyTarget">
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <rdfs:subPropertyOf rdf:resource="&fsee-backbone;topObjectProperty"/>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topReifiedStructuredDataPropertyTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topObjectProperty"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fsee/fsee#topUnreifiedObjectProperty -->
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topUnreifiedObjectProperty -->
 
-    <owl:ObjectProperty rdf:about="&fsee-backbone;topUnreifiedObjectProperty">
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <rdfs:subPropertyOf rdf:resource="&fsee-backbone;topObjectProperty"/>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topUnreifiedObjectProperty">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topObjectProperty"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:ObjectProperty>
     
 
@@ -337,12 +254,12 @@ This software may be subject to U.S. export control laws. By accepting this soft
     
 
 
-    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fsee/fsee#topDataProperty -->
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty -->
 
-    <owl:DatatypeProperty rdf:about="&fsee-backbone;topDataProperty">
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:DatatypeProperty>
     
 
@@ -358,912 +275,912 @@ This software may be subject to U.S. export control laws. By accepting this soft
     
 
 
-    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fsee/fsee#Aspect -->
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Aspect -->
 
-    <owl:Class rdf:about="&fsee-backbone;Aspect">
-        <rdfs:subClassOf rdf:resource="&fsee-backbone;Thing"/>
-        <rdfs:subClassOf rdf:resource="&analysis;AnalyzedElement"/>
-        <rdfs:subClassOf rdf:resource="&analysis;CharacterizedElement"/>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Aspect">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fsee/fsee#Entity -->
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Entity -->
 
-    <owl:Class rdf:about="&fsee-backbone;Entity">
-        <rdfs:subClassOf rdf:resource="&fsee-backbone;Thing"/>
-        <rdfs:subClassOf rdf:resource="&analysis;AnalyzedElement"/>
-        <rdfs:subClassOf rdf:resource="&analysis;CharacterizedElement"/>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Entity">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fsee/fsee#ReifiedObjectProperty -->
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#ReifiedObjectProperty -->
 
-    <owl:Class rdf:about="&fsee-backbone;ReifiedObjectProperty">
-        <rdfs:subClassOf rdf:resource="&fsee-backbone;Thing"/>
-        <rdfs:subClassOf rdf:resource="&analysis;AnalyzedElement"/>
-        <rdfs:subClassOf rdf:resource="&analysis;CharacterizedElement"/>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#ReifiedObjectProperty">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fsee/fsee#ReifiedStructuredDataProperty -->
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#ReifiedStructuredDataProperty -->
 
-    <owl:Class rdf:about="&fsee-backbone;ReifiedStructuredDataProperty">
-        <rdfs:subClassOf rdf:resource="&fsee-backbone;Thing"/>
-        <rdfs:subClassOf rdf:resource="&analysis;AnalyzedElement"/>
-        <rdfs:subClassOf rdf:resource="&analysis;CharacterizedElement"/>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#ReifiedStructuredDataProperty">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fsee/fsee#StructuredDatatype -->
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#StructuredDatatype -->
 
-    <owl:Class rdf:about="&fsee-backbone;StructuredDatatype">
-        <rdfs:subClassOf rdf:resource="&fsee-backbone;Thing"/>
-        <rdfs:subClassOf rdf:resource="&analysis;AnalyzedElement"/>
-        <rdfs:subClassOf rdf:resource="&analysis;CharacterizedElement"/>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#StructuredDatatype">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fsee/fsee#Thing -->
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Thing -->
 
-    <owl:Class rdf:about="&fsee-backbone;Thing">
-        <dc:description rdf:datatype="&xsd;string">&lt;classname&gt;Thing&lt;/classname&gt; is a common superclass of all classes in the Fsee ontology.</dc:description>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Thing">
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;classname&gt;Thing&lt;/classname&gt; is a common superclass of all classes in the Fse ontology.</dc:description>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#AD590Channel -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#AD590Channel -->
 
-    <owl:Class rdf:about="&fsee;AD590Channel">
-        <rdfs:label rdf:datatype="&xsd;string">AD590Channel</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;VoltageMeasurementInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#AD590Channel">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VoltageMeasurementInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AD590Channel</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#AnalogCurrentChannel -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#AnalogCurrentChannel -->
 
-    <owl:Class rdf:about="&fsee;AnalogCurrentChannel">
-        <rdfs:label rdf:datatype="&xsd;string">Analog Current Channel</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;CurrentMeasurementInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#AnalogCurrentChannel">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#CurrentMeasurementInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Analog Current Channel</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#AnalogPrtChannel -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#AnalogPrtChannel -->
 
-    <owl:Class rdf:about="&fsee;AnalogPrtChannel">
-        <rdfs:label rdf:datatype="&xsd;string">Analog Prt Channel</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;VoltageMeasurementInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#AnalogPrtChannel">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VoltageMeasurementInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Analog Prt Channel</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#AnalogVoltageChannel -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#AnalogVoltageChannel -->
 
-    <owl:Class rdf:about="&fsee;AnalogVoltageChannel">
-        <rdfs:label rdf:datatype="&xsd;string">Analog Voltage Channel</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;Voltage3.3VMeasurementInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#AnalogVoltageChannel">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Voltage3.3VMeasurementInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Analog Voltage Channel</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Conditioned5VInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Conditioned5VInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Conditioned5VInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Conditioned5VInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;Fixed5VInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Conditioned5VInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Fixed5VInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conditioned5VInterface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#CurrentMeasurementInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#CurrentMeasurementInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;CurrentMeasurementInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Current Measurement Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;MeasurementInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#CurrentMeasurementInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Current Measurement Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#DataInterface1InterfaceSpecification -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#DataInterface1InterfaceSpecification -->
 
-    <owl:Class rdf:about="&fsee;DataInterface1InterfaceSpecification">
-        <rdfs:label rdf:datatype="&xsd;string">Data Interface1Interface Specification</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;MilStd1553TransformerInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="&fsee;UartInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DataInterface1InterfaceSpecification">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MilStd1553TransformerInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#UartInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Interface1Interface Specification</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#DataInterface2InterfaceSpecification -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#DataInterface2InterfaceSpecification -->
 
-    <owl:Class rdf:about="&fsee;DataInterface2InterfaceSpecification">
-        <rdfs:label rdf:datatype="&xsd;string">Data Interface2Interface Specification</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;MilStd1553TransformerInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DataInterface2InterfaceSpecification">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MilStd1553TransformerInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Interface2Interface Specification</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#DifferentialDiscreteInterface -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#DifferentialDiscreteInterface -->
 
-    <owl:Class rdf:about="&fsee;DifferentialDiscreteInterface">
-        <rdfs:label rdf:datatype="&xsd;string">Differential Discrete Interface</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;DiscreteVoltageInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DifferentialDiscreteInterface">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteVoltageInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Differential Discrete Interface</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Digital3WireDriverInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Digital3WireDriverInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Digital3WireDriverInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Digital3Wire Driver Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;DigitalDriverInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Digital3WireDriverInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalDriverInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital3Wire Driver Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Digital3WireReceiverInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Digital3WireReceiverInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Digital3WireReceiverInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Digital3Wire Receiver Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;DigitalReceiverInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Digital3WireReceiverInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalReceiverInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital3Wire Receiver Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#DigitalDriverInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalDriverInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;DigitalDriverInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Digital Driver Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;DigitalInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalDriverInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Driver Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#DigitalInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;DigitalInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Digital Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;InterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#InterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#DigitalReceiverInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalReceiverInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;DigitalReceiverInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Digital Receiver Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;DigitalInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalReceiverInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Receiver Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#DiscreteVoltageInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteVoltageInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;DiscreteVoltageInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Discrete Voltage Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;InterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteVoltageInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#InterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Discrete Voltage Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#DiscreteVoltageMeasurementInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteVoltageMeasurementInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;DiscreteVoltageMeasurementInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Discrete Voltage Measurement Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;Fused4AInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="&fsee;VoltageMeasurementInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteVoltageMeasurementInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Fused4AInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VoltageMeasurementInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Discrete Voltage Measurement Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Fixed10VInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Fixed10VInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Fixed10VInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Fixed10VInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;FixedVoltageInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Fixed10VInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FixedVoltageInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fixed10VInterface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Fixed12VInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Fixed12VInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Fixed12VInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Fixed12VInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;FixedVoltageInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Fixed12VInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FixedVoltageInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fixed12VInterface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Fixed2.5VInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Fixed2.5VInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Fixed2.5VInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Fixed2.5VInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;FixedVoltageInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Fixed2.5VInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FixedVoltageInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fixed2.5VInterface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Fixed28VInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Fixed28VInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Fixed28VInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Fixed28VInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;FixedVoltageInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Fixed28VInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FixedVoltageInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fixed28VInterface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Fixed3.3VInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Fixed3.3VInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Fixed3.3VInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Fixed3.3VInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;FixedVoltageInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Fixed3.3VInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FixedVoltageInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fixed3.3VInterface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Fixed4VInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Fixed4VInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Fixed4VInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Fixed4VInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;FixedVoltageInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Fixed4VInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FixedVoltageInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fixed4VInterface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Fixed5VInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Fixed5VInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Fixed5VInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Fixed5VInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;FixedVoltageInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Fixed5VInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FixedVoltageInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fixed5VInterface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Fixed70VInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Fixed70VInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Fixed70VInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Fixed70VInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;FixedVoltageInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Fixed70VInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FixedVoltageInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fixed70VInterface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#FixedVoltageInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#FixedVoltageInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;FixedVoltageInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Fixed Voltage Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;InterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#FixedVoltageInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#InterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fixed Voltage Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Fused10AInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Fused10AInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Fused10AInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Fused10AInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;FusedInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Fused10AInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FusedInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fused10AInterface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Fused20AInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Fused20AInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Fused20AInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Fused20AInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;FusedInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Fused20AInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FusedInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fused20AInterface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Fused2AInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Fused2AInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Fused2AInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Fused2AInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;FusedInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Fused2AInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FusedInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fused2AInterface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Fused4AInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Fused4AInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Fused4AInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Fused4AInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;FusedInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Fused4AInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FusedInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fused4AInterface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#FusedInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#FusedInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;FusedInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Fused Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;InterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#FusedInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#InterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fused Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#HeaterInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#HeaterInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;HeaterInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Heater Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;ResistiveInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#HeaterInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ResistiveInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heater Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#InterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#InterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;InterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee-backbone;Entity"/>
-        <rdfs:subClassOf rdf:resource="&mission;Interface"/>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#InterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Interface"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#LvdsDriverInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#LvdsDriverInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;LvdsDriverInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Lvds Driver Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;DigitalDriverInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#LvdsDriverInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalDriverInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lvds Driver Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#LvdsInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#LvdsInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;LvdsInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Lvds Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;DigitalInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#LvdsInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lvds Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#LvdsRadioTzRadioTransceiverInterface -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#LvdsRadioTzRadioTransceiverInterface -->
 
-    <owl:Class rdf:about="&fsee;LvdsRadioTzRadioTransceiverInterface">
-        <rdfs:label rdf:datatype="&xsd;string">Lvds Radio Tz Radio Transceiver Interface</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;LvdsInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="&fsee;RadioTzRadioTransceiverInterface"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#LvdsRadioTzRadioTransceiverInterface">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#LvdsInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#RadioTzRadioTransceiverInterface"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lvds Radio Tz Radio Transceiver Interface</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#LvdsReceiverInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#LvdsReceiverInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;LvdsReceiverInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Lvds Receiver Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;DigitalReceiverInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#LvdsReceiverInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalReceiverInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lvds Receiver Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#LvdsSpacewireTransceiver -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#LvdsSpacewireTransceiver -->
 
-    <owl:Class rdf:about="&fsee;LvdsSpacewireTransceiver">
-        <rdfs:label rdf:datatype="&xsd;string">Lvds Spacewire Transceiver</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;LvdsInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="&fsee;SpacewireTransceiver"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#LvdsSpacewireTransceiver">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#LvdsInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#SpacewireTransceiver"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lvds Spacewire Transceiver</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#LvdsUart2SignalFlowControlInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#LvdsUart2SignalFlowControlInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;LvdsUart2SignalFlowControlInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Lvds Uart2Signal Flow Control Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;LvdsUartInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="&fsee;Uart2SignalFlowControlInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#LvdsUart2SignalFlowControlInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#LvdsUartInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Uart2SignalFlowControlInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lvds Uart2Signal Flow Control Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#LvdsUartInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#LvdsUartInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;LvdsUartInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Lvds Uart Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;LvdsInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="&fsee;UartInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#LvdsUartInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#LvdsInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#UartInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lvds Uart Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#MeasurementInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;MeasurementInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Measurement Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;InterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#InterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Measurement Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#MilStd1553DirectInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#MilStd1553DirectInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;MilStd1553DirectInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Mil Std1553Direct Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;MilStd1553InterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MilStd1553DirectInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MilStd1553InterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mil Std1553Direct Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#MilStd1553InterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#MilStd1553InterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;MilStd1553InterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Mil Std1553Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;DigitalInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MilStd1553InterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mil Std1553Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#MilStd1553InterfaceSpecification -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#MilStd1553InterfaceSpecification -->
 
-    <owl:Class rdf:about="&fsee;MilStd1553InterfaceSpecification">
-        <rdfs:label rdf:datatype="&xsd;string">Mil Std1553Interface Specification</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;MilStd1553TransformerInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="&fsee;UartInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MilStd1553InterfaceSpecification">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MilStd1553TransformerInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#UartInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mil Std1553Interface Specification</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#MilStd1553TerminationInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#MilStd1553TerminationInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;MilStd1553TerminationInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Mil Std1553Termination Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;MilStd1553InterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MilStd1553TerminationInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MilStd1553InterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mil Std1553Termination Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#MilStd1553TransformerInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#MilStd1553TransformerInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;MilStd1553TransformerInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Mil Std1553Transformer Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;MilStd1553InterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MilStd1553TransformerInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MilStd1553InterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mil Std1553Transformer Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#PowerInputInterfaceSpecification -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#PowerInputInterfaceSpecification -->
 
-    <owl:Class rdf:about="&fsee;PowerInputInterfaceSpecification">
-        <rdfs:label rdf:datatype="&xsd;string">Power Input Interface Specification</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;PoweredInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerInputInterfaceSpecification">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PoweredInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Power Input Interface Specification</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#PowerInterfaceSpecification -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#PowerInterfaceSpecification -->
 
-    <owl:Class rdf:about="&fsee;PowerInterfaceSpecification">
-        <rdfs:label rdf:datatype="&xsd;string">Power Interface Specification</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;PoweredInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerInterfaceSpecification">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PoweredInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Power Interface Specification</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#PowerSupplyInterfaceSpecification -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#PowerSupplyInterfaceSpecification -->
 
-    <owl:Class rdf:about="&fsee;PowerSupplyInterfaceSpecification">
-        <rdfs:label rdf:datatype="&xsd;string">Power Supply Interface Specification</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;PoweredInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerSupplyInterfaceSpecification">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PoweredInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Power Supply Interface Specification</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#PoweredInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#PoweredInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;PoweredInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Powered Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;InterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#PoweredInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#InterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Powered Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#PoweredInterfaceCircuitInterfaceSpecification -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#PoweredInterfaceCircuitInterfaceSpecification -->
 
-    <owl:Class rdf:about="&fsee;PoweredInterfaceCircuitInterfaceSpecification">
-        <rdfs:label rdf:datatype="&xsd;string">Powered Interface Circuit Interface Specification</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;PoweredInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#PoweredInterfaceCircuitInterfaceSpecification">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PoweredInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Powered Interface Circuit Interface Specification</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Prt4WireInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Prt4WireInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Prt4WireInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Prt4Wire Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;ResistiveInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Prt4WireInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ResistiveInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prt4Wire Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#PrtInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#PrtInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;PrtInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Prt Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;ResistiveInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#PrtInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ResistiveInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prt Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#PrtsInterfaceSpecification -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#PrtsInterfaceSpecification -->
 
-    <owl:Class rdf:about="&fsee;PrtsInterfaceSpecification">
-        <rdfs:label rdf:datatype="&xsd;string">Prts Interface Specification</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;PrtInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#PrtsInterfaceSpecification">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PrtInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prts Interface Specification</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#PulsedInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#PulsedInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;PulsedInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Pulsed Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;InterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#PulsedInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#InterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pulsed Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#RadioTzMtifTransceiverInterface -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#RadioTzMtifTransceiverInterface -->
 
-    <owl:Class rdf:about="&fsee;RadioTzMtifTransceiverInterface">
-        <rdfs:label rdf:datatype="&xsd;string">Radio Tz Mtif Transceiver Interface</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;DigitalInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#RadioTzMtifTransceiverInterface">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radio Tz Mtif Transceiver Interface</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#RadioTzRadioTransceiverInterface -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#RadioTzRadioTransceiverInterface -->
 
-    <owl:Class rdf:about="&fsee;RadioTzRadioTransceiverInterface">
-        <rdfs:label rdf:datatype="&xsd;string">Radio Tz Radio Transceiver Interface</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;DigitalInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#RadioTzRadioTransceiverInterface">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radio Tz Radio Transceiver Interface</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#RemoteSerialBusClientInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#RemoteSerialBusClientInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;RemoteSerialBusClientInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Remote Serial Bus Client Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;DigitalInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#RemoteSerialBusClientInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remote Serial Bus Client Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#RemoteSerialBusHostInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#RemoteSerialBusHostInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;RemoteSerialBusHostInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Remote Serial Bus Host Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;DigitalInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#RemoteSerialBusHostInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remote Serial Bus Host Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#ResistiveInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#ResistiveInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;ResistiveInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Resistive Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;InterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#ResistiveInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#InterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Resistive Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Rs422DriverInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Rs422DriverInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Rs422DriverInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Rs422Driver Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;DigitalDriverInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Rs422DriverInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalDriverInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rs422Driver Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Rs422InterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Rs422InterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Rs422InterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Rs422Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;DigitalInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Rs422InterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rs422Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Rs422ReceiverInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Rs422ReceiverInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Rs422ReceiverInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Rs422Receiver Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;DigitalReceiverInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Rs422ReceiverInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalReceiverInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rs422Receiver Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#SingleEndedDiscreteInterface -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#SingleEndedDiscreteInterface -->
 
-    <owl:Class rdf:about="&fsee;SingleEndedDiscreteInterface">
-        <rdfs:label rdf:datatype="&xsd;string">Single Ended Discrete Interface</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;DiscreteVoltageInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#SingleEndedDiscreteInterface">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteVoltageInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single Ended Discrete Interface</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#SpacewireTransceiver -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#SpacewireTransceiver -->
 
-    <owl:Class rdf:about="&fsee;SpacewireTransceiver">
-        <rdfs:label rdf:datatype="&xsd;string">Spacewire Transceiver</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;DigitalInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#SpacewireTransceiver">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spacewire Transceiver</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Switched28V10AInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Switched28V10AInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Switched28V10AInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Switched28V10AInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;Fused20AInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="&fsee;Switched28VInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Switched28V10AInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Fused20AInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Switched28VInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Switched28V10AInterface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Switched28V1ADriverInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Switched28V1ADriverInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Switched28V1ADriverInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Switched28V1ADriver Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;Fused2AInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="&fsee;Switched28VInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Switched28V1ADriverInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Fused2AInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Switched28VInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Switched28V1ADriver Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Switched28V2AInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Switched28V2AInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Switched28V2AInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Switched28V2AInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;Fused4AInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="&fsee;Switched28VInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Switched28V2AInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Fused4AInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Switched28VInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Switched28V2AInterface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Switched28V2APulsedInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Switched28V2APulsedInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Switched28V2APulsedInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Switched28V2APulsed Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;PulsedInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="&fsee;Switched28V2AInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Switched28V2APulsedInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PulsedInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Switched28V2AInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Switched28V2APulsed Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Switched28V2ASwitchInterfaceSpecification -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Switched28V2ASwitchInterfaceSpecification -->
 
-    <owl:Class rdf:about="&fsee;Switched28V2ASwitchInterfaceSpecification">
-        <rdfs:label rdf:datatype="&xsd;string">Switched28V2ASwitch Interface Specification</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;Switched28V2AInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Switched28V2ASwitchInterfaceSpecification">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Switched28V2AInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Switched28V2ASwitch Interface Specification</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Switched28V2ASwitchedInterfaceCircuitInterfacesSpecification -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Switched28V2ASwitchedInterfaceCircuitInterfacesSpecification -->
 
-    <owl:Class rdf:about="&fsee;Switched28V2ASwitchedInterfaceCircuitInterfacesSpecification">
-        <rdfs:label rdf:datatype="&xsd;string">Switched28V2ASwitched Interface Circuit Interfaces Specification</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;Switched28V2AInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Switched28V2ASwitchedInterfaceCircuitInterfacesSpecification">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Switched28V2AInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Switched28V2ASwitched Interface Circuit Interfaces Specification</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Switched28V5AFspSwitchCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Switched28V5AFspSwitchCircuit -->
 
-    <owl:Class rdf:about="&fsee;Switched28V5AFspSwitchCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Switched28V5AFsp Switch Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;PoweredInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="&fsee;Switched28V5AInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Switched28V5AFspSwitchCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PoweredInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Switched28V5AInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Switched28V5AFsp Switch Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Switched28V5AInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Switched28V5AInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Switched28V5AInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Switched28V5AInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;Fused10AInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="&fsee;Switched28VInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Switched28V5AInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Fused10AInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Switched28VInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Switched28V5AInterface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Switched28V5ASwitchIntefaceSpecification -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Switched28V5ASwitchIntefaceSpecification -->
 
-    <owl:Class rdf:about="&fsee;Switched28V5ASwitchIntefaceSpecification">
-        <rdfs:label rdf:datatype="&xsd;string">Switched28V5ASwitch Inteface Specification</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;Switched28V5AInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Switched28V5ASwitchIntefaceSpecification">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Switched28V5AInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Switched28V5ASwitch Inteface Specification</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Switched28VInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Switched28VInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Switched28VInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Switched28VInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;Fixed28VInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="&fsee;SwitchedVoltageInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Switched28VInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Fixed28VInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#SwitchedVoltageInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Switched28VInterface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Switched70VInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Switched70VInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Switched70VInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Switched70VInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;Fixed70VInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="&fsee;SwitchedVoltageInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Switched70VInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Fixed70VInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#SwitchedVoltageInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Switched70VInterface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#SwitchedVoltageInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#SwitchedVoltageInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;SwitchedVoltageInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Switched Voltage Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;FixedVoltageInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#SwitchedVoltageInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FixedVoltageInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Switched Voltage Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#ThermistorInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#ThermistorInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;ThermistorInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Thermistor Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;ResistiveInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#ThermistorInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ResistiveInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thermistor Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Uart2SignalFlowControlInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Uart2SignalFlowControlInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Uart2SignalFlowControlInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Uart2Signal Flow Control Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;UartInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Uart2SignalFlowControlInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#UartInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uart2Signal Flow Control Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#UartInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#UartInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;UartInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Uart Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;DigitalInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#UartInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uart Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Variable28VInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Variable28VInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Variable28VInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Variable28VInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;VariableVoltageInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Variable28VInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableVoltageInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Variable28VInterface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Variable3.3VInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Variable3.3VInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Variable3.3VInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Variable3.3VInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;VariableVoltageInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Variable3.3VInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableVoltageInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Variable3.3VInterface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Variable70VInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Variable70VInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Variable70VInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Variable70VInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;VariableVoltageInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Variable70VInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableVoltageInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Variable70VInterface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#VariableCurrentInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#VariableCurrentInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;VariableCurrentInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Variable Current Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;InterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableCurrentInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#InterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Variable Current Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#VariableVoltageInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#VariableVoltageInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;VariableVoltageInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Variable Voltage Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;InterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableVoltageInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#InterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Variable Voltage Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Voltage10VMeasurementInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Voltage10VMeasurementInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Voltage10VMeasurementInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Voltage10VMeasurement Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;VoltageMeasurementInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Voltage10VMeasurementInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VoltageMeasurementInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Voltage10VMeasurement Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Voltage2.5VMeasurementInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Voltage2.5VMeasurementInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Voltage2.5VMeasurementInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Voltage2.5VMeasurement Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;VoltageMeasurementInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Voltage2.5VMeasurementInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VoltageMeasurementInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Voltage2.5VMeasurement Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Voltage3.3VDiscreteMeasurementInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Voltage3.3VDiscreteMeasurementInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Voltage3.3VDiscreteMeasurementInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Voltage3.3VDiscrete Measurement Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;Voltage3.3VMeasurementInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Voltage3.3VDiscreteMeasurementInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Voltage3.3VMeasurementInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Voltage3.3VDiscrete Measurement Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Voltage3.3VMeasurementInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Voltage3.3VMeasurementInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Voltage3.3VMeasurementInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Voltage3.3VMeasurement Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;VoltageMeasurementInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Voltage3.3VMeasurementInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VoltageMeasurementInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Voltage3.3VMeasurement Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#Voltage5VMeasurementInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Voltage5VMeasurementInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;Voltage5VMeasurementInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Voltage5VMeasurement Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;VoltageMeasurementInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Voltage5VMeasurementInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VoltageMeasurementInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Voltage5VMeasurement Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#VoltageMeasurementInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#VoltageMeasurementInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;VoltageMeasurementInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Voltage Measurement Interface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;MeasurementInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#VoltageMeasurementInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Voltage Measurement Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fsee/fsee#1.5Fixed1.5VInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#1.5Fixed1.5VInterfaceCircuit -->
 
-    <owl:Class rdf:about="&fsee;1.5Fixed1.5VInterfaceCircuit">
-        <rdfs:label rdf:datatype="&xsd;string">Fixed1.5VInterface Circuit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&fsee;FixedVoltageInterfaceCircuit"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#1.5Fixed1.5VInterfaceCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FixedVoltageInterfaceCircuit"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fixed1.5VInterface Circuit</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 3.4.5-SNAPSHOT) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 
