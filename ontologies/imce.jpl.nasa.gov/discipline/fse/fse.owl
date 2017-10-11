@@ -83,8 +83,8 @@
     <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse">
         <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project"/>
         <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flight System Electrical Ontology</dc:title>
-        <dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Discipline</dc:type>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Systems Engineering &amp; Formulation Division</dc:creator>
+        <dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Discipline</dc:type>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Flight System Electrical Ontology defines concepts and properties for flight system electrical engineering.</dc:description>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$Date$</dc:date>
         <dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copyright 2010-2017, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
@@ -366,7 +366,7 @@ This software may be subject to U.S. export control laws. By accepting this soft
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#AnalogPRTChannel -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#AnalogPRTChannel">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#CurrentInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#CurrentInterface"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VoltageMeasurementInterfaceCircuit"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Analog PRT Channel</rdfs:label>
     </owl:Class>
@@ -382,9 +382,9 @@ This software may be subject to U.S. export control laws. By accepting this soft
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#CurrentInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#CurrentInterface -->
 
-    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#CurrentInterfaceCircuit">
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#CurrentInterface">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Aspect"/>
         <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
     </owl:Class>
@@ -394,7 +394,7 @@ This software may be subject to U.S. export control laws. By accepting this soft
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#CurrentMeasurementInterfaceCircuit -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#CurrentMeasurementInterfaceCircuit">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#CurrentInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#CurrentInterface"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementInterfaceCircuit"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Current Measurement Interface Circuit</rdfs:label>
     </owl:Class>
@@ -431,7 +431,7 @@ This software may be subject to U.S. export control laws. By accepting this soft
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalInterfaceCircuit -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalInterfaceCircuit">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteInterface"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ElectricalInterfaceCircuit"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Interface Circuit</rdfs:label>
     </owl:Class>
@@ -447,9 +447,9 @@ This software may be subject to U.S. export control laws. By accepting this soft
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteInterface -->
 
-    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteInterfaceCircuit">
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteInterface">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Aspect"/>
         <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
     </owl:Class>
@@ -459,7 +459,7 @@ This software may be subject to U.S. export control laws. By accepting this soft
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteVoltageInterfaceCircuit -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteVoltageInterfaceCircuit">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteInterface"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ElectricalInterfaceCircuit"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Discrete Voltage Interface Circuit</rdfs:label>
     </owl:Class>
@@ -469,8 +469,8 @@ This software may be subject to U.S. export control laws. By accepting this soft
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteVoltageMeasurementInterfaceCircuit -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteVoltageMeasurementInterfaceCircuit">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VoltageInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteInterface"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VoltageInterface"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VoltageMeasurementInterfaceCircuit"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Discrete Voltage Measurement Interface Circuit</rdfs:label>
     </owl:Class>
@@ -491,8 +491,17 @@ This software may be subject to U.S. export control laws. By accepting this soft
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#FixedVoltageInterfaceCircuit">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ElectricalInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VoltageInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VoltageInterface"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fixed Voltage Interface Circuit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#FusedInterface -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#FusedInterface">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Aspect"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
     </owl:Class>
     
 
@@ -500,8 +509,8 @@ This software may be subject to U.S. export control laws. By accepting this soft
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#FusedInterfaceCircuit -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#FusedInterfaceCircuit">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Aspect"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ElectricalInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FusedInterface"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fused Interface Circuit</rdfs:label>
     </owl:Class>
     
@@ -639,11 +648,20 @@ This software may be subject to U.S. export control laws. By accepting this soft
     
 
 
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementInterface -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementInterface">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Aspect"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementInterfaceCircuit -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementInterfaceCircuit">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Aspect"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ElectricalInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementInterface"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Measurement Interface Circuit</rdfs:label>
     </owl:Class>
     
@@ -667,11 +685,20 @@ This software may be subject to U.S. export control laws. By accepting this soft
     
 
 
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#PulsedInterface -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#PulsedInterface">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Aspect"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+    </owl:Class>
+    
+
+
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#PulsedInterfaceCircuit -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#PulsedInterfaceCircuit">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Aspect"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ElectricalInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PulsedInterface"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pulsed Interface Circuit</rdfs:label>
     </owl:Class>
     
@@ -824,9 +851,9 @@ This software may be subject to U.S. export control laws. By accepting this soft
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#SwitchedInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#SwitchedInterface -->
 
-    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#SwitchedInterfaceCircuit">
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#SwitchedInterface">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Aspect"/>
         <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
     </owl:Class>
@@ -837,7 +864,7 @@ This software may be subject to U.S. export control laws. By accepting this soft
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#SwitchedVoltageInterfaceCircuit">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FixedVoltageInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#SwitchedInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#SwitchedInterface"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Switched Voltage Interface Circuit</rdfs:label>
     </owl:Class>
     
@@ -873,17 +900,17 @@ This software may be subject to U.S. export control laws. By accepting this soft
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#VariableCurrentInterfaceCircuit -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableCurrentInterfaceCircuit">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#CurrentInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#CurrentInterface"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ElectricalInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableInterface"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Variable Current Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#VariableInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#VariableInterface -->
 
-    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableInterfaceCircuit">
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableInterface">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Aspect"/>
         <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
     </owl:Class>
@@ -894,16 +921,16 @@ This software may be subject to U.S. export control laws. By accepting this soft
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableVoltageInterfaceCircuit">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ElectricalInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableInterfaceCircuit"/>
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VoltageInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableInterface"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VoltageInterface"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Variable Voltage Interface Circuit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#VoltageInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#VoltageInterface -->
 
-    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#VoltageInterfaceCircuit">
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#VoltageInterface">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Aspect"/>
         <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
     </owl:Class>
