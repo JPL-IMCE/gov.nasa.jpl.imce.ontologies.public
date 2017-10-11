@@ -8,7 +8,6 @@
      xmlns:StandardProfileL2-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-embedding#"
      xmlns:project="http://imce.jpl.nasa.gov/foundation/project/project#"
      xmlns:mechanical="http://imce.jpl.nasa.gov/mechanical/mechanical#"
-     xmlns:fse-embedding-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse-embedding#"
      xmlns:timeline-embedding="http://imce.jpl.nasa.gov/timeline/timeline-embedding#"
      xmlns:mission-embedding="http://imce.jpl.nasa.gov/foundation/mission/mission-embedding#"
      xmlns:architectural-description-embedding="http://imce.jpl.nasa.gov/architectural-description/architectural-description-embedding#"
@@ -17,18 +16,19 @@
      xmlns:owl2-mof2="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:project-embedding="http://imce.jpl.nasa.gov/foundation/project/project-embedding#"
+     xmlns:fse-embedding-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse-embedding#"
      xmlns:annotation-embedding="http://imce.jpl.nasa.gov/foundation/annotation/annotation-embedding#"
      xmlns:math-embedding="http://imce.jpl.nasa.gov/math/math-embedding#"
      xmlns:QUDV-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-embedding#"
      xmlns:state-analysis-implementation-embedding="http://imce.jpl.nasa.gov/state-analysis-implementation/state-analysis-implementation-embedding#"
-     xmlns:fse="http://imce.jpl.nasa.gov/discipline/fse/fse#"
      xmlns:analysis="http://imce.jpl.nasa.gov/foundation/analysis/analysis#"
      xmlns:state-analysis-embedding="http://imce.jpl.nasa.gov/state-analysis/state-analysis-embedding#"
      xmlns:mission="http://imce.jpl.nasa.gov/foundation/mission/mission#"
+     xmlns:fse-embedding="http://imce.jpl.nasa.gov/discipline/fse/fse-embedding#"
      xmlns:UML-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-embedding#"
      xmlns:UML="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#"
+     xmlns:fse="http://imce.jpl.nasa.gov/discipline/fse/fse#"
      xmlns:math="http://imce.jpl.nasa.gov/math/math#"
-     xmlns:fse-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#"
      xmlns:pbs="http://imce.jpl.nasa.gov/pbs/pbs#"
      xmlns:PrimitiveTypes="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes#"
      xmlns:mechanical-embedding="http://imce.jpl.nasa.gov/mechanical/mechanical-embedding#"
@@ -42,6 +42,7 @@
      xmlns:jeo-architecture-embedding="http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture-embedding#"
      xmlns:base-embedding="http://imce.jpl.nasa.gov/foundation/base/base-embedding#"
      xmlns:StandardProfileL2="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#"
+     xmlns:fse-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#"
      xmlns:mgss-service="http://imce.jpl.nasa.gov/mgss-service/mgss-service#"
      xmlns:jeo-architecture="http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture#"
      xmlns:annotation="http://imce.jpl.nasa.gov/foundation/annotation/annotation#"
@@ -51,15 +52,14 @@
      xmlns:ieee-1471-embedding="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:timeline="http://imce.jpl.nasa.gov/timeline/timeline#"
-     xmlns:fse-embedding="http://imce.jpl.nasa.gov/discipline/fse/fse-embedding#"
      xmlns:state-analysis="http://imce.jpl.nasa.gov/state-analysis/state-analysis#"
      xmlns:state-analysis-functional-design-embedding="http://imce.jpl.nasa.gov/state-analysis-functional-design/state-analysis-functional-design-embedding#"
      xmlns:analysis-embedding="http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:base="http://imce.jpl.nasa.gov/foundation/base/base#">
     <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse-embedding">
-        <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project-embedding"/>
         <owl:imports rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse"/>
+        <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project-embedding"/>
         <dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copyright 2010-2011, by the California Institute of Technology. ALL RIGHTS
    RESERVED. United States Government Sponsorship acknowledged. Any commercial
    use must be negotiated with the Office of Technology Transfer at the
