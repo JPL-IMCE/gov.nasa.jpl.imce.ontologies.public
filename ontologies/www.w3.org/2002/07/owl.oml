@@ -17,7 +17,7 @@ open terminology <http://www.w3.org/2002/07/owl> {
 	}
 
 	stringScalarRestriction rational {
-		pattern "[\\-+]?[0-9]+/[1-9][0-9]*"
+		pattern /[\\-+]?[0-9]+\/[1-9][0-9]*/
 		restrictedRange real
 	}
 
