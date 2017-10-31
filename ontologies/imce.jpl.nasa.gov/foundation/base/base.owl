@@ -1,4 +1,120 @@
 <?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY pbs "http://imce.jpl.nasa.gov/pbs/pbs#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY oml "http://imce.jpl.nasa.gov/oml/oml#" >
+    <!ENTITY math "http://imce.jpl.nasa.gov/math/math#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY Blocks "http://imce.jpl.nasa.gov/Blocks/Blocks#" >
+    <!ENTITY timeline "http://imce.jpl.nasa.gov/timeline/timeline#" >
+    <!ENTITY pbs-embedding "http://imce.jpl.nasa.gov/pbs/pbs-embedding#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY ieee-1471 "http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#" >
+    <!ENTITY math-embedding "http://imce.jpl.nasa.gov/math/math-embedding#" >
+    <!ENTITY time "http://imce.jpl.nasa.gov/foundation/time/time#" >
+    <!ENTITY base "http://imce.jpl.nasa.gov/foundation/base/base#" >
+    <!ENTITY mechanical "http://imce.jpl.nasa.gov/mechanical/mechanical#" >
+    <!ENTITY vandv "http://imce.jpl.nasa.gov/discipline/vandv/vandv#" >
+    <!ENTITY Blocks-embedding "http://imce.jpl.nasa.gov/Blocks/Blocks-embedding#" >
+    <!ENTITY mission "http://imce.jpl.nasa.gov/foundation/mission/mission#" >
+    <!ENTITY project "http://imce.jpl.nasa.gov/foundation/project/project#" >
+    <!ENTITY f6-asda "http://imce.jpl.nasa.gov/application/f6-asda/f6-asda#" >
+    <!ENTITY timeline-embedding "http://imce.jpl.nasa.gov/timeline/timeline-embedding#" >
+    <!ENTITY analysis "http://imce.jpl.nasa.gov/foundation/analysis/analysis#" >
+    <!ENTITY base-mapping "http://imce.jpl.nasa.gov/foundation/base/base-mapping#" >
+    <!ENTITY ieee-1471-embedding "http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#" >
+    <!ENTITY owl2-mof2 "http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#" >
+    <!ENTITY time-embedding "http://imce.jpl.nasa.gov/foundation/time/time-embedding#" >
+    <!ENTITY base-embedding "http://imce.jpl.nasa.gov/foundation/base/base-embedding#" >
+    <!ENTITY mechanical-embedding "http://imce.jpl.nasa.gov/mechanical/mechanical-embedding#" >
+    <!ENTITY vandv-embedding "http://imce.jpl.nasa.gov/discipline/vandv/vandv-embedding#" >
+    <!ENTITY annotation "http://imce.jpl.nasa.gov/foundation/annotation/annotation#" >
+    <!ENTITY electrical "http://imce.jpl.nasa.gov/discipline/electrical/electrical#" >
+    <!ENTITY jeo-architecture "http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture#" >
+    <!ENTITY UML "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#" >
+    <!ENTITY datatype-map "http://imce.jpl.nasa.gov/foundation/owl2-mof2/datatype-map#" >
+    <!ENTITY mgss-service-embedding "http://imce.jpl.nasa.gov/mgss-service/mgss-service-embedding#" >
+    <!ENTITY QUDV "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#" >
+    <!ENTITY project-embedding "http://imce.jpl.nasa.gov/foundation/project/project-embedding#" >
+    <!ENTITY mission-embedding "http://imce.jpl.nasa.gov/foundation/mission/mission-embedding#" >
+    <!ENTITY SysML "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#" >
+    <!ENTITY mgss-service "http://imce.jpl.nasa.gov/application/mgss-service/mgss-service#" >
+    <!ENTITY f6-asda-embedding "http://imce.jpl.nasa.gov/application/f6-asda/f6-asda-embedding#" >
+    <!ENTITY owl2-mof2-mapping "http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-mapping#" >
+    <!ENTITY analysis-embedding "http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#" >
+    <!ENTITY state-analysis "http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#" >
+    <!ENTITY owl2-mof2-embedding "http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#" >
+    <!ENTITY Metrology "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#" >
+    <!ENTITY project-closure "http://imce.jpl.nasa.gov/foundation/project/project-bundle-closure#" >
+    <!ENTITY electrical-embedding "http://imce.jpl.nasa.gov/discipline/electrical/electrical-embedding#" >
+    <!ENTITY annotation-embedding "http://imce.jpl.nasa.gov/foundation/annotation/annotation-embedding#" >
+    <!ENTITY UML-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-embedding#" >
+    <!ENTITY jeo-architecture-embedding "http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture-embedding#" >
+    <!ENTITY UML-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#" >
+    <!ENTITY QUDV-mapping "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-mapping#" >
+    <!ENTITY fault-management "http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#" >
+    <!ENTITY QUDV-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-embedding#" >
+    <!ENTITY QUDV-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#" >
+    <!ENTITY StandardProfileL2 "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#" >
+    <!ENTITY SysML-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#" >
+    <!ENTITY SysML-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-embedding#" >
+    <!ENTITY base-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#" >
+    <!ENTITY time-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#" >
+    <!ENTITY state-analysis-embedding "http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis-embedding#" >
+    <!ENTITY Metrology-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-embedding#" >
+    <!ENTITY architectural-description "http://imce.jpl.nasa.gov/architectural-description/architectural-description#" >
+    <!ENTITY Metrology-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#" >
+    <!ENTITY project-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#" >
+    <!ENTITY mission-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#" >
+    <!ENTITY fault-management-embedding "http://imce.jpl.nasa.gov/discipline/fault-management/fault-management-embedding#" >
+    <!ENTITY architecture-framework "http://imce.jpl.nasa.gov/inactive/architecture-framework/architecture-framework#" >
+    <!ENTITY StandardProfileL2-mapping "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-mapping#" >
+    <!ENTITY state-analysis-closure "http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis-bundle-closure#" >
+    <!ENTITY analysis-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#" >
+    <!ENTITY Metrology-closure "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-bundle-closure#" >
+    <!ENTITY StandardProfileL2-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#" >
+    <!ENTITY owl2-mof2-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#" >
+    <!ENTITY StandardProfileL2-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-embedding#" >
+    <!ENTITY time-embedding-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time-embedding#" >
+    <!ENTITY base-embedding-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base-embedding#" >
+    <!ENTITY annotation-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#" >
+    <!ENTITY UML-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#" >
+    <!ENTITY architectural-description-embedding "http://imce.jpl.nasa.gov/architectural-description/architectural-description-embedding#" >
+    <!ENTITY mission-embedding-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#" >
+    <!ENTITY QUDV-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#" >
+    <!ENTITY project-embedding-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project-embedding#" >
+    <!ENTITY architecture-framework-embedding "http://imce.jpl.nasa.gov/inactive/architecture-framework/architecture-framework-embedding#" >
+    <!ENTITY SysML-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#" >
+    <!ENTITY PrimitiveTypes-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-embedding#" >
+    <!ENTITY analysis-embedding-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#" >
+    <!ENTITY PrimitiveTypes-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-metamodel#" >
+    <!ENTITY state-analysis-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#" >
+    <!ENTITY owl2-mof2-embedding-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#" >
+    <!ENTITY Metrology-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#" >
+    <!ENTITY state-analysis-implementation "http://imce.jpl.nasa.gov/discipline/state-analysis-implementation/state-analysis-implementation#" >
+    <!ENTITY UML-metamodel-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#" >
+    <!ENTITY QUDV-metamodel-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#" >
+    <!ENTITY StandardProfileL2-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#" >
+    <!ENTITY SysML-metamodel-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#" >
+    <!ENTITY state-analysis-functional-design "http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#" >
+    <!ENTITY state-analysis-embedding-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/state-analysis/state-analysis-embedding#" >
+    <!ENTITY Metrology-metamodel-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#" >
+    <!ENTITY state-analysis-implementation-embedding "http://imce.jpl.nasa.gov/discipline/state-analysis-implementation/state-analysis-implementation-embedding#" >
+    <!ENTITY architecture-framework-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/inactive/architecture-framework/architecture-framework#" >
+    <!ENTITY PrimitiveTypes-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes#" >
+    <!ENTITY StandardProfileL2-metamodel-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#" >
+    <!ENTITY state-analysis-functional-design-embedding "http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design-embedding#" >
+    <!ENTITY architecture-framework-embedding-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/inactive/architecture-framework/architecture-framework-embedding#" >
+    <!ENTITY PrimitiveTypes-metamodel-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-metamodel#" >
+]>
+
+
 <rdf:RDF xmlns="http://imce.jpl.nasa.gov/foundation/base/base#"
      xml:base="http://imce.jpl.nasa.gov/foundation/base/base"
      xmlns:base-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#"
@@ -12,7 +128,6 @@
      xmlns:mission-embedding="http://imce.jpl.nasa.gov/foundation/mission/mission-embedding#"
      xmlns:state-analysis-functional-design="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#"
      xmlns:datatype-map="http://imce.jpl.nasa.gov/foundation/owl2-mof2/datatype-map#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:StandardProfileL2-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#"
      xmlns:time-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#"
      xmlns:UML-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#"
@@ -113,17 +228,17 @@
      xmlns:analysis-embedding="http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#"
      xmlns:base="http://imce.jpl.nasa.gov/foundation/base/base#">
     <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/foundation/base/base">
-        <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/annotation/annotation"/>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Systems Engineering &amp; Formulation Division</dc:creator>
-        <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Base Ontology</dc:title>
-        <dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Foundation</dc:type>
-        <dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copyright 2010-2014, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
+        <dc:date rdf:datatype="&xsd;string">$Date$</dc:date>
+        <owl:versionInfo rdf:datatype="&xsd;string">$Revision$</owl:versionInfo>
+        <dc:title rdf:datatype="&xsd;string">Base Ontology</dc:title>
+        <dc:rights rdf:datatype="&xsd;string">Copyright 2010-2014, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
 
 This software may be subject to U.S. export control laws. By accepting this software, the user agrees to comply with all applicable U.S. export laws and regulations. User has the responsibility to obtain export licenses, or other export authority as may be required before exporting such information to foreign countries or providing access to foreign persons.</dc:rights>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Base Ontology defines foundation concepts that are common to multiple specialized ontologies.</dc:description>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$Date$</dc:date>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$Revision$</owl:versionInfo>
-        <oml:isOMLTerminologyGraph rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</oml:isOMLTerminologyGraph>
+        <dc:type rdf:datatype="&xsd;string">Foundation</dc:type>
+        <dc:creator rdf:datatype="&xsd;string">Systems Engineering &amp; Formulation Division</dc:creator>
+        <dc:description rdf:datatype="&xsd;string">The Base Ontology defines foundation concepts that are common to multiple specialized ontologies.</dc:description>
+        <oml:isOMLTerminologyGraph rdf:datatype="&xsd;boolean">true</oml:isOMLTerminologyGraph>
+        <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/annotation/annotation"/>
     </owl:Ontology>
     
 
@@ -141,43 +256,43 @@ This software may be subject to U.S. export control laws. By accepting this soft
 
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    <owl:AnnotationProperty rdf:about="&dc;creator"/>
     
 
 
     <!-- http://purl.org/dc/elements/1.1/date -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    <owl:AnnotationProperty rdf:about="&dc;date"/>
     
 
 
     <!-- http://purl.org/dc/elements/1.1/description -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    <owl:AnnotationProperty rdf:about="&dc;description"/>
     
 
 
     <!-- http://purl.org/dc/elements/1.1/rights -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    <owl:AnnotationProperty rdf:about="&dc;rights"/>
     
 
 
     <!-- http://purl.org/dc/elements/1.1/title -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    <owl:AnnotationProperty rdf:about="&dc;title"/>
     
 
 
     <!-- http://purl.org/dc/elements/1.1/type -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/type"/>
+    <owl:AnnotationProperty rdf:about="&dc;type"/>
     
 
 
     <!-- http://www.w3.org/2002/07/owl#versionInfo -->
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
     
 
 
@@ -194,115 +309,112 @@ This software may be subject to U.S. export control laws. By accepting this soft
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topObjectProperty -->
 
-    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topObjectProperty">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;property&gt;topObjectProperty&lt;/property&gt; is the ancestor of all IMCE-defined object properties.</dc:description>
+    <owl:ObjectProperty rdf:about="&base-backbone;topObjectProperty">
+        <dc:description rdf:datatype="&xsd;string">&lt;property&gt;topObjectProperty&lt;/property&gt; is the ancestor of all IMCE-defined object properties.</dc:description>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topReifiedObjectProperty -->
 
-    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topReifiedObjectProperty">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topObjectProperty"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+    <owl:ObjectProperty rdf:about="&base-backbone;topReifiedObjectProperty">
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <rdfs:subPropertyOf rdf:resource="&base-backbone;topObjectProperty"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topReifiedObjectPropertySource -->
 
-    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topReifiedObjectPropertySource">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;property&gt;topReifiedObjectPropertySource&lt;/property&gt; is a superproperty of every object property reification source property.</dc:description>
+    <owl:ObjectProperty rdf:about="&base-backbone;topReifiedObjectPropertySource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <dc:description rdf:datatype="&xsd;string">&lt;property&gt;topReifiedObjectPropertySource&lt;/property&gt; is a superproperty of every object property reification source property.</dc:description>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <rdfs:subPropertyOf rdf:resource="&base-backbone;topObjectProperty"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topReifiedObjectPropertyTarget -->
 
-    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topReifiedObjectPropertyTarget">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;property&gt;topReifiedObjectPropertyTarget&lt;/property&gt; is a superproperty of every object property reification target property.</dc:description>
+    <owl:ObjectProperty rdf:about="&base-backbone;topReifiedObjectPropertyTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <dc:description rdf:datatype="&xsd;string">&lt;property&gt;topReifiedObjectPropertyTarget&lt;/property&gt; is a superproperty of every object property reification target property.</dc:description>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <rdfs:subPropertyOf rdf:resource="&base-backbone;topObjectProperty"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topReifiedStructuredDataProperty -->
 
-    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topReifiedStructuredDataProperty">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topObjectProperty"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+    <owl:ObjectProperty rdf:about="&base-backbone;topReifiedStructuredDataProperty">
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <rdfs:subPropertyOf rdf:resource="&base-backbone;topObjectProperty"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topReifiedStructuredDataPropertySource -->
 
-    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topReifiedStructuredDataPropertySource">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topObjectProperty"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+    <owl:ObjectProperty rdf:about="&base-backbone;topReifiedStructuredDataPropertySource">
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <rdfs:subPropertyOf rdf:resource="&base-backbone;topObjectProperty"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topReifiedStructuredDataPropertyTarget -->
 
-    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topReifiedStructuredDataPropertyTarget">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topObjectProperty"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+    <owl:ObjectProperty rdf:about="&base-backbone;topReifiedStructuredDataPropertyTarget">
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <rdfs:subPropertyOf rdf:resource="&base-backbone;topObjectProperty"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topUnreifiedObjectProperty -->
 
-    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topUnreifiedObjectProperty">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topObjectProperty"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+    <owl:ObjectProperty rdf:about="&base-backbone;topUnreifiedObjectProperty">
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <rdfs:subPropertyOf rdf:resource="&base-backbone;topObjectProperty"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/base/base#aggregates -->
 
-    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/base/base#aggregates">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topReifiedObjectProperty"/>
-        <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#isAggregatedIn"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#AggregatedElement"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#AggregatedElement"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An &lt;classname&gt;AggregatedElement&lt;/classname&gt; &lt;replaceable&gt;e&lt;/replaceable&gt; &lt;property&gt;aggregates&lt;/property&gt; zero or more elements of compatible type if and only if &lt;replaceable&gt;e&lt;/replaceable&gt; references or subsumes  those other elements.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aggregates</rdfs:label>
+    <owl:ObjectProperty rdf:about="&base;aggregates">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">aggregates</rdfs:label>
+        <dc:description rdf:datatype="&xsd;string">An &lt;classname&gt;AggregatedElement&lt;/classname&gt; &lt;replaceable&gt;e&lt;/replaceable&gt; &lt;property&gt;aggregates&lt;/property&gt; zero or more elements of compatible type if and only if &lt;replaceable&gt;e&lt;/replaceable&gt; references or subsumes  those other elements.</dc:description>
+        <rdfs:subPropertyOf rdf:resource="&base-backbone;topReifiedObjectProperty"/>
+        <rdfs:domain rdf:resource="&base;AggregatedElement"/>
+        <rdfs:range rdf:resource="&base;AggregatedElement"/>
+        <owl:inverseOf rdf:resource="&base;isAggregatedIn"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/base/base#contains -->
 
-    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/base/base#contains">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topReifiedObjectProperty"/>
-        <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#isContainedIn"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#Container"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#ContainedElement"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A
+    <owl:ObjectProperty rdf:about="&base;contains">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">contains</rdfs:label>
+        <dc:description rdf:datatype="&xsd;string">A
 &lt;classname&gt;Container&lt;/classname&gt;
 &lt;replaceable&gt;c&lt;subscript&gt;1&lt;/subscript&gt;&lt;/replaceable&gt;
 &lt;property&gt;contains&lt;/property&gt;
@@ -316,103 +428,102 @@ is incorporated within or otherwise a part of
 &lt;classname&gt;Container&lt;/classname&gt;
 &lt;replaceable&gt;c&lt;subscript&gt;1&lt;/subscript&gt;&lt;/replaceable&gt;
 and no (directly) any other &lt;classname&gt;Container&lt;/classname&gt;.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contains</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&base-backbone;topReifiedObjectProperty"/>
+        <rdfs:range rdf:resource="&base;ContainedElement"/>
+        <rdfs:domain rdf:resource="&base;Container"/>
+        <owl:inverseOf rdf:resource="&base;isContainedIn"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/base/base#hasAggregatesSource -->
 
-    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/base/base#hasAggregatesSource">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topReifiedObjectPropertySource"/>
-        <owl:inverseOf>
-            <rdf:Description>
-                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#hasAggregatesSource"/>
-            </rdf:Description>
-        </owl:inverseOf>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#Aggregates"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#AggregatedElement"/>
+    <owl:ObjectProperty rdf:about="&base;hasAggregatesSource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&base-backbone;topReifiedObjectPropertySource"/>
+        <rdfs:range rdf:resource="&base;AggregatedElement"/>
+        <rdfs:domain rdf:resource="&base;Aggregates"/>
     </owl:ObjectProperty>
+    <rdf:Description>
+        <owl:inverseOf rdf:resource="&base;hasAggregatesSource"/>
+    </rdf:Description>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/base/base#hasAggregatesTarget -->
 
-    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/base/base#hasAggregatesTarget">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topReifiedObjectPropertyTarget"/>
+    <owl:ObjectProperty rdf:about="&base;hasAggregatesTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&base-backbone;topReifiedObjectPropertyTarget"/>
+        <rdfs:range rdf:resource="&base;AggregatedElement"/>
+        <rdfs:domain rdf:resource="&base;Aggregates"/>
         <owl:inverseOf>
             <rdf:Description>
-                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#hasAggregatesTarget"/>
+                <owl:inverseOf rdf:resource="&base;hasAggregatesTarget"/>
             </rdf:Description>
         </owl:inverseOf>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#Aggregates"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#AggregatedElement"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/base/base#hasContainsSource -->
 
-    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/base/base#hasContainsSource">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topReifiedObjectPropertySource"/>
+    <owl:ObjectProperty rdf:about="&base;hasContainsSource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&base-backbone;topReifiedObjectPropertySource"/>
+        <rdfs:range rdf:resource="&base;Container"/>
+        <rdfs:domain rdf:resource="&base;Contains"/>
         <owl:inverseOf>
             <rdf:Description>
-                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#hasContainsSource"/>
+                <owl:inverseOf rdf:resource="&base;hasContainsSource"/>
             </rdf:Description>
         </owl:inverseOf>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#Contains"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#Container"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/base/base#hasContainsTarget -->
 
-    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/base/base#hasContainsTarget">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topReifiedObjectPropertyTarget"/>
-        <owl:inverseOf>
-            <rdf:Description>
-                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#hasContainsTarget"/>
-            </rdf:Description>
-        </owl:inverseOf>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#Contains"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#ContainedElement"/>
+    <owl:ObjectProperty rdf:about="&base;hasContainsTarget">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&base-backbone;topReifiedObjectPropertyTarget"/>
+        <rdfs:range rdf:resource="&base;ContainedElement"/>
+        <rdfs:domain rdf:resource="&base;Contains"/>
     </owl:ObjectProperty>
+    <rdf:Description>
+        <owl:inverseOf rdf:resource="&base;hasContainsTarget"/>
+    </rdf:Description>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/base/base#isAggregatedIn -->
 
-    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/base/base#isAggregatedIn">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topReifiedObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#AggregatedElement"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#AggregatedElement"/>
-        <annotation:isDerived rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isDerived>
+    <owl:ObjectProperty rdf:about="&base;isAggregatedIn">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">is aggregated in</rdfs:label>
+        <annotation:isDerived rdf:datatype="&xsd;boolean">true</annotation:isDerived>
         <dc:description>See &lt;property&gt;aggregates&lt;/property&gt;.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is aggregated in</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&base-backbone;topReifiedObjectProperty"/>
+        <rdfs:range rdf:resource="&base;AggregatedElement"/>
+        <rdfs:domain rdf:resource="&base;AggregatedElement"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/base/base#isContainedIn -->
 
-    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/base/base#isContainedIn">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topReifiedObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#ContainedElement"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#Container"/>
-        <annotation:isDerived rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isDerived>
+    <owl:ObjectProperty rdf:about="&base;isContainedIn">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">is contained in</rdfs:label>
+        <annotation:isDerived rdf:datatype="&xsd;boolean">true</annotation:isDerived>
         <dc:description>The &lt;property&gt;isContainedIn&lt;/property&gt; property is used to relate classes that can be composed into a strict hierarchy. An element &lt;property&gt;isContainedIn&lt;/property&gt; at most one parent element.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is contained in</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&base-backbone;topReifiedObjectProperty"/>
+        <rdfs:domain rdf:resource="&base;ContainedElement"/>
+        <rdfs:range rdf:resource="&base;Container"/>
     </owl:ObjectProperty>
     
 
@@ -430,125 +541,125 @@ and no (directly) any other &lt;classname&gt;Container&lt;/classname&gt;.</dc:de
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topDataProperty -->
 
-    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topDataProperty">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;property&gt;topDataProperty&lt;/property&gt; is the ancestor of all IMCE-defined data properties.</dc:description>
+    <owl:DatatypeProperty rdf:about="&base-backbone;topDataProperty">
+        <dc:description rdf:datatype="&xsd;string">&lt;property&gt;topDataProperty&lt;/property&gt; is the ancestor of all IMCE-defined data properties.</dc:description>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/base/base#hasAlternateName -->
 
-    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/foundation/base/base#hasAlternateName">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#IdentifiedElement"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The &lt;property&gt;hasAlternateName&lt;/property&gt; property relates an &lt;classname&gt;IdentifiedElement&lt;/classname&gt; to zero or more alternate names. Alternate names need not be unique.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has alternate name</rdfs:label>
+    <owl:DatatypeProperty rdf:about="&base;hasAlternateName">
+        <rdfs:label rdf:datatype="&xsd;string">has alternate name</rdfs:label>
+        <dc:description rdf:datatype="&xsd;string">The &lt;property&gt;hasAlternateName&lt;/property&gt; property relates an &lt;classname&gt;IdentifiedElement&lt;/classname&gt; to zero or more alternate names. Alternate names need not be unique.</dc:description>
+        <rdfs:subPropertyOf rdf:resource="&base-backbone;topDataProperty"/>
+        <rdfs:domain rdf:resource="&base;IdentifiedElement"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/base/base#hasCanonicalName -->
 
-    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/foundation/base/base#hasCanonicalName">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topDataProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#IdentifiedElement"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The &lt;property&gt;hasCanonicalName&lt;/property&gt; property relates an &lt;classname&gt;IdentifiedElement&lt;/classname&gt; to zero or one canonical names. Canonical names need not be unique.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has canonical name</rdfs:label>
+    <owl:DatatypeProperty rdf:about="&base;hasCanonicalName">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">has canonical name</rdfs:label>
+        <dc:description rdf:datatype="&xsd;string">The &lt;property&gt;hasCanonicalName&lt;/property&gt; property relates an &lt;classname&gt;IdentifiedElement&lt;/classname&gt; to zero or one canonical names. Canonical names need not be unique.</dc:description>
+        <rdfs:subPropertyOf rdf:resource="&base-backbone;topDataProperty"/>
+        <rdfs:domain rdf:resource="&base;IdentifiedElement"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/base/base#hasContainmentIndex -->
 
-    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/foundation/base/base#hasContainmentIndex">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topDataProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#ContainedElement"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The &lt;property&gt;hasContainmentIndex&lt;/property&gt; indicates the unique position of a &lt;classname&gt;ContainedElement&lt;/classname&gt; in a tree of &lt;property&gt;contains&lt;/property&gt; relationships.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has containment index</rdfs:label>
+    <owl:DatatypeProperty rdf:about="&base;hasContainmentIndex">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">has containment index</rdfs:label>
+        <dc:description rdf:datatype="&xsd;string">The &lt;property&gt;hasContainmentIndex&lt;/property&gt; indicates the unique position of a &lt;classname&gt;ContainedElement&lt;/classname&gt; in a tree of &lt;property&gt;contains&lt;/property&gt; relationships.</dc:description>
+        <rdfs:subPropertyOf rdf:resource="&base-backbone;topDataProperty"/>
+        <rdfs:domain rdf:resource="&base;ContainedElement"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/base/base#hasDescription -->
 
-    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/foundation/base/base#hasDescription">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topDataProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#IdentifiedElement"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The &lt;property&gt;hasDescription&lt;/property&gt; property relates an &lt;classname&gt;IdentifiedElement&lt;/classname&gt; to zero or one text descriptions.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has description</rdfs:label>
+    <owl:DatatypeProperty rdf:about="&base;hasDescription">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">has description</rdfs:label>
+        <dc:description rdf:datatype="&xsd;string">The &lt;property&gt;hasDescription&lt;/property&gt; property relates an &lt;classname&gt;IdentifiedElement&lt;/classname&gt; to zero or one text descriptions.</dc:description>
+        <rdfs:subPropertyOf rdf:resource="&base-backbone;topDataProperty"/>
+        <rdfs:domain rdf:resource="&base;IdentifiedElement"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/base/base#hasIdentifier -->
 
-    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/foundation/base/base#hasIdentifier">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#IdentifiedElement"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The &lt;property&gt;hasIdentifier&lt;/property&gt; property relates an &lt;classname&gt;IdentifiedElement&lt;/classname&gt; to zero or more identifiers. An identifier should belong uniquely to an &lt;classname&gt;IdentifiedElement&lt;/classname&gt; in some context.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has identifier</rdfs:label>
+    <owl:DatatypeProperty rdf:about="&base;hasIdentifier">
+        <rdfs:label rdf:datatype="&xsd;string">has identifier</rdfs:label>
+        <dc:description rdf:datatype="&xsd;string">The &lt;property&gt;hasIdentifier&lt;/property&gt; property relates an &lt;classname&gt;IdentifiedElement&lt;/classname&gt; to zero or more identifiers. An identifier should belong uniquely to an &lt;classname&gt;IdentifiedElement&lt;/classname&gt; in some context.</dc:description>
+        <rdfs:subPropertyOf rdf:resource="&base-backbone;topDataProperty"/>
+        <rdfs:domain rdf:resource="&base;IdentifiedElement"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/base/base#hasIndexEntry -->
 
-    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/foundation/base/base#hasIndexEntry">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#IdentifiedElement"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The &lt;property&gt;hasIndexEntry&lt;/property&gt; property relates an &lt;classname&gt;IdentifiedElement&lt;/classname&gt; to zero or one terms under which it would be indexed in a document.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has index entry</rdfs:label>
+    <owl:DatatypeProperty rdf:about="&base;hasIndexEntry">
+        <rdfs:label rdf:datatype="&xsd;string">has index entry</rdfs:label>
+        <dc:description rdf:datatype="&xsd;string">The &lt;property&gt;hasIndexEntry&lt;/property&gt; property relates an &lt;classname&gt;IdentifiedElement&lt;/classname&gt; to zero or one terms under which it would be indexed in a document.</dc:description>
+        <rdfs:subPropertyOf rdf:resource="&base-backbone;topDataProperty"/>
+        <rdfs:domain rdf:resource="&base;IdentifiedElement"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/base/base#hasShortName -->
 
-    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/foundation/base/base#hasShortName">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topDataProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#IdentifiedElement"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The &lt;property&gt;hasShortName&lt;/property&gt; property relates an &lt;classname&gt;IdentifiedElement&lt;/classname&gt; to zero or more short names. Short names need not be unique.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has short name</rdfs:label>
+    <owl:DatatypeProperty rdf:about="&base;hasShortName">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">has short name</rdfs:label>
+        <dc:description rdf:datatype="&xsd;string">The &lt;property&gt;hasShortName&lt;/property&gt; property relates an &lt;classname&gt;IdentifiedElement&lt;/classname&gt; to zero or more short names. Short names need not be unique.</dc:description>
+        <rdfs:subPropertyOf rdf:resource="&base-backbone;topDataProperty"/>
+        <rdfs:domain rdf:resource="&base;IdentifiedElement"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/base/base#hasSortKey -->
 
-    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/foundation/base/base#hasSortKey">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topDataProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#IdentifiedElement"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The &lt;property&gt;hasSortKey&lt;/property&gt; property relates an &lt;classname&gt;IdentifiedElement&lt;/classname&gt; to zero or one string-valued keys that may be used to establish its order in a sorted collection.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has sort key</rdfs:label>
+    <owl:DatatypeProperty rdf:about="&base;hasSortKey">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">has sort key</rdfs:label>
+        <dc:description rdf:datatype="&xsd;string">The &lt;property&gt;hasSortKey&lt;/property&gt; property relates an &lt;classname&gt;IdentifiedElement&lt;/classname&gt; to zero or one string-valued keys that may be used to establish its order in a sorted collection.</dc:description>
+        <rdfs:subPropertyOf rdf:resource="&base-backbone;topDataProperty"/>
+        <rdfs:domain rdf:resource="&base;IdentifiedElement"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/base/base#hasUuid -->
 
-    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/foundation/base/base#hasUuid">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topDataProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#IdentifiedElement"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The &lt;property&gt;hasUuid&lt;/property&gt; property relates an &lt;classname&gt;IdentifiedElement&lt;/classname&gt; to zero or one Universally Unique Identifier as defined by RFC 4122, expressed as a string.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has uuid</rdfs:label>
+    <owl:DatatypeProperty rdf:about="&base;hasUuid">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">has uuid</rdfs:label>
+        <dc:description rdf:datatype="&xsd;string">The &lt;property&gt;hasUuid&lt;/property&gt; property relates an &lt;classname&gt;IdentifiedElement&lt;/classname&gt; to zero or one Universally Unique Identifier as defined by RFC 4122, expressed as a string.</dc:description>
+        <rdfs:subPropertyOf rdf:resource="&base-backbone;topDataProperty"/>
+        <rdfs:domain rdf:resource="&base;IdentifiedElement"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -566,134 +677,134 @@ and no (directly) any other &lt;classname&gt;Container&lt;/classname&gt;.</dc:de
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#Aspect -->
 
-    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#Aspect">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#Thing"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+    <owl:Class rdf:about="&base-backbone;Aspect">
+        <rdfs:subClassOf rdf:resource="&base-backbone;Thing"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#Entity -->
 
-    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#Entity">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#Thing"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+    <owl:Class rdf:about="&base-backbone;Entity">
+        <rdfs:subClassOf rdf:resource="&base-backbone;Thing"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#ReifiedObjectProperty -->
 
-    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#ReifiedObjectProperty">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#Thing"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;classname&gt;ReifiedObjectProperty&lt;/classname&gt; is a superclass of all object property reification classes.</dc:description>
+    <owl:Class rdf:about="&base-backbone;ReifiedObjectProperty">
+        <rdfs:subClassOf rdf:resource="&base-backbone;Thing"/>
+        <dc:description rdf:datatype="&xsd;string">&lt;classname&gt;ReifiedObjectProperty&lt;/classname&gt; is a superclass of all object property reification classes.</dc:description>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#ReifiedStructuredDataProperty -->
 
-    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#ReifiedStructuredDataProperty">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#Thing"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+    <owl:Class rdf:about="&base-backbone;ReifiedStructuredDataProperty">
+        <rdfs:subClassOf rdf:resource="&base-backbone;Thing"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#StructuredDatatype -->
 
-    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#StructuredDatatype">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#Thing"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+    <owl:Class rdf:about="&base-backbone;StructuredDatatype">
+        <rdfs:subClassOf rdf:resource="&base-backbone;Thing"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#Thing -->
 
-    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#Thing">
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;classname&gt;Thing&lt;/classname&gt; is the ancestor of all IMCE-defined classes.</dc:description>
+    <owl:Class rdf:about="&base-backbone;Thing">
+        <dc:description rdf:datatype="&xsd;string">&lt;classname&gt;Thing&lt;/classname&gt; is the ancestor of all IMCE-defined classes.</dc:description>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/base/base#AggregatedElement -->
 
-    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/base/base#AggregatedElement">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#Aspect"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+    <owl:Class rdf:about="&base;AggregatedElement">
+        <rdfs:label rdf:datatype="&xsd;string">Aggregated Element</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base-backbone;Aspect"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
         <dc:description>&lt;para&gt;An &lt;classname&gt;AggregatedElement&lt;/classname&gt; is any model element that may have the &lt;property&gt;isAggregatedIn&lt;/property&gt; property with some other model element.
 &lt;/para&gt;&lt;para&gt;
 Aggregation is a non-hierarchical relationship appropriate for elements such as &lt;classname&gt;mission:Environment&lt;/classname&gt;s, &lt;classname&gt;mission:Objective&lt;/classname&gt;s, and &lt;classname&gt;project:Product&lt;/classname&gt;s.
 &lt;/para&gt;</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aggregated Element</rdfs:label>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/base/base#Aggregates -->
 
-    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/base/base#Aggregates">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#ReifiedObjectProperty"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aggregates</rdfs:label>
+    <owl:Class rdf:about="&base;Aggregates">
+        <rdfs:label rdf:datatype="&xsd;string">Aggregates</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base-backbone;ReifiedObjectProperty"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/base/base#ContainedElement -->
 
-    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/base/base#ContainedElement">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#Aspect"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;ContainedElement&lt;/classname&gt; is an object that may be contained in a single &lt;classname&gt;Container&lt;/classname&gt;.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Contained Element</rdfs:label>
+    <owl:Class rdf:about="&base;ContainedElement">
+        <rdfs:label rdf:datatype="&xsd;string">Contained Element</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base-backbone;Aspect"/>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;ContainedElement&lt;/classname&gt; is an object that may be contained in a single &lt;classname&gt;Container&lt;/classname&gt;.</dc:description>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/base/base#Container -->
 
-    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/base/base#Container">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#Aspect"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;Container&lt;/classname&gt; is an element that may contain zero or more &lt;classname&gt;ContainedElement&lt;/classname&gt;. The notion of &lt;emphasis&gt;containment&lt;/emphasis&gt; is general; it is specialized for more particular applications in other ontologies.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Container</rdfs:label>
+    <owl:Class rdf:about="&base;Container">
+        <rdfs:label rdf:datatype="&xsd;string">Container</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base-backbone;Aspect"/>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;Container&lt;/classname&gt; is an element that may contain zero or more &lt;classname&gt;ContainedElement&lt;/classname&gt;. The notion of &lt;emphasis&gt;containment&lt;/emphasis&gt; is general; it is specialized for more particular applications in other ontologies.</dc:description>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/base/base#Contains -->
 
-    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/base/base#Contains">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#ReifiedObjectProperty"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Contains</rdfs:label>
+    <owl:Class rdf:about="&base;Contains">
+        <rdfs:label rdf:datatype="&xsd;string">Contains</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base-backbone;ReifiedObjectProperty"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/base/base#IdentifiedElement -->
 
-    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/base/base#IdentifiedElement">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#Aspect"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+    <owl:Class rdf:about="&base;IdentifiedElement">
+        <rdfs:label rdf:datatype="&xsd;string">Identified Element</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base-backbone;Aspect"/>
+        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
         <dc:description>A &lt;classname&gt;IdentifiedElement&lt;/classname&gt; is an object that has a
 	    unique identifier and a canonical name. In addition, the object may have multiple alternate names, abbreviations, and index entries.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Identified Element</rdfs:label>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/base/base#Package -->
 
-    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/base/base#Package">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#Entity"/>
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#IdentifiedElement"/>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;Package&lt;/classname&gt; groups an arbitrary collection of model elements.</dc:description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Package</rdfs:label>
+    <owl:Class rdf:about="&base;Package">
+        <rdfs:label rdf:datatype="&xsd;string">Package</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&base-backbone;Entity"/>
+        <rdfs:subClassOf rdf:resource="&base;IdentifiedElement"/>
+        <dc:description rdf:datatype="&xsd;string">A &lt;classname&gt;Package&lt;/classname&gt; groups an arbitrary collection of model elements.</dc:description>
     </owl:Class>
     
 
@@ -711,19 +822,19 @@ Aggregation is a non-hierarchical relationship appropriate for elements such as 
 
     <!-- http://imce.jpl.nasa.gov/foundation/base/base#application -->
 
-    <owl:NamedIndividual rdf:about="http://imce.jpl.nasa.gov/foundation/base/base#application"/>
+    <owl:NamedIndividual rdf:about="&base;application"/>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/base/base#discipline -->
 
-    <owl:NamedIndividual rdf:about="http://imce.jpl.nasa.gov/foundation/base/base#discipline"/>
+    <owl:NamedIndividual rdf:about="&base;discipline"/>
     
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/base/base#foundation -->
 
-    <owl:NamedIndividual rdf:about="http://imce.jpl.nasa.gov/foundation/base/base#foundation"/>
+    <owl:NamedIndividual rdf:about="&base;foundation"/>
     
 
 
@@ -736,105 +847,195 @@ Aggregation is a non-hierarchical relationship appropriate for elements such as 
      -->
 
     <rdf:Description rdf:about="urn:swrl#r">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+        <rdf:type rdf:resource="&swrl;Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="urn:swrl#s">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+        <rdf:type rdf:resource="&swrl;Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="urn:swrl#t">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+        <rdf:type rdf:resource="&swrl;Variable"/>
     </rdf:Description>
     <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <rdfs:label rdf:datatype="&xsd;string">contains reification rule</rdfs:label>
         <swrl:body>
             <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#hasContainsSource"/>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&base;hasContainsSource"/>
                         <swrl:argument1 rdf:resource="urn:swrl#r"/>
                         <swrl:argument2 rdf:resource="urn:swrl#s"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#hasContainsTarget"/>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&base;hasContainsTarget"/>
                                 <swrl:argument1 rdf:resource="urn:swrl#r"/>
                                 <swrl:argument2 rdf:resource="urn:swrl#t"/>
                             </rdf:Description>
                         </rdf:first>
-                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                     </rdf:Description>
                 </rdf:rest>
             </rdf:Description>
         </swrl:body>
         <swrl:head>
             <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#contains"/>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&base;contains"/>
                         <swrl:argument1 rdf:resource="urn:swrl#s"/>
                         <swrl:argument2 rdf:resource="urn:swrl#t"/>
                     </rdf:Description>
                 </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
             </rdf:Description>
         </swrl:head>
     </rdf:Description>
     <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
             <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#hasAggregatesSource"/>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&base;contains"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&base;hasContainsSource"/>
                         <swrl:argument1 rdf:resource="urn:swrl#r"/>
                         <swrl:argument2 rdf:resource="urn:swrl#s"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#hasAggregatesTarget"/>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&base;hasContainsTarget"/>
                                 <swrl:argument1 rdf:resource="urn:swrl#r"/>
                                 <swrl:argument2 rdf:resource="urn:swrl#t"/>
                             </rdf:Description>
                         </rdf:first>
-                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                     </rdf:Description>
                 </rdf:rest>
             </rdf:Description>
         </swrl:body>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <rdfs:label rdf:datatype="&xsd;string">aggregates reification rule</rdfs:label>
         <swrl:head>
             <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#aggregates"/>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&base;aggregates"/>
                         <swrl:argument1 rdf:resource="urn:swrl#s"/>
                         <swrl:argument2 rdf:resource="urn:swrl#t"/>
                     </rdf:Description>
                 </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
             </rdf:Description>
         </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&base;hasAggregatesTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&base;hasAggregatesSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&base;aggregates"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&base;hasAggregatesTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&base;hasAggregatesSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
     </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 3.4.5-SNAPSHOT) http://owlapi.sourceforge.net -->
 
