@@ -2,14 +2,16 @@
 <rdf:RDF xmlns="http://imce.jpl.nasa.gov/oml/oml#"
      xml:base="http://imce.jpl.nasa.gov/oml/oml"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:6.1.0="http://imce.jpl.nasa.gov/oml/oml/6.1.0#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:oml="http://imce.jpl.nasa.gov/oml/oml#">
     <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/oml/oml">
+        <owl:versionIRI rdf:resource="http://imce.jpl.nasa.gov/oml/oml/9.0.0"/>
         <owl:imports rdf:resource="http://purl.org/dc/elements/1.1/"/>
-        <owl:versionIRI rdf:resource="http://imce.jpl.nasa.gov/oml/oml/6.1.0"/>
         <rdfs:comment xml:lang="en">This ontology has no logical axioms. It serves two purposes:
 1) Provide a vocabulary of OWL AnnotationProperties to disambiguate the interpretation of an OML module represented in OWL2-DL + SWRL rules
 2) Separate built-in OML modules that do not have an explicit OWL2-DL + SWRL representation from OML modules that have an explicit OWL2-DL + SWRL rules representation.</rdfs:comment>
@@ -64,6 +66,14 @@
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/oml/oml#isOMLModule"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/oml/oml#omlElementUUID -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/oml/oml#omlElementUUID">
+        <rdfs:comment xml:lang="en">Specifies the UUID of the OML Element from which the annotated OWL/SWRL element comes from.</rdfs:comment>
     </owl:AnnotationProperty>
 </rdf:RDF>
 
