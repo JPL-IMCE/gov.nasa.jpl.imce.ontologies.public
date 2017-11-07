@@ -49,10 +49,28 @@
     
 
 
+    <!-- http://imce.jpl.nasa.gov/oml/oml#isOMLDescriptionBoxRefinable -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/oml/oml#isOMLDescriptionBoxRefinable">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://imce.jpl.nasa.gov/oml/oml#isOMLModule -->
 
     <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/oml/oml#isOMLModule">
         <rdfs:comment xml:lang="en">True indicates that the annotated ontology is the OWL2-DL representation of an OML Module of some kind (TerminologyGraph, Bundle, DescriptionBox)</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/oml/oml#isOMLTerminologyBoxOpen -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/oml/oml#isOMLTerminologyBoxOpen">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
     </owl:AnnotationProperty>
