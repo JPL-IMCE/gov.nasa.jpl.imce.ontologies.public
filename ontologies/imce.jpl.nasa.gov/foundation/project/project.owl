@@ -2027,6 +2027,8 @@ is proffered by a supplier as a specification-compliant implementation of &lt;re
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Approves">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project#HasAssignment"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Approves</rdfs:label>
     </owl:Class>
@@ -2037,6 +2039,8 @@ is proffered by a supplier as a specification-compliant implementation of &lt;re
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#AssignedElement">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An &lt;classname&gt;AssignedElement&lt;/classname&gt; is any model element that can have the &lt;property&gt;isAssignedTo&lt;/property&gt; relationship with a &lt;classname&gt;Role&lt;/classname&gt;.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Assigned Element</rdfs:label>
@@ -2062,6 +2066,8 @@ is proffered by a supplier as a specification-compliant implementation of &lt;re
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Authorizes">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Authorizes</rdfs:label>
     </owl:Class>
     
@@ -2071,6 +2077,8 @@ is proffered by a supplier as a specification-compliant implementation of &lt;re
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#BelongsTo">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Belongs To</rdfs:label>
     </owl:Class>
     
@@ -2080,6 +2088,8 @@ is proffered by a supplier as a specification-compliant implementation of &lt;re
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Binds">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Binds</rdfs:label>
     </owl:Class>
     
@@ -2114,6 +2124,8 @@ is proffered by a supplier as a specification-compliant implementation of &lt;re
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Concurs">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project#HasAssignment"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Concurs</rdfs:label>
     </owl:Class>
@@ -2124,6 +2136,8 @@ is proffered by a supplier as a specification-compliant implementation of &lt;re
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#DelegatesTo">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Delegates To</rdfs:label>
     </owl:Class>
     
@@ -2144,6 +2158,8 @@ is proffered by a supplier as a specification-compliant implementation of &lt;re
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Delivers">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project#AssignedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Delivers</rdfs:label>
     </owl:Class>
@@ -2154,6 +2170,8 @@ is proffered by a supplier as a specification-compliant implementation of &lt;re
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Describes">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Describes</rdfs:label>
     </owl:Class>
     
@@ -2163,6 +2181,8 @@ is proffered by a supplier as a specification-compliant implementation of &lt;re
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#DevelopedElement">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project#AssignedElement"/>
         <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;DevelopedElement&lt;/classname&gt; is any model element that manifests &lt;classname&gt;DevelopmentState&lt;/classname&gt;s. Example &lt;classname&gt;DevelopedElement&lt;/classname&gt;s include spacecraft, thermal test facility, and requirements document.</dc:description>
@@ -2216,6 +2236,8 @@ is proffered by a supplier as a specification-compliant implementation of &lt;re
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#HasAssignment">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Has Assignment</rdfs:label>
     </owl:Class>
     
@@ -2225,6 +2247,8 @@ is proffered by a supplier as a specification-compliant implementation of &lt;re
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#HasParticipant">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Has Participant</rdfs:label>
     </owl:Class>
     
@@ -2234,6 +2258,8 @@ is proffered by a supplier as a specification-compliant implementation of &lt;re
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#HasResponsibilityFor">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Has Responsibility For</rdfs:label>
     </owl:Class>
     
@@ -2243,6 +2269,8 @@ is proffered by a supplier as a specification-compliant implementation of &lt;re
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#HasRole">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Has Role</rdfs:label>
     </owl:Class>
     
@@ -2273,6 +2301,8 @@ is proffered by a supplier as a specification-compliant implementation of &lt;re
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#InterchangesThrough">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interchanges Through</rdfs:label>
     </owl:Class>
     
@@ -2282,6 +2312,8 @@ is proffered by a supplier as a specification-compliant implementation of &lt;re
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Invokes">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Invokes</rdfs:label>
     </owl:Class>
     
@@ -2291,6 +2323,8 @@ is proffered by a supplier as a specification-compliant implementation of &lt;re
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Involves">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Involves</rdfs:label>
     </owl:Class>
     
@@ -2320,6 +2354,8 @@ is proffered by a supplier as a specification-compliant implementation of &lt;re
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Manifests">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manifests</rdfs:label>
     </owl:Class>
     
@@ -2329,6 +2365,8 @@ is proffered by a supplier as a specification-compliant implementation of &lt;re
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Organization">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An &lt;classname&gt;Organization&lt;/classname&gt; is any entity that &lt;property&gt;isResponsibleFor&lt;/property&gt; a &lt;classname&gt;Authority&lt;/classname&gt;.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Organization</rdfs:label>
     </owl:Class>
@@ -2350,6 +2388,8 @@ is proffered by a supplier as a specification-compliant implementation of &lt;re
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Policy">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;Policy&lt;/classname&gt; represents a specific exercise of authority that &lt;property&gt;binds&lt;/property&gt; one or more model elements.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Policy</rdfs:label>
     </owl:Class>
@@ -2360,6 +2400,8 @@ is proffered by a supplier as a specification-compliant implementation of &lt;re
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Prepares">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project#HasAssignment"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prepares</rdfs:label>
     </owl:Class>
@@ -2395,6 +2437,8 @@ is proffered by a supplier as a specification-compliant implementation of &lt;re
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Produces">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project#Supplies"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Produces</rdfs:label>
     </owl:Class>
@@ -2469,6 +2513,8 @@ is proffered by a supplier as a specification-compliant implementation of &lt;re
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#RealizedElement">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;RealizedElement&lt;/classname&gt; is any element that &lt;property&gt;realizes&lt;/property&gt; or &lt;property&gt;isRealizedBy&lt;/property&gt; another element.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Realized Element</rdfs:label>
@@ -2480,6 +2526,8 @@ is proffered by a supplier as a specification-compliant implementation of &lt;re
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Realizes">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Realizes</rdfs:label>
     </owl:Class>
     
@@ -2489,6 +2537,8 @@ is proffered by a supplier as a specification-compliant implementation of &lt;re
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Receives">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project#AssignedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Receives</rdfs:label>
     </owl:Class>
@@ -2499,6 +2549,8 @@ is proffered by a supplier as a specification-compliant implementation of &lt;re
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#ReliesOn">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project#AssignedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relies On</rdfs:label>
     </owl:Class>
@@ -2509,6 +2561,8 @@ is proffered by a supplier as a specification-compliant implementation of &lt;re
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Represents">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Represents</rdfs:label>
     </owl:Class>
     
@@ -2540,6 +2594,8 @@ is proffered by a supplier as a specification-compliant implementation of &lt;re
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#SuppliedElement">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A &lt;classname&gt;SuppliedElement&lt;/classname&gt; is any model element that an &lt;classname&gt;Authority&lt;/classname&gt; properly &lt;property&gt;supplies&lt;/property&gt;. Example &lt;classname&gt;SuppliedElement&lt;/classname&gt;s include &lt;classname&gt;Mission&lt;/classname&gt; and &lt;classname&gt;Component&lt;/classname&gt;.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Supplied Element</rdfs:label>
@@ -2551,6 +2607,8 @@ is proffered by a supplier as a specification-compliant implementation of &lt;re
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/project/project#Supplies">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project#AssignedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Supplies</rdfs:label>
     </owl:Class>
