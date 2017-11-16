@@ -767,6 +767,8 @@ This software may be subject to U.S. export control laws. By accepting this soft
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AbstractValueTypedAttribute">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An&lt;classname&gt;AbstractValueTypedAttribute&lt;/classname&gt; is an abstract class that represents the behavior attributes and features that can be typed by &lt;classname&gt;AbstractValueType&lt;/classname&gt; through the &lt;property&gt;hasValueType&lt;/property&gt;.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abstract Value Typed Attribute</rdfs:label>
@@ -799,6 +801,8 @@ This software may be subject to U.S. export control laws. By accepting this soft
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeAutomaton">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An &lt;classname&gt;AttributeAutomatonConstraint&lt;/classname&gt; can be used to specify the &lt;classname&gt;Codomain&lt;/classname&gt; of a discrete &lt;classname&gt;StateVariable&lt;/classname&gt; using &lt;classname&gt;AutomatonState&lt;/classname&gt;s.
 It can also represents behavior constraints that are more amenable to an automata form.</dc:description>
@@ -834,6 +838,8 @@ It can also represents behavior constraints that are more amenable to an automat
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeGroup">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;classname&gt;AttributeGroup&lt;/classname&gt; is the abstract class that generalizes &lt;classname&gt;PropertyGroup&lt;/classname&gt; and &lt;classname&gt;InteractionTerminal&lt;/classname&gt;.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Attribute Group</rdfs:label>
@@ -845,6 +851,8 @@ It can also represents behavior constraints that are more amenable to an automat
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AutomatonRegion">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An &lt;classname&gt;AutomatonRegion&lt;/classname&gt; groups &lt;classname&gt;AutomatonState&lt;/classname&gt;s of an &lt;classname&gt;AttributeAutomatonConstraint&lt;/classname&gt;.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Automaton Region</rdfs:label>
@@ -856,6 +864,8 @@ It can also represents behavior constraints that are more amenable to an automat
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AutomatonState">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An &lt;classname&gt;AutomatonState&lt;/classname&gt; represents a state of a &lt;classname&gt;StateVariable&lt;/classname&gt;, i.e., a possible value of the quantity of a &lt;classname&gt;BehavingElement&lt;/classname&gt;, and in effect an element of the &lt;classname&gt;Codomain&lt;/classname&gt; of a &lt;classname&gt;StateVariable&lt;/classname&gt;.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Automaton State</rdfs:label>
@@ -867,6 +877,8 @@ It can also represents behavior constraints that are more amenable to an automat
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AutomatonTransition">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Automaton Transition</rdfs:label>
     </owl:Class>
@@ -897,6 +909,8 @@ It can also represents behavior constraints that are more amenable to an automat
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehavior">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Element Behavior</rdfs:label>
     </owl:Class>
@@ -967,6 +981,8 @@ It is expressed by &lt;property&gt;constrain&lt;/property&gt;ing &lt;classname&g
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorOwner">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Element Behavior Owner</rdfs:label>
     </owl:Class>
@@ -1007,6 +1023,8 @@ It is expressed by &lt;property&gt;constrain&lt;/property&gt;ing &lt;classname&g
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Exposes">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exposes</rdfs:label>
     </owl:Class>
     
@@ -1025,6 +1043,8 @@ It is expressed by &lt;property&gt;constrain&lt;/property&gt;ing &lt;classname&g
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasElementBehaviorClass">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Has Element Behavior Class</rdfs:label>
     </owl:Class>
     
@@ -1034,6 +1054,8 @@ It is expressed by &lt;property&gt;constrain&lt;/property&gt;ing &lt;classname&g
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasInteractionBehaviorClass">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Has Interaction Behavior Class</rdfs:label>
     </owl:Class>
     
@@ -1043,6 +1065,8 @@ It is expressed by &lt;property&gt;constrain&lt;/property&gt;ing &lt;classname&g
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasRegion">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Has Region</rdfs:label>
     </owl:Class>
     
@@ -1052,6 +1076,8 @@ It is expressed by &lt;property&gt;constrain&lt;/property&gt;ing &lt;classname&g
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasState">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Has State</rdfs:label>
     </owl:Class>
     
@@ -1061,6 +1087,8 @@ It is expressed by &lt;property&gt;constrain&lt;/property&gt;ing &lt;classname&g
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasTransition">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Has Transition</rdfs:label>
     </owl:Class>
     
@@ -1070,6 +1098,8 @@ It is expressed by &lt;property&gt;constrain&lt;/property&gt;ing &lt;classname&g
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Interaction">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An &lt;classname&gt;Interaction&lt;/classname&gt; is a link that &lt;property&gt;joins&lt;/property&gt; &lt;classname&gt;InteractionTerminal&lt;/classname&gt;s, representing the context of the interaction among the associated &lt;classname&gt;BehavingElement&lt;/classname&gt;s.
 An &lt;classname&gt;Interaction&lt;/classname&gt; groups &lt;classname&gt;InteractionBehaviorConstraint&lt;/classname&gt;s through the &lt;property&gt;hasConstraint&lt;/property&gt;.</dc:description>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interaction</rdfs:label>
@@ -1081,6 +1111,8 @@ An &lt;classname&gt;Interaction&lt;/classname&gt; groups &lt;classname&gt;Intera
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehavior">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interaction Behavior</rdfs:label>
     </owl:Class>
@@ -1164,6 +1196,8 @@ It is expressed by &lt;property&gt;constrain&lt;/property&gt;ing &lt;classname&g
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionRole">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interaction Role</rdfs:label>
     </owl:Class>
     
@@ -1221,6 +1255,8 @@ When &lt;property&gt;use&lt;/property&gt;d by an &lt;classname&gt;ElementBehavio
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#PlaysRoleOf">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Plays Role Of</rdfs:label>
     </owl:Class>
     
@@ -1230,6 +1266,8 @@ When &lt;property&gt;use&lt;/property&gt;d by an &lt;classname&gt;ElementBehavio
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Presents">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Presents</rdfs:label>
     </owl:Class>
     
@@ -1279,6 +1317,8 @@ When &lt;property&gt;use&lt;/property&gt;d by an &lt;classname&gt;ElementBehavio
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#References">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#ReifiedObjectProperty"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">References</rdfs:label>
     </owl:Class>
     
