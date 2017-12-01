@@ -4,7 +4,9 @@
 <!DOCTYPE rdf:RDF [
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY oml "http://imce.jpl.nasa.gov/oml/oml#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
@@ -24,7 +26,9 @@
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:SysML-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://imce.jpl.nasa.gov/oml/oml#">
     <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML">
         <owl:imports rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2"/>
     </owl:Ontology>
@@ -227,8 +231,8 @@
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topReifiedStructuredDataPropertySource -->
 
     <owl:ObjectProperty rdf:about="&SysML-backbone;topReifiedStructuredDataPropertySource">
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
         <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
         <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topObjectProperty"/>
     </owl:ObjectProperty>
     
@@ -250,141 +254,6 @@
         <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
         <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
         <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topObjectProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_changeStructuralFeatureEvent_structuralFeature.changeStructuralFeatureEvent -->
-
-    <owl:ObjectProperty rdf:about="&SysML;A_changeStructuralFeatureEvent_structuralFeature.changeStructuralFeatureEvent">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertySource"/>
-        <rdfs:domain rdf:resource="&SysML;A_changeStructuralFeatureEvent_structuralFeature"/>
-        <rdfs:range rdf:resource="&SysML;ChangeStructuralFeatureEvent"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_changeStructuralFeatureEvent_structuralFeature.structuralFeature -->
-
-    <owl:ObjectProperty rdf:about="&SysML;A_changeStructuralFeatureEvent_structuralFeature.structuralFeature">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertyTarget"/>
-        <rdfs:domain rdf:resource="&SysML;A_changeStructuralFeatureEvent_structuralFeature"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#StructuralFeature"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_invocationOnNestedPortAction_onNestedPort.invocationOnNestedPortAction -->
-
-    <owl:ObjectProperty rdf:about="&SysML;A_invocationOnNestedPortAction_onNestedPort.invocationOnNestedPortAction">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertySource"/>
-        <rdfs:domain rdf:resource="&SysML;A_invocationOnNestedPortAction_onNestedPort"/>
-        <rdfs:range rdf:resource="&SysML;InvocationOnNestedPortAction"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_invocationOnNestedPortAction_onNestedPort.onNestedPort -->
-
-    <owl:ObjectProperty rdf:about="&SysML;A_invocationOnNestedPortAction_onNestedPort.onNestedPort">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertyTarget"/>
-        <rdfs:domain rdf:resource="&SysML;A_invocationOnNestedPortAction_onNestedPort"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Port"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_quantityKind_unit.quantityKind -->
-
-    <owl:ObjectProperty rdf:about="&SysML;A_quantityKind_unit.quantityKind">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertyTarget"/>
-        <rdfs:domain rdf:resource="&SysML;A_quantityKind_unit"/>
-        <rdfs:range rdf:resource="&SysML;QuantityKind"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_quantityKind_unit.unit -->
-
-    <owl:ObjectProperty rdf:about="&SysML;A_quantityKind_unit.unit">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertySource"/>
-        <rdfs:domain rdf:resource="&SysML;A_quantityKind_unit"/>
-        <rdfs:range rdf:resource="&SysML;Unit"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_triggerOnNestedPort_onNestedPort.onNestedPort -->
-
-    <owl:ObjectProperty rdf:about="&SysML;A_triggerOnNestedPort_onNestedPort.onNestedPort">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertyTarget"/>
-        <rdfs:domain rdf:resource="&SysML;A_triggerOnNestedPort_onNestedPort"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Port"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_triggerOnNestedPort_onNestedPort.triggerOnNestedPort -->
-
-    <owl:ObjectProperty rdf:about="&SysML;A_triggerOnNestedPort_onNestedPort.triggerOnNestedPort">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertySource"/>
-        <rdfs:domain rdf:resource="&SysML;A_triggerOnNestedPort_onNestedPort"/>
-        <rdfs:range rdf:resource="&SysML;TriggerOnNestedPort"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_valueType_quantityKind.quantityKind -->
-
-    <owl:ObjectProperty rdf:about="&SysML;A_valueType_quantityKind.quantityKind">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertyTarget"/>
-        <rdfs:domain rdf:resource="&SysML;A_valueType_quantityKind"/>
-        <rdfs:range rdf:resource="&SysML;QuantityKind"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_valueType_quantityKind.valueType -->
-
-    <owl:ObjectProperty rdf:about="&SysML;A_valueType_quantityKind.valueType">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertySource"/>
-        <rdfs:domain rdf:resource="&SysML;A_valueType_quantityKind"/>
-        <rdfs:range rdf:resource="&SysML;ValueType"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_valueType_unit.unit -->
-
-    <owl:ObjectProperty rdf:about="&SysML;A_valueType_unit.unit">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertyTarget"/>
-        <rdfs:domain rdf:resource="&SysML;A_valueType_unit"/>
-        <rdfs:range rdf:resource="&SysML;Unit"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_valueType_unit.valueType -->
-
-    <owl:ObjectProperty rdf:about="&SysML;A_valueType_unit.valueType">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertySource"/>
-        <rdfs:domain rdf:resource="&SysML;A_valueType_unit"/>
-        <rdfs:range rdf:resource="&SysML;ValueType"/>
     </owl:ObjectProperty>
     
 
@@ -480,6 +349,7 @@
 
     <owl:ObjectProperty rdf:about="&SysML;hasA_changeStructuralFeatureEvent_structuralFeatureSource">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertySource"/>
         <rdfs:domain rdf:resource="&SysML;A_changeStructuralFeatureEvent_structuralFeature"/>
         <rdfs:range rdf:resource="&SysML;ChangeStructuralFeatureEvent"/>
@@ -568,6 +438,7 @@
 
     <owl:ObjectProperty rdf:about="&SysML;hasA_valueType_quantityKindSource">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertySource"/>
         <rdfs:domain rdf:resource="&SysML;A_valueType_quantityKind"/>
         <rdfs:range rdf:resource="&SysML;ValueType"/>
@@ -590,6 +461,7 @@
 
     <owl:ObjectProperty rdf:about="&SysML;hasA_valueType_unitSource">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertySource"/>
         <rdfs:domain rdf:resource="&SysML;A_valueType_unit"/>
         <rdfs:range rdf:resource="&SysML;ValueType"/>
@@ -1884,58 +1756,15 @@
     <rdf:Description rdf:about="urn:swrl#r">
         <rdf:type rdf:resource="&swrl;Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:swrl#t">
-        <rdf:type rdf:resource="&swrl;Variable"/>
-    </rdf:Description>
     <rdf:Description rdf:about="urn:swrl#s">
         <rdf:type rdf:resource="&swrl;Variable"/>
     </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;Complex.imaginaryPart"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;hasComplex.imaginaryPartSource"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&SysML;hasComplex.imaginaryPartTarget"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
+    <rdf:Description rdf:about="urn:swrl#t">
+        <rdf:type rdf:resource="&swrl;Variable"/>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&swrl;Imp"/>
+        <rdfs:label rdf:datatype="&xsd;string">a_valueType_quantityKind reification rule</rdfs:label>
         <swrl:head>
             <rdf:Description>
                 <rdf:type rdf:resource="&swrl;AtomList"/>
@@ -1950,127 +1779,6 @@
                 </rdf:first>
             </rdf:Description>
         </swrl:head>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&SysML;A_valueType_quantityKind.valueType"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;A_valueType_quantityKind.quantityKind"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:body>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <rdfs:label rdf:datatype="&xsd;string">a_changeStructuralFeatureEvent_structuralFeature reification rule</rdfs:label>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;a_changeStructuralFeatureEvent_structuralFeature"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;hasA_changeStructuralFeatureEvent_structuralFeatureSource"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&SysML;hasA_changeStructuralFeatureEvent_structuralFeatureTarget"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <rdfs:label rdf:datatype="&xsd;string">a_quantityKind_unit reification rule</rdfs:label>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;a_quantityKind_unit"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&SysML;hasA_quantityKind_unitTarget"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;hasA_quantityKind_unitSource"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:body>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <rdfs:label rdf:datatype="&xsd;string">a_valueType_quantityKind reification rule</rdfs:label>
         <swrl:body>
             <rdf:Description>
                 <rdf:type rdf:resource="&swrl;AtomList"/>
@@ -2098,6 +1806,37 @@
                 </rdf:first>
             </rdf:Description>
         </swrl:body>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <rdfs:label rdf:datatype="&xsd;string">a_changeStructuralFeatureEvent_structuralFeature reification rule</rdfs:label>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&SysML;hasA_changeStructuralFeatureEvent_structuralFeatureTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&SysML;hasA_changeStructuralFeatureEvent_structuralFeatureSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
         <swrl:head>
             <rdf:Description>
                 <rdf:type rdf:resource="&swrl;AtomList"/>
@@ -2105,7 +1844,97 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;a_valueType_quantityKind"/>
+                        <swrl:propertyPredicate rdf:resource="&SysML;a_changeStructuralFeatureEvent_structuralFeature"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <rdfs:label rdf:datatype="&xsd;string">a_triggerOnNestedPort_onNestedPort reification rule</rdfs:label>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&SysML;a_triggerOnNestedPort_onNestedPort"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&SysML;hasA_triggerOnNestedPort_onNestedPortSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&SysML;hasA_triggerOnNestedPort_onNestedPortTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <rdfs:label rdf:datatype="&xsd;string">a_valueType_unit reification rule</rdfs:label>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&SysML;hasA_valueType_unitSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&SysML;hasA_valueType_unitTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&SysML;a_valueType_unit"/>
                         <swrl:argument1 rdf:resource="urn:swrl#s"/>
                         <swrl:argument2 rdf:resource="urn:swrl#t"/>
                     </rdf:Description>
@@ -2159,6 +1988,34 @@
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&swrl;Imp"/>
+        <rdfs:label rdf:datatype="&xsd;string">a_quantityKind_unit reification rule</rdfs:label>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&SysML;hasA_quantityKind_unitTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&SysML;hasA_quantityKind_unitSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
         <swrl:head>
             <rdf:Description>
                 <rdf:type rdf:resource="&swrl;AtomList"/>
@@ -2166,20 +2023,23 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;a_changeStructuralFeatureEvent_structuralFeature"/>
+                        <swrl:propertyPredicate rdf:resource="&SysML;a_quantityKind_unit"/>
                         <swrl:argument1 rdf:resource="urn:swrl#s"/>
                         <swrl:argument2 rdf:resource="urn:swrl#t"/>
                     </rdf:Description>
                 </rdf:first>
             </rdf:Description>
         </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
         <swrl:body>
             <rdf:Description>
                 <rdf:type rdf:resource="&swrl;AtomList"/>
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;A_changeStructuralFeatureEvent_structuralFeature.changeStructuralFeatureEvent"/>
+                        <swrl:propertyPredicate rdf:resource="&SysML;hasComplex.imaginaryPartSource"/>
                         <swrl:argument1 rdf:resource="urn:swrl#r"/>
                         <swrl:argument2 rdf:resource="urn:swrl#s"/>
                     </rdf:Description>
@@ -2191,39 +2051,9 @@
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&SysML;A_changeStructuralFeatureEvent_structuralFeature.structuralFeature"/>
+                                <swrl:propertyPredicate rdf:resource="&SysML;hasComplex.imaginaryPartTarget"/>
                                 <swrl:argument1 rdf:resource="urn:swrl#r"/>
                                 <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;A_valueType_unit.unit"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&SysML;A_valueType_unit.valueType"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#s"/>
                             </rdf:Description>
                         </rdf:first>
                     </rdf:Description>
@@ -2237,62 +2067,31 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;a_valueType_unit"/>
+                        <swrl:propertyPredicate rdf:resource="&SysML;Complex.imaginaryPart"/>
                         <swrl:argument1 rdf:resource="urn:swrl#s"/>
                         <swrl:argument2 rdf:resource="urn:swrl#t"/>
                     </rdf:Description>
                 </rdf:first>
             </rdf:Description>
         </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <rdfs:label rdf:datatype="&xsd;string">a_triggerOnNestedPort_onNestedPort reification rule</rdfs:label>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;a_triggerOnNestedPort_onNestedPort"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&SysML;hasA_triggerOnNestedPort_onNestedPortTarget"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;hasA_triggerOnNestedPort_onNestedPortSource"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:body>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&swrl;Imp"/>
         <rdfs:label rdf:datatype="&xsd;string">a_invocationOnNestedPortAction_onNestedPort reification rule</rdfs:label>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&SysML;a_invocationOnNestedPortAction_onNestedPort"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
         <swrl:body>
             <rdf:Description>
                 <rdf:type rdf:resource="&swrl;AtomList"/>
@@ -2320,197 +2119,6 @@
                 </rdf:first>
             </rdf:Description>
         </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;a_invocationOnNestedPortAction_onNestedPort"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;a_quantityKind_unit"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;A_quantityKind_unit.quantityKind"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&SysML;A_quantityKind_unit.unit"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;a_invocationOnNestedPortAction_onNestedPort"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&SysML;A_invocationOnNestedPortAction_onNestedPort.onNestedPort"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;A_invocationOnNestedPortAction_onNestedPort.invocationOnNestedPortAction"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:body>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <rdfs:label rdf:datatype="&xsd;string">a_valueType_unit reification rule</rdfs:label>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;a_valueType_unit"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;hasA_valueType_unitSource"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&SysML;hasA_valueType_unitTarget"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&SysML;A_triggerOnNestedPort_onNestedPort.triggerOnNestedPort"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;A_triggerOnNestedPort_onNestedPort.onNestedPort"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;a_triggerOnNestedPort_onNestedPort"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
     </rdf:Description>
 </rdf:RDF>
 

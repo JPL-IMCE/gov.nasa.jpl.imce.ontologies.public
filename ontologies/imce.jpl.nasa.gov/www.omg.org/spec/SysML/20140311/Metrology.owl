@@ -5,6 +5,8 @@
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
     <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY oml "http://imce.jpl.nasa.gov/oml/oml#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
@@ -18,15 +20,17 @@
 <rdf:RDF xmlns="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#"
      xml:base="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology"
      xmlns:annotation="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#"
-     xmlns:Metrology-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:Metrology="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:annotation2="http://imce.jpl.nasa.gov/foundation/annotation/annotation#">
+     xmlns:annotation2="http://imce.jpl.nasa.gov/foundation/annotation/annotation#"
+     xmlns:oml="http://imce.jpl.nasa.gov/oml/oml#"
+     xmlns:Metrology-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:Metrology="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology">
         <owl:imports rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV"/>
     </owl:Ontology>
@@ -125,51 +129,6 @@
     
 
 
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#A_measurementUncertainty_quantityValueSpecification.measurementUncertainty -->
-
-    <owl:ObjectProperty rdf:about="&Metrology;A_measurementUncertainty_quantityValueSpecification.measurementUncertainty">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&Metrology-backbone;topReifiedObjectPropertyTarget"/>
-        <rdfs:domain rdf:resource="&Metrology;A_measurementUncertainty_quantityValueSpecification"/>
-        <rdfs:range rdf:resource="&Metrology;MeasurementUncertainty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#A_measurementUncertainty_quantityValueSpecification.quantityValueSpecification -->
-
-    <owl:ObjectProperty rdf:about="&Metrology;A_measurementUncertainty_quantityValueSpecification.quantityValueSpecification">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&Metrology-backbone;topReifiedObjectPropertySource"/>
-        <rdfs:domain rdf:resource="&Metrology;A_measurementUncertainty_quantityValueSpecification"/>
-        <rdfs:range rdf:resource="&Metrology;QuantityValueSpecification"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#A_quantityValues_measurementScale.measurementScale -->
-
-    <owl:ObjectProperty rdf:about="&Metrology;A_quantityValues_measurementScale.measurementScale">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&Metrology-backbone;topReifiedObjectPropertySource"/>
-        <rdfs:domain rdf:resource="&Metrology;A_quantityValues_measurementScale"/>
-        <rdfs:range rdf:resource="&Metrology;MasurementScale"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#A_quantityValues_measurementScale.quantityValues -->
-
-    <owl:ObjectProperty rdf:about="&Metrology;A_quantityValues_measurementScale.quantityValues">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&Metrology-backbone;topReifiedObjectPropertyTarget"/>
-        <rdfs:domain rdf:resource="&Metrology;A_quantityValues_measurementScale"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#ValueSpecification"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#a_measurementUncertainty_quantityValueSpecification -->
 
     <owl:ObjectProperty rdf:about="&Metrology;a_measurementUncertainty_quantityValueSpecification">
@@ -195,6 +154,7 @@
 
     <owl:ObjectProperty rdf:about="&Metrology;hasA_measurementUncertainty_quantityValueSpecificationSource">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:subPropertyOf rdf:resource="&Metrology-backbone;topReifiedObjectPropertySource"/>
         <rdfs:domain rdf:resource="&Metrology;A_measurementUncertainty_quantityValueSpecification"/>
         <rdfs:range rdf:resource="&Metrology;QuantityValueSpecification"/>
@@ -518,15 +478,16 @@
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&swrl;Imp"/>
+        <rdfs:label rdf:datatype="&xsd;string">a_measurementUncertainty_quantityValueSpecification reification rule</rdfs:label>
         <swrl:body>
             <rdf:Description>
                 <rdf:type rdf:resource="&swrl;AtomList"/>
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&Metrology;A_measurementUncertainty_quantityValueSpecification.measurementUncertainty"/>
+                        <swrl:propertyPredicate rdf:resource="&Metrology;hasA_measurementUncertainty_quantityValueSpecificationSource"/>
                         <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -536,9 +497,9 @@
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&Metrology;A_measurementUncertainty_quantityValueSpecification.quantityValueSpecification"/>
+                                <swrl:propertyPredicate rdf:resource="&Metrology;hasA_measurementUncertainty_quantityValueSpecificationTarget"/>
                                 <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
                             </rdf:Description>
                         </rdf:first>
                     </rdf:Description>
@@ -566,6 +527,14 @@
         <swrl:body>
             <rdf:Description>
                 <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&Metrology;hasA_quantityValues_measurementScaleSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
                 <rdf:rest>
                     <rdf:Description>
                         <rdf:type rdf:resource="&swrl;AtomList"/>
@@ -580,14 +549,6 @@
                         </rdf:first>
                     </rdf:Description>
                 </rdf:rest>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&Metrology;hasA_quantityValues_measurementScaleSource"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
             </rdf:Description>
         </swrl:body>
         <swrl:head>
@@ -604,95 +565,6 @@
                 </rdf:first>
             </rdf:Description>
         </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&Metrology;a_quantityValues_measurementScale"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&Metrology;A_quantityValues_measurementScale.measurementScale"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&Metrology;A_quantityValues_measurementScale.quantityValues"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <rdfs:label rdf:datatype="&xsd;string">a_measurementUncertainty_quantityValueSpecification reification rule</rdfs:label>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&Metrology;a_measurementUncertainty_quantityValueSpecification"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&Metrology;hasA_measurementUncertainty_quantityValueSpecificationTarget"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&Metrology;hasA_measurementUncertainty_quantityValueSpecificationSource"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:body>
     </rdf:Description>
 </rdf:RDF>
 
