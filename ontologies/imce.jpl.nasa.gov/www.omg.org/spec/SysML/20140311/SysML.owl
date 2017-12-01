@@ -1,30 +1,18 @@
 <?xml version="1.0"?>
-
-
-<!DOCTYPE rdf:RDF [
-    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
-    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY annotation "http://imce.jpl.nasa.gov/foundation/annotation/annotation#" >
-    <!ENTITY SysML "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#" >
-    <!ENTITY SysML-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#" >
-]>
-
-
 <rdf:RDF xmlns="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#"
      xml:base="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML"
      xmlns:annotation="http://imce.jpl.nasa.gov/foundation/annotation/annotation#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:SysML="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:SysML-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://imce.jpl.nasa.gov/oml/oml#">
     <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML">
         <owl:imports rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2"/>
     </owl:Ontology>
@@ -44,18 +32,18 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ControlValue -->
 
-    <rdfs:Datatype rdf:about="&SysML;ControlValue">
+    <rdfs:Datatype rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ControlValue">
         <owl:equivalentClass>
             <rdfs:Datatype>
                 <owl:oneOf>
                     <rdf:Description>
-                        <rdf:type rdf:resource="&rdf;List"/>
-                        <rdf:first rdf:datatype="&xsd;string">disable</rdf:first>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disable</rdf:first>
                         <rdf:rest>
                             <rdf:Description>
-                                <rdf:type rdf:resource="&rdf;List"/>
-                                <rdf:first rdf:datatype="&xsd;string">enable</rdf:first>
-                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">enable</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                             </rdf:Description>
                         </rdf:rest>
                     </rdf:Description>
@@ -68,22 +56,22 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#FeatureDirection -->
 
-    <rdfs:Datatype rdf:about="&SysML;FeatureDirection">
+    <rdfs:Datatype rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#FeatureDirection">
         <owl:equivalentClass>
             <rdfs:Datatype>
                 <owl:oneOf>
                     <rdf:Description>
-                        <rdf:type rdf:resource="&rdf;List"/>
-                        <rdf:first rdf:datatype="&xsd;string">provided</rdf:first>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">provided</rdf:first>
                         <rdf:rest>
                             <rdf:Description>
-                                <rdf:type rdf:resource="&rdf;List"/>
-                                <rdf:first rdf:datatype="&xsd;string">providedRequired</rdf:first>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">providedRequired</rdf:first>
                                 <rdf:rest>
                                     <rdf:Description>
-                                        <rdf:type rdf:resource="&rdf;List"/>
-                                        <rdf:first rdf:datatype="&xsd;string">required</rdf:first>
-                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">required</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                                     </rdf:Description>
                                 </rdf:rest>
                             </rdf:Description>
@@ -98,22 +86,22 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#FlowDirection -->
 
-    <rdfs:Datatype rdf:about="&SysML;FlowDirection">
+    <rdfs:Datatype rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#FlowDirection">
         <owl:equivalentClass>
             <rdfs:Datatype>
                 <owl:oneOf>
                     <rdf:Description>
-                        <rdf:type rdf:resource="&rdf;List"/>
-                        <rdf:first rdf:datatype="&xsd;string">in</rdf:first>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in</rdf:first>
                         <rdf:rest>
                             <rdf:Description>
-                                <rdf:type rdf:resource="&rdf;List"/>
-                                <rdf:first rdf:datatype="&xsd;string">inout</rdf:first>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inout</rdf:first>
                                 <rdf:rest>
                                     <rdf:Description>
-                                        <rdf:type rdf:resource="&rdf;List"/>
-                                        <rdf:first rdf:datatype="&xsd;string">out</rdf:first>
-                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">out</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                                     </rdf:Description>
                                 </rdf:rest>
                             </rdf:Description>
@@ -128,26 +116,26 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#VerdictKind -->
 
-    <rdfs:Datatype rdf:about="&SysML;VerdictKind">
+    <rdfs:Datatype rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#VerdictKind">
         <owl:equivalentClass>
             <rdfs:Datatype>
                 <owl:oneOf>
                     <rdf:Description>
-                        <rdf:type rdf:resource="&rdf;List"/>
-                        <rdf:first rdf:datatype="&xsd;string">error</rdf:first>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">error</rdf:first>
                         <rdf:rest>
                             <rdf:Description>
-                                <rdf:type rdf:resource="&rdf;List"/>
-                                <rdf:first rdf:datatype="&xsd;string">fail</rdf:first>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fail</rdf:first>
                                 <rdf:rest>
                                     <rdf:Description>
-                                        <rdf:type rdf:resource="&rdf;List"/>
-                                        <rdf:first rdf:datatype="&xsd;string">inconclusive</rdf:first>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inconclusive</rdf:first>
                                         <rdf:rest>
                                             <rdf:Description>
-                                                <rdf:type rdf:resource="&rdf;List"/>
-                                                <rdf:first rdf:datatype="&xsd;string">pass</rdf:first>
-                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pass</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                                             </rdf:Description>
                                         </rdf:rest>
                                     </rdf:Description>
@@ -175,250 +163,115 @@
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topObjectProperty -->
 
-    <owl:ObjectProperty rdf:about="&SysML-backbone;topObjectProperty">
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topObjectProperty">
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topReifiedObjectProperty -->
 
-    <owl:ObjectProperty rdf:about="&SysML-backbone;topReifiedObjectProperty">
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topObjectProperty"/>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topReifiedObjectProperty">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topObjectProperty"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topReifiedObjectPropertySource -->
 
-    <owl:ObjectProperty rdf:about="&SysML-backbone;topReifiedObjectPropertySource">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topObjectProperty"/>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topReifiedObjectPropertySource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topReifiedObjectPropertyTarget -->
 
-    <owl:ObjectProperty rdf:about="&SysML-backbone;topReifiedObjectPropertyTarget">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topObjectProperty"/>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topReifiedObjectPropertyTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topReifiedStructuredDataProperty -->
 
-    <owl:ObjectProperty rdf:about="&SysML-backbone;topReifiedStructuredDataProperty">
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topObjectProperty"/>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topReifiedStructuredDataProperty">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topObjectProperty"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topReifiedStructuredDataPropertySource -->
 
-    <owl:ObjectProperty rdf:about="&SysML-backbone;topReifiedStructuredDataPropertySource">
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topObjectProperty"/>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topReifiedStructuredDataPropertySource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topObjectProperty"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topReifiedStructuredDataPropertyTarget -->
 
-    <owl:ObjectProperty rdf:about="&SysML-backbone;topReifiedStructuredDataPropertyTarget">
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topObjectProperty"/>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topReifiedStructuredDataPropertyTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topObjectProperty"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topUnreifiedObjectProperty -->
 
-    <owl:ObjectProperty rdf:about="&SysML-backbone;topUnreifiedObjectProperty">
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topObjectProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_changeStructuralFeatureEvent_structuralFeature.changeStructuralFeatureEvent -->
-
-    <owl:ObjectProperty rdf:about="&SysML;A_changeStructuralFeatureEvent_structuralFeature.changeStructuralFeatureEvent">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertySource"/>
-        <rdfs:domain rdf:resource="&SysML;A_changeStructuralFeatureEvent_structuralFeature"/>
-        <rdfs:range rdf:resource="&SysML;ChangeStructuralFeatureEvent"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_changeStructuralFeatureEvent_structuralFeature.structuralFeature -->
-
-    <owl:ObjectProperty rdf:about="&SysML;A_changeStructuralFeatureEvent_structuralFeature.structuralFeature">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertyTarget"/>
-        <rdfs:domain rdf:resource="&SysML;A_changeStructuralFeatureEvent_structuralFeature"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#StructuralFeature"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_invocationOnNestedPortAction_onNestedPort.invocationOnNestedPortAction -->
-
-    <owl:ObjectProperty rdf:about="&SysML;A_invocationOnNestedPortAction_onNestedPort.invocationOnNestedPortAction">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertySource"/>
-        <rdfs:domain rdf:resource="&SysML;A_invocationOnNestedPortAction_onNestedPort"/>
-        <rdfs:range rdf:resource="&SysML;InvocationOnNestedPortAction"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_invocationOnNestedPortAction_onNestedPort.onNestedPort -->
-
-    <owl:ObjectProperty rdf:about="&SysML;A_invocationOnNestedPortAction_onNestedPort.onNestedPort">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertyTarget"/>
-        <rdfs:domain rdf:resource="&SysML;A_invocationOnNestedPortAction_onNestedPort"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Port"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_quantityKind_unit.quantityKind -->
-
-    <owl:ObjectProperty rdf:about="&SysML;A_quantityKind_unit.quantityKind">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertyTarget"/>
-        <rdfs:domain rdf:resource="&SysML;A_quantityKind_unit"/>
-        <rdfs:range rdf:resource="&SysML;QuantityKind"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_quantityKind_unit.unit -->
-
-    <owl:ObjectProperty rdf:about="&SysML;A_quantityKind_unit.unit">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertySource"/>
-        <rdfs:domain rdf:resource="&SysML;A_quantityKind_unit"/>
-        <rdfs:range rdf:resource="&SysML;Unit"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_triggerOnNestedPort_onNestedPort.onNestedPort -->
-
-    <owl:ObjectProperty rdf:about="&SysML;A_triggerOnNestedPort_onNestedPort.onNestedPort">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertyTarget"/>
-        <rdfs:domain rdf:resource="&SysML;A_triggerOnNestedPort_onNestedPort"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Port"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_triggerOnNestedPort_onNestedPort.triggerOnNestedPort -->
-
-    <owl:ObjectProperty rdf:about="&SysML;A_triggerOnNestedPort_onNestedPort.triggerOnNestedPort">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertySource"/>
-        <rdfs:domain rdf:resource="&SysML;A_triggerOnNestedPort_onNestedPort"/>
-        <rdfs:range rdf:resource="&SysML;TriggerOnNestedPort"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_valueType_quantityKind.quantityKind -->
-
-    <owl:ObjectProperty rdf:about="&SysML;A_valueType_quantityKind.quantityKind">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertyTarget"/>
-        <rdfs:domain rdf:resource="&SysML;A_valueType_quantityKind"/>
-        <rdfs:range rdf:resource="&SysML;QuantityKind"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_valueType_quantityKind.valueType -->
-
-    <owl:ObjectProperty rdf:about="&SysML;A_valueType_quantityKind.valueType">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertySource"/>
-        <rdfs:domain rdf:resource="&SysML;A_valueType_quantityKind"/>
-        <rdfs:range rdf:resource="&SysML;ValueType"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_valueType_unit.unit -->
-
-    <owl:ObjectProperty rdf:about="&SysML;A_valueType_unit.unit">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertyTarget"/>
-        <rdfs:domain rdf:resource="&SysML;A_valueType_unit"/>
-        <rdfs:range rdf:resource="&SysML;Unit"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_valueType_unit.valueType -->
-
-    <owl:ObjectProperty rdf:about="&SysML;A_valueType_unit.valueType">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertySource"/>
-        <rdfs:domain rdf:resource="&SysML;A_valueType_unit"/>
-        <rdfs:range rdf:resource="&SysML;ValueType"/>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topUnreifiedObjectProperty">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topObjectProperty"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Complex.imaginaryPart -->
 
-    <owl:ObjectProperty rdf:about="&SysML;Complex.imaginaryPart">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedStructuredDataProperty"/>
-        <rdfs:domain rdf:resource="&SysML;Complex"/>
-        <rdfs:range rdf:resource="&SysML;Real"/>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Complex.imaginaryPart">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topReifiedStructuredDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Complex"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Real"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Complex.realPart -->
 
-    <owl:ObjectProperty rdf:about="&SysML;Complex.realPart">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedStructuredDataProperty"/>
-        <rdfs:domain rdf:resource="&SysML;Complex"/>
-        <rdfs:range rdf:resource="&SysML;Real"/>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Complex.realPart">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topReifiedStructuredDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Complex"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Real"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#a_changeStructuralFeatureEvent_structuralFeature -->
 
-    <owl:ObjectProperty rdf:about="&SysML;a_changeStructuralFeatureEvent_structuralFeature">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectProperty"/>
-        <rdfs:domain rdf:resource="&SysML;ChangeStructuralFeatureEvent"/>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#a_changeStructuralFeatureEvent_structuralFeature">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topReifiedObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ChangeStructuralFeatureEvent"/>
         <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#StructuralFeature"/>
     </owl:ObjectProperty>
     
@@ -426,9 +279,9 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#a_invocationOnNestedPortAction_onNestedPort -->
 
-    <owl:ObjectProperty rdf:about="&SysML;a_invocationOnNestedPortAction_onNestedPort">
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectProperty"/>
-        <rdfs:domain rdf:resource="&SysML;InvocationOnNestedPortAction"/>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#a_invocationOnNestedPortAction_onNestedPort">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topReifiedObjectProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#InvocationOnNestedPortAction"/>
         <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Port"/>
     </owl:ObjectProperty>
     
@@ -436,19 +289,19 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#a_quantityKind_unit -->
 
-    <owl:ObjectProperty rdf:about="&SysML;a_quantityKind_unit">
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectProperty"/>
-        <rdfs:range rdf:resource="&SysML;QuantityKind"/>
-        <rdfs:domain rdf:resource="&SysML;Unit"/>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#a_quantityKind_unit">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topReifiedObjectProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Unit"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#QuantityKind"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#a_triggerOnNestedPort_onNestedPort -->
 
-    <owl:ObjectProperty rdf:about="&SysML;a_triggerOnNestedPort_onNestedPort">
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectProperty"/>
-        <rdfs:domain rdf:resource="&SysML;TriggerOnNestedPort"/>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#a_triggerOnNestedPort_onNestedPort">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topReifiedObjectProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#TriggerOnNestedPort"/>
         <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Port"/>
     </owl:ObjectProperty>
     
@@ -456,202 +309,70 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#a_valueType_quantityKind -->
 
-    <owl:ObjectProperty rdf:about="&SysML;a_valueType_quantityKind">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectProperty"/>
-        <rdfs:range rdf:resource="&SysML;QuantityKind"/>
-        <rdfs:domain rdf:resource="&SysML;ValueType"/>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#a_valueType_quantityKind">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topReifiedObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ValueType"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#QuantityKind"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#a_valueType_unit -->
 
-    <owl:ObjectProperty rdf:about="&SysML;a_valueType_unit">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectProperty"/>
-        <rdfs:range rdf:resource="&SysML;Unit"/>
-        <rdfs:domain rdf:resource="&SysML;ValueType"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasA_changeStructuralFeatureEvent_structuralFeatureSource -->
-
-    <owl:ObjectProperty rdf:about="&SysML;hasA_changeStructuralFeatureEvent_structuralFeatureSource">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertySource"/>
-        <rdfs:domain rdf:resource="&SysML;A_changeStructuralFeatureEvent_structuralFeature"/>
-        <rdfs:range rdf:resource="&SysML;ChangeStructuralFeatureEvent"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasA_changeStructuralFeatureEvent_structuralFeatureTarget -->
-
-    <owl:ObjectProperty rdf:about="&SysML;hasA_changeStructuralFeatureEvent_structuralFeatureTarget">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertyTarget"/>
-        <rdfs:domain rdf:resource="&SysML;A_changeStructuralFeatureEvent_structuralFeature"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#StructuralFeature"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasA_invocationOnNestedPortAction_onNestedPortSource -->
-
-    <owl:ObjectProperty rdf:about="&SysML;hasA_invocationOnNestedPortAction_onNestedPortSource">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertySource"/>
-        <rdfs:domain rdf:resource="&SysML;A_invocationOnNestedPortAction_onNestedPort"/>
-        <rdfs:range rdf:resource="&SysML;InvocationOnNestedPortAction"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasA_invocationOnNestedPortAction_onNestedPortTarget -->
-
-    <owl:ObjectProperty rdf:about="&SysML;hasA_invocationOnNestedPortAction_onNestedPortTarget">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertyTarget"/>
-        <rdfs:domain rdf:resource="&SysML;A_invocationOnNestedPortAction_onNestedPort"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Port"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasA_quantityKind_unitSource -->
-
-    <owl:ObjectProperty rdf:about="&SysML;hasA_quantityKind_unitSource">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertySource"/>
-        <rdfs:domain rdf:resource="&SysML;A_quantityKind_unit"/>
-        <rdfs:range rdf:resource="&SysML;Unit"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasA_quantityKind_unitTarget -->
-
-    <owl:ObjectProperty rdf:about="&SysML;hasA_quantityKind_unitTarget">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertyTarget"/>
-        <rdfs:domain rdf:resource="&SysML;A_quantityKind_unit"/>
-        <rdfs:range rdf:resource="&SysML;QuantityKind"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasA_triggerOnNestedPort_onNestedPortSource -->
-
-    <owl:ObjectProperty rdf:about="&SysML;hasA_triggerOnNestedPort_onNestedPortSource">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertySource"/>
-        <rdfs:domain rdf:resource="&SysML;A_triggerOnNestedPort_onNestedPort"/>
-        <rdfs:range rdf:resource="&SysML;TriggerOnNestedPort"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasA_triggerOnNestedPort_onNestedPortTarget -->
-
-    <owl:ObjectProperty rdf:about="&SysML;hasA_triggerOnNestedPort_onNestedPortTarget">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertyTarget"/>
-        <rdfs:domain rdf:resource="&SysML;A_triggerOnNestedPort_onNestedPort"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Port"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasA_valueType_quantityKindSource -->
-
-    <owl:ObjectProperty rdf:about="&SysML;hasA_valueType_quantityKindSource">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertySource"/>
-        <rdfs:domain rdf:resource="&SysML;A_valueType_quantityKind"/>
-        <rdfs:range rdf:resource="&SysML;ValueType"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasA_valueType_quantityKindTarget -->
-
-    <owl:ObjectProperty rdf:about="&SysML;hasA_valueType_quantityKindTarget">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertyTarget"/>
-        <rdfs:domain rdf:resource="&SysML;A_valueType_quantityKind"/>
-        <rdfs:range rdf:resource="&SysML;QuantityKind"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasA_valueType_unitSource -->
-
-    <owl:ObjectProperty rdf:about="&SysML;hasA_valueType_unitSource">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertySource"/>
-        <rdfs:domain rdf:resource="&SysML;A_valueType_unit"/>
-        <rdfs:range rdf:resource="&SysML;ValueType"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasA_valueType_unitTarget -->
-
-    <owl:ObjectProperty rdf:about="&SysML;hasA_valueType_unitTarget">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertyTarget"/>
-        <rdfs:domain rdf:resource="&SysML;A_valueType_unit"/>
-        <rdfs:range rdf:resource="&SysML;Unit"/>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#a_valueType_unit">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topReifiedObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ValueType"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Unit"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasComplex.imaginaryPartSource -->
 
-    <owl:ObjectProperty rdf:about="&SysML;hasComplex.imaginaryPartSource">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedStructuredDataPropertySource"/>
-        <rdfs:range rdf:resource="&SysML;Complex"/>
-        <rdfs:domain rdf:resource="&SysML;Complex.imaginaryPart"/>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasComplex.imaginaryPartSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topReifiedStructuredDataPropertySource"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Complex.imaginaryPart"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Complex"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasComplex.imaginaryPartTarget -->
 
-    <owl:ObjectProperty rdf:about="&SysML;hasComplex.imaginaryPartTarget">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedStructuredDataPropertyTarget"/>
-        <rdfs:domain rdf:resource="&SysML;Complex.imaginaryPart"/>
-        <rdfs:range rdf:resource="&SysML;Real"/>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasComplex.imaginaryPartTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topReifiedStructuredDataPropertyTarget"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Complex.imaginaryPart"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Real"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasComplex.realPartSource -->
 
-    <owl:ObjectProperty rdf:about="&SysML;hasComplex.realPartSource">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedStructuredDataPropertySource"/>
-        <rdfs:range rdf:resource="&SysML;Complex"/>
-        <rdfs:domain rdf:resource="&SysML;Complex.realPart"/>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasComplex.realPartSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topReifiedStructuredDataPropertySource"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Complex.realPart"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Complex"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasComplex.realPartTarget -->
 
-    <owl:ObjectProperty rdf:about="&SysML;hasComplex.realPartTarget">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedStructuredDataPropertyTarget"/>
-        <rdfs:domain rdf:resource="&SysML;Complex.realPart"/>
-        <rdfs:range rdf:resource="&SysML;Real"/>
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasComplex.realPartTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topReifiedStructuredDataPropertyTarget"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Complex.realPart"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Real"/>
     </owl:ObjectProperty>
     
 
@@ -669,203 +390,203 @@
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topDataProperty -->
 
-    <owl:DatatypeProperty rdf:about="&SysML-backbone;topDataProperty">
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topDataProperty">
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Block.isEncapsulated -->
 
-    <owl:DatatypeProperty rdf:about="&SysML;Block.isEncapsulated">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topDataProperty"/>
-        <rdfs:domain rdf:resource="&SysML;Block"/>
-        <rdfs:range rdf:resource="&xsd;boolean"/>
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Block.isEncapsulated">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Block"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#DirectedFeature.featureDirection -->
 
-    <owl:DatatypeProperty rdf:about="&SysML;DirectedFeature.featureDirection">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topDataProperty"/>
-        <rdfs:domain rdf:resource="&SysML;DirectedFeature"/>
-        <rdfs:range rdf:resource="&SysML;FeatureDirection"/>
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#DirectedFeature.featureDirection">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#DirectedFeature"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#FeatureDirection"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#FlowPort.direction -->
 
-    <owl:DatatypeProperty rdf:about="&SysML;FlowPort.direction">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topDataProperty"/>
-        <rdfs:range rdf:resource="&SysML;FlowDirection"/>
-        <rdfs:domain rdf:resource="&SysML;FlowPort"/>
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#FlowPort.direction">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#FlowPort"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#FlowDirection"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#FlowPort.isAtomic -->
 
-    <owl:DatatypeProperty rdf:about="&SysML;FlowPort.isAtomic">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topDataProperty"/>
-        <rdfs:domain rdf:resource="&SysML;FlowPort"/>
-        <rdfs:range rdf:resource="&xsd;boolean"/>
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#FlowPort.isAtomic">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#FlowPort"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#FlowProperty.direction -->
 
-    <owl:DatatypeProperty rdf:about="&SysML;FlowProperty.direction">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topDataProperty"/>
-        <rdfs:range rdf:resource="&SysML;FlowDirection"/>
-        <rdfs:domain rdf:resource="&SysML;FlowProperty"/>
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#FlowProperty.direction">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#FlowProperty"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#FlowDirection"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#QuantityKind.definitionURI -->
 
-    <owl:DatatypeProperty rdf:about="&SysML;QuantityKind.definitionURI">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topDataProperty"/>
-        <rdfs:domain rdf:resource="&SysML;QuantityKind"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#QuantityKind.definitionURI">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#QuantityKind"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#QuantityKind.description -->
 
-    <owl:DatatypeProperty rdf:about="&SysML;QuantityKind.description">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topDataProperty"/>
-        <rdfs:domain rdf:resource="&SysML;QuantityKind"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#QuantityKind.description">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#QuantityKind"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#QuantityKind.symbol -->
 
-    <owl:DatatypeProperty rdf:about="&SysML;QuantityKind.symbol">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topDataProperty"/>
-        <rdfs:domain rdf:resource="&SysML;QuantityKind"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#QuantityKind.symbol">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#QuantityKind"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Requirement.id -->
 
-    <owl:DatatypeProperty rdf:about="&SysML;Requirement.id">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topDataProperty"/>
-        <rdfs:domain rdf:resource="&SysML;Requirement"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Requirement.id">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Requirement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Requirement.text -->
 
-    <owl:DatatypeProperty rdf:about="&SysML;Requirement.text">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topDataProperty"/>
-        <rdfs:domain rdf:resource="&SysML;Requirement"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Requirement.text">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Requirement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Unit.definitionURI -->
 
-    <owl:DatatypeProperty rdf:about="&SysML;Unit.definitionURI">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topDataProperty"/>
-        <rdfs:domain rdf:resource="&SysML;Unit"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Unit.definitionURI">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Unit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Unit.description -->
 
-    <owl:DatatypeProperty rdf:about="&SysML;Unit.description">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topDataProperty"/>
-        <rdfs:domain rdf:resource="&SysML;Unit"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Unit.description">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Unit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Unit.symbol -->
 
-    <owl:DatatypeProperty rdf:about="&SysML;Unit.symbol">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topDataProperty"/>
-        <rdfs:domain rdf:resource="&SysML;Unit"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Unit.symbol">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Unit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Viewpoint.concerns -->
 
-    <owl:DatatypeProperty rdf:about="&SysML;Viewpoint.concerns">
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topDataProperty"/>
-        <rdfs:domain rdf:resource="&SysML;Viewpoint"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Viewpoint.concerns">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Viewpoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Viewpoint.languages -->
 
-    <owl:DatatypeProperty rdf:about="&SysML;Viewpoint.languages">
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topDataProperty"/>
-        <rdfs:domain rdf:resource="&SysML;Viewpoint"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Viewpoint.languages">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Viewpoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Viewpoint.methods -->
 
-    <owl:DatatypeProperty rdf:about="&SysML;Viewpoint.methods">
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topDataProperty"/>
-        <rdfs:domain rdf:resource="&SysML;Viewpoint"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Viewpoint.methods">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Viewpoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Viewpoint.purpose -->
 
-    <owl:DatatypeProperty rdf:about="&SysML;Viewpoint.purpose">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topDataProperty"/>
-        <rdfs:domain rdf:resource="&SysML;Viewpoint"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Viewpoint.purpose">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Viewpoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Viewpoint.stakeholders -->
 
-    <owl:DatatypeProperty rdf:about="&SysML;Viewpoint.stakeholders">
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topDataProperty"/>
-        <rdfs:domain rdf:resource="&SysML;Viewpoint"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Viewpoint.stakeholders">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Viewpoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -883,123 +604,123 @@
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect -->
 
-    <owl:Class rdf:about="&SysML-backbone;Aspect">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Thing"/>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Thing"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Entity -->
 
-    <owl:Class rdf:about="&SysML-backbone;Entity">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Thing"/>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Entity">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Thing"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ObjectPropertyDependentRangeType -->
 
-    <owl:Class rdf:about="&SysML-backbone;ObjectPropertyDependentRangeType">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Entity"/>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ObjectPropertyDependentRangeType">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Entity"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ReifiedObjectProperty -->
 
-    <owl:Class rdf:about="&SysML-backbone;ReifiedObjectProperty">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Thing"/>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ReifiedObjectProperty">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Thing"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ReifiedStructuredDataProperty -->
 
-    <owl:Class rdf:about="&SysML-backbone;ReifiedStructuredDataProperty">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Thing"/>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ReifiedStructuredDataProperty">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Thing"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#StructuredDatatype -->
 
-    <owl:Class rdf:about="&SysML-backbone;StructuredDatatype">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Thing"/>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#StructuredDatatype">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Thing"/>
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Thing -->
 
-    <owl:Class rdf:about="&SysML-backbone;Thing">
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Thing">
+        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
+        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_changeStructuralFeatureEvent_structuralFeature -->
 
-    <owl:Class rdf:about="&SysML;A_changeStructuralFeatureEvent_structuralFeature">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;ReifiedObjectProperty"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_changeStructuralFeatureEvent_structuralFeature">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ReifiedObjectProperty"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_invocationOnNestedPortAction_onNestedPort -->
 
-    <owl:Class rdf:about="&SysML;A_invocationOnNestedPortAction_onNestedPort">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;ReifiedObjectProperty"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_invocationOnNestedPortAction_onNestedPort">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ReifiedObjectProperty"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_quantityKind_unit -->
 
-    <owl:Class rdf:about="&SysML;A_quantityKind_unit">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;ReifiedObjectProperty"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_quantityKind_unit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ReifiedObjectProperty"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_triggerOnNestedPort_onNestedPort -->
 
-    <owl:Class rdf:about="&SysML;A_triggerOnNestedPort_onNestedPort">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;ReifiedObjectProperty"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_triggerOnNestedPort_onNestedPort">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ReifiedObjectProperty"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_valueType_quantityKind -->
 
-    <owl:Class rdf:about="&SysML;A_valueType_quantityKind">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;ReifiedObjectProperty"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_valueType_quantityKind">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ReifiedObjectProperty"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_valueType_unit -->
 
-    <owl:Class rdf:about="&SysML;A_valueType_unit">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;ReifiedObjectProperty"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_valueType_unit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ReifiedObjectProperty"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Abstraction.Allocate -->
 
-    <owl:Class rdf:about="&SysML;Abstraction.Allocate">
-        <rdfs:subClassOf rdf:resource="&SysML;Allocate"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Abstraction.Allocate">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Allocate"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Abstraction"/>
     </owl:Class>
     
@@ -1007,16 +728,16 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#AcceptChangeStructuralFeatureEventAction -->
 
-    <owl:Class rdf:about="&SysML;AcceptChangeStructuralFeatureEventAction">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#AcceptChangeStructuralFeatureEventAction">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#AcceptEventAction.AcceptChangeStructuralFeatureEventAction -->
 
-    <owl:Class rdf:about="&SysML;AcceptEventAction.AcceptChangeStructuralFeatureEventAction">
-        <rdfs:subClassOf rdf:resource="&SysML;AcceptChangeStructuralFeatureEventAction"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#AcceptEventAction.AcceptChangeStructuralFeatureEventAction">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#AcceptChangeStructuralFeatureEventAction"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#AcceptEventAction"/>
     </owl:Class>
     
@@ -1024,8 +745,8 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ActivityEdge.Probability -->
 
-    <owl:Class rdf:about="&SysML;ActivityEdge.Probability">
-        <rdfs:subClassOf rdf:resource="&SysML;Probability"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ActivityEdge.Probability">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Probability"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#ActivityEdge"/>
     </owl:Class>
     
@@ -1033,8 +754,8 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ActivityEdge.Rate -->
 
-    <owl:Class rdf:about="&SysML;ActivityEdge.Rate">
-        <rdfs:subClassOf rdf:resource="&SysML;Rate"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ActivityEdge.Rate">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Rate"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#ActivityEdge"/>
     </owl:Class>
     
@@ -1042,8 +763,8 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ActivityPartition.AllocateActivityPartition -->
 
-    <owl:Class rdf:about="&SysML;ActivityPartition.AllocateActivityPartition">
-        <rdfs:subClassOf rdf:resource="&SysML;AllocateActivityPartition"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ActivityPartition.AllocateActivityPartition">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#AllocateActivityPartition"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#ActivityPartition"/>
     </owl:Class>
     
@@ -1051,32 +772,32 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Allocate -->
 
-    <owl:Class rdf:about="&SysML;Allocate">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Allocate">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#AllocateActivityPartition -->
 
-    <owl:Class rdf:about="&SysML;AllocateActivityPartition">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#AllocateActivityPartition">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Allocated -->
 
-    <owl:Class rdf:about="&SysML;Allocated">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Allocated">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Behavior.ControlOperator -->
 
-    <owl:Class rdf:about="&SysML;Behavior.ControlOperator">
-        <rdfs:subClassOf rdf:resource="&SysML;ControlOperator"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Behavior.ControlOperator">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ControlOperator"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Behavior"/>
     </owl:Class>
     
@@ -1084,8 +805,8 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Behavior.TestCase -->
 
-    <owl:Class rdf:about="&SysML;Behavior.TestCase">
-        <rdfs:subClassOf rdf:resource="&SysML;TestCase"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Behavior.TestCase">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#TestCase"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Behavior"/>
     </owl:Class>
     
@@ -1093,48 +814,48 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#BindingConnector -->
 
-    <owl:Class rdf:about="&SysML;BindingConnector">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#BindingConnector">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Block -->
 
-    <owl:Class rdf:about="&SysML;Block">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Block">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Block.ConstraintBlock -->
 
-    <owl:Class rdf:about="&SysML;Block.ConstraintBlock">
-        <rdfs:subClassOf rdf:resource="&SysML;ConstraintBlock"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Block.ConstraintBlock">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ConstraintBlock"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Block.InterfaceBlock -->
 
-    <owl:Class rdf:about="&SysML;Block.InterfaceBlock">
-        <rdfs:subClassOf rdf:resource="&SysML;InterfaceBlock"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Block.InterfaceBlock">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#InterfaceBlock"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Boolean -->
 
-    <owl:Class rdf:about="&SysML;Boolean">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;StructuredDatatype"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Boolean">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#StructuredDatatype"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ChangeEvent.ChangeStructuralFeatureEvent -->
 
-    <owl:Class rdf:about="&SysML;ChangeEvent.ChangeStructuralFeatureEvent">
-        <rdfs:subClassOf rdf:resource="&SysML;ChangeStructuralFeatureEvent"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ChangeEvent.ChangeStructuralFeatureEvent">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ChangeStructuralFeatureEvent"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#ChangeEvent"/>
     </owl:Class>
     
@@ -1142,16 +863,16 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ChangeStructuralFeatureEvent -->
 
-    <owl:Class rdf:about="&SysML;ChangeStructuralFeatureEvent">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ChangeStructuralFeatureEvent">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Class.Block -->
 
-    <owl:Class rdf:about="&SysML;Class.Block">
-        <rdfs:subClassOf rdf:resource="&SysML;Block"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Class.Block">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Block"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Class"/>
     </owl:Class>
     
@@ -1159,8 +880,8 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Class.Requirement -->
 
-    <owl:Class rdf:about="&SysML;Class.Requirement">
-        <rdfs:subClassOf rdf:resource="&SysML;Requirement"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Class.Requirement">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Requirement"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Class"/>
     </owl:Class>
     
@@ -1168,8 +889,8 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Class.Viewpoint -->
 
-    <owl:Class rdf:about="&SysML;Class.Viewpoint">
-        <rdfs:subClassOf rdf:resource="&SysML;Viewpoint"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Class.Viewpoint">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Viewpoint"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Class"/>
     </owl:Class>
     
@@ -1177,8 +898,8 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Classifier.PropertySpecificType -->
 
-    <owl:Class rdf:about="&SysML;Classifier.PropertySpecificType">
-        <rdfs:subClassOf rdf:resource="&SysML;PropertySpecificType"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Classifier.PropertySpecificType">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#PropertySpecificType"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Classifier"/>
     </owl:Class>
     
@@ -1186,8 +907,8 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Comment.Problem -->
 
-    <owl:Class rdf:about="&SysML;Comment.Problem">
-        <rdfs:subClassOf rdf:resource="&SysML;Problem"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Comment.Problem">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Problem"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Comment"/>
     </owl:Class>
     
@@ -1195,8 +916,8 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Comment.Rationale -->
 
-    <owl:Class rdf:about="&SysML;Comment.Rationale">
-        <rdfs:subClassOf rdf:resource="&SysML;Rationale"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Comment.Rationale">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Rationale"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Comment"/>
     </owl:Class>
     
@@ -1204,40 +925,40 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Complex -->
 
-    <owl:Class rdf:about="&SysML;Complex">
-        <rdfs:subClassOf rdf:resource="&SysML;Number"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Complex">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Number"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Complex.imaginaryPart -->
 
-    <owl:Class rdf:about="&SysML;Complex.imaginaryPart">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;ReifiedStructuredDataProperty"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Complex.imaginaryPart">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ReifiedStructuredDataProperty"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Complex.realPart -->
 
-    <owl:Class rdf:about="&SysML;Complex.realPart">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;ReifiedStructuredDataProperty"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Complex.realPart">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ReifiedStructuredDataProperty"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Conform -->
 
-    <owl:Class rdf:about="&SysML;Conform">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Conform">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Connector.BindingConnector -->
 
-    <owl:Class rdf:about="&SysML;Connector.BindingConnector">
-        <rdfs:subClassOf rdf:resource="&SysML;BindingConnector"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Connector.BindingConnector">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#BindingConnector"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Connector"/>
     </owl:Class>
     
@@ -1245,8 +966,8 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ConnectorEnd.NestedConnectorEnd -->
 
-    <owl:Class rdf:about="&SysML;ConnectorEnd.NestedConnectorEnd">
-        <rdfs:subClassOf rdf:resource="&SysML;NestedConnectorEnd"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ConnectorEnd.NestedConnectorEnd">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#NestedConnectorEnd"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#ConnectorEnd"/>
     </owl:Class>
     
@@ -1254,48 +975,48 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ConnectorProperty -->
 
-    <owl:Class rdf:about="&SysML;ConnectorProperty">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ConnectorProperty">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ConstraintBlock -->
 
-    <owl:Class rdf:about="&SysML;ConstraintBlock">
-        <rdfs:subClassOf rdf:resource="&SysML;Block"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ConstraintBlock">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Block"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ConstraintProperty -->
 
-    <owl:Class rdf:about="&SysML;ConstraintProperty">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ConstraintProperty">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Continuous -->
 
-    <owl:Class rdf:about="&SysML;Continuous">
-        <rdfs:subClassOf rdf:resource="&SysML;Rate"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Continuous">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Rate"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ControlOperator -->
 
-    <owl:Class rdf:about="&SysML;ControlOperator">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ControlOperator">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Copy -->
 
-    <owl:Class rdf:about="&SysML;Copy">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Copy">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Trace"/>
     </owl:Class>
     
@@ -1303,8 +1024,8 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#DataType.ValueType -->
 
-    <owl:Class rdf:about="&SysML;DataType.ValueType">
-        <rdfs:subClassOf rdf:resource="&SysML;ValueType"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#DataType.ValueType">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ValueType"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#DataType"/>
     </owl:Class>
     
@@ -1312,8 +1033,8 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Dependency.Conform -->
 
-    <owl:Class rdf:about="&SysML;Dependency.Conform">
-        <rdfs:subClassOf rdf:resource="&SysML;Conform"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Dependency.Conform">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Conform"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Dependency"/>
     </owl:Class>
     
@@ -1321,8 +1042,8 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#DeriveReqt -->
 
-    <owl:Class rdf:about="&SysML;DeriveReqt">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#DeriveReqt">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Trace"/>
     </owl:Class>
     
@@ -1330,32 +1051,32 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#DirectedFeature -->
 
-    <owl:Class rdf:about="&SysML;DirectedFeature">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#DirectedFeature">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Discrete -->
 
-    <owl:Class rdf:about="&SysML;Discrete">
-        <rdfs:subClassOf rdf:resource="&SysML;Rate"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Discrete">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Rate"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#DistributedProperty -->
 
-    <owl:Class rdf:about="&SysML;DistributedProperty">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#DistributedProperty">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Feature.DirectedFeature -->
 
-    <owl:Class rdf:about="&SysML;Feature.DirectedFeature">
-        <rdfs:subClassOf rdf:resource="&SysML;DirectedFeature"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Feature.DirectedFeature">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#DirectedFeature"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Feature"/>
     </owl:Class>
     
@@ -1363,40 +1084,40 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#FlowPort -->
 
-    <owl:Class rdf:about="&SysML;FlowPort">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#FlowPort">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#FlowProperty -->
 
-    <owl:Class rdf:about="&SysML;FlowProperty">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#FlowProperty">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#FlowSpecification -->
 
-    <owl:Class rdf:about="&SysML;FlowSpecification">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#FlowSpecification">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#FullPort -->
 
-    <owl:Class rdf:about="&SysML;FullPort">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#FullPort">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#InformationFlow.ItemFlow -->
 
-    <owl:Class rdf:about="&SysML;InformationFlow.ItemFlow">
-        <rdfs:subClassOf rdf:resource="&SysML;ItemFlow"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#InformationFlow.ItemFlow">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ItemFlow"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#InformationFlow"/>
     </owl:Class>
     
@@ -1404,16 +1125,16 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Integer -->
 
-    <owl:Class rdf:about="&SysML;Integer">
-        <rdfs:subClassOf rdf:resource="&SysML;Number"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Integer">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Number"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Interface.FlowSpecification -->
 
-    <owl:Class rdf:about="&SysML;Interface.FlowSpecification">
-        <rdfs:subClassOf rdf:resource="&SysML;FlowSpecification"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Interface.FlowSpecification">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#FlowSpecification"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Interface"/>
     </owl:Class>
     
@@ -1421,16 +1142,16 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#InterfaceBlock -->
 
-    <owl:Class rdf:about="&SysML;InterfaceBlock">
-        <rdfs:subClassOf rdf:resource="&SysML;Block"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#InterfaceBlock">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Block"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#InvocationAction.InvocationOnNestedPortAction -->
 
-    <owl:Class rdf:about="&SysML;InvocationAction.InvocationOnNestedPortAction">
-        <rdfs:subClassOf rdf:resource="&SysML;InvocationOnNestedPortAction"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#InvocationAction.InvocationOnNestedPortAction">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#InvocationOnNestedPortAction"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#InvocationAction"/>
     </owl:Class>
     
@@ -1438,24 +1159,24 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#InvocationOnNestedPortAction -->
 
-    <owl:Class rdf:about="&SysML;InvocationOnNestedPortAction">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#InvocationOnNestedPortAction">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ItemFlow -->
 
-    <owl:Class rdf:about="&SysML;ItemFlow">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ItemFlow">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#NamedElement.Allocated -->
 
-    <owl:Class rdf:about="&SysML;NamedElement.Allocated">
-        <rdfs:subClassOf rdf:resource="&SysML;Allocated"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#NamedElement.Allocated">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Allocated"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#NamedElement"/>
     </owl:Class>
     
@@ -1463,8 +1184,8 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#NamedElement.RequirementRelated -->
 
-    <owl:Class rdf:about="&SysML;NamedElement.RequirementRelated">
-        <rdfs:subClassOf rdf:resource="&SysML;RequirementRelated"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#NamedElement.RequirementRelated">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#RequirementRelated"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#NamedElement"/>
     </owl:Class>
     
@@ -1472,32 +1193,32 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#NestedConnectorEnd -->
 
-    <owl:Class rdf:about="&SysML;NestedConnectorEnd">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#NestedConnectorEnd">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#NoBuffer -->
 
-    <owl:Class rdf:about="&SysML;NoBuffer">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#NoBuffer">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Number -->
 
-    <owl:Class rdf:about="&SysML;Number">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;StructuredDatatype"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Number">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#StructuredDatatype"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ObjectNode.NoBuffer -->
 
-    <owl:Class rdf:about="&SysML;ObjectNode.NoBuffer">
-        <rdfs:subClassOf rdf:resource="&SysML;NoBuffer"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ObjectNode.NoBuffer">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#NoBuffer"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#ObjectNode"/>
     </owl:Class>
     
@@ -1505,8 +1226,8 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ObjectNode.Overwrite -->
 
-    <owl:Class rdf:about="&SysML;ObjectNode.Overwrite">
-        <rdfs:subClassOf rdf:resource="&SysML;Overwrite"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ObjectNode.Overwrite">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Overwrite"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#ObjectNode"/>
     </owl:Class>
     
@@ -1514,8 +1235,8 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Operation.ControlOperator -->
 
-    <owl:Class rdf:about="&SysML;Operation.ControlOperator">
-        <rdfs:subClassOf rdf:resource="&SysML;ControlOperator"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Operation.ControlOperator">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ControlOperator"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Operation"/>
     </owl:Class>
     
@@ -1523,8 +1244,8 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Operation.TestCase -->
 
-    <owl:Class rdf:about="&SysML;Operation.TestCase">
-        <rdfs:subClassOf rdf:resource="&SysML;TestCase"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Operation.TestCase">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#TestCase"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Operation"/>
     </owl:Class>
     
@@ -1532,24 +1253,24 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Optional -->
 
-    <owl:Class rdf:about="&SysML;Optional">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Optional">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Overwrite -->
 
-    <owl:Class rdf:about="&SysML;Overwrite">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Overwrite">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Package.View -->
 
-    <owl:Class rdf:about="&SysML;Package.View">
-        <rdfs:subClassOf rdf:resource="&SysML;View"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Package.View">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#View"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Package"/>
     </owl:Class>
     
@@ -1557,8 +1278,8 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Parameter.Optional -->
 
-    <owl:Class rdf:about="&SysML;Parameter.Optional">
-        <rdfs:subClassOf rdf:resource="&SysML;Optional"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Parameter.Optional">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Optional"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Parameter"/>
     </owl:Class>
     
@@ -1566,8 +1287,8 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Parameter.Rate -->
 
-    <owl:Class rdf:about="&SysML;Parameter.Rate">
-        <rdfs:subClassOf rdf:resource="&SysML;Rate"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Parameter.Rate">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Rate"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Parameter"/>
     </owl:Class>
     
@@ -1575,8 +1296,8 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ParameterSet.Probability -->
 
-    <owl:Class rdf:about="&SysML;ParameterSet.Probability">
-        <rdfs:subClassOf rdf:resource="&SysML;Probability"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ParameterSet.Probability">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Probability"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#ParameterSet"/>
     </owl:Class>
     
@@ -1584,16 +1305,16 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ParticipantProperty -->
 
-    <owl:Class rdf:about="&SysML;ParticipantProperty">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ParticipantProperty">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Port.FlowPort -->
 
-    <owl:Class rdf:about="&SysML;Port.FlowPort">
-        <rdfs:subClassOf rdf:resource="&SysML;FlowPort"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Port.FlowPort">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#FlowPort"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Port"/>
     </owl:Class>
     
@@ -1601,8 +1322,8 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Port.FullPort -->
 
-    <owl:Class rdf:about="&SysML;Port.FullPort">
-        <rdfs:subClassOf rdf:resource="&SysML;FullPort"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Port.FullPort">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#FullPort"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Port"/>
     </owl:Class>
     
@@ -1610,8 +1331,8 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Port.ProxyPort -->
 
-    <owl:Class rdf:about="&SysML;Port.ProxyPort">
-        <rdfs:subClassOf rdf:resource="&SysML;ProxyPort"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Port.ProxyPort">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ProxyPort"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Port"/>
     </owl:Class>
     
@@ -1619,24 +1340,24 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Probability -->
 
-    <owl:Class rdf:about="&SysML;Probability">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Probability">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Problem -->
 
-    <owl:Class rdf:about="&SysML;Problem">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Problem">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Property.ConnectorProperty -->
 
-    <owl:Class rdf:about="&SysML;Property.ConnectorProperty">
-        <rdfs:subClassOf rdf:resource="&SysML;ConnectorProperty"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Property.ConnectorProperty">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ConnectorProperty"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Property"/>
     </owl:Class>
     
@@ -1644,8 +1365,8 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Property.ConstraintProperty -->
 
-    <owl:Class rdf:about="&SysML;Property.ConstraintProperty">
-        <rdfs:subClassOf rdf:resource="&SysML;ConstraintProperty"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Property.ConstraintProperty">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ConstraintProperty"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Property"/>
     </owl:Class>
     
@@ -1653,8 +1374,8 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Property.DistributedProperty -->
 
-    <owl:Class rdf:about="&SysML;Property.DistributedProperty">
-        <rdfs:subClassOf rdf:resource="&SysML;DistributedProperty"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Property.DistributedProperty">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#DistributedProperty"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Property"/>
     </owl:Class>
     
@@ -1662,8 +1383,8 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Property.FlowProperty -->
 
-    <owl:Class rdf:about="&SysML;Property.FlowProperty">
-        <rdfs:subClassOf rdf:resource="&SysML;FlowProperty"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Property.FlowProperty">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#FlowProperty"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Property"/>
     </owl:Class>
     
@@ -1671,8 +1392,8 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Property.ParticipantProperty -->
 
-    <owl:Class rdf:about="&SysML;Property.ParticipantProperty">
-        <rdfs:subClassOf rdf:resource="&SysML;ParticipantProperty"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Property.ParticipantProperty">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ParticipantProperty"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Property"/>
     </owl:Class>
     
@@ -1680,88 +1401,88 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#PropertySpecificType -->
 
-    <owl:Class rdf:about="&SysML;PropertySpecificType">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#PropertySpecificType">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ProxyPort -->
 
-    <owl:Class rdf:about="&SysML;ProxyPort">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ProxyPort">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#QuantityKind -->
 
-    <owl:Class rdf:about="&SysML;QuantityKind">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#QuantityKind">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Rate -->
 
-    <owl:Class rdf:about="&SysML;Rate">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Rate">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Rate.Continuous -->
 
-    <owl:Class rdf:about="&SysML;Rate.Continuous">
-        <rdfs:subClassOf rdf:resource="&SysML;Continuous"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Rate.Continuous">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Continuous"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Rate.Discrete -->
 
-    <owl:Class rdf:about="&SysML;Rate.Discrete">
-        <rdfs:subClassOf rdf:resource="&SysML;Discrete"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Rate.Discrete">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Discrete"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Rationale -->
 
-    <owl:Class rdf:about="&SysML;Rationale">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Rationale">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Real -->
 
-    <owl:Class rdf:about="&SysML;Real">
-        <rdfs:subClassOf rdf:resource="&SysML;Number"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Real">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Number"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Requirement -->
 
-    <owl:Class rdf:about="&SysML;Requirement">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Requirement">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#RequirementRelated -->
 
-    <owl:Class rdf:about="&SysML;RequirementRelated">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#RequirementRelated">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Satisfy -->
 
-    <owl:Class rdf:about="&SysML;Satisfy">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Satisfy">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Trace"/>
     </owl:Class>
     
@@ -1769,56 +1490,56 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#String -->
 
-    <owl:Class rdf:about="&SysML;String">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;StructuredDatatype"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#String">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#StructuredDatatype"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#TestCase -->
 
-    <owl:Class rdf:about="&SysML;TestCase">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#TestCase">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Trace.Copy -->
 
-    <owl:Class rdf:about="&SysML;Trace.Copy">
-        <rdfs:subClassOf rdf:resource="&SysML;Copy"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Trace.Copy">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Copy"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Trace.DeriveReqt -->
 
-    <owl:Class rdf:about="&SysML;Trace.DeriveReqt">
-        <rdfs:subClassOf rdf:resource="&SysML;DeriveReqt"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Trace.DeriveReqt">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#DeriveReqt"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Trace.Satisfy -->
 
-    <owl:Class rdf:about="&SysML;Trace.Satisfy">
-        <rdfs:subClassOf rdf:resource="&SysML;Satisfy"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Trace.Satisfy">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Satisfy"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Trace.Verify -->
 
-    <owl:Class rdf:about="&SysML;Trace.Verify">
-        <rdfs:subClassOf rdf:resource="&SysML;Verify"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Trace.Verify">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Verify"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Trigger.TriggerOnNestedPort -->
 
-    <owl:Class rdf:about="&SysML;Trigger.TriggerOnNestedPort">
-        <rdfs:subClassOf rdf:resource="&SysML;TriggerOnNestedPort"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Trigger.TriggerOnNestedPort">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#TriggerOnNestedPort"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Trigger"/>
     </owl:Class>
     
@@ -1826,32 +1547,32 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#TriggerOnNestedPort -->
 
-    <owl:Class rdf:about="&SysML;TriggerOnNestedPort">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#TriggerOnNestedPort">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Unit -->
 
-    <owl:Class rdf:about="&SysML;Unit">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Unit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ValueType -->
 
-    <owl:Class rdf:about="&SysML;ValueType">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ValueType">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Verify -->
 
-    <owl:Class rdf:about="&SysML;Verify">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Verify">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Trace"/>
     </owl:Class>
     
@@ -1859,16 +1580,16 @@
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#View -->
 
-    <owl:Class rdf:about="&SysML;View">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#View">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Viewpoint -->
 
-    <owl:Class rdf:about="&SysML;Viewpoint">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Viewpoint">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
     </owl:Class>
     
 
@@ -1882,633 +1603,99 @@
      -->
 
     <rdf:Description rdf:about="urn:swrl#r">
-        <rdf:type rdf:resource="&swrl;Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="urn:swrl#t">
-        <rdf:type rdf:resource="&swrl;Variable"/>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="urn:swrl#s">
-        <rdf:type rdf:resource="&swrl;Variable"/>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#t">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;Complex.imaginaryPart"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;hasComplex.imaginaryPartSource"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasComplex.imaginaryPartSource"/>
                         <swrl:argument1 rdf:resource="urn:swrl#r"/>
                         <swrl:argument2 rdf:resource="urn:swrl#s"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
                     <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&SysML;hasComplex.imaginaryPartTarget"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasComplex.imaginaryPartTarget"/>
                                 <swrl:argument1 rdf:resource="urn:swrl#r"/>
                                 <swrl:argument2 rdf:resource="urn:swrl#t"/>
                             </rdf:Description>
                         </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                     </rdf:Description>
                 </rdf:rest>
             </rdf:Description>
         </swrl:body>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
         <swrl:head>
             <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;a_valueType_quantityKind"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Complex.imaginaryPart"/>
                         <swrl:argument1 rdf:resource="urn:swrl#s"/>
                         <swrl:argument2 rdf:resource="urn:swrl#t"/>
                     </rdf:Description>
                 </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
             </rdf:Description>
         </swrl:head>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&SysML;A_valueType_quantityKind.valueType"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;A_valueType_quantityKind.quantityKind"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:body>
     </rdf:Description>
     <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <rdfs:label rdf:datatype="&xsd;string">a_changeStructuralFeatureEvent_structuralFeature reification rule</rdfs:label>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;a_changeStructuralFeatureEvent_structuralFeature"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;hasA_changeStructuralFeatureEvent_structuralFeatureSource"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasComplex.realPartSource"/>
                         <swrl:argument1 rdf:resource="urn:swrl#r"/>
                         <swrl:argument2 rdf:resource="urn:swrl#s"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
                     <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&SysML;hasA_changeStructuralFeatureEvent_structuralFeatureTarget"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasComplex.realPartTarget"/>
                                 <swrl:argument1 rdf:resource="urn:swrl#r"/>
                                 <swrl:argument2 rdf:resource="urn:swrl#t"/>
                             </rdf:Description>
                         </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <rdfs:label rdf:datatype="&xsd;string">a_quantityKind_unit reification rule</rdfs:label>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;a_quantityKind_unit"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&SysML;hasA_quantityKind_unitTarget"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;hasA_quantityKind_unitSource"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:body>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <rdfs:label rdf:datatype="&xsd;string">a_valueType_quantityKind reification rule</rdfs:label>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&SysML;hasA_valueType_quantityKindTarget"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;hasA_valueType_quantityKindSource"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;a_valueType_quantityKind"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;Complex.realPart"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&SysML;hasComplex.realPartTarget"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;hasComplex.realPartSource"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:body>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;a_changeStructuralFeatureEvent_structuralFeature"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;A_changeStructuralFeatureEvent_structuralFeature.changeStructuralFeatureEvent"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&SysML;A_changeStructuralFeatureEvent_structuralFeature.structuralFeature"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;A_valueType_unit.unit"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&SysML;A_valueType_unit.valueType"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                            </rdf:Description>
-                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                     </rdf:Description>
                 </rdf:rest>
             </rdf:Description>
         </swrl:body>
         <swrl:head>
             <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;a_valueType_unit"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Complex.realPart"/>
                         <swrl:argument1 rdf:resource="urn:swrl#s"/>
                         <swrl:argument2 rdf:resource="urn:swrl#t"/>
                     </rdf:Description>
                 </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <rdfs:label rdf:datatype="&xsd;string">a_triggerOnNestedPort_onNestedPort reification rule</rdfs:label>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;a_triggerOnNestedPort_onNestedPort"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&SysML;hasA_triggerOnNestedPort_onNestedPortTarget"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;hasA_triggerOnNestedPort_onNestedPortSource"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:body>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <rdfs:label rdf:datatype="&xsd;string">a_invocationOnNestedPortAction_onNestedPort reification rule</rdfs:label>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&SysML;hasA_invocationOnNestedPortAction_onNestedPortTarget"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;hasA_invocationOnNestedPortAction_onNestedPortSource"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;a_invocationOnNestedPortAction_onNestedPort"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;a_quantityKind_unit"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;A_quantityKind_unit.quantityKind"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&SysML;A_quantityKind_unit.unit"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;a_invocationOnNestedPortAction_onNestedPort"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&SysML;A_invocationOnNestedPortAction_onNestedPort.onNestedPort"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;A_invocationOnNestedPortAction_onNestedPort.invocationOnNestedPortAction"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:body>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <rdfs:label rdf:datatype="&xsd;string">a_valueType_unit reification rule</rdfs:label>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;a_valueType_unit"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;hasA_valueType_unitSource"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&SysML;hasA_valueType_unitTarget"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&SysML;A_triggerOnNestedPort_onNestedPort.triggerOnNestedPort"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;A_triggerOnNestedPort_onNestedPort.onNestedPort"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;a_triggerOnNestedPort_onNestedPort"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
             </rdf:Description>
         </swrl:head>
     </rdf:Description>
@@ -2516,5 +1703,5 @@
 
 
 
-<!-- Generated by the OWL API (version 3.4.5-SNAPSHOT) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 
