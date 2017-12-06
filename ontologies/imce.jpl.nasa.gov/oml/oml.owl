@@ -2,6 +2,7 @@
 <rdf:RDF xmlns="http://imce.jpl.nasa.gov/oml/oml#"
      xml:base="http://imce.jpl.nasa.gov/oml/oml"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:9.0.0="http://imce.jpl.nasa.gov/oml/oml/9.0.0#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
@@ -26,6 +27,30 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/oml/oml#hasInverseLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/oml/oml#hasInverseLabel">
+        <rdfs:comment xml:lang="en">Corresponds to rdfs:label on the OWL ObjectProperty corresponding to the inverse reified property, when defined.</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/oml/oml#hasPropertyLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/oml/oml#hasPropertyLabel">
+        <rdfs:comment xml:lang="en">Corresponds to rdfs:label on the OWL ObjectProperty corresponding to either an entity reified property or a structured reified property.</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/oml/oml#hasReificationLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/oml/oml#hasReificationLabel">
+        <rdfs:comment xml:lang="en">Corresponds to rdfs:label on the OWL Class corresponding to the reification of either an entity reified property or a structured reified property.</rdfs:comment>
+    </owl:AnnotationProperty>
     
 
 
