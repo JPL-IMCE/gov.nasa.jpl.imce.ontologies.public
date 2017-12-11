@@ -43,7 +43,24 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Complex -->
+
+    <rdfs:Datatype rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Complex">
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:pattern rdf:datatype="http://www.w3.org/2001/XMLSchema#string">.* i .*</xsd:pattern>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdfs:Datatype>
+
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ControlValue -->
@@ -258,30 +275,6 @@
     
 
 
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Complex.imaginaryPart -->
-
-    <owl:ObjectProperty rdf:about="&SysML;Complex.imaginaryPart">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedStructuredDataProperty"/>
-        <rdfs:domain rdf:resource="&SysML;Complex"/>
-        <rdfs:range rdf:resource="&SysML;Real"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Complex.realPart -->
-
-    <owl:ObjectProperty rdf:about="&SysML;Complex.realPart">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedStructuredDataProperty"/>
-        <rdfs:domain rdf:resource="&SysML;Complex"/>
-        <rdfs:range rdf:resource="&SysML;Real"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#a_changeStructuralFeatureEvent_structuralFeature -->
 
     <owl:ObjectProperty rdf:about="&SysML;a_changeStructuralFeatureEvent_structuralFeature">
@@ -306,7 +299,7 @@
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#a_quantityKind_unit -->
 
     <owl:ObjectProperty rdf:about="&SysML;a_quantityKind_unit">
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topUnreifiedObjectProperty"/>
         <rdfs:range rdf:resource="&SysML;QuantityKind"/>
         <rdfs:domain rdf:resource="&SysML;Unit"/>
     </owl:ObjectProperty>
@@ -323,24 +316,24 @@
     
 
 
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#a_valueType_quantityKind -->
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#a_scalarValueType_quantityKind -->
 
-    <owl:ObjectProperty rdf:about="&SysML;a_valueType_quantityKind">
+    <owl:ObjectProperty rdf:about="&SysML;a_scalarValueType_quantityKind">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topUnreifiedObjectProperty"/>
         <rdfs:range rdf:resource="&SysML;QuantityKind"/>
-        <rdfs:domain rdf:resource="&SysML;ValueType"/>
+        <rdfs:domain rdf:resource="&SysML;ScalarValueType"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#a_valueType_unit -->
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#a_scalarValueType_unit -->
 
-    <owl:ObjectProperty rdf:about="&SysML;a_valueType_unit">
+    <owl:ObjectProperty rdf:about="&SysML;a_scalarValueType_unit">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topUnreifiedObjectProperty"/>
         <rdfs:range rdf:resource="&SysML;Unit"/>
-        <rdfs:domain rdf:resource="&SysML;ValueType"/>
+        <rdfs:domain rdf:resource="&SysML;ScalarValueType"/>
     </owl:ObjectProperty>
     
 
@@ -390,28 +383,6 @@
     
 
 
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasA_quantityKind_unitSource -->
-
-    <owl:ObjectProperty rdf:about="&SysML;hasA_quantityKind_unitSource">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertySource"/>
-        <rdfs:domain rdf:resource="&SysML;A_quantityKind_unit"/>
-        <rdfs:range rdf:resource="&SysML;Unit"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasA_quantityKind_unitTarget -->
-
-    <owl:ObjectProperty rdf:about="&SysML;hasA_quantityKind_unitTarget">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertyTarget"/>
-        <rdfs:domain rdf:resource="&SysML;A_quantityKind_unit"/>
-        <rdfs:range rdf:resource="&SysML;QuantityKind"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasA_triggerOnNestedPort_onNestedPortSource -->
 
     <owl:ObjectProperty rdf:about="&SysML;hasA_triggerOnNestedPort_onNestedPortSource">
@@ -430,100 +401,6 @@
         <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertyTarget"/>
         <rdfs:domain rdf:resource="&SysML;A_triggerOnNestedPort_onNestedPort"/>
         <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Port"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasA_valueType_quantityKindSource -->
-
-    <owl:ObjectProperty rdf:about="&SysML;hasA_valueType_quantityKindSource">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertySource"/>
-        <rdfs:domain rdf:resource="&SysML;A_valueType_quantityKind"/>
-        <rdfs:range rdf:resource="&SysML;ValueType"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasA_valueType_quantityKindTarget -->
-
-    <owl:ObjectProperty rdf:about="&SysML;hasA_valueType_quantityKindTarget">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertyTarget"/>
-        <rdfs:domain rdf:resource="&SysML;A_valueType_quantityKind"/>
-        <rdfs:range rdf:resource="&SysML;QuantityKind"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasA_valueType_unitSource -->
-
-    <owl:ObjectProperty rdf:about="&SysML;hasA_valueType_unitSource">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertySource"/>
-        <rdfs:domain rdf:resource="&SysML;A_valueType_unit"/>
-        <rdfs:range rdf:resource="&SysML;ValueType"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasA_valueType_unitTarget -->
-
-    <owl:ObjectProperty rdf:about="&SysML;hasA_valueType_unitTarget">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedObjectPropertyTarget"/>
-        <rdfs:domain rdf:resource="&SysML;A_valueType_unit"/>
-        <rdfs:range rdf:resource="&SysML;Unit"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasComplex.imaginaryPartSource -->
-
-    <owl:ObjectProperty rdf:about="&SysML;hasComplex.imaginaryPartSource">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedStructuredDataPropertySource"/>
-        <rdfs:range rdf:resource="&SysML;Complex"/>
-        <rdfs:domain rdf:resource="&SysML;Complex.imaginaryPart"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasComplex.imaginaryPartTarget -->
-
-    <owl:ObjectProperty rdf:about="&SysML;hasComplex.imaginaryPartTarget">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedStructuredDataPropertyTarget"/>
-        <rdfs:domain rdf:resource="&SysML;Complex.imaginaryPart"/>
-        <rdfs:range rdf:resource="&SysML;Real"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasComplex.realPartSource -->
-
-    <owl:ObjectProperty rdf:about="&SysML;hasComplex.realPartSource">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedStructuredDataPropertySource"/>
-        <rdfs:range rdf:resource="&SysML;Complex"/>
-        <rdfs:domain rdf:resource="&SysML;Complex.realPart"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#hasComplex.realPartTarget -->
-
-    <owl:ObjectProperty rdf:about="&SysML;hasComplex.realPartTarget">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topReifiedStructuredDataPropertyTarget"/>
-        <rdfs:domain rdf:resource="&SysML;Complex.realPart"/>
-        <rdfs:range rdf:resource="&SysML;Real"/>
     </owl:ObjectProperty>
     
 
@@ -739,8 +616,91 @@
         <rdfs:domain rdf:resource="&SysML;Viewpoint"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
-    
 
+
+    <owl:DatatypeProperty rdf:about="&SysML;real.value">
+        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topDataProperty"/>
+        <rdfs:domain rdf:resource="&SysML;ScalarValueType"/>
+        <rdfs:range rdf:resource="&owl;real"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&SysML;rational.value">
+        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topDataProperty"/>
+        <rdfs:domain rdf:resource="&SysML;ScalarValueType"/>
+        <rdfs:range rdf:resource="&owl;rational"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&SysML;decimal.value">
+        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topDataProperty"/>
+        <rdfs:domain rdf:resource="&SysML;ScalarValueType"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&SysML;double.value">
+        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topDataProperty"/>
+        <rdfs:domain rdf:resource="&SysML;ScalarValueType"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&SysML;float.value">
+        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topDataProperty"/>
+        <rdfs:domain rdf:resource="&SysML;ScalarValueType"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&SysML;plainLiteral.value">
+        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topDataProperty"/>
+        <rdfs:domain rdf:resource="&SysML;ScalarValueType"/>
+        <rdfs:range rdf:resource="&rdf;PlainLiteral"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&SysML;string.value">
+        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topDataProperty"/>
+        <rdfs:domain rdf:resource="&SysML;ScalarValueType"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&SysML;boolean.value">
+        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topDataProperty"/>
+        <rdfs:domain rdf:resource="&SysML;ScalarValueType"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&SysML;base64Binary.value">
+        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topDataProperty"/>
+        <rdfs:domain rdf:resource="&SysML;ScalarValueType"/>
+        <rdfs:range rdf:resource="&xsd;base64Binary"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&SysML;hexBinary.value">
+        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topDataProperty"/>
+        <rdfs:domain rdf:resource="&SysML;ScalarValueType"/>
+        <rdfs:range rdf:resource="&xsd;hexBinary"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&SysML;anyURI.value">
+        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topDataProperty"/>
+        <rdfs:domain rdf:resource="&SysML;ScalarValueType"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&SysML;dateTime.value">
+        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topDataProperty"/>
+        <rdfs:domain rdf:resource="&SysML;ScalarValueType"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&SysML;dateTimeStamp.value">
+        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topDataProperty"/>
+        <rdfs:domain rdf:resource="&SysML;ScalarValueType"/>
+        <rdfs:range rdf:resource="&xsd;dateTimeStamp"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&SysML;xmlLiteral.value">
+        <rdfs:subPropertyOf rdf:resource="&SysML-backbone;topDataProperty"/>
+        <rdfs:domain rdf:resource="&SysML;ScalarValueType"/>
+        <rdfs:range rdf:resource="&rdf;XMLLiteral"/>
+    </owl:DatatypeProperty>
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -995,14 +955,6 @@
     
 
 
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Boolean -->
-
-    <owl:Class rdf:about="&SysML;Boolean">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;StructuredDatatype"/>
-    </owl:Class>
-    
-
-
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ChangeEvent.ChangeStructuralFeatureEvent -->
 
     <owl:Class rdf:about="&SysML;ChangeEvent.ChangeStructuralFeatureEvent">
@@ -1070,30 +1022,6 @@
     <owl:Class rdf:about="&SysML;Comment.Rationale">
         <rdfs:subClassOf rdf:resource="&SysML;Rationale"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Comment"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Complex -->
-
-    <owl:Class rdf:about="&SysML;Complex">
-        <rdfs:subClassOf rdf:resource="&SysML;Number"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Complex.imaginaryPart -->
-
-    <owl:Class rdf:about="&SysML;Complex.imaginaryPart">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;ReifiedStructuredDataProperty"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Complex.realPart -->
-
-    <owl:Class rdf:about="&SysML;Complex.realPart">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;ReifiedStructuredDataProperty"/>
     </owl:Class>
     
 
@@ -1169,15 +1097,6 @@
     <owl:Class rdf:about="&SysML;Copy">
         <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Trace"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#DataType.ValueType -->
-
-    <owl:Class rdf:about="&SysML;DataType.ValueType">
-        <rdfs:subClassOf rdf:resource="&SysML;ValueType"/>
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#DataType"/>
     </owl:Class>
     
 
@@ -1274,14 +1193,6 @@
     
 
 
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Integer -->
-
-    <owl:Class rdf:about="&SysML;Integer">
-        <rdfs:subClassOf rdf:resource="&SysML;Number"/>
-    </owl:Class>
-    
-
-
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Interface.FlowSpecification -->
 
     <owl:Class rdf:about="&SysML;Interface.FlowSpecification">
@@ -1354,14 +1265,6 @@
 
     <owl:Class rdf:about="&SysML;NoBuffer">
         <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Number -->
-
-    <owl:Class rdf:about="&SysML;Number">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;StructuredDatatype"/>
     </owl:Class>
     
 
@@ -1606,14 +1509,6 @@
     
 
 
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Real -->
-
-    <owl:Class rdf:about="&SysML;Real">
-        <rdfs:subClassOf rdf:resource="&SysML;Number"/>
-    </owl:Class>
-    
-
-
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Requirement -->
 
     <owl:Class rdf:about="&SysML;Requirement">
@@ -1635,14 +1530,6 @@
     <owl:Class rdf:about="&SysML;Satisfy">
         <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Trace"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#String -->
-
-    <owl:Class rdf:about="&SysML;String">
-        <rdfs:subClassOf rdf:resource="&SysML-backbone;StructuredDatatype"/>
     </owl:Class>
     
 
@@ -1717,7 +1604,21 @@
     <owl:Class rdf:about="&SysML;ValueType">
         <rdfs:subClassOf rdf:resource="&SysML-backbone;Aspect"/>
     </owl:Class>
-    
+
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ScalarValueType -->
+
+    <owl:Class rdf:about="&SysML;ScalarValueType">
+        <rdfs:subClassOf rdf:resource="&SysML;ValueType"/>
+    </owl:Class>
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#StructuredValueType -->
+
+    <owl:Class rdf:about="&SysML;StructuredValueType">
+        <rdfs:subClassOf rdf:resource="&SysML;ValueType"/>
+    </owl:Class>
+
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Verify -->
@@ -1761,51 +1662,6 @@
     </rdf:Description>
     <rdf:Description rdf:about="urn:swrl#t">
         <rdf:type rdf:resource="&swrl;Variable"/>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <rdfs:label rdf:datatype="&xsd;string">a_valueType_quantityKind reification rule</rdfs:label>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;a_valueType_quantityKind"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&SysML;hasA_valueType_quantityKindTarget"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;hasA_valueType_quantityKindSource"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:body>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&swrl;Imp"/>
@@ -1896,184 +1752,6 @@
                 </rdf:rest>
             </rdf:Description>
         </swrl:body>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <rdfs:label rdf:datatype="&xsd;string">a_valueType_unit reification rule</rdfs:label>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;hasA_valueType_unitSource"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&SysML;hasA_valueType_unitTarget"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;a_valueType_unit"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;Complex.realPart"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&SysML;hasComplex.realPartTarget"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;hasComplex.realPartSource"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:body>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <rdfs:label rdf:datatype="&xsd;string">a_quantityKind_unit reification rule</rdfs:label>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&SysML;hasA_quantityKind_unitTarget"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;hasA_quantityKind_unitSource"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;a_quantityKind_unit"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;hasComplex.imaginaryPartSource"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&SysML;hasComplex.imaginaryPartTarget"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&SysML;Complex.imaginaryPart"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&swrl;Imp"/>
