@@ -217,16 +217,6 @@
     
 
 
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#a_noQuantityKind_prefixedUnit -->
-
-    <owl:ObjectProperty rdf:about="&QUDV;a_noQuantityKind_prefixedUnit">
-        <rdfs:domain rdf:resource="&QUDV;PrefixedUnit"/>
-        <rdfs:range rdf:resource="&QUDV;QuantityKind"/>
-        <rdfs:subPropertyOf rdf:resource="&QUDV;a_quantityKind_measurementUnit"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#a_prefixedUnit_prefix -->
 
     <owl:ObjectProperty rdf:about="&QUDV;a_prefixedUnit_prefix">
@@ -245,17 +235,6 @@
         <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedObjectProperty"/>
         <rdfs:range rdf:resource="&QUDV;QuantityKind"/>
         <rdfs:domain rdf:resource="&QUDV;QuantityKindFactor"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#a_quantityKind_measurementUnit -->
-
-    <owl:ObjectProperty rdf:about="&QUDV;a_quantityKind_measurementUnit">
-        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedObjectProperty"/>
-        <rdfs:range rdf:resource="&QUDV;QuantityKind"/>
-        <rdfs:domain rdf:resource="&QUDV;Unit"/>
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#a_quantityKind_unit"/>
     </owl:ObjectProperty>
     
 
@@ -550,28 +529,6 @@
     
 
 
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#hasA_noQuantityKind_prefixedUnitSource -->
-
-    <owl:ObjectProperty rdf:about="&QUDV;hasA_noQuantityKind_prefixedUnitSource">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedObjectPropertySource"/>
-        <rdfs:domain rdf:resource="&QUDV;A_noQuantityKind_prefixedUnit"/>
-        <rdfs:range rdf:resource="&QUDV;PrefixedUnit"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#hasA_noQuantityKind_prefixedUnitTarget -->
-
-    <owl:ObjectProperty rdf:about="&QUDV;hasA_noQuantityKind_prefixedUnitTarget">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedObjectPropertyTarget"/>
-        <rdfs:domain rdf:resource="&QUDV;A_noQuantityKind_prefixedUnit"/>
-        <rdfs:range rdf:resource="&QUDV;QuantityKind"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#hasA_prefixedUnit_prefixSource -->
 
     <owl:ObjectProperty rdf:about="&QUDV;hasA_prefixedUnit_prefixSource">
@@ -613,28 +570,6 @@
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedObjectPropertyTarget"/>
         <rdfs:domain rdf:resource="&QUDV;A_quantityKindFactor_quantityKind"/>
-        <rdfs:range rdf:resource="&QUDV;QuantityKind"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#hasA_quantityKind_measurementUnitSource -->
-
-    <owl:ObjectProperty rdf:about="&QUDV;hasA_quantityKind_measurementUnitSource">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedObjectPropertySource"/>
-        <rdfs:domain rdf:resource="&QUDV;A_quantityKind_measurementUnit"/>
-        <rdfs:range rdf:resource="&QUDV;Unit"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#hasA_quantityKind_measurementUnitTarget -->
-
-    <owl:ObjectProperty rdf:about="&QUDV;hasA_quantityKind_measurementUnitTarget">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedObjectPropertyTarget"/>
-        <rdfs:domain rdf:resource="&QUDV;A_quantityKind_measurementUnit"/>
         <rdfs:range rdf:resource="&QUDV;QuantityKind"/>
     </owl:ObjectProperty>
     
@@ -1264,15 +1199,6 @@
     
 
 
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_noQuantityKind_prefixedUnit -->
-
-    <owl:Class rdf:about="&QUDV;A_noQuantityKind_prefixedUnit">
-        <rdfs:subClassOf rdf:resource="&QUDV-backbone;ReifiedObjectProperty"/>
-        <rdfs:subClassOf rdf:resource="&QUDV;A_quantityKind_measurementUnit"/>
-    </owl:Class>
-    
-
-
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_prefixedUnit_prefix -->
 
     <owl:Class rdf:about="&QUDV;A_prefixedUnit_prefix">
@@ -1285,15 +1211,6 @@
 
     <owl:Class rdf:about="&QUDV;A_quantityKindFactor_quantityKind">
         <rdfs:subClassOf rdf:resource="&QUDV-backbone;ReifiedObjectProperty"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#A_quantityKind_measurementUnit -->
-
-    <owl:Class rdf:about="&QUDV;A_quantityKind_measurementUnit">
-        <rdfs:subClassOf rdf:resource="&QUDV-backbone;ReifiedObjectProperty"/>
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#A_quantityKind_unit"/>
     </owl:Class>
     
 
@@ -1949,51 +1866,6 @@
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&swrl;Imp"/>
-        <rdfs:label rdf:datatype="&xsd;string">a_quantityKind_measurementUnit reification rule</rdfs:label>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&QUDV;a_quantityKind_measurementUnit"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&QUDV;hasA_quantityKind_measurementUnitTarget"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&QUDV;hasA_quantityKind_measurementUnitSource"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:body>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
         <rdfs:label rdf:datatype="&xsd;string">a_quantityKindFactor_quantityKind reification rule</rdfs:label>
         <swrl:head>
             <rdf:Description>
@@ -2480,51 +2352,6 @@
                     <rdf:Description>
                         <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
                         <swrl:propertyPredicate rdf:resource="&QUDV;a_systemOfUnits_baseUnit"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <rdfs:label rdf:datatype="&xsd;string">a_noQuantityKind_prefixedUnit reification rule</rdfs:label>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&QUDV;hasA_noQuantityKind_prefixedUnitTarget"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&QUDV;hasA_noQuantityKind_prefixedUnitSource"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&QUDV;a_noQuantityKind_prefixedUnit"/>
                         <swrl:argument1 rdf:resource="urn:swrl#s"/>
                         <swrl:argument2 rdf:resource="urn:swrl#t"/>
                     </rdf:Description>
