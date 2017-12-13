@@ -8,6 +8,9 @@
      (unit and quantity kind makes sense only for scalar value types)
      
 - `SysML:A_valueType_quantityKind` is now `SysML:a_scalarValueType_quantityKind` (i.e., it is no longer reified)
+  
+  `QUDV:A_quantityKind_measurementUnit` is deleted, it is subsumed by `SysML:a_scalarValueType_quantityKind`
+  `QUDV:A_noQuantityKind_prefixedUnit` is deleted, it is unecessary.
 
 - `SysML:A_valueType_unit` is now `SysML:a_scalarValueType_unit` (i.e., it is no longer reified)
 
