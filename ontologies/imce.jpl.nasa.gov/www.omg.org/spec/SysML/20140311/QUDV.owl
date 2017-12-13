@@ -127,101 +127,6 @@
     
 
 
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#AffineConversionUnit.factor -->
-
-    <owl:ObjectProperty rdf:about="&QUDV;AffineConversionUnit.factor">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedStructuredDataProperty"/>
-        <rdfs:domain rdf:resource="&QUDV;AffineConversionUnit"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Number"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#AffineConversionUnit.offset -->
-
-    <owl:ObjectProperty rdf:about="&QUDV;AffineConversionUnit.offset">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedStructuredDataProperty"/>
-        <rdfs:domain rdf:resource="&QUDV;AffineConversionUnit"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Number"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#LinearConversionUnit.factor -->
-
-    <owl:ObjectProperty rdf:about="&QUDV;LinearConversionUnit.factor">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedStructuredDataProperty"/>
-        <rdfs:domain rdf:resource="&QUDV;LinearConversionUnit"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Number"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Prefix.factor -->
-
-    <owl:ObjectProperty rdf:about="&QUDV;Prefix.factor">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedStructuredDataProperty"/>
-        <rdfs:domain rdf:resource="&QUDV;Prefix"/>
-        <rdfs:range rdf:resource="&QUDV;Rational"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#QuantityKindFactor.exponent -->
-
-    <owl:ObjectProperty rdf:about="&QUDV;QuantityKindFactor.exponent">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedStructuredDataProperty"/>
-        <rdfs:domain rdf:resource="&QUDV;QuantityKindFactor"/>
-        <rdfs:range rdf:resource="&QUDV;Rational"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Rational.denominator -->
-
-    <owl:ObjectProperty rdf:about="&QUDV;Rational.denominator">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedStructuredDataProperty"/>
-        <rdfs:domain rdf:resource="&QUDV;Rational"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Integer"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Rational.numerator -->
-
-    <owl:ObjectProperty rdf:about="&QUDV;Rational.numerator">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedStructuredDataProperty"/>
-        <rdfs:domain rdf:resource="&QUDV;Rational"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Integer"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#UnitFactor.exponent -->
-
-    <owl:ObjectProperty rdf:about="&QUDV;UnitFactor.exponent">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedStructuredDataProperty"/>
-        <rdfs:range rdf:resource="&QUDV;Rational"/>
-        <rdfs:domain rdf:resource="&QUDV;UnitFactor"/>
-    </owl:ObjectProperty>
-    
-
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#a_conversionBasedUnit_referenceUnit -->
 
@@ -959,198 +864,8 @@
         <rdfs:domain rdf:resource="&QUDV;A_usedSystemOfUnits_systemOfUnits"/>
         <rdfs:range rdf:resource="&QUDV;SystemOfUnits"/>
     </owl:ObjectProperty>
-    
 
 
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#hasAffineConversionUnit.factorSource -->
-
-    <owl:ObjectProperty rdf:about="&QUDV;hasAffineConversionUnit.factorSource">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedStructuredDataPropertySource"/>
-        <rdfs:range rdf:resource="&QUDV;AffineConversionUnit"/>
-        <rdfs:domain rdf:resource="&QUDV;AffineConversionUnit.factor"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#hasAffineConversionUnit.factorTarget -->
-
-    <owl:ObjectProperty rdf:about="&QUDV;hasAffineConversionUnit.factorTarget">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedStructuredDataPropertyTarget"/>
-        <rdfs:domain rdf:resource="&QUDV;AffineConversionUnit.factor"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Number"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#hasAffineConversionUnit.offsetSource -->
-
-    <owl:ObjectProperty rdf:about="&QUDV;hasAffineConversionUnit.offsetSource">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedStructuredDataPropertySource"/>
-        <rdfs:range rdf:resource="&QUDV;AffineConversionUnit"/>
-        <rdfs:domain rdf:resource="&QUDV;AffineConversionUnit.offset"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#hasAffineConversionUnit.offsetTarget -->
-
-    <owl:ObjectProperty rdf:about="&QUDV;hasAffineConversionUnit.offsetTarget">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedStructuredDataPropertyTarget"/>
-        <rdfs:domain rdf:resource="&QUDV;AffineConversionUnit.offset"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Number"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#hasLinearConversionUnit.factorSource -->
-
-    <owl:ObjectProperty rdf:about="&QUDV;hasLinearConversionUnit.factorSource">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedStructuredDataPropertySource"/>
-        <rdfs:range rdf:resource="&QUDV;LinearConversionUnit"/>
-        <rdfs:domain rdf:resource="&QUDV;LinearConversionUnit.factor"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#hasLinearConversionUnit.factorTarget -->
-
-    <owl:ObjectProperty rdf:about="&QUDV;hasLinearConversionUnit.factorTarget">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedStructuredDataPropertyTarget"/>
-        <rdfs:domain rdf:resource="&QUDV;LinearConversionUnit.factor"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Number"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#hasPrefix.factorSource -->
-
-    <owl:ObjectProperty rdf:about="&QUDV;hasPrefix.factorSource">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedStructuredDataPropertySource"/>
-        <rdfs:range rdf:resource="&QUDV;Prefix"/>
-        <rdfs:domain rdf:resource="&QUDV;Prefix.factor"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#hasPrefix.factorTarget -->
-
-    <owl:ObjectProperty rdf:about="&QUDV;hasPrefix.factorTarget">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedStructuredDataPropertyTarget"/>
-        <rdfs:domain rdf:resource="&QUDV;Prefix.factor"/>
-        <rdfs:range rdf:resource="&QUDV;Rational"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#hasQuantityKindFactor.exponentSource -->
-
-    <owl:ObjectProperty rdf:about="&QUDV;hasQuantityKindFactor.exponentSource">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedStructuredDataPropertySource"/>
-        <rdfs:range rdf:resource="&QUDV;QuantityKindFactor"/>
-        <rdfs:domain rdf:resource="&QUDV;QuantityKindFactor.exponent"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#hasQuantityKindFactor.exponentTarget -->
-
-    <owl:ObjectProperty rdf:about="&QUDV;hasQuantityKindFactor.exponentTarget">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedStructuredDataPropertyTarget"/>
-        <rdfs:domain rdf:resource="&QUDV;QuantityKindFactor.exponent"/>
-        <rdfs:range rdf:resource="&QUDV;Rational"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#hasRational.denominatorSource -->
-
-    <owl:ObjectProperty rdf:about="&QUDV;hasRational.denominatorSource">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedStructuredDataPropertySource"/>
-        <rdfs:range rdf:resource="&QUDV;Rational"/>
-        <rdfs:domain rdf:resource="&QUDV;Rational.denominator"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#hasRational.denominatorTarget -->
-
-    <owl:ObjectProperty rdf:about="&QUDV;hasRational.denominatorTarget">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedStructuredDataPropertyTarget"/>
-        <rdfs:domain rdf:resource="&QUDV;Rational.denominator"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Integer"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#hasRational.numeratorSource -->
-
-    <owl:ObjectProperty rdf:about="&QUDV;hasRational.numeratorSource">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedStructuredDataPropertySource"/>
-        <rdfs:range rdf:resource="&QUDV;Rational"/>
-        <rdfs:domain rdf:resource="&QUDV;Rational.numerator"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#hasRational.numeratorTarget -->
-
-    <owl:ObjectProperty rdf:about="&QUDV;hasRational.numeratorTarget">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedStructuredDataPropertyTarget"/>
-        <rdfs:domain rdf:resource="&QUDV;Rational.numerator"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Integer"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#hasUnitFactor.exponentSource -->
-
-    <owl:ObjectProperty rdf:about="&QUDV;hasUnitFactor.exponentSource">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedStructuredDataPropertySource"/>
-        <rdfs:range rdf:resource="&QUDV;UnitFactor"/>
-        <rdfs:domain rdf:resource="&QUDV;UnitFactor.exponent"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#hasUnitFactor.exponentTarget -->
-
-    <owl:ObjectProperty rdf:about="&QUDV;hasUnitFactor.exponentTarget">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedStructuredDataPropertyTarget"/>
-        <rdfs:range rdf:resource="&QUDV;Rational"/>
-        <rdfs:domain rdf:resource="&QUDV;UnitFactor.exponent"/>
-    </owl:ObjectProperty>
     
 
 
@@ -1170,6 +885,39 @@
     <owl:DatatypeProperty rdf:about="&QUDV-backbone;topDataProperty">
         <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
         <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#AffineConversionUnit.factor -->
+
+    <owl:DatatypeProperty rdf:about="&QUDV;AffineConversionUnit.factor">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topDataProperty"/>
+        <rdfs:domain rdf:resource="&QUDV;AffineConversionUnit"/>
+        <rdfs:range rdf:resource="&owl;real"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#AffineConversionUnit.offset -->
+
+    <owl:DatatypeProperty rdf:about="&QUDV;AffineConversionUnit.offset">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topDataProperty"/>
+        <rdfs:domain rdf:resource="&QUDV;AffineConversionUnit"/>
+        <rdfs:range rdf:resource="&owl;real"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#LinearConversionUnit.factor -->
+
+    <owl:DatatypeProperty rdf:about="&QUDV;LinearConversionUnit.factor">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topDataProperty"/>
+        <rdfs:domain rdf:resource="&QUDV;LinearConversionUnit"/>
+        <rdfs:range rdf:resource="&owl;real"/>
     </owl:DatatypeProperty>
     
 
@@ -1237,7 +985,41 @@
         <rdfs:domain rdf:resource="&QUDV;Prefix"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
-    
+
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Prefix.factor -->
+
+    <owl:DatatypeProperty rdf:about="&QUDV;Prefix.factor">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topDataProperty"/>
+        <rdfs:domain rdf:resource="&QUDV;Prefix"/>
+        <rdfs:range rdf:resource="&owl;rational"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#QuantityKindFactor.exponent -->
+
+    <owl:DatatypeProperty rdf:about="&QUDV;QuantityKindFactor.exponent">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topDataProperty"/>
+        <rdfs:domain rdf:resource="&QUDV;QuantityKindFactor"/>
+        <rdfs:range rdf:resource="&owl;rational"/>
+    </owl:DatatypeProperty>
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#UnitFactor.exponent -->
+
+    <owl:DatatypeProperty rdf:about="&QUDV;UnitFactor.exponent">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topDataProperty"/>
+        <rdfs:domain rdf:resource="&QUDV;UnitFactor"/>
+        <rdfs:range rdf:resource="&owl;rational"/>
+    </owl:DatatypeProperty>
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#QuantityKind.isNumberOfEntities -->
@@ -1259,7 +1041,7 @@
         <rdfs:domain rdf:resource="&QUDV;QuantityKind"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SystemOfQuantities.definitionURI -->
@@ -1616,22 +1398,6 @@
     
 
 
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#AffineConversionUnit.factor -->
-
-    <owl:Class rdf:about="&QUDV;AffineConversionUnit.factor">
-        <rdfs:subClassOf rdf:resource="&QUDV-backbone;ReifiedStructuredDataProperty"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#AffineConversionUnit.offset -->
-
-    <owl:Class rdf:about="&QUDV;AffineConversionUnit.offset">
-        <rdfs:subClassOf rdf:resource="&QUDV-backbone;ReifiedStructuredDataProperty"/>
-    </owl:Class>
-    
-
-
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#ConversionBasedUnit -->
 
     <owl:Class rdf:about="&QUDV;ConversionBasedUnit">
@@ -1682,28 +1448,12 @@
     
 
 
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#LinearConversionUnit.factor -->
-
-    <owl:Class rdf:about="&QUDV;LinearConversionUnit.factor">
-        <rdfs:subClassOf rdf:resource="&QUDV-backbone;ReifiedStructuredDataProperty"/>
-    </owl:Class>
-    
-
-
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Prefix -->
 
     <owl:Class rdf:about="&QUDV;Prefix">
         <rdfs:subClassOf rdf:resource="&QUDV-backbone;Aspect"/>
     </owl:Class>
-    
 
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Prefix.factor -->
-
-    <owl:Class rdf:about="&QUDV;Prefix.factor">
-        <rdfs:subClassOf rdf:resource="&QUDV-backbone;ReifiedStructuredDataProperty"/>
-    </owl:Class>
-    
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#PrefixedUnit -->
@@ -1732,38 +1482,6 @@
     </owl:Class>
     
 
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#QuantityKindFactor.exponent -->
-
-    <owl:Class rdf:about="&QUDV;QuantityKindFactor.exponent">
-        <rdfs:subClassOf rdf:resource="&QUDV-backbone;ReifiedStructuredDataProperty"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Rational -->
-
-    <owl:Class rdf:about="&QUDV;Rational">
-        <rdfs:subClassOf rdf:resource="&QUDV-backbone;StructuredDatatype"/>
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Number"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Rational.denominator -->
-
-    <owl:Class rdf:about="&QUDV;Rational.denominator">
-        <rdfs:subClassOf rdf:resource="&QUDV-backbone;ReifiedStructuredDataProperty"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Rational.numerator -->
-
-    <owl:Class rdf:about="&QUDV;Rational.numerator">
-        <rdfs:subClassOf rdf:resource="&QUDV-backbone;ReifiedStructuredDataProperty"/>
-    </owl:Class>
-    
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SimpleQuantityKind -->
@@ -1813,14 +1531,6 @@
 
     <owl:Class rdf:about="&QUDV;UnitFactor">
         <rdfs:subClassOf rdf:resource="&QUDV-backbone;Aspect"/>
-    </owl:Class>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#UnitFactor.exponent -->
-
-    <owl:Class rdf:about="&QUDV;UnitFactor.exponent">
-        <rdfs:subClassOf rdf:resource="&QUDV-backbone;ReifiedStructuredDataProperty"/>
     </owl:Class>
     
 
@@ -2069,50 +1779,6 @@
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&swrl;Imp"/>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&QUDV;QuantityKindFactor.exponent"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&QUDV;hasQuantityKindFactor.exponentSource"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&QUDV;hasQuantityKindFactor.exponentTarget"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
         <rdfs:label rdf:datatype="&xsd;string">a_systemOfQuantities_baseQuantityKind reification rule</rdfs:label>
         <swrl:head>
             <rdf:Description>
@@ -2245,138 +1911,6 @@
                 </rdf:first>
             </rdf:Description>
         </swrl:body>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&QUDV;AffineConversionUnit.offset"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&QUDV;hasAffineConversionUnit.offsetSource"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&QUDV;hasAffineConversionUnit.offsetTarget"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&QUDV;AffineConversionUnit.factor"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&QUDV;hasAffineConversionUnit.factorSource"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&QUDV;hasAffineConversionUnit.factorTarget"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&QUDV;hasUnitFactor.exponentSource"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&QUDV;hasUnitFactor.exponentTarget"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&QUDV;UnitFactor.exponent"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&swrl;Imp"/>
@@ -2560,50 +2094,6 @@
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&swrl;Imp"/>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&QUDV;Rational.numerator"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&QUDV;hasRational.numeratorTarget"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&QUDV;hasRational.numeratorSource"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:body>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
         <rdfs:label rdf:datatype="&xsd;string">a_derivedUnit_factor reification rule</rdfs:label>
         <swrl:body>
             <rdf:Description>
@@ -2646,50 +2136,6 @@
                 </rdf:first>
             </rdf:Description>
         </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&QUDV;LinearConversionUnit.factor"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&QUDV;hasLinearConversionUnit.factorSource"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&QUDV;hasLinearConversionUnit.factorTarget"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&swrl;Imp"/>
@@ -2819,50 +2265,6 @@
                     <rdf:Description>
                         <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
                         <swrl:propertyPredicate rdf:resource="&QUDV;a_usedSystemOfQuantities_systemOfQuantities"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&QUDV;hasRational.denominatorSource"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&QUDV;hasRational.denominatorTarget"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&QUDV;Rational.denominator"/>
                         <swrl:argument1 rdf:resource="urn:swrl#s"/>
                         <swrl:argument2 rdf:resource="urn:swrl#t"/>
                     </rdf:Description>
@@ -3049,50 +2451,6 @@
                 </rdf:first>
             </rdf:Description>
         </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&swrl;Imp"/>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&QUDV;Prefix.factor"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="&swrl;AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="&QUDV;hasPrefix.factorSource"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&swrl;AtomList"/>
-                        <rdf:rest rdf:resource="&rdf;nil"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="&QUDV;hasPrefix.factorTarget"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
-                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                            </rdf:Description>
-                        </rdf:first>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&swrl;Imp"/>
