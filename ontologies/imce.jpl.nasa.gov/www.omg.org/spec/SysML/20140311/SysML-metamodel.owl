@@ -150,7 +150,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Aspect -->
@@ -215,7 +215,17 @@
     <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Unit">
         <rdfs:subClassOf rdf:resource="&SysML-metamodel;Class.Block"/>
     </rdf:Description>
-    
+
+
+
+    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#QuantityKind -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#QuantityKind">
+        <rdfs:subClassOf rdf:resource="&SysML-metamodel;Class.Block"/>
+        <annotation:implementationElementId>_SysML_-Libraries-UnitAndQuantityKind-QuantityKind</annotation:implementationElementId>
+        <annotation:omgElementId>_OMG.20140311__-packagedElement.Package.SysML1.3-packagedElement.OMG_SysML-packagedElement.Package.Libraries-packagedElement.Package.UnitAndQuantityKind-packagedElement.Class.QuantityKind</annotation:omgElementId>
+    </rdf:Description>
+
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Abstraction.Allocate -->
