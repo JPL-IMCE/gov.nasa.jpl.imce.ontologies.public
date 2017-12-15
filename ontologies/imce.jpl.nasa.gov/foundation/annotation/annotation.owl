@@ -432,12 +432,50 @@ An ontology without a noMapping annotation is equivalent to an ontology with a n
     
 
 
-    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#topStructuredDataProperty -->
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#topReifiedObjectPropertySource -->
 
-    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#topStructuredDataProperty">
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#topReifiedObjectPropertySource">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#topObjectProperty"/>
-        <isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isAbstract>
-        <noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</noMapping>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#topReifiedObjectPropertyTarget -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#topReifiedObjectPropertyTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#topReifiedStructuredDataProperty -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#topReifiedStructuredDataProperty">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#topReifiedStructuredDataPropertySource -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#topReifiedStructuredDataPropertySource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#topReifiedStructuredDataPropertyTarget -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#topReifiedStructuredDataPropertyTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#topUnreifiedObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#topUnreifiedObjectProperty">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#topObjectProperty"/>
     </owl:ObjectProperty>
     
 
@@ -474,6 +512,14 @@ An ontology without a noMapping annotation is equivalent to an ontology with a n
     
 
 
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#Aspect -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#Aspect">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#Thing"/>
+    </owl:Class>
+    
+
+
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#Entity -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#Entity">
@@ -490,6 +536,14 @@ An ontology without a noMapping annotation is equivalent to an ontology with a n
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#Thing"/>
         <isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isAbstract>
         <noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</noMapping>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#ReifiedStructuredDataProperty -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#ReifiedStructuredDataProperty">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#Thing"/>
     </owl:Class>
     
 
