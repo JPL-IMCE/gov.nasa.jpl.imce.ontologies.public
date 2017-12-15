@@ -580,6 +580,7 @@
     <owl:ObjectProperty rdf:about="&QUDV;hasA_systemOfQuantities_baseQuantityKindSource">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedObjectPropertySource"/>
+        <rdfs:subPropertyOf rdf:resource="&QUDV;hasA_systemOfQuantities_quantityKindSource"/>
         <rdfs:domain rdf:resource="&QUDV;A_systemOfQuantities_baseQuantityKind"/>
         <rdfs:range rdf:resource="&QUDV;SystemOfQuantities"/>
     </owl:ObjectProperty>
@@ -592,6 +593,7 @@
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedObjectPropertyTarget"/>
+        <rdfs:subPropertyOf rdf:resource="&QUDV;hasA_systemOfQuantities_quantityKindTarget"/>
         <rdfs:domain rdf:resource="&QUDV;A_systemOfQuantities_baseQuantityKind"/>
         <rdfs:range rdf:resource="&QUDV;QuantityKind"/>
     </owl:ObjectProperty>
@@ -648,6 +650,7 @@
     <owl:ObjectProperty rdf:about="&QUDV;hasA_systemOfUnits_baseUnitSource">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedObjectPropertySource"/>
+        <rdfs:subPropertyOf rdf:resource="&QUDV;hasA_systemOfUnits_unitSource"/>
         <rdfs:domain rdf:resource="&QUDV;A_systemOfUnits_baseUnit"/>
         <rdfs:range rdf:resource="&QUDV;SystemOfUnits"/>
     </owl:ObjectProperty>
@@ -660,6 +663,7 @@
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedObjectPropertyTarget"/>
+        <rdfs:subPropertyOf rdf:resource="&QUDV;hasA_systemOfUnits_unitTarget"/>
         <rdfs:domain rdf:resource="&QUDV;A_systemOfUnits_baseUnit"/>
         <rdfs:range rdf:resource="&QUDV;Unit"/>
     </owl:ObjectProperty>
