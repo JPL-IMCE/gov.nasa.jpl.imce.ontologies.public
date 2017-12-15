@@ -33,6 +33,7 @@
      xmlns:PrimitiveTypes-metamodel-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-metamodel#"
      xmlns:pbs-embedding="http://imce.jpl.nasa.gov/pbs/pbs-embedding#"
      xmlns:state-analysis-implementation="http://imce.jpl.nasa.gov/discipline/state-analysis-implementation/state-analysis-implementation#"
+     xmlns:oml="http://imce.jpl.nasa.gov/oml/oml#"
      xmlns:jeo-architecture-embedding="http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture-embedding#"
      xmlns:owl2-mof2-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#"
      xmlns:owl2-mof2-embedding-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#"
@@ -116,6 +117,98 @@ This software may be subject to U.S. export control laws. By accepting this soft
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$Revision$</owl:versionInfo>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The owl2-mof2 ontology defines concepts and properties used to embed IMCE concepts and properties within UML.</dc:description>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:topObjectProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:topReifiedObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:topReifiedObjectProperty">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:topReifiedObjectPropertySource -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:topReifiedObjectPropertySource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:topReifiedObjectPropertyTarget -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:topReifiedObjectPropertyTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:topReifiedStructuredDataProperty -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:topReifiedStructuredDataProperty">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:topReifiedStructuredDataPropertySource -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:topReifiedStructuredDataPropertySource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:topReifiedStructuredDataPropertyTarget -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:topReifiedStructuredDataPropertyTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:topUnreifiedObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:topUnreifiedObjectProperty">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#topDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#topDataProperty"/>
     
 
 
@@ -333,6 +426,52 @@ This software may be subject to U.S. export control laws. By accepting this soft
     
 
 
+    <!-- http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:Aspect -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:Aspect">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:Entity -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:Entity">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:ReifiedObjectProperty -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:ReifiedObjectProperty">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:ReifiedStructuredDataProperty -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:ReifiedStructuredDataProperty">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:StructuredDatatype -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:StructuredDatatype">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:Thing -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#owl2-mof2-embedding-backbone:Thing"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -349,5 +488,5 @@ This software may be subject to U.S. export control laws. By accepting this soft
 
 
 
-<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 
