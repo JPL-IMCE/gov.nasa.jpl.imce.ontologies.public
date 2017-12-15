@@ -33,6 +33,7 @@
      xmlns:PrimitiveTypes-metamodel-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-metamodel#"
      xmlns:pbs-embedding="http://imce.jpl.nasa.gov/pbs/pbs-embedding#"
      xmlns:state-analysis-implementation="http://imce.jpl.nasa.gov/discipline/state-analysis-implementation/state-analysis-implementation#"
+     xmlns:oml="http://imce.jpl.nasa.gov/oml/oml#"
      xmlns:jeo-architecture-embedding="http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture-embedding#"
      xmlns:owl2-mof2-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#"
      xmlns:owl2-mof2-embedding-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#"
@@ -158,6 +159,70 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#topObjectProperty">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#topReifiedObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#topReifiedObjectProperty">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#topReifiedObjectPropertySource -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#topReifiedObjectPropertySource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#topReifiedObjectPropertyTarget -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#topReifiedObjectPropertyTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#topReifiedStructuredDataProperty -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#topReifiedStructuredDataProperty">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#topReifiedStructuredDataPropertySource -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#topReifiedStructuredDataPropertySource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#topReifiedStructuredDataPropertyTarget -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#topReifiedStructuredDataPropertyTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#topUnreifiedObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#topUnreifiedObjectProperty">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#topObjectProperty"/>
+    </owl:ObjectProperty>
     
 
 
@@ -580,6 +645,23 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#topDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#topDataProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -618,6 +700,52 @@
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryAssociationEndType"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ValueType"/>
     </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#Aspect -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#Aspect">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#Entity -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#Entity">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#ReifiedObjectProperty -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#ReifiedObjectProperty">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#ReifiedStructuredDataProperty -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#ReifiedStructuredDataProperty">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#StructuredDatatype -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#StructuredDatatype">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#Thing -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#Thing"/>
     
 
 
@@ -766,6 +894,14 @@
 
     <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#Involves2">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryAssociationBlockEnd2"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#IsTraversedBy -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#IsTraversedBy">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#StructuralInOutFlowPropertyRelationship"/>
     </rdf:Description>
     
 
@@ -955,14 +1091,6 @@
     
 
 
-    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#IsTraversedBy -->
-
-    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#IsTraversedBy">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#StructuralInOutFlowPropertyRelationship"/>
-    </rdf:Description>
-    
-
-
     <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#TraversingElement -->
 
     <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#TraversingElement">
@@ -980,5 +1108,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 
