@@ -870,6 +870,8 @@ The control system has to effect this constraint through knowledge available in 
     <!-- http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#hasIndependentStateVariable -->
 
     <owl:ObjectProperty rdf:about="&state-analysis;hasIndependentStateVariable">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
         <rdfs:label rdf:datatype="&xsd;string">has independent state variable</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="&state-analysis-backbone;topReifiedObjectProperty"/>
         <rdfs:domain rdf:resource="&state-analysis;Model"/>
