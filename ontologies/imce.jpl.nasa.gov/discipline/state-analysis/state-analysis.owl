@@ -528,9 +528,6 @@ The control system has to effect this constraint through knowledge available in 
         <rdfs:range rdf:resource="&state-analysis;Affector"/>
         <rdfs:domain rdf:resource="&state-analysis;Affects"/>
     </owl:ObjectProperty>
-    <rdf:Description>
-        <owl:inverseOf rdf:resource="&state-analysis;hasAffectsSource"/>
-    </rdf:Description>
     
 
 
@@ -542,9 +539,6 @@ The control system has to effect this constraint through knowledge available in 
         <rdfs:range rdf:resource="&state-analysis;Affected"/>
         <rdfs:domain rdf:resource="&state-analysis;Affects"/>
     </owl:ObjectProperty>
-    <rdf:Description>
-        <owl:inverseOf rdf:resource="&state-analysis;hasAffectsTarget"/>
-    </rdf:Description>
     
 
 
@@ -557,9 +551,6 @@ The control system has to effect this constraint through knowledge available in 
         <rdfs:range rdf:resource="&state-analysis;Elaboratable"/>
         <rdfs:subPropertyOf rdf:resource="&state-analysis;hasElaboratesSource"/>
     </owl:ObjectProperty>
-    <rdf:Description>
-        <owl:inverseOf rdf:resource="&state-analysis;hasConcurrentSource"/>
-    </rdf:Description>
     
 
 
@@ -584,9 +575,6 @@ The control system has to effect this constraint through knowledge available in 
         <rdfs:domain rdf:resource="&state-analysis;Constrains"/>
         <rdfs:range rdf:resource="&state-analysis;Goal"/>
     </owl:ObjectProperty>
-    <rdf:Description>
-        <owl:inverseOf rdf:resource="&state-analysis;hasConstrainsSource"/>
-    </rdf:Description>
     
 
 
@@ -626,9 +614,6 @@ The control system has to effect this constraint through knowledge available in 
         <rdfs:domain rdf:resource="&state-analysis;DescribesDynamicsOf"/>
         <rdfs:range rdf:resource="&state-analysis;Model"/>
     </owl:ObjectProperty>
-    <rdf:Description>
-        <owl:inverseOf rdf:resource="&state-analysis;hasDescribesDynamicsOfSource"/>
-    </rdf:Description>
     
 
 
@@ -651,9 +636,6 @@ The control system has to effect this constraint through knowledge available in 
         <rdfs:domain rdf:resource="&state-analysis;DescribesFrameTransformationBetween"/>
         <rdfs:range rdf:resource="&state-analysis;RelationStateVariable"/>
     </owl:ObjectProperty>
-    <rdf:Description>
-        <owl:inverseOf rdf:resource="&state-analysis;hasDescribesFrameTransformationBetweenSource"/>
-    </rdf:Description>
     
 
 
@@ -690,9 +672,6 @@ The control system has to effect this constraint through knowledge available in 
         <rdfs:range rdf:resource="&state-analysis;Elaboratable"/>
         <rdfs:domain rdf:resource="&state-analysis;Elaborates"/>
     </owl:ObjectProperty>
-    <rdf:Description>
-        <owl:inverseOf rdf:resource="&state-analysis;hasElaboratesSource"/>
-    </rdf:Description>
     
 
 
@@ -716,9 +695,6 @@ The control system has to effect this constraint through knowledge available in 
         <rdfs:domain rdf:resource="&state-analysis;EndsAt"/>
         <rdfs:range rdf:resource="&state-analysis;ScheduledActivity"/>
     </owl:ObjectProperty>
-    <rdf:Description>
-        <owl:inverseOf rdf:resource="&state-analysis;hasEndsAtSource"/>
-    </rdf:Description>
     
 
 
@@ -763,9 +739,6 @@ The control system has to effect this constraint through knowledge available in 
         <rdfs:domain rdf:resource="&state-analysis;GroupsRelations"/>
         <rdfs:range rdf:resource="&state-analysis;StateVariableGroup"/>
     </owl:ObjectProperty>
-    <rdf:Description>
-        <owl:inverseOf rdf:resource="&state-analysis;hasGroupsRelationsSource"/>
-    </rdf:Description>
     
 
 
@@ -789,9 +762,6 @@ The control system has to effect this constraint through knowledge available in 
         <rdfs:range rdf:resource="&state-analysis;Model"/>
         <rdfs:subPropertyOf rdf:resource="&analysis;hasExplainsSource"/>
     </owl:ObjectProperty>
-    <rdf:Description>
-        <owl:inverseOf rdf:resource="&state-analysis;hasHasDependentStateVariableSource"/>
-    </rdf:Description>
     
 
 
@@ -805,9 +775,6 @@ The control system has to effect this constraint through knowledge available in 
         <rdfs:range rdf:resource="&state-analysis;StateVariable"/>
         <rdfs:subPropertyOf rdf:resource="&analysis;hasExplainsTarget"/>
     </owl:ObjectProperty>
-    <rdf:Description>
-        <owl:inverseOf rdf:resource="&state-analysis;hasHasDependentStateVariableTarget"/>
-    </rdf:Description>
     
 
 
@@ -819,9 +786,6 @@ The control system has to effect this constraint through knowledge available in 
         <rdfs:domain rdf:resource="&state-analysis;HasDynamicsDescribedBy"/>
         <rdfs:range rdf:resource="&state-analysis;StateVariable"/>
     </owl:ObjectProperty>
-    <rdf:Description>
-        <owl:inverseOf rdf:resource="&state-analysis;hasHasDynamicsDescribedBySource"/>
-    </rdf:Description>
     
 
 
@@ -846,9 +810,6 @@ The control system has to effect this constraint through knowledge available in 
         <rdfs:range rdf:resource="&state-analysis;Model"/>
         <rdfs:subPropertyOf rdf:resource="&analysis;hasAnalyzesSource"/>
     </owl:ObjectProperty>
-    <rdf:Description>
-        <owl:inverseOf rdf:resource="&state-analysis;hasHasIndependentStateVariableSource"/>
-    </rdf:Description>
     
 
 
@@ -861,9 +822,6 @@ The control system has to effect this constraint through knowledge available in 
         <rdfs:range rdf:resource="&state-analysis;StateVariable"/>
         <rdfs:subPropertyOf rdf:resource="&analysis;hasAnalyzesTarget"/>
     </owl:ObjectProperty>
-    <rdf:Description>
-        <owl:inverseOf rdf:resource="&state-analysis;hasHasIndependentStateVariableTarget"/>
-    </rdf:Description>
     
 
 
@@ -890,9 +848,6 @@ The control system has to effect this constraint through knowledge available in 
         <rdfs:domain rdf:resource="&state-analysis;MapsElements"/>
         <rdfs:range rdf:resource="&state-analysis;StateVariableGroup"/>
     </owl:ObjectProperty>
-    <rdf:Description>
-        <owl:inverseOf rdf:resource="&state-analysis;hasMapsElementsSource"/>
-    </rdf:Description>
     
 
 
@@ -915,9 +870,6 @@ The control system has to effect this constraint through knowledge available in 
         <rdfs:domain rdf:resource="&state-analysis;OwnsStates"/>
         <rdfs:range rdf:resource="&state-analysis;StateEffectsModel"/>
     </owl:ObjectProperty>
-    <rdf:Description>
-        <owl:inverseOf rdf:resource="&state-analysis;hasOwnsStatesSource"/>
-    </rdf:Description>
     
 
 
@@ -944,9 +896,6 @@ The control system has to effect this constraint through knowledge available in 
         <rdfs:domain rdf:resource="&state-analysis;Prerequisite"/>
         <rdfs:subPropertyOf rdf:resource="&state-analysis;hasElaboratesSource"/>
     </owl:ObjectProperty>
-    <rdf:Description>
-        <owl:inverseOf rdf:resource="&state-analysis;hasPrerequisiteSource"/>
-    </rdf:Description>
     
 
 
@@ -970,9 +919,6 @@ The control system has to effect this constraint through knowledge available in 
         <rdfs:range rdf:resource="&state-analysis;ScheduledActivity"/>
         <rdfs:domain rdf:resource="&state-analysis;Schedules"/>
     </owl:ObjectProperty>
-    <rdf:Description>
-        <owl:inverseOf rdf:resource="&state-analysis;hasSchedulesSource"/>
-    </rdf:Description>
     
 
 
@@ -997,9 +943,6 @@ The control system has to effect this constraint through knowledge available in 
         <rdfs:range rdf:resource="&state-analysis;ScheduledActivity"/>
         <rdfs:domain rdf:resource="&state-analysis;StartsAt"/>
     </owl:ObjectProperty>
-    <rdf:Description>
-        <owl:inverseOf rdf:resource="&state-analysis;hasStartsAtSource"/>
-    </rdf:Description>
     
 
 

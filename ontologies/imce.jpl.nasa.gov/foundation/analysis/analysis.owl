@@ -352,11 +352,6 @@ describes, delimits, or restricts
 
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasAnalyzesSource">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topReifiedObjectPropertySource"/>
-        <owl:inverseOf>
-            <rdf:Description>
-                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasAnalyzesSource"/>
-            </rdf:Description>
-        </owl:inverseOf>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Analyzes"/>
         <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Explanation"/>
@@ -368,11 +363,6 @@ describes, delimits, or restricts
 
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasAnalyzesTarget">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topReifiedObjectPropertyTarget"/>
-        <owl:inverseOf>
-            <rdf:Description>
-                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasAnalyzesTarget"/>
-            </rdf:Description>
-        </owl:inverseOf>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Analyzes"/>
         <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
@@ -384,11 +374,6 @@ describes, delimits, or restricts
 
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasCharacterizesSource">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topReifiedObjectPropertySource"/>
-        <owl:inverseOf>
-            <rdf:Description>
-                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasCharacterizesSource"/>
-            </rdf:Description>
-        </owl:inverseOf>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Characterizes"/>
         <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Characterization"/>
@@ -400,11 +385,6 @@ describes, delimits, or restricts
 
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasCharacterizesTarget">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topReifiedObjectPropertyTarget"/>
-        <owl:inverseOf>
-            <rdf:Description>
-                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasCharacterizesTarget"/>
-            </rdf:Description>
-        </owl:inverseOf>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Characterizes"/>
         <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
@@ -456,11 +436,6 @@ describes, delimits, or restricts
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasExplainsSource">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topReifiedObjectPropertySource"/>
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasCharacterizesSource"/>
-        <owl:inverseOf>
-            <rdf:Description>
-                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasExplainsSource"/>
-            </rdf:Description>
-        </owl:inverseOf>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Explains"/>
         <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Explanation"/>
@@ -473,11 +448,6 @@ describes, delimits, or restricts
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasExplainsTarget">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topReifiedObjectPropertyTarget"/>
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasCharacterizesTarget"/>
-        <owl:inverseOf>
-            <rdf:Description>
-                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasExplainsTarget"/>
-            </rdf:Description>
-        </owl:inverseOf>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Explains"/>
         <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
@@ -489,11 +459,6 @@ describes, delimits, or restricts
 
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasHasCriterionSource">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topReifiedObjectPropertySource"/>
-        <owl:inverseOf>
-            <rdf:Description>
-                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasHasCriterionSource"/>
-            </rdf:Description>
-        </owl:inverseOf>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#HasCriterion"/>
         <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Metric"/>
@@ -505,11 +470,6 @@ describes, delimits, or restricts
 
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasHasCriterionTarget">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topReifiedObjectPropertyTarget"/>
-        <owl:inverseOf>
-            <rdf:Description>
-                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasHasCriterionTarget"/>
-            </rdf:Description>
-        </owl:inverseOf>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#HasCriterion"/>
@@ -522,11 +482,6 @@ describes, delimits, or restricts
 
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasHasMetricSource">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topReifiedObjectPropertySource"/>
-        <owl:inverseOf>
-            <rdf:Description>
-                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasHasMetricSource"/>
-            </rdf:Description>
-        </owl:inverseOf>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#HasMetric"/>
@@ -550,11 +505,6 @@ describes, delimits, or restricts
 
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasHasValueSource">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topReifiedObjectPropertySource"/>
-        <owl:inverseOf>
-            <rdf:Description>
-                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasHasValueSource"/>
-            </rdf:Description>
-        </owl:inverseOf>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#HasValue"/>
@@ -602,11 +552,6 @@ describes, delimits, or restricts
 
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasMeasuresSource">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topReifiedObjectPropertySource"/>
-        <owl:inverseOf>
-            <rdf:Description>
-                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasMeasuresSource"/>
-            </rdf:Description>
-        </owl:inverseOf>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Measures"/>
         <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Criterion"/>
@@ -618,11 +563,6 @@ describes, delimits, or restricts
 
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasMeasuresTarget">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topReifiedObjectPropertyTarget"/>
-        <owl:inverseOf>
-            <rdf:Description>
-                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasMeasuresTarget"/>
-            </rdf:Description>
-        </owl:inverseOf>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Measures"/>
         <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#MeasuredElement"/>
@@ -653,11 +593,6 @@ describes, delimits, or restricts
 
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasQuantifiesSource">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topReifiedObjectPropertySource"/>
-        <owl:inverseOf>
-            <rdf:Description>
-                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasQuantifiesSource"/>
-            </rdf:Description>
-        </owl:inverseOf>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Quantifies"/>
         <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Quantity"/>
@@ -669,11 +604,6 @@ describes, delimits, or restricts
 
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasQuantifiesTarget">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topReifiedObjectPropertyTarget"/>
-        <owl:inverseOf>
-            <rdf:Description>
-                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasQuantifiesTarget"/>
-            </rdf:Description>
-        </owl:inverseOf>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Quantifies"/>
         <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#SpecifiedElement"/>
@@ -686,11 +616,6 @@ describes, delimits, or restricts
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasValidatesSource">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topReifiedObjectPropertySource"/>
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasExplainsSource"/>
-        <owl:inverseOf>
-            <rdf:Description>
-                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasValidatesSource"/>
-            </rdf:Description>
-        </owl:inverseOf>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Validates"/>
         <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Explanation"/>
@@ -703,11 +628,6 @@ describes, delimits, or restricts
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasValidatesTarget">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topReifiedObjectPropertyTarget"/>
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasExplainsTarget"/>
-        <owl:inverseOf>
-            <rdf:Description>
-                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasValidatesTarget"/>
-            </rdf:Description>
-        </owl:inverseOf>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Validates"/>
         <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
