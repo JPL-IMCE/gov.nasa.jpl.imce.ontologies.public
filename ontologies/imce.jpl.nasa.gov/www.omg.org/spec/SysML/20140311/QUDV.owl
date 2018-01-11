@@ -245,6 +245,7 @@
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:range rdf:resource="&QUDV;QuantityKind"/>
         <rdfs:domain rdf:resource="&QUDV;SystemOfQuantities"/>
+        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedObjectProperty"/>
         <rdfs:subPropertyOf rdf:resource="&QUDV;a_systemOfQuantities_quantityKind"/>
     </owl:ObjectProperty>
     
@@ -277,6 +278,7 @@
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="&QUDV;SystemOfUnits"/>
         <rdfs:range rdf:resource="&QUDV;Unit"/>
+        <rdfs:subPropertyOf rdf:resource="&QUDV-backbone;topReifiedObjectProperty"/>
         <rdfs:subPropertyOf rdf:resource="&QUDV;a_systemOfUnits_unit"/>
     </owl:ObjectProperty>
     
