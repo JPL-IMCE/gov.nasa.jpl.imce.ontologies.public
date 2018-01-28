@@ -189,30 +189,9 @@ This software may be subject to U.S. export control laws. By accepting this soft
 
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#constrains">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/scenario/scenario#topReifiedObjectProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/scenario/scenario#TemporalConstraint"/>
         <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/scenario/scenario#TimePoint"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">constrains</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/foundation/scenario/scenario#elaboratesFrom -->
-
-    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#elaboratesFrom">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#analyzes"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/foundation/scenario/scenario#elaboratesTo -->
-
-    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#elaboratesTo">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#explains"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
     </owl:ObjectProperty>
     
 
@@ -258,6 +237,7 @@ This software may be subject to U.S. export control laws. By accepting this soft
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/scenario/scenario#topReifiedObjectPropertySource"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/scenario/scenario#Constrains"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/scenario/scenario#TemporalConstraint"/>
     </owl:ObjectProperty>
     
 
@@ -269,27 +249,6 @@ This software may be subject to U.S. export control laws. By accepting this soft
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/scenario/scenario#Constrains"/>
         <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/scenario/scenario#TimePoint"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/foundation/scenario/scenario#hasContainsSource -->
-
-    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#hasContainsSource">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/scenario/scenario#topReifiedObjectPropertySource"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/scenario/scenario#Contains"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/scenario/scenario#Scenario"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/foundation/scenario/scenario#hasContainsTarget -->
-
-    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#hasContainsTarget">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/scenario/scenario#topReifiedObjectPropertyTarget"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/scenario/scenario#Contains"/>
     </owl:ObjectProperty>
     
 
@@ -317,6 +276,28 @@ This software may be subject to U.S. export control laws. By accepting this soft
     
 
 
+    <!-- http://imce.jpl.nasa.gov/foundation/scenario/scenario#hasIncorporatesSource -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#hasIncorporatesSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/scenario/scenario#topReifiedObjectPropertySource"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/scenario/scenario#Incorporates"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/scenario/scenario#Scenario"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/scenario/scenario#hasIncorporatesTarget -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#hasIncorporatesTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/scenario/scenario#topReifiedObjectPropertyTarget"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/scenario/scenario#Incorporates"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/scenario/scenario#TemporalConstraint"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://imce.jpl.nasa.gov/foundation/scenario/scenario#incorporates -->
 
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#incorporates">
@@ -325,6 +306,7 @@ This software may be subject to U.S. export control laws. By accepting this soft
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/foundation/scenario/scenario#Scenario"/>
         <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/scenario/scenario#TemporalConstraint"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">incorporates</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -346,26 +328,6 @@ This software may be subject to U.S. export control laws. By accepting this soft
         <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
         <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;property&gt;topDataProperty&lt;/property&gt; is a common superproperty of all datatype properties defined in the Scenario Ontology.</dc:description>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/foundation/scenario/scenario#hasMaximum -->
-
-    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#hasMaximum">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/scenario/scenario#topDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has maximum</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/foundation/scenario/scenario#hasMinimum -->
-
-    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#hasMinimum">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/scenario/scenario#topDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has minimum</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -462,15 +424,6 @@ This software may be subject to U.S. export control laws. By accepting this soft
     
 
 
-    <!-- http://imce.jpl.nasa.gov/foundation/scenario/scenario#Contains -->
-
-    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#Contains">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/scenario/scenario#ReifiedObjectProperty"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Contains</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://imce.jpl.nasa.gov/foundation/scenario/scenario#EndsAt -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#EndsAt">
@@ -480,10 +433,21 @@ This software may be subject to U.S. export control laws. By accepting this soft
     
 
 
+    <!-- http://imce.jpl.nasa.gov/foundation/scenario/scenario#Incorporates -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#Incorporates">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/scenario/scenario#ReifiedObjectProperty"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Incorporates</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://imce.jpl.nasa.gov/foundation/scenario/scenario#Scenario -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#Scenario">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/scenario/scenario#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#IdentifiedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scenario</rdfs:label>
     </owl:Class>
@@ -504,6 +468,9 @@ This software may be subject to U.S. export control laws. By accepting this soft
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#TemporalConstraint">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/scenario/scenario#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#IdentifiedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temporal Constraint</rdfs:label>
     </owl:Class>
     
@@ -513,6 +480,9 @@ This software may be subject to U.S. export control laws. By accepting this soft
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#TimePoint">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/scenario/scenario#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#IdentifiedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Time Point</rdfs:label>
     </owl:Class>
     
@@ -536,6 +506,7 @@ This software may be subject to U.S. export control laws. By accepting this soft
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">beginsAt reification rule</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -580,6 +551,7 @@ This software may be subject to U.S. export control laws. By accepting this soft
         </swrl:head>
     </rdf:Description>
     <rdf:Description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">endsAt reification rule</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -624,6 +596,52 @@ This software may be subject to U.S. export control laws. By accepting this soft
         </swrl:head>
     </rdf:Description>
     <rdf:Description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">incorporates reification rule</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/scenario/scenario#hasIncorporatesSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/scenario/scenario#hasIncorporatesTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/foundation/scenario/scenario#incorporates"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">constrains reification rule</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
