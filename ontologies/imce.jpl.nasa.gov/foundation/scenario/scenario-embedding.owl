@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://imce.jpl.nasa.gov/foundation/scenario/scenario-embedding#"
+     xml:base="http://imce.jpl.nasa.gov/foundation/scenario/scenario-embedding"
+     xmlns:annotation="http://imce.jpl.nasa.gov/foundation/annotation/annotation#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:scenario="http://imce.jpl.nasa.gov/foundation/scenario/scenario#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:owl2-mof2="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:behavior="http://imce.jpl.nasa.gov/foundation/behavior/behavior#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://imce.jpl.nasa.gov/oml/oml#">
+    <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario-embedding">
+        <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/scenario/scenario"/>
+        <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior-embedding"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+   $Date$
+  </dc:date>
+        <dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copyright 2010-2017, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
+
+This software may be subject to U.S. export control laws. By accepting this software, the user agrees to comply with all applicable U.S. export laws and regulations. User has the responsibility to obtain export licenses,a or other export authority as may be required before exporting such information to foreign countries or providing access to foreign persons.</dc:rights>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+   $Revision$
+  </owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#isAbstract -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#isAbstract"/>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/annotation/annotation#noMapping -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/foundation/annotation/annotation#noMapping"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/scenario/scenario#beginsAt -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#beginsAt">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/scenario/scenario#constrains -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#constrains">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/scenario/scenario#endsAt -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#endsAt">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/scenario/scenario#hasBeginsAtSource -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#hasBeginsAtSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/scenario/scenario#hasBeginsAtTarget -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#hasBeginsAtTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/scenario/scenario#hasConstrainsSource -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#hasConstrainsSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/scenario/scenario#hasConstrainsTarget -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#hasConstrainsTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/scenario/scenario#hasEndsAtSource -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#hasEndsAtSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/scenario/scenario#hasEndsAtTarget -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#hasEndsAtTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/scenario/scenario#hasIncorporatesSource -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#hasIncorporatesSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/scenario/scenario#hasIncorporatesTarget -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#hasIncorporatesTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/scenario/scenario#incorporates -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#incorporates">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/scenario/scenario#BeginsAt -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#BeginsAt">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/scenario/scenario#Constrains -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#Constrains">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/scenario/scenario#EndsAt -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#EndsAt">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/scenario/scenario#Incorporates -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#Incorporates">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/scenario/scenario#Scenario -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#Scenario">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependencyEndType"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Component.Block"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/scenario/scenario#TemporalConstraint -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#TemporalConstraint">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependencyEndType"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Component.Block"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/scenario/scenario#TimePoint -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/scenario/scenario#TimePoint">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependencyEndType"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Component.Block"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
