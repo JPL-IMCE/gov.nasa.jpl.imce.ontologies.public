@@ -1,0 +1,766 @@
+@owl:versionInfo="""$Revision$"""
+@dc:creator="""Systems Engineering & Formulation Division"""
+@dc:description="""The Mission Ontology defines concepts and properties for describing missions in terms of their objectives, their constituent components, the functions those components perform, and the requirements that specify them."""
+@dc:rights="""Copyright 2010-2014, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
+
+This software may be subject to U.S. export control laws. By accepting this software, the user agrees to comply with all applicable U.S. export laws and regulations. User has the responsibility to obtain export licenses, or other export authority as may be required before exporting such information to foreign countries or providing access to foreign persons."""
+@dc:title="""Mission Ontology"""
+@dc:type="""Foundation"""
+@dc:date="""$Date$"""
+open terminology <http://imce.jpl.nasa.gov/foundation/mission/mission> {
+
+	extends <http://imce.jpl.nasa.gov/foundation/base/base>
+
+	@dc:description="""A <classname>PerformingElement</classname> is an object that <property>performs</property> one or more <classname>Function</classname>s."""
+	@rdfs:label="""Performing Element"""
+	aspect PerformingElement
+
+	@dc:description="""A <classname>PresentingElement</classname> <property>present</property>s zero or more <classname>Interface</classname>s that define its connections to the outside world."""
+	@rdfs:label="""Presenting Element"""
+	aspect PresentingElement
+
+	@rdfs:label="""Specified Element"""
+	aspect SpecifiedElement
+
+	@dc:description="""A <classname>TraversingElement</classname> is any model element that  <property>traverses</property> an <classname>Interface</classname>."""
+	@rdfs:label="""Traversing Element"""
+	aspect TraversingElement
+
+	@dc:description="""<para>A <classname>Component</classname> is a <classname>PerformingElement</classname> that is not a <classname>Mission</classname>. Example
+            <classname>Component</classname>s include launch vehicle, spacecraft, telecommunication subsystem,
+        flight software, attitude control software, and mission operations team.</para>"""
+	@rdfs:label="""Component"""
+	concept Component
+
+	@dc:description="""An <classname>Environment</classname> corresponds to a set of conditions in which a <classname>Component</classname> must <property>perform</property> its <classname>Function</classname>s.
+Example environments include low earth orbit, trans-Jupiter cruise, and Martian north polar surface."""
+	@rdfs:label="""Environment"""
+	concept Environment
+
+	@dc:description="""A <classname>Flow</classname> represents a non-discrete transfer of matter or energy between <classname>Function</classname>s. Examples of <classname>Flow</classname> include electrical power, propellant, and heat."""
+	@rdfs:label="""Flow"""
+	concept Flow
+
+	@dc:description="""<para>A <classname>Function</classname> is an operation or activity performed by a
+            <classname>Component</classname> in the context of executing a
+            <classname>Mission</classname>. Every <classname>Function</classname> is a
+            <classname>SpecifiedElement</classname>, which implies that a
+            <classname>Requirement</classname> can <property>specify</property> a
+            <classname>Function</classname>. <classname>Function</classname>s, therefore,
+        represent intended <classname>Component</classname> behavior. Example
+            <classname>Function</classname>s include <emphasis role="italic">search for life on
+            Mars</emphasis>, <emphasis role="italic">insert into Martian orbit</emphasis>, and
+            <emphasis role="italic">send instrument telemetry packet</emphasis>.</para>
+    <para><classname>Function</classname>s may <property>emit</property> or
+            <property>ingest</property>
+        <classname>Flow</classname>s representing non-discrete exchanges of matter or energy.
+            <classname>Function</classname>s may <property>send</property> or
+            <property>receive</property>
+        <classname>Item</classname>s representing discrete exchanges of matter or
+        information.</para>"""
+	@rdfs:label="""Function"""
+	concept Function
+
+	@dc:description="""An <classname>Interchange</classname> represents the intended joint behavior of a pair of <classname>PerformingElement</classname>s. It indicates that a <classname>Flow</classname> or <classname>Item</classname> may be sent or emitted by one <classname>PerformingElement</classname> and received or ingested by another."""
+	@rdfs:label="""Interchange"""
+	concept Interchange
+
+	@rdfs:label="""Interchange Point"""
+	concept InterchangePoint
+
+	@dc:description="""<para>An <classname>Interface</classname> represents a set of mechanical, electrical, signal, or
+        other properties that describe some aspect of a <classname>Component</classname>'s
+        connection to or interaction with another <classname>Component</classname>.</para>
+    <para>It is important to distinguish between a <classname>Component</classname>, which is a
+        discrete thing, and an <classname>Interface</classname>, which is a collection of
+        properties. In the formulation phase, for example, we might model the launch vehicle and the
+        spacecraft as <classname>Component</classname>s. The properties that describe how the
+        spacecraft is designed to attach to the launch vehicle would be captured in one
+            <classname>Interface</classname> (and associated with the spacecraft using the
+            <property>presents</property> property). The properties that describe how the launch
+        vehicle is designed or configured to attach to the spacecraft would be captured in another
+            <classname>Interface</classname>. The fact that two (or more) interfaces mate with each other is conveyed the existence of an <classname>Junction</classname> that <property>joins</property> the <classname>Interface</classname>s.</para>
+    <para>This method of modeling interfaces allows us to capture the asymmetric aspect of
+        producer/consumer relationships, as well as providing a convenient method for associating
+        the sets of properties and characterize the interconnection of any pair of
+            <classname>Component</classname>s so that they can be analyzed for consistency.</para>"""
+	@rdfs:label="""Interface"""
+	concept Interface
+
+	@dc:description="""An <classname>Item</classname> is a discrete unit of material or information exchanged between two <classname>Function</classname>s."""
+	@rdfs:label="""Item"""
+	concept Item
+
+	@dc:description="""<para>An <classname>Junction</classname> represents a set of mechanical, electrical, signal, or
+        other properties that are common to a set of mutually connected <classname>Interface</classname>s.</para>"""
+	@rdfs:label="""Junction"""
+	concept Junction
+
+	@dc:description="""A <classname>MaterialItem</classname> is a discrete unit of material exchanged between two <classname>Function</classname>s. Example <classname>MaterialItem</classname>s include rock hammer and soil sample."""
+	@rdfs:label="""Material Item"""
+	concept MaterialItem
+
+	@dc:description="""A <classname>Message</classname> is a discrete unit of information exchanged between two <classname>Function</classname>s. Example <classname>Message</classname>s include command, command response, and file contents."""
+	@rdfs:label="""Message"""
+	concept Message
+
+	@dc:description="""<para>
+A <classname>Mission</classname> is a <classname>PerformingElement</classname> that <property>pursue</property>s <classname>Objectives</classname>.
+</para>
+<para>
+A <classname>Mission</classname> may
+<property>contain</property>
+<classname>Component</classname>s, but the preferred relationship is that a
+<classname>Mission</classname>
+<property>deploy</property>s its systems (which are <classname>Component</classname>s). This convention allows for a <classname>Mission</classname> to be associated with shared or external <classname>Component</classname>s that it does not strictly <property>contain</property>.
+</para>"""
+	@rdfs:label="""Mission"""
+	concept Mission
+
+	@dc:description="""<para>An <classname>Objective</classname> represents a specific interest that one or more
+        stakeholders have in the successful execution of a mission. Example
+            <classname>Objective</classname>s include characterize the extent of the Europan ocean
+        and its relation to the deeper interior, characterize the Europan ice shell and any
+        subsurface water, including their heterogeneity, and the nature of surface-ice-ocean
+        exchange, and determine global Europan surface compositions and chemistry, especially as
+        related to habitability.</para>
+    <para><classname>Objective</classname>s differ from <classname>Requirement</classname>s in that
+        they are not the result of negotiated agreement between customer and supplier, they need not
+        be mutually consistent, and a <classname>Mission</classname>
+        <property>pursues</property> but need not completely achieve all its
+            <classname>Objective</classname>s. In a sense, the set of
+            <classname>Requirement</classname>s for a <classname>Mission</classname> represents the
+        minimum acceptable achievement of <classname>Objectives</classname> for a given cost,
+        schedule, and risk.</para>"""
+	@rdfs:label="""Objective"""
+	concept Objective
+
+	@dc:description="""A <classname>Product</classname> is a tangible artifact that results from achievement of mission objectives, e.g., a science data product, a soil sample, etc."""
+	@rdfs:label="""Product"""
+	concept Product
+
+	@dc:description="""<para>A <classname>Requirement</classname> specifies an assertion about a
+            <classname>SpecifiedElement</classname> (<classname>Component</classname>,
+            <classname>Function</classname>, or <classname>Interface</classname>) that must be true
+        for every acceptable realization of that element.</para>
+    <para>By definition, a <classname>Requirement</classname> that specifies a
+            <classname>Function</classname> is a <emphasis role="italic">functional
+            requirement</emphasis>. A <classname>Requirement</classname> that specifies an
+            <classname>Interface</classname> is an <emphasis role="italic">interface
+            requirement</emphasis>.  A <classname>Requirement</classname> that specifies a
+            <classname>Component</classname> is a <emphasis role="italic">component
+            requirement</emphasis>.</para>"""
+	@rdfs:label="""Requirement"""
+	concept Requirement
+
+	MaterialItem extendsConcept Item
+
+	Message extendsConcept Item
+
+	@dc:description="""A
+a <classname>Mission</classname> <replaceable>m</replaceable> 
+<property>deploys</property>
+<classname>Component</classname> <replaceable>c</replaceable>
+if and only if <replaceable>m</replaceable> exploits or utilizes <replaceable>c</replaceable> in pursuit of  <classname>Objective</classname>s. Note that a given <classname>Mission</classname> may not <emphasis>own</emphasis> all the <classname>Component</classname>s it <property>deploys</property>; some <classname>Component</classname>s (e.g., ground system assets) may be shared with multiple missions."""
+	@oml:hasInverseLabel="""is deployed by"""
+	@oml:hasPropertyLabel="""deploys"""
+	@oml:hasReificationLabel="""Deploys"""
+	reifiedRelationship Deploys {
+		asymmetric
+		irreflexive
+		unreified = deploys
+		inverse = isDeployedBy
+		source = Mission
+		target = Component }
+
+	@dc:description="""A <classname>Function</classname> <replaceable>F</replaceable>
+<property>emits</property>
+a <classname>Flow</classname> <replaceable>f</replaceable>
+if and only if <replaceable>F</replaceable> is the source of <replaceable>f</replaceable>."""
+	@oml:hasInverseLabel="""is emitted by"""
+	@oml:hasPropertyLabel="""emits"""
+	@oml:hasReificationLabel="""Emits"""
+	reifiedRelationship Emits {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = emits
+		inverse = isEmittedBy
+		source = InterchangePoint
+		target = Flow }
+
+	@oml:hasInverseLabel="""participates in"""
+	@oml:hasPropertyLabel="""has participant"""
+	@oml:hasReificationLabel="""Has Participant"""
+	reifiedRelationship HasParticipant {
+		asymmetric
+		irreflexive
+		unreified = hasParticipant
+		inverse = participatesIn
+		source = Interchange
+		target = TraversingElement }
+
+	@dc:description="""A
+<classname>Component</classname>
+<replaceable>c</replaceable>
+<property>induces</property>
+an
+<classname>Environment</classname>
+<replaceable>e</replaceable>
+if and only if
+<replaceable>c</replaceable>
+generates or contributes to the conditions described in
+<replaceable>e</replaceable>."""
+	@oml:hasInverseLabel="""is induced by"""
+	@oml:hasPropertyLabel="""induces"""
+	@oml:hasReificationLabel="""Induces"""
+	reifiedRelationship Induces {
+		asymmetric
+		irreflexive
+		unreified = induces
+		inverse = isInducedBy
+		source = Component
+		target = Environment }
+
+	@dc:description="""An
+<classname>Environment</classname>
+<replaceable>e</replaceable>
+<property>influences</property>
+a
+<classname>Component</classname>
+<replaceable>c</replaceable>
+if and only if
+<replaceable>c</replaceable>
+is subject to the conditions that define
+<replaceable>e</replaceable>."""
+	@oml:hasInverseLabel="""is influenced by"""
+	@oml:hasPropertyLabel="""influences"""
+	@oml:hasReificationLabel="""Influences"""
+	reifiedRelationship Influences {
+		asymmetric
+		irreflexive
+		unreified = influences
+		inverse = isInfluencedBy
+		source = Environment
+		target = Component }
+
+	@dc:description="""An
+<classname>Function</classname>
+<replaceable>F</replaceable>
+<property>ingests</property>
+a
+<classname>Flow</classname>
+<replaceable>f</replaceable>
+if and only if
+<replaceable>F</replaceable>
+consumes or is otherwise the recipient of
+<replaceable>f</replaceable>."""
+	@oml:hasInverseLabel="""is ingested by"""
+	@oml:hasPropertyLabel="""ingests"""
+	@oml:hasReificationLabel="""Ingests"""
+	reifiedRelationship Ingests {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = ingests
+		inverse = isIngestedBy
+		source = InterchangePoint
+		target = Flow }
+
+	@dc:description="""A <classname>PerformingElement</classname> <replaceable>p</replaceable> <property>interchangesThrough</property> an <classname>InterchangePoint</classname> <replaceable>i</replaceable> if and only if <replaceable>p</replaceable> has as a consequence of execution an interchange of matter or information with some other <classname>PerformingElement</classname> via <replaceable>i</replaceable>. Exactly one <classname>PerformingElement</classname> <property>interchangesThrough</property> each <classname>InterchangePoint
+</classname>."""
+	@dc:description="""See <property>interchangesThrough</property>."""
+	@oml:hasInverseLabel="""is interchange point for"""
+	@oml:hasPropertyLabel="""interchanges through"""
+	@oml:hasReificationLabel="""Interchanges Through"""
+	reifiedRelationship InterchangesThrough {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = interchangesThrough
+		inverse = isInterchangePointFor
+		source = Function
+		target = InterchangePoint }
+
+	@dc:description="""A
+<classname>Function</classname>
+<replaceable>f<subscript>1</subscript></replaceable>
+<property>invokes</property>
+a
+<classname>Function</classname>
+<replaceable>f<subscript>2</subscript></replaceable>
+if and only if execution of 
+<replaceable>f<subscript>1</subscript></replaceable>
+may directly cause execution of
+<replaceable>f<subscript>2</subscript></replaceable>."""
+	@oml:hasInverseLabel="""is invoked by"""
+	@oml:hasPropertyLabel="""invokes"""
+	@oml:hasReificationLabel="""Invokes"""
+	reifiedRelationship Invokes {
+		unreified = invokes
+		inverse = isInvokedBy
+		source = Function
+		target = Function }
+
+	@dc:description="""<para>
+An <classname>Interaction</classname>
+<replaceable>i</replaceable>
+<property>involves</property>
+a pair of
+<classname>Function</classname>s
+{<replaceable>f<subscript>1</subscript></replaceable>}
+and
+{<replaceable>f<subscript>2</subscript></replaceable>}
+if and only if
+{<replaceable>f<subscript>1</subscript></replaceable>} 
+<property>emits</property> a <classname>Flow</classname> or
+<property>sends</property> an <classname>Item</classname>
+that
+{<replaceable>f<subscript>2</subscript></replaceable>} 
+<property>ingests</property> or
+<property>receives</property>,
+</para>"""
+	@oml:hasInverseLabel="""is involved in"""
+	@oml:hasPropertyLabel="""involves"""
+	@oml:hasReificationLabel="""Involves"""
+	reifiedRelationship Involves {
+		asymmetric
+		irreflexive
+		unreified = involves
+		inverse = isInvolvedIn
+		source = Interchange
+		target = InterchangePoint }
+
+	@oml:hasInverseLabel="""is involved in1"""
+	@oml:hasPropertyLabel="""involves1"""
+	@oml:hasReificationLabel="""Involves1"""
+	reifiedRelationship Involves1 {
+		functional
+		asymmetric
+		irreflexive
+		unreified = involves1
+		inverse = isInvolvedIn1
+		source = Interchange
+		target = InterchangePoint }
+
+	@oml:hasInverseLabel="""is involved in2"""
+	@oml:hasPropertyLabel="""involves2"""
+	@oml:hasReificationLabel="""Involves2"""
+	reifiedRelationship Involves2 {
+		functional
+		asymmetric
+		irreflexive
+		unreified = involves2
+		inverse = isInvolvedIn2
+		source = Interchange
+		target = InterchangePoint }
+
+	@dc:description="""A <classname>TraversingElement</classname> <replaceable>e</replaceable>
+<property>traverses</property>
+an <classname>Junction</classname> <replaceable>j</replaceable>
+if and only if <replaceable>j</replaceable> provides a medium or channel for the transfer of <replaceable>e</replaceable>."""
+	@oml:hasInverseLabel="""traverses"""
+	@oml:hasPropertyLabel="""is traversed by"""
+	@oml:hasReificationLabel="""Is Traversed By"""
+	reifiedRelationship IsTraversedBy {
+		asymmetric
+		irreflexive
+		unreified = isTraversedBy
+		inverse = traverses
+		source = Junction
+		target = TraversingElement }
+
+	@dc:description="""<para>
+A <classname>Junction</classname>
+<replaceable>j</replaceable>
+<property>joins</property>
+a pair of
+<classname>Interface</classname>s
+{<replaceable>i<subscript>1</subscript></replaceable>}
+and
+{<replaceable>i<subscript>2</subscript></replaceable>}
+if and only if
+the set
+{<replaceable>i<subscript>k</subscript></replaceable>} share some type of connection and
+<replaceable>j</replaceable> represents properties common to all
+<classname>Interface</classname>s in
+{<replaceable>i<subscript>k</subscript></replaceable>} pertinent to that connection.
+</para>"""
+	@oml:hasInverseLabel="""is joined in"""
+	@oml:hasPropertyLabel="""joins"""
+	@oml:hasReificationLabel="""Joins"""
+	reifiedRelationship Joins {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = joins
+		inverse = isJoinedIn
+		source = Junction
+		target = Interface }
+
+	@oml:hasInverseLabel="""is joined in1"""
+	@oml:hasPropertyLabel="""joins1"""
+	@oml:hasReificationLabel="""Joins1"""
+	reifiedRelationship Joins1 {
+		functional
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = joins1
+		inverse = isJoinedIn1
+		source = Junction
+		target = Interface }
+
+	@oml:hasInverseLabel="""is joined in2"""
+	@oml:hasPropertyLabel="""joins2"""
+	@oml:hasReificationLabel="""Joins2"""
+	reifiedRelationship Joins2 {
+		functional
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = joins2
+		inverse = isJoinedIn2
+		source = Junction
+		target = Interface }
+
+	@dc:description="""A
+<classname>Component</classname>
+<replaceable>c</replaceable>
+<property>performs</property>
+a
+<classname>Function</classname>
+<replaceable>f</replaceable>
+if and only if
+<replaceable>c</replaceable>
+has the sole responsibility for execution of
+<replaceable>f</replaceable>."""
+	@oml:hasInverseLabel="""is performed by"""
+	@oml:hasPropertyLabel="""performs"""
+	@oml:hasReificationLabel="""Performs"""
+	reifiedRelationship Performs {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = performs
+		inverse = isPerformedBy
+		source = PerformingElement
+		target = Function }
+
+	@dc:description="""A <classname>Component</classname> <replaceable>c</replaceable> <property>presents</property> an <classname>Interface</classname> <replaceable>i</replaceable> if and only if <replaceable>c</replaceable> has a direct electrical, mechanical, or logical connection to the outside via <replaceable>i</replaceable>. Exactly one <classname>Component</classname> <property>presents</property> each <classname>Interface</classname>."""
+	@oml:hasInverseLabel="""is presented by"""
+	@oml:hasPropertyLabel="""presents"""
+	@oml:hasReificationLabel="""Presents"""
+	reifiedRelationship Presents {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = presents
+		inverse = isPresentedBy
+		source = PresentingElement
+		target = Interface }
+
+	@dc:description="""See <property>produces</property>."""
+	@dc:description="""A <classname>PerformingElement</classname>
+<replaceable>e</replaceable>
+<property>produces</property>
+<classname>Product</classname>
+<replaceable>p</replaceable>
+if and only if
+<replaceable>e</replaceable>
+is assigned sole responsbility, through performance of its allocated functions, for creation of
+<replaceable>p</replaceable>."""
+	@oml:hasInverseLabel="""is produced by"""
+	@oml:hasPropertyLabel="""produces"""
+	@oml:hasReificationLabel="""Produces"""
+	reifiedRelationship Produces {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = produces
+		inverse = isProducedBy
+		source = PerformingElement
+		target = Product }
+
+	@dc:description="""A <classname>Mission</classname> <replaceable>m</replaceable> <property>pursues</property> an <classname>Objective</classname> <replaceable>o</replaceable> if and only if the successful execution of <replaceable>m</replaceable> results in at least partial achievement of <replaceable>o</replaceable>."""
+	@oml:hasInverseLabel="""is pursued by"""
+	@oml:hasPropertyLabel="""pursues"""
+	@oml:hasReificationLabel="""Pursues"""
+	reifiedRelationship Pursues {
+		asymmetric
+		irreflexive
+		unreified = pursues
+		inverse = isPursuedBy
+		source = Mission
+		target = Objective }
+
+	@dc:description="""A <classname>Function</classname> <replaceable>F</replaceable>
+<property>receives</property>
+an <classname>Item</classname> <replaceable>i</replaceable>
+if and only if <replaceable>F</replaceable> consumes <replaceable>i</replaceable>."""
+	@oml:hasInverseLabel="""is received by"""
+	@oml:hasPropertyLabel="""receives"""
+	@oml:hasReificationLabel="""Receives"""
+	reifiedRelationship Receives {
+		asymmetric
+		irreflexive
+		unreified = receives
+		inverse = isReceivedBy
+		source = InterchangePoint
+		target = Item }
+
+	@dc:description="""A <classname>Requirement</classname> <replaceable>l</replaceable> <property>refines</property> a <classname>Requirement</classname> <replaceable>h</replaceable> if and only if satisfaction of <replaceable>l</replaceable> implies partial satisfaction of <replaceable>h</replaceable>."""
+	@oml:hasInverseLabel="""is refined by"""
+	@oml:hasPropertyLabel="""refines"""
+	@oml:hasReificationLabel="""Refines"""
+	@rdfs:comment="""Change the superclass from base-embedding:BinaryDependency to StandardProfileL2:Refine"""
+	reifiedRelationship Refines {
+		asymmetric
+		irreflexive
+		unreified = ^refines
+		inverse = isRefinedBy
+		source = Requirement
+		target = Requirement }
+
+	@dc:description="""A <classname>Function</classname> <replaceable>F</replaceable>
+<property>sends</property>
+an <classname>Item</classname> <replaceable>i</replaceable>
+if and only if <replaceable>F</replaceable> is the source for <replaceable>i</replaceable>."""
+	@oml:hasInverseLabel="""is sent by"""
+	@oml:hasPropertyLabel="""sends"""
+	@oml:hasReificationLabel="""Sends"""
+	reifiedRelationship Sends {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = sends
+		inverse = isSentBy
+		source = InterchangePoint
+		target = Item }
+
+	@dc:description="""A <classname>Requirement</classname> <replaceable>r</replaceable> <property>specifies</property> a element <replaceable>e</replaceable> if and only if the properties of <replaceable>e</replaceable> are bound by <replaceable>r</replaceable>."""
+	@oml:hasInverseLabel="""is specified by"""
+	@oml:hasPropertyLabel="""specifies"""
+	@oml:hasReificationLabel="""Specifies"""
+	reifiedRelationship Specifies {
+		functional
+		asymmetric
+		irreflexive
+		unreified = specifies
+		inverse = isSpecifiedBy
+		source = Requirement
+		target = SpecifiedElement }
+
+	@dc:description="""An <classname>Interface</classname>
+<replaceable>i</replaceable>
+<property>transfers</property>
+a
+<classname>TraversingElement</classname>
+<replaceable>e</replaceable>
+if and only if
+<replaceable>i</replaceable>
+is the access point by which
+<replaceable>e</replaceable>
+enters or leaves a <classname>Component</classname>
+that
+<property>presents</property>
+<replaceable>i</replaceable>."""
+	@oml:hasPropertyLabel="""transfers"""
+	@oml:hasReificationLabel="""Transfers"""
+	reifiedRelationship Transfers {
+		asymmetric
+		irreflexive
+		unreified = transfers
+		source = Interface
+		target = TraversingElement }
+
+	@dc:description="""An <classname>Interface</classname>
+<replaceable>i</replaceable>
+<property>transfersOut</property>
+a
+<classname>TraversingElement</classname>
+<replaceable>e</replaceable>
+if and only if
+<replaceable>i</replaceable>
+is the access point by which
+<replaceable>e</replaceable>
+leaves a <classname>Component</classname>
+that
+<property>presents</property>
+<replaceable>i</replaceable>."""
+	@oml:hasPropertyLabel="""transfers in"""
+	@oml:hasReificationLabel="""Transfers In"""
+	reifiedRelationship TransfersIn {
+		asymmetric
+		irreflexive
+		unreified = transfersIn
+		source = Interface
+		target = TraversingElement }
+
+	@dc:description="""An <classname>Interface</classname>
+<replaceable>i</replaceable>
+<property>transfersOut</property>
+a
+<classname>TraversingElement</classname>
+<replaceable>e</replaceable>
+if and only if
+<replaceable>i</replaceable>
+is the access point by which
+<replaceable>e</replaceable>
+leaves a <classname>Component</classname>
+that
+<property>presents</property>
+<replaceable>i</replaceable>."""
+	@oml:hasPropertyLabel="""transfers out"""
+	@oml:hasReificationLabel="""Transfers Out"""
+	reifiedRelationship TransfersOut {
+		asymmetric
+		irreflexive
+		unreified = transfersOut
+		source = Interface
+		target = TraversingElement }
+
+	Involves1 extendsRelationship Involves
+
+	Involves2 extendsRelationship Involves
+
+	Joins1 extendsRelationship Joins
+
+	Joins2 extendsRelationship Joins
+
+	TransfersIn extendsRelationship Transfers
+
+	TransfersOut extendsRelationship Transfers
+
+	base:Contains extendsAspect SpecifiedElement
+
+	Component extendsAspect base:AggregatedElement
+
+	Component extendsAspect base:ContainedElement
+
+	Component extendsAspect base:Container
+
+	Component extendsAspect base:IdentifiedElement
+
+	Component extendsAspect PerformingElement
+
+	Component extendsAspect PresentingElement
+
+	Component extendsAspect SpecifiedElement
+
+	Environment extendsAspect base:AggregatedElement
+
+	Environment extendsAspect base:IdentifiedElement
+
+	Flow extendsAspect base:ContainedElement
+
+	Flow extendsAspect base:Container
+
+	Flow extendsAspect base:IdentifiedElement
+
+	Flow extendsAspect TraversingElement
+
+	Function extendsAspect base:IdentifiedElement
+
+	Interchange extendsAspect base:IdentifiedElement
+
+	InterchangePoint extendsAspect base:IdentifiedElement
+
+	Interface extendsAspect base:IdentifiedElement
+
+	Interface extendsAspect PresentingElement
+
+	Item extendsAspect base:ContainedElement
+
+	Item extendsAspect base:Container
+
+	Item extendsAspect base:IdentifiedElement
+
+	Item extendsAspect TraversingElement
+
+	Junction extendsAspect base:ContainedElement
+
+	Junction extendsAspect base:Container
+
+	Junction extendsAspect base:IdentifiedElement
+
+	Mission extendsAspect base:IdentifiedElement
+
+	Mission extendsAspect PerformingElement
+
+	Mission extendsAspect PresentingElement
+
+	Mission extendsAspect SpecifiedElement
+
+	Objective extendsAspect base:AggregatedElement
+
+	Objective extendsAspect base:IdentifiedElement
+
+	Performs extendsAspect SpecifiedElement
+
+	Presents extendsAspect SpecifiedElement
+
+	Produces extendsAspect SpecifiedElement
+
+	Product extendsAspect base:AggregatedElement
+
+	Product extendsAspect base:IdentifiedElement
+
+	Requirement extendsAspect base:IdentifiedElement
+
+	TransfersIn extendsAspect SpecifiedElement
+
+	TransfersOut extendsAspect SpecifiedElement
+
+	@dc:description="""A <property>rationale</property> explains why a <classname>Requirement</classname> exists and why it <property>specifies</property> what it does."""
+	@rdfs:label="""has rationale"""
+	entityScalarDataProperty + hasRationale {
+		domain Requirement
+		range XMLSchema:string
+	}
+
+	allEntities Component . base:aggregates in Component
+
+	allEntities Component . base:isAggregatedIn in Component
+
+	allEntities Component . base:contains in Component
+
+	allEntities Component . base:isContainedIn in Component
+
+	allEntities Environment . base:isAggregatedIn in Environment
+
+	allEntities Environment . base:aggregates in Environment
+
+	allEntities Flow . base:isContainedIn in Flow
+
+	allEntities Flow . base:contains in Flow
+
+	allEntities Function . invokes in Function
+
+	allEntities Function . isInvokedBy in Function
+
+	allEntities Item . base:isContainedIn in Item
+
+	allEntities Item . base:contains in Item
+
+	allEntities Junction . base:isContainedIn in Junction
+
+	allEntities Junction . base:contains in Junction
+
+	allEntities MaterialItem . base:contains in MaterialItem
+
+	allEntities MaterialItem . base:isContainedIn in MaterialItem
+
+	allEntities Message . base:contains in Message
+
+	allEntities Message . base:isContainedIn in Message
+
+	allEntities Objective . base:aggregates in Objective
+
+	allEntities Objective . base:isAggregatedIn in Objective
+
+	allEntities Product . base:isAggregatedIn in base:AggregatedElement
+
+	allEntities Product . base:aggregates in base:AggregatedElement
+
+}

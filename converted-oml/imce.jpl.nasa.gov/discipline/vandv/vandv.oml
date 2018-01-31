@@ -1,0 +1,835 @@
+@dc:creator="""Systems Engineering &amp; Formulation Division"""
+@dc:rights="""Copyright 2010-2016, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
+
+This software may be subject to U.S. export control laws. By accepting this software, the user agrees to comply with all applicable U.S. export laws and regulations. User has the responsibility to obtain export licenses,a or other export authority as may be required before exporting such information to foreign countries or providing access to foreign persons."""
+@dc:type="""Discipline"""
+@dc:title="""Verfication and Validation Ontology"""
+@dc:description="""The Verification and Validation Ontology defines concepts and properties for describing verification and validation."""
+open terminology <http://imce.jpl.nasa.gov/discipline/vandv/vandv> {
+
+	extends <http://imce.jpl.nasa.gov/foundation/project/project>
+
+	aspect ApprovedElement
+
+	aspect AuditedElement
+
+	aspect ExternallyDocumentedElement
+
+	aspect OwnedElement
+
+	aspect VerifiedElement
+
+	@rdfs:label="""Activity"""
+	concept Activity
+
+	@rdfs:label="""Activity Completion Data"""
+	concept ActivityCompletionData
+
+	@rdfs:label="""Activity Group"""
+	concept ActivityGroup
+
+	@rdfs:label="""Activity Matrix"""
+	concept ActivityMatrix
+
+	@rdfs:label="""Activity Plan"""
+	concept ActivityPlan
+
+	@rdfs:label="""Analysis Execution Record"""
+	concept AnalysisExecutionRecord
+
+	@rdfs:label="""Approver"""
+	concept Approver
+
+	@rdfs:label="""Auditor"""
+	concept Auditor
+
+	@rdfs:label="""Closure Evidence"""
+	concept ClosureEvidence
+
+	@rdfs:label="""Demonstration Execution Record"""
+	concept DemonstrationExecutionRecord
+
+	@rdfs:label="""Evidence Expected"""
+	concept EvidenceExpected
+
+	@rdfs:label="""Execution Record"""
+	concept ExecutionRecord
+
+	@rdfs:label="""Execution Sub Record"""
+	concept ExecutionSubRecord
+
+	@rdfs:label="""Incompressible"""
+	concept Incompressible
+
+	@rdfs:label="""Incompressible Test List"""
+	concept IncompressibleTestList
+
+	@rdfs:label="""Inspection Execution Record"""
+	concept InspectionExecutionRecord
+
+	@rdfs:label="""Item"""
+	concept Item
+
+	@rdfs:label="""Item Review And Closure"""
+	concept ItemReviewAndClosure
+
+	@rdfs:label="""Milestone"""
+	concept Milestone
+
+	@rdfs:label="""Nonconformance"""
+	concept Nonconformance
+
+	@rdfs:label="""Other Execution Record"""
+	concept OtherExecutionRecord
+
+	@rdfs:label="""Owner"""
+	concept Owner
+
+	@rdfs:label="""Plan"""
+	concept Plan
+
+	@rdfs:label="""Reviewer"""
+	concept Reviewer
+
+	@rdfs:label="""Test As You Fly Exception"""
+	concept TestAsYouFlyException
+
+	@rdfs:label="""Test As You Fly Exception List"""
+	concept TestAsYouFlyExceptionList
+
+	@rdfs:label="""Test Execution Record"""
+	concept TestExecutionRecord
+
+	@rdfs:label="""Test Procedure"""
+	concept TestProcedure
+
+	@rdfs:label="""Validation Activity"""
+	concept ValidationActivity
+
+	@rdfs:label="""Validation Activity Completion Data"""
+	concept ValidationActivityCompletionData
+
+	@rdfs:label="""Validation Activity Plan"""
+	concept ValidationActivityPlan
+
+	@rdfs:label="""Validation Item"""
+	concept ValidationItem
+
+	@rdfs:label="""Validation Item Review And Closure"""
+	concept ValidationItemReviewAndClosure
+
+	@rdfs:label="""Validation Nonconformance"""
+	concept ValidationNonconformance
+
+	@rdfs:label="""Venue"""
+	concept Venue
+
+	@rdfs:label="""Verification Activity"""
+	concept VerificationActivity
+
+	@rdfs:label="""Verification Activity Completion Data"""
+	concept VerificationActivityCompletionData
+
+	@rdfs:label="""Verification Activity Plan"""
+	concept VerificationActivityPlan
+
+	@rdfs:label="""Verification Item"""
+	concept VerificationItem
+
+	@rdfs:label="""Verification Item Review And Closure"""
+	concept VerificationItemReviewAndClosure
+
+	@rdfs:label="""Verification Nonconformance"""
+	concept VerificationNonconformance
+
+	Activity extendsConcept project:Process
+
+	ActivityCompletionData extendsConcept analysis:Characterization
+
+	ActivityMatrix extendsConcept project:Product
+
+	ActivityPlan extendsConcept project:Product
+
+	AnalysisExecutionRecord extendsConcept ExecutionRecord
+
+	Approver extendsConcept project:Role
+
+	Auditor extendsConcept project:Role
+
+	ClosureEvidence extendsConcept project:Product
+
+	DemonstrationExecutionRecord extendsConcept ExecutionRecord
+
+	EvidenceExpected extendsConcept project:Product
+
+	ExecutionRecord extendsConcept project:Product
+
+	ExecutionSubRecord extendsConcept project:Product
+
+	Incompressible extendsConcept analysis:Explanation
+
+	IncompressibleTestList extendsConcept project:Product
+
+	InspectionExecutionRecord extendsConcept ExecutionRecord
+
+	ItemReviewAndClosure extendsConcept analysis:Characterization
+
+	Milestone extendsConcept project:DevelopmentState
+
+	Nonconformance extendsConcept project:Product
+
+	OtherExecutionRecord extendsConcept ExecutionRecord
+
+	Owner extendsConcept project:Role
+
+	Plan extendsConcept project:Product
+
+	Reviewer extendsConcept project:Role
+
+	TestAsYouFlyException extendsConcept analysis:Characterization
+
+	TestAsYouFlyExceptionList extendsConcept project:Product
+
+	TestExecutionRecord extendsConcept ExecutionRecord
+
+	TestProcedure extendsConcept project:Process
+
+	ValidationActivity extendsConcept Activity
+
+	ValidationActivityCompletionData extendsConcept ActivityCompletionData
+
+	ValidationActivityPlan extendsConcept ActivityPlan
+
+	ValidationItem extendsConcept Item
+
+	ValidationItemReviewAndClosure extendsConcept ItemReviewAndClosure
+
+	ValidationNonconformance extendsConcept Nonconformance
+
+	Venue extendsConcept project:Facility
+
+	VerificationActivity extendsConcept Activity
+
+	VerificationActivityCompletionData extendsConcept ActivityCompletionData
+
+	VerificationActivityPlan extendsConcept ActivityPlan
+
+	VerificationItem extendsConcept Item
+
+	VerificationItemReviewAndClosure extendsConcept ItemReviewAndClosure
+
+	VerificationNonconformance extendsConcept Nonconformance
+
+	@oml:hasPropertyLabel="""affects"""
+	@oml:hasReificationLabel="""Affects"""
+	reifiedRelationship Affects {
+		asymmetric
+		irreflexive
+		unreified = affects
+		source = Nonconformance
+		target = Activity }
+
+	@oml:hasPropertyLabel="""approves"""
+	@oml:hasReificationLabel="""Approves"""
+	reifiedRelationship Approves {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = approves
+		source = Approver
+		target = ApprovedElement }
+
+	@oml:hasPropertyLabel="""assesses"""
+	@oml:hasReificationLabel="""Assesses"""
+	reifiedRelationship Assesses {
+		functional
+		asymmetric
+		irreflexive
+		unreified = assesses
+		source = ExecutionSubRecord
+		target = Item }
+
+	@oml:hasPropertyLabel="""audits"""
+	@oml:hasReificationLabel="""Audits"""
+	reifiedRelationship Audits {
+		asymmetric
+		irreflexive
+		unreified = audits
+		source = Auditor
+		target = AuditedElement }
+
+	@oml:hasPropertyLabel="""contains"""
+	@oml:hasReificationLabel="""Contains"""
+	reifiedRelationship Contains {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = contains
+		source = IncompressibleTestList
+		target = Activity }
+
+	@oml:hasPropertyLabel="""corroborates"""
+	@oml:hasReificationLabel="""Corroborates"""
+	reifiedRelationship Corroborates {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = corroborates
+		source = VerificationActivity
+		target = VerificationItem }
+
+	@oml:hasPropertyLabel="""describes"""
+	@oml:hasReificationLabel="""Describes"""
+	reifiedRelationship Describes {
+		functional
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = describes
+		source = ActivityPlan
+		target = Activity }
+
+	@oml:hasPropertyLabel="""expects"""
+	@oml:hasReificationLabel="""Expects"""
+	reifiedRelationship Expects {
+		asymmetric
+		irreflexive
+		unreified = expects
+		source = Activity
+		target = EvidenceExpected }
+
+	@oml:hasPropertyLabel="""finishes before"""
+	@oml:hasPropertyLabel="""finshes before"""
+	@oml:hasReificationLabel="""Finishes Before"""
+	@rdfs:comment="""Should reconcile with temporal ordering constraints from Project Ontology (not yet final)."""
+	reifiedRelationship FinishesBefore {
+		asymmetric
+		irreflexive
+		unreified = finishesBefore
+		source = project:InterchangePoint
+		target = Milestone }
+
+	@oml:hasPropertyLabel="""groups"""
+	@oml:hasReificationLabel="""Groups"""
+	reifiedRelationship Groups {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = groups
+		source = ActivityGroup
+		target = Activity }
+
+	@oml:hasPropertyLabel="""includes"""
+	@oml:hasReificationLabel="""Includes"""
+	reifiedRelationship Includes {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = includes
+		source = TestAsYouFlyExceptionList
+		target = TestAsYouFlyException }
+
+	@oml:hasPropertyLabel="""is execution sub record of"""
+	@oml:hasReificationLabel="""Is Execution Sub Record Of"""
+	reifiedRelationship IsExecutionSubRecordOf {
+		functional
+		asymmetric
+		irreflexive
+		unreified = isExecutionSubRecordOf
+		source = ExecutionSubRecord
+		target = ExecutionRecord }
+
+	@oml:hasPropertyLabel="""is record of"""
+	@oml:hasReificationLabel="""Is Record Of"""
+	reifiedRelationship IsRecordOf {
+		functional
+		asymmetric
+		irreflexive
+		unreified = isRecordOf
+		source = ExecutionRecord
+		target = Activity }
+
+	@oml:hasPropertyLabel="""has location"""
+	@oml:hasPropertyLabel="""occurs in"""
+	@oml:hasReificationLabel="""Occurs In"""
+	reifiedRelationship OccursIn {
+		asymmetric
+		irreflexive
+		unreified = occursIn
+		source = Activity
+		target = Venue }
+
+	@oml:hasPropertyLabel="""owns"""
+	@oml:hasReificationLabel="""Owns"""
+	reifiedRelationship Owns {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = owns
+		source = Owner
+		target = OwnedElement }
+
+	@oml:hasPropertyLabel="""reviews"""
+	@oml:hasReificationLabel="""Reviews"""
+	reifiedRelationship Reviews {
+		asymmetric
+		irreflexive
+		unreified = reviews
+		source = Reviewer
+		target = ClosureEvidence }
+
+	@oml:hasPropertyLabel="""satisfies"""
+	@oml:hasReificationLabel="""Satisfies"""
+	reifiedRelationship Satisfies {
+		functional
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = satisfies
+		source = ClosureEvidence
+		target = Item }
+
+	@oml:hasPropertyLabel="""starts after"""
+	@oml:hasReificationLabel="""Starts After"""
+	@rdfs:comment="""Should reconcile with temporal ordering constraints from Project Ontology (not yet final)."""
+	reifiedRelationship StartsAfter {
+		asymmetric
+		irreflexive
+		unreified = startsAfter
+		source = project:InterchangePoint
+		target = Milestone }
+
+	@oml:hasPropertyLabel="""summarizes"""
+	@oml:hasReificationLabel="""Summarizes"""
+	reifiedRelationship Summarizes {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = summarizes
+		source = ActivityMatrix
+		target = Activity }
+
+	@oml:hasPropertyLabel="""validates"""
+	@oml:hasReificationLabel="""Validates"""
+	reifiedRelationship Validates {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = validates
+		source = ValidationActivity
+		target = ValidationItem }
+
+	@oml:hasPropertyLabel="""verifies"""
+	@oml:hasReificationLabel="""Verifies"""
+	reifiedRelationship Verifies {
+		functional
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = verifies
+		source = VerificationItem
+		target = VerifiedElement }
+
+	Approves extendsRelationship project:HasAssignment
+
+	Audits extendsRelationship project:HasAssignment
+
+	FinishesBefore extendsRelationship project:Delivers
+
+	Owns extendsRelationship project:HasAssignment
+
+	Reviews extendsRelationship project:HasAssignment
+
+	StartsAfter extendsRelationship project:Receives
+
+	mission:Requirement extendsAspect VerifiedElement
+
+	Activity extendsAspect OwnedElement
+
+	ActivityGroup extendsAspect base:IdentifiedElement
+
+	ActivityGroup extendsAspect OwnedElement
+
+	ActivityMatrix extendsAspect OwnedElement
+
+	ActivityPlan extendsAspect OwnedElement
+
+	Affects extendsAspect analysis:AnalyzedElement
+
+	Affects extendsAspect analysis:CharacterizedElement
+
+	ApprovedElement extendsAspect project:AssignedElement
+
+	Assesses extendsAspect analysis:AnalyzedElement
+
+	Assesses extendsAspect analysis:CharacterizedElement
+
+	AuditedElement extendsAspect project:AssignedElement
+
+	ClosureEvidence extendsAspect AuditedElement
+
+	ClosureEvidence extendsAspect ExternallyDocumentedElement
+
+	Contains extendsAspect analysis:AnalyzedElement
+
+	Contains extendsAspect analysis:CharacterizedElement
+
+	Corroborates extendsAspect analysis:AnalyzedElement
+
+	Corroborates extendsAspect analysis:CharacterizedElement
+
+	Describes extendsAspect analysis:AnalyzedElement
+
+	Describes extendsAspect analysis:CharacterizedElement
+
+	ExecutionRecord extendsAspect ExternallyDocumentedElement
+
+	Expects extendsAspect analysis:AnalyzedElement
+
+	Expects extendsAspect analysis:CharacterizedElement
+
+	ExternallyDocumentedElement extendsAspect analysis:AnalyzedElement
+
+	ExternallyDocumentedElement extendsAspect analysis:CharacterizedElement
+
+	Groups extendsAspect analysis:AnalyzedElement
+
+	Groups extendsAspect analysis:CharacterizedElement
+
+	Includes extendsAspect analysis:AnalyzedElement
+
+	Includes extendsAspect analysis:CharacterizedElement
+
+	IncompressibleTestList extendsAspect OwnedElement
+
+	IsExecutionSubRecordOf extendsAspect analysis:AnalyzedElement
+
+	IsExecutionSubRecordOf extendsAspect analysis:CharacterizedElement
+
+	IsRecordOf extendsAspect analysis:AnalyzedElement
+
+	IsRecordOf extendsAspect analysis:CharacterizedElement
+
+	Item extendsAspect base:IdentifiedElement
+
+	Item extendsAspect OwnedElement
+
+	ItemReviewAndClosure extendsAspect ApprovedElement
+
+	ItemReviewAndClosure extendsAspect AuditedElement
+
+	OccursIn extendsAspect analysis:AnalyzedElement
+
+	OccursIn extendsAspect analysis:CharacterizedElement
+
+	OwnedElement extendsAspect project:AssignedElement
+
+	Plan extendsAspect ApprovedElement
+
+	Plan extendsAspect OwnedElement
+
+	Satisfies extendsAspect analysis:AnalyzedElement
+
+	Satisfies extendsAspect analysis:CharacterizedElement
+
+	TestAsYouFlyExceptionList extendsAspect OwnedElement
+
+	TestProcedure extendsAspect OwnedElement
+
+	Validates extendsAspect analysis:AnalyzedElement
+
+	Validates extendsAspect analysis:CharacterizedElement
+
+	VerifiedElement extendsAspect analysis:AnalyzedElement
+
+	VerifiedElement extendsAspect analysis:CharacterizedElement
+
+	Verifies extendsAspect analysis:AnalyzedElement
+
+	Verifies extendsAspect analysis:CharacterizedElement
+
+	scalarOneOfRestriction completionStatus {
+		restrictedRange XMLSchema:string
+	}
+
+	scalarOneOfRestriction executionSubRecordStatus {
+		restrictedRange XMLSchema:string
+	}
+
+	scalarOneOfRestriction priority {
+		restrictedRange XMLSchema:string
+	}
+
+	scalarOneOfRestriction reviewStatus {
+		restrictedRange XMLSchema:string
+	}
+
+	scalarOneOfRestriction validationStatus {
+		restrictedRange XMLSchema:string
+	}
+
+	scalarOneOfRestriction verificationStatus {
+		restrictedRange XMLSchema:string
+	}
+
+	oneOf completionStatus = """complete""" ^^ XMLSchema:string
+
+	oneOf completionStatus = """in work""" ^^ XMLSchema:string
+
+	oneOf completionStatus = """run for record executed""" ^^ XMLSchema:string
+
+	oneOf completionStatus = """scheduled""" ^^ XMLSchema:string
+
+	oneOf completionStatus = """unscheduled""" ^^ XMLSchema:string
+
+	oneOf executionSubRecordStatus = """failing""" ^^ XMLSchema:string
+
+	oneOf executionSubRecordStatus = """passing""" ^^ XMLSchema:string
+
+	oneOf priority = """high""" ^^ XMLSchema:string
+
+	oneOf priority = """low""" ^^ XMLSchema:string
+
+	oneOf priority = """medium""" ^^ XMLSchema:string
+
+	oneOf reviewStatus = """not ready for review""" ^^ XMLSchema:string
+
+	oneOf reviewStatus = """ready for review""" ^^ XMLSchema:string
+
+	oneOf reviewStatus = """reviewed: concur with closure""" ^^ XMLSchema:string
+
+	oneOf reviewStatus = """reviewed: open issues""" ^^ XMLSchema:string
+
+	oneOf validationStatus = """failed""" ^^ XMLSchema:string
+
+	oneOf validationStatus = """not validated""" ^^ XMLSchema:string
+
+	oneOf validationStatus = """partially validated""" ^^ XMLSchema:string
+
+	oneOf validationStatus = """passed""" ^^ XMLSchema:string
+
+	oneOf verificationStatus = """failed""" ^^ XMLSchema:string
+
+	oneOf verificationStatus = """not verified""" ^^ XMLSchema:string
+
+	oneOf verificationStatus = """partially verified""" ^^ XMLSchema:string
+
+	oneOf verificationStatus = """passed""" ^^ XMLSchema:string
+
+	@rdfs:label="""has activity priority"""
+	entityScalarDataProperty + hasActivityPriority {
+		domain Activity
+		range priority
+	}
+
+	@rdfs:label="""has child requirements verification status"""
+	entityScalarDataProperty + hasChildRequirementsVerificationStatus {
+		domain VerificationItemReviewAndClosure
+		range verificationStatus
+	}
+
+	@rdfs:label="""has closure date"""
+	entityScalarDataProperty + hasClosureDate {
+		domain ItemReviewAndClosure
+		range project:date
+	}
+
+	@rdfs:label="""has closure description"""
+	entityScalarDataProperty + hasClosureDescription {
+		domain ItemReviewAndClosure
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has completion date"""
+	entityScalarDataProperty hasCompletionDate {
+		domain ActivityCompletionData
+		range project:date
+	}
+
+	@rdfs:label="""has completion status"""
+	entityScalarDataProperty + hasCompletionStatus {
+		domain ActivityCompletionData
+		range completionStatus
+	}
+
+	@rdfs:label="""has end date"""
+	entityScalarDataProperty + hasEndDate {
+		domain ExecutionRecord
+		range project:date
+	}
+
+	@rdfs:label="""has execution sub record status"""
+	entityScalarDataProperty + hasExecutionSubRecordStatus {
+		domain ExecutionSubRecord
+		range executionSubRecordStatus
+	}
+
+	@rdfs:label="""has external data"""
+	entityScalarDataProperty hasExternalData {
+		domain ExternallyDocumentedElement
+		range XMLSchema:anyURI
+	}
+
+	@rdfs:label="""has review comments"""
+	entityScalarDataProperty + hasReviewComments {
+		domain ItemReviewAndClosure
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has review status"""
+	entityScalarDataProperty + hasReviewStatus {
+		domain ItemReviewAndClosure
+		range reviewStatus
+	}
+
+	@rdfs:label="""has start date"""
+	entityScalarDataProperty + hasStartDate {
+		domain ExecutionRecord
+		range project:date
+	}
+
+	@rdfs:label="""has user name"""
+	entityScalarDataProperty + hasUserName {
+		domain ExecutionRecord
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has validation approach"""
+	entityScalarDataProperty + hasValidationApproach {
+		domain ValidationItem
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has validation priority"""
+	entityScalarDataProperty + hasValidationPriority {
+		domain ValidationItem
+		range priority
+	}
+
+	@rdfs:label="""has validation status"""
+	entityScalarDataProperty + hasValidationStatus {
+		domain ValidationItemReviewAndClosure
+		range validationStatus
+	}
+
+	@rdfs:label="""has venue type"""
+	entityScalarDataProperty + hasVenueType {
+		domain ExecutionRecord
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has verification approach"""
+	entityScalarDataProperty + hasVerificationApproach {
+		domain VerificationItem
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has verification priority"""
+	entityScalarDataProperty + hasVerificationPriority {
+		domain VerificationItem
+		range priority
+	}
+
+	@rdfs:label="""has verification status"""
+	entityScalarDataProperty + hasVerificationStatus {
+		domain VerificationItemReviewAndClosure
+		range verificationStatus
+	}
+
+	@rdfs:label="""is validated by analysis"""
+	entityScalarDataProperty + isValidatedByAnalysis {
+		domain ValidationItem
+		range XMLSchema:boolean
+	}
+
+	@rdfs:label="""is validated by demonstration"""
+	entityScalarDataProperty + isValidatedByDemonstration {
+		domain ValidationItem
+		range XMLSchema:boolean
+	}
+
+	@rdfs:label="""is validated by inspection"""
+	entityScalarDataProperty + isValidatedByInspection {
+		domain ValidationItem
+		range XMLSchema:boolean
+	}
+
+	@rdfs:label="""is validated by test"""
+	entityScalarDataProperty + isValidatedByTest {
+		domain ValidationItem
+		range XMLSchema:boolean
+	}
+
+	@rdfs:label="""is verified by analysis"""
+	entityScalarDataProperty + isVerifiedByAnalysis {
+		domain VerificationItem
+		range XMLSchema:boolean
+	}
+
+	@rdfs:label="""is verified by demonstration"""
+	entityScalarDataProperty + isVerifiedByDemonstration {
+		domain VerificationItem
+		range XMLSchema:boolean
+	}
+
+	@rdfs:label="""is verified by hierarchy"""
+	entityScalarDataProperty + isVerifiedByHierarchy {
+		domain VerificationItem
+		range XMLSchema:boolean
+	}
+
+	@rdfs:label="""is verified by inheritance"""
+	entityScalarDataProperty + isVerifiedByInheritance {
+		domain VerificationItem
+		range XMLSchema:boolean
+	}
+
+	@rdfs:label="""is verified by inspection"""
+	entityScalarDataProperty + isVerifiedByInspection {
+		domain VerificationItem
+		range XMLSchema:boolean
+	}
+
+	@rdfs:label="""is verified by test"""
+	entityScalarDataProperty + isVerifiedByTest {
+		domain VerificationItem
+		range XMLSchema:boolean
+	}
+
+	@rdfs:label="""matches expected evidence"""
+	entityScalarDataProperty + matchesExpectedEvidence {
+		domain ClosureEvidence
+		range XMLSchema:boolean
+	}
+
+	@rdfs:label="""satisfies verification item"""
+	entityScalarDataProperty + satisfiesVerificationItem {
+		domain ClosureEvidence
+		range XMLSchema:boolean
+	}
+
+	allEntities Incompressible . analysis:explains in VerificationActivity
+
+	allEntities ItemReviewAndClosure . analysis:characterizes in Item
+
+	allEntities TestAsYouFlyException . analysis:characterizes in Activity
+
+	allEntities TestProcedure . project:isInvokedBy in Activity
+
+	allEntities ValidationActivityCompletionData . analysis:characterizes in ValidationActivity
+
+	allEntities ValidationActivityPlan . describes in ValidationActivity
+
+	allEntities ValidationItemReviewAndClosure . analysis:characterizes in ValidationItem
+
+	allEntities ValidationNonconformance . affects in ValidationActivity
+
+	allEntities VerificationActivityCompletionData . analysis:characterizes in VerificationActivity
+
+	allEntities VerificationActivityPlan . describes in VerificationActivity
+
+	allEntities VerificationItemReviewAndClosure . analysis:characterizes in VerificationItem
+
+	allEntities VerificationNonconformance . affects in VerificationActivity
+
+}

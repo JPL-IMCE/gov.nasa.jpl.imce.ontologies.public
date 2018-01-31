@@ -1,0 +1,2829 @@
+open terminology <http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel> {
+
+	extends <http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel>
+
+	extends <http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML>
+
+	concept Abstraction.Allocate
+
+	concept Abstraction.Allocated
+
+	concept Abstraction.Conform
+
+	concept Abstraction.RequirementRelated
+
+	concept Abstraction.Trace.Copy
+
+	concept Abstraction.Trace.DeriveReqt
+
+	concept Abstraction.Trace.Satisfy
+
+	concept Abstraction.Trace.Verify
+
+	concept AcceptCallAction.AcceptChangeStructuralFeatureEventAction
+
+	concept AcceptCallAction.Allocated
+
+	concept AcceptCallAction.RequirementRelated
+
+	concept AcceptEventAction.AcceptChangeStructuralFeatureEventAction
+
+	concept AcceptEventAction.Allocated
+
+	concept AcceptEventAction.RequirementRelated
+
+	concept ActionExecutionSpecification.Allocated
+
+	concept ActionExecutionSpecification.RequirementRelated
+
+	concept ActionInputPin.Allocated
+
+	concept ActionInputPin.NoBuffer
+
+	concept ActionInputPin.Overwrite
+
+	concept ActionInputPin.RequirementRelated
+
+	concept Activity.Allocated
+
+	concept Activity.Block
+
+	concept Activity.ControlOperator
+
+	concept Activity.RequirementRelated
+
+	concept Activity.TestCase
+
+	concept Activity.Viewpoint
+
+	concept ActivityFinalNode.Allocated
+
+	concept ActivityFinalNode.RequirementRelated
+
+	concept ActivityParameterNode.Allocated
+
+	concept ActivityParameterNode.NoBuffer
+
+	concept ActivityParameterNode.Overwrite
+
+	concept ActivityParameterNode.RequirementRelated
+
+	concept ActivityPartition.AllocateActivityPartition
+
+	concept ActivityPartition.Allocated
+
+	concept ActivityPartition.RequirementRelated
+
+	concept Actor.Allocated
+
+	concept Actor.PropertySpecificType
+
+	concept Actor.RequirementRelated
+
+	concept AddStructuralFeatureValueAction.Allocated
+
+	concept AddStructuralFeatureValueAction.RequirementRelated
+
+	concept AddVariableValueAction.Allocated
+
+	concept AddVariableValueAction.RequirementRelated
+
+	concept AnyReceiveEvent.Allocated
+
+	concept AnyReceiveEvent.RequirementRelated
+
+	concept Artifact.Allocated
+
+	concept Artifact.RequirementRelated
+
+	concept Association.Allocated
+
+	concept Association.RequirementRelated
+
+	concept AssociationClass.Allocated
+
+	concept AssociationClass.Block
+
+	concept AssociationClass.RequirementRelated
+
+	concept AssociationClass.Viewpoint
+
+	concept BehaviorExecutionSpecification.Allocated
+
+	concept BehaviorExecutionSpecification.RequirementRelated
+
+	concept BroadcastSignalAction.Allocated
+
+	concept BroadcastSignalAction.InvocationOnNestedPortAction
+
+	concept BroadcastSignalAction.RequirementRelated
+
+	concept CallBehaviorAction.Allocated
+
+	concept CallBehaviorAction.InvocationOnNestedPortAction
+
+	concept CallBehaviorAction.RequirementRelated
+
+	concept CallEvent.Allocated
+
+	concept CallEvent.RequirementRelated
+
+	concept CallOperationAction.Allocated
+
+	concept CallOperationAction.InvocationOnNestedPortAction
+
+	concept CallOperationAction.RequirementRelated
+
+	concept CentralBufferNode.Allocated
+
+	concept CentralBufferNode.NoBuffer
+
+	concept CentralBufferNode.Overwrite
+
+	concept CentralBufferNode.RequirementRelated
+
+	concept ChangeEvent.Allocated
+
+	concept ChangeEvent.ChangeStructuralFeatureEvent
+
+	concept ChangeEvent.RequirementRelated
+
+	concept Class.Allocated
+
+	concept Class.Block
+
+	concept Class.Block.ConstraintBlock
+
+	concept Class.Block.InterfaceBlock
+
+	concept Class.PropertySpecificType
+
+	concept Class.Requirement
+
+	concept Class.RequirementRelated
+
+	concept Class.Viewpoint
+
+	concept ClearAssociationAction.Allocated
+
+	concept ClearAssociationAction.RequirementRelated
+
+	concept ClearStructuralFeatureAction.Allocated
+
+	concept ClearStructuralFeatureAction.RequirementRelated
+
+	concept ClearVariableAction.Allocated
+
+	concept ClearVariableAction.RequirementRelated
+
+	concept Collaboration.Allocated
+
+	concept Collaboration.RequirementRelated
+
+	concept CollaborationUse.Allocated
+
+	concept CollaborationUse.RequirementRelated
+
+	concept CombinedFragment.Allocated
+
+	concept CombinedFragment.RequirementRelated
+
+	concept Comment.Problem
+
+	concept Comment.Rationale
+
+	concept CommunicationPath.Allocated
+
+	concept CommunicationPath.RequirementRelated
+
+	concept Component.Allocated
+
+	concept Component.Block
+
+	concept Component.Block.ConstraintBlock
+
+	concept Component.PropertySpecificType
+
+	concept Component.Requirement
+
+	concept Component.RequirementRelated
+
+	concept Component.Viewpoint
+
+	concept ComponentRealization.Allocate
+
+	concept ComponentRealization.Allocated
+
+	concept ComponentRealization.Conform
+
+	concept ComponentRealization.RequirementRelated
+
+	concept ComponentRealization.Trace.Copy
+
+	concept ComponentRealization.Trace.DeriveReqt
+
+	concept ComponentRealization.Trace.Satisfy
+
+	concept ComponentRealization.Trace.Verify
+
+	concept ConditionalNode.Allocated
+
+	concept ConditionalNode.RequirementRelated
+
+	concept ConnectionPointReference.Allocated
+
+	concept ConnectionPointReference.RequirementRelated
+
+	concept Connector.Allocated
+
+	concept Connector.BindingConnector
+
+	concept Connector.RequirementRelated
+
+	concept ConnectorEnd.NestedConnectorEnd
+
+	concept ConsiderIgnoreFragment.Allocated
+
+	concept ConsiderIgnoreFragment.RequirementRelated
+
+	concept Constraint.Allocated
+
+	concept Constraint.RequirementRelated
+
+	concept Continuation.Allocated
+
+	concept Continuation.RequirementRelated
+
+	concept ControlFlow.Allocated
+
+	concept ControlFlow.Probability
+
+	concept ControlFlow.Rate
+
+	concept ControlFlow.Rate.Continuous
+
+	concept ControlFlow.Rate.Discrete
+
+	concept ControlFlow.RequirementRelated
+
+	concept CreateLinkAction.Allocated
+
+	concept CreateLinkAction.RequirementRelated
+
+	concept CreateLinkObjectAction.Allocated
+
+	concept CreateLinkObjectAction.RequirementRelated
+
+	concept CreateObjectAction.Allocated
+
+	concept CreateObjectAction.RequirementRelated
+
+	concept DataStoreNode.Allocated
+
+	concept DataStoreNode.NoBuffer
+
+	concept DataStoreNode.Overwrite
+
+	concept DataStoreNode.RequirementRelated
+
+	concept DecisionNode.Allocated
+
+	concept DecisionNode.RequirementRelated
+
+	concept Dependency.Allocated
+
+	concept Dependency.Conform
+
+	concept Dependency.RequirementRelated
+
+	concept Deployment.Allocated
+
+	concept Deployment.Conform
+
+	concept Deployment.RequirementRelated
+
+	concept DeploymentSpecification.Allocated
+
+	concept DeploymentSpecification.RequirementRelated
+
+	concept DestroyLinkAction.Allocated
+
+	concept DestroyLinkAction.RequirementRelated
+
+	concept DestroyObjectAction.Allocated
+
+	concept DestroyObjectAction.RequirementRelated
+
+	concept DestructionOccurrenceSpecification.Allocated
+
+	concept DestructionOccurrenceSpecification.RequirementRelated
+
+	concept Device.Allocated
+
+	concept Device.RequirementRelated
+
+	concept Device.Viewpoint
+
+	concept Duration.Allocated
+
+	concept Duration.RequirementRelated
+
+	concept DurationConstraint.Allocated
+
+	concept DurationConstraint.RequirementRelated
+
+	concept DurationInterval.Allocated
+
+	concept DurationInterval.RequirementRelated
+
+	concept DurationObservation.Allocated
+
+	concept DurationObservation.RequirementRelated
+
+	concept ElementValue.Allocated
+
+	concept ElementValue.RequirementRelated
+
+	concept ExecutionEnvironment.Allocated
+
+	concept ExecutionEnvironment.RequirementRelated
+
+	concept ExecutionEnvironment.Viewpoint
+
+	concept ExecutionOccurrenceSpecification.Allocated
+
+	concept ExecutionOccurrenceSpecification.RequirementRelated
+
+	concept ExpansionNode.Allocated
+
+	concept ExpansionNode.NoBuffer
+
+	concept ExpansionNode.Overwrite
+
+	concept ExpansionNode.RequirementRelated
+
+	concept ExpansionRegion.Allocated
+
+	concept ExpansionRegion.RequirementRelated
+
+	concept Expression.Allocated
+
+	concept Expression.RequirementRelated
+
+	concept Extend.Allocated
+
+	concept Extend.RequirementRelated
+
+	concept ExtensionPoint.Allocated
+
+	concept ExtensionPoint.RequirementRelated
+
+	concept FinalState.Allocated
+
+	concept FinalState.RequirementRelated
+
+	concept FlowFinalNode.Allocated
+
+	concept FlowFinalNode.RequirementRelated
+
+	concept ForkNode.Allocated
+
+	concept ForkNode.RequirementRelated
+
+	concept FunctionBehavior.Allocated
+
+	concept FunctionBehavior.Block
+
+	concept FunctionBehavior.ControlOperator
+
+	concept FunctionBehavior.RequirementRelated
+
+	concept FunctionBehavior.TestCase
+
+	concept FunctionBehavior.Viewpoint
+
+	concept Gate.Allocated
+
+	concept Gate.RequirementRelated
+
+	concept GeneralOrdering.Allocated
+
+	concept GeneralOrdering.RequirementRelated
+
+	concept GeneralizationSet.Allocated
+
+	concept GeneralizationSet.RequirementRelated
+
+	concept Include.Allocated
+
+	concept Include.RequirementRelated
+
+	concept InformationFlow.Allocated
+
+	concept InformationFlow.ItemFlow
+
+	concept InformationFlow.RequirementRelated
+
+	concept InformationItem.Allocated
+
+	concept InformationItem.PropertySpecificType
+
+	concept InformationItem.RequirementRelated
+
+	concept InitialNode.Allocated
+
+	concept InitialNode.RequirementRelated
+
+	concept InputPin.Allocated
+
+	concept InputPin.NoBuffer
+
+	concept InputPin.Overwrite
+
+	concept InputPin.RequirementRelated
+
+	concept InstanceSpecification.Allocated
+
+	concept InstanceSpecification.RequirementRelated
+
+	concept InstanceValue.Allocated
+
+	concept InstanceValue.RequirementRelated
+
+	concept Interaction.Allocated
+
+	concept Interaction.Block
+
+	concept Interaction.ControlOperator
+
+	concept Interaction.RequirementRelated
+
+	concept Interaction.TestCase
+
+	concept Interaction.Viewpoint
+
+	concept InteractionConstraint.Allocated
+
+	concept InteractionConstraint.RequirementRelated
+
+	concept InteractionOperand.Allocated
+
+	concept InteractionOperand.RequirementRelated
+
+	concept InteractionUse.Allocated
+
+	concept InteractionUse.RequirementRelated
+
+	concept Interface.Allocated
+
+	concept Interface.FlowSpecification
+
+	concept Interface.RequirementRelated
+
+	concept InterfaceRealization.Allocate
+
+	concept InterfaceRealization.Allocated
+
+	concept InterfaceRealization.Conform
+
+	concept InterfaceRealization.RequirementRelated
+
+	concept InterfaceRealization.Trace.Copy
+
+	concept InterfaceRealization.Trace.DeriveReqt
+
+	concept InterfaceRealization.Trace.Satisfy
+
+	concept InterfaceRealization.Trace.Verify
+
+	concept InterruptibleActivityRegion.Allocated
+
+	concept InterruptibleActivityRegion.RequirementRelated
+
+	concept Interval.Allocated
+
+	concept Interval.RequirementRelated
+
+	concept IntervalConstraint.Allocated
+
+	concept IntervalConstraint.RequirementRelated
+
+	concept JoinNode.Allocated
+
+	concept JoinNode.RequirementRelated
+
+	concept Lifeline.Allocated
+
+	concept Lifeline.RequirementRelated
+
+	concept LoopNode.Allocated
+
+	concept LoopNode.RequirementRelated
+
+	concept Manifestation.Allocate
+
+	concept Manifestation.Allocated
+
+	concept Manifestation.Conform
+
+	concept Manifestation.RequirementRelated
+
+	concept Manifestation.Trace.Copy
+
+	concept Manifestation.Trace.DeriveReqt
+
+	concept Manifestation.Trace.Satisfy
+
+	concept Manifestation.Trace.Verify
+
+	concept MergeNode.Allocated
+
+	concept MergeNode.RequirementRelated
+
+	concept Message.Allocated
+
+	concept Message.RequirementRelated
+
+	concept MessageOccurrenceSpecification.Allocated
+
+	concept MessageOccurrenceSpecification.RequirementRelated
+
+	concept Model.Allocated
+
+	concept Model.RequirementRelated
+
+	concept Model.View
+
+	concept Node.Allocated
+
+	concept Node.RequirementRelated
+
+	concept Node.Viewpoint
+
+	concept ObjectFlow.Allocated
+
+	concept ObjectFlow.Probability
+
+	concept ObjectFlow.Rate
+
+	concept ObjectFlow.Rate.Continuous
+
+	concept ObjectFlow.Rate.Discrete
+
+	concept ObjectFlow.RequirementRelated
+
+	concept OccurrenceSpecification.Allocated
+
+	concept OccurrenceSpecification.RequirementRelated
+
+	concept OpaqueAction.Allocated
+
+	concept OpaqueAction.RequirementRelated
+
+	concept OpaqueBehavior.Allocated
+
+	concept OpaqueBehavior.Block
+
+	concept OpaqueBehavior.ControlOperator
+
+	concept OpaqueBehavior.RequirementRelated
+
+	concept OpaqueBehavior.TestCase
+
+	concept OpaqueBehavior.Viewpoint
+
+	concept OpaqueExpression.Allocated
+
+	concept OpaqueExpression.RequirementRelated
+
+	concept Operation.Allocated
+
+	concept Operation.ControlOperator
+
+	concept Operation.DirectedFeature
+
+	concept Operation.RequirementRelated
+
+	concept Operation.TestCase
+
+	concept OutputPin.Allocated
+
+	concept OutputPin.NoBuffer
+
+	concept OutputPin.Overwrite
+
+	concept OutputPin.RequirementRelated
+
+	concept Package.Allocated
+
+	concept Package.RequirementRelated
+
+	concept Package.View
+
+	concept Parameter.Allocated
+
+	concept Parameter.Optional
+
+	concept Parameter.Rate
+
+	concept Parameter.Rate.Continuous
+
+	concept Parameter.Rate.Discrete
+
+	concept Parameter.RequirementRelated
+
+	concept ParameterSet.Allocated
+
+	concept ParameterSet.Probability
+
+	concept ParameterSet.RequirementRelated
+
+	concept PartDecomposition.Allocated
+
+	concept PartDecomposition.RequirementRelated
+
+	concept Port.Allocated
+
+	concept Port.ConnectorProperty
+
+	concept Port.ConstraintProperty
+
+	concept Port.DirectedFeature
+
+	concept Port.DistributedProperty
+
+	concept Port.FlowPort
+
+	concept Port.FlowProperty
+
+	concept Port.FullPort
+
+	concept Port.ParticipantProperty
+
+	concept Port.ProxyPort
+
+	concept Port.RequirementRelated
+
+	concept Profile.Allocated
+
+	concept Profile.RequirementRelated
+
+	concept Profile.View
+
+	concept Property.Allocated
+
+	concept Property.ConnectorProperty
+
+	concept Property.ConstraintProperty
+
+	concept Property.DirectedFeature
+
+	concept Property.DistributedProperty
+
+	concept Property.FlowProperty
+
+	concept Property.ParticipantProperty
+
+	concept Property.RequirementRelated
+
+	concept ProtocolStateMachine.Allocated
+
+	concept ProtocolStateMachine.Block
+
+	concept ProtocolStateMachine.ControlOperator
+
+	concept ProtocolStateMachine.RequirementRelated
+
+	concept ProtocolStateMachine.TestCase
+
+	concept ProtocolStateMachine.Viewpoint
+
+	concept ProtocolTransition.Allocated
+
+	concept ProtocolTransition.RequirementRelated
+
+	concept Pseudostate.Allocated
+
+	concept Pseudostate.RequirementRelated
+
+	concept QuantityKind
+
+	concept RaiseExceptionAction.Allocated
+
+	concept RaiseExceptionAction.RequirementRelated
+
+	concept ReadExtentAction.Allocated
+
+	concept ReadExtentAction.RequirementRelated
+
+	concept ReadIsClassifiedObjectAction.Allocated
+
+	concept ReadIsClassifiedObjectAction.RequirementRelated
+
+	concept ReadLinkAction.Allocated
+
+	concept ReadLinkAction.RequirementRelated
+
+	concept ReadLinkObjectEndAction.Allocated
+
+	concept ReadLinkObjectEndAction.RequirementRelated
+
+	concept ReadLinkObjectEndQualifierAction.Allocated
+
+	concept ReadLinkObjectEndQualifierAction.RequirementRelated
+
+	concept ReadSelfAction.Allocated
+
+	concept ReadSelfAction.RequirementRelated
+
+	concept ReadStructuralFeatureAction.Allocated
+
+	concept ReadStructuralFeatureAction.RequirementRelated
+
+	concept ReadVariableAction.Allocated
+
+	concept ReadVariableAction.RequirementRelated
+
+	concept Realization.Allocate
+
+	concept Realization.Allocated
+
+	concept Realization.Conform
+
+	concept Realization.RequirementRelated
+
+	concept Realization.Trace.Copy
+
+	concept Realization.Trace.DeriveReqt
+
+	concept Realization.Trace.Satisfy
+
+	concept Realization.Trace.Verify
+
+	concept Reception.Allocated
+
+	concept Reception.DirectedFeature
+
+	concept Reception.RequirementRelated
+
+	concept ReclassifyObjectAction.Allocated
+
+	concept ReclassifyObjectAction.RequirementRelated
+
+	concept RedefinableTemplateSignature.Allocated
+
+	concept RedefinableTemplateSignature.RequirementRelated
+
+	concept ReduceAction.Allocated
+
+	concept ReduceAction.RequirementRelated
+
+	concept Region.Allocated
+
+	concept Region.RequirementRelated
+
+	concept RemoveStructuralFeatureValueAction.Allocated
+
+	concept RemoveStructuralFeatureValueAction.RequirementRelated
+
+	concept RemoveVariableValueAction.Allocated
+
+	concept RemoveVariableValueAction.RequirementRelated
+
+	concept ReplyAction.Allocated
+
+	concept ReplyAction.RequirementRelated
+
+	concept ScalarValueType
+
+	concept SendObjectAction.Allocated
+
+	concept SendObjectAction.InvocationOnNestedPortAction
+
+	concept SendObjectAction.RequirementRelated
+
+	concept SendSignalAction.Allocated
+
+	concept SendSignalAction.InvocationOnNestedPortAction
+
+	concept SendSignalAction.RequirementRelated
+
+	concept SequenceNode.Allocated
+
+	concept SequenceNode.RequirementRelated
+
+	concept Signal.Allocated
+
+	concept Signal.PropertySpecificType
+
+	concept Signal.RequirementRelated
+
+	concept SignalEvent.Allocated
+
+	concept SignalEvent.RequirementRelated
+
+	concept StartClassifierBehaviorAction.Allocated
+
+	concept StartClassifierBehaviorAction.RequirementRelated
+
+	concept StartObjectBehaviorAction.Allocated
+
+	concept StartObjectBehaviorAction.InvocationOnNestedPortAction
+
+	concept StartObjectBehaviorAction.RequirementRelated
+
+	concept State.Allocated
+
+	concept State.RequirementRelated
+
+	concept StateInvariant.Allocated
+
+	concept StateInvariant.RequirementRelated
+
+	concept StateMachine.Allocated
+
+	concept StateMachine.Block
+
+	concept StateMachine.ControlOperator
+
+	concept StateMachine.RequirementRelated
+
+	concept StateMachine.TestCase
+
+	concept StateMachine.Viewpoint
+
+	concept StringExpression.Allocated
+
+	concept StringExpression.RequirementRelated
+
+	concept StructuredActivityNode.Allocated
+
+	concept StructuredActivityNode.RequirementRelated
+
+	concept StructuredValueType
+
+	concept Substitution.Allocate
+
+	concept Substitution.Allocated
+
+	concept Substitution.Conform
+
+	concept Substitution.RequirementRelated
+
+	concept Substitution.Trace.Copy
+
+	concept Substitution.Trace.DeriveReqt
+
+	concept Substitution.Trace.Satisfy
+
+	concept Substitution.Trace.Verify
+
+	concept TestIdentityAction.Allocated
+
+	concept TestIdentityAction.RequirementRelated
+
+	concept TimeConstraint.Allocated
+
+	concept TimeConstraint.RequirementRelated
+
+	concept TimeEvent.Allocated
+
+	concept TimeEvent.RequirementRelated
+
+	concept TimeExpression.Allocated
+
+	concept TimeExpression.RequirementRelated
+
+	concept TimeInterval.Allocated
+
+	concept TimeInterval.RequirementRelated
+
+	concept TimeObservation.Allocated
+
+	concept TimeObservation.RequirementRelated
+
+	concept Transition.Allocated
+
+	concept Transition.RequirementRelated
+
+	concept Trigger.Allocated
+
+	concept Trigger.RequirementRelated
+
+	concept Trigger.TriggerOnNestedPort
+
+	concept Unit
+
+	concept UnmarshallAction.Allocated
+
+	concept UnmarshallAction.RequirementRelated
+
+	concept Usage.Allocated
+
+	concept Usage.Conform
+
+	concept Usage.RequirementRelated
+
+	concept UseCase.Allocated
+
+	concept UseCase.PropertySpecificType
+
+	concept UseCase.RequirementRelated
+
+	concept ValuePin.Allocated
+
+	concept ValuePin.NoBuffer
+
+	concept ValuePin.Overwrite
+
+	concept ValuePin.RequirementRelated
+
+	concept ValueSpecificationAction.Allocated
+
+	concept ValueSpecificationAction.RequirementRelated
+
+	concept ValueType
+
+	concept Variable.Allocated
+
+	concept Variable.RequirementRelated
+
+	Abstraction.Allocate extendsConcept UML-metamodel:Abstraction
+
+	Abstraction.Allocated extendsConcept UML-metamodel:Abstraction
+
+	Abstraction.Conform extendsConcept UML-metamodel:Abstraction
+
+	Abstraction.RequirementRelated extendsConcept UML-metamodel:Abstraction
+
+	Abstraction.Trace.Copy extendsConcept StandardProfileL2-metamodel:Abstraction.Trace
+
+	Abstraction.Trace.DeriveReqt extendsConcept StandardProfileL2-metamodel:Abstraction.Trace
+
+	Abstraction.Trace.Satisfy extendsConcept StandardProfileL2-metamodel:Abstraction.Trace
+
+	Abstraction.Trace.Verify extendsConcept StandardProfileL2-metamodel:Abstraction.Trace
+
+	AcceptCallAction.AcceptChangeStructuralFeatureEventAction extendsConcept UML-metamodel:AcceptCallAction
+
+	AcceptCallAction.Allocated extendsConcept UML-metamodel:AcceptCallAction
+
+	AcceptCallAction.RequirementRelated extendsConcept UML-metamodel:AcceptCallAction
+
+	AcceptEventAction.AcceptChangeStructuralFeatureEventAction extendsConcept UML-metamodel:AcceptEventAction
+
+	AcceptEventAction.Allocated extendsConcept UML-metamodel:AcceptEventAction
+
+	AcceptEventAction.RequirementRelated extendsConcept UML-metamodel:AcceptEventAction
+
+	ActionExecutionSpecification.Allocated extendsConcept UML-metamodel:ActionExecutionSpecification
+
+	ActionExecutionSpecification.RequirementRelated extendsConcept UML-metamodel:ActionExecutionSpecification
+
+	ActionInputPin.Allocated extendsConcept UML-metamodel:ActionInputPin
+
+	ActionInputPin.NoBuffer extendsConcept UML-metamodel:ActionInputPin
+
+	ActionInputPin.Overwrite extendsConcept UML-metamodel:ActionInputPin
+
+	ActionInputPin.RequirementRelated extendsConcept UML-metamodel:ActionInputPin
+
+	Activity.Allocated extendsConcept UML-metamodel:Activity
+
+	Activity.Block extendsConcept UML-metamodel:Activity
+
+	Activity.ControlOperator extendsConcept UML-metamodel:Activity
+
+	Activity.RequirementRelated extendsConcept UML-metamodel:Activity
+
+	Activity.TestCase extendsConcept UML-metamodel:Activity
+
+	Activity.Viewpoint extendsConcept UML-metamodel:Activity
+
+	ActivityFinalNode.Allocated extendsConcept UML-metamodel:ActivityFinalNode
+
+	ActivityFinalNode.RequirementRelated extendsConcept UML-metamodel:ActivityFinalNode
+
+	ActivityParameterNode.Allocated extendsConcept UML-metamodel:ActivityParameterNode
+
+	ActivityParameterNode.NoBuffer extendsConcept UML-metamodel:ActivityParameterNode
+
+	ActivityParameterNode.Overwrite extendsConcept UML-metamodel:ActivityParameterNode
+
+	ActivityParameterNode.RequirementRelated extendsConcept UML-metamodel:ActivityParameterNode
+
+	ActivityPartition.AllocateActivityPartition extendsConcept UML-metamodel:ActivityPartition
+
+	ActivityPartition.Allocated extendsConcept UML-metamodel:ActivityPartition
+
+	ActivityPartition.RequirementRelated extendsConcept UML-metamodel:ActivityPartition
+
+	Actor.Allocated extendsConcept UML-metamodel:Actor
+
+	Actor.PropertySpecificType extendsConcept UML-metamodel:Actor
+
+	Actor.RequirementRelated extendsConcept UML-metamodel:Actor
+
+	AddStructuralFeatureValueAction.Allocated extendsConcept UML-metamodel:AddStructuralFeatureValueAction
+
+	AddStructuralFeatureValueAction.RequirementRelated extendsConcept UML-metamodel:AddStructuralFeatureValueAction
+
+	AddVariableValueAction.Allocated extendsConcept UML-metamodel:AddVariableValueAction
+
+	AddVariableValueAction.RequirementRelated extendsConcept UML-metamodel:AddVariableValueAction
+
+	AnyReceiveEvent.Allocated extendsConcept UML-metamodel:AnyReceiveEvent
+
+	AnyReceiveEvent.RequirementRelated extendsConcept UML-metamodel:AnyReceiveEvent
+
+	Artifact.Allocated extendsConcept UML-metamodel:Artifact
+
+	Artifact.RequirementRelated extendsConcept UML-metamodel:Artifact
+
+	Association.Allocated extendsConcept UML-metamodel:Association
+
+	Association.RequirementRelated extendsConcept UML-metamodel:Association
+
+	AssociationClass.Allocated extendsConcept UML-metamodel:AssociationClass
+
+	AssociationClass.Block extendsConcept UML-metamodel:AssociationClass
+
+	AssociationClass.RequirementRelated extendsConcept UML-metamodel:AssociationClass
+
+	AssociationClass.Viewpoint extendsConcept UML-metamodel:AssociationClass
+
+	BehaviorExecutionSpecification.Allocated extendsConcept UML-metamodel:BehaviorExecutionSpecification
+
+	BehaviorExecutionSpecification.RequirementRelated extendsConcept UML-metamodel:BehaviorExecutionSpecification
+
+	BroadcastSignalAction.Allocated extendsConcept UML-metamodel:BroadcastSignalAction
+
+	BroadcastSignalAction.InvocationOnNestedPortAction extendsConcept UML-metamodel:BroadcastSignalAction
+
+	BroadcastSignalAction.RequirementRelated extendsConcept UML-metamodel:BroadcastSignalAction
+
+	CallBehaviorAction.Allocated extendsConcept UML-metamodel:CallBehaviorAction
+
+	CallBehaviorAction.InvocationOnNestedPortAction extendsConcept UML-metamodel:CallBehaviorAction
+
+	CallBehaviorAction.RequirementRelated extendsConcept UML-metamodel:CallBehaviorAction
+
+	CallEvent.Allocated extendsConcept UML-metamodel:CallEvent
+
+	CallEvent.RequirementRelated extendsConcept UML-metamodel:CallEvent
+
+	CallOperationAction.Allocated extendsConcept UML-metamodel:CallOperationAction
+
+	CallOperationAction.InvocationOnNestedPortAction extendsConcept UML-metamodel:CallOperationAction
+
+	CallOperationAction.RequirementRelated extendsConcept UML-metamodel:CallOperationAction
+
+	CentralBufferNode.Allocated extendsConcept UML-metamodel:CentralBufferNode
+
+	CentralBufferNode.NoBuffer extendsConcept UML-metamodel:CentralBufferNode
+
+	CentralBufferNode.Overwrite extendsConcept UML-metamodel:CentralBufferNode
+
+	CentralBufferNode.RequirementRelated extendsConcept UML-metamodel:CentralBufferNode
+
+	ChangeEvent.Allocated extendsConcept UML-metamodel:ChangeEvent
+
+	ChangeEvent.ChangeStructuralFeatureEvent extendsConcept UML-metamodel:ChangeEvent
+
+	ChangeEvent.RequirementRelated extendsConcept UML-metamodel:ChangeEvent
+
+	Class.Allocated extendsConcept UML-metamodel:Class
+
+	Class.Block.ConstraintBlock extendsConcept Class.Block
+
+	Class.Block.InterfaceBlock extendsConcept Class.Block
+
+	Class.Block extendsConcept UML-metamodel:Class
+
+	Class.PropertySpecificType extendsConcept UML-metamodel:Class
+
+	Class.Requirement extendsConcept UML-metamodel:Class
+
+	Class.RequirementRelated extendsConcept UML-metamodel:Class
+
+	Class.Viewpoint extendsConcept UML-metamodel:Class
+
+	ClearAssociationAction.Allocated extendsConcept UML-metamodel:ClearAssociationAction
+
+	ClearAssociationAction.RequirementRelated extendsConcept UML-metamodel:ClearAssociationAction
+
+	ClearStructuralFeatureAction.Allocated extendsConcept UML-metamodel:ClearStructuralFeatureAction
+
+	ClearStructuralFeatureAction.RequirementRelated extendsConcept UML-metamodel:ClearStructuralFeatureAction
+
+	ClearVariableAction.Allocated extendsConcept UML-metamodel:ClearVariableAction
+
+	ClearVariableAction.RequirementRelated extendsConcept UML-metamodel:ClearVariableAction
+
+	Collaboration.Allocated extendsConcept UML-metamodel:Collaboration
+
+	Collaboration.RequirementRelated extendsConcept UML-metamodel:Collaboration
+
+	CollaborationUse.Allocated extendsConcept UML-metamodel:CollaborationUse
+
+	CollaborationUse.RequirementRelated extendsConcept UML-metamodel:CollaborationUse
+
+	CombinedFragment.Allocated extendsConcept UML-metamodel:CombinedFragment
+
+	CombinedFragment.RequirementRelated extendsConcept UML-metamodel:CombinedFragment
+
+	Comment.Problem extendsConcept UML-metamodel:Comment
+
+	Comment.Rationale extendsConcept UML-metamodel:Comment
+
+	CommunicationPath.Allocated extendsConcept UML-metamodel:CommunicationPath
+
+	CommunicationPath.RequirementRelated extendsConcept UML-metamodel:CommunicationPath
+
+	Component.Allocated extendsConcept UML-metamodel:Component
+
+	Component.Block.ConstraintBlock extendsConcept Component.Block
+
+	Component.Block extendsConcept UML-metamodel:Component
+
+	Component.PropertySpecificType extendsConcept UML-metamodel:Component
+
+	Component.Requirement extendsConcept UML-metamodel:Component
+
+	Component.RequirementRelated extendsConcept UML-metamodel:Component
+
+	Component.Viewpoint extendsConcept UML-metamodel:Component
+
+	ComponentRealization.Allocate extendsConcept UML-metamodel:ComponentRealization
+
+	ComponentRealization.Allocated extendsConcept UML-metamodel:ComponentRealization
+
+	ComponentRealization.Conform extendsConcept UML-metamodel:ComponentRealization
+
+	ComponentRealization.RequirementRelated extendsConcept UML-metamodel:ComponentRealization
+
+	ComponentRealization.Trace.Copy extendsConcept StandardProfileL2-metamodel:ComponentRealization.Trace
+
+	ComponentRealization.Trace.DeriveReqt extendsConcept StandardProfileL2-metamodel:ComponentRealization.Trace
+
+	ComponentRealization.Trace.Satisfy extendsConcept StandardProfileL2-metamodel:ComponentRealization.Trace
+
+	ComponentRealization.Trace.Verify extendsConcept StandardProfileL2-metamodel:ComponentRealization.Trace
+
+	ConditionalNode.Allocated extendsConcept UML-metamodel:ConditionalNode
+
+	ConditionalNode.RequirementRelated extendsConcept UML-metamodel:ConditionalNode
+
+	ConnectionPointReference.Allocated extendsConcept UML-metamodel:ConnectionPointReference
+
+	ConnectionPointReference.RequirementRelated extendsConcept UML-metamodel:ConnectionPointReference
+
+	Connector.Allocated extendsConcept UML-metamodel:Connector
+
+	Connector.BindingConnector extendsConcept UML-metamodel:Connector
+
+	Connector.RequirementRelated extendsConcept UML-metamodel:Connector
+
+	ConnectorEnd.NestedConnectorEnd extendsConcept UML-metamodel:ConnectorEnd
+
+	ConsiderIgnoreFragment.Allocated extendsConcept UML-metamodel:ConsiderIgnoreFragment
+
+	ConsiderIgnoreFragment.RequirementRelated extendsConcept UML-metamodel:ConsiderIgnoreFragment
+
+	Constraint.Allocated extendsConcept UML-metamodel:Constraint
+
+	Constraint.RequirementRelated extendsConcept UML-metamodel:Constraint
+
+	Continuation.Allocated extendsConcept UML-metamodel:Continuation
+
+	Continuation.RequirementRelated extendsConcept UML-metamodel:Continuation
+
+	ControlFlow.Allocated extendsConcept UML-metamodel:ControlFlow
+
+	ControlFlow.Probability extendsConcept UML-metamodel:ControlFlow
+
+	ControlFlow.Rate.Continuous extendsConcept ControlFlow.Rate
+
+	ControlFlow.Rate.Discrete extendsConcept ControlFlow.Rate
+
+	ControlFlow.Rate extendsConcept UML-metamodel:ControlFlow
+
+	ControlFlow.RequirementRelated extendsConcept UML-metamodel:ControlFlow
+
+	CreateLinkAction.Allocated extendsConcept UML-metamodel:CreateLinkAction
+
+	CreateLinkAction.RequirementRelated extendsConcept UML-metamodel:CreateLinkAction
+
+	CreateLinkObjectAction.Allocated extendsConcept UML-metamodel:CreateLinkObjectAction
+
+	CreateLinkObjectAction.RequirementRelated extendsConcept UML-metamodel:CreateLinkObjectAction
+
+	CreateObjectAction.Allocated extendsConcept UML-metamodel:CreateObjectAction
+
+	CreateObjectAction.RequirementRelated extendsConcept UML-metamodel:CreateObjectAction
+
+	DataStoreNode.Allocated extendsConcept UML-metamodel:DataStoreNode
+
+	DataStoreNode.NoBuffer extendsConcept UML-metamodel:DataStoreNode
+
+	DataStoreNode.Overwrite extendsConcept UML-metamodel:DataStoreNode
+
+	DataStoreNode.RequirementRelated extendsConcept UML-metamodel:DataStoreNode
+
+	DecisionNode.Allocated extendsConcept UML-metamodel:DecisionNode
+
+	DecisionNode.RequirementRelated extendsConcept UML-metamodel:DecisionNode
+
+	Dependency.Allocated extendsConcept UML-metamodel:Dependency
+
+	Dependency.Conform extendsConcept UML-metamodel:Dependency
+
+	Dependency.RequirementRelated extendsConcept UML-metamodel:Dependency
+
+	Deployment.Allocated extendsConcept UML-metamodel:Deployment
+
+	Deployment.Conform extendsConcept UML-metamodel:Deployment
+
+	Deployment.RequirementRelated extendsConcept UML-metamodel:Deployment
+
+	DeploymentSpecification.Allocated extendsConcept UML-metamodel:DeploymentSpecification
+
+	DeploymentSpecification.RequirementRelated extendsConcept UML-metamodel:DeploymentSpecification
+
+	DestroyLinkAction.Allocated extendsConcept UML-metamodel:DestroyLinkAction
+
+	DestroyLinkAction.RequirementRelated extendsConcept UML-metamodel:DestroyLinkAction
+
+	DestroyObjectAction.Allocated extendsConcept UML-metamodel:DestroyObjectAction
+
+	DestroyObjectAction.RequirementRelated extendsConcept UML-metamodel:DestroyObjectAction
+
+	DestructionOccurrenceSpecification.Allocated extendsConcept UML-metamodel:DestructionOccurrenceSpecification
+
+	DestructionOccurrenceSpecification.RequirementRelated extendsConcept UML-metamodel:DestructionOccurrenceSpecification
+
+	Device.Allocated extendsConcept UML-metamodel:Device
+
+	Device.RequirementRelated extendsConcept UML-metamodel:Device
+
+	Device.Viewpoint extendsConcept UML-metamodel:Device
+
+	Duration.Allocated extendsConcept UML-metamodel:Duration
+
+	Duration.RequirementRelated extendsConcept UML-metamodel:Duration
+
+	DurationConstraint.Allocated extendsConcept UML-metamodel:DurationConstraint
+
+	DurationConstraint.RequirementRelated extendsConcept UML-metamodel:DurationConstraint
+
+	DurationInterval.Allocated extendsConcept UML-metamodel:DurationInterval
+
+	DurationInterval.RequirementRelated extendsConcept UML-metamodel:DurationInterval
+
+	DurationObservation.Allocated extendsConcept UML-metamodel:DurationObservation
+
+	DurationObservation.RequirementRelated extendsConcept UML-metamodel:DurationObservation
+
+	ElementValue.Allocated extendsConcept UML-metamodel:ElementValue
+
+	ElementValue.RequirementRelated extendsConcept UML-metamodel:ElementValue
+
+	ExecutionEnvironment.Allocated extendsConcept UML-metamodel:ExecutionEnvironment
+
+	ExecutionEnvironment.RequirementRelated extendsConcept UML-metamodel:ExecutionEnvironment
+
+	ExecutionEnvironment.Viewpoint extendsConcept UML-metamodel:ExecutionEnvironment
+
+	ExecutionOccurrenceSpecification.Allocated extendsConcept UML-metamodel:ExecutionOccurrenceSpecification
+
+	ExecutionOccurrenceSpecification.RequirementRelated extendsConcept UML-metamodel:ExecutionOccurrenceSpecification
+
+	ExpansionNode.Allocated extendsConcept UML-metamodel:ExpansionNode
+
+	ExpansionNode.NoBuffer extendsConcept UML-metamodel:ExpansionNode
+
+	ExpansionNode.Overwrite extendsConcept UML-metamodel:ExpansionNode
+
+	ExpansionNode.RequirementRelated extendsConcept UML-metamodel:ExpansionNode
+
+	ExpansionRegion.Allocated extendsConcept UML-metamodel:ExpansionRegion
+
+	ExpansionRegion.RequirementRelated extendsConcept UML-metamodel:ExpansionRegion
+
+	Expression.Allocated extendsConcept UML-metamodel:Expression
+
+	Expression.RequirementRelated extendsConcept UML-metamodel:Expression
+
+	Extend.Allocated extendsConcept UML-metamodel:Extend
+
+	Extend.RequirementRelated extendsConcept UML-metamodel:Extend
+
+	ExtensionPoint.Allocated extendsConcept UML-metamodel:ExtensionPoint
+
+	ExtensionPoint.RequirementRelated extendsConcept UML-metamodel:ExtensionPoint
+
+	FinalState.Allocated extendsConcept UML-metamodel:FinalState
+
+	FinalState.RequirementRelated extendsConcept UML-metamodel:FinalState
+
+	FlowFinalNode.Allocated extendsConcept UML-metamodel:FlowFinalNode
+
+	FlowFinalNode.RequirementRelated extendsConcept UML-metamodel:FlowFinalNode
+
+	ForkNode.Allocated extendsConcept UML-metamodel:ForkNode
+
+	ForkNode.RequirementRelated extendsConcept UML-metamodel:ForkNode
+
+	FunctionBehavior.Allocated extendsConcept UML-metamodel:FunctionBehavior
+
+	FunctionBehavior.Block extendsConcept UML-metamodel:FunctionBehavior
+
+	FunctionBehavior.ControlOperator extendsConcept UML-metamodel:FunctionBehavior
+
+	FunctionBehavior.RequirementRelated extendsConcept UML-metamodel:FunctionBehavior
+
+	FunctionBehavior.TestCase extendsConcept UML-metamodel:FunctionBehavior
+
+	FunctionBehavior.Viewpoint extendsConcept UML-metamodel:FunctionBehavior
+
+	Gate.Allocated extendsConcept UML-metamodel:Gate
+
+	Gate.RequirementRelated extendsConcept UML-metamodel:Gate
+
+	GeneralOrdering.Allocated extendsConcept UML-metamodel:GeneralOrdering
+
+	GeneralOrdering.RequirementRelated extendsConcept UML-metamodel:GeneralOrdering
+
+	GeneralizationSet.Allocated extendsConcept UML-metamodel:GeneralizationSet
+
+	GeneralizationSet.RequirementRelated extendsConcept UML-metamodel:GeneralizationSet
+
+	Include.Allocated extendsConcept UML-metamodel:Include
+
+	Include.RequirementRelated extendsConcept UML-metamodel:Include
+
+	InformationFlow.Allocated extendsConcept UML-metamodel:InformationFlow
+
+	InformationFlow.ItemFlow extendsConcept UML-metamodel:InformationFlow
+
+	InformationFlow.RequirementRelated extendsConcept UML-metamodel:InformationFlow
+
+	InformationItem.Allocated extendsConcept UML-metamodel:InformationItem
+
+	InformationItem.PropertySpecificType extendsConcept UML-metamodel:InformationItem
+
+	InformationItem.RequirementRelated extendsConcept UML-metamodel:InformationItem
+
+	InitialNode.Allocated extendsConcept UML-metamodel:InitialNode
+
+	InitialNode.RequirementRelated extendsConcept UML-metamodel:InitialNode
+
+	InputPin.Allocated extendsConcept UML-metamodel:InputPin
+
+	InputPin.NoBuffer extendsConcept UML-metamodel:InputPin
+
+	InputPin.Overwrite extendsConcept UML-metamodel:InputPin
+
+	InputPin.RequirementRelated extendsConcept UML-metamodel:InputPin
+
+	InstanceSpecification.Allocated extendsConcept UML-metamodel:InstanceSpecification
+
+	InstanceSpecification.RequirementRelated extendsConcept UML-metamodel:InstanceSpecification
+
+	InstanceValue.Allocated extendsConcept UML-metamodel:InstanceValue
+
+	InstanceValue.RequirementRelated extendsConcept UML-metamodel:InstanceValue
+
+	Interaction.Allocated extendsConcept UML-metamodel:Interaction
+
+	Interaction.Block extendsConcept UML-metamodel:Interaction
+
+	Interaction.ControlOperator extendsConcept UML-metamodel:Interaction
+
+	Interaction.RequirementRelated extendsConcept UML-metamodel:Interaction
+
+	Interaction.TestCase extendsConcept UML-metamodel:Interaction
+
+	Interaction.Viewpoint extendsConcept UML-metamodel:Interaction
+
+	InteractionConstraint.Allocated extendsConcept UML-metamodel:InteractionConstraint
+
+	InteractionConstraint.RequirementRelated extendsConcept UML-metamodel:InteractionConstraint
+
+	InteractionOperand.Allocated extendsConcept UML-metamodel:InteractionOperand
+
+	InteractionOperand.RequirementRelated extendsConcept UML-metamodel:InteractionOperand
+
+	InteractionUse.Allocated extendsConcept UML-metamodel:InteractionUse
+
+	InteractionUse.RequirementRelated extendsConcept UML-metamodel:InteractionUse
+
+	Interface.Allocated extendsConcept UML-metamodel:Interface
+
+	Interface.FlowSpecification extendsConcept UML-metamodel:Interface
+
+	Interface.RequirementRelated extendsConcept UML-metamodel:Interface
+
+	InterfaceRealization.Allocate extendsConcept UML-metamodel:InterfaceRealization
+
+	InterfaceRealization.Allocated extendsConcept UML-metamodel:InterfaceRealization
+
+	InterfaceRealization.Conform extendsConcept UML-metamodel:InterfaceRealization
+
+	InterfaceRealization.RequirementRelated extendsConcept UML-metamodel:InterfaceRealization
+
+	InterfaceRealization.Trace.Copy extendsConcept StandardProfileL2-metamodel:InterfaceRealization.Trace
+
+	InterfaceRealization.Trace.DeriveReqt extendsConcept StandardProfileL2-metamodel:InterfaceRealization.Trace
+
+	InterfaceRealization.Trace.Satisfy extendsConcept StandardProfileL2-metamodel:InterfaceRealization.Trace
+
+	InterfaceRealization.Trace.Verify extendsConcept StandardProfileL2-metamodel:InterfaceRealization.Trace
+
+	InterruptibleActivityRegion.Allocated extendsConcept UML-metamodel:InterruptibleActivityRegion
+
+	InterruptibleActivityRegion.RequirementRelated extendsConcept UML-metamodel:InterruptibleActivityRegion
+
+	Interval.Allocated extendsConcept UML-metamodel:Interval
+
+	Interval.RequirementRelated extendsConcept UML-metamodel:Interval
+
+	IntervalConstraint.Allocated extendsConcept UML-metamodel:IntervalConstraint
+
+	IntervalConstraint.RequirementRelated extendsConcept UML-metamodel:IntervalConstraint
+
+	JoinNode.Allocated extendsConcept UML-metamodel:JoinNode
+
+	JoinNode.RequirementRelated extendsConcept UML-metamodel:JoinNode
+
+	Lifeline.Allocated extendsConcept UML-metamodel:Lifeline
+
+	Lifeline.RequirementRelated extendsConcept UML-metamodel:Lifeline
+
+	LoopNode.Allocated extendsConcept UML-metamodel:LoopNode
+
+	LoopNode.RequirementRelated extendsConcept UML-metamodel:LoopNode
+
+	Manifestation.Allocate extendsConcept UML-metamodel:Manifestation
+
+	Manifestation.Allocated extendsConcept UML-metamodel:Manifestation
+
+	Manifestation.Conform extendsConcept UML-metamodel:Manifestation
+
+	Manifestation.RequirementRelated extendsConcept UML-metamodel:Manifestation
+
+	Manifestation.Trace.Copy extendsConcept StandardProfileL2-metamodel:Manifestation.Trace
+
+	Manifestation.Trace.DeriveReqt extendsConcept StandardProfileL2-metamodel:Manifestation.Trace
+
+	Manifestation.Trace.Satisfy extendsConcept StandardProfileL2-metamodel:Manifestation.Trace
+
+	Manifestation.Trace.Verify extendsConcept StandardProfileL2-metamodel:Manifestation.Trace
+
+	MergeNode.Allocated extendsConcept UML-metamodel:MergeNode
+
+	MergeNode.RequirementRelated extendsConcept UML-metamodel:MergeNode
+
+	Message.Allocated extendsConcept UML-metamodel:Message
+
+	Message.RequirementRelated extendsConcept UML-metamodel:Message
+
+	MessageOccurrenceSpecification.Allocated extendsConcept UML-metamodel:MessageOccurrenceSpecification
+
+	MessageOccurrenceSpecification.RequirementRelated extendsConcept UML-metamodel:MessageOccurrenceSpecification
+
+	Model.Allocated extendsConcept UML-metamodel:Model
+
+	Model.RequirementRelated extendsConcept UML-metamodel:Model
+
+	Model.View extendsConcept UML-metamodel:Model
+
+	Node.Allocated extendsConcept UML-metamodel:Node
+
+	Node.RequirementRelated extendsConcept UML-metamodel:Node
+
+	Node.Viewpoint extendsConcept UML-metamodel:Node
+
+	ObjectFlow.Allocated extendsConcept UML-metamodel:ObjectFlow
+
+	ObjectFlow.Probability extendsConcept UML-metamodel:ObjectFlow
+
+	ObjectFlow.Rate.Continuous extendsConcept ObjectFlow.Rate
+
+	ObjectFlow.Rate.Discrete extendsConcept ObjectFlow.Rate
+
+	ObjectFlow.Rate extendsConcept UML-metamodel:ObjectFlow
+
+	ObjectFlow.RequirementRelated extendsConcept UML-metamodel:ObjectFlow
+
+	OccurrenceSpecification.Allocated extendsConcept UML-metamodel:OccurrenceSpecification
+
+	OccurrenceSpecification.RequirementRelated extendsConcept UML-metamodel:OccurrenceSpecification
+
+	OpaqueAction.Allocated extendsConcept UML-metamodel:OpaqueAction
+
+	OpaqueAction.RequirementRelated extendsConcept UML-metamodel:OpaqueAction
+
+	OpaqueBehavior.Allocated extendsConcept UML-metamodel:OpaqueBehavior
+
+	OpaqueBehavior.Block extendsConcept UML-metamodel:OpaqueBehavior
+
+	OpaqueBehavior.ControlOperator extendsConcept UML-metamodel:OpaqueBehavior
+
+	OpaqueBehavior.RequirementRelated extendsConcept UML-metamodel:OpaqueBehavior
+
+	OpaqueBehavior.TestCase extendsConcept UML-metamodel:OpaqueBehavior
+
+	OpaqueBehavior.Viewpoint extendsConcept UML-metamodel:OpaqueBehavior
+
+	OpaqueExpression.Allocated extendsConcept UML-metamodel:OpaqueExpression
+
+	OpaqueExpression.RequirementRelated extendsConcept UML-metamodel:OpaqueExpression
+
+	Operation.Allocated extendsConcept UML-metamodel:Operation
+
+	Operation.ControlOperator extendsConcept UML-metamodel:Operation
+
+	Operation.DirectedFeature extendsConcept UML-metamodel:Operation
+
+	Operation.RequirementRelated extendsConcept UML-metamodel:Operation
+
+	Operation.TestCase extendsConcept UML-metamodel:Operation
+
+	OutputPin.Allocated extendsConcept UML-metamodel:OutputPin
+
+	OutputPin.NoBuffer extendsConcept UML-metamodel:OutputPin
+
+	OutputPin.Overwrite extendsConcept UML-metamodel:OutputPin
+
+	OutputPin.RequirementRelated extendsConcept UML-metamodel:OutputPin
+
+	Package.Allocated extendsConcept UML-metamodel:Package
+
+	Package.RequirementRelated extendsConcept UML-metamodel:Package
+
+	Package.View extendsConcept UML-metamodel:Package
+
+	Parameter.Allocated extendsConcept UML-metamodel:Parameter
+
+	Parameter.Optional extendsConcept UML-metamodel:Parameter
+
+	Parameter.Rate.Continuous extendsConcept Parameter.Rate
+
+	Parameter.Rate.Discrete extendsConcept Parameter.Rate
+
+	Parameter.Rate extendsConcept UML-metamodel:Parameter
+
+	Parameter.RequirementRelated extendsConcept UML-metamodel:Parameter
+
+	ParameterSet.Allocated extendsConcept UML-metamodel:ParameterSet
+
+	ParameterSet.Probability extendsConcept UML-metamodel:ParameterSet
+
+	ParameterSet.RequirementRelated extendsConcept UML-metamodel:ParameterSet
+
+	PartDecomposition.Allocated extendsConcept UML-metamodel:PartDecomposition
+
+	PartDecomposition.RequirementRelated extendsConcept UML-metamodel:PartDecomposition
+
+	Port.Allocated extendsConcept UML-metamodel:Port
+
+	Port.ConnectorProperty extendsConcept UML-metamodel:Port
+
+	Port.ConstraintProperty extendsConcept UML-metamodel:Port
+
+	Port.DirectedFeature extendsConcept UML-metamodel:Port
+
+	Port.DistributedProperty extendsConcept UML-metamodel:Port
+
+	Port.FlowPort extendsConcept UML-metamodel:Port
+
+	Port.FlowProperty extendsConcept UML-metamodel:Port
+
+	Port.FullPort extendsConcept UML-metamodel:Port
+
+	Port.ParticipantProperty extendsConcept UML-metamodel:Port
+
+	Port.ProxyPort extendsConcept UML-metamodel:Port
+
+	Port.RequirementRelated extendsConcept UML-metamodel:Port
+
+	Profile.Allocated extendsConcept UML-metamodel:Profile
+
+	Profile.RequirementRelated extendsConcept UML-metamodel:Profile
+
+	Profile.View extendsConcept UML-metamodel:Profile
+
+	Property.Allocated extendsConcept UML-metamodel:Property
+
+	Property.ConnectorProperty extendsConcept UML-metamodel:Property
+
+	Property.ConstraintProperty extendsConcept UML-metamodel:Property
+
+	Property.DirectedFeature extendsConcept UML-metamodel:Property
+
+	Property.DistributedProperty extendsConcept UML-metamodel:Property
+
+	Property.FlowProperty extendsConcept UML-metamodel:Property
+
+	Property.ParticipantProperty extendsConcept UML-metamodel:Property
+
+	Property.RequirementRelated extendsConcept UML-metamodel:Property
+
+	ProtocolStateMachine.Allocated extendsConcept UML-metamodel:ProtocolStateMachine
+
+	ProtocolStateMachine.Block extendsConcept UML-metamodel:ProtocolStateMachine
+
+	ProtocolStateMachine.ControlOperator extendsConcept UML-metamodel:ProtocolStateMachine
+
+	ProtocolStateMachine.RequirementRelated extendsConcept UML-metamodel:ProtocolStateMachine
+
+	ProtocolStateMachine.TestCase extendsConcept UML-metamodel:ProtocolStateMachine
+
+	ProtocolStateMachine.Viewpoint extendsConcept UML-metamodel:ProtocolStateMachine
+
+	ProtocolTransition.Allocated extendsConcept UML-metamodel:ProtocolTransition
+
+	ProtocolTransition.RequirementRelated extendsConcept UML-metamodel:ProtocolTransition
+
+	Pseudostate.Allocated extendsConcept UML-metamodel:Pseudostate
+
+	Pseudostate.RequirementRelated extendsConcept UML-metamodel:Pseudostate
+
+	RaiseExceptionAction.Allocated extendsConcept UML-metamodel:RaiseExceptionAction
+
+	RaiseExceptionAction.RequirementRelated extendsConcept UML-metamodel:RaiseExceptionAction
+
+	ReadExtentAction.Allocated extendsConcept UML-metamodel:ReadExtentAction
+
+	ReadExtentAction.RequirementRelated extendsConcept UML-metamodel:ReadExtentAction
+
+	ReadIsClassifiedObjectAction.Allocated extendsConcept UML-metamodel:ReadIsClassifiedObjectAction
+
+	ReadIsClassifiedObjectAction.RequirementRelated extendsConcept UML-metamodel:ReadIsClassifiedObjectAction
+
+	ReadLinkAction.Allocated extendsConcept UML-metamodel:ReadLinkAction
+
+	ReadLinkAction.RequirementRelated extendsConcept UML-metamodel:ReadLinkAction
+
+	ReadLinkObjectEndAction.Allocated extendsConcept UML-metamodel:ReadLinkObjectEndAction
+
+	ReadLinkObjectEndAction.RequirementRelated extendsConcept UML-metamodel:ReadLinkObjectEndAction
+
+	ReadLinkObjectEndQualifierAction.Allocated extendsConcept UML-metamodel:ReadLinkObjectEndQualifierAction
+
+	ReadLinkObjectEndQualifierAction.RequirementRelated extendsConcept UML-metamodel:ReadLinkObjectEndQualifierAction
+
+	ReadSelfAction.Allocated extendsConcept UML-metamodel:ReadSelfAction
+
+	ReadSelfAction.RequirementRelated extendsConcept UML-metamodel:ReadSelfAction
+
+	ReadStructuralFeatureAction.Allocated extendsConcept UML-metamodel:ReadStructuralFeatureAction
+
+	ReadStructuralFeatureAction.RequirementRelated extendsConcept UML-metamodel:ReadStructuralFeatureAction
+
+	ReadVariableAction.Allocated extendsConcept UML-metamodel:ReadVariableAction
+
+	ReadVariableAction.RequirementRelated extendsConcept UML-metamodel:ReadVariableAction
+
+	Realization.Allocate extendsConcept UML-metamodel:Realization
+
+	Realization.Allocated extendsConcept UML-metamodel:Realization
+
+	Realization.Conform extendsConcept UML-metamodel:Realization
+
+	Realization.RequirementRelated extendsConcept UML-metamodel:Realization
+
+	Realization.Trace.Copy extendsConcept StandardProfileL2-metamodel:Realization.Trace
+
+	Realization.Trace.DeriveReqt extendsConcept StandardProfileL2-metamodel:Realization.Trace
+
+	Realization.Trace.Satisfy extendsConcept StandardProfileL2-metamodel:Realization.Trace
+
+	Realization.Trace.Verify extendsConcept StandardProfileL2-metamodel:Realization.Trace
+
+	Reception.Allocated extendsConcept UML-metamodel:Reception
+
+	Reception.DirectedFeature extendsConcept UML-metamodel:Reception
+
+	Reception.RequirementRelated extendsConcept UML-metamodel:Reception
+
+	ReclassifyObjectAction.Allocated extendsConcept UML-metamodel:ReclassifyObjectAction
+
+	ReclassifyObjectAction.RequirementRelated extendsConcept UML-metamodel:ReclassifyObjectAction
+
+	RedefinableTemplateSignature.Allocated extendsConcept UML-metamodel:RedefinableTemplateSignature
+
+	RedefinableTemplateSignature.RequirementRelated extendsConcept UML-metamodel:RedefinableTemplateSignature
+
+	ReduceAction.Allocated extendsConcept UML-metamodel:ReduceAction
+
+	ReduceAction.RequirementRelated extendsConcept UML-metamodel:ReduceAction
+
+	Region.Allocated extendsConcept UML-metamodel:Region
+
+	Region.RequirementRelated extendsConcept UML-metamodel:Region
+
+	RemoveStructuralFeatureValueAction.Allocated extendsConcept UML-metamodel:RemoveStructuralFeatureValueAction
+
+	RemoveStructuralFeatureValueAction.RequirementRelated extendsConcept UML-metamodel:RemoveStructuralFeatureValueAction
+
+	RemoveVariableValueAction.Allocated extendsConcept UML-metamodel:RemoveVariableValueAction
+
+	RemoveVariableValueAction.RequirementRelated extendsConcept UML-metamodel:RemoveVariableValueAction
+
+	ReplyAction.Allocated extendsConcept UML-metamodel:ReplyAction
+
+	ReplyAction.RequirementRelated extendsConcept UML-metamodel:ReplyAction
+
+	SendObjectAction.Allocated extendsConcept UML-metamodel:SendObjectAction
+
+	SendObjectAction.InvocationOnNestedPortAction extendsConcept UML-metamodel:SendObjectAction
+
+	SendObjectAction.RequirementRelated extendsConcept UML-metamodel:SendObjectAction
+
+	SendSignalAction.Allocated extendsConcept UML-metamodel:SendSignalAction
+
+	SendSignalAction.InvocationOnNestedPortAction extendsConcept UML-metamodel:SendSignalAction
+
+	SendSignalAction.RequirementRelated extendsConcept UML-metamodel:SendSignalAction
+
+	SequenceNode.Allocated extendsConcept UML-metamodel:SequenceNode
+
+	SequenceNode.RequirementRelated extendsConcept UML-metamodel:SequenceNode
+
+	Signal.Allocated extendsConcept UML-metamodel:Signal
+
+	Signal.PropertySpecificType extendsConcept UML-metamodel:Signal
+
+	Signal.RequirementRelated extendsConcept UML-metamodel:Signal
+
+	SignalEvent.Allocated extendsConcept UML-metamodel:SignalEvent
+
+	SignalEvent.RequirementRelated extendsConcept UML-metamodel:SignalEvent
+
+	StartClassifierBehaviorAction.Allocated extendsConcept UML-metamodel:StartClassifierBehaviorAction
+
+	StartClassifierBehaviorAction.RequirementRelated extendsConcept UML-metamodel:StartClassifierBehaviorAction
+
+	StartObjectBehaviorAction.Allocated extendsConcept UML-metamodel:StartObjectBehaviorAction
+
+	StartObjectBehaviorAction.InvocationOnNestedPortAction extendsConcept UML-metamodel:StartObjectBehaviorAction
+
+	StartObjectBehaviorAction.RequirementRelated extendsConcept UML-metamodel:StartObjectBehaviorAction
+
+	State.Allocated extendsConcept UML-metamodel:State
+
+	State.RequirementRelated extendsConcept UML-metamodel:State
+
+	StateInvariant.Allocated extendsConcept UML-metamodel:StateInvariant
+
+	StateInvariant.RequirementRelated extendsConcept UML-metamodel:StateInvariant
+
+	StateMachine.Allocated extendsConcept UML-metamodel:StateMachine
+
+	StateMachine.Block extendsConcept UML-metamodel:StateMachine
+
+	StateMachine.ControlOperator extendsConcept UML-metamodel:StateMachine
+
+	StateMachine.RequirementRelated extendsConcept UML-metamodel:StateMachine
+
+	StateMachine.TestCase extendsConcept UML-metamodel:StateMachine
+
+	StateMachine.Viewpoint extendsConcept UML-metamodel:StateMachine
+
+	StringExpression.Allocated extendsConcept UML-metamodel:StringExpression
+
+	StringExpression.RequirementRelated extendsConcept UML-metamodel:StringExpression
+
+	StructuredActivityNode.Allocated extendsConcept UML-metamodel:StructuredActivityNode
+
+	StructuredActivityNode.RequirementRelated extendsConcept UML-metamodel:StructuredActivityNode
+
+	Substitution.Allocate extendsConcept UML-metamodel:Substitution
+
+	Substitution.Allocated extendsConcept UML-metamodel:Substitution
+
+	Substitution.Conform extendsConcept UML-metamodel:Substitution
+
+	Substitution.RequirementRelated extendsConcept UML-metamodel:Substitution
+
+	Substitution.Trace.Copy extendsConcept StandardProfileL2-metamodel:Substitution.Trace
+
+	Substitution.Trace.DeriveReqt extendsConcept StandardProfileL2-metamodel:Substitution.Trace
+
+	Substitution.Trace.Satisfy extendsConcept StandardProfileL2-metamodel:Substitution.Trace
+
+	Substitution.Trace.Verify extendsConcept StandardProfileL2-metamodel:Substitution.Trace
+
+	TestIdentityAction.Allocated extendsConcept UML-metamodel:TestIdentityAction
+
+	TestIdentityAction.RequirementRelated extendsConcept UML-metamodel:TestIdentityAction
+
+	TimeConstraint.Allocated extendsConcept UML-metamodel:TimeConstraint
+
+	TimeConstraint.RequirementRelated extendsConcept UML-metamodel:TimeConstraint
+
+	TimeEvent.Allocated extendsConcept UML-metamodel:TimeEvent
+
+	TimeEvent.RequirementRelated extendsConcept UML-metamodel:TimeEvent
+
+	TimeExpression.Allocated extendsConcept UML-metamodel:TimeExpression
+
+	TimeExpression.RequirementRelated extendsConcept UML-metamodel:TimeExpression
+
+	TimeInterval.Allocated extendsConcept UML-metamodel:TimeInterval
+
+	TimeInterval.RequirementRelated extendsConcept UML-metamodel:TimeInterval
+
+	TimeObservation.Allocated extendsConcept UML-metamodel:TimeObservation
+
+	TimeObservation.RequirementRelated extendsConcept UML-metamodel:TimeObservation
+
+	Transition.Allocated extendsConcept UML-metamodel:Transition
+
+	Transition.RequirementRelated extendsConcept UML-metamodel:Transition
+
+	Trigger.Allocated extendsConcept UML-metamodel:Trigger
+
+	Trigger.RequirementRelated extendsConcept UML-metamodel:Trigger
+
+	Trigger.TriggerOnNestedPort extendsConcept UML-metamodel:Trigger
+
+	UnmarshallAction.Allocated extendsConcept UML-metamodel:UnmarshallAction
+
+	UnmarshallAction.RequirementRelated extendsConcept UML-metamodel:UnmarshallAction
+
+	Usage.Allocated extendsConcept UML-metamodel:Usage
+
+	Usage.Conform extendsConcept UML-metamodel:Usage
+
+	Usage.RequirementRelated extendsConcept UML-metamodel:Usage
+
+	UseCase.Allocated extendsConcept UML-metamodel:UseCase
+
+	UseCase.PropertySpecificType extendsConcept UML-metamodel:UseCase
+
+	UseCase.RequirementRelated extendsConcept UML-metamodel:UseCase
+
+	ValuePin.Allocated extendsConcept UML-metamodel:ValuePin
+
+	ValuePin.NoBuffer extendsConcept UML-metamodel:ValuePin
+
+	ValuePin.Overwrite extendsConcept UML-metamodel:ValuePin
+
+	ValuePin.RequirementRelated extendsConcept UML-metamodel:ValuePin
+
+	ValueSpecificationAction.Allocated extendsConcept UML-metamodel:ValueSpecificationAction
+
+	ValueSpecificationAction.RequirementRelated extendsConcept UML-metamodel:ValueSpecificationAction
+
+	Variable.Allocated extendsConcept UML-metamodel:Variable
+
+	Variable.RequirementRelated extendsConcept UML-metamodel:Variable
+
+	Abstraction.Allocate extendsAspect SysML:Abstraction.Allocate
+
+	Abstraction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Abstraction.Conform extendsAspect SysML:Dependency.Conform
+
+	Abstraction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Abstraction.Trace.Copy extendsAspect SysML:Trace.Copy
+
+	Abstraction.Trace.DeriveReqt extendsAspect SysML:Trace.DeriveReqt
+
+	Abstraction.Trace.Satisfy extendsAspect SysML:Trace.Satisfy
+
+	Abstraction.Trace.Verify extendsAspect SysML:Trace.Verify
+
+	AcceptCallAction.AcceptChangeStructuralFeatureEventAction extendsAspect SysML:AcceptEventAction.AcceptChangeStructuralFeatureEventAction
+
+	AcceptCallAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	AcceptCallAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	AcceptEventAction.AcceptChangeStructuralFeatureEventAction extendsAspect SysML:AcceptEventAction.AcceptChangeStructuralFeatureEventAction
+
+	AcceptEventAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	AcceptEventAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ActionExecutionSpecification.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ActionExecutionSpecification.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ActionInputPin.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ActionInputPin.NoBuffer extendsAspect SysML:ObjectNode.NoBuffer
+
+	ActionInputPin.Overwrite extendsAspect SysML:ObjectNode.Overwrite
+
+	ActionInputPin.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Activity.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Activity.Block extendsAspect SysML:Class.Block
+
+	Activity.ControlOperator extendsAspect SysML:Behavior.ControlOperator
+
+	Activity.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Activity.TestCase extendsAspect SysML:Behavior.TestCase
+
+	Activity.Viewpoint extendsAspect SysML:Class.Viewpoint
+
+	ActivityFinalNode.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ActivityFinalNode.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ActivityParameterNode.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ActivityParameterNode.NoBuffer extendsAspect SysML:ObjectNode.NoBuffer
+
+	ActivityParameterNode.Overwrite extendsAspect SysML:ObjectNode.Overwrite
+
+	ActivityParameterNode.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ActivityPartition.AllocateActivityPartition extendsAspect SysML:ActivityPartition.AllocateActivityPartition
+
+	ActivityPartition.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ActivityPartition.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Actor.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Actor.PropertySpecificType extendsAspect SysML:Classifier.PropertySpecificType
+
+	Actor.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	AddStructuralFeatureValueAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	AddStructuralFeatureValueAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	AddVariableValueAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	AddVariableValueAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	AnyReceiveEvent.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	AnyReceiveEvent.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Artifact.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Artifact.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Association.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Association.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	AssociationClass.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	AssociationClass.Block extendsAspect SysML:Class.Block
+
+	AssociationClass.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	AssociationClass.Viewpoint extendsAspect SysML:Class.Viewpoint
+
+	BehaviorExecutionSpecification.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	BehaviorExecutionSpecification.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	BroadcastSignalAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	BroadcastSignalAction.InvocationOnNestedPortAction extendsAspect SysML:InvocationAction.InvocationOnNestedPortAction
+
+	BroadcastSignalAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	CallBehaviorAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	CallBehaviorAction.InvocationOnNestedPortAction extendsAspect SysML:InvocationAction.InvocationOnNestedPortAction
+
+	CallBehaviorAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	CallEvent.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	CallEvent.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	CallOperationAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	CallOperationAction.InvocationOnNestedPortAction extendsAspect SysML:InvocationAction.InvocationOnNestedPortAction
+
+	CallOperationAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	CentralBufferNode.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	CentralBufferNode.NoBuffer extendsAspect SysML:ObjectNode.NoBuffer
+
+	CentralBufferNode.Overwrite extendsAspect SysML:ObjectNode.Overwrite
+
+	CentralBufferNode.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ChangeEvent.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ChangeEvent.ChangeStructuralFeatureEvent extendsAspect SysML:ChangeEvent.ChangeStructuralFeatureEvent
+
+	ChangeEvent.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Class.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Class.Block.ConstraintBlock extendsAspect SysML:Block.ConstraintBlock
+
+	Class.Block.InterfaceBlock extendsAspect SysML:Block.InterfaceBlock
+
+	Class.Block extendsAspect SysML:Class.Block
+
+	Class.PropertySpecificType extendsAspect SysML:Classifier.PropertySpecificType
+
+	Class.Requirement extendsAspect SysML:Class.Requirement
+
+	Class.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Class.Viewpoint extendsAspect SysML:Class.Viewpoint
+
+	ClearAssociationAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ClearAssociationAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ClearStructuralFeatureAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ClearStructuralFeatureAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ClearVariableAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ClearVariableAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Collaboration.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Collaboration.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	CollaborationUse.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	CollaborationUse.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	CombinedFragment.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	CombinedFragment.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Comment.Problem extendsAspect SysML:Comment.Problem
+
+	Comment.Rationale extendsAspect SysML:Comment.Rationale
+
+	CommunicationPath.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	CommunicationPath.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Component.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Component.Block.ConstraintBlock extendsAspect SysML:Block.ConstraintBlock
+
+	Component.Block extendsAspect SysML:Class.Block
+
+	Component.PropertySpecificType extendsAspect SysML:Classifier.PropertySpecificType
+
+	Component.Requirement extendsAspect SysML:Class.Requirement
+
+	Component.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Component.Viewpoint extendsAspect SysML:Class.Viewpoint
+
+	ComponentRealization.Allocate extendsAspect SysML:Abstraction.Allocate
+
+	ComponentRealization.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ComponentRealization.Conform extendsAspect SysML:Dependency.Conform
+
+	ComponentRealization.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ComponentRealization.Trace.Copy extendsAspect SysML:Trace.Copy
+
+	ComponentRealization.Trace.DeriveReqt extendsAspect SysML:Trace.DeriveReqt
+
+	ComponentRealization.Trace.Satisfy extendsAspect SysML:Trace.Satisfy
+
+	ComponentRealization.Trace.Verify extendsAspect SysML:Trace.Verify
+
+	ConditionalNode.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ConditionalNode.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ConnectionPointReference.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ConnectionPointReference.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Connector.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Connector.BindingConnector extendsAspect SysML:Connector.BindingConnector
+
+	Connector.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ConnectorEnd.NestedConnectorEnd extendsAspect SysML:ConnectorEnd.NestedConnectorEnd
+
+	ConsiderIgnoreFragment.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ConsiderIgnoreFragment.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Constraint.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Constraint.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Continuation.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Continuation.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ControlFlow.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ControlFlow.Probability extendsAspect SysML:ActivityEdge.Probability
+
+	ControlFlow.Rate.Continuous extendsAspect SysML:Rate.Continuous
+
+	ControlFlow.Rate.Discrete extendsAspect SysML:Rate.Discrete
+
+	ControlFlow.Rate extendsAspect SysML:ActivityEdge.Rate
+
+	ControlFlow.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	CreateLinkAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	CreateLinkAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	CreateLinkObjectAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	CreateLinkObjectAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	CreateObjectAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	CreateObjectAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	DataStoreNode.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	DataStoreNode.NoBuffer extendsAspect SysML:ObjectNode.NoBuffer
+
+	DataStoreNode.Overwrite extendsAspect SysML:ObjectNode.Overwrite
+
+	DataStoreNode.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	DecisionNode.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	DecisionNode.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Dependency.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Dependency.Conform extendsAspect SysML:Dependency.Conform
+
+	Dependency.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Deployment.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Deployment.Conform extendsAspect SysML:Dependency.Conform
+
+	Deployment.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	DeploymentSpecification.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	DeploymentSpecification.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	DestroyLinkAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	DestroyLinkAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	DestroyObjectAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	DestroyObjectAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	DestructionOccurrenceSpecification.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	DestructionOccurrenceSpecification.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Device.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Device.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Device.Viewpoint extendsAspect SysML:Class.Viewpoint
+
+	Duration.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Duration.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	DurationConstraint.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	DurationConstraint.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	DurationInterval.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	DurationInterval.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	DurationObservation.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	DurationObservation.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ElementValue.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ElementValue.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ExecutionEnvironment.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ExecutionEnvironment.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ExecutionEnvironment.Viewpoint extendsAspect SysML:Class.Viewpoint
+
+	ExecutionOccurrenceSpecification.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ExecutionOccurrenceSpecification.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ExpansionNode.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ExpansionNode.NoBuffer extendsAspect SysML:ObjectNode.NoBuffer
+
+	ExpansionNode.Overwrite extendsAspect SysML:ObjectNode.Overwrite
+
+	ExpansionNode.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ExpansionRegion.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ExpansionRegion.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Expression.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Expression.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Extend.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Extend.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ExtensionPoint.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ExtensionPoint.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	FinalState.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	FinalState.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	FlowFinalNode.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	FlowFinalNode.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ForkNode.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ForkNode.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	FunctionBehavior.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	FunctionBehavior.Block extendsAspect SysML:Class.Block
+
+	FunctionBehavior.ControlOperator extendsAspect SysML:Behavior.ControlOperator
+
+	FunctionBehavior.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	FunctionBehavior.TestCase extendsAspect SysML:Behavior.TestCase
+
+	FunctionBehavior.Viewpoint extendsAspect SysML:Class.Viewpoint
+
+	Gate.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Gate.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	GeneralOrdering.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	GeneralOrdering.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	GeneralizationSet.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	GeneralizationSet.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Include.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Include.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	InformationFlow.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	InformationFlow.ItemFlow extendsAspect SysML:InformationFlow.ItemFlow
+
+	InformationFlow.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	InformationItem.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	InformationItem.PropertySpecificType extendsAspect SysML:Classifier.PropertySpecificType
+
+	InformationItem.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	InitialNode.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	InitialNode.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	InputPin.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	InputPin.NoBuffer extendsAspect SysML:ObjectNode.NoBuffer
+
+	InputPin.Overwrite extendsAspect SysML:ObjectNode.Overwrite
+
+	InputPin.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	InstanceSpecification.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	InstanceSpecification.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	InstanceValue.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	InstanceValue.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Interaction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Interaction.Block extendsAspect SysML:Class.Block
+
+	Interaction.ControlOperator extendsAspect SysML:Behavior.ControlOperator
+
+	Interaction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Interaction.TestCase extendsAspect SysML:Behavior.TestCase
+
+	Interaction.Viewpoint extendsAspect SysML:Class.Viewpoint
+
+	InteractionConstraint.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	InteractionConstraint.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	InteractionOperand.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	InteractionOperand.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	InteractionUse.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	InteractionUse.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Interface.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Interface.FlowSpecification extendsAspect SysML:Interface.FlowSpecification
+
+	Interface.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	InterfaceRealization.Allocate extendsAspect SysML:Abstraction.Allocate
+
+	InterfaceRealization.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	InterfaceRealization.Conform extendsAspect SysML:Dependency.Conform
+
+	InterfaceRealization.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	InterfaceRealization.Trace.Copy extendsAspect SysML:Trace.Copy
+
+	InterfaceRealization.Trace.DeriveReqt extendsAspect SysML:Trace.DeriveReqt
+
+	InterfaceRealization.Trace.Satisfy extendsAspect SysML:Trace.Satisfy
+
+	InterfaceRealization.Trace.Verify extendsAspect SysML:Trace.Verify
+
+	InterruptibleActivityRegion.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	InterruptibleActivityRegion.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Interval.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Interval.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	IntervalConstraint.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	IntervalConstraint.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	JoinNode.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	JoinNode.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Lifeline.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Lifeline.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	LoopNode.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	LoopNode.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Manifestation.Allocate extendsAspect SysML:Abstraction.Allocate
+
+	Manifestation.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Manifestation.Conform extendsAspect SysML:Dependency.Conform
+
+	Manifestation.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Manifestation.Trace.Copy extendsAspect SysML:Trace.Copy
+
+	Manifestation.Trace.DeriveReqt extendsAspect SysML:Trace.DeriveReqt
+
+	Manifestation.Trace.Satisfy extendsAspect SysML:Trace.Satisfy
+
+	Manifestation.Trace.Verify extendsAspect SysML:Trace.Verify
+
+	MergeNode.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	MergeNode.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Message.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Message.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	MessageOccurrenceSpecification.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	MessageOccurrenceSpecification.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Model.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Model.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Model.View extendsAspect SysML:Package.View
+
+	Node.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Node.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Node.Viewpoint extendsAspect SysML:Class.Viewpoint
+
+	ObjectFlow.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ObjectFlow.Probability extendsAspect SysML:ActivityEdge.Probability
+
+	ObjectFlow.Rate.Continuous extendsAspect SysML:Rate.Continuous
+
+	ObjectFlow.Rate.Discrete extendsAspect SysML:Rate.Discrete
+
+	ObjectFlow.Rate extendsAspect SysML:ActivityEdge.Rate
+
+	ObjectFlow.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	OccurrenceSpecification.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	OccurrenceSpecification.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	OpaqueAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	OpaqueAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	OpaqueBehavior.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	OpaqueBehavior.Block extendsAspect SysML:Class.Block
+
+	OpaqueBehavior.ControlOperator extendsAspect SysML:Behavior.ControlOperator
+
+	OpaqueBehavior.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	OpaqueBehavior.TestCase extendsAspect SysML:Behavior.TestCase
+
+	OpaqueBehavior.Viewpoint extendsAspect SysML:Class.Viewpoint
+
+	OpaqueExpression.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	OpaqueExpression.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Operation.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Operation.ControlOperator extendsAspect SysML:Operation.ControlOperator
+
+	Operation.DirectedFeature extendsAspect SysML:Feature.DirectedFeature
+
+	Operation.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Operation.TestCase extendsAspect SysML:Operation.TestCase
+
+	OutputPin.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	OutputPin.NoBuffer extendsAspect SysML:ObjectNode.NoBuffer
+
+	OutputPin.Overwrite extendsAspect SysML:ObjectNode.Overwrite
+
+	OutputPin.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Package.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Package.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Package.View extendsAspect SysML:Package.View
+
+	Parameter.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Parameter.Optional extendsAspect SysML:Parameter.Optional
+
+	Parameter.Rate.Continuous extendsAspect SysML:Rate.Continuous
+
+	Parameter.Rate.Discrete extendsAspect SysML:Rate.Discrete
+
+	Parameter.Rate extendsAspect SysML:Parameter.Rate
+
+	Parameter.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ParameterSet.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ParameterSet.Probability extendsAspect SysML:ParameterSet.Probability
+
+	ParameterSet.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	PartDecomposition.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	PartDecomposition.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Port.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Port.ConnectorProperty extendsAspect SysML:Property.ConnectorProperty
+
+	Port.ConstraintProperty extendsAspect SysML:Property.ConstraintProperty
+
+	Port.DirectedFeature extendsAspect SysML:Feature.DirectedFeature
+
+	Port.DistributedProperty extendsAspect SysML:Property.DistributedProperty
+
+	Port.FlowPort extendsAspect SysML:Port.FlowPort
+
+	Port.FlowProperty extendsAspect SysML:Property.FlowProperty
+
+	Port.FullPort extendsAspect SysML:Port.FullPort
+
+	Port.ParticipantProperty extendsAspect SysML:Property.ParticipantProperty
+
+	Port.ProxyPort extendsAspect SysML:Port.ProxyPort
+
+	Port.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Profile.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Profile.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Profile.View extendsAspect SysML:Package.View
+
+	Property.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Property.ConnectorProperty extendsAspect SysML:Property.ConnectorProperty
+
+	Property.ConstraintProperty extendsAspect SysML:Property.ConstraintProperty
+
+	Property.DirectedFeature extendsAspect SysML:Feature.DirectedFeature
+
+	Property.DistributedProperty extendsAspect SysML:Property.DistributedProperty
+
+	Property.FlowProperty extendsAspect SysML:Property.FlowProperty
+
+	Property.ParticipantProperty extendsAspect SysML:Property.ParticipantProperty
+
+	Property.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ProtocolStateMachine.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ProtocolStateMachine.Block extendsAspect SysML:Class.Block
+
+	ProtocolStateMachine.ControlOperator extendsAspect SysML:Behavior.ControlOperator
+
+	ProtocolStateMachine.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ProtocolStateMachine.TestCase extendsAspect SysML:Behavior.TestCase
+
+	ProtocolStateMachine.Viewpoint extendsAspect SysML:Class.Viewpoint
+
+	ProtocolTransition.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ProtocolTransition.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Pseudostate.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Pseudostate.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	QuantityKind extendsAspect SysML:QuantityKind
+
+	RaiseExceptionAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	RaiseExceptionAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ReadExtentAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ReadExtentAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ReadIsClassifiedObjectAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ReadIsClassifiedObjectAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ReadLinkAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ReadLinkAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ReadLinkObjectEndAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ReadLinkObjectEndAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ReadLinkObjectEndQualifierAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ReadLinkObjectEndQualifierAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ReadSelfAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ReadSelfAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ReadStructuralFeatureAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ReadStructuralFeatureAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ReadVariableAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ReadVariableAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Realization.Allocate extendsAspect SysML:Abstraction.Allocate
+
+	Realization.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Realization.Conform extendsAspect SysML:Dependency.Conform
+
+	Realization.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Realization.Trace.Copy extendsAspect SysML:Trace.Copy
+
+	Realization.Trace.DeriveReqt extendsAspect SysML:Trace.DeriveReqt
+
+	Realization.Trace.Satisfy extendsAspect SysML:Trace.Satisfy
+
+	Realization.Trace.Verify extendsAspect SysML:Trace.Verify
+
+	Reception.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Reception.DirectedFeature extendsAspect SysML:Feature.DirectedFeature
+
+	Reception.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ReclassifyObjectAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ReclassifyObjectAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	RedefinableTemplateSignature.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	RedefinableTemplateSignature.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ReduceAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ReduceAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Region.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Region.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	RemoveStructuralFeatureValueAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	RemoveStructuralFeatureValueAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	RemoveVariableValueAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	RemoveVariableValueAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ReplyAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ReplyAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ScalarValueType extendsAspect SysML:ScalarValueType
+
+	SendObjectAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	SendObjectAction.InvocationOnNestedPortAction extendsAspect SysML:InvocationAction.InvocationOnNestedPortAction
+
+	SendObjectAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	SendSignalAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	SendSignalAction.InvocationOnNestedPortAction extendsAspect SysML:InvocationAction.InvocationOnNestedPortAction
+
+	SendSignalAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	SequenceNode.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	SequenceNode.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Signal.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Signal.PropertySpecificType extendsAspect SysML:Classifier.PropertySpecificType
+
+	Signal.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	SignalEvent.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	SignalEvent.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	StartClassifierBehaviorAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	StartClassifierBehaviorAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	StartObjectBehaviorAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	StartObjectBehaviorAction.InvocationOnNestedPortAction extendsAspect SysML:InvocationAction.InvocationOnNestedPortAction
+
+	StartObjectBehaviorAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	State.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	State.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	StateInvariant.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	StateInvariant.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	StateMachine.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	StateMachine.Block extendsAspect SysML:Class.Block
+
+	StateMachine.ControlOperator extendsAspect SysML:Behavior.ControlOperator
+
+	StateMachine.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	StateMachine.TestCase extendsAspect SysML:Behavior.TestCase
+
+	StateMachine.Viewpoint extendsAspect SysML:Class.Viewpoint
+
+	StringExpression.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	StringExpression.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	StructuredActivityNode.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	StructuredActivityNode.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	StructuredValueType extendsAspect SysML:StructuredValueType
+
+	Substitution.Allocate extendsAspect SysML:Abstraction.Allocate
+
+	Substitution.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Substitution.Conform extendsAspect SysML:Dependency.Conform
+
+	Substitution.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Substitution.Trace.Copy extendsAspect SysML:Trace.Copy
+
+	Substitution.Trace.DeriveReqt extendsAspect SysML:Trace.DeriveReqt
+
+	Substitution.Trace.Satisfy extendsAspect SysML:Trace.Satisfy
+
+	Substitution.Trace.Verify extendsAspect SysML:Trace.Verify
+
+	TestIdentityAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	TestIdentityAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	TimeConstraint.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	TimeConstraint.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	TimeEvent.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	TimeEvent.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	TimeExpression.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	TimeExpression.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	TimeInterval.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	TimeInterval.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	TimeObservation.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	TimeObservation.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Transition.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Transition.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Trigger.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Trigger.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Trigger.TriggerOnNestedPort extendsAspect SysML:Trigger.TriggerOnNestedPort
+
+	Unit extendsAspect SysML:Unit
+
+	UnmarshallAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	UnmarshallAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	Usage.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Usage.Conform extendsAspect SysML:Dependency.Conform
+
+	Usage.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	UseCase.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	UseCase.PropertySpecificType extendsAspect SysML:Classifier.PropertySpecificType
+
+	UseCase.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ValuePin.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ValuePin.NoBuffer extendsAspect SysML:ObjectNode.NoBuffer
+
+	ValuePin.Overwrite extendsAspect SysML:ObjectNode.Overwrite
+
+	ValuePin.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ValueSpecificationAction.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	ValueSpecificationAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+	ValueType extendsAspect SysML:ValueType
+
+	Variable.Allocated extendsAspect SysML:NamedElement.Allocated
+
+	Variable.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
+
+}

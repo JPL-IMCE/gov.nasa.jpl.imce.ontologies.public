@@ -1,0 +1,67 @@
+@dc:rights="""Copyright 2010-2011, by the California Institute of Technology. ALL RIGHTS
+   RESERVED. United States Government Sponsorship acknowledged. Any commercial
+   use must be negotiated with the Office of Technology Transfer at the
+   California Institute of Technology. This software may be subject to U.S.
+   export control laws. By accepting this software, the user agrees to comply
+   with all applicable U.S. export laws and regulations. User has the
+   responsibility to obtain export licenses, or other export authority as may be
+   required before exporting such information to foreign countries or providing
+   access to foreign persons."""
+@owl:versionInfo="""$Revision$"""
+@dc:date="""$Date$"""
+@dc:creator="""Systems Engineering & Formulation Division"""
+open terminology <http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis-embedding> {
+
+	extends <http://imce.jpl.nasa.gov/foundation/project/project-embedding>
+
+	extends <http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis>
+
+	state-analysis:Elaboratable extendsConcept SysML-metamodel:Component.Block
+
+	state-analysis:MeasurementModel extendsConcept SysML-metamodel:Component.Block
+
+	state-analysis:ScheduledActivity extendsConcept UML-metamodel:Activity
+
+	state-analysis:StateEffectsModel extendsConcept SysML-metamodel:Component.Block
+
+	state-analysis:StateValue extendsConcept UML-metamodel:Signal
+
+	state-analysis:StateVariable extendsConcept UML-metamodel:Property
+
+	state-analysis:StateVariableGroup extendsConcept SysML-metamodel:Component.Block
+
+	state-analysis:Affects extendsRelationship owl2-mof2:BinaryDependency
+
+	state-analysis:Concurrent extendsRelationship owl2-mof2:BinaryDependency
+
+	state-analysis:Constrains extendsRelationship owl2-mof2:BinaryDependency
+
+	state-analysis:DescribesDynamicsOf extendsRelationship owl2-mof2:BinaryDependency
+
+	state-analysis:DescribesFrameTransformationBetween extendsRelationship owl2-mof2:BinaryDependency
+
+	state-analysis:Elaborates extendsRelationship owl2-mof2:BinaryDependency
+
+	state-analysis:EndsAt extendsRelationship owl2-mof2:BinaryDependency
+
+	state-analysis:GroupsRelations extendsRelationship owl2-mof2:BinaryDependency
+
+	state-analysis:HasDependentStateVariable extendsRelationship owl2-mof2:BinaryDependency
+
+	state-analysis:HasDynamicsDescribedBy extendsRelationship owl2-mof2:BinaryDependency
+
+	state-analysis:HasIndependentStateVariable extendsRelationship owl2-mof2:BinaryDependency
+
+	state-analysis:MapsElements extendsRelationship owl2-mof2:BinaryDependency
+
+	state-analysis:OwnsStates extendsRelationship owl2-mof2:BinaryDependency
+
+	state-analysis:Prerequisite extendsRelationship owl2-mof2:BinaryDependency
+
+	state-analysis:Schedules extendsRelationship owl2-mof2:BinaryDependency
+
+	state-analysis:StartsAt extendsRelationship owl2-mof2:BinaryDependency
+
+	mission:PerformingElement extendsAspect owl2-mof2:BinaryDependencyEndType
+
+}

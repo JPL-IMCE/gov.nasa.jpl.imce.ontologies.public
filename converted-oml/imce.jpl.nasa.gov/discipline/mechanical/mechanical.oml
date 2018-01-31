@@ -1,0 +1,252 @@
+@dc:date="""$Date$"""
+@dc:description="""The Mechanical Ontology defines concepts and properties for Mechanical Engineering."""
+@dc:creator="""Systems Engineering & Formulation Division"""
+@dc:title="""Mechanical Ontology"""
+@owl:versionInfo="""$Revision$"""
+@dc:rights="""Copyright 2010-2016, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
+
+This software may be subject to U.S. export control laws. By accepting this software, the user agrees to comply with all applicable U.S. export laws and regulations. User has the responsibility to obtain export licenses,a or other export authority as may be required before exporting such information to foreign countries or providing access to foreign persons."""
+open terminology <http://imce.jpl.nasa.gov/discipline/mechanical/mechanical> {
+
+	extends <http://imce.jpl.nasa.gov/foundation/analysis/analysis>
+
+	extends <http://imce.jpl.nasa.gov/foundation/annotation/annotation>
+
+	aspect ContainingElement
+
+	aspect Section
+
+	@rdfs:comment="""Does not appear to be a mechanical concept. What is the intent?"""
+	aspect TaggedElement
+
+	concept ADHCylinder
+
+	@rdfs:comment="""Should be inherited from a geometry ontology."""
+	@rdfs:comment="""<classname>Arc</classname> is a kind of <classname>Geometry</classname>?"""
+	concept Arc
+
+	concept ArcCylinder
+
+	@rdfs:comment="""Should be inherited from a geometry ontology."""
+	concept Axis
+
+	concept Block
+
+	concept Body
+
+	concept BodyFeature
+
+	@rdfs:comment="""What does boolean mean in this context?"""
+	concept BooleanFeature
+
+	concept Chamfer
+
+	concept CircularArray
+
+	@rdfs:comment="""<classname>CombinedBodyFeature</classname>?"""
+	concept CombineBodyFeature
+
+	@rdfs:comment="""Specialization of <classname>mission:Component</classname>?"""
+	concept Component
+
+	concept CounterBoredHole
+
+	@rdfs:comment="""Should be inherited from a geometry ontology."""
+	@rdfs:comment="""No superclass?"""
+	concept Curve
+
+	@rdfs:comment="""Abstract?"""
+	concept Cylinder
+
+	@rdfs:comment="""Are <classname>Direction1</classname> and <classname>Direction2</classname> distinct types or merely distinct uses?"""
+	concept Direction1
+
+	@rdfs:comment="""Are <classname>Direction1</classname> and <classname>Direction2</classname> distinct types or merely distinct uses?"""
+	concept Direction2
+
+	concept EdgeBlend
+
+	@rdfs:comment="""Not a noun. <classname>Boss</classname>?"""
+	concept Emboss
+
+	concept ExtractedFace
+
+	@rdfs:comment="""Not a noun. <classname>Extrusion</classname>?"""
+	concept Extrude
+
+	@rdfs:comment="""Abstract?"""
+	concept Feature
+
+	@rdfs:comment="""Is this a concept definition or a categorization? <classname>GeometricFeature</classname>?"""
+	concept Geometry
+
+	@rdfs:comment="""Abstract?"""
+	concept Hole
+
+	@rdfs:comment="""Subclass of <classname>BooleanFeature</classname>?"""
+	@rdfs:comment="""Not a noun. <classname>Intersection</classname>?"""
+	concept Intersect
+
+	@rdfs:comment="""Should be inherited from a geometry ontology."""
+	@rdfs:comment="""<classname>Line</classname> is a kind of <classname>Geometry</classname>?"""
+	concept Line
+
+	@rdfs:comment="""Abstract?"""
+	concept LinearDirection
+
+	concept LinkedCounterboredScrew
+
+	concept LinkedMirrorBody
+
+	@rdfs:comment="""What is a <classname>NotPart</classname>?"""
+	concept NotPart
+
+	@rdfs:comment="""NX-specific."""
+	concept NxModel
+
+	@rdfs:comment="""NX-specific."""
+	concept NxObject
+
+	@rdfs:comment="""What distinguishes a <classname>PatternFeature</classname> from a <classname>BodyFeature</classname>?"""
+	concept PatternFeature
+
+	@rdfs:comment="""<classname>Point</classname> is a kind of <classname>Geometry</classname>?"""
+	@rdfs:comment="""Should be inherited from a geometry ontology."""
+	concept Point
+
+	@rdfs:comment="""Plural. <classname>PrimitiveFeature</classname>?"""
+	concept PrimitiveFeatures
+
+	@rdfs:comment="""Not a noun. <classname>Radiation?</classname>?"""
+	concept Radiate
+
+	concept RectangularArray
+
+	@rdfs:comment="""Not a noun. <classname>Revolution</classname>?"""
+	concept Revolve
+
+	concept ScrewHoleSeries
+
+	concept SimpleHole
+
+	concept SimpleScrewHole
+
+	@rdfs:comment="""Does not appear to be a mechanical concept. What is the intent?"""
+	concept Sketch
+
+	@rdfs:comment="""Subclass of <classname>BooleanFeature</classname>?"""
+	concept Subtract
+
+	concept Sweep
+
+	concept ThreadedHole
+
+	concept Threads
+
+	concept TransformArray
+
+	@rdfs:comment="""Subclass of <classname>BooleanFeature</classname>?"""
+	concept Unite
+
+	ADHCylinder extendsConcept Cylinder
+
+	Arc extendsConcept Geometry
+
+	ArcCylinder extendsConcept Cylinder
+
+	Block extendsConcept PrimitiveFeatures
+
+	BodyFeature extendsConcept Feature
+
+	BooleanFeature extendsConcept BodyFeature
+
+	BooleanFeature extendsConcept CombineBodyFeature
+
+	BooleanFeature extendsConcept Intersect
+
+	BooleanFeature extendsConcept Subtract
+
+	BooleanFeature extendsConcept Unite
+
+	Chamfer extendsConcept BodyFeature
+
+	Component extendsConcept NxObject
+
+	CounterBoredHole extendsConcept Hole
+
+	Cylinder extendsConcept PrimitiveFeatures
+
+	Direction1 extendsConcept LinearDirection
+
+	Direction2 extendsConcept LinearDirection
+
+	EdgeBlend extendsConcept BodyFeature
+
+	Emboss extendsConcept BooleanFeature
+
+	Extrude extendsConcept BodyFeature
+
+	Hole extendsConcept BodyFeature
+
+	Line extendsConcept Geometry
+
+	NotPart extendsConcept NxObject
+
+	PatternFeature extendsConcept Feature
+
+	Point extendsConcept Geometry
+
+	PrimitiveFeatures extendsConcept BodyFeature
+
+	Revolve extendsConcept BodyFeature
+
+	SimpleHole extendsConcept Hole
+
+	SimpleScrewHole extendsConcept Hole
+
+	Sweep extendsConcept BodyFeature
+
+	ThreadedHole extendsConcept Hole
+
+	Arc extendsAspect TaggedElement
+
+	Component extendsAspect ContainingElement
+
+	Extrude extendsAspect TaggedElement
+
+	Line extendsAspect TaggedElement
+
+	Point extendsAspect TaggedElement
+
+	Section extendsAspect TaggedElement
+
+	Sketch extendsAspect TaggedElement
+
+	@rdfs:comment="""<classname>Asymmetric</classname>?"""
+	structure Assymetric
+
+	structure CountPitch
+
+	structure CountSpan
+
+	structure CrossSection
+
+	structure MassProperties
+
+	structure OffsetAngle
+
+	structure PitchSpan
+
+	@rdfs:comment="""Should be inherited from a geometry ontology."""
+	structure Point3d
+
+	structure Position
+
+	@rdfs:comment="""Abstract?"""
+	structure Spacing
+
+	structure Symmetric
+
+	structure Vector3d
+
+}

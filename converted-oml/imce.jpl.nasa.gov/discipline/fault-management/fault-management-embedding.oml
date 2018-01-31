@@ -1,0 +1,50 @@
+@dc:date="""
+   $Date$
+  """
+@dc:rights="""
+   Copyright 2010-2011, by the California Institute of Technology. ALL RIGHTS
+   RESERVED. United States Government Sponsorship acknowledged. Any commercial
+   use must be negotiated with the Office of Technology Transfer at the
+   California Institute of Technology. This software may be subject to U.S.
+   export control laws. By accepting this software, the user agrees to comply
+   with all applicable U.S. export laws and regulations. User has the
+   responsibility to obtain export licenses,a or other export authority as may
+   be required before exporting such information to foreign countries or
+   providing access to foreign persons.
+  """
+@owl:versionInfo="""
+   $Revision$
+  """
+open terminology <http://imce.jpl.nasa.gov/discipline/fault-management/fault-management-embedding> {
+
+	extends <http://imce.jpl.nasa.gov/foundation/behavior/behavior-embedding>
+
+	extends <http://imce.jpl.nasa.gov/discipline/fault-management/fault-management>
+
+	fault-management:DetectionMechanism extendsConcept SysML-metamodel:Component.Block
+
+	fault-management:Mitigation extendsConcept SysML-metamodel:Component.Block
+
+	fault-management:ModeContext extendsConcept SysML-metamodel:Component.Block
+
+	fault-management:Prevention extendsConcept SysML-metamodel:Component.Block
+
+	fault-management:AppliesIn extendsRelationship owl2-mof2:BinaryDependency
+
+	fault-management:Avoids extendsRelationship owl2-mof2:BinaryDependency
+
+	fault-management:Detects extendsRelationship owl2-mof2:BinaryDependency
+
+	fault-management:Encompasses extendsRelationship owl2-mof2:BinaryCompositeAssociation
+
+	fault-management:IsAccomplishedBy extendsRelationship owl2-mof2:BinaryDependency
+
+	fault-management:IsAssociatedWith extendsRelationship owl2-mof2:BinaryDependency
+
+	fault-management:IsPerformedBy extendsRelationship owl2-mof2:BinaryDependency
+
+	fault-management:IsValidFor extendsRelationship owl2-mof2:BinaryDependency
+
+	fault-management:Mitigates extendsRelationship owl2-mof2:BinaryDependency
+
+}

@@ -1,0 +1,36 @@
+annotationProperty oml:hasInverseLabel=<http://imce.jpl.nasa.gov/oml/oml#hasInverseLabel>
+
+annotationProperty oml:hasPropertyLabel=<http://imce.jpl.nasa.gov/oml/oml#hasPropertyLabel>
+
+annotationProperty oml:hasReificationLabel=<http://imce.jpl.nasa.gov/oml/oml#hasReificationLabel>
+
+annotationProperty oml:isOMLBundle=<http://imce.jpl.nasa.gov/oml/oml#isOMLBundle>
+
+annotationProperty oml:isOMLDescriptionBox=<http://imce.jpl.nasa.gov/oml/oml#isOMLDescriptionBox>
+
+annotationProperty oml:isOMLDescriptionBoxRefinable=<http://imce.jpl.nasa.gov/oml/oml#isOMLDescriptionBoxRefinable>
+
+annotationProperty oml:isOMLModule=<http://imce.jpl.nasa.gov/oml/oml#isOMLModule>
+
+annotationProperty oml:isOMLTerminologyBoxOpen=<http://imce.jpl.nasa.gov/oml/oml#isOMLTerminologyBoxOpen>
+
+annotationProperty oml:isOMLTerminologyGraph=<http://imce.jpl.nasa.gov/oml/oml#isOMLTerminologyGraph>
+
+annotationProperty oml:omlElementUUID=<http://imce.jpl.nasa.gov/oml/oml#omlElementUUID>
+
+@rdfs:comment="""This ontology has no logical axioms. It serves two purposes:
+1) Provide a vocabulary of OWL AnnotationProperties to disambiguate the interpretation of an OML module represented in OWL2-DL + SWRL rules
+2) Separate built-in OML modules that do not have an explicit OWL2-DL + SWRL representation from OML modules that have an explicit OWL2-DL + SWRL rules representation."""
+open terminology <http://imce.jpl.nasa.gov/oml/oml> {
+
+	extends <http://purl.org/dc/elements/1.1/>
+
+	extends <http://www.w3.org/1999/02/22-rdf-syntax-ns>
+
+	extends <http://www.w3.org/2001/XMLSchema>
+
+	extends <http://www.w3.org/2002/07/owl>
+
+	extends <http://www.w3.org/2000/01/rdf-schema>
+
+}
