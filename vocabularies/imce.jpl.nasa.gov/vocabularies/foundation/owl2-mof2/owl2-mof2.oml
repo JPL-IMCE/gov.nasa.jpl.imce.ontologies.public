@@ -1,0 +1,278 @@
+@dc:creator="""Systems Engineering & Formulation Division"""
+@dc:rights="""Copyright 2010-2014, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
+
+This software may be subject to U.S. export control laws. By accepting this software, the user agrees to comply with all applicable U.S. export laws and regulations. User has the responsibility to obtain export licenses,a or other export authority as may be required before exporting such information to foreign countries or providing access to foreign persons."""
+@owl:versionInfo="""$Revision$"""
+@dc:date="""$Date$"""
+@dc:description="""The owl2-mof2 ontology defines concepts and properties used to embed IMCE concepts and properties within UML."""
+open terminology <http://imce.jpl.nasa.gov/vocabularies/foundation/owl2-mof2/owl2-mof2> {
+
+	extends <http://imce.jpl.nasa.gov/vocabularies/foundation/annotation/annotation>
+
+	aspect BinaryAssociationBlock
+
+	aspect BinaryAssociationEndType
+
+	aspect BinaryDependencyEndType
+
+	aspect ClosedWorldKind
+
+	aspect ClosedWorldMetaClass
+
+	aspect ComponentConstraintBlock
+
+	aspect GroupViewDiagram
+
+	aspect NAryRelationship
+
+	aspect NAryRole
+
+	aspect ObjectPropertyDependentRangeType
+
+	aspect OpenWorldKind
+
+	aspect OpenWorldMetaClass
+
+	aspect Region
+
+	aspect State
+
+	aspect StateMachine
+
+	aspect StructuralBindingEndType
+
+	aspect StructuralConnectionEndType
+
+	aspect StructuralConnectionType
+
+	aspect StructuralFlowPropertyContainerType
+
+	aspect StructuralFlowPropertyType
+
+	aspect StructuralFullPortEncapsulatedClassifierType
+
+	aspect StructuralFullPortType
+
+	aspect StructuralParameterBehaviorType
+
+	aspect StructuralParameterType
+
+	aspect StructuralPropertyAspect
+
+	aspect Transition
+
+	reifiedRelationship BinaryAssociation {
+		unreified = binaryAssociation
+		source = BinaryAssociationEndType
+		target = BinaryAssociationEndType }
+
+	reifiedRelationship BinaryAssociationBlockEnd {
+		unreified = binaryAssociationBlockEnd
+		source = BinaryAssociationBlock
+		target = BinaryAssociationEndType }
+
+	reifiedRelationship BinaryAssociationBlockEnd1 {
+		unreified = binaryAssociationBlockEnd1
+		source = BinaryAssociationBlock
+		target = BinaryAssociationEndType }
+
+	reifiedRelationship BinaryAssociationBlockEnd2 {
+		unreified = binaryAssociationBlockEnd2
+		source = BinaryAssociationBlock
+		target = BinaryAssociationEndType }
+
+	reifiedRelationship BinaryCompositeAssociation {
+		inverseFunctional
+		unreified = binaryCompositeAssociation
+		source = BinaryAssociationEndType
+		target = BinaryAssociationEndType }
+
+	reifiedRelationship BinaryContextReferenceAssociationBlock {
+		unreified = binaryContextReferenceAssociationBlock
+		source = BinaryAssociationEndType
+		target = BinaryAssociationEndType }
+
+	reifiedRelationship BinaryDependency {
+		unreified = binaryDependency
+		source = BinaryDependencyEndType
+		target = BinaryDependencyEndType }
+
+	reifiedRelationship BinaryReferenceAssociation {
+		unreified = binaryReferenceAssociation
+		source = BinaryAssociationEndType
+		target = BinaryAssociationEndType }
+
+	@rdfs:comment="""UML:A_subvertex_container"""
+	reifiedRelationship RegionOwnsState {
+		inverseFunctional
+		unreified = regionOwnsState
+		source = Region
+		target = State }
+
+	@rdfs:comment="""UML:A_transition_container"""
+	reifiedRelationship RegionOwnsTransition {
+		inverseFunctional
+		unreified = regionOwnsTransition
+		source = Region
+		target = Transition }
+
+	@rdfs:comment="""UML:A_region_stateMachine"""
+	reifiedRelationship StateMachineOwnsRegion {
+		inverseFunctional
+		unreified = stateMachineOwnsRegion
+		source = StateMachine
+		target = Region }
+
+	reifiedRelationship StructuralBindingRelationship {
+		unreified = structuralBindingRelationship
+		source = StructuralBindingEndType
+		target = StructuralBindingEndType }
+
+	reifiedRelationship StructuralConnectionRelationship {
+		unreified = structuralConnectionRelationship
+		source = StructuralConnectionEndType
+		target = StructuralConnectionEndType }
+
+	reifiedRelationship StructuralConstraintParameter {
+		unreified = structuralConstraintParameter
+		source = BinaryAssociationEndType
+		target = BinaryAssociationEndType }
+
+	reifiedRelationship StructuralFlowPropertyRelationship {
+		inverseFunctional
+		unreified = structuralFlowPropertyRelationship
+		source = StructuralFlowPropertyContainerType
+		target = StructuralFlowPropertyType }
+
+	reifiedRelationship StructuralFullPortRelationship {
+		inverseFunctional
+		unreified = structuralFullPortRelationship
+		source = StructuralFullPortEncapsulatedClassifierType
+		target = StructuralFullPortType }
+
+	reifiedRelationship StructuralInFlowPropertyRelationship {
+		inverseFunctional
+		unreified = structuralInFlowPropertyRelationship
+		source = StructuralFlowPropertyContainerType
+		target = StructuralFlowPropertyType }
+
+	reifiedRelationship StructuralInOutFlowPropertyRelationship {
+		inverseFunctional
+		unreified = structuralInOutFlowPropertyRelationship
+		source = StructuralFlowPropertyContainerType
+		target = StructuralFlowPropertyType }
+
+	reifiedRelationship StructuralInputParameterRelationship {
+		inverseFunctional
+		unreified = structuralInputParameterRelationship
+		source = StructuralParameterBehaviorType
+		target = StructuralParameterType }
+
+	reifiedRelationship StructuralOutFlowPropertyRelationship {
+		inverseFunctional
+		unreified = structuralOutFlowPropertyRelationship
+		source = StructuralFlowPropertyContainerType
+		target = StructuralFlowPropertyType }
+
+	reifiedRelationship StructuralOutputParameterRelationship {
+		inverseFunctional
+		unreified = structuralOutputParameterRelationship
+		source = StructuralParameterBehaviorType
+		target = StructuralParameterType }
+
+	reifiedRelationship StructuralParameterRelationship {
+		inverseFunctional
+		unreified = structuralParameterRelationship
+		source = StructuralParameterBehaviorType
+		target = StructuralParameterType }
+
+	@rdfs:comment="""UML:A_ownedAttribute_structuredClassifier"""
+	reifiedRelationship StructuredClassifierOwnsAttribute {
+		inverseFunctional
+		unreified = structuredClassifierOwnsAttribute
+		source = BinaryAssociationEndType
+		target = StructuralPropertyAspect }
+
+	BinaryAssociationBlockEnd1 extendsRelationship BinaryAssociationBlockEnd
+
+	BinaryAssociationBlockEnd2 extendsRelationship BinaryAssociationBlockEnd
+
+	BinaryCompositeAssociation extendsRelationship BinaryAssociation
+
+	BinaryContextReferenceAssociationBlock extendsRelationship BinaryAssociation
+
+	BinaryReferenceAssociation extendsRelationship BinaryAssociation
+
+	StructuralInFlowPropertyRelationship extendsRelationship StructuralFlowPropertyRelationship
+
+	StructuralInOutFlowPropertyRelationship extendsRelationship StructuralFlowPropertyRelationship
+
+	StructuralInputParameterRelationship extendsRelationship StructuralParameterRelationship
+
+	StructuralOutFlowPropertyRelationship extendsRelationship StructuralFlowPropertyRelationship
+
+	StructuralOutputParameterRelationship extendsRelationship StructuralParameterRelationship
+
+	BinaryAssociationBlock extendsAspect ObjectPropertyDependentRangeType
+
+	BinaryAssociationEndType extendsAspect ObjectPropertyDependentRangeType
+
+	BinaryDependencyEndType extendsAspect ObjectPropertyDependentRangeType
+
+	ClosedWorldKind extendsAspect ClosedWorldMetaClass
+
+	ClosedWorldKind extendsAspect OpenWorldKind
+
+	ClosedWorldMetaClass extendsAspect OpenWorldMetaClass
+
+	ComponentConstraintBlock extendsAspect BinaryAssociationEndType
+
+	GroupViewDiagram extendsAspect BinaryDependencyEndType
+
+	NAryRelationship extendsAspect ObjectPropertyDependentRangeType
+
+	NAryRole extendsAspect ObjectPropertyDependentRangeType
+
+	OpenWorldKind extendsAspect OpenWorldMetaClass
+
+	Region extendsAspect ObjectPropertyDependentRangeType
+
+	State extendsAspect ObjectPropertyDependentRangeType
+
+	StateMachine extendsAspect ObjectPropertyDependentRangeType
+
+	StructuralBindingEndType extendsAspect ObjectPropertyDependentRangeType
+
+	StructuralBindingEndType extendsAspect StructuralPropertyAspect
+
+	StructuralConnectionEndType extendsAspect ObjectPropertyDependentRangeType
+
+	StructuralConnectionEndType extendsAspect StructuralPropertyAspect
+
+	StructuralConnectionType extendsAspect ObjectPropertyDependentRangeType
+
+	StructuralConstraintParameter extendsAspect StructuralPropertyAspect
+
+	StructuralFlowPropertyContainerType extendsAspect ObjectPropertyDependentRangeType
+
+	StructuralFlowPropertyType extendsAspect ObjectPropertyDependentRangeType
+
+	StructuralFullPortEncapsulatedClassifierType extendsAspect ObjectPropertyDependentRangeType
+
+	StructuralFullPortType extendsAspect ObjectPropertyDependentRangeType
+
+	StructuralParameterBehaviorType extendsAspect ObjectPropertyDependentRangeType
+
+	StructuralParameterType extendsAspect ObjectPropertyDependentRangeType
+
+	Transition extendsAspect ObjectPropertyDependentRangeType
+
+	unreifiedRelationship nAryRelationshipRole {
+		source = NAryRelationship
+		target = NAryRole }
+
+	unreifiedRelationship nAryRoleBinding {
+		source = NAryRole
+		target = ObjectPropertyDependentRangeType }
+
+}

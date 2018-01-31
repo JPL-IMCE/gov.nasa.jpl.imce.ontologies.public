@@ -1,2 +1,5 @@
 # IMCE Ontologies
-[![Build Status](https://travis-ci.org/JPL-IMCE/gov.nasa.jpl.imce.ontologies.public.svg?branch=master)](https://travis-ci.org/JPL-IMCE/gov.nasa.jpl.imce.ontologies.public) [ ![Download](https://api.bintray.com/packages/jpl-imce/gov.nasa.jpl.imce/gov.nasa.jpl.imce.ontologies.public/images/download.svg) ](https://bintray.com/jpl-imce/gov.nasa.jpl.imce/gov.nasa.jpl.imce.ontologies.public/_latestVersion)
+
+2017-01-31: 
+- baseline: feature/IMCEIS-1715-create-temporary-branch-of-ontologie
+- refactored all IMCE IRIs to add the 'vocabularies' category as 2nd IRI segment.

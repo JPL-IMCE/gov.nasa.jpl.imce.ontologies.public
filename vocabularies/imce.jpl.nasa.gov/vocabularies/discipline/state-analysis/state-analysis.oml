@@ -1,0 +1,348 @@
+@dc:rights="""Copyright 2010-2011, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
+
+This software may be subject to U.S. export control laws. By accepting this software, the user agrees to comply with all applicable U.S. export laws and regulations. User has the responsibility to obtain export licenses, or other export authority as may be required before exporting such information to foreign countries or providing access to foreign persons."""
+@dc:title="""State Analysis Ontology"""
+@owl:versionInfo="""$Revision$"""
+@dc:date="""$Date$"""
+@dc:type="""Discipline"""
+@dc:description="""The State Analysis Ontology defines concepts and properties necessary for the application of state analysis to space missions."""
+@dc:creator="""Systems Engineering & Formulation Division"""
+open terminology <http://imce.jpl.nasa.gov/vocabularies/discipline/state-analysis/state-analysis> {
+
+	extends <http://imce.jpl.nasa.gov/vocabularies/foundation/analysis/analysis>
+
+	extends <http://imce.jpl.nasa.gov/vocabularies/foundation/project/project>
+
+	@dc:description="""An entity that is the subject of a state effect.
+Might also be called an Effect to express its relation with Cause."""
+	@rdfs:label="""Affected"""
+	concept Affected
+
+	@dc:description="""An entity that is the object or cause of a state effect. Might also be called a Cause."""
+	@rdfs:label="""Affector"""
+	concept Affector
+
+	@dc:description="""A command is a message to the system under control intended to cause some change of state to occur.
+Commands usually have parameters that can articulate or bound the intended actions, though few standards exist to bound these semantics."""
+	@rdfs:label="""Command"""
+	concept Command
+
+	@dc:description="""An analysis artifact defining a grouping of implementation artifacts that realize some control functions.
+A Control System always associates with some particular System Under Control that characterizes the state variables being controlled and considered."""
+	@rdfs:label="""Control System"""
+	concept ControlSystem
+
+	@dc:description="""Abstract supertype of Goal and Plan. A thing that can elaborate supporting Goals needed to achieve its purpose."""
+	@rdfs:label="""Elaboratable"""
+	concept Elaboratable
+
+	@dc:description="""An analysis context containing state variables that are not directly part of the system under control, or control system, that still have relevant state affects on the system, and thus must be considered."""
+	@rdfs:label="""Environment"""
+	concept Environment
+
+	@dc:description="""A goal expresses intent as a constraint on a specific state variable of the system over a specific interval of time."""
+	@rdfs:label="""Goal"""
+	concept Goal
+
+	@rdfs:label="""Graph State Variable"""
+	concept GraphStateVariable
+
+	@dc:description="""A measurement is a message (data) recording a sample from a sensor at a particular point in time (in the past).
+It will have some value and value type. Measurement data is subject to measurement uncertainty, and so is not an exact or direct reflection of the true system state or quantity value that is the subject of the measurement process. Measured data values are affected by the true states they measure as described by a Measurement Model."""
+	@rdfs:label="""Measurement"""
+	concept Measurement
+
+	@dc:description="""An effects model describes the physical effects between state variables and the measurements of those states."""
+	@rdfs:label="""Measurement Model"""
+	concept MeasurementModel
+
+	@dc:description="""Generalization of state effects and measurement models. What the two have in common is that they somehow express causal relations between the associated entities. The specific models can be expressed as SysML state charts, parametric diagrams, tables, or just a text description. State analysis doesn't care how the models are represented, but derived ontologies can further refine and specify this aspect to enable particular kinds of functional analysis or model execution.
+The general pattern is that a StateAnalysisContext identifies a set of participating elements (State Variable, Measurement, Command) and is then refined in one or more models that detail the physical effects. Different Model instances can be specified for different purposes as trade studies, views, or versions (not that one would expect different versions of physics, but in a large system the elements of the system under control may also be subject to change as part of the overall system design, the particular decomposition of elements may change). Different Model instances may also be used to consider different effects under different operating conditions."""
+	@rdfs:label="""Model"""
+	concept Model
+
+	@dc:description="""A Plan expresses a more abstract intent that can be achieved by a set of supporting Goals. It has also been described as a Goal on a more abstract state that might not be explicitly represented as a State Variable in the system."""
+	@rdfs:label="""Plan"""
+	concept Plan
+
+	@rdfs:comment="""A Graph State Variable Relation is a State Variable whose value describes a frame transformation between two Landmarks, which describe frame origins."""
+	@rdfs:label="""Relation State Variable"""
+	concept RelationStateVariable
+
+	@dc:description="""A composition of one or more Goals that have been scheduled and placed on a specific time line."""
+	@rdfs:label="""Scheduled Activity"""
+	concept ScheduledActivity
+
+	@dc:description="""A state effects model describes effects between state variables and commands that affect them."""
+	@rdfs:label="""State Effects Model"""
+	concept StateEffectsModel
+
+	@dc:description="""A StateValue is an instance of the value content of a StateVariable.  A given StateVariable may contain a history (time ordered set) of StateValues, or it may contain a producing state function that produces time-dependent values on demand."""
+	@rdfs:label="""State Value"""
+	concept StateValue
+
+	@dc:description="""A state variable models a particular aspect or property of a system that is a focus of control. The property can be one that is the subject of control, or one that must be known in order to control some other property.
+State variables have values.
+State variable values don't have to be atomic, but can include multidimensional quantities (vectors). I.e., position usually describes the position of an object in three dimensions as a vector quantity.
+Time derivatives of a state variable's value are usually included in the definition of its value vector
+(which property is the base property is a matter of system focus)
+State variables have values that are continuous over time."""
+	@rdfs:label="""State Variable"""
+	concept StateVariable
+
+	@dc:description="""An SV Group is just a simple grouping mechanism to support the abstraction of a large state effects model into smaller and more comprehensible views. The grouping can reflect appropriate abstractions in the physical system.  An SV Group is not itself a State Variable, but it can map state effects relationships between its contents and the rest of the system."""
+	@rdfs:label="""State Variable Group"""
+	concept StateVariableGroup
+
+	@dc:description="""An analysis artifact that groups some set of state variables into a context describing some system or part of a system being modeled. Also abbreviated SUC."""
+	@rdfs:label="""System Under Control"""
+	concept SystemUnderControl
+
+	@dc:description="""A TimePoint defines an event that connects goals. A goal network is a directed graph where the nodes are TimePoints and the edges are Goals. During analysis TimePoints can be inferred from the simple precedence of Goals, but they may also be useful to define named transition points."""
+	@rdfs:label="""Time Point"""
+	concept TimePoint
+
+	Command extendsConcept mission:Message
+
+	Command extendsConcept Affector
+
+	ControlSystem extendsConcept mission:Component
+
+	Environment extendsConcept SystemUnderControl
+
+	Goal extendsConcept Elaboratable
+
+	GraphStateVariable extendsConcept StateVariableGroup
+
+	Measurement extendsConcept mission:Message
+
+	Measurement extendsConcept Affected
+
+	MeasurementModel extendsConcept Model
+
+	Model extendsConcept analysis:Explanation
+
+	Plan extendsConcept Elaboratable
+
+	RelationStateVariable extendsConcept StateVariable
+
+	StateEffectsModel extendsConcept Model
+
+	StateVariable extendsConcept Affected
+
+	StateVariable extendsConcept Affector
+
+	StateVariableGroup extendsConcept Affected
+
+	StateVariableGroup extendsConcept Affector
+
+	SystemUnderControl extendsConcept analysis:Characterization
+
+	TimePoint extendsConcept analysis:Characterization
+
+	@dc:description="""An affects relation represents a general physical (causal) effect relation between entities.
+These relations are abstract, and intended mainly to describe the direction of causal state effects.
+Affecting relations will be detailed in a Model."""
+	@oml:hasInverseLabel="""is affected by"""
+	@oml:hasPropertyLabel="""affects"""
+	@oml:hasReificationLabel="""Affects"""
+	reifiedRelationship Affects {
+		asymmetric
+		irreflexive
+		unreified = affects
+		inverse = isAffectedBy
+		source = Affector
+		target = Affected }
+
+	@dc:description="""Constrains an elaboration relationship so that the elaborated subgoal must be scheduled to execute concurrent with the parent goal. That is, it must begin and end at the same time points as the parent goal -- its execution must be concurrently in effect with the parent."""
+	@oml:hasPropertyLabel="""concurrent"""
+	@oml:hasReificationLabel="""Concurrent"""
+	reifiedRelationship Concurrent {
+		asymmetric
+		irreflexive
+		unreified = concurrent
+		source = Elaboratable
+		target = Goal }
+
+	@dc:description="""A Goal expresses a constraint (constrains) the value of a state variable in the physical system.
+The control system has to effect this constraint through knowledge available in the implementation state variable, which serves as the local representative of the external physical state."""
+	@oml:hasInverseLabel="""is constrained by"""
+	@oml:hasPropertyLabel="""constrains"""
+	@oml:hasReificationLabel="""Constrains"""
+	reifiedRelationship Constrains {
+		functional
+		asymmetric
+		irreflexive
+		unreified = constrains
+		inverse = isConstrainedBy
+		source = Goal
+		target = StateVariable }
+
+	@oml:hasPropertyLabel="""describes dynamics of"""
+	@oml:hasReificationLabel="""Describes Dynamics Of"""
+	reifiedRelationship DescribesDynamicsOf {
+		functional
+		asymmetric
+		irreflexive
+		unreified = describesDynamicsOf
+		source = Model
+		target = mission:PerformingElement }
+
+	@dc:description="""State Variables that are members of a GSV generally describe the relationship or frame transformation between two frames of reference as described by Landmarks."""
+	@oml:hasPropertyLabel="""describes frame transformation between"""
+	@oml:hasReificationLabel="""Describes Frame Transformation Between"""
+	reifiedRelationship DescribesFrameTransformationBetween {
+		unreified = describesFrameTransformationBetween
+		source = RelationStateVariable
+		target = RelationStateVariable }
+
+	@dc:description="""A given goal can elaborate other supporting subgoals that are needed to ensure successful achievement of the target goal. If goal A elaborates a subgoal B it means that both A and B must be scheduled and executed when A is specified in order to ensure that the specified goal A will be achieved. Elaboration is restricted by state effects such that A may only elaborate a subgoal B if the StateVariable that B constrains affects the StateVariable that A constrains."""
+	@oml:hasPropertyLabel="""elaborates"""
+	@oml:hasReificationLabel="""Elaborates"""
+	reifiedRelationship Elaborates {
+		asymmetric
+		irreflexive
+		unreified = elaborates
+		source = Elaboratable
+		target = Goal }
+
+	@oml:hasPropertyLabel="""ends at"""
+	@oml:hasReificationLabel="""Ends At"""
+	reifiedRelationship EndsAt {
+		functional
+		asymmetric
+		irreflexive
+		unreified = endsAt
+		source = ScheduledActivity
+		target = TimePoint }
+
+	@oml:hasPropertyLabel="""groups graph relations"""
+	@oml:hasReificationLabel="""Groups Graph Relations"""
+	reifiedRelationship GroupsGraphRelations {
+		asymmetric
+		irreflexive
+		unreified = groupsGraphRelations
+		source = GraphStateVariable
+		target = RelationStateVariable }
+
+	@oml:hasPropertyLabel="""groups relations"""
+	@oml:hasReificationLabel="""Groups Relations"""
+	reifiedRelationship GroupsRelations {
+		asymmetric
+		irreflexive
+		unreified = groupsRelations
+		source = StateVariableGroup
+		target = StateVariable }
+
+	@oml:hasInverseLabel="""is dependent state variable of"""
+	@oml:hasPropertyLabel="""has dependent state variable"""
+	@oml:hasReificationLabel="""Has Dependent State Variable"""
+	reifiedRelationship HasDependentStateVariable {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = hasDependentStateVariable
+		inverse = isDependentStateVariableOf
+		source = Model
+		target = StateVariable }
+
+	@oml:hasPropertyLabel="""has dynamics described by"""
+	@oml:hasReificationLabel="""Has Dynamics Described By"""
+	reifiedRelationship HasDynamicsDescribedBy {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = hasDynamicsDescribedBy
+		source = StateVariable
+		target = Model }
+
+	@oml:hasInverseLabel="""is independent state variable of"""
+	@oml:hasPropertyLabel="""has independent state variable"""
+	@oml:hasReificationLabel="""Has Independent State Variable"""
+	reifiedRelationship HasIndependentStateVariable {
+		unreified = hasIndependentStateVariable
+		inverse = isIndependentStateVariableOf
+		source = Model
+		target = StateVariable }
+
+	@oml:hasPropertyLabel="""maps elements"""
+	@oml:hasReificationLabel="""Maps Elements"""
+	reifiedRelationship MapsElements {
+		asymmetric
+		irreflexive
+		unreified = mapsElements
+		source = StateVariableGroup
+		target = StateVariable }
+
+	@dc:description="""A context explains the relationships between a set of state variables and related entities"""
+	@oml:hasPropertyLabel="""owns states"""
+	@oml:hasReificationLabel="""Owns States"""
+	reifiedRelationship OwnsStates {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = ownsStates
+		source = StateEffectsModel
+		target = StateVariable }
+
+	@dc:description="""Constrains the elaboration relationship such that the elaborated subgoal must execute before the start of the parent goal. Normally, this means that the prerequisite subgoal must finish at the same time point where the parent goal starts."""
+	@oml:hasPropertyLabel="""prerequisite"""
+	@oml:hasReificationLabel="""Prerequisite"""
+	reifiedRelationship Prerequisite {
+		asymmetric
+		irreflexive
+		unreified = prerequisite
+		source = Elaboratable
+		target = Goal }
+
+	@oml:hasPropertyLabel="""schedules"""
+	@oml:hasReificationLabel="""Schedules"""
+	reifiedRelationship Schedules {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = schedules
+		source = ScheduledActivity
+		target = Goal }
+
+	@oml:hasPropertyLabel="""starts at"""
+	@oml:hasReificationLabel="""Starts At"""
+	reifiedRelationship StartsAt {
+		functional
+		asymmetric
+		irreflexive
+		unreified = startsAt
+		source = ScheduledActivity
+		target = TimePoint }
+
+	Concurrent extendsRelationship Elaborates
+
+	GroupsGraphRelations extendsRelationship GroupsRelations
+
+	HasDependentStateVariable extendsRelationship analysis:Explains
+
+	HasIndependentStateVariable extendsRelationship analysis:Analyzes
+
+	Prerequisite extendsRelationship Elaborates
+
+	mission:Component extendsAspect base:IdentifiedElement
+
+	Command extendsAspect base:IdentifiedElement
+
+	Elaboratable extendsAspect base:AggregatedElement
+
+	Measurement extendsAspect base:IdentifiedElement
+
+	StateVariable extendsAspect analysis:AnalyzedElement
+
+	StateVariableGroup extendsAspect base:IdentifiedElement
+
+	@rdfs:label="""constraint"""
+	entityScalarDataProperty + constraint {
+		domain Goal
+		range XMLSchema:string
+	}
+
+	allEntities Model . analysis:characterizes in SystemUnderControl
+
+}

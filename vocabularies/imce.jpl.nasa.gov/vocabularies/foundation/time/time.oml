@@ -1,0 +1,255 @@
+annotationProperty time:isSingleton=<http://imce.jpl.nasa.gov/vocabularies/foundation/time/time#isSingleton>
+
+@dc:type="""Foundation"""
+@dc:description="""The Time Ontology defines concepts and properties for temporal reasoning."""
+@dc:creator="""Systems Engineering & Formulation Division"""
+@owl:versionInfo="""$Revision$"""
+@dc:date="""$Date$"""
+@rdfs:label="""time"""
+@dc:title="""Time Ontology"""
+@dc:rights="""Copyright 2010-2015, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
+
+This software may be subject to U.S. export control laws. By accepting this software, the user agrees to comply with all applicable U.S. export laws and regulations. User has the responsibility to obtain export licenses, or other export authority as may be required before exporting such information to foreign countries or providing access to foreign persons."""
+open terminology <http://imce.jpl.nasa.gov/vocabularies/foundation/time/time> {
+
+	extends <http://imce.jpl.nasa.gov/vocabularies/foundation/base/base>
+
+	@dc:description="""<para>A <classname>CompositeTime</classname> is a <classname>Time</classname> that has <classname>Time</classname>s as its contained <classname>Event</classname>s instead.</para>
+<para>This can be used to capture Behaviors as a behavior is just a description of how multiple variables change together over time.</para>"""
+	@rdfs:label="""Composite Time"""
+	concept CompositeTime
+
+	@rdfs:label="""Constant"""
+	concept Constant
+
+	@dc:description="""<para>A <classname>Constraint</classname> is a thing that expresses a coupling between multiple <classname>Term</classname>s.  This coupling has the effect of restricting the value of at least one <classname>Term</classname>s. </para>
+<para><classname>Constraint</classname>s are represented by a mathematical expression as a string where <classname>Term</classname>-names are used to reference the corresponding <classname>Term</classname>s.  The <classname>Constraint</classname> separately has a relationship to each <classname>Term</classname> which allows <classname>Term</classname>s to be referenced by their shortName in the string representation of the constraint.</para>"""
+	@rdfs:label="""Constraint"""
+	concept Constraint
+
+	@rdfs:label="""Dependent Variable"""
+	concept DependentVariable
+
+	@rdfs:label="""Dependent Variable Constraint"""
+	concept DependentVariableConstraint
+
+	@dc:description="""A <classname>DurativeEvent</classname> is an <classname>Event</classname> that occurs over time.  It has a specified start <classname>InstantEvent</classname> and a specified end <classname>InstantEvent</classname>.  <classname>DurativeEvent</classname>s can also contain other <classname>Event</classname>s which makes it a recursive structure."""
+	@rdfs:label="""Durative Event"""
+	concept DurativeEvent
+
+	@dc:description="""An <classname>Event</classname> is the an abstract concept that refers to a duration of time (a <classname>DurativeEvent</classname>) or an instant in time (an <classname>InstantEvent</classname>)."""
+	@rdfs:label="""Event"""
+	concept Event
+
+	@dc:description="""An <classname>InstantEvent</classname> is an <classname>Event</classname> that occurs at a specific instant in time and has no measurable duration."""
+	@rdfs:label="""Instant Event"""
+	concept InstantEvent
+
+	@rdfs:label="""Interval"""
+	concept Interval
+
+	@rdfs:label="""Math Function"""
+	concept MathFunction
+
+	@rdfs:label="""Reference Time Variable"""
+	concept ReferenceTimeVariable
+
+	@rdfs:label="""Temporal Constraint"""
+	concept TemporalConstraint
+
+	@dc:description="""A <classname>Term</classname> is TODO FIXME: Finish thought."""
+	@rdfs:label="""Term"""
+	concept Term
+
+	@dc:description="""A <classname>Time</classname> is a <classname>DurativeEvent</classname> that differs only in that it is meant to express the entirety of some desired log of some <classname>Variable</classname> over time.  There is no <emphasis>real</emphasis> distinction between a <classname>Time</classname> and a <classname>DurativeEvent</classname>, so it is up to the modeler to use the right type where appropriate."""
+	@rdfs:label="""Time"""
+	concept Time
+
+	@dc:description="""A <classname>TimeElement</classname> is the parent class for everything that will live in a <classname>Time</classname>.  This class is probably superfluous as we can determine whether something is part of a <classname>Time</classname> or not by starting with a <classname>Time</classname> and finding all contained elements."""
+	@rdfs:label="""Time Element"""
+	concept TimeElement
+
+	@rdfs:label="""Time Variable"""
+	concept TimeVariable
+
+	@rdfs:label="""Variable"""
+	concept Variable
+
+	CompositeTime extendsConcept Time
+
+	Constant extendsConcept Term
+
+	Constraint extendsConcept MathFunction
+
+	DependentVariable extendsConcept Variable
+
+	DependentVariableConstraint extendsConcept Constraint
+
+	DurativeEvent extendsConcept Event
+
+	Event extendsConcept TimeElement
+
+	InstantEvent extendsConcept Event
+
+	Interval extendsConcept Term
+
+	MathFunction extendsConcept Term
+
+	ReferenceTimeVariable extendsConcept TimeVariable
+
+	TemporalConstraint extendsConcept Constraint
+
+	Term extendsConcept TimeElement
+
+	Time extendsConcept DurativeEvent
+
+	TimeVariable extendsConcept Variable
+
+	Variable extendsConcept Term
+
+	@oml:hasPropertyLabel="""constrains"""
+	@oml:hasReificationLabel="""Constrains"""
+	reifiedRelationship Constrains {
+		asymmetric
+		irreflexive
+		unreified = constrains
+		source = Constraint
+		target = Event }
+
+	@oml:hasPropertyLabel="""contains event"""
+	@oml:hasReificationLabel="""Contains Event"""
+	reifiedRelationship ContainsEvent {
+		asymmetric
+		irreflexive
+		unreified = containsEvent
+		source = DurativeEvent
+		target = Event }
+
+	@oml:hasPropertyLabel="""contains time"""
+	@oml:hasReificationLabel="""Contains Time"""
+	reifiedRelationship ContainsTime {
+		asymmetric
+		irreflexive
+		unreified = containsTime
+		source = CompositeTime
+		target = Time }
+
+	@oml:hasPropertyLabel="""couples term"""
+	@oml:hasReificationLabel="""Couples Term"""
+	reifiedRelationship CouplesTerm {
+		asymmetric
+		irreflexive
+		unreified = couplesTerm
+		source = MathFunction
+		target = Term }
+
+	@oml:hasPropertyLabel="""ends with"""
+	@oml:hasReificationLabel="""Ends With"""
+	reifiedRelationship EndsWith {
+		asymmetric
+		irreflexive
+		unreified = endsWith
+		source = DurativeEvent
+		target = InstantEvent }
+
+	@oml:hasPropertyLabel="""has dependent variable"""
+	@oml:hasReificationLabel="""Has Dependent Variable"""
+	reifiedRelationship HasDependentVariable {
+		functional
+		asymmetric
+		irreflexive
+		unreified = hasDependentVariable
+		source = Time
+		target = DependentVariable }
+
+	@oml:hasPropertyLabel="""has lower bound"""
+	@oml:hasReificationLabel="""Has Lower Bound"""
+	reifiedRelationship HasLowerBound {
+		functional
+		asymmetric
+		irreflexive
+		unreified = hasLowerBound
+		source = Interval
+		target = Term }
+
+	@oml:hasPropertyLabel="""has reference time variable"""
+	@oml:hasReificationLabel="""Has Reference Time Variable"""
+	reifiedRelationship HasReferenceTimeVariable {
+		functional
+		asymmetric
+		irreflexive
+		unreified = hasReferenceTimeVariable
+		source = Time
+		target = ReferenceTimeVariable }
+
+	@oml:hasPropertyLabel="""has upper bound"""
+	@oml:hasReificationLabel="""Has Upper Bound"""
+	reifiedRelationship HasUpperBound {
+		functional
+		asymmetric
+		irreflexive
+		unreified = hasUpperBound
+		source = Interval
+		target = Term }
+
+	@oml:hasPropertyLabel="""occurs at time"""
+	@oml:hasReificationLabel="""Occurs At Time"""
+	reifiedRelationship OccursAtTime {
+		functional
+		asymmetric
+		irreflexive
+		unreified = occursAtTime
+		source = InstantEvent
+		target = TimeVariable }
+
+	@oml:hasPropertyLabel="""references variable"""
+	@oml:hasReificationLabel="""References Variable"""
+	reifiedRelationship ReferencesVariable {
+		unreified = referencesVariable
+		source = Event
+		target = Variable }
+
+	@oml:hasPropertyLabel="""starts with"""
+	@oml:hasReificationLabel="""Starts With"""
+	reifiedRelationship StartsWith {
+		asymmetric
+		irreflexive
+		unreified = startsWith
+		source = DurativeEvent
+		target = InstantEvent }
+
+	ContainsTime extendsRelationship ContainsEvent
+
+	EndsWith extendsRelationship ContainsEvent
+
+	HasDependentVariable extendsRelationship ReferencesVariable
+
+	HasReferenceTimeVariable extendsRelationship ReferencesVariable
+
+	OccursAtTime extendsRelationship ReferencesVariable
+
+	StartsWith extendsRelationship ContainsEvent
+
+	TimeElement extendsAspect base:IdentifiedElement
+
+	@rdfs:label="""has text"""
+	entityScalarDataProperty hasText {
+		domain Constraint
+		range XMLSchema:string
+	}
+
+	@dc:description="""The <property>isLowerBoundInclusive</property> indicates if an <classname>Interval</classname>'s lowerBound is meant to be inclusive or exclusive."""
+	@rdfs:label="""is lower bound inclusive"""
+	entityScalarDataProperty + isLowerBoundInclusive {
+		domain Interval
+		range XMLSchema:boolean
+	}
+
+	@dc:description="""The <property>isUpperBoundInclusive</property> indicates if an <classname>Interval</classname>'s upperBound is meant to be inclusive or exclusive."""
+	@rdfs:label="""is upper bound inclusive"""
+	entityScalarDataProperty + isUpperBoundInclusive {
+		domain Interval
+		range XMLSchema:boolean
+	}
+
+}

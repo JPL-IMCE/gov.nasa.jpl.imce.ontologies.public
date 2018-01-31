@@ -1,0 +1,578 @@
+@dc:rights="""Copyright 2010-2014, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
+
+This software may be subject to U.S. export control laws. By accepting this software, the user agrees to comply with all applicable U.S. export laws and regulations. User has the responsibility to obtain export licenses, or other export authority as may be required before exporting such information to foreign countries or providing access to foreign persons."""
+@dc:creator="""Systems Engineering & Formulation Division"""
+@dc:type="""Foundation"""
+@dc:date="""$Date$"""
+@dc:description="""The Analysis Ontology defines general concepts and properties for analyses (e.g., trade studies, driving requirements analysis, etc.). It provides a basis for specialization by domain experts."""
+@owl:versionInfo="""$Revision$"""
+@dc:title="""Analysis Ontology"""
+open terminology <http://imce.jpl.nasa.gov/vocabularies/foundation/analysis/analysis> {
+
+	extends <http://imce.jpl.nasa.gov/vocabularies/foundation/mission/mission>
+
+	aspect AnalyzedElement
+
+	aspect CharacterizedElement
+
+	aspect ConstrainedElement
+
+	@dc:description="""<para>A <classname>MeasuredElement</classname> is a model element that may be measured by one or
+        more associated <classname>Metric</classname>s. Both <classname>Objective</classname>s and
+            <classname>Requirement</classname>s</para>
+    <para>are <classname>MeasuredElement</classname>s.</para>"""
+	@rdfs:label="""Measured Element"""
+	aspect MeasuredElement
+
+	@dc:description="""<classname>Analysis</classname> is a deprecated synonym for <classname>Explanation</classname>."""
+	@rdfs:label="""Analysis"""
+	concept Analysis
+
+	@dc:description="""An <classname>Assumption</classname> is <classname>Characterization</classname> that is taken to be true for the purpose of analysis."""
+	@rdfs:label="""Assumption"""
+	concept Assumption
+
+	@dc:description="""A <classname>Characterization</classname> is an element that provides a parametric or other characterization of another model element. The canonical example of a <classname>Characterization</classname> is a set of name/value pairs, but other characterizations (e.g., classification) are possible."""
+	@rdfs:label="""Characterization"""
+	concept Characterization
+
+	@dc:description="""A <classname>Constaint</classname> is a container for one or more mathematical expressions asserting constraints on values."""
+	@rdfs:label="""Constraint"""
+	concept Constraint
+
+	@dc:description="""A <classname>CostEstimate</classname> is a kind of <classname>Explanation</classname> that provides a cost estimate for the model elements it explains."""
+	@rdfs:label="""Cost Estimate"""
+	concept CostEstimate
+
+	@dc:description="""<para>A <classname>Criterion</classname> establishes a region for some
+            <classname>Metric</classname> that corresponds to success for some <classname>MeasuredElement</classname>.</para>
+    <para>A <classname>Criterion</classname> for the <classname>Metric</classname>
+        <emphasis role="italic">sample mass in kg</emphasis> might be <emphasis role="italic">at
+            least 10 kg</emphasis>.</para>"""
+	@rdfs:label="""Criterion"""
+	concept Criterion
+
+	@dc:description="""<classname>DrivingRequirementsAnalysis</classname> is a deprecated synonym for <classname>DrivingRequirementsExplanation</classname>."""
+	@rdfs:label="""Driving Requirements Analysis"""
+	concept DrivingRequirementsAnalysis
+
+	@dc:description="""A <classname>DrivingRequirementsAnalysis</classname> provides the rationale for designating a set of <classname>Requirement</classname>s as <emphasis>driving</emphasis>, and makes the designation via the <property>explains</property> property."""
+	@rdfs:label="""Driving Requirements Explanation"""
+	concept DrivingRequirementsExplanation
+
+	@dc:description="""<para>An <classname>Explanation</classname> is a product that captures or summarizes the results of
+        an analysis activity and relates it to one or more other model elements. It may
+        contain narrative prose directly or provide a reference to external products.</para>
+    <para>Driving requirements analyses, trade studies, and cost estimates are all examples of
+            <classname>Explanation</classname>.</para>"""
+	@rdfs:label="""Explanation"""
+	concept Explanation
+
+	@dc:description="""A <classname>Fact</classname> is an <classname>Assumption</classname> that is true."""
+	@rdfs:label="""Fact"""
+	concept Fact
+
+	@dc:description="""<classname>KeyRequirementsAnalysis</classname> is a deprecated synonym for <classname>KeyRequirementsExplanation</classname>."""
+	@rdfs:label="""Key Requirements Analysis"""
+	concept KeyRequirementsAnalysis
+
+	@dc:description="""A <classname>KeyRequirementsAnalysis</classname> provides the rationale for designating a set of <classname>Requirement</classname>s as <emphasis>key</emphasis>, and makes the designation via the <property>explains</property> property."""
+	@rdfs:label="""Key Requirements Explanation"""
+	concept KeyRequirementsExplanation
+
+	@dc:description="""<para>A <classname>Metric</classname> establishes a method for quantifying achievement or
+        satisfaction of one or more <classname>MeasuredElement</classname>s. Note that the
+        relationship is many to many: a given <classname>Metric</classname> may jointly quantify
+        multiple <classname>MeasuredElement</classname>s. Likewise, a
+            <classname>MeasuredElement</classname> may be quantified by multiple
+            <classname>Metric</classname>s.</para>
+    <para>Appropriate <classname>Metric</classname>s for the <classname>Objective</classname>
+        <emphasis role="italic">image Martian north polar region</emphasis> might include data
+        volumes at specified wavelength and resolution.</para>"""
+	@rdfs:label="""Metric"""
+	concept Metric
+
+	@dc:description="""<para>A <classname>Quantity</classname> attaches a value for some
+            <classname>Metric</classname> to one or more <classname>SpecifiedElement</classname>s.
+        That is, it evaluates some aspect of a design by assigning a definite value to a specific
+            <classname>Metric</classname>.</para>"""
+	@rdfs:comment="""TODO: analysis:Quantification subclass of qudv:Quantity"""
+	@rdfs:label="""Quantity"""
+	concept Quantity
+
+	@dc:description="""A <classname>QuantityValue</classname> assigns a value to a <classname>Quantity</classname>."""
+	@rdfs:label="""Quantity Value"""
+	concept QuantityValue
+
+	@dc:description="""A <classname>TradeStudy</classname> explains some set of model elements and their properties through comparison with alternatives."""
+	@rdfs:label="""Trade Study"""
+	concept TradeStudy
+
+	Analysis extendsConcept Explanation
+
+	Assumption extendsConcept Characterization
+
+	CostEstimate extendsConcept Analysis
+
+	DrivingRequirementsAnalysis extendsConcept DrivingRequirementsExplanation
+
+	DrivingRequirementsExplanation extendsConcept Analysis
+
+	Explanation extendsConcept Characterization
+
+	Fact extendsConcept Assumption
+
+	KeyRequirementsAnalysis extendsConcept KeyRequirementsExplanation
+
+	KeyRequirementsExplanation extendsConcept Analysis
+
+	Quantity extendsConcept Characterization
+
+	TradeStudy extendsConcept Analysis
+
+	@dc:description="""An <classname>Explanation</classname> <replaceable>a</replaceable> <property>analyzes</property> some <classname>IdentifiedElement</classname> <replaceable>e</replaceable> if and only if <replaceable>a</replaceable> considers or otherwise takes account of <replaceable>e</replaceable>."""
+	@oml:hasInverseLabel="""is analyzed by"""
+	@oml:hasPropertyLabel="""analyzes"""
+	@oml:hasReificationLabel="""Analyzes"""
+	reifiedRelationship Analyzes {
+		asymmetric
+		irreflexive
+		unreified = analyzes
+		inverse = isAnalyzedBy
+		source = Explanation
+		target = AnalyzedElement }
+
+	@dc:description="""See <property>characterizes</property>."""
+	@dc:description="""A
+<classname>Characterization</classname>
+<replaceable>c</replaceable>
+<property>characterizes</property>
+a
+<classname>CharacterizedElement</classname>
+<replaceable>e</replaceable>
+if and only if
+<replaceable>c</replaceable>
+describes, delimits, or restricts
+<replaceable>e</replaceable>."""
+	@oml:hasInverseLabel="""is characterized by"""
+	@oml:hasPropertyLabel="""characterizes"""
+	@oml:hasReificationLabel="""Characterizes"""
+	reifiedRelationship Characterizes {
+		asymmetric
+		irreflexive
+		unreified = characterizes
+		inverse = isCharacterizedBy
+		source = Characterization
+		target = CharacterizedElement }
+
+	@dc:description="""A <classname>Constraint</classname> <replaceable>c</replaceable> <property>constrains</property> some <classname>ConstrainedElement</classname> <replaceable>e</replaceable> if and only if <replaceable>c</replaceable> imposes restrictions on one or more properties of  <replaceable>e</replaceable>."""
+	@oml:hasPropertyLabel="""constrains"""
+	@oml:hasReificationLabel="""Constrains"""
+	reifiedRelationship Constrains {
+		asymmetric
+		irreflexive
+		unreified = constrains
+		source = Constraint
+		target = ConstrainedElement }
+
+	@dc:description="""See <property>explains</property>."""
+	@dc:description="""An <classname>Explanation</classname> <replaceable>a</replaceable> <property>explains</property> some <classname>SpecifiedElement</classname> <replaceable>e</replaceable> if and only if <replaceable>a</replaceable> provides a rationale or justification for some design aspect of <replaceable>e</replaceable>."""
+	@oml:hasInverseLabel="""is explained by"""
+	@oml:hasPropertyLabel="""explains"""
+	@oml:hasReificationLabel="""Explains"""
+	reifiedRelationship Explains {
+		asymmetric
+		irreflexive
+		unreified = explains
+		inverse = isExplainedBy
+		source = Explanation
+		target = CharacterizedElement }
+
+	@dc:description="""<para>A <classname>Metric</classname>
+        <replaceable>m</replaceable> <property>hasCriterion</property> some
+        <classname>Criterion</classname>
+        <replaceable>c</replaceable> if and only if <replaceable>c</replaceable> establishes a region of success for <replaceable>m</replaceable>.</para>"""
+	@oml:hasInverseLabel="""is criterion for"""
+	@oml:hasPropertyLabel="""has criterion"""
+	@oml:hasReificationLabel="""Has Criterion"""
+	reifiedRelationship HasCriterion {
+		inverseFunctional
+		unreified = hasCriterion
+		inverse = isCriterionFor
+		source = Metric
+		target = Criterion }
+
+	@dc:description="""<para>An <classname>Quantification</classname>
+        <replaceable>q</replaceable> <property>hasMetric</property> some
+            <classname>Metric</classname>
+        <replaceable>m</replaceable> if and only if <replaceable>q</replaceable> assigns a value to
+            <replaceable>m</replaceable> for some aspect of a design.</para>"""
+	@oml:hasPropertyLabel="""has metric"""
+	@oml:hasReificationLabel="""Has Metric"""
+	reifiedRelationship HasMetric {
+		functional
+		asymmetric
+		irreflexive
+		unreified = hasMetric
+		source = Quantity
+		target = Metric }
+
+	@oml:hasPropertyLabel="""has value"""
+	@oml:hasReificationLabel="""Has Value"""
+	reifiedRelationship HasValue {
+		functional
+		asymmetric
+		irreflexive
+		unreified = hasValue
+		source = Quantity
+		target = QuantityValue }
+
+	@dc:description="""See <property>limits</property>."""
+	@oml:hasInverseLabel="""is limited by"""
+	@oml:hasPropertyLabel="""limits"""
+	@oml:hasReificationLabel="""Limits"""
+	@rdfs:comment="""An
+<classname>Assumption</classname>
+<replaceable>a</replaceable>
+<property>limits</property>
+a
+<classname>CharacterizedElement</classname>
+<replaceable>e</replaceable>
+if and only if
+<replaceable>a</replaceable>
+is restricted in some fashion by
+<replaceable>e</replaceable>."""
+	reifiedRelationship Limits {
+		asymmetric
+		irreflexive
+		unreified = limits
+		inverse = isLimitedBy
+		source = Assumption
+		target = CharacterizedElement }
+
+	@dc:description="""<para>A <classname>Criterion</classname>
+        <replaceable>c</replaceable>
+        <property>measures</property> some <classname>MeasuredElement</classname>
+        <replaceable>e</replaceable> if and only if <replaceable>c</replaceable> defines a region for some <classname>Metric</classname> that corresponds to success
+for <replaceable>e</replaceable>.</para>"""
+	@oml:hasInverseLabel="""is measured by"""
+	@oml:hasPropertyLabel="""measures"""
+	@oml:hasReificationLabel="""Measures"""
+	reifiedRelationship Measures {
+		asymmetric
+		irreflexive
+		unreified = measures
+		inverse = isMeasuredBy
+		source = Criterion
+		target = MeasuredElement }
+
+	@dc:description="""<para>A <classname>Quantification</classname>
+        <replaceable>q</replaceable>
+        <property>quantifies</property> some <classname>SpecifiedElement</classname>
+        <replaceable>e</replaceable> if and only if <replaceable>q</replaceable> assigns a value to
+        some <classname>Metric</classname>  for <replaceable>e</replaceable>.</para>"""
+	@oml:hasInverseLabel="""is quantified by"""
+	@oml:hasPropertyLabel="""quantifies"""
+	@oml:hasReificationLabel="""Quantifies"""
+	reifiedRelationship Quantifies {
+		asymmetric
+		irreflexive
+		unreified = quantifies
+		inverse = isQuantifiedBy
+		source = Quantity
+		target = mission:SpecifiedElement }
+
+	@dc:description="""An <classname>Explanation</classname> <replaceable>a</replaceable> <property>validates</property> some <classname>SpecifiedElement</classname> <replaceable>e</replaceable> if and only if <replaceable>a</replaceable> provides a definitive, determinative explanation for some design aspect of <replaceable>e</replaceable>."""
+	@dc:description="""See <property>validates</property>."""
+	@oml:hasInverseLabel="""is validated by"""
+	@oml:hasPropertyLabel="""validates"""
+	@oml:hasReificationLabel="""Validates"""
+	reifiedRelationship Validates {
+		asymmetric
+		irreflexive
+		unreified = validates
+		inverse = isValidatedBy
+		source = Explanation
+		target = CharacterizedElement }
+
+	Explains extendsRelationship Characterizes
+
+	Limits extendsRelationship Characterizes
+
+	Validates extendsRelationship Explains
+
+	Analyzes extendsAspect AnalyzedElement
+
+	Analyzes extendsAspect CharacterizedElement
+
+	Characterization extendsAspect AnalyzedElement
+
+	Characterization extendsAspect CharacterizedElement
+
+	Characterization extendsAspect base:IdentifiedElement
+
+	Characterizes extendsAspect AnalyzedElement
+
+	Characterizes extendsAspect CharacterizedElement
+
+	Characterizes extendsAspect mission:SpecifiedElement
+
+	ConstrainedElement extendsAspect AnalyzedElement
+
+	ConstrainedElement extendsAspect CharacterizedElement
+
+	Constrains extendsAspect AnalyzedElement
+
+	Constrains extendsAspect CharacterizedElement
+
+	Constraint extendsAspect AnalyzedElement
+
+	Constraint extendsAspect CharacterizedElement
+
+	Criterion extendsAspect AnalyzedElement
+
+	Criterion extendsAspect CharacterizedElement
+
+	Criterion extendsAspect base:IdentifiedElement
+
+	Explains extendsAspect AnalyzedElement
+
+	Explains extendsAspect CharacterizedElement
+
+	Explanation extendsAspect base:AggregatedElement
+
+	HasCriterion extendsAspect AnalyzedElement
+
+	HasCriterion extendsAspect CharacterizedElement
+
+	HasMetric extendsAspect AnalyzedElement
+
+	HasMetric extendsAspect CharacterizedElement
+
+	HasValue extendsAspect AnalyzedElement
+
+	HasValue extendsAspect CharacterizedElement
+
+	Limits extendsAspect AnalyzedElement
+
+	Limits extendsAspect CharacterizedElement
+
+	MeasuredElement extendsAspect AnalyzedElement
+
+	MeasuredElement extendsAspect CharacterizedElement
+
+	Measures extendsAspect AnalyzedElement
+
+	Measures extendsAspect CharacterizedElement
+
+	Metric extendsAspect AnalyzedElement
+
+	Metric extendsAspect CharacterizedElement
+
+	Metric extendsAspect base:IdentifiedElement
+
+	Quantifies extendsAspect AnalyzedElement
+
+	Quantifies extendsAspect CharacterizedElement
+
+	QuantityValue extendsAspect AnalyzedElement
+
+	QuantityValue extendsAspect CharacterizedElement
+
+	Validates extendsAspect AnalyzedElement
+
+	Validates extendsAspect CharacterizedElement
+
+	base:AggregatedElement extendsAspect AnalyzedElement
+
+	base:AggregatedElement extendsAspect CharacterizedElement
+
+	base:Aggregates extendsAspect AnalyzedElement
+
+	base:Aggregates extendsAspect CharacterizedElement
+
+	base:ContainedElement extendsAspect AnalyzedElement
+
+	base:ContainedElement extendsAspect CharacterizedElement
+
+	base:Container extendsAspect AnalyzedElement
+
+	base:Container extendsAspect CharacterizedElement
+
+	base:Contains extendsAspect AnalyzedElement
+
+	base:Contains extendsAspect CharacterizedElement
+
+	base:IdentifiedElement extendsAspect AnalyzedElement
+
+	base:IdentifiedElement extendsAspect CharacterizedElement
+
+	base:Package extendsAspect AnalyzedElement
+
+	base:Package extendsAspect CharacterizedElement
+
+	mission:Component extendsAspect AnalyzedElement
+
+	mission:Component extendsAspect CharacterizedElement
+
+	mission:Deploys extendsAspect AnalyzedElement
+
+	mission:Deploys extendsAspect CharacterizedElement
+
+	mission:Emits extendsAspect AnalyzedElement
+
+	mission:Emits extendsAspect CharacterizedElement
+
+	mission:Environment extendsAspect AnalyzedElement
+
+	mission:Environment extendsAspect CharacterizedElement
+
+	mission:Flow extendsAspect AnalyzedElement
+
+	mission:Flow extendsAspect CharacterizedElement
+
+	mission:Function extendsAspect AnalyzedElement
+
+	mission:Function extendsAspect CharacterizedElement
+
+	mission:HasParticipant extendsAspect AnalyzedElement
+
+	mission:HasParticipant extendsAspect CharacterizedElement
+
+	mission:Induces extendsAspect AnalyzedElement
+
+	mission:Induces extendsAspect CharacterizedElement
+
+	mission:Influences extendsAspect AnalyzedElement
+
+	mission:Influences extendsAspect CharacterizedElement
+
+	mission:Ingests extendsAspect AnalyzedElement
+
+	mission:Ingests extendsAspect CharacterizedElement
+
+	mission:Interchange extendsAspect AnalyzedElement
+
+	mission:Interchange extendsAspect CharacterizedElement
+
+	mission:InterchangePoint extendsAspect AnalyzedElement
+
+	mission:InterchangePoint extendsAspect CharacterizedElement
+
+	mission:InterchangesThrough extendsAspect AnalyzedElement
+
+	mission:InterchangesThrough extendsAspect CharacterizedElement
+
+	mission:Interface extendsAspect AnalyzedElement
+
+	mission:Interface extendsAspect CharacterizedElement
+
+	mission:Invokes extendsAspect AnalyzedElement
+
+	mission:Invokes extendsAspect CharacterizedElement
+
+	mission:Involves extendsAspect AnalyzedElement
+
+	mission:Involves extendsAspect CharacterizedElement
+
+	mission:IsTraversedBy extendsAspect AnalyzedElement
+
+	mission:IsTraversedBy extendsAspect CharacterizedElement
+
+	mission:Item extendsAspect AnalyzedElement
+
+	mission:Item extendsAspect CharacterizedElement
+
+	mission:Joins extendsAspect AnalyzedElement
+
+	mission:Joins extendsAspect CharacterizedElement
+
+	mission:Junction extendsAspect AnalyzedElement
+
+	mission:Junction extendsAspect CharacterizedElement
+
+	mission:Mission extendsAspect AnalyzedElement
+
+	mission:Mission extendsAspect CharacterizedElement
+
+	mission:Objective extendsAspect AnalyzedElement
+
+	mission:Objective extendsAspect CharacterizedElement
+
+	mission:Objective extendsAspect MeasuredElement
+
+	mission:PerformingElement extendsAspect AnalyzedElement
+
+	mission:PerformingElement extendsAspect CharacterizedElement
+
+	mission:Performs extendsAspect AnalyzedElement
+
+	mission:Performs extendsAspect CharacterizedElement
+
+	mission:PresentingElement extendsAspect AnalyzedElement
+
+	mission:PresentingElement extendsAspect CharacterizedElement
+
+	mission:Presents extendsAspect AnalyzedElement
+
+	mission:Presents extendsAspect CharacterizedElement
+
+	mission:Produces extendsAspect AnalyzedElement
+
+	mission:Produces extendsAspect CharacterizedElement
+
+	mission:Product extendsAspect AnalyzedElement
+
+	mission:Product extendsAspect CharacterizedElement
+
+	mission:Pursues extendsAspect AnalyzedElement
+
+	mission:Pursues extendsAspect CharacterizedElement
+
+	mission:Receives extendsAspect AnalyzedElement
+
+	mission:Receives extendsAspect CharacterizedElement
+
+	mission:Refines extendsAspect AnalyzedElement
+
+	mission:Refines extendsAspect CharacterizedElement
+
+	mission:Requirement extendsAspect AnalyzedElement
+
+	mission:Requirement extendsAspect CharacterizedElement
+
+	mission:Requirement extendsAspect MeasuredElement
+
+	mission:Sends extendsAspect AnalyzedElement
+
+	mission:Sends extendsAspect CharacterizedElement
+
+	mission:SpecifiedElement extendsAspect AnalyzedElement
+
+	mission:SpecifiedElement extendsAspect CharacterizedElement
+
+	mission:Specifies extendsAspect AnalyzedElement
+
+	mission:Specifies extendsAspect CharacterizedElement
+
+	mission:Transfers extendsAspect AnalyzedElement
+
+	mission:Transfers extendsAspect CharacterizedElement
+
+	mission:TransfersIn extendsAspect AnalyzedElement
+
+	mission:TransfersIn extendsAspect CharacterizedElement
+
+	mission:TransfersOut extendsAspect AnalyzedElement
+
+	mission:TransfersOut extendsAspect CharacterizedElement
+
+	mission:TraversingElement extendsAspect AnalyzedElement
+
+	mission:TraversingElement extendsAspect CharacterizedElement
+
+	allEntities DrivingRequirementsExplanation . explains in mission:Requirement
+
+	allEntities KeyRequirementsExplanation . explains in mission:Requirement
+
+}

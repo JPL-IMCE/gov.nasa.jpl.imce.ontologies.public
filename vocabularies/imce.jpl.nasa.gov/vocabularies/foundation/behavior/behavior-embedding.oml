@@ -1,0 +1,108 @@
+@dc:date="""$Date$"""
+@owl:versionInfo="""$Revision$"""
+@dc:rights="""Copyright 2010-2014, by the California Institute of Technology. ALL RIGHTS
+RESERVED. United States Government Sponsorship acknowledged. Any commercial
+use must be negotiated with the Office of Technology Transfer at the
+California Institute of Technology. This software may be subject to U.S.
+export control laws. By accepting this software, the user agrees to comply
+with all applicable U.S. export laws and regulations. User has the
+responsibility to obtain export licenses,a or other export authority as may
+be required before exporting such information to foreign countries or
+providing access to foreign persons."""
+open terminology <http://imce.jpl.nasa.gov/vocabularies/foundation/behavior/behavior-embedding> {
+
+	extends <http://imce.jpl.nasa.gov/vocabularies/foundation/analysis/analysis-embedding>
+
+	extends <http://imce.jpl.nasa.gov/vocabularies/foundation/behavior/behavior>
+
+	behavior:AttributeAutomaton extendsConcept UML-metamodel:StateMachine
+
+	behavior:AutomatonRegion extendsConcept UML-metamodel:Region
+
+	behavior:AutomatonState extendsConcept UML-metamodel:State
+
+	behavior:AutomatonTransition extendsConcept UML-metamodel:Transition
+
+	behavior:InteractionTerminal extendsConcept SysML-metamodel:Class.Block.InterfaceBlock
+
+	behavior:Property extendsConcept UML-metamodel:Property
+
+	behavior:PropertySurrogate extendsConcept UML-metamodel:Port
+
+	behavior:Constrains extendsRelationship owl2-mof2:StructuredClassifierOwnsAttribute
+
+	behavior:Exposes extendsRelationship owl2-mof2:StructuralBindingRelationship
+
+	behavior:HasAttribute extendsRelationship owl2-mof2:StructuredClassifierOwnsAttribute
+
+	behavior:HasElementBehaviorClass extendsRelationship owl2-mof2:BinaryCompositeAssociation
+
+	behavior:HasInteractionBehaviorClass extendsRelationship owl2-mof2:BinaryCompositeAssociation
+
+	behavior:HasRegion extendsRelationship owl2-mof2:StateMachineOwnsRegion
+
+	behavior:HasState extendsRelationship owl2-mof2:RegionOwnsState
+
+	behavior:HasTransition extendsRelationship owl2-mof2:RegionOwnsTransition
+
+	behavior:PlaysRoleOf extendsRelationship owl2-mof2:StructuralBindingRelationship
+
+	behavior:Presents extendsRelationship owl2-mof2:StructuralFullPortRelationship
+
+	behavior:References extendsRelationship owl2-mof2:BinaryReferenceAssociation
+
+	behavior:Uses extendsRelationship owl2-mof2:StructuredClassifierOwnsAttribute
+
+	behavior:AbstractValueTypedAttribute extendsAspect UML:Property
+
+	behavior:AbstractValueTypedAttribute extendsAspect owl2-mof2:StructuralPropertyAspect
+
+	behavior:Attribute extendsAspect owl2-mof2:StructuralBindingEndType
+
+	behavior:Attribute extendsAspect owl2-mof2:StructuralConnectionEndType
+
+	behavior:AttributeAutomaton extendsAspect owl2-mof2:StateMachine
+
+	behavior:AttributeConstraint extendsAspect owl2-mof2:ComponentConstraintBlock
+
+	behavior:AttributeConstraintParticipant extendsAspect owl2-mof2:StructuralBindingEndType
+
+	behavior:AttributeConstraintParticipant extendsAspect owl2-mof2:StructuralConnectionEndType
+
+	behavior:AttributeGroup extendsAspect SysML:Block
+
+	behavior:AttributeGroup extendsAspect owl2-mof2:BinaryAssociationEndType
+
+	behavior:AutomatonRegion extendsAspect owl2-mof2:Region
+
+	behavior:AutomatonState extendsAspect owl2-mof2:State
+
+	behavior:AutomatonTransition extendsAspect owl2-mof2:Transition
+
+	behavior:BehavingElement extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	behavior:ElementBehaviorClass extendsAspect owl2-mof2:BinaryAssociationEndType
+
+	behavior:ElementBehaviorOwner extendsAspect owl2-mof2:BinaryAssociationEndType
+
+	behavior:Interaction extendsAspect SysML:Block
+
+	behavior:Interaction extendsAspect owl2-mof2:BinaryAssociationEndType
+
+	behavior:Interaction extendsAspect owl2-mof2:NAryRelationship
+
+	behavior:InteractionBehaviorClass extendsAspect owl2-mof2:BinaryAssociationEndType
+
+	behavior:InteractionRole extendsAspect owl2-mof2:NAryRole
+
+	behavior:InteractionTerminal extendsAspect owl2-mof2:BinaryAssociationEndType
+
+	behavior:InteractionTerminal extendsAspect owl2-mof2:StructuralFullPortType
+
+	behavior:PropertyGroup extendsAspect owl2-mof2:StructuralFullPortEncapsulatedClassifierType
+
+	behavior:hasInteractionRole subObjectPropertyOf owl2-mof2:nAryRelationshipRole
+
+	behavior:hasAttributeGroup subObjectPropertyOf owl2-mof2:nAryRoleBinding
+
+}
