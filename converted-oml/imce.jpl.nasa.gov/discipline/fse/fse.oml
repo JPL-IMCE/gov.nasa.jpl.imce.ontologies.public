@@ -644,13 +644,13 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	VoltageInterface extendsAspect analysis:CharacterizedElement
 
 	@rdfs:label="""has Assembly Identifier"""
-	entityScalarDataProperty hasAssemblyIdentifier {
+	entityScalarDataProperty + hasAssemblyIdentifier {
 		domain Assembly
 		range XMLSchema:string
 	}
 
 	@rdfs:label="""has Subsystem Acronym"""
-	entityScalarDataProperty + hasSubsystemAcronym {
+	entityScalarDataProperty + hasSubsystemIdentifier {
 		domain Subsystem
 		range XMLSchema:string
 	}
@@ -661,6 +661,6 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	hasAssemblyIdentifier subDataPropertyOf base:hasIdentifier
 
-	hasSubsystemAcronym subDataPropertyOf base:hasIdentifier
+	hasSubsystemIdentifier subDataPropertyOf base:hasIdentifier
 
 }

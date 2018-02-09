@@ -459,7 +459,7 @@ When <property>constrain</property>ed by an <classname>ElementBehaviorConstraint
 		source = Interaction
 		target = AttributeGroup }
 
-	rule R47490 infers hasElementBehavior
+	rule R14565 infers hasElementBehavior
 	if ElementBehaviorOwner
 	&& hasElementBehaviorClass
 	&& AttributeAutomaton
@@ -468,7 +468,7 @@ When <property>constrain</property>ed by an <classname>ElementBehaviorConstraint
 	&& hasTransition
 	&& ElementBehaviorTransition
 
-	rule R53015 infers hasElementBehavior
+	rule R22436 infers hasElementBehavior
 	if ElementBehaviorOwner
 	&& hasElementBehaviorClass
 	&& AttributeAutomaton
@@ -477,23 +477,21 @@ When <property>constrain</property>ed by an <classname>ElementBehaviorConstraint
 	&& hasState
 	&& ElementBehaviorState
 
-	rule R64430 infers joins
+	rule R36221 infers hasInteractionBehavior
+	if Interaction
+	&& hasInteractionBehaviorClass
+	&& InteractionBehaviorAutomaton
+	&& hasRegion
+	&& InteractionBehaviorRegion
+
+	rule R72196 infers joins
 	if Interaction
 	&& hasInteractionRole
 	&& InteractionRole
 	&& hasAttributeGroup
 	&& AttributeGroup
 
-	rule R77710 infers hasInteractionBehavior
-	if Interaction
-	&& hasInteractionBehaviorClass
-	&& AttributeAutomaton
-	&& hasRegion
-	&& AutomatonRegion
-	&& hasTransition
-	&& InteractionBehaviorTransition
-
-	rule R81333 infers hasInteractionBehavior
+	rule R82750 infers hasInteractionBehavior
 	if Interaction
 	&& hasInteractionBehaviorClass
 	&& AttributeAutomaton
@@ -502,14 +500,16 @@ When <property>constrain</property>ed by an <classname>ElementBehaviorConstraint
 	&& hasState
 	&& InteractionBehaviorState
 
-	rule R87893 infers hasInteractionBehavior
+	rule R91145 infers hasInteractionBehavior
 	if Interaction
 	&& hasInteractionBehaviorClass
-	&& InteractionBehaviorAutomaton
+	&& AttributeAutomaton
 	&& hasRegion
-	&& InteractionBehaviorRegion
+	&& AutomatonRegion
+	&& hasTransition
+	&& InteractionBehaviorTransition
 
-	rule R97118 infers hasElementBehavior
+	rule R91351 infers hasElementBehavior
 	if ElementBehaviorOwner
 	&& hasElementBehaviorClass
 	&& ElementBehaviorAutomaton

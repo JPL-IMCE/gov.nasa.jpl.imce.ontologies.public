@@ -269,6 +269,7 @@ This software may be subject to U.S. export control laws. By accepting this soft
     <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasAssemblyIdentifier">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#hasIdentifier"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Assembly"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has Assembly Identifier</rdfs:label>
@@ -276,9 +277,9 @@ This software may be subject to U.S. export control laws. By accepting this soft
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasSubsystemAcronym -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasSubsystemIdentifier -->
 
-    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasSubsystemAcronym">
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasSubsystemIdentifier">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#hasIdentifier"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
