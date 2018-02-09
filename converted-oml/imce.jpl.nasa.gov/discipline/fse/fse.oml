@@ -11,6 +11,9 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	extends <http://imce.jpl.nasa.gov/foundation/project/project>
 
+	@rdfs:label="""Assembly"""
+	aspect Assembly
+
 	aspect CurrentInterface
 
 	aspect DiscreteInterface
@@ -20,6 +23,9 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	aspect MeasurementInterface
 
 	aspect PulsedInterface
+
+	@rdfs:label="""Assembly"""
+	aspect Subsystem
 
 	aspect SwitchedInterface
 
@@ -569,6 +575,10 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	AnalogPRTChannel extendsAspect CurrentInterface
 
+	Assembly extendsAspect base:AggregatedElement
+
+	Assembly extendsAspect base:IdentifiedElement
+
 	CurrentInterface extendsAspect analysis:AnalyzedElement
 
 	CurrentInterface extendsAspect analysis:CharacterizedElement
@@ -607,6 +617,10 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	PulsedInterfaceCircuit extendsAspect PulsedInterface
 
+	Subsystem extendsAspect base:AggregatedElement
+
+	Subsystem extendsAspect base:IdentifiedElement
+
 	SwitchedInterface extendsAspect analysis:AnalyzedElement
 
 	SwitchedInterface extendsAspect analysis:CharacterizedElement
@@ -628,5 +642,25 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	VoltageInterface extendsAspect analysis:AnalyzedElement
 
 	VoltageInterface extendsAspect analysis:CharacterizedElement
+
+	@rdfs:label="""has Assembly Identifier"""
+	entityScalarDataProperty hasAssemblyIdentifier {
+		domain Assembly
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has Subsystem Acronym"""
+	entityScalarDataProperty + hasSubsystemAcronym {
+		domain Subsystem
+		range XMLSchema:string
+	}
+
+	allEntities Assembly . base:isAggregatedIn in Subsystem
+
+	allEntities Subsystem . base:aggregates in Assembly
+
+	hasAssemblyIdentifier subDataPropertyOf base:hasIdentifier
+
+	hasSubsystemAcronym subDataPropertyOf base:hasIdentifier
 
 }
