@@ -14,26 +14,36 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""Assembly"""
 	aspect Assembly
 
+	@rdfs:label="""Current Interface"""
 	aspect CurrentInterface
 
+	@rdfs:label="""Discrete Interface"""
 	aspect DiscreteInterface
 
+	@rdfs:label="""Fused Interface"""
 	aspect FusedInterface
 
+	@rdfs:label="""Measurement Interface"""
 	aspect MeasurementInterface
 
+	@rdfs:label="""PulsedInterface"""
 	aspect PulsedInterface
+
+	@rdfs:label="""Reference Designated Element"""
+	aspect ReferenceDesignatedElement
 
 	@rdfs:label="""Assembly"""
 	aspect Subsystem
 
+	@rdfs:label="""Switched Interface"""
 	aspect SwitchedInterface
 
+	@rdfs:label="""Variable Interface"""
 	aspect VariableInterface
 
+	@rdfs:label="""VoltageInterface"""
 	aspect VoltageInterface
 
-	@rdfs:label="""AD590Channel"""
 	@rdfs:label="""AD590 Channel"""
 	concept AD590Channel
 
@@ -41,14 +51,12 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	concept AnalogCurrentChannel
 
 	@rdfs:label="""Analog PRT Channel"""
-	@rdfs:label="""Analog PRTChannel"""
 	concept AnalogPRTChannel
 
 	@rdfs:label="""Analog Voltage Channel"""
 	concept AnalogVoltageChannel
 
 	@rdfs:label="""Conditioned 5V Interface Circuit"""
-	@rdfs:label="""Conditioned5VInterface Circuit"""
 	concept Conditioned5VInterfaceCircuit
 
 	@rdfs:label="""Current Measurement Interface Circuit"""
@@ -60,12 +68,10 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""Differential Discrete Measurement Channel"""
 	concept DifferentialDiscreteMeasurementChannel
 
-	@rdfs:label="""Digital3_Wire Driver Interface Circuit"""
-	@rdfs:label="""Digital 3_Wire Driver Interface Circuit"""
+	@rdfs:label="""Digital 3-Wire Driver Interface Circuit"""
 	concept Digital3_WireDriverInterfaceCircuit
 
-	@rdfs:label="""Digital 3_Wire Receiver Interface Circuit"""
-	@rdfs:label="""Digital3_Wire Receiver Interface Circuit"""
+	@rdfs:label="""Digital 3-Wire Receiver Interface Circuit"""
 	concept Digital3_WireReceiverInterfaceCircuit
 
 	@rdfs:label="""Digital Driver Interface Circuit"""
@@ -77,11 +83,9 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""Digital Receiver Interface Circuit"""
 	concept DigitalReceiverInterfaceCircuit
 
-	@rdfs:label="""Discrete3_3VMeasurement Interface Circuit"""
-	@rdfs:label="""Discrete 3_3V Measurement Interface Circuit"""
+	@rdfs:label="""Discrete 3.3V Measurement Interface Circuit"""
 	concept Discrete3_3VMeasurementInterfaceCircuit
 
-	@rdfs:label="""Discrete5VMeasurement Interface Circuit"""
 	@rdfs:label="""Discrete 5V Measurement Interface Circuit"""
 	concept Discrete5VMeasurementInterfaceCircuit
 
@@ -95,58 +99,45 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	concept ElectricalInterfaceCircuit
 
 	@rdfs:label="""Fixed 10V Interface Circuit"""
-	@rdfs:label="""Fixed10VInterface Circuit"""
 	concept Fixed10VInterfaceCircuit
 
 	@rdfs:label="""Fixed 12V Interface Circuit"""
-	@rdfs:label="""Fixed12VInterface Circuit"""
 	concept Fixed12VInterfaceCircuit
 
-	@rdfs:label="""Fixed 1_5V Interface Circuit"""
-	@rdfs:label="""Fixed1_5VInterface Circuit"""
+	@rdfs:label="""Fixed 1.5V Interface Circuit"""
 	concept Fixed1_5VInterfaceCircuit
 
 	@rdfs:label="""Fixed 28V Interface Circuit"""
-	@rdfs:label="""Fixed28VInterface Circuit"""
 	concept Fixed28VInterfaceCircuit
 
-	@rdfs:label="""Fixed2_5VInterface Circuit"""
-	@rdfs:label="""Fixed 2_5V Interface Circuit"""
+	@rdfs:label="""Fixed 2.5V Interface Circuit"""
 	concept Fixed2_5VInterfaceCircuit
 
-	@rdfs:label="""Fixed 3_3V Interface Circuit"""
-	@rdfs:label="""Fixed3_3VInterface Circuit"""
+	@rdfs:label="""Fixed 3.3V Interface Circuit"""
 	concept Fixed3_3VInterfaceCircuit
 
-	@rdfs:label="""Fixed4VInterface Circuit"""
 	@rdfs:label="""Fixed 4V Interface Circuit"""
 	concept Fixed4VInterfaceCircuit
 
-	@rdfs:label="""Fixed5VInterface Circuit"""
 	@rdfs:label="""Fixed 5V Interface Circuit"""
 	concept Fixed5VInterfaceCircuit
 
-	@rdfs:label="""Fixed70VInterface Circuit"""
 	@rdfs:label="""Fixed 70V Interface Circuit"""
 	concept Fixed70VInterfaceCircuit
 
 	@rdfs:label="""Fixed Voltage Interface Circuit"""
 	concept FixedVoltageInterfaceCircuit
 
-	@rdfs:label="""Fused10AInterface Circuit"""
 	@rdfs:label="""Fused 10A Interface Circuit"""
 	concept Fused10AInterfaceCircuit
 
-	@rdfs:label="""Fused20AInterface Circuit"""
 	@rdfs:label="""Fused 20A Interface Circuit"""
 	concept Fused20AInterfaceCircuit
 
 	@rdfs:label="""Fused 2A Interface Circuit"""
-	@rdfs:label="""Fused2AInterface Circuit"""
 	concept Fused2AInterfaceCircuit
 
 	@rdfs:label="""Fused 4A Interface Circuit"""
-	@rdfs:label="""Fused4AInterface Circuit"""
 	concept Fused4AInterfaceCircuit
 
 	@rdfs:label="""Fused Interface Circuit"""
@@ -155,116 +146,90 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""Heater Interface Circuit"""
 	concept HeaterInterfaceCircuit
 
-	@rdfs:label="""LVDSDriver Interface Circuit"""
 	@rdfs:label="""LVDS Driver Interface Circuit"""
 	concept LVDSDriverInterfaceCircuit
 
 	@rdfs:label="""LVDS Interface Circuit"""
-	@rdfs:label="""LVDSInterface Circuit"""
 	concept LVDSInterfaceCircuit
 
 	@rdfs:label="""LVDS RSB Client Interface Circuit"""
-	@rdfs:label="""LVDSRSBClient Interface Circuit"""
 	concept LVDSRSBClientInterfaceCircuit
 
 	@rdfs:label="""LVDS RSB Host Interface Circuit"""
-	@rdfs:label="""LVDSRSBHost Interface Circuit"""
 	concept LVDSRSBHostInterfaceCircuit
 
 	@rdfs:label="""LVDS Radio/TZ Radio Transceiver Interface"""
-	@rdfs:label="""LVDSRadio TZRadio Transceiver Interface"""
 	concept LVDSRadioTZRadioTransceiverInterface
 
 	@rdfs:label="""LVDS Receiver Interface Circuit"""
-	@rdfs:label="""LVDSReceiver Interface Circuit"""
 	concept LVDSReceiverInterfaceCircuit
 
 	@rdfs:label="""LVDS Spacewire Transceiver"""
-	@rdfs:label="""LVDSSpacewire Transceiver"""
 	concept LVDSSpacewireTransceiver
 
-	@rdfs:label="""LVDSUART2Signal Flow Control Interface Circuit"""
 	@rdfs:label="""LVDS UART 2 Signal Flow Control Interface Circuit"""
 	concept LVDSUART2SignalFlowControlInterfaceCircuit
 
 	@rdfs:label="""LVDS UART Interface Circuit"""
-	@rdfs:label="""LVDSUARTInterface Circuit"""
 	concept LVDSUARTInterfaceCircuit
 
 	@rdfs:label="""MIL-STD-1553 Direct Interface Circuit"""
-	@rdfs:label="""MIL-STD-1553Direct Interface Circuit"""
 	concept MIL-STD-1553DirectInterfaceCircuit
 
 	@rdfs:label="""MIL-STD-1553 Interface Circuit"""
-	@rdfs:label="""MIL-STD-1553Interface Circuit"""
 	concept MIL-STD-1553InterfaceCircuit
 
-	@rdfs:label="""MIL-STD-1553Termination Interface Circuit"""
 	@rdfs:label="""MIL-STD-1553 Termination Interface Circuit"""
 	concept MIL-STD-1553TerminationInterfaceCircuit
 
 	@rdfs:label="""MIL-STD-1553 Transformer Interface Circuit"""
-	@rdfs:label="""MIL-STD-1553Transformer Interface Circuit"""
 	concept MIL-STD-1553TransformerInterfaceCircuit
 
 	@rdfs:label="""Measurement Interface Circuit"""
 	concept MeasurementInterfaceCircuit
 
-	@rdfs:label="""PRT4-Wire Interface Circuit"""
 	@rdfs:label="""PRT 4-Wire Interface Circuit"""
 	concept PRT4-WireInterfaceCircuit
 
-	@rdfs:label="""PRTInterface Circuit"""
 	@rdfs:label="""PRT Interface Circuit"""
 	concept PRTInterfaceCircuit
 
 	@rdfs:label="""Powered Interface Circuit"""
 	concept PoweredInterfaceCircuit
 
-	@rdfs:label="""Pulsed2AInterface Circuit"""
 	@rdfs:label="""Pulsed 2A Interface Circuit"""
 	concept Pulsed2AInterfaceCircuit
 
 	@rdfs:label="""Pulsed Interface Circuit"""
 	concept PulsedInterfaceCircuit
 
-	@rdfs:label="""RS422Driver Interface Circuit"""
 	@rdfs:label="""RS422 Driver Interface Circuit"""
 	concept RS422DriverInterfaceCircuit
 
-	@rdfs:label="""RS422 Interface Circuit"""
-	@rdfs:label="""RS422Interface Circuit"""
+	@rdfs:label="""RS-422 Interface Circuit"""
 	concept RS422InterfaceCircuit
 
-	@rdfs:label="""RS422RSBClient Interface Circuit"""
-	@rdfs:label="""RS422 RSB Client Interface Circuit"""
+	@rdfs:label="""RS-422 RSB Client Interface Circuit"""
 	concept RS422RSBClientInterfaceCircuit
 
-	@rdfs:label="""RS422 RSB Host Interface Circuit"""
-	@rdfs:label="""RS422RSBHost Interface Circuit"""
+	@rdfs:label="""RS-422 RSB Host Interface Circuit"""
 	concept RS422RSBHostInterfaceCircuit
 
-	@rdfs:label="""RS422 Radio/TZ Radio Transceiver Interface"""
-	@rdfs:label="""RS422Radio TZRadio Transceiver Interface"""
+	@rdfs:label="""RS-422 Radio/TZ Radio Transceiver Interface"""
 	concept RS422RadioTZRadioTransceiverInterface
 
-	@rdfs:label="""RS422Receiver Interface Circuit"""
 	@rdfs:label="""RS422 Receiver Interface Circuit"""
 	concept RS422ReceiverInterfaceCircuit
 
-	@rdfs:label="""RS422UART2Signal Flow Control Interface Circuit"""
-	@rdfs:label="""RS422 UART 2 Signal Flow Control Interface Circuit"""
+	@rdfs:label="""RS-422 UART 2 Signal Flow Control Interface Circuit"""
 	concept RS422UART2SignalFlowControlInterfaceCircuit
 
-	@rdfs:label="""RS422 UART Interface Circuit"""
-	@rdfs:label="""RS422UARTInterface Circuit"""
+	@rdfs:label="""RS-422 UART Interface Circuit"""
 	concept RS422UARTInterfaceCircuit
 
 	@rdfs:label="""Radio TZMTIFTransceiver Interface"""
-	@rdfs:label="""Radio/TZ MTIF Transceiver Interface"""
 	concept RadioTZMTIFTransceiverInterface
 
-	@rdfs:label="""Radio TZRadio Transceiver Interface"""
 	@rdfs:label="""Radio/TZ Radio Transceiver Interface"""
 	concept RadioTZRadioTransceiverInterface
 
@@ -280,33 +245,27 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""Single Ended Discrete Interface"""
 	concept SingleEndedDiscreteInterface
 
-	@rdfs:label="""Single Ended Discrete Measurement Channel"""
+	@rdfs:label="""Single-Ended Discrete Measurement Channel"""
 	concept SingleEndedDiscreteMeasurementChannel
 
 	@rdfs:label="""Spacewire Transceiver"""
 	concept SpacewireTransceiver
 
 	@rdfs:label="""Switched 10A Interface Circuit"""
-	@rdfs:label="""Switched10AInterface Circuit"""
 	concept Switched10AInterfaceCircuit
 
 	@rdfs:label="""Switched 1A Driver Interface Circuit"""
-	@rdfs:label="""Switched1ADriver Interface Circuit"""
 	concept Switched1ADriverInterfaceCircuit
 
-	@rdfs:label="""Switched28VInterface Circuit"""
 	@rdfs:label="""Switched 28V Interface Circuit"""
 	concept Switched28VInterfaceCircuit
 
 	@rdfs:label="""Switched 2A Driver Interface Circuit"""
-	@rdfs:label="""Switched2ADriver Interface Circuit"""
 	concept Switched2ADriverInterfaceCircuit
 
-	@rdfs:label="""Switched5AInterface Circuit"""
 	@rdfs:label="""Switched 5A Interface Circuit"""
 	concept Switched5AInterfaceCircuit
 
-	@rdfs:label="""Switched70VInterface Circuit"""
 	@rdfs:label="""Switched 70V Interface Circuit"""
 	concept Switched70VInterfaceCircuit
 
@@ -317,39 +276,30 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	concept ThermistorInterfaceCircuit
 
 	@rdfs:label="""UART 2 Signal Flow Control Interface Circuit"""
-	@rdfs:label="""UART2Signal Flow Control Interface Circuit"""
 	concept UART2SignalFlowControlInterfaceCircuit
 
-	@rdfs:label="""UARTInterface Circuit"""
 	@rdfs:label="""UART Interface Circuit"""
 	concept UARTInterfaceCircuit
 
 	@rdfs:label="""Variable 10V Measurement Interface Circuit"""
-	@rdfs:label="""Variable10VMeasurement Interface Circuit"""
 	concept Variable10VMeasurementInterfaceCircuit
 
-	@rdfs:label="""Variable28VInterface Circuit"""
 	@rdfs:label="""Variable 28V Interface Circuit"""
 	concept Variable28VInterfaceCircuit
 
-	@rdfs:label="""Variable2_5VMeasurement Interface Circuit"""
-	@rdfs:label="""Variable 2_5V Measurement Interface Circuit"""
+	@rdfs:label="""Variable 2.5V Measurement Interface Circuit"""
 	concept Variable2_5VMeasurementInterfaceCircuit
 
-	@rdfs:label="""Variable3_3VInterface Circuit"""
-	@rdfs:label="""3.3 V Variable Voltage Interface Circuit"""
+	@rdfs:label="""Variable 3.3V Interface Circuit"""
 	concept Variable3_3VInterfaceCircuit
 
-	@rdfs:label="""Variable 3_3V Measurement Interface Circuit"""
-	@rdfs:label="""Variable3_3VMeasurement Interface Circuit"""
+	@rdfs:label="""Variable 3.3V Measurement Interface Circuit"""
 	concept Variable3_3VMeasurementInterfaceCircuit
 
 	@rdfs:label="""Variable 5V Measurement Interface Circuit"""
-	@rdfs:label="""Variable5VMeasurement Interface Circuit"""
 	concept Variable5VMeasurementInterfaceCircuit
 
 	@rdfs:label="""Variable 70V Interface Circuit"""
-	@rdfs:label="""Variable70VInterface Circuit"""
 	concept Variable70VInterfaceCircuit
 
 	@rdfs:label="""Variable Current Interface Circuit"""
@@ -577,7 +527,7 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	Assembly extendsAspect base:AggregatedElement
 
-	Assembly extendsAspect base:IdentifiedElement
+	Assembly extendsAspect ReferenceDesignatedElement
 
 	CurrentInterface extendsAspect analysis:AnalyzedElement
 
@@ -617,9 +567,11 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	PulsedInterfaceCircuit extendsAspect PulsedInterface
 
+	ReferenceDesignatedElement extendsAspect base:IdentifiedElement
+
 	Subsystem extendsAspect base:AggregatedElement
 
-	Subsystem extendsAspect base:IdentifiedElement
+	Subsystem extendsAspect ReferenceDesignatedElement
 
 	SwitchedInterface extendsAspect analysis:AnalyzedElement
 
@@ -643,14 +595,38 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	VoltageInterface extendsAspect analysis:CharacterizedElement
 
-	@rdfs:label="""has Assembly Identifier"""
-	entityScalarDataProperty + hasAssemblyIdentifier {
+	@rdfs:label="""has assembly acronym"""
+	entityScalarDataProperty + hasAssemblyAcronym {
 		domain Assembly
 		range XMLSchema:string
 	}
 
-	@rdfs:label="""has Subsystem Acronym"""
-	entityScalarDataProperty + hasSubsystemIdentifier {
+	@rdfs:label="""has assembly reference designator"""
+	entityScalarDataProperty + hasAssemblyReferenceDesignator {
+		domain Assembly
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has reference designator"""
+	entityScalarDataProperty + hasReferenceDesignator {
+		domain ReferenceDesignatedElement
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has subsystem acronym"""
+	entityScalarDataProperty + hasSubsystemAcronym {
+		domain Subsystem
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has subsystem number"""
+	entityScalarDataProperty + hasSubsystemNumber {
+		domain Subsystem
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has subsystem reference designator"""
+	entityScalarDataProperty hasSubsystemReferenceDesignator {
 		domain Subsystem
 		range XMLSchema:string
 	}
@@ -659,8 +635,12 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	allEntities Subsystem . base:aggregates in Assembly
 
-	hasAssemblyIdentifier subDataPropertyOf base:hasIdentifier
+	hasAssemblyAcronym subDataPropertyOf base:hasIdentifier
 
-	hasSubsystemIdentifier subDataPropertyOf base:hasIdentifier
+	hasSubsystemAcronym subDataPropertyOf base:hasIdentifier
+
+	hasAssemblyReferenceDesignator subDataPropertyOf hasReferenceDesignator
+
+	hasSubsystemReferenceDesignator subDataPropertyOf hasReferenceDesignator
 
 }
