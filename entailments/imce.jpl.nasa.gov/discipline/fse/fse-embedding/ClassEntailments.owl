@@ -264,6 +264,16 @@
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Thing"/>
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Class.Block"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#ReferenceDesignatedElement">
+    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#ObjectPropertyDependentRangeType"/>
+    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependencyEndType"/>
+    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#NamedElement"/>
+    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#Aspect"/>
+    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Aspect"/>
+    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Element"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableCurrentInterfaceCircuit">
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#StructuralFlowPropertyContainerType"/>
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#ObjectPropertyDependentRangeType"/>
@@ -377,6 +387,9 @@
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Entity"/>
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Namespace"/>
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#StructuredClassifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse-embedding#topReifiedObjectPropertySource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Variable10VMeasurementInterfaceCircuit">
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Aspect"/>
@@ -845,6 +858,17 @@
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#Thing"/>
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.Block"/>
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#ParameterableElement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Assembly">
+    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryAssociationEndType"/>
+    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Aspect"/>
+    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#NamedElement"/>
+    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Element"/>
+    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#Aspect"/>
+    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependencyEndType"/>
+    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#ObjectPropertyDependentRangeType"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Variable70VInterfaceCircuit">
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Class"/>
@@ -2554,6 +2578,17 @@
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Aspect"/>
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Element"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Subsystem">
+    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Aspect"/>
+    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#NamedElement"/>
+    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Element"/>
+    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#ObjectPropertyDependentRangeType"/>
+    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#Aspect"/>
+    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependencyEndType"/>
+    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryAssociationEndType"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Fixed12VInterfaceCircuit">
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Namespace"/>
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Type"/>
@@ -2667,9 +2702,6 @@
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#StructuralFlowPropertyContainerType"/>
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#TemplateableElement"/>
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#ObjectPropertyDependentRangeType"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse-embedding#Aspect">
-    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse-embedding#Aspect"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse-embedding#ReifiedObjectProperty">
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse-embedding#ReifiedObjectProperty"/>
@@ -3092,9 +3124,6 @@
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Aspect"/>
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Type"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse-embedding#ReifiedStructuredDataProperty">
-    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse-embedding#ReifiedStructuredDataProperty"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#LVDSUART2SignalFlowControlInterfaceCircuit">
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.Block"/>
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Aspect"/>
@@ -3438,10 +3467,13 @@
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Entity"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse-embedding/ClassEntailments">
-    <owl:versionInfo>2018-01-29 08:37:36 -0800</owl:versionInfo>
+    <owl:versionInfo>2018-03-06 15:49:56 -0800</owl:versionInfo>
     <rdfs:comment>generated by entail</rdfs:comment>
     <owl:imports rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse-embedding"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse-embedding#topReifiedObjectPropertyTarget">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#RS422ReceiverInterfaceCircuit">
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#StructuralFlowPropertyContainerType"/>
