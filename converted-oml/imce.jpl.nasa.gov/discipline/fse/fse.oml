@@ -311,6 +311,9 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""Voltage Measurement Interface Circuit"""
 	concept VoltageMeasurementInterfaceCircuit
 
+	@rdfs:label="""Function"""
+	concept Function
+
 	AD590Channel extendsConcept VoltageMeasurementInterfaceCircuit
 
 	AnalogCurrentChannel extendsConcept CurrentMeasurementInterfaceCircuit
@@ -350,6 +353,8 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	DiscreteVoltageMeasurementInterfaceCircuit extendsConcept VoltageMeasurementInterfaceCircuit
 
 	ElectricalInterfaceCircuit extendsConcept mission:Interface
+	
+	Function extendsConcept mission:Junction
 
 	Fixed10VInterfaceCircuit extendsConcept FixedVoltageInterfaceCircuit
 
@@ -630,6 +635,26 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 		domain Subsystem
 		range XMLSchema:string
 	}
+
+	@oml:hasPropertyLabel="""joinsIn"""
+	@oml:hasReificationLabel="""JoinsIn"""
+	reifiedRelationship JoinsIn {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = joinsIn
+		source = Function
+		target = ElectricalInterfaceCircuit }
+
+	@oml:hasPropertyLabel="""joinsOut"""
+	@oml:hasReificationLabel="""JoinsOut"""
+	reifiedRelationship JoinsOut {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = joinsOut
+		source = Function
+		target = ElectricalInterfaceCircuit }
 
 	allEntities Assembly . base:isAggregatedIn in Subsystem
 
