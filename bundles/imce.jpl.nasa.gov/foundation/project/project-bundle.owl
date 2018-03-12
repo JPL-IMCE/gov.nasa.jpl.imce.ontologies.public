@@ -232,7 +232,7 @@
      xmlns:analysis-embedding="http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#"
      xmlns:base="http://imce.jpl.nasa.gov/foundation/base/base#">
     <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/foundation/project/project-bundle">
-        <owl:versionInfo rdf:datatype="&xsd;string">2018-02-04 07:19:43 -0800</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="&xsd;string">2018-03-11 18:07:06 -0700</owl:versionInfo>
         <rdfs:comment rdf:datatype="&xsd;string">created by close-bundle</rdfs:comment>
         <owl:imports rdf:resource="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management"/>
         <owl:imports rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse"/>
@@ -1800,24 +1800,16 @@
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#CurrentInterface -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Assembly -->
 
-    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#CurrentInterface">
-        <owl:disjointUnionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#AnalogPRTChannel"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#CurrentMeasurementInterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableCurrentInterfaceCircuit"/>
-        </owl:disjointUnionOf>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Assembly">
+        <owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Subsystem"/>
     </rdf:Description>
     <owl:Axiom>
         <rdfs:comment rdf:datatype="&xsd;string">subclasses of </rdfs:comment>
-        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#CurrentInterface"/>
-        <owl:annotatedProperty rdf:resource="&owl;disjointUnionOf"/>
-        <owl:annotatedTarget rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#AnalogPRTChannel"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#CurrentMeasurementInterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableCurrentInterfaceCircuit"/>
-        </owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Assembly"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Subsystem"/>
+        <owl:annotatedProperty rdf:resource="&owl;disjointWith"/>
     </owl:Axiom>
     
 
@@ -1858,46 +1850,6 @@
         <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#AnalogVoltageChannel"/>
         <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Discrete3_3VMeasurementInterfaceCircuit"/>
         <owl:annotatedProperty rdf:resource="&owl;disjointWith"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteInterface -->
-
-    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteInterface">
-        <owl:disjointUnionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalInterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteVoltageInterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteVoltageMeasurementInterfaceCircuit"/>
-        </owl:disjointUnionOf>
-    </rdf:Description>
-    <owl:Axiom>
-        <rdfs:comment rdf:datatype="&xsd;string">subclasses of </rdfs:comment>
-        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteInterface"/>
-        <owl:annotatedProperty rdf:resource="&owl;disjointUnionOf"/>
-        <owl:annotatedTarget rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalInterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteVoltageInterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteVoltageMeasurementInterfaceCircuit"/>
-        </owl:annotatedTarget>
-    </owl:Axiom>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#FusedInterface -->
-
-    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#FusedInterface">
-        <owl:disjointUnionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#FusedInterfaceCircuit"/>
-        </owl:disjointUnionOf>
-    </rdf:Description>
-    <owl:Axiom>
-        <rdfs:comment rdf:datatype="&xsd;string">subclasses of </rdfs:comment>
-        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FusedInterface"/>
-        <owl:annotatedProperty rdf:resource="&owl;disjointUnionOf"/>
-        <owl:annotatedTarget rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#FusedInterfaceCircuit"/>
-        </owl:annotatedTarget>
     </owl:Axiom>
     
 
@@ -1958,42 +1910,6 @@
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementInterface -->
-
-    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementInterface">
-        <owl:disjointUnionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementInterfaceCircuit"/>
-        </owl:disjointUnionOf>
-    </rdf:Description>
-    <owl:Axiom>
-        <rdfs:comment rdf:datatype="&xsd;string">subclasses of </rdfs:comment>
-        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementInterface"/>
-        <owl:annotatedProperty rdf:resource="&owl;disjointUnionOf"/>
-        <owl:annotatedTarget rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementInterfaceCircuit"/>
-        </owl:annotatedTarget>
-    </owl:Axiom>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#PulsedInterface -->
-
-    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#PulsedInterface">
-        <owl:disjointUnionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#PulsedInterfaceCircuit"/>
-        </owl:disjointUnionOf>
-    </rdf:Description>
-    <owl:Axiom>
-        <rdfs:comment rdf:datatype="&xsd;string">subclasses of </rdfs:comment>
-        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PulsedInterface"/>
-        <owl:annotatedProperty rdf:resource="&owl;disjointUnionOf"/>
-        <owl:annotatedTarget rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#PulsedInterfaceCircuit"/>
-        </owl:annotatedTarget>
-    </owl:Axiom>
-    
-
-
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#RS422RSBClientInterfaceCircuit -->
 
     <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#RS422RSBClientInterfaceCircuit"/>
@@ -2025,14 +1941,14 @@
     </rdf:Description>
     <owl:Axiom>
         <rdfs:comment rdf:datatype="&xsd;string">subclasses of </rdfs:comment>
-        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#LVDSRadioTZRadioTransceiverInterface"/>
-        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#RS422RadioTZRadioTransceiverInterface"/>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#RS422RadioTZRadioTransceiverInterface"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#RS422UARTInterfaceCircuit"/>
         <owl:annotatedProperty rdf:resource="&owl;disjointWith"/>
     </owl:Axiom>
     <owl:Axiom>
         <rdfs:comment rdf:datatype="&xsd;string">subclasses of </rdfs:comment>
-        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#RS422RadioTZRadioTransceiverInterface"/>
-        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#RS422UARTInterfaceCircuit"/>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#LVDSRadioTZRadioTransceiverInterface"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#RS422RadioTZRadioTransceiverInterface"/>
         <owl:annotatedProperty rdf:resource="&owl;disjointWith"/>
     </owl:Axiom>
     
@@ -2074,6 +1990,18 @@
     
 
 
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Subsystem -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Subsystem"/>
+    <owl:Axiom>
+        <rdfs:comment rdf:datatype="&xsd;string">subclasses of </rdfs:comment>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Assembly"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Subsystem"/>
+        <owl:annotatedProperty rdf:resource="&owl;disjointWith"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Switched28VInterfaceCircuit -->
 
     <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Switched28VInterfaceCircuit">
@@ -2100,62 +2028,28 @@
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#SwitchedInterface -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#VariableCurrentInterfaceCircuit -->
 
-    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#SwitchedInterface">
-        <owl:disjointUnionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#SwitchedVoltageInterfaceCircuit"/>
-        </owl:disjointUnionOf>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableCurrentInterfaceCircuit">
+        <owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableVoltageInterfaceCircuit"/>
     </rdf:Description>
     <owl:Axiom>
         <rdfs:comment rdf:datatype="&xsd;string">subclasses of </rdfs:comment>
-        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#SwitchedInterface"/>
-        <owl:annotatedProperty rdf:resource="&owl;disjointUnionOf"/>
-        <owl:annotatedTarget rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#SwitchedVoltageInterfaceCircuit"/>
-        </owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableCurrentInterfaceCircuit"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableVoltageInterfaceCircuit"/>
+        <owl:annotatedProperty rdf:resource="&owl;disjointWith"/>
     </owl:Axiom>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#VariableInterface -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#VariableVoltageInterfaceCircuit -->
 
-    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableInterface">
-        <owl:disjointUnionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableCurrentInterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableVoltageInterfaceCircuit"/>
-        </owl:disjointUnionOf>
-    </rdf:Description>
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableVoltageInterfaceCircuit"/>
     <owl:Axiom>
         <rdfs:comment rdf:datatype="&xsd;string">subclasses of </rdfs:comment>
-        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableInterface"/>
-        <owl:annotatedProperty rdf:resource="&owl;disjointUnionOf"/>
-        <owl:annotatedTarget rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableCurrentInterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableVoltageInterfaceCircuit"/>
-        </owl:annotatedTarget>
-    </owl:Axiom>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#VoltageInterface -->
-
-    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#VoltageInterface">
-        <owl:disjointUnionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteVoltageMeasurementInterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#FixedVoltageInterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableVoltageInterfaceCircuit"/>
-        </owl:disjointUnionOf>
-    </rdf:Description>
-    <owl:Axiom>
-        <rdfs:comment rdf:datatype="&xsd;string">subclasses of </rdfs:comment>
-        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VoltageInterface"/>
-        <owl:annotatedProperty rdf:resource="&owl;disjointUnionOf"/>
-        <owl:annotatedTarget rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteVoltageMeasurementInterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#FixedVoltageInterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableVoltageInterfaceCircuit"/>
-        </owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableCurrentInterfaceCircuit"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableVoltageInterfaceCircuit"/>
+        <owl:annotatedProperty rdf:resource="&owl;disjointWith"/>
     </owl:Axiom>
     
 
@@ -2182,6 +2076,12 @@
         </owl:disjointUnionOf>
     </rdf:Description>
     <owl:Axiom>
+        <rdfs:comment rdf:datatype="&xsd;string">subclasses of project:Process</rdfs:comment>
+        <owl:annotatedSource rdf:resource="&vandv;Activity"/>
+        <owl:annotatedTarget rdf:resource="&vandv;TestProcedure"/>
+        <owl:annotatedProperty rdf:resource="&owl;disjointWith"/>
+    </owl:Axiom>
+    <owl:Axiom>
         <rdfs:comment rdf:datatype="&xsd;string">subclasses of vandv:Activity</rdfs:comment>
         <owl:annotatedSource rdf:resource="&vandv;Activity"/>
         <owl:annotatedProperty rdf:resource="&owl;disjointUnionOf"/>
@@ -2189,12 +2089,6 @@
             <rdf:Description rdf:about="&vandv;ValidationActivity"/>
             <rdf:Description rdf:about="&vandv;VerificationActivity"/>
         </owl:annotatedTarget>
-    </owl:Axiom>
-    <owl:Axiom>
-        <rdfs:comment rdf:datatype="&xsd;string">subclasses of project:Process</rdfs:comment>
-        <owl:annotatedSource rdf:resource="&vandv;Activity"/>
-        <owl:annotatedTarget rdf:resource="&vandv;TestProcedure"/>
-        <owl:annotatedProperty rdf:resource="&owl;disjointWith"/>
     </owl:Axiom>
     
 
@@ -3863,58 +3757,61 @@
 
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <rdfs:comment rdf:datatype="&xsd;string">subclasses of </rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">disjoint backbone classes of http://imce.jpl.nasa.gov/foundation/analysis/analysis</rdfs:comment>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Fused10AInterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Fused20AInterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Fused2AInterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Fused4AInterfaceCircuit"/>
+            <rdf:Description rdf:about="&analysis-backbone;Entity"/>
+            <rdf:Description rdf:about="&analysis-backbone;ReifiedObjectProperty"/>
+            <rdf:Description rdf:about="&analysis-backbone;ReifiedStructuredDataProperty"/>
+            <rdf:Description rdf:about="&analysis-backbone;StructuredDatatype"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <rdfs:comment rdf:datatype="&xsd;string">subclasses of </rdfs:comment>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalInterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteVoltageInterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementInterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#PoweredInterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#ResistiveInterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableCurrentInterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableVoltageInterfaceCircuit"/>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#FixedVoltageInterfaceCircuit"/>
-                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#FusedInterfaceCircuit"/>
-                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#PulsedInterfaceCircuit"/>
-                </owl:unionOf>
-            </owl:Class>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DifferentialDiscreteMeasurementChannel"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Discrete3_3VMeasurementInterfaceCircuit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Discrete5VMeasurementInterfaceCircuit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#SingleEndedDiscreteMeasurementChannel"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <rdfs:comment rdf:datatype="&xsd;string">disjoint backbone classes of http://imce.jpl.nasa.gov/discipline/vandv/vandv</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">disjoint backbone classes of http://imce.jpl.nasa.gov/foundation/project/project</rdfs:comment>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/vandv/vandv#Entity"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/vandv/vandv#ReifiedObjectProperty"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/vandv/vandv#ReifiedStructuredDataProperty"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/vandv/vandv#StructuredDatatype"/>
+            <rdf:Description rdf:about="&project-backbone;Entity"/>
+            <rdf:Description rdf:about="&project-backbone;ReifiedObjectProperty"/>
+            <rdf:Description rdf:about="&project-backbone;ReifiedStructuredDataProperty"/>
+            <rdf:Description rdf:about="&project-backbone;StructuredDatatype"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <rdfs:comment rdf:datatype="&xsd;string">subclasses of project:Product</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">subclasses of </rdfs:comment>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&vandv;ActivityMatrix"/>
-            <rdf:Description rdf:about="&vandv;ActivityPlan"/>
-            <rdf:Description rdf:about="&vandv;ClosureEvidence"/>
-            <rdf:Description rdf:about="&vandv;EvidenceExpected"/>
-            <rdf:Description rdf:about="&vandv;ExecutionRecord"/>
-            <rdf:Description rdf:about="&vandv;ExecutionSubRecord"/>
-            <rdf:Description rdf:about="&vandv;IncompressibleTestList"/>
-            <rdf:Description rdf:about="&vandv;Nonconformance"/>
-            <rdf:Description rdf:about="&vandv;Plan"/>
-            <rdf:Description rdf:about="&vandv;TestAsYouFlyExceptionList"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Variable28VInterfaceCircuit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Variable3_3VInterfaceCircuit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Variable70VInterfaceCircuit"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <rdfs:comment rdf:datatype="&xsd;string">disjoint backbone classes of http://imce.jpl.nasa.gov/foundation/base/base</rdfs:comment>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&base-backbone;Entity"/>
+            <rdf:Description rdf:about="&base-backbone;ReifiedObjectProperty"/>
+            <rdf:Description rdf:about="&base-backbone;ReifiedStructuredDataProperty"/>
+            <rdf:Description rdf:about="&base-backbone;StructuredDatatype"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <rdfs:comment rdf:datatype="&xsd;string">disjoint backbone classes of http://imce.jpl.nasa.gov/discipline/fse/fse</rdfs:comment>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Entity"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#ReifiedObjectProperty"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#ReifiedStructuredDataProperty"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#StructuredDatatype"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -3928,22 +3825,11 @@
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <rdfs:comment rdf:datatype="&xsd;string">disjoint backbone classes of http://imce.jpl.nasa.gov/foundation/scenario/scenario</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">subclasses of </rdfs:comment>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/scenario/scenario#Entity"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/scenario/scenario#ReifiedObjectProperty"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/scenario/scenario#ReifiedStructuredDataProperty"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/scenario/scenario#StructuredDatatype"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <rdfs:comment rdf:datatype="&xsd;string">disjoint backbone classes of http://imce.jpl.nasa.gov/foundation/behavior/behavior</rdfs:comment>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Entity"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#ReifiedObjectProperty"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#ReifiedStructuredDataProperty"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#StructuredDatatype"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteVoltageMeasurementInterfaceCircuit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#FixedVoltageInterfaceCircuit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableVoltageInterfaceCircuit"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -3961,12 +3847,41 @@
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <rdfs:comment rdf:datatype="&xsd;string">disjoint backbone classes of http://imce.jpl.nasa.gov/foundation/project/project</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">subclasses of project:Role</rdfs:comment>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&project-backbone;Entity"/>
-            <rdf:Description rdf:about="&project-backbone;ReifiedObjectProperty"/>
-            <rdf:Description rdf:about="&project-backbone;ReifiedStructuredDataProperty"/>
-            <rdf:Description rdf:about="&project-backbone;StructuredDatatype"/>
+            <rdf:Description rdf:about="&vandv;Approver"/>
+            <rdf:Description rdf:about="&vandv;Auditor"/>
+            <rdf:Description rdf:about="&vandv;Owner"/>
+            <rdf:Description rdf:about="&vandv;Reviewer"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <rdfs:comment rdf:datatype="&xsd;string">subclasses of </rdfs:comment>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#AnalogPRTChannel"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#CurrentMeasurementInterfaceCircuit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableCurrentInterfaceCircuit"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <rdfs:comment rdf:datatype="&xsd;string">disjoint backbone classes of http://imce.jpl.nasa.gov/foundation/mission/mission</rdfs:comment>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&mission-backbone;Entity"/>
+            <rdf:Description rdf:about="&mission-backbone;ReifiedObjectProperty"/>
+            <rdf:Description rdf:about="&mission-backbone;ReifiedStructuredDataProperty"/>
+            <rdf:Description rdf:about="&mission-backbone;StructuredDatatype"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <rdfs:comment rdf:datatype="&xsd;string">disjoint backbone classes of http://imce.jpl.nasa.gov/discipline/vandv/vandv</rdfs:comment>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/vandv/vandv#Entity"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/vandv/vandv#ReifiedObjectProperty"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/vandv/vandv#ReifiedStructuredDataProperty"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/vandv/vandv#StructuredDatatype"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -3981,12 +3896,56 @@
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <rdfs:comment rdf:datatype="&xsd;string">subclasses of </rdfs:comment>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MIL-STD-1553DirectInterfaceCircuit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MIL-STD-1553TerminationInterfaceCircuit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MIL-STD-1553TransformerInterfaceCircuit"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <rdfs:comment rdf:datatype="&xsd;string">subclasses of </rdfs:comment>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Fused10AInterfaceCircuit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Fused20AInterfaceCircuit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Fused2AInterfaceCircuit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Fused4AInterfaceCircuit"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <rdfs:comment rdf:datatype="&xsd;string">subclasses of analysis:Explanation</rdfs:comment>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&fault-management;CauseExplanation"/>
+            <rdf:Description rdf:about="&fault-management;InterconnectionExplanation"/>
+            <rdf:Description rdf:about="&fault-management;Likelihood"/>
+            <rdf:Description rdf:about="&fault-management;MissionImpact"/>
+            <rdf:Description rdf:about="&fault-management;RedundancyExplanation"/>
+            <rdf:Description rdf:about="&fault-management;Region"/>
+            <rdf:Description rdf:about="&fault-management;ViolationExplanation"/>
+            <rdf:Description rdf:about="&vandv;Incompressible"/>
+            <rdf:Description rdf:about="&analysis;Analysis"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <rdfs:comment rdf:datatype="&xsd;string">subclasses of analysis:Analysis</rdfs:comment>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="&analysis;CostEstimate"/>
             <rdf:Description rdf:about="&analysis;DrivingRequirementsExplanation"/>
             <rdf:Description rdf:about="&analysis;KeyRequirementsExplanation"/>
             <rdf:Description rdf:about="&analysis;TradeStudy"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <rdfs:comment rdf:datatype="&xsd;string">disjoint backbone classes of http://imce.jpl.nasa.gov/foundation/scenario/scenario</rdfs:comment>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/scenario/scenario#Entity"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/scenario/scenario#ReifiedObjectProperty"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/scenario/scenario#ReifiedStructuredDataProperty"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/scenario/scenario#StructuredDatatype"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -4017,21 +3976,27 @@
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <rdfs:comment rdf:datatype="&xsd;string">subclasses of project:Role</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">subclasses of project:Product</rdfs:comment>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&vandv;Approver"/>
-            <rdf:Description rdf:about="&vandv;Auditor"/>
-            <rdf:Description rdf:about="&vandv;Owner"/>
-            <rdf:Description rdf:about="&vandv;Reviewer"/>
+            <rdf:Description rdf:about="&vandv;ActivityMatrix"/>
+            <rdf:Description rdf:about="&vandv;ActivityPlan"/>
+            <rdf:Description rdf:about="&vandv;ClosureEvidence"/>
+            <rdf:Description rdf:about="&vandv;EvidenceExpected"/>
+            <rdf:Description rdf:about="&vandv;ExecutionRecord"/>
+            <rdf:Description rdf:about="&vandv;ExecutionSubRecord"/>
+            <rdf:Description rdf:about="&vandv;IncompressibleTestList"/>
+            <rdf:Description rdf:about="&vandv;Nonconformance"/>
+            <rdf:Description rdf:about="&vandv;Plan"/>
+            <rdf:Description rdf:about="&vandv;TestAsYouFlyExceptionList"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <rdfs:comment rdf:datatype="&xsd;string">subclasses of </rdfs:comment>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Digital3_WireDriverInterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#LVDSDriverInterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#RS422DriverInterfaceCircuit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalInterfaceCircuit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteVoltageInterfaceCircuit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteVoltageMeasurementInterfaceCircuit"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -4056,102 +4021,33 @@
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <rdfs:comment rdf:datatype="&xsd;string">subclasses of </rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">disjoint backbone classes of http://imce.jpl.nasa.gov/foundation/behavior/behavior</rdfs:comment>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Variable28VInterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Variable3_3VInterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Variable70VInterfaceCircuit"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <rdfs:comment rdf:datatype="&xsd;string">disjoint backbone classes of http://imce.jpl.nasa.gov/foundation/mission/mission</rdfs:comment>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&mission-backbone;Entity"/>
-            <rdf:Description rdf:about="&mission-backbone;ReifiedObjectProperty"/>
-            <rdf:Description rdf:about="&mission-backbone;ReifiedStructuredDataProperty"/>
-            <rdf:Description rdf:about="&mission-backbone;StructuredDatatype"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <rdfs:comment rdf:datatype="&xsd;string">subclasses of analysis:Characterization</rdfs:comment>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&vandv;ActivityCompletionData"/>
-            <rdf:Description rdf:about="&vandv;ItemReviewAndClosure"/>
-            <rdf:Description rdf:about="&vandv;TestAsYouFlyException"/>
-            <rdf:Description rdf:about="&analysis;Assumption"/>
-            <rdf:Description rdf:about="&analysis;Explanation"/>
-            <rdf:Description rdf:about="&analysis;Quantity"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeConstraint"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorCharacterization"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#PropertyGroup"/>
-            <rdf:Description rdf:about="&project;DevelopmentState"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <rdfs:comment rdf:datatype="&xsd;string">disjoint backbone classes of http://imce.jpl.nasa.gov/discipline/fse/fse</rdfs:comment>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Entity"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#ReifiedObjectProperty"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#ReifiedStructuredDataProperty"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#StructuredDatatype"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <rdfs:comment rdf:datatype="&xsd;string">subclasses of analysis:Explanation</rdfs:comment>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&fault-management;CauseExplanation"/>
-            <rdf:Description rdf:about="&fault-management;InterconnectionExplanation"/>
-            <rdf:Description rdf:about="&fault-management;Likelihood"/>
-            <rdf:Description rdf:about="&fault-management;MissionImpact"/>
-            <rdf:Description rdf:about="&fault-management;RedundancyExplanation"/>
-            <rdf:Description rdf:about="&fault-management;Region"/>
-            <rdf:Description rdf:about="&fault-management;ViolationExplanation"/>
-            <rdf:Description rdf:about="&vandv;Incompressible"/>
-            <rdf:Description rdf:about="&analysis;Analysis"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#Entity"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#ReifiedObjectProperty"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#ReifiedStructuredDataProperty"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/behavior/behavior#StructuredDatatype"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <rdfs:comment rdf:datatype="&xsd;string">subclasses of </rdfs:comment>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#LVDSRadioTZRadioTransceiverInterface"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#LVDSReceiverInterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#LVDSSpacewireTransceiver"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#LVDSUARTInterfaceCircuit"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <rdfs:comment rdf:datatype="&xsd;string">disjoint backbone classes of http://imce.jpl.nasa.gov/foundation/base/base</rdfs:comment>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&base-backbone;Entity"/>
-            <rdf:Description rdf:about="&base-backbone;ReifiedObjectProperty"/>
-            <rdf:Description rdf:about="&base-backbone;ReifiedStructuredDataProperty"/>
-            <rdf:Description rdf:about="&base-backbone;StructuredDatatype"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <rdfs:comment rdf:datatype="&xsd;string">disjoint backbone classes of http://imce.jpl.nasa.gov/foundation/analysis/analysis</rdfs:comment>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&analysis-backbone;Entity"/>
-            <rdf:Description rdf:about="&analysis-backbone;ReifiedObjectProperty"/>
-            <rdf:Description rdf:about="&analysis-backbone;ReifiedStructuredDataProperty"/>
-            <rdf:Description rdf:about="&analysis-backbone;StructuredDatatype"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <rdfs:comment rdf:datatype="&xsd;string">subclasses of </rdfs:comment>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DifferentialDiscreteMeasurementChannel"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Discrete3_3VMeasurementInterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Discrete5VMeasurementInterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#SingleEndedDiscreteMeasurementChannel"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalDriverInterfaceCircuit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MIL-STD-1553InterfaceCircuit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#RadioTZMTIFTransceiverInterface"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#RemoteSerialBusClientInterfaceCircuit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#RemoteSerialBusHostInterfaceCircuit"/>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalReceiverInterfaceCircuit"/>
+                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#LVDSInterfaceCircuit"/>
+                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#RS422InterfaceCircuit"/>
+                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#RadioTZRadioTransceiverInterface"/>
+                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#SpacewireTransceiver"/>
+                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#UARTInterfaceCircuit"/>
+                </owl:unionOf>
+            </owl:Class>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -4178,30 +4074,55 @@
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <rdfs:comment rdf:datatype="&xsd;string">subclasses of </rdfs:comment>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MIL-STD-1553DirectInterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MIL-STD-1553TerminationInterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MIL-STD-1553TransformerInterfaceCircuit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#LVDSRadioTZRadioTransceiverInterface"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#LVDSReceiverInterfaceCircuit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#LVDSSpacewireTransceiver"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#LVDSUARTInterfaceCircuit"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <rdfs:comment rdf:datatype="&xsd;string">subclasses of analysis:Characterization</rdfs:comment>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&vandv;ActivityCompletionData"/>
+            <rdf:Description rdf:about="&vandv;ItemReviewAndClosure"/>
+            <rdf:Description rdf:about="&vandv;TestAsYouFlyException"/>
+            <rdf:Description rdf:about="&analysis;Assumption"/>
+            <rdf:Description rdf:about="&analysis;Explanation"/>
+            <rdf:Description rdf:about="&analysis;Quantity"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeConstraint"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorCharacterization"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#PropertyGroup"/>
+            <rdf:Description rdf:about="&project;DevelopmentState"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <rdfs:comment rdf:datatype="&xsd;string">subclasses of </rdfs:comment>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalDriverInterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MIL-STD-1553InterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#RadioTZMTIFTransceiverInterface"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#RemoteSerialBusClientInterfaceCircuit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#RemoteSerialBusHostInterfaceCircuit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalInterfaceCircuit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteVoltageInterfaceCircuit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementInterfaceCircuit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#PoweredInterfaceCircuit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#ResistiveInterfaceCircuit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableCurrentInterfaceCircuit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableVoltageInterfaceCircuit"/>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalReceiverInterfaceCircuit"/>
-                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#LVDSInterfaceCircuit"/>
-                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#RS422InterfaceCircuit"/>
-                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#RadioTZRadioTransceiverInterface"/>
-                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#SpacewireTransceiver"/>
-                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#UARTInterfaceCircuit"/>
+                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#FixedVoltageInterfaceCircuit"/>
+                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#FusedInterfaceCircuit"/>
+                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#PulsedInterfaceCircuit"/>
                 </owl:unionOf>
             </owl:Class>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <rdfs:comment rdf:datatype="&xsd;string">subclasses of </rdfs:comment>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Digital3_WireDriverInterfaceCircuit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#LVDSDriverInterfaceCircuit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#RS422DriverInterfaceCircuit"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>

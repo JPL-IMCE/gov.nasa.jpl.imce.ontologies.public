@@ -449,14 +449,13 @@ This software may be subject to U.S. export control laws. By accepting this soft
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Assembly">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ReferenceDesignatedElement"/>
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#AggregatedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Component"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#isAggregatedIn"/>
                 <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Subsystem"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Subsystem"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Assembly</rdfs:label>
     </owl:Class>
     
@@ -1138,7 +1137,7 @@ This software may be subject to U.S. export control laws. By accepting this soft
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Subsystem">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ReferenceDesignatedElement"/>
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#AggregatedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Component"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#aggregates"/>
