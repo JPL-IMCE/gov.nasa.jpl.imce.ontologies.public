@@ -1,3 +1,5 @@
+annotationProperty fse:hasFdColumnLabel=<http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdColumnLabel>
+
 @dc:description="""The Flight System Electrical Ontology defines concepts and properties for flight system electrical engineering."""
 @dc:rights="""Copyright 2010-2017, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
 
@@ -11,9 +13,6 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	extends <http://imce.jpl.nasa.gov/foundation/project/project>
 
-	@rdfs:label="""Assembly"""
-	aspect Assembly
-
 	@rdfs:label="""Current Interface"""
 	aspect CurrentInterface
 
@@ -25,6 +24,9 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	@rdfs:label="""Measurement Interface"""
 	aspect MeasurementInterface
+
+	@rdfs:label="""Multicore Constituent"""
+	aspect MulticoreConstituent
 
 	@rdfs:label="""PulsedInterface"""
 	aspect PulsedInterface
@@ -56,8 +58,26 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""Analog Voltage Channel"""
 	concept AnalogVoltageChannel
 
+	@rdfs:label="""Assembly"""
+	concept Assembly
+
+	@rdfs:label="""Cavity"""
+	concept Cavity
+
 	@rdfs:label="""Conditioned 5V Interface Circuit"""
 	concept Conditioned5VInterfaceCircuit
+
+	@rdfs:label="""Conductor"""
+	concept Conductor
+
+	@rdfs:label="""Conductor End"""
+	concept ConductorEnd
+
+	@rdfs:label="""Connectable Element"""
+	concept ConnectableComponent
+
+	@rdfs:label="""Connector"""
+	concept Connector
 
 	@rdfs:label="""Current Measurement Interface Circuit"""
 	concept CurrentMeasurementInterfaceCircuit
@@ -95,8 +115,11 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""Discrete Voltage Measurement Interface Circuit"""
 	concept DiscreteVoltageMeasurementInterfaceCircuit
 
-	@rdfs:label="""Electrical Interface Circuit"""
-	concept ElectricalInterfaceCircuit
+	@rdfs:label="""Circuit"""
+	concept EndCircuit
+
+	@rdfs:label="""Field Joint"""
+	concept FieldJoint
 
 	@rdfs:label="""Fixed 10V Interface Circuit"""
 	concept Fixed10VInterfaceCircuit
@@ -128,6 +151,12 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""Fixed Voltage Interface Circuit"""
 	concept FixedVoltageInterfaceCircuit
 
+	@rdfs:label="""Function"""
+	concept Function
+
+	@rdfs:label="""Function Description"""
+	concept FunctionDescription
+
 	@rdfs:label="""Fused 10A Interface Circuit"""
 	concept Fused10AInterfaceCircuit
 
@@ -143,8 +172,14 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""Fused Interface Circuit"""
 	concept FusedInterfaceCircuit
 
+	@rdfs:label="""Harness"""
+	concept Harness
+
 	@rdfs:label="""Heater Interface Circuit"""
 	concept HeaterInterfaceCircuit
+
+	@rdfs:label="""Jack"""
+	concept Jack
 
 	@rdfs:label="""LVDS Driver Interface Circuit"""
 	concept LVDSDriverInterfaceCircuit
@@ -173,6 +208,9 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""LVDS UART Interface Circuit"""
 	concept LVDSUARTInterfaceCircuit
 
+	@rdfs:label="""Leg"""
+	concept Leg
+
 	@rdfs:label="""MIL-STD-1553 Direct Interface Circuit"""
 	concept MIL-STD-1553DirectInterfaceCircuit
 
@@ -188,11 +226,17 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""Measurement Interface Circuit"""
 	concept MeasurementInterfaceCircuit
 
+	@rdfs:label="""Multicore"""
+	concept Multicore
+
 	@rdfs:label="""PRT 4-Wire Interface Circuit"""
 	concept PRT4-WireInterfaceCircuit
 
 	@rdfs:label="""PRT Interface Circuit"""
 	concept PRTInterfaceCircuit
+
+	@rdfs:label="""Plug"""
+	concept Plug
 
 	@rdfs:label="""Powered Interface Circuit"""
 	concept PoweredInterfaceCircuit
@@ -242,6 +286,12 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""Resistive Interface Circuit"""
 	concept ResistiveInterfaceCircuit
 
+	@rdfs:label="""Shell"""
+	concept Shell
+
+	@rdfs:label="""Shield"""
+	concept Shield
+
 	@rdfs:label="""Single Ended Discrete Interface"""
 	concept SingleEndedDiscreteInterface
 
@@ -271,6 +321,9 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	@rdfs:label="""Switched Voltage Interface Circuit"""
 	concept SwitchedVoltageInterfaceCircuit
+
+	@rdfs:label="""Terminal"""
+	concept Terminal
 
 	@rdfs:label="""Thermistor Interface Circuit"""
 	concept ThermistorInterfaceCircuit
@@ -311,6 +364,9 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""Voltage Measurement Interface Circuit"""
 	concept VoltageMeasurementInterfaceCircuit
 
+	@rdfs:label="""Wire"""
+	concept Wire
+
 	AD590Channel extendsConcept VoltageMeasurementInterfaceCircuit
 
 	AnalogCurrentChannel extendsConcept CurrentMeasurementInterfaceCircuit
@@ -319,7 +375,19 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	AnalogVoltageChannel extendsConcept Variable3_3VMeasurementInterfaceCircuit
 
+	Assembly extendsConcept ConnectableComponent
+
+	Cavity extendsConcept ConductorEnd
+
 	Conditioned5VInterfaceCircuit extendsConcept Fixed5VInterfaceCircuit
+
+	Conductor extendsConcept mission:Junction
+
+	ConductorEnd extendsConcept mission:Interface
+
+	ConnectableComponent extendsConcept mission:Component
+
+	Connector extendsConcept mission:Component
 
 	CurrentMeasurementInterfaceCircuit extendsConcept MeasurementInterfaceCircuit
 
@@ -333,7 +401,7 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	DigitalDriverInterfaceCircuit extendsConcept DigitalInterfaceCircuit
 
-	DigitalInterfaceCircuit extendsConcept ElectricalInterfaceCircuit
+	DigitalInterfaceCircuit extendsConcept EndCircuit
 
 	DigitalReceiverInterfaceCircuit extendsConcept DigitalInterfaceCircuit
 
@@ -345,11 +413,13 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	Discrete5VMeasurementInterfaceCircuit extendsConcept Variable5VMeasurementInterfaceCircuit
 
-	DiscreteVoltageInterfaceCircuit extendsConcept ElectricalInterfaceCircuit
+	DiscreteVoltageInterfaceCircuit extendsConcept EndCircuit
 
 	DiscreteVoltageMeasurementInterfaceCircuit extendsConcept VoltageMeasurementInterfaceCircuit
 
-	ElectricalInterfaceCircuit extendsConcept mission:Interface
+	EndCircuit extendsConcept mission:Interface
+
+	FieldJoint extendsConcept ConnectableComponent
 
 	Fixed10VInterfaceCircuit extendsConcept FixedVoltageInterfaceCircuit
 
@@ -369,7 +439,11 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	Fixed70VInterfaceCircuit extendsConcept FixedVoltageInterfaceCircuit
 
-	FixedVoltageInterfaceCircuit extendsConcept ElectricalInterfaceCircuit
+	FixedVoltageInterfaceCircuit extendsConcept EndCircuit
+
+	Function extendsConcept mission:Junction
+
+	FunctionDescription extendsConcept analysis:Characterization
 
 	Fused10AInterfaceCircuit extendsConcept FusedInterfaceCircuit
 
@@ -379,9 +453,13 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	Fused4AInterfaceCircuit extendsConcept FusedInterfaceCircuit
 
-	FusedInterfaceCircuit extendsConcept ElectricalInterfaceCircuit
+	FusedInterfaceCircuit extendsConcept EndCircuit
+
+	Harness extendsConcept ConnectableComponent
 
 	HeaterInterfaceCircuit extendsConcept ResistiveInterfaceCircuit
+
+	Jack extendsConcept Connector
 
 	LVDSDriverInterfaceCircuit extendsConcept DigitalDriverInterfaceCircuit
 
@@ -413,6 +491,8 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	LVDSUARTInterfaceCircuit extendsConcept UARTInterfaceCircuit
 
+	Leg extendsConcept mission:Junction
+
 	MIL-STD-1553DirectInterfaceCircuit extendsConcept MIL-STD-1553InterfaceCircuit
 
 	MIL-STD-1553InterfaceCircuit extendsConcept DigitalInterfaceCircuit
@@ -421,19 +501,23 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	MIL-STD-1553TransformerInterfaceCircuit extendsConcept MIL-STD-1553InterfaceCircuit
 
-	MeasurementInterfaceCircuit extendsConcept ElectricalInterfaceCircuit
+	MeasurementInterfaceCircuit extendsConcept EndCircuit
+
+	Multicore extendsConcept analysis:Characterization
 
 	PRT4-WireInterfaceCircuit extendsConcept ResistiveInterfaceCircuit
 
 	PRTInterfaceCircuit extendsConcept ResistiveInterfaceCircuit
 
-	PoweredInterfaceCircuit extendsConcept ElectricalInterfaceCircuit
+	Plug extendsConcept Connector
+
+	PoweredInterfaceCircuit extendsConcept EndCircuit
 
 	Pulsed2AInterfaceCircuit extendsConcept PulsedInterfaceCircuit
 
 	Pulsed2AInterfaceCircuit extendsConcept Switched2ADriverInterfaceCircuit
 
-	PulsedInterfaceCircuit extendsConcept ElectricalInterfaceCircuit
+	PulsedInterfaceCircuit extendsConcept EndCircuit
 
 	RS422DriverInterfaceCircuit extendsConcept DigitalDriverInterfaceCircuit
 
@@ -465,7 +549,11 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	RemoteSerialBusHostInterfaceCircuit extendsConcept DigitalInterfaceCircuit
 
-	ResistiveInterfaceCircuit extendsConcept ElectricalInterfaceCircuit
+	ResistiveInterfaceCircuit extendsConcept EndCircuit
+
+	Shell extendsConcept ConductorEnd
+
+	Shield extendsConcept Conductor
 
 	SingleEndedDiscreteInterface extendsConcept DiscreteVoltageInterfaceCircuit
 
@@ -497,6 +585,8 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	SwitchedVoltageInterfaceCircuit extendsConcept FixedVoltageInterfaceCircuit
 
+	Terminal extendsConcept mission:Interface
+
 	ThermistorInterfaceCircuit extendsConcept ResistiveInterfaceCircuit
 
 	UART2SignalFlowControlInterfaceCircuit extendsConcept UARTInterfaceCircuit
@@ -517,15 +607,28 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	Variable70VInterfaceCircuit extendsConcept VariableVoltageInterfaceCircuit
 
-	VariableCurrentInterfaceCircuit extendsConcept ElectricalInterfaceCircuit
+	VariableCurrentInterfaceCircuit extendsConcept EndCircuit
 
-	VariableVoltageInterfaceCircuit extendsConcept ElectricalInterfaceCircuit
+	VariableVoltageInterfaceCircuit extendsConcept EndCircuit
 
 	VoltageMeasurementInterfaceCircuit extendsConcept MeasurementInterfaceCircuit
 
+	Wire extendsConcept Conductor
+
+	@oml:hasPropertyLabel="""uses Cavity"""
+	@oml:hasReificationLabel="""Uses Cavity"""
+	reifiedRelationship UsesCavity {
+		asymmetric
+		irreflexive
+		unreified = usesCavity
+		source = Terminal
+		target = Cavity }
+
 	AnalogPRTChannel extendsAspect CurrentInterface
 
-	Assembly extendsAspect ReferenceDesignatedElement
+	ConnectableComponent extendsAspect ReferenceDesignatedElement
+
+	Connector extendsAspect ReferenceDesignatedElement
 
 	CurrentInterface extendsAspect analysis:AnalyzedElement
 
@@ -559,6 +662,12 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	MeasurementInterfaceCircuit extendsAspect MeasurementInterface
 
+	Multicore extendsAspect MulticoreConstituent
+
+	MulticoreConstituent extendsAspect analysis:AnalyzedElement
+
+	MulticoreConstituent extendsAspect analysis:CharacterizedElement
+
 	PulsedInterface extendsAspect analysis:AnalyzedElement
 
 	PulsedInterface extendsAspect analysis:CharacterizedElement
@@ -591,6 +700,18 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	VoltageInterface extendsAspect analysis:CharacterizedElement
 
+	Wire extendsAspect MulticoreConstituent
+
+	scalarOneOfRestriction functionDirection {
+		restrictedRange XMLSchema:string
+	}
+
+	oneOf functionDirection = """bidirectional""" ^^ XMLSchema:string
+
+	oneOf functionDirection = """left-to-right""" ^^ XMLSchema:string
+
+	oneOf functionDirection = """right-to-left""" ^^ XMLSchema:string
+
 	@rdfs:label="""has assembly acronym"""
 	entityScalarDataProperty + hasAssemblyAcronym {
 		domain Assembly
@@ -600,6 +721,348 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""has assembly reference designator"""
 	entityScalarDataProperty + hasAssemblyReferenceDesignator {
 		domain Assembly
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has direction"""
+	entityScalarDataProperty + hasDirection {
+		domain Function
+		range functionDirection
+	}
+
+	@fse:hasFdColumnLabel="""Assembly 1"""
+	entityScalarDataProperty + hasFdAssembly1 {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Assembly 1
+Board Schematic Signal Names"""
+	entityScalarDataProperty + hasFdAssembly1BoardSchematicSignalNames {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Assembly 2"""
+	entityScalarDataProperty + hasFdAssembly2 {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Assembly 2
+Board Schematic Signal Names"""
+	entityScalarDataProperty + hasFdAssembly2BoardSchematicSignalNames {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""AWG"""
+	entityScalarDataProperty + hasFdAwg {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Cable Length"""
+	entityScalarDataProperty + hasFdCableLength {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Cavity 1"""
+	entityScalarDataProperty + hasFdCavity1 {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Cavity 2"""
+	entityScalarDataProperty + hasFdCavity2 {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Channel/SW Type"""
+	entityScalarDataProperty + hasFdChannelSwType {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Characteristic Impedance"""
+	entityScalarDataProperty + hasFdCharacteristicImpedence {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""CogE 1"""
+	entityScalarDataProperty + hasFdCogE1 {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""CogE 2"""
+	entityScalarDataProperty + hasFdCogE2 {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Comments"""
+	entityScalarDataProperty + hasFdComments {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Conductor Count"""
+	entityScalarDataProperty + hasFdConductorCount {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Connector 1"""
+	entityScalarDataProperty + hasFdConnector1 {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Connector 1
+Type/Part Number"""
+	entityScalarDataProperty + hasFdConnector1TypePartNumber {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Connector 2"""
+	entityScalarDataProperty + hasFdConnector2 {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Connector 2
+Type/Part Number"""
+	entityScalarDataProperty + hasFdConnector2TypePartNumber {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Cross-Strapped"""
+	entityScalarDataProperty + hasFdCrossStrapped {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Date Last Changed"""
+	entityScalarDataProperty + hasFdDateLastChanged {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Drawing Number"""
+	entityScalarDataProperty + hasFdDrawingNumber {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""ECR"""
+	entityScalarDataProperty + hasFdEcr {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""End Circuit 1"""
+	entityScalarDataProperty + hasFdEndCircuit1 {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""End Circuit 1
+Part Number"""
+	entityScalarDataProperty + hasFdEndCircuit1PartNumber {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""End Circuit 2"""
+	entityScalarDataProperty + hasFdEndCircuit2 {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""End Circuit 2
+Part Number"""
+	entityScalarDataProperty + hasFdEndCircuit2PartNumber {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""End Circuit Type"""
+	entityScalarDataProperty + hasFdEndCircuitType {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Flow"""
+	entityScalarDataProperty + hasFdFlow {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Function Name"""
+	entityScalarDataProperty + hasFdFunctionName {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Function Number"""
+	entityScalarDataProperty + hasFdFunctionNumber {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Function Rev"""
+	entityScalarDataProperty + hasFdFunctionRev {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Functions Per Page"""
+	entityScalarDataProperty + hasFdFunctionsPerPage {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Ground Tree Ref 1"""
+	entityScalarDataProperty + hasFdGroundTreeRef1 {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Ground Tree Ref 2"""
+	entityScalarDataProperty + hasFdGroundTreeRef2 {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Harness"""
+	entityScalarDataProperty + hasFdHarness {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Inline #"""
+	entityScalarDataProperty + hasFdInlineNumber {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Max Steady-State Current (A)"""
+	entityScalarDataProperty + hasFdMaxSteadyStateCurrent {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Note 1"""
+	entityScalarDataProperty + hasFdNote1 {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Note 2"""
+	entityScalarDataProperty + hasFdNote2 {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Number of Wires"""
+	entityScalarDataProperty + hasFdNumberOfFunctions {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Number Of Functions"""
+	entityScalarDataProperty + hasFdNumberOfWires {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Project Name"""
+	entityScalarDataProperty + hasFdProjectName {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	entityScalarDataProperty + hasFdProperty {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""SUB-SUB Name"""
+	entityScalarDataProperty + hasFdSubSubName {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Subsystem 1"""
+	entityScalarDataProperty + hasFdSubsystem1 {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Subsystem 2"""
+	entityScalarDataProperty + hasFdSubsystem2 {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Subsystem Function Name"""
+	entityScalarDataProperty + hasFdSubsystemFunctionName {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""SW Size (Amp+L:AN)"""
+	entityScalarDataProperty + hasFdSwSize {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""View 1
+(Conceptual) Interface Types: 
+Data, Power"""
+	entityScalarDataProperty + hasFdView1 {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""View 2
+(Logical) Signal Types: 
+(see the Word Document)"""
+	entityScalarDataProperty + hasFdView2 {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""View 3
+(Realization or Implementation) Signal/Waverform Breakdown:
+Interface EMI Characteristics & Redundancy
+(L3-EIG-228)"""
+	entityScalarDataProperty + hasFdView3 {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""Waveform"""
+	entityScalarDataProperty + hasFdWaveform {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""wcode"""
+	entityScalarDataProperty + hasFdWcode {
+		domain FunctionDescription
+		range XMLSchema:string
+	}
+
+	@fse:hasFdColumnLabel="""wtype"""
+	entityScalarDataProperty + hasFdWtype {
+		domain FunctionDescription
 		range XMLSchema:string
 	}
 
@@ -629,11 +1092,143 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	allEntities Assembly . base:isAggregatedIn in Subsystem
 
+	allEntities Conductor . mission:joins in ConductorEnd
+
+	allEntities ConductorEnd . mission:isJoinedIn in Conductor
+
+	allEntities ConductorEnd . mission:isPresentedBy in Connector
+
+	allEntities Connector . base:isContainedIn in ConnectableComponent
+
+	allEntities Connector . mission:presents in ConductorEnd
+
+	allEntities EndCircuit . mission:isJoinedIn in Function
+
+	allEntities EndCircuit . mission:presents in Terminal
+
+	allEntities Function . mission:joins in EndCircuit
+
+	allEntities FunctionDescription . analysis:characterizes in Function
+
+	allEntities Leg . mission:joins in Terminal
+
+	allEntities Multicore . analysis:characterizes in MulticoreConstituent
+
 	allEntities Subsystem . base:aggregates in Assembly
+
+	allEntities Terminal . mission:isJoinedIn in Leg
+
+	allEntities Terminal . mission:isPresentedBy in EndCircuit
 
 	hasAssemblyAcronym subDataPropertyOf base:hasIdentifier
 
 	hasSubsystemAcronym subDataPropertyOf base:hasIdentifier
+
+	hasFdAssembly1 subDataPropertyOf hasFdProperty
+
+	hasFdAssembly1BoardSchematicSignalNames subDataPropertyOf hasFdProperty
+
+	hasFdAssembly2 subDataPropertyOf hasFdProperty
+
+	hasFdAssembly2BoardSchematicSignalNames subDataPropertyOf hasFdProperty
+
+	hasFdAwg subDataPropertyOf hasFdProperty
+
+	hasFdCableLength subDataPropertyOf hasFdProperty
+
+	hasFdCavity1 subDataPropertyOf hasFdProperty
+
+	hasFdCavity2 subDataPropertyOf hasFdProperty
+
+	hasFdChannelSwType subDataPropertyOf hasFdProperty
+
+	hasFdCharacteristicImpedence subDataPropertyOf hasFdProperty
+
+	hasFdCogE1 subDataPropertyOf hasFdProperty
+
+	hasFdCogE2 subDataPropertyOf hasFdProperty
+
+	hasFdComments subDataPropertyOf hasFdProperty
+
+	hasFdConductorCount subDataPropertyOf hasFdProperty
+
+	hasFdConnector1 subDataPropertyOf hasFdProperty
+
+	hasFdConnector1TypePartNumber subDataPropertyOf hasFdProperty
+
+	hasFdConnector2 subDataPropertyOf hasFdProperty
+
+	hasFdConnector2TypePartNumber subDataPropertyOf hasFdProperty
+
+	hasFdCrossStrapped subDataPropertyOf hasFdProperty
+
+	hasFdDateLastChanged subDataPropertyOf hasFdProperty
+
+	hasFdDrawingNumber subDataPropertyOf hasFdProperty
+
+	hasFdEcr subDataPropertyOf hasFdProperty
+
+	hasFdEndCircuit1 subDataPropertyOf hasFdProperty
+
+	hasFdEndCircuit1PartNumber subDataPropertyOf hasFdProperty
+
+	hasFdEndCircuit2 subDataPropertyOf hasFdProperty
+
+	hasFdEndCircuit2PartNumber subDataPropertyOf hasFdProperty
+
+	hasFdEndCircuitType subDataPropertyOf hasFdProperty
+
+	hasFdFlow subDataPropertyOf hasFdProperty
+
+	hasFdFunctionName subDataPropertyOf hasFdProperty
+
+	hasFdFunctionNumber subDataPropertyOf hasFdProperty
+
+	hasFdFunctionRev subDataPropertyOf hasFdProperty
+
+	hasFdFunctionsPerPage subDataPropertyOf hasFdProperty
+
+	hasFdGroundTreeRef1 subDataPropertyOf hasFdProperty
+
+	hasFdGroundTreeRef2 subDataPropertyOf hasFdProperty
+
+	hasFdHarness subDataPropertyOf hasFdProperty
+
+	hasFdInlineNumber subDataPropertyOf hasFdProperty
+
+	hasFdMaxSteadyStateCurrent subDataPropertyOf hasFdProperty
+
+	hasFdNote1 subDataPropertyOf hasFdProperty
+
+	hasFdNote2 subDataPropertyOf hasFdProperty
+
+	hasFdNumberOfFunctions subDataPropertyOf hasFdProperty
+
+	hasFdNumberOfWires subDataPropertyOf hasFdProperty
+
+	hasFdProjectName subDataPropertyOf hasFdProperty
+
+	hasFdSubSubName subDataPropertyOf hasFdProperty
+
+	hasFdSubsystem1 subDataPropertyOf hasFdProperty
+
+	hasFdSubsystem2 subDataPropertyOf hasFdProperty
+
+	hasFdSubsystemFunctionName subDataPropertyOf hasFdProperty
+
+	hasFdSwSize subDataPropertyOf hasFdProperty
+
+	hasFdView1 subDataPropertyOf hasFdProperty
+
+	hasFdView2 subDataPropertyOf hasFdProperty
+
+	hasFdView3 subDataPropertyOf hasFdProperty
+
+	hasFdWaveform subDataPropertyOf hasFdProperty
+
+	hasFdWcode subDataPropertyOf hasFdProperty
+
+	hasFdWtype subDataPropertyOf hasFdProperty
 
 	hasAssemblyReferenceDesignator subDataPropertyOf hasReferenceDesignator
 
