@@ -459,46 +459,7 @@ When <property>constrain</property>ed by an <classname>ElementBehaviorConstraint
 		source = Interaction
 		target = AttributeGroup }
 
-	rule R13717 infers hasInteractionBehavior
-	if Interaction
-	&& hasInteractionBehaviorClass
-	&& InteractionBehaviorAutomaton
-	&& hasRegion
-	&& InteractionBehaviorRegion
-
-	rule R17116 infers hasInteractionBehavior
-	if Interaction
-	&& hasInteractionBehaviorClass
-	&& AttributeAutomaton
-	&& hasRegion
-	&& AutomatonRegion
-	&& hasState
-	&& InteractionBehaviorState
-
-	rule R27065 infers hasElementBehavior
-	if ElementBehaviorOwner
-	&& hasElementBehaviorClass
-	&& AttributeAutomaton
-	&& hasRegion
-	&& AutomatonRegion
-	&& hasState
-	&& ElementBehaviorState
-
-	rule R36790 infers joins
-	if Interaction
-	&& hasInteractionRole
-	&& InteractionRole
-	&& hasAttributeGroup
-	&& AttributeGroup
-
-	rule R50583 infers hasElementBehavior
-	if ElementBehaviorOwner
-	&& hasElementBehaviorClass
-	&& ElementBehaviorAutomaton
-	&& hasRegion
-	&& ElementBehaviorRegion
-
-	rule R74912 infers hasElementBehavior
+	rule R32637 infers hasElementBehavior
 	if ElementBehaviorOwner
 	&& hasElementBehaviorClass
 	&& AttributeAutomaton
@@ -507,7 +468,46 @@ When <property>constrain</property>ed by an <classname>ElementBehaviorConstraint
 	&& hasTransition
 	&& ElementBehaviorTransition
 
-	rule R93361 infers hasInteractionBehavior
+	rule R44209 infers hasInteractionBehavior
+	if Interaction
+	&& hasInteractionBehaviorClass
+	&& InteractionBehaviorAutomaton
+	&& hasRegion
+	&& InteractionBehaviorRegion
+
+	rule R46517 infers joins
+	if Interaction
+	&& hasInteractionRole
+	&& InteractionRole
+	&& hasAttributeGroup
+	&& AttributeGroup
+
+	rule R55033 infers hasInteractionBehavior
+	if Interaction
+	&& hasInteractionBehaviorClass
+	&& AttributeAutomaton
+	&& hasRegion
+	&& AutomatonRegion
+	&& hasState
+	&& InteractionBehaviorState
+
+	rule R59178 infers hasElementBehavior
+	if ElementBehaviorOwner
+	&& hasElementBehaviorClass
+	&& ElementBehaviorAutomaton
+	&& hasRegion
+	&& ElementBehaviorRegion
+
+	rule R74704 infers hasElementBehavior
+	if ElementBehaviorOwner
+	&& hasElementBehaviorClass
+	&& AttributeAutomaton
+	&& hasRegion
+	&& AutomatonRegion
+	&& hasState
+	&& ElementBehaviorState
+
+	rule R90430 infers hasInteractionBehavior
 	if Interaction
 	&& hasInteractionBehaviorClass
 	&& AttributeAutomaton
