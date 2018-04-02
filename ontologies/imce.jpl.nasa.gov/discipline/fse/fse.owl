@@ -106,6 +106,12 @@ This software may be subject to U.S. export control laws. By accepting this soft
     
 
 
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdColumnLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdColumnLabel"/>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
@@ -145,6 +151,47 @@ This software may be subject to U.S. export control laws. By accepting this soft
     <!-- http://www.w3.org/2002/07/owl#versionInfo -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#functionDirection -->
+
+    <rdfs:Datatype rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#functionDirection">
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>bidirectional</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>left-to-right</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>right-to-left</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdfs:Datatype>
     
 
 
@@ -243,82 +290,37 @@ This software may be subject to U.S. export control laws. By accepting this soft
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsInSource -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasUsesCavitySource -->
 
-
-    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsInSource">
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasUsesCavitySource">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topReifiedObjectPropertySource"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#JoinsIn"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Function"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#UsesCavity"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Terminal"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsInTarget -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasUsesCavityTarget -->
 
-
-    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsInTarget">
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasUsesCavityTarget">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topReifiedObjectPropertyTarget"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#JoinsIn"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ElectricalInterfaceCircuit"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#UsesCavity"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Cavity"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsOutSource -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#usesCavity -->
 
-
-    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsOutSource">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topReifiedObjectPropertySource"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#JoinsOut"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Function"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsOutTarget -->
-
-
-    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsOutTarget">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topReifiedObjectPropertyTarget"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#JoinsOut"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ElectricalInterfaceCircuit"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#joinsIn -->
-
-
-    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsIn">
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#usesCavity">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topReifiedObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Function"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ElectricalInterfaceCircuit"/>
-        <rdfs:label>joinsIn</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#joinsOut -->
-
-
-    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsOut">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topReifiedObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Function"/>
-        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ElectricalInterfaceCircuit"/>
-        <rdfs:label>joinsOut</rdfs:label>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Terminal"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Cavity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uses Cavity</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -338,8 +340,6 @@ This software may be subject to U.S. export control laws. By accepting this soft
 
     <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:DatatypeProperty>
     
 
@@ -365,6 +365,678 @@ This software may be subject to U.S. export control laws. By accepting this soft
         <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Assembly"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has assembly reference designator</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasDirection -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasDirection">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Function"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#functionDirection"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has direction</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdAssembly1 -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdAssembly1">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Assembly 1</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdAssembly1BoardSchematicSignalNames -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdAssembly1BoardSchematicSignalNames">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Assembly 1
+Board Schematic Signal Names</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdAssembly2 -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdAssembly2">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Assembly 2</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdAssembly2BoardSchematicSignalNames -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdAssembly2BoardSchematicSignalNames">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Assembly 2
+Board Schematic Signal Names</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdAwg -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdAwg">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AWG</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdCableLength -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdCableLength">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cable Length</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdCavity1 -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdCavity1">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cavity 1</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdCavity2 -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdCavity2">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cavity 2</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdChannelSwType -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdChannelSwType">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Channel/SW Type</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdCharacteristicImpedence -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdCharacteristicImpedence">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Characteristic Impedance</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdCogE1 -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdCogE1">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CogE 1</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdCogE2 -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdCogE2">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CogE 2</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdComments -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdComments">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comments</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdConductorCount -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdConductorCount">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conductor Count</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdConnector1 -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdConnector1">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connector 1</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdConnector1TypePartNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdConnector1TypePartNumber">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connector 1
+Type/Part Number</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdConnector2 -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdConnector2">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connector 2</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdConnector2TypePartNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdConnector2TypePartNumber">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connector 2
+Type/Part Number</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdCrossStrapped -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdCrossStrapped">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cross-Strapped</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdDateLastChanged -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdDateLastChanged">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Date Last Changed</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdDrawingNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdDrawingNumber">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drawing Number</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdEcr -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdEcr">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECR</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdEndCircuit1 -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdEndCircuit1">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">End Circuit 1</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdEndCircuit1PartNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdEndCircuit1PartNumber">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">End Circuit 1
+Part Number</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdEndCircuit2 -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdEndCircuit2">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">End Circuit 2</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdEndCircuit2PartNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdEndCircuit2PartNumber">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">End Circuit 2
+Part Number</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdEndCircuitType -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdEndCircuitType">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">End Circuit Type</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdFlow -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdFlow">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flow</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdFunctionName -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdFunctionName">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Function Name</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdFunctionNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdFunctionNumber">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Function Number</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdFunctionRev -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdFunctionRev">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Function Rev</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdFunctionsPerPage -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdFunctionsPerPage">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Functions Per Page</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdGroundTreeRef1 -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdGroundTreeRef1">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ground Tree Ref 1</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdGroundTreeRef2 -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdGroundTreeRef2">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ground Tree Ref 2</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdHarness -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdHarness">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harness</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdInlineNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdInlineNumber">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inline #</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdMaxSteadyStateCurrent -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdMaxSteadyStateCurrent">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Max Steady-State Current (A)</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdNote1 -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdNote1">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Note 1</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdNote2 -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdNote2">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Note 2</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdNumberOfFunctions -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdNumberOfFunctions">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Number of Wires</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdNumberOfWires -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdNumberOfWires">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Number Of Functions</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProjectName -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProjectName">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Project Name</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdSubSubName -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdSubSubName">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SUB-SUB Name</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdSubsystem1 -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdSubsystem1">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subsystem 1</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdSubsystem2 -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdSubsystem2">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subsystem 2</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdSubsystemFunctionName -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdSubsystemFunctionName">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subsystem Function Name</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdSwSize -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdSwSize">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SW Size (Amp+L:AN)</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdView1 -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdView1">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">View 1
+(Conceptual) Interface Types: 
+Data, Power</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdView2 -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdView2">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">View 2
+(Logical) Signal Types: 
+(see the Word Document)</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdView3 -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdView3">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">View 3
+(Realization or Implementation) Signal/Waverform Breakdown:
+Interface EMI Characteristics &amp; Redundancy
+(L3-EIG-228)</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdWaveform -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdWaveform">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Waveform</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdWcode -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdWcode">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wcode</hasFdColumnLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdWtype -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdWtype">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <hasFdColumnLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wtype</hasFdColumnLabel>
     </owl:DatatypeProperty>
     
 
@@ -432,8 +1104,7 @@ This software may be subject to U.S. export control laws. By accepting this soft
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Aspect">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Thing"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aspect</rdfs:label>
     </owl:Class>
     
 
@@ -481,8 +1152,6 @@ This software may be subject to U.S. export control laws. By accepting this soft
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Thing -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Thing">
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;classname&gt;Thing&lt;/classname&gt; is a superclass of every class defined in the Flight System Electrical ontology.</dc:description>
     </owl:Class>
     
@@ -528,16 +1197,23 @@ This software may be subject to U.S. export control laws. By accepting this soft
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Assembly -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Assembly">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ReferenceDesignatedElement"/>
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#AggregatedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ConnectableComponent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#isAggregatedIn"/>
                 <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Subsystem"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Subsystem"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Assembly</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Cavity -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Cavity">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ConductorEnd"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cavity</rdfs:label>
     </owl:Class>
     
 
@@ -547,6 +1223,78 @@ This software may be subject to U.S. export control laws. By accepting this soft
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Conditioned5VInterfaceCircuit">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Fixed5VInterfaceCircuit"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conditioned 5V Interface Circuit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Conductor -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Conductor">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Junction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#joins"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ConductorEnd"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conductor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#ConductorEnd -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#ConductorEnd">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Interface"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#isJoinedIn"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Conductor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#isPresentedBy"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Connector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conductor End</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#ConnectableComponent -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#ConnectableComponent">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ReferenceDesignatedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Component"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connectable Element</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Connector -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Connector">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ReferenceDesignatedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Component"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#isContainedIn"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ConnectableComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#presents"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ConductorEnd"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connector</rdfs:label>
     </owl:Class>
     
 
@@ -621,7 +1369,7 @@ This software may be subject to U.S. export control laws. By accepting this soft
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalInterfaceCircuit">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteInterface"/>
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ElectricalInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#EndCircuit"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Interface Circuit</rdfs:label>
     </owl:Class>
     
@@ -671,7 +1419,7 @@ This software may be subject to U.S. export control laws. By accepting this soft
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteVoltageInterfaceCircuit">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#DiscreteInterface"/>
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ElectricalInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#EndCircuit"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Discrete Voltage Interface Circuit</rdfs:label>
     </owl:Class>
     
@@ -688,12 +1436,33 @@ This software may be subject to U.S. export control laws. By accepting this soft
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#ElectricalInterfaceCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#EndCircuit -->
 
-    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#ElectricalInterfaceCircuit">
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#EndCircuit">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Interface"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electrical Interface Circuit</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#isJoinedIn"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#presents"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Terminal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Circuit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#FieldJoint -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#FieldJoint">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ConnectableComponent"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Field Joint</rdfs:label>
     </owl:Class>
     
 
@@ -782,9 +1551,41 @@ This software may be subject to U.S. export control laws. By accepting this soft
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#FixedVoltageInterfaceCircuit -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#FixedVoltageInterfaceCircuit">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ElectricalInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#EndCircuit"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VoltageInterface"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fixed Voltage Interface Circuit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Function -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Function">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Junction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#joins"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#EndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#FunctionDescription">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Characterization"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#characterizes"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Function Description</rdfs:label>
     </owl:Class>
     
 
@@ -839,9 +1640,18 @@ This software may be subject to U.S. export control laws. By accepting this soft
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#FusedInterfaceCircuit -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#FusedInterfaceCircuit">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ElectricalInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#EndCircuit"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#FusedInterface"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fused Interface Circuit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Harness -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Harness">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ConnectableComponent"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harness</rdfs:label>
     </owl:Class>
     
 
@@ -851,6 +1661,15 @@ This software may be subject to U.S. export control laws. By accepting this soft
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#HeaterInterfaceCircuit">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ResistiveInterfaceCircuit"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heater Interface Circuit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Jack -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Jack">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Connector"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jack</rdfs:label>
     </owl:Class>
     
 
@@ -942,6 +1761,22 @@ This software may be subject to U.S. export control laws. By accepting this soft
     
 
 
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Leg -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Leg">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Junction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#joins"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Terminal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leg</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#MIL-STD-1553DirectInterfaceCircuit -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MIL-STD-1553DirectInterfaceCircuit">
@@ -992,9 +1827,37 @@ This software may be subject to U.S. export control laws. By accepting this soft
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementInterfaceCircuit -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementInterfaceCircuit">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ElectricalInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#EndCircuit"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementInterface"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Measurement Interface Circuit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Multicore -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Multicore">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MulticoreConstituent"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Characterization"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#characterizes"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MulticoreConstituent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Multicore</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#MulticoreConstituent -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MulticoreConstituent">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Multicore Constituent</rdfs:label>
     </owl:Class>
     
 
@@ -1017,10 +1880,19 @@ This software may be subject to U.S. export control laws. By accepting this soft
     
 
 
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Plug -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Plug">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Connector"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Plug</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#PoweredInterfaceCircuit -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#PoweredInterfaceCircuit">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ElectricalInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#EndCircuit"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Powered Interface Circuit</rdfs:label>
     </owl:Class>
     
@@ -1050,7 +1922,7 @@ This software may be subject to U.S. export control laws. By accepting this soft
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#PulsedInterfaceCircuit -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#PulsedInterfaceCircuit">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ElectricalInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#EndCircuit"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PulsedInterface"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pulsed Interface Circuit</rdfs:label>
     </owl:Class>
@@ -1181,8 +2053,26 @@ This software may be subject to U.S. export control laws. By accepting this soft
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#ResistiveInterfaceCircuit -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#ResistiveInterfaceCircuit">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ElectricalInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#EndCircuit"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Resistive Interface Circuit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Shell -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Shell">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ConductorEnd"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Shield -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Shield">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Conductor"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shield</rdfs:label>
     </owl:Class>
     
 
@@ -1218,7 +2108,7 @@ This software may be subject to U.S. export control laws. By accepting this soft
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Subsystem">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ReferenceDesignatedElement"/>
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#AggregatedElement"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Component"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#aggregates"/>
@@ -1310,6 +2200,28 @@ This software may be subject to U.S. export control laws. By accepting this soft
     
 
 
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Terminal -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Terminal">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Interface"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#isJoinedIn"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Leg"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#isPresentedBy"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#EndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Terminal</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#ThermistorInterfaceCircuit -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#ThermistorInterfaceCircuit">
@@ -1333,6 +2245,15 @@ This software may be subject to U.S. export control laws. By accepting this soft
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#UARTInterfaceCircuit">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#DigitalInterfaceCircuit"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UART Interface Circuit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#UsesCavity -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#UsesCavity">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#ReifiedObjectProperty"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uses Cavity</rdfs:label>
     </owl:Class>
     
 
@@ -1404,7 +2325,7 @@ This software may be subject to U.S. export control laws. By accepting this soft
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableCurrentInterfaceCircuit">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#CurrentInterface"/>
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ElectricalInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#EndCircuit"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableInterface"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Variable Current Interface Circuit</rdfs:label>
     </owl:Class>
@@ -1425,7 +2346,7 @@ This software may be subject to U.S. export control laws. By accepting this soft
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#VariableVoltageInterfaceCircuit -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableVoltageInterfaceCircuit">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ElectricalInterfaceCircuit"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#EndCircuit"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VariableInterface"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#VoltageInterface"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Variable Voltage Interface Circuit</rdfs:label>
@@ -1450,6 +2371,81 @@ This software may be subject to U.S. export control laws. By accepting this soft
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementInterfaceCircuit"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Voltage Measurement Interface Circuit</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Wire -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Wire">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Conductor"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MulticoreConstituent"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wire</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl#r">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#t">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">usesCavity reification rule</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasUsesCavitySource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasUsesCavityTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#usesCavity"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
 </rdf:RDF>
 
 

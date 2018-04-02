@@ -1,0 +1,20 @@
+#!/bin/bash
+
+CONVERT=$HOME/Downloads/OMLConverters/bin/omlConverter
+CONVERTED=converted-oml
+INPUT=$HOME/git/gov.nasa.jpl.imce.ontologies.workflow/target/workflow/artifacts
+BUNDLES=bundles
+ENTAILMENTS=entailments
+ONTOLOGIES=ontologies
+CATALOG=oml.catalog.xml
+
+if [ ! -f build.sbt ]
+then
+    echo "run in project root" 1>&2
+    exit 1
+fi
+
+rsync -av ${1-$INPUT}/$BUNDLES/ $BUNDLES
+rsync -av ${1-$INPUT}/$ENTAILMENTS/ $ENTAILMENTS
+
+$CONVERT owl $ONTOLOGIES/$CATALOG --output $CONVERTED --text --clear

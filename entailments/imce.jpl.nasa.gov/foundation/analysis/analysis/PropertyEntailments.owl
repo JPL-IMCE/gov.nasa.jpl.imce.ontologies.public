@@ -4,9 +4,8 @@
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#isMeasuredBy">
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#isMeasuredBy"/>
-    <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#measures"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#isMeasuredBy"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasQuantifiesSource">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topObjectProperty"/>
@@ -50,13 +49,16 @@
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topReifiedObjectPropertyTarget"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#measures">
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#measures"/>
+    <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#isMeasuredBy"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#validates">
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#validates"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topReifiedObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#characterizes"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#validates"/>
+    <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#isValidatedBy"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasHasValueSource">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasHasValueSource"/>
@@ -79,19 +81,23 @@
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#limits">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#limits"/>
+    <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#isLimitedBy"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topReifiedObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#quantifies">
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#quantifies"/>
+    <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#isQuantifiedBy"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#isLimitedBy">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#isLimitedBy"/>
-    <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#limits"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topReifiedObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#explains">
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#explains"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topReifiedObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasValue">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topObjectProperty"/>
@@ -141,13 +147,13 @@
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topUnreifiedObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#isValidatedBy">
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#isCharacterizedBy"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topReifiedObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#isValidatedBy"/>
-    <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#validates"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#isCharacterizedBy"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis/PropertyEntailments">
-    <owl:versionInfo>2018-03-06 15:48:19 -0800</owl:versionInfo>
+    <owl:versionInfo>2018-03-29 10:02:03 -0700</owl:versionInfo>
     <rdfs:comment>generated by entail</rdfs:comment>
     <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
@@ -161,14 +167,14 @@
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasHasMetricTarget"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#isExplainedBy">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topReifiedObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#isExplainedBy"/>
     <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#explains"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#isQuantifiedBy">
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#isQuantifiedBy"/>
-    <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#quantifies"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#isQuantifiedBy"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasExplainsTarget">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#topObjectProperty"/>

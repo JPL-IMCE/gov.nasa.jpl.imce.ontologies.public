@@ -229,21 +229,21 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fault-management/fault-man
 		source = behavior:ElementBehavior
 		target = PerformanceConstraint }
 
-	rule R78097 infers causes
-	if behavior:ElementBehavior
-	&& analysis:isExplainedBy
-	&& CauseExplanation
-	&& analysis:analyzes
-	&& behavior:ElementBehavior
-
-	rule R78732 infers violates
+	rule R2038 infers violates
 	if behavior:ElementBehavior
 	&& analysis:isExplainedBy
 	&& ViolationExplanation
 	&& analysis:analyzes
 	&& PerformanceConstraint
 
-	rule R99495 infers impairs
+	rule R22273 infers causes
+	if behavior:ElementBehavior
+	&& analysis:isExplainedBy
+	&& CauseExplanation
+	&& analysis:analyzes
+	&& behavior:ElementBehavior
+
+	rule R79876 infers impairs
 	if behavior:ElementBehavior
 	&& analysis:isExplainedBy
 	&& ViolationExplanation

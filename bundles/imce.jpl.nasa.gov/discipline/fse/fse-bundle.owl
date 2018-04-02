@@ -1,0 +1,655 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY pbs "http://imce.jpl.nasa.gov/pbs/pbs#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY oml "http://imce.jpl.nasa.gov/oml/oml#" >
+    <!ENTITY math "http://imce.jpl.nasa.gov/math/math#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY Blocks "http://imce.jpl.nasa.gov/Blocks/Blocks#" >
+    <!ENTITY timeline "http://imce.jpl.nasa.gov/timeline/timeline#" >
+    <!ENTITY pbs-embedding "http://imce.jpl.nasa.gov/pbs/pbs-embedding#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY fse "http://imce.jpl.nasa.gov/discipline/fse/fse#" >
+    <!ENTITY ieee-1471 "http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#" >
+    <!ENTITY math-embedding "http://imce.jpl.nasa.gov/math/math-embedding#" >
+    <!ENTITY base "http://imce.jpl.nasa.gov/foundation/base/base#" >
+    <!ENTITY time "http://imce.jpl.nasa.gov/foundation/time/time#" >
+    <!ENTITY mechanical "http://imce.jpl.nasa.gov/mechanical/mechanical#" >
+    <!ENTITY vandv "http://imce.jpl.nasa.gov/discipline/vandv/vandv#" >
+    <!ENTITY Blocks-embedding "http://imce.jpl.nasa.gov/Blocks/Blocks-embedding#" >
+    <!ENTITY fse-bundle "http://imce.jpl.nasa.gov/discipline/fse/fse-bundle#" >
+    <!ENTITY mission "http://imce.jpl.nasa.gov/foundation/mission/mission#" >
+    <!ENTITY project "http://imce.jpl.nasa.gov/foundation/project/project#" >
+    <!ENTITY f6-asda "http://imce.jpl.nasa.gov/application/f6-asda/f6-asda#" >
+    <!ENTITY timeline-embedding "http://imce.jpl.nasa.gov/timeline/timeline-embedding#" >
+    <!ENTITY base-mapping "http://imce.jpl.nasa.gov/foundation/base/base-mapping#" >
+    <!ENTITY analysis "http://imce.jpl.nasa.gov/foundation/analysis/analysis#" >
+    <!ENTITY fse-embedding "http://imce.jpl.nasa.gov/discipline/fse/fse-embedding#" >
+    <!ENTITY ieee-1471-embedding "http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#" >
+    <!ENTITY owl2-mof2 "http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#" >
+    <!ENTITY time-embedding "http://imce.jpl.nasa.gov/foundation/time/time-embedding#" >
+    <!ENTITY base-embedding "http://imce.jpl.nasa.gov/foundation/base/base-embedding#" >
+    <!ENTITY mechanical-embedding "http://imce.jpl.nasa.gov/mechanical/mechanical-embedding#" >
+    <!ENTITY vandv-embedding "http://imce.jpl.nasa.gov/discipline/vandv/vandv-embedding#" >
+    <!ENTITY annotation "http://imce.jpl.nasa.gov/foundation/annotation/annotation#" >
+    <!ENTITY UML "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#" >
+    <!ENTITY jeo-architecture "http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture#" >
+    <!ENTITY datatype-map "http://imce.jpl.nasa.gov/foundation/owl2-mof2/datatype-map#" >
+    <!ENTITY mgss-service-embedding "http://imce.jpl.nasa.gov/mgss-service/mgss-service-embedding#" >
+    <!ENTITY QUDV "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#" >
+    <!ENTITY project-embedding "http://imce.jpl.nasa.gov/foundation/project/project-embedding#" >
+    <!ENTITY mission-embedding "http://imce.jpl.nasa.gov/foundation/mission/mission-embedding#" >
+    <!ENTITY SysML "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#" >
+    <!ENTITY f6-asda-embedding "http://imce.jpl.nasa.gov/application/f6-asda/f6-asda-embedding#" >
+    <!ENTITY mgss-service "http://imce.jpl.nasa.gov/application/mgss-service/mgss-service#" >
+    <!ENTITY owl2-mof2-mapping "http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-mapping#" >
+    <!ENTITY analysis-embedding "http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#" >
+    <!ENTITY owl2-mof2-embedding "http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#" >
+    <!ENTITY state-analysis "http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#" >
+    <!ENTITY annotation-embedding "http://imce.jpl.nasa.gov/foundation/annotation/annotation-embedding#" >
+    <!ENTITY UML-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-embedding#" >
+    <!ENTITY jeo-architecture-embedding "http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture-embedding#" >
+    <!ENTITY UML-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#" >
+    <!ENTITY fault-management "http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#" >
+    <!ENTITY QUDV-mapping "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-mapping#" >
+    <!ENTITY fse-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#" >
+    <!ENTITY QUDV-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-embedding#" >
+    <!ENTITY StandardProfileL2 "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#" >
+    <!ENTITY SysML-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#" >
+    <!ENTITY SysML-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-embedding#" >
+    <!ENTITY time-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#" >
+    <!ENTITY state-analysis-embedding "http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis-embedding#" >
+    <!ENTITY architectural-description "http://imce.jpl.nasa.gov/architectural-description/architectural-description#" >
+    <!ENTITY fse-bundle-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse-bundle#" >
+    <!ENTITY project-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#" >
+    <!ENTITY mission-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#" >
+    <!ENTITY fault-management-embedding "http://imce.jpl.nasa.gov/discipline/fault-management/fault-management-embedding#" >
+    <!ENTITY PrimitiveTypes "http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes#" >
+    <!ENTITY analysis-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#" >
+    <!ENTITY StandardProfileL2-mapping "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-mapping#" >
+    <!ENTITY StandardProfileL2-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-embedding#" >
+    <!ENTITY StandardProfileL2-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#" >
+    <!ENTITY architectural-description-embedding "http://imce.jpl.nasa.gov/architectural-description/architectural-description-embedding#" >
+    <!ENTITY PrimitiveTypes-embedding "http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-embedding#" >
+    <!ENTITY PrimitiveTypes-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-metamodel#" >
+    <!ENTITY state-analysis-implementation "http://imce.jpl.nasa.gov/discipline/state-analysis-implementation/state-analysis-implementation#" >
+    <!ENTITY state-analysis-functional-design "http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#" >
+    <!ENTITY state-analysis-implementation-embedding "http://imce.jpl.nasa.gov/discipline/state-analysis-implementation/state-analysis-implementation-embedding#" >
+    <!ENTITY state-analysis-functional-design-embedding "http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design-embedding#" >
+]>
+
+
+<rdf:RDF xmlns="http://imce.jpl.nasa.gov/discipline/fse/fse#"
+     xml:base="http://imce.jpl.nasa.gov/discipline/fse/fse"
+     xmlns:fault-management="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#"
+     xmlns:PrimitiveTypes-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-embedding#"
+     xmlns:Blocks-embedding="http://imce.jpl.nasa.gov/Blocks/Blocks-embedding#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:StandardProfileL2-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#"
+     xmlns:ieee-1471="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471#"
+     xmlns:StandardProfileL2-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-embedding#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:project="http://imce.jpl.nasa.gov/foundation/project/project#"
+     xmlns:mechanical="http://imce.jpl.nasa.gov/mechanical/mechanical#"
+     xmlns:timeline-embedding="http://imce.jpl.nasa.gov/timeline/timeline-embedding#"
+     xmlns:fse-bundle-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse-bundle#"
+     xmlns:mission-embedding="http://imce.jpl.nasa.gov/foundation/mission/mission-embedding#"
+     xmlns:architectural-description-embedding="http://imce.jpl.nasa.gov/architectural-description/architectural-description-embedding#"
+     xmlns:QUDV="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#"
+     xmlns:PrimitiveTypes-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-metamodel#"
+     xmlns:datatype-map="http://imce.jpl.nasa.gov/foundation/owl2-mof2/datatype-map#"
+     xmlns:state-analysis-functional-design="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design#"
+     xmlns:QUDV-mapping="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-mapping#"
+     xmlns:owl2-mof2="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#"
+     xmlns:fse-bundle="http://imce.jpl.nasa.gov/discipline/fse/fse-bundle#"
+     xmlns:project-embedding="http://imce.jpl.nasa.gov/foundation/project/project-embedding#"
+     xmlns:owl2-mof2-mapping="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-mapping#"
+     xmlns:annotation-embedding="http://imce.jpl.nasa.gov/foundation/annotation/annotation-embedding#"
+     xmlns:math-embedding="http://imce.jpl.nasa.gov/math/math-embedding#"
+     xmlns:time-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/time/time#"
+     xmlns:state-analysis-implementation-embedding="http://imce.jpl.nasa.gov/discipline/state-analysis-implementation/state-analysis-implementation-embedding#"
+     xmlns:QUDV-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-embedding#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:analysis="http://imce.jpl.nasa.gov/foundation/analysis/analysis#"
+     xmlns:state-analysis-embedding="http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis-embedding#"
+     xmlns:UML-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#"
+     xmlns:mission="http://imce.jpl.nasa.gov/foundation/mission/mission#"
+     xmlns:fse-embedding="http://imce.jpl.nasa.gov/discipline/fse/fse-embedding#"
+     xmlns:UML-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-embedding#"
+     xmlns:UML="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#"
+     xmlns:fse="http://imce.jpl.nasa.gov/discipline/fse/fse#"
+     xmlns:math="http://imce.jpl.nasa.gov/math/math#"
+     xmlns:pbs="http://imce.jpl.nasa.gov/pbs/pbs#"
+     xmlns:PrimitiveTypes="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes#"
+     xmlns:analysis-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#"
+     xmlns:vandv-embedding="http://imce.jpl.nasa.gov/discipline/vandv/vandv-embedding#"
+     xmlns:mechanical-embedding="http://imce.jpl.nasa.gov/mechanical/mechanical-embedding#"
+     xmlns:f6-asda="http://imce.jpl.nasa.gov/application/f6-asda/f6-asda#"
+     xmlns:SysML="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#"
+     xmlns:time-embedding="http://imce.jpl.nasa.gov/foundation/time/time-embedding#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:SysML-embedding="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-embedding#"
+     xmlns:fault-management-embedding="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management-embedding#"
+     xmlns:pbs-embedding="http://imce.jpl.nasa.gov/pbs/pbs-embedding#"
+     xmlns:state-analysis-implementation="http://imce.jpl.nasa.gov/discipline/state-analysis-implementation/state-analysis-implementation#"
+     xmlns:oml="http://imce.jpl.nasa.gov/oml/oml#"
+     xmlns:jeo-architecture-embedding="http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture-embedding#"
+     xmlns:base-embedding="http://imce.jpl.nasa.gov/foundation/base/base-embedding#"
+     xmlns:StandardProfileL2="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#"
+     xmlns:SysML-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#"
+     xmlns:fse-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#"
+     xmlns:jeo-architecture="http://imce.jpl.nasa.gov/jeo-architecture/jeo-architecture#"
+     xmlns:mgss-service="http://imce.jpl.nasa.gov/application/mgss-service/mgss-service#"
+     xmlns:vandv="http://imce.jpl.nasa.gov/discipline/vandv/vandv#"
+     xmlns:StandardProfileL2-mapping="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-mapping#"
+     xmlns:annotation="http://imce.jpl.nasa.gov/foundation/annotation/annotation#"
+     xmlns:architectural-description="http://imce.jpl.nasa.gov/architectural-description/architectural-description#"
+     xmlns:Blocks="http://imce.jpl.nasa.gov/Blocks/Blocks#"
+     xmlns:mgss-service-embedding="http://imce.jpl.nasa.gov/mgss-service/mgss-service-embedding#"
+     xmlns:project-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#"
+     xmlns:mission-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#"
+     xmlns:ieee-1471-embedding="http://imce.jpl.nasa.gov/ieee-1471/ieee-1471-embedding#"
+     xmlns:base-mapping="http://imce.jpl.nasa.gov/foundation/base/base-mapping#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl2-mof2-embedding="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2-embedding#"
+     xmlns:timeline="http://imce.jpl.nasa.gov/timeline/timeline#"
+     xmlns:state-analysis="http://imce.jpl.nasa.gov/discipline/state-analysis/state-analysis#"
+     xmlns:time="http://imce.jpl.nasa.gov/foundation/time/time#"
+     xmlns:state-analysis-functional-design-embedding="http://imce.jpl.nasa.gov/discipline/state-analysis-functional-design/state-analysis-functional-design-embedding#"
+     xmlns:f6-asda-embedding="http://imce.jpl.nasa.gov/application/f6-asda/f6-asda-embedding#"
+     xmlns:analysis-embedding="http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:base="http://imce.jpl.nasa.gov/foundation/base/base#">
+    <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse-bundle">
+        <owl:versionInfo rdf:datatype="&xsd;string">2018-03-29 08:17:00 -0700</owl:versionInfo>
+        <rdfs:comment rdf:datatype="&xsd;string">created by close-tbox-bundle</rdfs:comment>
+        <owl:imports rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse"/>
+        <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project-bundle"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Cavity -->
+
+    <rdf:Description rdf:about="&fse;Cavity">
+        <owl:disjointWith rdf:resource="&fse;Shell"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#DifferentialDiscreteInterface -->
+
+    <rdf:Description rdf:about="&fse;DifferentialDiscreteInterface">
+        <owl:disjointWith rdf:resource="&fse;SingleEndedDiscreteInterface"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Jack -->
+
+    <rdf:Description rdf:about="&fse;Jack">
+        <owl:disjointWith rdf:resource="&fse;Plug"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#LVDSRSBClientInterfaceCircuit -->
+
+    <rdf:Description rdf:about="&fse;LVDSRSBClientInterfaceCircuit">
+        <owl:disjointWith rdf:resource="&fse;RS422RSBClientInterfaceCircuit"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#LVDSRSBHostInterfaceCircuit -->
+
+    <rdf:Description rdf:about="&fse;LVDSRSBHostInterfaceCircuit">
+        <owl:disjointWith rdf:resource="&fse;RS422RSBHostInterfaceCircuit"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#LVDSUART2SignalFlowControlInterfaceCircuit -->
+
+    <rdf:Description rdf:about="&fse;LVDSUART2SignalFlowControlInterfaceCircuit">
+        <owl:disjointWith rdf:resource="&fse;RS422UART2SignalFlowControlInterfaceCircuit"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Plug -->
+
+    <rdf:Description rdf:about="&fse;Plug"/>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#RS422RSBClientInterfaceCircuit -->
+
+    <rdf:Description rdf:about="&fse;RS422RSBClientInterfaceCircuit"/>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#RS422RSBHostInterfaceCircuit -->
+
+    <rdf:Description rdf:about="&fse;RS422RSBHostInterfaceCircuit"/>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#RS422UART2SignalFlowControlInterfaceCircuit -->
+
+    <rdf:Description rdf:about="&fse;RS422UART2SignalFlowControlInterfaceCircuit"/>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Shell -->
+
+    <rdf:Description rdf:about="&fse;Shell"/>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#SingleEndedDiscreteInterface -->
+
+    <rdf:Description rdf:about="&fse;SingleEndedDiscreteInterface"/>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#MaterialItem -->
+
+    <rdf:Description rdf:about="&mission;MaterialItem">
+        <owl:disjointWith rdf:resource="&mission;Message"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#Message -->
+
+    <rdf:Description rdf:about="&mission;Message"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&fse-backbone;ReifiedObjectProperty"/>
+            <rdf:Description rdf:about="&fse-backbone;ReifiedStructuredDataProperty"/>
+            <rdf:Description rdf:about="&fse-backbone;StructuredDatatype"/>
+            <rdf:Description rdf:about="&analysis-backbone;ReifiedStructuredDataProperty"/>
+            <rdf:Description rdf:about="&analysis-backbone;StructuredDatatype"/>
+            <rdf:Description rdf:about="&mission-backbone;ReifiedStructuredDataProperty"/>
+            <rdf:Description rdf:about="&mission-backbone;StructuredDatatype"/>
+            <rdf:Description rdf:about="&project-backbone;ReifiedStructuredDataProperty"/>
+            <rdf:Description rdf:about="&project-backbone;StructuredDatatype"/>
+            <rdf:Description rdf:about="&fse;AD590Channel"/>
+            <rdf:Description rdf:about="&fse;AnalogPRTChannel"/>
+            <rdf:Description rdf:about="&fse;ConductorEnd"/>
+            <rdf:Description rdf:about="&fse;ConnectableComponent"/>
+            <rdf:Description rdf:about="&fse;Connector"/>
+            <rdf:Description rdf:about="&fse;CurrentMeasurementInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;DiscreteVoltageInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;Fixed10VInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;Fixed12VInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;Fixed1_5VInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;Fixed2_5VInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;Fixed3_3VInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;Fixed4VInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;Fixed5VInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;Fixed70VInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;Function"/>
+            <rdf:Description rdf:about="&fse;FunctionDescription"/>
+            <rdf:Description rdf:about="&fse;Leg"/>
+            <rdf:Description rdf:about="&fse;Multicore"/>
+            <rdf:Description rdf:about="&fse;PoweredInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;ResistiveInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;Shield"/>
+            <rdf:Description rdf:about="&fse;Subsystem"/>
+            <rdf:Description rdf:about="&fse;Switched10AInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;Switched1ADriverInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;Switched5AInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;Switched70VInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;Terminal"/>
+            <rdf:Description rdf:about="&fse;Variable10VMeasurementInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;Variable2_5VMeasurementInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;VariableCurrentInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;VariableVoltageInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;Wire"/>
+            <rdf:Description rdf:about="&analysis;Analyzes"/>
+            <rdf:Description rdf:about="&analysis;Assumption"/>
+            <rdf:Description rdf:about="&analysis;ConstrainedElement"/>
+            <rdf:Description rdf:about="&analysis;Constrains"/>
+            <rdf:Description rdf:about="&analysis;Constraint"/>
+            <rdf:Description rdf:about="&analysis;Criterion"/>
+            <rdf:Description rdf:about="&analysis;Explanation"/>
+            <rdf:Description rdf:about="&analysis;HasCriterion"/>
+            <rdf:Description rdf:about="&analysis;HasMetric"/>
+            <rdf:Description rdf:about="&analysis;HasValue"/>
+            <rdf:Description rdf:about="&analysis;Limits"/>
+            <rdf:Description rdf:about="&analysis;Measures"/>
+            <rdf:Description rdf:about="&analysis;Metric"/>
+            <rdf:Description rdf:about="&analysis;Quantifies"/>
+            <rdf:Description rdf:about="&analysis;Quantity"/>
+            <rdf:Description rdf:about="&analysis;QuantityValue"/>
+            <rdf:Description rdf:about="&analysis;Validates"/>
+            <rdf:Description rdf:about="&base;Aggregates"/>
+            <rdf:Description rdf:about="&base;Contains"/>
+            <rdf:Description rdf:about="&mission;Deploys"/>
+            <rdf:Description rdf:about="&mission;Emits"/>
+            <rdf:Description rdf:about="&mission;Environment"/>
+            <rdf:Description rdf:about="&mission;Flow"/>
+            <rdf:Description rdf:about="&mission;Function"/>
+            <rdf:Description rdf:about="&mission;HasParticipant"/>
+            <rdf:Description rdf:about="&mission;Induces"/>
+            <rdf:Description rdf:about="&mission;Influences"/>
+            <rdf:Description rdf:about="&mission;Ingests"/>
+            <rdf:Description rdf:about="&mission;Interchange"/>
+            <rdf:Description rdf:about="&mission;InterchangePoint"/>
+            <rdf:Description rdf:about="&mission;InterchangesThrough"/>
+            <rdf:Description rdf:about="&mission;Invokes"/>
+            <rdf:Description rdf:about="&mission;Involves1"/>
+            <rdf:Description rdf:about="&mission;Involves2"/>
+            <rdf:Description rdf:about="&mission;IsTraversedBy"/>
+            <rdf:Description rdf:about="&mission;Item"/>
+            <rdf:Description rdf:about="&mission;Joins1"/>
+            <rdf:Description rdf:about="&mission;Joins2"/>
+            <rdf:Description rdf:about="&mission;Mission"/>
+            <rdf:Description rdf:about="&mission;Objective"/>
+            <rdf:Description rdf:about="&mission;Performs"/>
+            <rdf:Description rdf:about="&mission;Presents"/>
+            <rdf:Description rdf:about="&mission;Produces"/>
+            <rdf:Description rdf:about="&mission;Product"/>
+            <rdf:Description rdf:about="&mission;Pursues"/>
+            <rdf:Description rdf:about="&mission;Receives"/>
+            <rdf:Description rdf:about="&mission;Refines"/>
+            <rdf:Description rdf:about="&mission;Requirement"/>
+            <rdf:Description rdf:about="&mission;Sends"/>
+            <rdf:Description rdf:about="&mission;Specifies"/>
+            <rdf:Description rdf:about="&mission;TransfersIn"/>
+            <rdf:Description rdf:about="&mission;TransfersOut"/>
+            <rdf:Description rdf:about="&project;Approves"/>
+            <rdf:Description rdf:about="&project;Authorizes"/>
+            <rdf:Description rdf:about="&project;BelongsTo"/>
+            <rdf:Description rdf:about="&project;Binds"/>
+            <rdf:Description rdf:about="&project;Concurs"/>
+            <rdf:Description rdf:about="&project;DelegatesTo"/>
+            <rdf:Description rdf:about="&project;Delivers"/>
+            <rdf:Description rdf:about="&project;Describes"/>
+            <rdf:Description rdf:about="&project;DevelopmentState"/>
+            <rdf:Description rdf:about="&project;Executes"/>
+            <rdf:Description rdf:about="&project;Facility"/>
+            <rdf:Description rdf:about="&project;HasParticipant"/>
+            <rdf:Description rdf:about="&project;HasResponsibilityFor"/>
+            <rdf:Description rdf:about="&project;HasRole"/>
+            <rdf:Description rdf:about="&project;Interchange"/>
+            <rdf:Description rdf:about="&project;InterchangePoint"/>
+            <rdf:Description rdf:about="&project;InterchangesThrough"/>
+            <rdf:Description rdf:about="&project;Invokes"/>
+            <rdf:Description rdf:about="&project;Involves1"/>
+            <rdf:Description rdf:about="&project;Involves2"/>
+            <rdf:Description rdf:about="&project;Manifests"/>
+            <rdf:Description rdf:about="&project;Organization"/>
+            <rdf:Description rdf:about="&project;Person"/>
+            <rdf:Description rdf:about="&project;Policy"/>
+            <rdf:Description rdf:about="&project;Prepares"/>
+            <rdf:Description rdf:about="&project;Process"/>
+            <rdf:Description rdf:about="&project;Produces"/>
+            <rdf:Description rdf:about="&project;Product"/>
+            <rdf:Description rdf:about="&project;Program"/>
+            <rdf:Description rdf:about="&project;Project"/>
+            <rdf:Description rdf:about="&project;Realizes"/>
+            <rdf:Description rdf:about="&project;Receives"/>
+            <rdf:Description rdf:about="&project;ReliesOn"/>
+            <rdf:Description rdf:about="&project;Represents"/>
+            <rdf:Description rdf:about="&project;Role"/>
+            <rdf:Description rdf:about="&project;Stakeholder"/>
+            <rdf:Description rdf:about="&project;WorkPackage"/>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fse;DigitalInterfaceCircuit"/>
+                    <rdf:Description rdf:about="&fse;DigitalReceiverInterfaceCircuit"/>
+                    <rdf:Description rdf:about="&fse;LVDSInterfaceCircuit"/>
+                    <rdf:Description rdf:about="&fse;RS422InterfaceCircuit"/>
+                    <rdf:Description rdf:about="&fse;RadioTZRadioTransceiverInterface"/>
+                    <rdf:Description rdf:about="&fse;SpacewireTransceiver"/>
+                    <rdf:Description rdf:about="&fse;UARTInterfaceCircuit"/>
+                </owl:unionOf>
+            </owl:Class>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fse;DiscreteVoltageMeasurementInterfaceCircuit"/>
+                    <rdf:Description rdf:about="&fse;Variable3_3VMeasurementInterfaceCircuit"/>
+                    <rdf:Description rdf:about="&fse;Variable5VMeasurementInterfaceCircuit"/>
+                </owl:unionOf>
+            </owl:Class>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fse;PulsedInterfaceCircuit"/>
+                    <rdf:Description rdf:about="&fse;Switched2ADriverInterfaceCircuit"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&fse;Assembly"/>
+            <rdf:Description rdf:about="&fse;FieldJoint"/>
+            <rdf:Description rdf:about="&fse;Harness"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&analysis;CostEstimate"/>
+            <rdf:Description rdf:about="&analysis;DrivingRequirementsExplanation"/>
+            <rdf:Description rdf:about="&analysis;KeyRequirementsExplanation"/>
+            <rdf:Description rdf:about="&analysis;TradeStudy"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&fse;HeaterInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;PRT4-WireInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;PRTInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;ThermistorInterfaceCircuit"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&fse;MIL-STD-1553DirectInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;MIL-STD-1553TerminationInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;MIL-STD-1553TransformerInterfaceCircuit"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&fse;Digital3_WireReceiverInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;DigitalDriverInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;LVDSRadioTZRadioTransceiverInterface"/>
+            <rdf:Description rdf:about="&fse;LVDSReceiverInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;LVDSSpacewireTransceiver"/>
+            <rdf:Description rdf:about="&fse;MIL-STD-1553InterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;RS422RadioTZRadioTransceiverInterface"/>
+            <rdf:Description rdf:about="&fse;RS422ReceiverInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;RadioTZMTIFTransceiverInterface"/>
+            <rdf:Description rdf:about="&fse;RemoteSerialBusClientInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;RemoteSerialBusHostInterfaceCircuit"/>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fse;LVDSUARTInterfaceCircuit"/>
+                    <rdf:Description rdf:about="&fse;RS422UARTInterfaceCircuit"/>
+                    <rdf:Description rdf:about="&fse;UART2SignalFlowControlInterfaceCircuit"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&fse;Digital3_WireDriverInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;LVDSDriverInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;RS422DriverInterfaceCircuit"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#Aspect"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#Entity"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#ReifiedObjectProperty"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#ReifiedStructuredDataProperty"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#StructuredDatatype"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#ReifiedStructuredDataProperty"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#StructuredDatatype"/>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fse-backbone;Aspect"/>
+                    <rdf:Description rdf:about="&fse-backbone;Entity"/>
+                    <rdf:Description rdf:about="&fse-backbone;Thing"/>
+                    <rdf:Description rdf:about="&analysis-backbone;Aspect"/>
+                    <rdf:Description rdf:about="&analysis-backbone;Entity"/>
+                    <rdf:Description rdf:about="&analysis-backbone;ReifiedObjectProperty"/>
+                    <rdf:Description rdf:about="&analysis-backbone;Thing"/>
+                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#Aspect"/>
+                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#Entity"/>
+                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#ReifiedObjectProperty"/>
+                    <rdf:Description rdf:about="&mission-backbone;Aspect"/>
+                    <rdf:Description rdf:about="&mission-backbone;Entity"/>
+                    <rdf:Description rdf:about="&mission-backbone;ReifiedObjectProperty"/>
+                    <rdf:Description rdf:about="&mission-backbone;Thing"/>
+                    <rdf:Description rdf:about="&project-backbone;Aspect"/>
+                    <rdf:Description rdf:about="&project-backbone;Entity"/>
+                    <rdf:Description rdf:about="&project-backbone;ReifiedObjectProperty"/>
+                    <rdf:Description rdf:about="&project-backbone;Thing"/>
+                    <rdf:Description rdf:about="&fse;Conductor"/>
+                    <rdf:Description rdf:about="&fse;CurrentInterface"/>
+                    <rdf:Description rdf:about="&fse;DiscreteInterface"/>
+                    <rdf:Description rdf:about="&fse;EndCircuit"/>
+                    <rdf:Description rdf:about="&fse;Fixed28VInterfaceCircuit"/>
+                    <rdf:Description rdf:about="&fse;FixedVoltageInterfaceCircuit"/>
+                    <rdf:Description rdf:about="&fse;Fused10AInterfaceCircuit"/>
+                    <rdf:Description rdf:about="&fse;Fused20AInterfaceCircuit"/>
+                    <rdf:Description rdf:about="&fse;Fused2AInterfaceCircuit"/>
+                    <rdf:Description rdf:about="&fse;Fused4AInterfaceCircuit"/>
+                    <rdf:Description rdf:about="&fse;FusedInterface"/>
+                    <rdf:Description rdf:about="&fse;FusedInterfaceCircuit"/>
+                    <rdf:Description rdf:about="&fse;MeasurementInterface"/>
+                    <rdf:Description rdf:about="&fse;MeasurementInterfaceCircuit"/>
+                    <rdf:Description rdf:about="&fse;MulticoreConstituent"/>
+                    <rdf:Description rdf:about="&fse;PulsedInterface"/>
+                    <rdf:Description rdf:about="&fse;ReferenceDesignatedElement"/>
+                    <rdf:Description rdf:about="&fse;Switched28VInterfaceCircuit"/>
+                    <rdf:Description rdf:about="&fse;SwitchedInterface"/>
+                    <rdf:Description rdf:about="&fse;SwitchedVoltageInterfaceCircuit"/>
+                    <rdf:Description rdf:about="&fse;VariableInterface"/>
+                    <rdf:Description rdf:about="&fse;VoltageInterface"/>
+                    <rdf:Description rdf:about="&fse;VoltageMeasurementInterfaceCircuit"/>
+                    <rdf:Description rdf:about="&analysis;AnalyzedElement"/>
+                    <rdf:Description rdf:about="&analysis;Characterization"/>
+                    <rdf:Description rdf:about="&analysis;CharacterizedElement"/>
+                    <rdf:Description rdf:about="&analysis;Characterizes"/>
+                    <rdf:Description rdf:about="&analysis;Explains"/>
+                    <rdf:Description rdf:about="&analysis;MeasuredElement"/>
+                    <rdf:Description rdf:about="&base;AggregatedElement"/>
+                    <rdf:Description rdf:about="&base;ContainedElement"/>
+                    <rdf:Description rdf:about="&base;Container"/>
+                    <rdf:Description rdf:about="&base;IdentifiedElement"/>
+                    <rdf:Description rdf:about="&base;Package"/>
+                    <rdf:Description rdf:about="&mission;Component"/>
+                    <rdf:Description rdf:about="&mission;Interface"/>
+                    <rdf:Description rdf:about="&mission;Involves"/>
+                    <rdf:Description rdf:about="&mission;Joins"/>
+                    <rdf:Description rdf:about="&mission;Junction"/>
+                    <rdf:Description rdf:about="&mission;PerformingElement"/>
+                    <rdf:Description rdf:about="&mission;PresentingElement"/>
+                    <rdf:Description rdf:about="&mission;SpecifiedElement"/>
+                    <rdf:Description rdf:about="&mission;Transfers"/>
+                    <rdf:Description rdf:about="&mission;TraversingElement"/>
+                    <rdf:Description rdf:about="&project;AssignedElement"/>
+                    <rdf:Description rdf:about="&project;Authority"/>
+                    <rdf:Description rdf:about="&project;Concern"/>
+                    <rdf:Description rdf:about="&project;Deliverable"/>
+                    <rdf:Description rdf:about="&project;DevelopedElement"/>
+                    <rdf:Description rdf:about="&project;HasAssignment"/>
+                    <rdf:Description rdf:about="&project;Involves"/>
+                    <rdf:Description rdf:about="&project;RealizedElement"/>
+                    <rdf:Description rdf:about="&project;SuppliedElement"/>
+                    <rdf:Description rdf:about="&project;Supplies"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#Aspect"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#Entity"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#ReifiedObjectProperty"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#ReifiedStructuredDataProperty"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#StructuredDatatype"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#Thing"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#Thing"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#Thing"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&fse;Variable28VInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;Variable3_3VInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;Variable70VInterfaceCircuit"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&fse;AnalogVoltageChannel"/>
+            <rdf:Description rdf:about="&fse;DifferentialDiscreteMeasurementChannel"/>
+            <rdf:Description rdf:about="&fse;Discrete3_3VMeasurementInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;Discrete5VMeasurementInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;SingleEndedDiscreteMeasurementChannel"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.5-SNAPSHOT) http://owlapi.sourceforge.net -->
+

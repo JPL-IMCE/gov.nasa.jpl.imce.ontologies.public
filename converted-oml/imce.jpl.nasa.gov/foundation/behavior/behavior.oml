@@ -459,30 +459,21 @@ When <property>constrain</property>ed by an <classname>ElementBehaviorConstraint
 		source = Interaction
 		target = AttributeGroup }
 
-	rule R19780 infers hasInteractionBehavior
+	rule R14173 infers joins
 	if Interaction
-	&& hasInteractionBehaviorClass
-	&& InteractionBehaviorAutomaton
-	&& hasRegion
-	&& InteractionBehaviorRegion
+	&& hasInteractionRole
+	&& InteractionRole
+	&& hasAttributeGroup
+	&& AttributeGroup
 
-	rule R34555 infers hasElementBehavior
+	rule R41319 infers hasElementBehavior
 	if ElementBehaviorOwner
 	&& hasElementBehaviorClass
 	&& ElementBehaviorAutomaton
 	&& hasRegion
 	&& ElementBehaviorRegion
 
-	rule R51414 infers hasElementBehavior
-	if ElementBehaviorOwner
-	&& hasElementBehaviorClass
-	&& AttributeAutomaton
-	&& hasRegion
-	&& AutomatonRegion
-	&& hasState
-	&& ElementBehaviorState
-
-	rule R6210 infers hasElementBehavior
+	rule R45675 infers hasElementBehavior
 	if ElementBehaviorOwner
 	&& hasElementBehaviorClass
 	&& AttributeAutomaton
@@ -491,7 +482,7 @@ When <property>constrain</property>ed by an <classname>ElementBehaviorConstraint
 	&& hasTransition
 	&& ElementBehaviorTransition
 
-	rule R66518 infers hasInteractionBehavior
+	rule R55646 infers hasInteractionBehavior
 	if Interaction
 	&& hasInteractionBehaviorClass
 	&& AttributeAutomaton
@@ -500,14 +491,7 @@ When <property>constrain</property>ed by an <classname>ElementBehaviorConstraint
 	&& hasTransition
 	&& InteractionBehaviorTransition
 
-	rule R84831 infers joins
-	if Interaction
-	&& hasInteractionRole
-	&& InteractionRole
-	&& hasAttributeGroup
-	&& AttributeGroup
-
-	rule R95099 infers hasInteractionBehavior
+	rule R56307 infers hasInteractionBehavior
 	if Interaction
 	&& hasInteractionBehaviorClass
 	&& AttributeAutomaton
@@ -515,6 +499,22 @@ When <property>constrain</property>ed by an <classname>ElementBehaviorConstraint
 	&& AutomatonRegion
 	&& hasState
 	&& InteractionBehaviorState
+
+	rule R61332 infers hasInteractionBehavior
+	if Interaction
+	&& hasInteractionBehaviorClass
+	&& InteractionBehaviorAutomaton
+	&& hasRegion
+	&& InteractionBehaviorRegion
+
+	rule R624 infers hasElementBehavior
+	if ElementBehaviorOwner
+	&& hasElementBehaviorClass
+	&& AttributeAutomaton
+	&& hasRegion
+	&& AutomatonRegion
+	&& hasState
+	&& ElementBehaviorState
 
 	synonymScalarRestriction AbstractValueType {
 		restrictedRange XMLSchema:string
