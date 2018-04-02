@@ -459,7 +459,7 @@ When <property>constrain</property>ed by an <classname>ElementBehaviorConstraint
 		source = Interaction
 		target = AttributeGroup }
 
-	rule R1160 infers hasInteractionBehavior
+	rule R24330 infers hasInteractionBehavior
 	if Interaction
 	&& hasInteractionBehaviorClass
 	&& AttributeAutomaton
@@ -468,7 +468,14 @@ When <property>constrain</property>ed by an <classname>ElementBehaviorConstraint
 	&& hasState
 	&& InteractionBehaviorState
 
-	rule R12219 infers hasInteractionBehavior
+	rule R32204 infers hasElementBehavior
+	if ElementBehaviorOwner
+	&& hasElementBehaviorClass
+	&& ElementBehaviorAutomaton
+	&& hasRegion
+	&& ElementBehaviorRegion
+
+	rule R40147 infers hasInteractionBehavior
 	if Interaction
 	&& hasInteractionBehaviorClass
 	&& AttributeAutomaton
@@ -477,28 +484,7 @@ When <property>constrain</property>ed by an <classname>ElementBehaviorConstraint
 	&& hasTransition
 	&& InteractionBehaviorTransition
 
-	rule R32452 infers hasInteractionBehavior
-	if Interaction
-	&& hasInteractionBehaviorClass
-	&& InteractionBehaviorAutomaton
-	&& hasRegion
-	&& InteractionBehaviorRegion
-
-	rule R33552 infers joins
-	if Interaction
-	&& hasInteractionRole
-	&& InteractionRole
-	&& hasAttributeGroup
-	&& AttributeGroup
-
-	rule R35730 infers hasElementBehavior
-	if ElementBehaviorOwner
-	&& hasElementBehaviorClass
-	&& ElementBehaviorAutomaton
-	&& hasRegion
-	&& ElementBehaviorRegion
-
-	rule R38719 infers hasElementBehavior
+	rule R40356 infers hasElementBehavior
 	if ElementBehaviorOwner
 	&& hasElementBehaviorClass
 	&& AttributeAutomaton
@@ -507,7 +493,21 @@ When <property>constrain</property>ed by an <classname>ElementBehaviorConstraint
 	&& hasState
 	&& ElementBehaviorState
 
-	rule R58017 infers hasElementBehavior
+	rule R48682 infers joins
+	if Interaction
+	&& hasInteractionRole
+	&& InteractionRole
+	&& hasAttributeGroup
+	&& AttributeGroup
+
+	rule R66761 infers hasInteractionBehavior
+	if Interaction
+	&& hasInteractionBehaviorClass
+	&& InteractionBehaviorAutomaton
+	&& hasRegion
+	&& InteractionBehaviorRegion
+
+	rule R8405 infers hasElementBehavior
 	if ElementBehaviorOwner
 	&& hasElementBehaviorClass
 	&& AttributeAutomaton

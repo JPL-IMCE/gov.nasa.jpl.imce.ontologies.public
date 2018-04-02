@@ -615,14 +615,46 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	Wire extendsConcept Conductor
 
-	@oml:hasPropertyLabel="""uses Cavity"""
+	@oml:hasInverseLabel="""is joined left in"""
+	@oml:hasPropertyLabel="""joins left"""
+	@oml:hasReificationLabel="""Joins Left"""
+	reifiedRelationship JoinsLeft {
+		functional
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = joinsLeft
+		inverse = isJoinedLeftIn
+		source = Function
+		target = EndCircuit }
+
+	@oml:hasInverseLabel="""is joined right in"""
+	@oml:hasPropertyLabel="""joins right"""
+	@oml:hasReificationLabel="""Joins Right"""
+	reifiedRelationship JoinsRight {
+		functional
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = joinsRight
+		inverse = isJoinedRightIn
+		source = Function
+		target = EndCircuit }
+
+	@oml:hasPropertyLabel="""uses cavity"""
 	@oml:hasReificationLabel="""Uses Cavity"""
 	reifiedRelationship UsesCavity {
+		functional
+		inverseFunctional
 		asymmetric
 		irreflexive
 		unreified = usesCavity
 		source = Terminal
 		target = Cavity }
+
+	JoinsLeft extendsRelationship mission:Joins1
+
+	JoinsRight extendsRelationship mission:Joins2
 
 	AnalogPRTChannel extendsAspect CurrentInterface
 
@@ -731,6 +763,7 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	}
 
 	@fse:hasFdColumnLabel="""Assembly 1"""
+	@rdfs:label="""has Fd Assembly1"""
 	entityScalarDataProperty + hasFdAssembly1 {
 		domain FunctionDescription
 		range XMLSchema:string
@@ -738,12 +771,14 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	@fse:hasFdColumnLabel="""Assembly 1
 Board Schematic Signal Names"""
+	@rdfs:label="""has Fd Assembly1 Board Schematic Signal Names"""
 	entityScalarDataProperty + hasFdAssembly1BoardSchematicSignalNames {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""Assembly 2"""
+	@rdfs:label="""has Fd Assembly2"""
 	entityScalarDataProperty + hasFdAssembly2 {
 		domain FunctionDescription
 		range XMLSchema:string
@@ -751,72 +786,84 @@ Board Schematic Signal Names"""
 
 	@fse:hasFdColumnLabel="""Assembly 2
 Board Schematic Signal Names"""
+	@rdfs:label="""has Fd Assembly2 Board Schematic Signal Names"""
 	entityScalarDataProperty + hasFdAssembly2BoardSchematicSignalNames {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""AWG"""
+	@rdfs:label="""has Fd Awg"""
 	entityScalarDataProperty + hasFdAwg {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""Cable Length"""
+	@rdfs:label="""has Fd Cable Length"""
 	entityScalarDataProperty + hasFdCableLength {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""Cavity 1"""
+	@rdfs:label="""has Fd Cavity1"""
 	entityScalarDataProperty + hasFdCavity1 {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""Cavity 2"""
+	@rdfs:label="""has Fd Cavity2"""
 	entityScalarDataProperty + hasFdCavity2 {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""Channel/SW Type"""
+	@rdfs:label="""has Fd Channel Sw Type"""
 	entityScalarDataProperty + hasFdChannelSwType {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""Characteristic Impedance"""
+	@rdfs:label="""has Fd Characteristic Impedence"""
 	entityScalarDataProperty + hasFdCharacteristicImpedence {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""CogE 1"""
+	@rdfs:label="""has Fd Cog E1"""
 	entityScalarDataProperty + hasFdCogE1 {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""CogE 2"""
+	@rdfs:label="""has Fd Cog E2"""
 	entityScalarDataProperty + hasFdCogE2 {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""Comments"""
+	@rdfs:label="""has Fd Comments"""
 	entityScalarDataProperty + hasFdComments {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""Conductor Count"""
+	@rdfs:label="""has Fd Conductor Count"""
 	entityScalarDataProperty + hasFdConductorCount {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""Connector 1"""
+	@rdfs:label="""has Fd Connector1"""
 	entityScalarDataProperty + hasFdConnector1 {
 		domain FunctionDescription
 		range XMLSchema:string
@@ -824,12 +871,14 @@ Board Schematic Signal Names"""
 
 	@fse:hasFdColumnLabel="""Connector 1
 Type/Part Number"""
+	@rdfs:label="""has Fd Connector1 Type Part Number"""
 	entityScalarDataProperty + hasFdConnector1TypePartNumber {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""Connector 2"""
+	@rdfs:label="""has Fd Connector2"""
 	entityScalarDataProperty + hasFdConnector2 {
 		domain FunctionDescription
 		range XMLSchema:string
@@ -837,36 +886,42 @@ Type/Part Number"""
 
 	@fse:hasFdColumnLabel="""Connector 2
 Type/Part Number"""
+	@rdfs:label="""has Fd Connector2 Type Part Number"""
 	entityScalarDataProperty + hasFdConnector2TypePartNumber {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""Cross-Strapped"""
+	@rdfs:label="""has Fd Cross Strapped"""
 	entityScalarDataProperty + hasFdCrossStrapped {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""Date Last Changed"""
+	@rdfs:label="""has Fd Date Last Changed"""
 	entityScalarDataProperty + hasFdDateLastChanged {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""Drawing Number"""
+	@rdfs:label="""has Fd Drawing Number"""
 	entityScalarDataProperty + hasFdDrawingNumber {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""ECR"""
+	@rdfs:label="""has Fd Ecr"""
 	entityScalarDataProperty + hasFdEcr {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""End Circuit 1"""
+	@rdfs:label="""has Fd End Circuit1"""
 	entityScalarDataProperty + hasFdEndCircuit1 {
 		domain FunctionDescription
 		range XMLSchema:string
@@ -874,12 +929,14 @@ Type/Part Number"""
 
 	@fse:hasFdColumnLabel="""End Circuit 1
 Part Number"""
+	@rdfs:label="""has Fd End Circuit1 Part Number"""
 	entityScalarDataProperty + hasFdEndCircuit1PartNumber {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""End Circuit 2"""
+	@rdfs:label="""has Fd End Circuit2"""
 	entityScalarDataProperty + hasFdEndCircuit2 {
 		domain FunctionDescription
 		range XMLSchema:string
@@ -887,137 +944,160 @@ Part Number"""
 
 	@fse:hasFdColumnLabel="""End Circuit 2
 Part Number"""
+	@rdfs:label="""has Fd End Circuit2 Part Number"""
 	entityScalarDataProperty + hasFdEndCircuit2PartNumber {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""End Circuit Type"""
+	@rdfs:label="""has Fd End Circuit Type"""
 	entityScalarDataProperty + hasFdEndCircuitType {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""Flow"""
+	@rdfs:label="""has Fd Flow"""
 	entityScalarDataProperty + hasFdFlow {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""Function Name"""
+	@rdfs:label="""has Fd Function Name"""
 	entityScalarDataProperty + hasFdFunctionName {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""Function Number"""
+	@rdfs:label="""has Fd Function Number"""
 	entityScalarDataProperty + hasFdFunctionNumber {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""Function Rev"""
+	@rdfs:label="""has Fd Function Rev"""
 	entityScalarDataProperty + hasFdFunctionRev {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""Functions Per Page"""
+	@rdfs:label="""has Fd Functions Per Page"""
 	entityScalarDataProperty + hasFdFunctionsPerPage {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""Ground Tree Ref 1"""
+	@rdfs:label="""has Fd Ground Tree Ref1"""
 	entityScalarDataProperty + hasFdGroundTreeRef1 {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""Ground Tree Ref 2"""
+	@rdfs:label="""has Fd Ground Tree Ref2"""
 	entityScalarDataProperty + hasFdGroundTreeRef2 {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""Harness"""
+	@rdfs:label="""has Fd Harness"""
 	entityScalarDataProperty + hasFdHarness {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""Inline #"""
+	@rdfs:label="""has Fd Inline Number"""
 	entityScalarDataProperty + hasFdInlineNumber {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""Max Steady-State Current (A)"""
+	@rdfs:label="""has Fd Max Steady State Current"""
 	entityScalarDataProperty + hasFdMaxSteadyStateCurrent {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""Note 1"""
+	@rdfs:label="""has Fd Note1"""
 	entityScalarDataProperty + hasFdNote1 {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""Note 2"""
+	@rdfs:label="""has Fd Note2"""
 	entityScalarDataProperty + hasFdNote2 {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""Number of Wires"""
+	@rdfs:label="""has Fd Number Of Functions"""
 	entityScalarDataProperty + hasFdNumberOfFunctions {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""Number Of Functions"""
+	@rdfs:label="""has Fd Number Of Wires"""
 	entityScalarDataProperty + hasFdNumberOfWires {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""Project Name"""
+	@rdfs:label="""has Fd Project Name"""
 	entityScalarDataProperty + hasFdProjectName {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
+	@rdfs:label="""has Fd Property"""
 	entityScalarDataProperty + hasFdProperty {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""SUB-SUB Name"""
+	@rdfs:label="""has Fd Sub Sub Name"""
 	entityScalarDataProperty + hasFdSubSubName {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""Subsystem 1"""
+	@rdfs:label="""has Fd Subsystem1"""
 	entityScalarDataProperty + hasFdSubsystem1 {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""Subsystem 2"""
+	@rdfs:label="""has Fd Subsystem2"""
 	entityScalarDataProperty + hasFdSubsystem2 {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""Subsystem Function Name"""
+	@rdfs:label="""has Fd Subsystem Function Name"""
 	entityScalarDataProperty + hasFdSubsystemFunctionName {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""SW Size (Amp+L:AN)"""
+	@rdfs:label="""has Fd Sw Size"""
 	entityScalarDataProperty + hasFdSwSize {
 		domain FunctionDescription
 		range XMLSchema:string
@@ -1026,6 +1106,7 @@ Part Number"""
 	@fse:hasFdColumnLabel="""View 1
 (Conceptual) Interface Types: 
 Data, Power"""
+	@rdfs:label="""has Fd View1"""
 	entityScalarDataProperty + hasFdView1 {
 		domain FunctionDescription
 		range XMLSchema:string
@@ -1034,6 +1115,7 @@ Data, Power"""
 	@fse:hasFdColumnLabel="""View 2
 (Logical) Signal Types: 
 (see the Word Document)"""
+	@rdfs:label="""has Fd View2"""
 	entityScalarDataProperty + hasFdView2 {
 		domain FunctionDescription
 		range XMLSchema:string
@@ -1043,24 +1125,28 @@ Data, Power"""
 (Realization or Implementation) Signal/Waverform Breakdown:
 Interface EMI Characteristics & Redundancy
 (L3-EIG-228)"""
+	@rdfs:label="""has Fd View3"""
 	entityScalarDataProperty + hasFdView3 {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""Waveform"""
+	@rdfs:label="""has Fd Waveform"""
 	entityScalarDataProperty + hasFdWaveform {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""wcode"""
+	@rdfs:label="""has Fd Wcode"""
 	entityScalarDataProperty + hasFdWcode {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
 
 	@fse:hasFdColumnLabel="""wtype"""
+	@rdfs:label="""has Fd Wtype"""
 	entityScalarDataProperty + hasFdWtype {
 		domain FunctionDescription
 		range XMLSchema:string
