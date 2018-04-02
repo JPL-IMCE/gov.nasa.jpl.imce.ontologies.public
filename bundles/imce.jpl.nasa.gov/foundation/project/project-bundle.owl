@@ -232,7 +232,7 @@
      xmlns:analysis-embedding="http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#"
      xmlns:base="http://imce.jpl.nasa.gov/foundation/base/base#">
     <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/foundation/project/project-bundle">
-        <owl:versionInfo rdf:datatype="&xsd;string">2018-03-29 08:16:55 -0700</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="&xsd;string">2018-04-02 13:23:35 -0700</owl:versionInfo>
         <rdfs:comment rdf:datatype="&xsd;string">created by close-tbox-bundle</rdfs:comment>
         <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis"/>
         <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base"/>
@@ -275,6 +275,61 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&annotation-backbone;Thing"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#Thing"/>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&analysis-backbone;Aspect"/>
+                    <rdf:Description rdf:about="&analysis-backbone;Entity"/>
+                    <rdf:Description rdf:about="&analysis-backbone;ReifiedObjectProperty"/>
+                    <rdf:Description rdf:about="&analysis-backbone;Thing"/>
+                    <rdf:Description rdf:about="&base-backbone;Aspect"/>
+                    <rdf:Description rdf:about="&base-backbone;Entity"/>
+                    <rdf:Description rdf:about="&base-backbone;ReifiedObjectProperty"/>
+                    <rdf:Description rdf:about="&base-backbone;Thing"/>
+                    <rdf:Description rdf:about="&mission-backbone;Aspect"/>
+                    <rdf:Description rdf:about="&mission-backbone;Entity"/>
+                    <rdf:Description rdf:about="&mission-backbone;ReifiedObjectProperty"/>
+                    <rdf:Description rdf:about="&mission-backbone;Thing"/>
+                    <rdf:Description rdf:about="&project-backbone;Aspect"/>
+                    <rdf:Description rdf:about="&project-backbone;Entity"/>
+                    <rdf:Description rdf:about="&project-backbone;ReifiedObjectProperty"/>
+                    <rdf:Description rdf:about="&project-backbone;Thing"/>
+                    <rdf:Description rdf:about="&analysis;AnalyzedElement"/>
+                    <rdf:Description rdf:about="&analysis;Characterization"/>
+                    <rdf:Description rdf:about="&analysis;CharacterizedElement"/>
+                    <rdf:Description rdf:about="&analysis;Characterizes"/>
+                    <rdf:Description rdf:about="&analysis;Explains"/>
+                    <rdf:Description rdf:about="&analysis;MeasuredElement"/>
+                    <rdf:Description rdf:about="&base;AggregatedElement"/>
+                    <rdf:Description rdf:about="&base;ContainedElement"/>
+                    <rdf:Description rdf:about="&base;Container"/>
+                    <rdf:Description rdf:about="&base;IdentifiedElement"/>
+                    <rdf:Description rdf:about="&base;Package"/>
+                    <rdf:Description rdf:about="&mission;Involves"/>
+                    <rdf:Description rdf:about="&mission;Joins"/>
+                    <rdf:Description rdf:about="&mission;PerformingElement"/>
+                    <rdf:Description rdf:about="&mission;PresentingElement"/>
+                    <rdf:Description rdf:about="&mission;SpecifiedElement"/>
+                    <rdf:Description rdf:about="&mission;Transfers"/>
+                    <rdf:Description rdf:about="&mission;TraversingElement"/>
+                    <rdf:Description rdf:about="&project;AssignedElement"/>
+                    <rdf:Description rdf:about="&project;Authority"/>
+                    <rdf:Description rdf:about="&project;Concern"/>
+                    <rdf:Description rdf:about="&project;Deliverable"/>
+                    <rdf:Description rdf:about="&project;DevelopedElement"/>
+                    <rdf:Description rdf:about="&project;HasAssignment"/>
+                    <rdf:Description rdf:about="&project;Involves"/>
+                    <rdf:Description rdf:about="&project;RealizedElement"/>
+                    <rdf:Description rdf:about="&project;SuppliedElement"/>
+                    <rdf:Description rdf:about="&project;Supplies"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:members>
+    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
@@ -378,61 +433,6 @@
             <rdf:Description rdf:about="&project;Role"/>
             <rdf:Description rdf:about="&project;Stakeholder"/>
             <rdf:Description rdf:about="&project;WorkPackage"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&annotation-backbone;Thing"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#Thing"/>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&analysis-backbone;Aspect"/>
-                    <rdf:Description rdf:about="&analysis-backbone;Entity"/>
-                    <rdf:Description rdf:about="&analysis-backbone;ReifiedObjectProperty"/>
-                    <rdf:Description rdf:about="&analysis-backbone;Thing"/>
-                    <rdf:Description rdf:about="&base-backbone;Aspect"/>
-                    <rdf:Description rdf:about="&base-backbone;Entity"/>
-                    <rdf:Description rdf:about="&base-backbone;ReifiedObjectProperty"/>
-                    <rdf:Description rdf:about="&base-backbone;Thing"/>
-                    <rdf:Description rdf:about="&mission-backbone;Aspect"/>
-                    <rdf:Description rdf:about="&mission-backbone;Entity"/>
-                    <rdf:Description rdf:about="&mission-backbone;ReifiedObjectProperty"/>
-                    <rdf:Description rdf:about="&mission-backbone;Thing"/>
-                    <rdf:Description rdf:about="&project-backbone;Aspect"/>
-                    <rdf:Description rdf:about="&project-backbone;Entity"/>
-                    <rdf:Description rdf:about="&project-backbone;ReifiedObjectProperty"/>
-                    <rdf:Description rdf:about="&project-backbone;Thing"/>
-                    <rdf:Description rdf:about="&analysis;AnalyzedElement"/>
-                    <rdf:Description rdf:about="&analysis;Characterization"/>
-                    <rdf:Description rdf:about="&analysis;CharacterizedElement"/>
-                    <rdf:Description rdf:about="&analysis;Characterizes"/>
-                    <rdf:Description rdf:about="&analysis;Explains"/>
-                    <rdf:Description rdf:about="&analysis;MeasuredElement"/>
-                    <rdf:Description rdf:about="&base;AggregatedElement"/>
-                    <rdf:Description rdf:about="&base;ContainedElement"/>
-                    <rdf:Description rdf:about="&base;Container"/>
-                    <rdf:Description rdf:about="&base;IdentifiedElement"/>
-                    <rdf:Description rdf:about="&base;Package"/>
-                    <rdf:Description rdf:about="&mission;Involves"/>
-                    <rdf:Description rdf:about="&mission;Joins"/>
-                    <rdf:Description rdf:about="&mission;PerformingElement"/>
-                    <rdf:Description rdf:about="&mission;PresentingElement"/>
-                    <rdf:Description rdf:about="&mission;SpecifiedElement"/>
-                    <rdf:Description rdf:about="&mission;Transfers"/>
-                    <rdf:Description rdf:about="&mission;TraversingElement"/>
-                    <rdf:Description rdf:about="&project;AssignedElement"/>
-                    <rdf:Description rdf:about="&project;Authority"/>
-                    <rdf:Description rdf:about="&project;Concern"/>
-                    <rdf:Description rdf:about="&project;Deliverable"/>
-                    <rdf:Description rdf:about="&project;DevelopedElement"/>
-                    <rdf:Description rdf:about="&project;HasAssignment"/>
-                    <rdf:Description rdf:about="&project;Involves"/>
-                    <rdf:Description rdf:about="&project;RealizedElement"/>
-                    <rdf:Description rdf:about="&project;SuppliedElement"/>
-                    <rdf:Description rdf:about="&project;Supplies"/>
-                </owl:unionOf>
-            </owl:Class>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
