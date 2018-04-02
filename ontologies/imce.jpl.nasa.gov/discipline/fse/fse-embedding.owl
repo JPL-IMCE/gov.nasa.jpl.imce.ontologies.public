@@ -148,6 +148,30 @@
     
 
 
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasUsesCavitySource -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasUsesCavitySource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasUsesCavityTarget -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasUsesCavityTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#usesCavity -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#usesCavity">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+    </rdf:Description>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -262,6 +286,14 @@
 
     <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#SwitchedInterface">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#NamedElement"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#UsesCavity -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#UsesCavity">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependency"/>
     </rdf:Description>
     
 
