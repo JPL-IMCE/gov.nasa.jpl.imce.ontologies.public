@@ -229,14 +229,14 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fault-management/fault-man
 		source = behavior:ElementBehavior
 		target = PerformanceConstraint }
 
-	rule R24548 infers causes
+	rule R59626 infers violates
 	if behavior:ElementBehavior
 	&& analysis:isExplainedBy
-	&& CauseExplanation
+	&& ViolationExplanation
 	&& analysis:analyzes
-	&& behavior:ElementBehavior
+	&& PerformanceConstraint
 
-	rule R61690 infers impairs
+	rule R84876 infers impairs
 	if behavior:ElementBehavior
 	&& analysis:isExplainedBy
 	&& ViolationExplanation
@@ -245,12 +245,12 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fault-management/fault-man
 	&& analysis:characterizes
 	&& mission:Function
 
-	rule R70165 infers violates
+	rule R88307 infers causes
 	if behavior:ElementBehavior
 	&& analysis:isExplainedBy
-	&& ViolationExplanation
+	&& CauseExplanation
 	&& analysis:analyzes
-	&& PerformanceConstraint
+	&& behavior:ElementBehavior
 
 	someEntities CauseExplanation . analysis:analyzes in ModeContext
 
