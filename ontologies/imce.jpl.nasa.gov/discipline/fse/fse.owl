@@ -2291,6 +2291,7 @@ Interface EMI Characteristics &amp; Redundancy
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Subsystem -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Subsystem">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ReferenceDesignatedElement"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Component"/>
         <rdfs:subClassOf>
@@ -2299,7 +2300,7 @@ Interface EMI Characteristics &amp; Redundancy
                 <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Assembly"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Assembly</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subsystem</rdfs:label>
     </owl:Class>
     
 

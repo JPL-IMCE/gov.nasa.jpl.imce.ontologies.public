@@ -34,9 +34,6 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""Reference Designated Element"""
 	aspect ReferenceDesignatedElement
 
-	@rdfs:label="""Assembly"""
-	aspect Subsystem
-
 	@rdfs:label="""Switched Interface"""
 	aspect SwitchedInterface
 
@@ -301,6 +298,9 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""Spacewire Transceiver"""
 	concept SpacewireTransceiver
 
+	@rdfs:label="""Subsystem"""
+	concept Subsystem
+
 	@rdfs:label="""Switched 10A Interface Circuit"""
 	concept Switched10AInterfaceCircuit
 
@@ -560,6 +560,8 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	SingleEndedDiscreteMeasurementChannel extendsConcept DiscreteVoltageMeasurementInterfaceCircuit
 
 	SpacewireTransceiver extendsConcept DigitalInterfaceCircuit
+
+	Subsystem extendsConcept mission:Component
 
 	Switched10AInterfaceCircuit extendsConcept Fused20AInterfaceCircuit
 
