@@ -168,7 +168,7 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:base="http://imce.jpl.nasa.gov/foundation/base/base#">
     <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse-bundle">
-        <owl:versionInfo rdf:datatype="&xsd;string">2018-04-03 15:09:09 -0700</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="&xsd;string">2018-04-13 09:02:01 -0700</owl:versionInfo>
         <rdfs:comment rdf:datatype="&xsd;string">created by close-tbox-bundle</rdfs:comment>
         <owl:imports rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse"/>
         <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project-bundle"/>
@@ -271,6 +271,34 @@
     
 
 
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#Involves1 -->
+
+    <rdf:Description rdf:about="&mission;Involves1">
+        <owl:disjointWith rdf:resource="&mission;Involves2"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#Involves2 -->
+
+    <rdf:Description rdf:about="&mission;Involves2"/>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#Joins1 -->
+
+    <rdf:Description rdf:about="&mission;Joins1">
+        <owl:disjointWith rdf:resource="&mission;Joins2"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#Joins2 -->
+
+    <rdf:Description rdf:about="&mission;Joins2"/>
+    
+
+
     <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#MaterialItem -->
 
     <rdf:Description rdf:about="&mission;MaterialItem">
@@ -285,6 +313,20 @@
     
 
 
+    <!-- http://imce.jpl.nasa.gov/foundation/project/project#Involves1 -->
+
+    <rdf:Description rdf:about="&project;Involves1">
+        <owl:disjointWith rdf:resource="&project;Involves2"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/project/project#Involves2 -->
+
+    <rdf:Description rdf:about="&project;Involves2"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -296,62 +338,32 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&fse;Variable28VInterfaceCircuit"/>
-            <rdf:Description rdf:about="&fse;Variable3_3VInterfaceCircuit"/>
-            <rdf:Description rdf:about="&fse;Variable70VInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;Digital3_WireReceiverInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;DigitalDriverInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;LVDSRadioTZRadioTransceiverInterface"/>
+            <rdf:Description rdf:about="&fse;LVDSReceiverInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;LVDSSpacewireTransceiver"/>
+            <rdf:Description rdf:about="&fse;MIL-STD-1553InterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;RS422RadioTZRadioTransceiverInterface"/>
+            <rdf:Description rdf:about="&fse;RS422ReceiverInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;RadioTZMTIFTransceiverInterface"/>
+            <rdf:Description rdf:about="&fse;RemoteSerialBusClientInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;RemoteSerialBusHostInterfaceCircuit"/>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fse;LVDSUARTInterfaceCircuit"/>
+                    <rdf:Description rdf:about="&fse;RS422UARTInterfaceCircuit"/>
+                    <rdf:Description rdf:about="&fse;UART2SignalFlowControlInterfaceCircuit"/>
+                </owl:unionOf>
+            </owl:Class>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&analysis;CostEstimate"/>
-            <rdf:Description rdf:about="&analysis;DrivingRequirementsExplanation"/>
-            <rdf:Description rdf:about="&analysis;KeyRequirementsExplanation"/>
-            <rdf:Description rdf:about="&analysis;TradeStudy"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&fse;AnalogVoltageChannel"/>
-            <rdf:Description rdf:about="&fse;DifferentialDiscreteMeasurementChannel"/>
-            <rdf:Description rdf:about="&fse;Discrete3_3VMeasurementInterfaceCircuit"/>
-            <rdf:Description rdf:about="&fse;Discrete5VMeasurementInterfaceCircuit"/>
-            <rdf:Description rdf:about="&fse;SingleEndedDiscreteMeasurementChannel"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&fse;JoinsLeft"/>
-            <rdf:Description rdf:about="&fse;JoinsRight"/>
-            <rdf:Description rdf:about="&fse;UsesCavity"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&fse;Assembly"/>
-            <rdf:Description rdf:about="&fse;FieldJoint"/>
-            <rdf:Description rdf:about="&fse;Harness"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&fse-backbone;ReifiedStructuredDataProperty"/>
-            <rdf:Description rdf:about="&fse-backbone;StructuredDatatype"/>
-            <rdf:Description rdf:about="&analysis-backbone;ReifiedStructuredDataProperty"/>
-            <rdf:Description rdf:about="&analysis-backbone;StructuredDatatype"/>
-            <rdf:Description rdf:about="&mission-backbone;ReifiedStructuredDataProperty"/>
-            <rdf:Description rdf:about="&mission-backbone;StructuredDatatype"/>
-            <rdf:Description rdf:about="&project-backbone;ReifiedStructuredDataProperty"/>
-            <rdf:Description rdf:about="&project-backbone;StructuredDatatype"/>
             <rdf:Description rdf:about="&fse;AD590Channel"/>
             <rdf:Description rdf:about="&fse;AnalogPRTChannel"/>
             <rdf:Description rdf:about="&fse;ConductorEnd"/>
-            <rdf:Description rdf:about="&fse;ConnectableComponent"/>
-            <rdf:Description rdf:about="&fse;Connector"/>
             <rdf:Description rdf:about="&fse;CurrentMeasurementInterfaceCircuit"/>
             <rdf:Description rdf:about="&fse;DiscreteVoltageInterfaceCircuit"/>
             <rdf:Description rdf:about="&fse;Fixed10VInterfaceCircuit"/>
@@ -362,14 +374,11 @@
             <rdf:Description rdf:about="&fse;Fixed4VInterfaceCircuit"/>
             <rdf:Description rdf:about="&fse;Fixed5VInterfaceCircuit"/>
             <rdf:Description rdf:about="&fse;Fixed70VInterfaceCircuit"/>
-            <rdf:Description rdf:about="&fse;Function"/>
             <rdf:Description rdf:about="&fse;FunctionDescription"/>
-            <rdf:Description rdf:about="&fse;Leg"/>
             <rdf:Description rdf:about="&fse;Multicore"/>
             <rdf:Description rdf:about="&fse;PoweredInterfaceCircuit"/>
             <rdf:Description rdf:about="&fse;ResistiveInterfaceCircuit"/>
             <rdf:Description rdf:about="&fse;Shield"/>
-            <rdf:Description rdf:about="&fse;Subsystem"/>
             <rdf:Description rdf:about="&fse;Switched10AInterfaceCircuit"/>
             <rdf:Description rdf:about="&fse;Switched1ADriverInterfaceCircuit"/>
             <rdf:Description rdf:about="&fse;Switched5AInterfaceCircuit"/>
@@ -412,10 +421,11 @@
             <rdf:Description rdf:about="&mission;InterchangePoint"/>
             <rdf:Description rdf:about="&mission;InterchangesThrough"/>
             <rdf:Description rdf:about="&mission;Invokes"/>
-            <rdf:Description rdf:about="&mission;Involves1"/>
-            <rdf:Description rdf:about="&mission;Involves2"/>
+            <rdf:Description rdf:about="&mission;Involves"/>
             <rdf:Description rdf:about="&mission;IsTraversedBy"/>
             <rdf:Description rdf:about="&mission;Item"/>
+            <rdf:Description rdf:about="&mission;Joins"/>
+            <rdf:Description rdf:about="&mission;Junction"/>
             <rdf:Description rdf:about="&mission;Mission"/>
             <rdf:Description rdf:about="&mission;Objective"/>
             <rdf:Description rdf:about="&mission;Performs"/>
@@ -448,8 +458,7 @@
             <rdf:Description rdf:about="&project;InterchangePoint"/>
             <rdf:Description rdf:about="&project;InterchangesThrough"/>
             <rdf:Description rdf:about="&project;Invokes"/>
-            <rdf:Description rdf:about="&project;Involves1"/>
-            <rdf:Description rdf:about="&project;Involves2"/>
+            <rdf:Description rdf:about="&project;Involves"/>
             <rdf:Description rdf:about="&project;Manifests"/>
             <rdf:Description rdf:about="&project;Organization"/>
             <rdf:Description rdf:about="&project;Person"/>
@@ -467,13 +476,6 @@
             <rdf:Description rdf:about="&project;Role"/>
             <rdf:Description rdf:about="&project;Stakeholder"/>
             <rdf:Description rdf:about="&project;WorkPackage"/>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&fse-backbone;ReifiedObjectProperty"/>
-                    <rdf:Description rdf:about="&mission;Joins1"/>
-                    <rdf:Description rdf:about="&mission;Joins2"/>
-                </owl:unionOf>
-            </owl:Class>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&fse;DigitalInterfaceCircuit"/>
@@ -498,33 +500,62 @@
                     <rdf:Description rdf:about="&fse;Switched2ADriverInterfaceCircuit"/>
                 </owl:unionOf>
             </owl:Class>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fse;ReferenceDesignatedElement"/>
+                    <rdf:Description rdf:about="&mission;Component"/>
+                </owl:unionOf>
+            </owl:Class>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#ReifiedStructuredDataProperty"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#StructuredDatatype"/>
+            <rdf:Description rdf:about="&analysis;CostEstimate"/>
+            <rdf:Description rdf:about="&analysis;DrivingRequirementsExplanation"/>
+            <rdf:Description rdf:about="&analysis;KeyRequirementsExplanation"/>
+            <rdf:Description rdf:about="&analysis;TradeStudy"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&fse;Digital3_WireDriverInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;LVDSDriverInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;RS422DriverInterfaceCircuit"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&fse;Assembly"/>
+            <rdf:Description rdf:about="&fse;FieldJoint"/>
+            <rdf:Description rdf:about="&fse;Harness"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&fse;Variable28VInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;Variable3_3VInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;Variable70VInterfaceCircuit"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&fse;ConnectableComponent"/>
+            <rdf:Description rdf:about="&fse;Connector"/>
+            <rdf:Description rdf:about="&fse;Subsystem"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&fse;Function"/>
+            <rdf:Description rdf:about="&fse;Leg"/>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&fse-backbone;Aspect"/>
-                    <rdf:Description rdf:about="&fse-backbone;Entity"/>
-                    <rdf:Description rdf:about="&fse-backbone;Thing"/>
-                    <rdf:Description rdf:about="&analysis-backbone;Aspect"/>
-                    <rdf:Description rdf:about="&analysis-backbone;Entity"/>
-                    <rdf:Description rdf:about="&analysis-backbone;ReifiedObjectProperty"/>
-                    <rdf:Description rdf:about="&analysis-backbone;Thing"/>
-                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#Aspect"/>
-                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#Entity"/>
-                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#ReifiedObjectProperty"/>
-                    <rdf:Description rdf:about="&mission-backbone;Aspect"/>
-                    <rdf:Description rdf:about="&mission-backbone;Entity"/>
-                    <rdf:Description rdf:about="&mission-backbone;ReifiedObjectProperty"/>
-                    <rdf:Description rdf:about="&mission-backbone;Thing"/>
-                    <rdf:Description rdf:about="&project-backbone;Aspect"/>
-                    <rdf:Description rdf:about="&project-backbone;Entity"/>
-                    <rdf:Description rdf:about="&project-backbone;ReifiedObjectProperty"/>
-                    <rdf:Description rdf:about="&project-backbone;Thing"/>
                     <rdf:Description rdf:about="&fse;Conductor"/>
                     <rdf:Description rdf:about="&fse;CurrentInterface"/>
                     <rdf:Description rdf:about="&fse;DiscreteInterface"/>
@@ -541,7 +572,6 @@
                     <rdf:Description rdf:about="&fse;MeasurementInterfaceCircuit"/>
                     <rdf:Description rdf:about="&fse;MulticoreConstituent"/>
                     <rdf:Description rdf:about="&fse;PulsedInterface"/>
-                    <rdf:Description rdf:about="&fse;ReferenceDesignatedElement"/>
                     <rdf:Description rdf:about="&fse;Switched28VInterfaceCircuit"/>
                     <rdf:Description rdf:about="&fse;SwitchedInterface"/>
                     <rdf:Description rdf:about="&fse;SwitchedVoltageInterfaceCircuit"/>
@@ -559,11 +589,7 @@
                     <rdf:Description rdf:about="&base;Container"/>
                     <rdf:Description rdf:about="&base;IdentifiedElement"/>
                     <rdf:Description rdf:about="&base;Package"/>
-                    <rdf:Description rdf:about="&mission;Component"/>
                     <rdf:Description rdf:about="&mission;Interface"/>
-                    <rdf:Description rdf:about="&mission;Involves"/>
-                    <rdf:Description rdf:about="&mission;Joins"/>
-                    <rdf:Description rdf:about="&mission;Junction"/>
                     <rdf:Description rdf:about="&mission;PerformingElement"/>
                     <rdf:Description rdf:about="&mission;PresentingElement"/>
                     <rdf:Description rdf:about="&mission;SpecifiedElement"/>
@@ -575,7 +601,6 @@
                     <rdf:Description rdf:about="&project;Deliverable"/>
                     <rdf:Description rdf:about="&project;DevelopedElement"/>
                     <rdf:Description rdf:about="&project;HasAssignment"/>
-                    <rdf:Description rdf:about="&project;Involves"/>
                     <rdf:Description rdf:about="&project;RealizedElement"/>
                     <rdf:Description rdf:about="&project;SuppliedElement"/>
                     <rdf:Description rdf:about="&project;Supplies"/>
@@ -586,37 +611,9 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#Aspect"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#Entity"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#ReifiedObjectProperty"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#ReifiedStructuredDataProperty"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#StructuredDatatype"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="&fse;MIL-STD-1553DirectInterfaceCircuit"/>
             <rdf:Description rdf:about="&fse;MIL-STD-1553TerminationInterfaceCircuit"/>
             <rdf:Description rdf:about="&fse;MIL-STD-1553TransformerInterfaceCircuit"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#Aspect"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#Entity"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#ReifiedObjectProperty"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#ReifiedStructuredDataProperty"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#StructuredDatatype"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&fse;Digital3_WireDriverInterfaceCircuit"/>
-            <rdf:Description rdf:about="&fse;LVDSDriverInterfaceCircuit"/>
-            <rdf:Description rdf:about="&fse;RS422DriverInterfaceCircuit"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -631,32 +628,11 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&fse;Digital3_WireReceiverInterfaceCircuit"/>
-            <rdf:Description rdf:about="&fse;DigitalDriverInterfaceCircuit"/>
-            <rdf:Description rdf:about="&fse;LVDSRadioTZRadioTransceiverInterface"/>
-            <rdf:Description rdf:about="&fse;LVDSReceiverInterfaceCircuit"/>
-            <rdf:Description rdf:about="&fse;LVDSSpacewireTransceiver"/>
-            <rdf:Description rdf:about="&fse;MIL-STD-1553InterfaceCircuit"/>
-            <rdf:Description rdf:about="&fse;RS422RadioTZRadioTransceiverInterface"/>
-            <rdf:Description rdf:about="&fse;RS422ReceiverInterfaceCircuit"/>
-            <rdf:Description rdf:about="&fse;RadioTZMTIFTransceiverInterface"/>
-            <rdf:Description rdf:about="&fse;RemoteSerialBusClientInterfaceCircuit"/>
-            <rdf:Description rdf:about="&fse;RemoteSerialBusHostInterfaceCircuit"/>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&fse;LVDSUARTInterfaceCircuit"/>
-                    <rdf:Description rdf:about="&fse;RS422UARTInterfaceCircuit"/>
-                    <rdf:Description rdf:about="&fse;UART2SignalFlowControlInterfaceCircuit"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/annotation/annotation#Thing"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#Thing"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#Thing"/>
+            <rdf:Description rdf:about="&fse;AnalogVoltageChannel"/>
+            <rdf:Description rdf:about="&fse;DifferentialDiscreteMeasurementChannel"/>
+            <rdf:Description rdf:about="&fse;Discrete3_3VMeasurementInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;Discrete5VMeasurementInterfaceCircuit"/>
+            <rdf:Description rdf:about="&fse;SingleEndedDiscreteMeasurementChannel"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
