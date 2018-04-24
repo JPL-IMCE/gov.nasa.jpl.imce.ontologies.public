@@ -115,6 +115,9 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""Circuit"""
 	concept EndCircuit
 
+	@rdfs:label="""Engineering Change Request"""
+	concept EngineeringChangeRequest
+
 	@rdfs:label="""Field Joint"""
 	concept FieldJoint
 
@@ -418,6 +421,8 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	DiscreteVoltageMeasurementInterfaceCircuit extendsConcept VoltageMeasurementInterfaceCircuit
 
 	EndCircuit extendsConcept mission:Interface
+
+	EngineeringChangeRequest extendsConcept analysis:Analysis
 
 	FieldJoint extendsConcept ConnectableComponent
 
@@ -1061,7 +1066,7 @@ Part Number"""
 	}
 
 	@rdfs:label="""has Fd Property"""
-	entityScalarDataProperty + hasFdProperty {
+	entityScalarDataProperty hasFdProperty {
 		domain FunctionDescription
 		range XMLSchema:string
 	}
@@ -1150,6 +1155,12 @@ Interface EMI Characteristics & Redundancy
 		range XMLSchema:string
 	}
 
+	@rdfs:label="""has function number"""
+	entityScalarDataProperty + hasFunctionNumber {
+		domain Function
+		range XMLSchema:string
+	}
+
 	@rdfs:label="""has reference designator"""
 	entityScalarDataProperty + hasReferenceDesignator {
 		domain ReferenceDesignatedElement
@@ -1169,7 +1180,7 @@ Interface EMI Characteristics & Redundancy
 	}
 
 	@rdfs:label="""has subsystem reference designator"""
-	entityScalarDataProperty hasSubsystemReferenceDesignator {
+	entityScalarDataProperty + hasSubsystemReferenceDesignator {
 		domain Subsystem
 		range XMLSchema:string
 	}
@@ -1206,7 +1217,13 @@ Interface EMI Characteristics & Redundancy
 
 	hasAssemblyAcronym subDataPropertyOf base:hasIdentifier
 
+	hasFunctionNumber subDataPropertyOf base:hasIdentifier
+
+	hasReferenceDesignator subDataPropertyOf base:hasIdentifier
+
 	hasSubsystemAcronym subDataPropertyOf base:hasIdentifier
+
+	hasSubsystemNumber subDataPropertyOf base:hasIdentifier
 
 	hasFdAssembly1 subDataPropertyOf hasFdProperty
 

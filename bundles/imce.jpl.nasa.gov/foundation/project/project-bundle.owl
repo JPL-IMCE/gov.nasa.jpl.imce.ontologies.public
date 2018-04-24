@@ -232,7 +232,7 @@
      xmlns:analysis-embedding="http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#"
      xmlns:base="http://imce.jpl.nasa.gov/foundation/base/base#">
     <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/foundation/project/project-bundle">
-        <owl:versionInfo rdf:datatype="&xsd;string">2018-04-13 09:01:58 -0700</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="&xsd;string">2018-04-20 13:31:38 -0700</owl:versionInfo>
         <rdfs:comment rdf:datatype="&xsd;string">created by close-tbox-bundle</rdfs:comment>
         <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis"/>
         <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base"/>
@@ -250,6 +250,20 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#Explains -->
+
+    <rdf:Description rdf:about="&analysis;Explains">
+        <owl:disjointWith rdf:resource="&analysis;Limits"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#Limits -->
+
+    <rdf:Description rdf:about="&analysis;Limits"/>
     
 
 
@@ -295,6 +309,20 @@
     
 
 
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#TransfersIn -->
+
+    <rdf:Description rdf:about="&mission;TransfersIn">
+        <owl:disjointWith rdf:resource="&mission;TransfersOut"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#TransfersOut -->
+
+    <rdf:Description rdf:about="&mission;TransfersOut"/>
+    
+
+
     <!-- http://imce.jpl.nasa.gov/foundation/project/project#Involves1 -->
 
     <rdf:Description rdf:about="&project;Involves1">
@@ -320,6 +348,15 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&analysis;Assumption"/>
+            <rdf:Description rdf:about="&analysis;Explanation"/>
+            <rdf:Description rdf:about="&analysis;Quantity"/>
+            <rdf:Description rdf:about="&project;DevelopmentState"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="&analysis;CostEstimate"/>
             <rdf:Description rdf:about="&analysis;DrivingRequirementsExplanation"/>
             <rdf:Description rdf:about="&analysis;KeyRequirementsExplanation"/>
@@ -330,24 +367,20 @@
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="&analysis;Analyzes"/>
-            <rdf:Description rdf:about="&analysis;Assumption"/>
-            <rdf:Description rdf:about="&analysis;ConstrainedElement"/>
+            <rdf:Description rdf:about="&analysis;Characterizes"/>
             <rdf:Description rdf:about="&analysis;Constrains"/>
             <rdf:Description rdf:about="&analysis;Constraint"/>
             <rdf:Description rdf:about="&analysis;Criterion"/>
-            <rdf:Description rdf:about="&analysis;Explanation"/>
             <rdf:Description rdf:about="&analysis;HasCriterion"/>
             <rdf:Description rdf:about="&analysis;HasMetric"/>
             <rdf:Description rdf:about="&analysis;HasValue"/>
-            <rdf:Description rdf:about="&analysis;Limits"/>
             <rdf:Description rdf:about="&analysis;Measures"/>
             <rdf:Description rdf:about="&analysis;Metric"/>
             <rdf:Description rdf:about="&analysis;Quantifies"/>
-            <rdf:Description rdf:about="&analysis;Quantity"/>
             <rdf:Description rdf:about="&analysis;QuantityValue"/>
-            <rdf:Description rdf:about="&analysis;Validates"/>
             <rdf:Description rdf:about="&base;Aggregates"/>
             <rdf:Description rdf:about="&base;Contains"/>
+            <rdf:Description rdf:about="&base;Package"/>
             <rdf:Description rdf:about="&mission;Component"/>
             <rdf:Description rdf:about="&mission;Deploys"/>
             <rdf:Description rdf:about="&mission;Emits"/>
@@ -369,7 +402,6 @@
             <rdf:Description rdf:about="&mission;Joins"/>
             <rdf:Description rdf:about="&mission;Junction"/>
             <rdf:Description rdf:about="&mission;Mission"/>
-            <rdf:Description rdf:about="&mission;Objective"/>
             <rdf:Description rdf:about="&mission;Performs"/>
             <rdf:Description rdf:about="&mission;Presents"/>
             <rdf:Description rdf:about="&mission;Produces"/>
@@ -380,19 +412,17 @@
             <rdf:Description rdf:about="&mission;Requirement"/>
             <rdf:Description rdf:about="&mission;Sends"/>
             <rdf:Description rdf:about="&mission;Specifies"/>
-            <rdf:Description rdf:about="&mission;TransfersIn"/>
-            <rdf:Description rdf:about="&mission;TransfersOut"/>
-            <rdf:Description rdf:about="&project;Approves"/>
+            <rdf:Description rdf:about="&mission;Transfers"/>
             <rdf:Description rdf:about="&project;Authorizes"/>
             <rdf:Description rdf:about="&project;BelongsTo"/>
             <rdf:Description rdf:about="&project;Binds"/>
-            <rdf:Description rdf:about="&project;Concurs"/>
+            <rdf:Description rdf:about="&project;Concern"/>
             <rdf:Description rdf:about="&project;DelegatesTo"/>
             <rdf:Description rdf:about="&project;Delivers"/>
             <rdf:Description rdf:about="&project;Describes"/>
-            <rdf:Description rdf:about="&project;DevelopmentState"/>
             <rdf:Description rdf:about="&project;Executes"/>
             <rdf:Description rdf:about="&project;Facility"/>
+            <rdf:Description rdf:about="&project;HasAssignment"/>
             <rdf:Description rdf:about="&project;HasParticipant"/>
             <rdf:Description rdf:about="&project;HasResponsibilityFor"/>
             <rdf:Description rdf:about="&project;HasRole"/>
@@ -405,18 +435,36 @@
             <rdf:Description rdf:about="&project;Organization"/>
             <rdf:Description rdf:about="&project;Person"/>
             <rdf:Description rdf:about="&project;Policy"/>
-            <rdf:Description rdf:about="&project;Prepares"/>
             <rdf:Description rdf:about="&project;Process"/>
-            <rdf:Description rdf:about="&project;Produces"/>
             <rdf:Description rdf:about="&project;Product"/>
-            <rdf:Description rdf:about="&project;Program"/>
-            <rdf:Description rdf:about="&project;Project"/>
             <rdf:Description rdf:about="&project;Realizes"/>
             <rdf:Description rdf:about="&project;Receives"/>
             <rdf:Description rdf:about="&project;ReliesOn"/>
             <rdf:Description rdf:about="&project;Represents"/>
             <rdf:Description rdf:about="&project;Role"/>
             <rdf:Description rdf:about="&project;Stakeholder"/>
+            <rdf:Description rdf:about="&project;Supplies"/>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&analysis;Characterization"/>
+                    <rdf:Description rdf:about="&project;Deliverable"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&project;Approves"/>
+            <rdf:Description rdf:about="&project;Concurs"/>
+            <rdf:Description rdf:about="&project;Prepares"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&project;Program"/>
+            <rdf:Description rdf:about="&project;Project"/>
             <rdf:Description rdf:about="&project;WorkPackage"/>
         </owl:members>
     </rdf:Description>
