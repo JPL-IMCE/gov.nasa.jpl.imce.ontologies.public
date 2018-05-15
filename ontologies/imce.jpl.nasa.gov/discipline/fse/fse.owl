@@ -1397,6 +1397,44 @@ Interface EMI Characteristics &amp; Redundancy
     
 
 
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#CommandEndCircuit -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#CommandEndCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#EndCircuit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#CommandFunction -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#CommandFunction">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Function"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#joins"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#CommandEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#CommandInEndCircuit -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#CommandInEndCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#CommandEndCircuit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#CommandOutEndCircuit -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#CommandOutEndCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#CommandEndCircuit"/>
+    </owl:Class>
+    
+
+
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Conditioned5VInterfaceCircuit -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Conditioned5VInterfaceCircuit">
@@ -1970,6 +2008,26 @@ Interface EMI Characteristics &amp; Redundancy
     
 
 
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#LeftPlugFunction -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#LeftPlugFunction">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PlugFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsLeft"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PlugOutEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsRight"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PlugInEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Leg -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Leg">
@@ -2022,6 +2080,36 @@ Interface EMI Characteristics &amp; Redundancy
     
 
 
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementEndCircuit -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementEndCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#EndCircuit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementFunction -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementFunction">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Function"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#joins"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementInEndCircuit -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementInEndCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementEndCircuit"/>
+    </owl:Class>
+    
+
+
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementInterface -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementInterface">
@@ -2039,6 +2127,14 @@ Interface EMI Characteristics &amp; Redundancy
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#EndCircuit"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementInterface"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Measurement Interface Circuit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementOutEndCircuit -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementOutEndCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementEndCircuit"/>
     </owl:Class>
     
 
@@ -2071,6 +2167,44 @@ Interface EMI Characteristics &amp; Redundancy
     
 
 
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#MultiplexedDataEndCircuit -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MultiplexedDataEndCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#EndCircuit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#MultiplexedDataFunction -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MultiplexedDataFunction">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Function"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#joins"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MultiplexedDataEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#MultiplexedDataInEndCircuit -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MultiplexedDataInEndCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MultiplexedDataEndCircuit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#MultiplexedDataOutEndCircuit -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#MultiplexedDataOutEndCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MultiplexedDataEndCircuit"/>
+    </owl:Class>
+    
+
+
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#PRT4-WireInterfaceCircuit -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#PRT4-WireInterfaceCircuit">
@@ -2094,6 +2228,88 @@ Interface EMI Characteristics &amp; Redundancy
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Plug">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Connector"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Plug</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#PlugEndCircuit -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#PlugEndCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#EndCircuit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#PlugFunction -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#PlugFunction">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Function"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#joins"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PlugEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasDirection"/>
+                <owl:hasValue>bidirectional</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#PlugInEndCircuit -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#PlugInEndCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PlugEndCircuit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#PlugOutEndCircuit -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#PlugOutEndCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PlugEndCircuit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#PowerEndCircuit -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerEndCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#EndCircuit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#PowerFunction -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerFunction">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Function"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#joins"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#PowerInEndCircuit -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerInEndCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerEndCircuit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#PowerOutEndCircuit -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerOutEndCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerEndCircuit"/>
     </owl:Class>
     
 
@@ -2213,6 +2429,44 @@ Interface EMI Characteristics &amp; Redundancy
     
 
 
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#RadioFrequencyEndCircuit -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#RadioFrequencyEndCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#EndCircuit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#RadioFrequencyInEndCircuit -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#RadioFrequencyInEndCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#RadioFrequencyEndCircuit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#RadioFrequencyOutEndCircuit -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#RadioFrequencyOutEndCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#RadioFrequencyEndCircuit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#RadioFrequencySignalFunction -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#RadioFrequencySignalFunction">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Function"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#joins"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#RadioFrequencyEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#RadioTZMTIFTransceiverInterface -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#RadioTZMTIFTransceiverInterface">
@@ -2268,6 +2522,26 @@ Interface EMI Characteristics &amp; Redundancy
     
 
 
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#RightPlugFunction -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#RightPlugFunction">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PlugFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsLeft"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PlugInEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsRight"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PlugOutEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Shell -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Shell">
@@ -2304,6 +2578,266 @@ Interface EMI Characteristics &amp; Redundancy
     
 
 
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#SourceLeftCommandFunction -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#SourceLeftCommandFunction">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#CommandFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsLeft"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#CommandOutEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsRight"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#CommandInEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasDirection"/>
+                <owl:hasValue>left-to-right</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#SourceLeftMeasurementFunction -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#SourceLeftMeasurementFunction">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsLeft"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementOutEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsRight"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementInEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasDirection"/>
+                <owl:hasValue>left-to-right</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#SourceLeftMultiplexedDataFunction -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#SourceLeftMultiplexedDataFunction">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MultiplexedDataFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsLeft"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MultiplexedDataOutEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsRight"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MultiplexedDataInEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasDirection"/>
+                <owl:hasValue>left-to-right</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#SourceLeftPowerFunction -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#SourceLeftPowerFunction">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsLeft"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerOutEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsRight"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerInEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasDirection"/>
+                <owl:hasValue>right-to-left</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#SourceLeftRadioFrequencySignalFunction -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#SourceLeftRadioFrequencySignalFunction">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#RadioFrequencySignalFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsLeft"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#RadioFrequencyOutEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsRight"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#RadioFrequencyInEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasDirection"/>
+                <owl:hasValue>left-to-right</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#SourceRightCommandFunction -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#SourceRightCommandFunction">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#CommandFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsLeft"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#CommandInEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsRight"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#CommandOutEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasDirection"/>
+                <owl:hasValue>right-to-left</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#SourceRightMeasurementFunction -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#SourceRightMeasurementFunction">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsLeft"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementInEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsRight"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MeasurementOutEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasDirection"/>
+                <owl:hasValue>right-to-left</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#SourceRightMultiplexedDataFunction -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#SourceRightMultiplexedDataFunction">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MultiplexedDataFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsLeft"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MultiplexedDataInEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsRight"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#MultiplexedDataOutEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasDirection"/>
+                <owl:hasValue>right-to-left</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#SourceRightPowerFunction -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#SourceRightPowerFunction">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsLeft"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerInEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsRight"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerOutEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasDirection"/>
+                <owl:hasValue>right-to-left</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#SourceRightRadioFrequencySignalFunction -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#SourceRightRadioFrequencySignalFunction">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#RadioFrequencySignalFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsLeft"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#RadioFrequencyInEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsRight"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#RadioFrequencyOutEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasDirection"/>
+                <owl:hasValue>right-to-left</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#SpacewireTransceiver -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#SpacewireTransceiver">
@@ -2326,6 +2860,30 @@ Interface EMI Characteristics &amp; Redundancy
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subsystem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Switch10A -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Switch10A">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#SwitchedPowerOutEndCircuit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Switch2A -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Switch2A">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#SwitchedPowerOutEndCircuit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Switch5A -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Switch5A">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#SwitchedPowerOutEndCircuit"/>
     </owl:Class>
     
 
@@ -2396,6 +2954,14 @@ Interface EMI Characteristics &amp; Redundancy
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Switched Interface</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#SwitchedPowerOutEndCircuit -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#SwitchedPowerOutEndCircuit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerOutEndCircuit"/>
     </owl:Class>
     
 
