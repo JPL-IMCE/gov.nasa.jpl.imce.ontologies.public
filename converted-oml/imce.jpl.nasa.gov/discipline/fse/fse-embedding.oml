@@ -15,22 +15,6 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse-embedding> {
 
 	extends <http://imce.jpl.nasa.gov/foundation/project/project-embedding>
 
-	fse:UsesCavity extendsRelationship owl2-mof2:BinaryDependency
-
-	fse:CurrentInterface extendsAspect UML:NamedElement
-
-	fse:DiscreteInterface extendsAspect UML:NamedElement
-
-	fse:FusedInterface extendsAspect UML:NamedElement
-
-	fse:MeasurementInterface extendsAspect UML:NamedElement
-
-	fse:PulsedInterface extendsAspect UML:NamedElement
-
-	fse:SwitchedInterface extendsAspect UML:NamedElement
-
-	fse:VariableInterface extendsAspect UML:NamedElement
-
-	fse:VoltageInterface extendsAspect UML:NamedElement
+	fse:PowerSwitchingElement extendsAspect owl2-mof2:BinaryDependencyEndType
 
 }

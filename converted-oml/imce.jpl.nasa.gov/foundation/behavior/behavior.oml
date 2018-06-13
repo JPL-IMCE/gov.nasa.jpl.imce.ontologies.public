@@ -459,28 +459,23 @@ When <property>constrain</property>ed by an <classname>ElementBehaviorConstraint
 		source = Interaction
 		target = AttributeGroup }
 
-	rule R16419 infers hasInteractionBehavior
+	rule R10697 infers hasElementBehavior
+	if ElementBehaviorOwner
+	&& hasElementBehaviorClass
+	&& AttributeAutomaton
+	&& hasRegion
+	&& AutomatonRegion
+	&& hasState
+	&& ElementBehaviorState
+
+	rule R26887 infers hasInteractionBehavior
 	if Interaction
 	&& hasInteractionBehaviorClass
 	&& InteractionBehaviorAutomaton
 	&& hasRegion
 	&& InteractionBehaviorRegion
 
-	rule R24959 infers joins
-	if Interaction
-	&& hasInteractionRole
-	&& InteractionRole
-	&& hasAttributeGroup
-	&& AttributeGroup
-
-	rule R28771 infers hasElementBehavior
-	if ElementBehaviorOwner
-	&& hasElementBehaviorClass
-	&& ElementBehaviorAutomaton
-	&& hasRegion
-	&& ElementBehaviorRegion
-
-	rule R32090 infers hasInteractionBehavior
+	rule R2833 infers hasInteractionBehavior
 	if Interaction
 	&& hasInteractionBehaviorClass
 	&& AttributeAutomaton
@@ -489,16 +484,14 @@ When <property>constrain</property>ed by an <classname>ElementBehaviorConstraint
 	&& hasState
 	&& InteractionBehaviorState
 
-	rule R74590 infers hasInteractionBehavior
+	rule R51866 infers joins
 	if Interaction
-	&& hasInteractionBehaviorClass
-	&& AttributeAutomaton
-	&& hasRegion
-	&& AutomatonRegion
-	&& hasTransition
-	&& InteractionBehaviorTransition
+	&& hasInteractionRole
+	&& InteractionRole
+	&& hasAttributeGroup
+	&& AttributeGroup
 
-	rule R8038 infers hasElementBehavior
+	rule R64525 infers hasElementBehavior
 	if ElementBehaviorOwner
 	&& hasElementBehaviorClass
 	&& AttributeAutomaton
@@ -507,14 +500,21 @@ When <property>constrain</property>ed by an <classname>ElementBehaviorConstraint
 	&& hasTransition
 	&& ElementBehaviorTransition
 
-	rule R83886 infers hasElementBehavior
+	rule R68196 infers hasElementBehavior
 	if ElementBehaviorOwner
 	&& hasElementBehaviorClass
+	&& ElementBehaviorAutomaton
+	&& hasRegion
+	&& ElementBehaviorRegion
+
+	rule R82801 infers hasInteractionBehavior
+	if Interaction
+	&& hasInteractionBehaviorClass
 	&& AttributeAutomaton
 	&& hasRegion
 	&& AutomatonRegion
-	&& hasState
-	&& ElementBehaviorState
+	&& hasTransition
+	&& InteractionBehaviorTransition
 
 	synonymScalarRestriction AbstractValueType {
 		restrictedRange XMLSchema:string

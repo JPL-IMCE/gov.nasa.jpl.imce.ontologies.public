@@ -7,39 +7,38 @@
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdWcode"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasSubsystemAcronym">
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topDataProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasSubsystemAcronym"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdCogE1">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdCogE1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasSubsystemAcronym">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasSubsystemAcronym"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdWaveform">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdWaveform"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdConductorCount">
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdConductorCount"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdAssembly1">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdAssembly1"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsRight">
-    <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#isJoinedRightIn"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#topObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsRight"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#topReifiedObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#joins"/>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdConductorCount">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdConductorCount"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasAssemblyReferenceDesignator">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasAssemblyReferenceDesignator"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topDataProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#hasIdentifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsPowerSourceTarget">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#hasJoinsTarget"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsPowerSourceTarget"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#topReifiedObjectPropertyTarget"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdSubsystem1">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
@@ -53,12 +52,12 @@
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdSubSubName"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topObjectProperty">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topObjectProperty"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdFunctionNumber">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdFunctionNumber"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topObjectProperty">
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdEcr">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
@@ -68,73 +67,41 @@
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdEndCircuit1"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsRightTarget">
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsRightTarget"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#topObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#topReifiedObjectPropertyTarget"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#hasJoinsTarget"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdEndCircuit2PartNumber">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdEndCircuit2PartNumber"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdGroundTreeRef2">
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdGroundTreeRef2"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdConnector1TypePartNumber">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdConnector1TypePartNumber"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#isJoinedRightIn">
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#isJoinedIn"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#topObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#isJoinedRightIn"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#topReifiedObjectProperty"/>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdGroundTreeRef2">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdGroundTreeRef2"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasReferenceDesignator">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topDataProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasReferenceDesignator"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdCharacteristicImpedence">
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdNote1">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdCharacteristicImpedence"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdNote1"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdDateLastChanged">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdDateLastChanged"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdNote1">
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdCharacteristicImpedence">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdNote1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#isJoinedLeftIn">
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#isJoinedIn"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#topReifiedObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#isJoinedLeftIn"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#topObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdEndCircuitType">
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdEndCircuitType"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsLeftSource">
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#topObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#hasJoinsSource"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsLeftSource"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#topReifiedObjectPropertySource"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdCharacteristicImpedence"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdSwSize">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdSwSize"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasUsesCavityTarget">
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasUsesCavityTarget"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topObjectProperty"/>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdEndCircuitType">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdEndCircuitType"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdFunctionName">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
@@ -158,13 +125,20 @@
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdView1"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdWtype">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdWtype"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasSubsystemNumber">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topDataProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasSubsystemNumber"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdWtype">
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdWtype"/>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsPowerLoad">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#topReifiedObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#joins"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsPowerLoad"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdAssembly1BoardSchematicSignalNames">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
@@ -178,23 +152,22 @@
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdSubsystem2"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsLeft">
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsLeft"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#joins"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#topReifiedObjectProperty"/>
-    <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#isJoinedLeftIn"/>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsPowerLoadSource">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#topReifiedObjectPropertySource"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsPowerLoadSource"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#hasJoinsSource"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse/PropertyEntailments">
+    <owl:versionInfo>2018-06-13 10:42:45 -0700</owl:versionInfo>
+    <rdfs:comment>generated by entail</rdfs:comment>
+    <owl:imports rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdAssembly2BoardSchematicSignalNames">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdAssembly2BoardSchematicSignalNames"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse/PropertyEntailments">
-    <owl:versionInfo>2018-05-16 09:25:58 -0700</owl:versionInfo>
-    <rdfs:comment>generated by entail</rdfs:comment>
-    <owl:imports rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdInlineNumber">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
@@ -204,6 +177,13 @@
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdConnector2"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsPowerSourceSource">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsPowerSourceSource"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#topReifiedObjectPropertySource"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#hasJoinsSource"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#topObjectProperty"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdNote2">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdNote2"/>
@@ -212,11 +192,11 @@
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdNumberOfWires"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topReifiedObjectPropertySource">
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topReifiedObjectPropertySource"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topUnreifiedObjectProperty">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topUnreifiedObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topReifiedObjectPropertySource">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topReifiedObjectPropertySource"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdMaxSteadyStateCurrent">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
@@ -232,10 +212,6 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topReifiedStructuredDataProperty">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topReifiedStructuredDataProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#usesCavity">
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#usesCavity"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topReifiedStructuredDataPropertySource">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topReifiedStructuredDataPropertySource"/>
@@ -262,6 +238,10 @@
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topDataProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#hasIdentifier"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFunctionNumber">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFunctionNumber"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdNumberOfFunctions">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdNumberOfFunctions"/>
@@ -270,26 +250,19 @@
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdConnector1"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFunctionNumber">
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topDataProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFunctionNumber"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topReifiedStructuredDataPropertyTarget">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topReifiedStructuredDataPropertyTarget"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdView3">
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdView3"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdConnector2TypePartNumber">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdConnector2TypePartNumber"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdView3">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdView3"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasDirection">
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasDirection"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdSubsystemFunctionName">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
@@ -299,24 +272,31 @@
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdCableLength"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsRightSource">
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#topObjectProperty"/>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsPowerLoadTarget">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsPowerLoadTarget"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#hasJoinsSource"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#topReifiedObjectPropertySource"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsRightSource"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#topReifiedObjectPropertyTarget"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#hasJoinsTarget"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#topObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdEndCircuit2">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdEndCircuit2"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdAssembly2">
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdAssembly2"/>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsPowerSource">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#topReifiedObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#joins"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsPowerSource"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdFlow">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdFlow"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdAssembly2">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdAssembly2"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topReifiedObjectProperty">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topReifiedObjectProperty"/>
@@ -325,13 +305,6 @@
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdCrossStrapped"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsLeftTarget">
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#topObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission#topReifiedObjectPropertyTarget"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#hasJoinsTarget"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsLeftTarget"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdHarness">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdHarness"/>
@@ -339,10 +312,6 @@
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdGroundTreeRef1">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdGroundTreeRef1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasUsesCavitySource">
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasUsesCavitySource"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdFunctionRev">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>

@@ -232,7 +232,7 @@
      xmlns:analysis-embedding="http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#"
      xmlns:base="http://imce.jpl.nasa.gov/foundation/base/base#">
     <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/foundation/project/project-bundle">
-        <owl:versionInfo rdf:datatype="&xsd;string">2018-05-10 16:10:06 -0700</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="&xsd;string">2018-06-13 10:44:38 -0700</owl:versionInfo>
         <rdfs:comment rdf:datatype="&xsd;string">created by close-tbox-bundle</rdfs:comment>
         <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis"/>
         <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base"/>
@@ -348,26 +348,9 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&project;Program"/>
-            <rdf:Description rdf:about="&project;Project"/>
-            <rdf:Description rdf:about="&project;WorkPackage"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="&project;Approves"/>
             <rdf:Description rdf:about="&project;Concurs"/>
             <rdf:Description rdf:about="&project;Prepares"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&analysis;Assumption"/>
-            <rdf:Description rdf:about="&analysis;Explanation"/>
-            <rdf:Description rdf:about="&analysis;Quantity"/>
-            <rdf:Description rdf:about="&project;DevelopmentState"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -377,6 +360,15 @@
             <rdf:Description rdf:about="&analysis;DrivingRequirementsExplanation"/>
             <rdf:Description rdf:about="&analysis;KeyRequirementsExplanation"/>
             <rdf:Description rdf:about="&analysis;TradeStudy"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&analysis;Assumption"/>
+            <rdf:Description rdf:about="&analysis;Explanation"/>
+            <rdf:Description rdf:about="&analysis;Quantity"/>
+            <rdf:Description rdf:about="&project;DevelopmentState"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -466,6 +458,14 @@
                     <rdf:Description rdf:about="&project;Deliverable"/>
                 </owl:unionOf>
             </owl:Class>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&project;Program"/>
+            <rdf:Description rdf:about="&project;Project"/>
+            <rdf:Description rdf:about="&project;WorkPackage"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
