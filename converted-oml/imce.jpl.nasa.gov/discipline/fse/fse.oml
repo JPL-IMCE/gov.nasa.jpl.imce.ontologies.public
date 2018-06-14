@@ -13,7 +13,7 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	extends <http://imce.jpl.nasa.gov/foundation/project/project>
 
-	aspect PowerSwitchingElement
+	aspect EndCircuitPresentingElement
 
 	@rdfs:label="""Reference Designated Element"""
 	aspect ReferenceDesignatedElement
@@ -24,14 +24,14 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""Circuit"""
 	concept EndCircuit
 
+	@rdfs:label="""Switch Group"""
+	concept EndCircuitGroup
+
 	@rdfs:label="""Function"""
 	concept Function
 
 	@rdfs:label="""Function Description"""
 	concept FunctionDescription
-
-	@rdfs:label="""Power Distribution Assembly"""
-	concept PowerDistributionAssembly
 
 	@rdfs:label="""Power End Circuit"""
 	concept PowerEndCircuit
@@ -48,18 +48,15 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""Subsystem"""
 	concept Subsystem
 
-	@rdfs:label="""Switch Group"""
-	concept SwitchGroup
-
 	Assembly extendsConcept mission:Component
 
 	EndCircuit extendsConcept mission:Interface
 
+	EndCircuitGroup extendsConcept mission:Interface
+
 	Function extendsConcept mission:Junction
 
 	FunctionDescription extendsConcept analysis:Characterization
-
-	PowerDistributionAssembly extendsConcept Assembly
 
 	PowerEndCircuit extendsConcept EndCircuit
 
@@ -70,8 +67,6 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	PowerOutEndCircuit extendsConcept PowerEndCircuit
 
 	Subsystem extendsConcept mission:Component
-
-	SwitchGroup extendsConcept mission:Interface
 
 	@oml:hasPropertyLabel="""joins Power In"""
 	@oml:hasReificationLabel="""Joins Power In"""
@@ -95,17 +90,17 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	JoinsPowerOut extendsRelationship mission:Joins1
 
+	Assembly extendsAspect EndCircuitPresentingElement
+
 	Assembly extendsAspect ReferenceDesignatedElement
 
-	PowerDistributionAssembly extendsAspect PowerSwitchingElement
+	EndCircuitGroup extendsAspect EndCircuitPresentingElement
 
-	PowerSwitchingElement extendsAspect mission:PresentingElement
+	EndCircuitPresentingElement extendsAspect mission:PresentingElement
 
 	ReferenceDesignatedElement extendsAspect base:IdentifiedElement
 
 	Subsystem extendsAspect ReferenceDesignatedElement
-
-	SwitchGroup extendsAspect PowerSwitchingElement
 
 	@rdfs:label="""has assembly acronym"""
 	entityScalarDataProperty + hasAssemblyAcronym {
@@ -543,6 +538,12 @@ Interface EMI Characteristics & Redundancy
 
 	allEntities EndCircuit . mission:isJoinedIn in Function
 
+	allEntities EndCircuit . mission:isPresentedBy in EndCircuitPresentingElement
+
+	allEntities EndCircuitGroup . mission:presents in EndCircuit
+
+	allEntities EndCircuitGroup . mission:isPresentedBy in Assembly
+
 	allEntities Function . mission:joins in EndCircuit
 
 	allEntities FunctionDescription . analysis:characterizes in Function
@@ -555,13 +556,7 @@ Interface EMI Characteristics & Redundancy
 
 	allEntities PowerFunction . mission:joins2 in PowerInEndCircuit
 
-	allEntities PowerOutEndCircuit . mission:isPresentedBy in PowerSwitchingElement
-
 	allEntities Subsystem . base:aggregates in Assembly
-
-	allEntities SwitchGroup . mission:presents in PowerOutEndCircuit
-
-	allEntities SwitchGroup . mission:isPresentedBy in PowerDistributionAssembly
 
 	hasAssemblyAcronym subDataPropertyOf base:hasIdentifier
 
