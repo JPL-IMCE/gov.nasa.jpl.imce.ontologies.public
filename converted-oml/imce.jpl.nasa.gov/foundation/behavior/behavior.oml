@@ -459,39 +459,37 @@ When <property>constrain</property>ed by an <classname>ElementBehaviorConstraint
 		source = Interaction
 		target = AttributeGroup }
 
-	rule R10697 infers hasElementBehavior
+	rule R13759 infers hasElementBehavior
 	if ElementBehaviorOwner
 	&& hasElementBehaviorClass
-	&& AttributeAutomaton
+	&& ElementBehaviorAutomaton
 	&& hasRegion
-	&& AutomatonRegion
-	&& hasState
-	&& ElementBehaviorState
+	&& ElementBehaviorRegion
 
-	rule R26887 infers hasInteractionBehavior
-	if Interaction
-	&& hasInteractionBehaviorClass
-	&& InteractionBehaviorAutomaton
-	&& hasRegion
-	&& InteractionBehaviorRegion
-
-	rule R2833 infers hasInteractionBehavior
+	rule R28002 infers hasInteractionBehavior
 	if Interaction
 	&& hasInteractionBehaviorClass
 	&& AttributeAutomaton
 	&& hasRegion
 	&& AutomatonRegion
-	&& hasState
-	&& InteractionBehaviorState
+	&& hasTransition
+	&& InteractionBehaviorTransition
 
-	rule R51866 infers joins
+	rule R35676 infers joins
 	if Interaction
 	&& hasInteractionRole
 	&& InteractionRole
 	&& hasAttributeGroup
 	&& AttributeGroup
 
-	rule R64525 infers hasElementBehavior
+	rule R39755 infers hasInteractionBehavior
+	if Interaction
+	&& hasInteractionBehaviorClass
+	&& InteractionBehaviorAutomaton
+	&& hasRegion
+	&& InteractionBehaviorRegion
+
+	rule R49128 infers hasElementBehavior
 	if ElementBehaviorOwner
 	&& hasElementBehaviorClass
 	&& AttributeAutomaton
@@ -500,21 +498,23 @@ When <property>constrain</property>ed by an <classname>ElementBehaviorConstraint
 	&& hasTransition
 	&& ElementBehaviorTransition
 
-	rule R68196 infers hasElementBehavior
+	rule R62475 infers hasElementBehavior
 	if ElementBehaviorOwner
 	&& hasElementBehaviorClass
-	&& ElementBehaviorAutomaton
+	&& AttributeAutomaton
 	&& hasRegion
-	&& ElementBehaviorRegion
+	&& AutomatonRegion
+	&& hasState
+	&& ElementBehaviorState
 
-	rule R82801 infers hasInteractionBehavior
+	rule R74828 infers hasInteractionBehavior
 	if Interaction
 	&& hasInteractionBehaviorClass
 	&& AttributeAutomaton
 	&& hasRegion
 	&& AutomatonRegion
-	&& hasTransition
-	&& InteractionBehaviorTransition
+	&& hasState
+	&& InteractionBehaviorState
 
 	synonymScalarRestriction AbstractValueType {
 		restrictedRange XMLSchema:string

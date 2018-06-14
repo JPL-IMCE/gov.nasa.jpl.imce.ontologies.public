@@ -39,11 +39,11 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""Power Function"""
 	concept PowerFunction
 
-	@rdfs:label="""Power Load End Circuit"""
-	concept PowerLoadEndCircuit
+	@rdfs:label="""Power In End Circuit"""
+	concept PowerInEndCircuit
 
-	@rdfs:label="""Power Source End Circuit"""
-	concept PowerSourceEndCircuit
+	@rdfs:label="""Power Out End Circuit"""
+	concept PowerOutEndCircuit
 
 	@rdfs:label="""Subsystem"""
 	concept Subsystem
@@ -65,35 +65,35 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	PowerFunction extendsConcept Function
 
-	PowerLoadEndCircuit extendsConcept PowerEndCircuit
+	PowerInEndCircuit extendsConcept PowerEndCircuit
 
-	PowerSourceEndCircuit extendsConcept PowerEndCircuit
+	PowerOutEndCircuit extendsConcept PowerEndCircuit
 
 	Subsystem extendsConcept mission:Component
 
 	SwitchGroup extendsConcept mission:Interface
 
-	@oml:hasPropertyLabel="""joins Power Load"""
-	@oml:hasReificationLabel="""Joins Power Load"""
-	reifiedRelationship JoinsPowerLoad {
+	@oml:hasPropertyLabel="""joins Power In"""
+	@oml:hasReificationLabel="""Joins Power In"""
+	reifiedRelationship JoinsPowerIn {
 		asymmetric
 		irreflexive
-		unreified = joinsPowerLoad
+		unreified = joinsPowerIn
 		source = PowerFunction
-		target = PowerLoadEndCircuit }
+		target = PowerInEndCircuit }
 
-	@oml:hasPropertyLabel="""joins Power Source"""
-	@oml:hasReificationLabel="""Joins Power Source"""
-	reifiedRelationship JoinsPowerSource {
+	@oml:hasPropertyLabel="""joins Power Out"""
+	@oml:hasReificationLabel="""Joins Power Out"""
+	reifiedRelationship JoinsPowerOut {
 		asymmetric
 		irreflexive
-		unreified = joinsPowerSource
+		unreified = joinsPowerOut
 		source = PowerFunction
-		target = PowerSourceEndCircuit }
+		target = PowerOutEndCircuit }
 
-	JoinsPowerLoad extendsRelationship mission:Joins2
+	JoinsPowerIn extendsRelationship mission:Joins2
 
-	JoinsPowerSource extendsRelationship mission:Joins1
+	JoinsPowerOut extendsRelationship mission:Joins1
 
 	Assembly extendsAspect ReferenceDesignatedElement
 
@@ -551,15 +551,15 @@ Interface EMI Characteristics & Redundancy
 
 	allEntities PowerFunction . mission:joins in PowerEndCircuit
 
-	allEntities PowerFunction . mission:joins1 in PowerSourceEndCircuit
+	allEntities PowerFunction . mission:joins1 in PowerOutEndCircuit
 
-	allEntities PowerFunction . mission:joins2 in PowerLoadEndCircuit
+	allEntities PowerFunction . mission:joins2 in PowerInEndCircuit
 
-	allEntities PowerSourceEndCircuit . mission:isPresentedBy in PowerSwitchingElement
+	allEntities PowerOutEndCircuit . mission:isPresentedBy in PowerSwitchingElement
 
 	allEntities Subsystem . base:aggregates in Assembly
 
-	allEntities SwitchGroup . mission:presents in PowerSourceEndCircuit
+	allEntities SwitchGroup . mission:presents in PowerOutEndCircuit
 
 	allEntities SwitchGroup . mission:isPresentedBy in PowerDistributionAssembly
 

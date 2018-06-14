@@ -168,7 +168,7 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:base="http://imce.jpl.nasa.gov/foundation/base/base#">
     <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse-bundle">
-        <owl:versionInfo rdf:datatype="&xsd;string">2018-06-13 10:44:45 -0700</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="&xsd;string">2018-06-14 14:36:17 -0700</owl:versionInfo>
         <rdfs:comment rdf:datatype="&xsd;string">created by close-tbox-bundle</rdfs:comment>
         <owl:imports rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse"/>
         <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project-bundle"/>
@@ -203,17 +203,17 @@
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#PowerLoadEndCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#PowerInEndCircuit -->
 
-    <rdf:Description rdf:about="&fse;PowerLoadEndCircuit">
-        <owl:disjointWith rdf:resource="&fse;PowerSourceEndCircuit"/>
+    <rdf:Description rdf:about="&fse;PowerInEndCircuit">
+        <owl:disjointWith rdf:resource="&fse;PowerOutEndCircuit"/>
     </rdf:Description>
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#PowerSourceEndCircuit -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#PowerOutEndCircuit -->
 
-    <rdf:Description rdf:about="&fse;PowerSourceEndCircuit"/>
+    <rdf:Description rdf:about="&fse;PowerOutEndCircuit"/>
     
 
 
@@ -324,6 +324,23 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&analysis;CostEstimate"/>
+            <rdf:Description rdf:about="&analysis;DrivingRequirementsExplanation"/>
+            <rdf:Description rdf:about="&analysis;KeyRequirementsExplanation"/>
+            <rdf:Description rdf:about="&analysis;TradeStudy"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&project;Approves"/>
+            <rdf:Description rdf:about="&project;Concurs"/>
+            <rdf:Description rdf:about="&project;Prepares"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="&analysis;Analyzes"/>
             <rdf:Description rdf:about="&analysis;Characterizes"/>
             <rdf:Description rdf:about="&analysis;Constrains"/>
@@ -408,23 +425,6 @@
                     <rdf:Description rdf:about="&project;Deliverable"/>
                 </owl:unionOf>
             </owl:Class>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&analysis;CostEstimate"/>
-            <rdf:Description rdf:about="&analysis;DrivingRequirementsExplanation"/>
-            <rdf:Description rdf:about="&analysis;KeyRequirementsExplanation"/>
-            <rdf:Description rdf:about="&analysis;TradeStudy"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&project;Approves"/>
-            <rdf:Description rdf:about="&project;Concurs"/>
-            <rdf:Description rdf:about="&project;Prepares"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
