@@ -168,7 +168,7 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:base="http://imce.jpl.nasa.gov/foundation/base/base#">
     <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse-bundle">
-        <owl:versionInfo rdf:datatype="&xsd;string">2018-06-14 14:36:17 -0700</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="&xsd;string">2018-07-03 13:48:53 -0700</owl:versionInfo>
         <rdfs:comment rdf:datatype="&xsd;string">created by close-tbox-bundle</rdfs:comment>
         <owl:imports rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse"/>
         <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project-bundle"/>
@@ -195,11 +195,25 @@
     
 
 
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#BiDirectionalPowerFunction -->
+
+    <rdf:Description rdf:about="&fse;BiDirectionalPowerFunction">
+        <owl:disjointWith rdf:resource="&fse;UniDirectionalPowerFunction"/>
+    </rdf:Description>
+    
+
+
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#EndCircuit -->
 
     <rdf:Description rdf:about="&fse;EndCircuit">
-        <owl:disjointWith rdf:resource="&fse;SwitchGroup"/>
+        <owl:disjointWith rdf:resource="&fse;EndCircuitGroup"/>
     </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#EndCircuitGroup -->
+
+    <rdf:Description rdf:about="&fse;EndCircuitGroup"/>
     
 
 
@@ -223,9 +237,9 @@
     
 
 
-    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#SwitchGroup -->
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#UniDirectionalPowerFunction -->
 
-    <rdf:Description rdf:about="&fse;SwitchGroup"/>
+    <rdf:Description rdf:about="&fse;UniDirectionalPowerFunction"/>
     
 
 
@@ -341,6 +355,14 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&project;Program"/>
+            <rdf:Description rdf:about="&project;Project"/>
+            <rdf:Description rdf:about="&project;WorkPackage"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="&analysis;Analyzes"/>
             <rdf:Description rdf:about="&analysis;Characterizes"/>
             <rdf:Description rdf:about="&analysis;Constrains"/>
@@ -435,14 +457,6 @@
             <rdf:Description rdf:about="&analysis;Explanation"/>
             <rdf:Description rdf:about="&analysis;Quantity"/>
             <rdf:Description rdf:about="&project;DevelopmentState"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&project;Program"/>
-            <rdf:Description rdf:about="&project;Project"/>
-            <rdf:Description rdf:about="&project;WorkPackage"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>

@@ -21,6 +21,8 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""Assembly"""
 	concept Assembly
 
+	concept BiDirectionalPowerFunction
+
 	@rdfs:label="""Circuit"""
 	concept EndCircuit
 
@@ -45,10 +47,16 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""Power Out End Circuit"""
 	concept PowerOutEndCircuit
 
+	concept PowerSwitchBank
+
 	@rdfs:label="""Subsystem"""
 	concept Subsystem
 
+	concept UniDirectionalPowerFunction
+
 	Assembly extendsConcept mission:Component
+
+	BiDirectionalPowerFunction extendsConcept PowerFunction
 
 	EndCircuit extendsConcept mission:Interface
 
@@ -66,7 +74,11 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	PowerOutEndCircuit extendsConcept PowerEndCircuit
 
+	PowerSwitchBank extendsConcept EndCircuitGroup
+
 	Subsystem extendsConcept mission:Component
+
+	UniDirectionalPowerFunction extendsConcept PowerFunction
 
 	@oml:hasPropertyLabel="""joins Power In"""
 	@oml:hasReificationLabel="""Joins Power In"""
@@ -111,6 +123,12 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""has assembly reference designator"""
 	entityScalarDataProperty + hasAssemblyReferenceDesignator {
 		domain Assembly
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has end circuit identifier"""
+	entityScalarDataProperty + hasEndCircuitIdentifier {
+		domain EndCircuit
 		range XMLSchema:string
 	}
 
@@ -534,6 +552,12 @@ Interface EMI Characteristics & Redundancy
 		range XMLSchema:string
 	}
 
+	@rdfs:label="""has switch bank identifer"""
+	entityScalarDataProperty + hasSwitchBankIdentifier {
+		domain PowerSwitchBank
+		range XMLSchema:string
+	}
+
 	allEntities Assembly . base:isAggregatedIn in Subsystem
 
 	allEntities EndCircuit . mission:isJoinedIn in Function
@@ -552,13 +576,17 @@ Interface EMI Characteristics & Redundancy
 
 	allEntities PowerFunction . mission:joins in PowerEndCircuit
 
-	allEntities PowerFunction . mission:joins1 in PowerOutEndCircuit
-
-	allEntities PowerFunction . mission:joins2 in PowerInEndCircuit
+	allEntities PowerSwitchBank . mission:presents in PowerOutEndCircuit
 
 	allEntities Subsystem . base:aggregates in Assembly
 
+	allEntities UniDirectionalPowerFunction . mission:joins1 in PowerOutEndCircuit
+
+	allEntities UniDirectionalPowerFunction . mission:joins2 in PowerInEndCircuit
+
 	hasAssemblyAcronym subDataPropertyOf base:hasIdentifier
+
+	hasEndCircuitIdentifier subDataPropertyOf base:hasIdentifier
 
 	hasFunctionNumber subDataPropertyOf base:hasIdentifier
 
@@ -567,6 +595,8 @@ Interface EMI Characteristics & Redundancy
 	hasSubsystemAcronym subDataPropertyOf base:hasIdentifier
 
 	hasSubsystemNumber subDataPropertyOf base:hasIdentifier
+
+	hasSwitchBankIdentifier subDataPropertyOf base:hasIdentifier
 
 	hasFdAssembly1 subDataPropertyOf hasFdProperty
 
