@@ -1230,6 +1230,14 @@ Interface EMI Characteristics &amp; Redundancy
     
 
 
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#BiDirectionalPowerFunction -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#BiDirectionalPowerFunction">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerFunction"/>
+    </owl:Class>
+    
+
+
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#EndCircuit -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#EndCircuit">
@@ -1361,18 +1369,6 @@ Interface EMI Characteristics &amp; Redundancy
                 <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerEndCircuit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#joins1"/>
-                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerOutEndCircuit"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#joins2"/>
-                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerInEndCircuit"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Power Function</rdfs:label>
     </owl:Class>
     
@@ -1392,6 +1388,20 @@ Interface EMI Characteristics &amp; Redundancy
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerOutEndCircuit">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerEndCircuit"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Power Out End Circuit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#PowerSwitchBank -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerSwitchBank">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#EndCircuitGroup"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#presents"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerOutEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1419,6 +1429,26 @@ Interface EMI Characteristics &amp; Redundancy
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subsystem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#UniDirectionalPowerFunction -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#UniDirectionalPowerFunction">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#joins1"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerOutEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#joins2"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerInEndCircuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
