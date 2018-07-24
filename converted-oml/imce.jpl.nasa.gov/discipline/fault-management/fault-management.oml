@@ -1,6 +1,7 @@
 @dc:creator="""Systems Engineering & Formulation Division"""
+@dc:description="""The Fault Management Ontology defines classes and properties for fault management."""
 @dc:type="""Foundation"""
-@dc:rights="""Copyright 2010-2014, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
+@dc:rights="""Copyright 2010-2018, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
 
 This software may be subject to U.S. export control laws. By accepting this software, the user agrees to comply with all applicable U.S. export laws and regulations. User has the responsibility to obtain export licenses,a or other export authority as may be required before exporting such information to foreign countries or providing access to foreign persons."""
 @dc:title="""Fault Management Ontology"""
@@ -229,14 +230,21 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fault-management/fault-man
 		source = behavior:ElementBehavior
 		target = PerformanceConstraint }
 
-	rule R10862 infers violates
+	rule R12396 infers causes
+	if behavior:ElementBehavior
+	&& analysis:isExplainedBy
+	&& CauseExplanation
+	&& analysis:analyzes
+	&& behavior:ElementBehavior
+
+	rule R17950 infers violates
 	if behavior:ElementBehavior
 	&& analysis:isExplainedBy
 	&& ViolationExplanation
 	&& analysis:analyzes
 	&& PerformanceConstraint
 
-	rule R60670 infers impairs
+	rule R58318 infers impairs
 	if behavior:ElementBehavior
 	&& analysis:isExplainedBy
 	&& ViolationExplanation
@@ -244,13 +252,6 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fault-management/fault-man
 	&& PerformanceConstraint
 	&& analysis:characterizes
 	&& mission:Function
-
-	rule R74258 infers causes
-	if behavior:ElementBehavior
-	&& analysis:isExplainedBy
-	&& CauseExplanation
-	&& analysis:analyzes
-	&& behavior:ElementBehavior
 
 	someEntities CauseExplanation . analysis:analyzes in ModeContext
 

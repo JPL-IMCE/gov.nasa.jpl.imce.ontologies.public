@@ -168,7 +168,7 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:base="http://imce.jpl.nasa.gov/foundation/base/base#">
     <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse-bundle">
-        <owl:versionInfo rdf:datatype="&xsd;string">2018-07-03 14:13:37 -0700</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="&xsd;string">2018-07-23 08:03:33 -0700</owl:versionInfo>
         <rdfs:comment rdf:datatype="&xsd;string">created by close-tbox-bundle</rdfs:comment>
         <owl:imports rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse"/>
         <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project-bundle"/>
@@ -338,9 +338,10 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&project;Program"/>
-            <rdf:Description rdf:about="&project;Project"/>
-            <rdf:Description rdf:about="&project;WorkPackage"/>
+            <rdf:Description rdf:about="&analysis;CostEstimate"/>
+            <rdf:Description rdf:about="&analysis;DrivingRequirementsExplanation"/>
+            <rdf:Description rdf:about="&analysis;KeyRequirementsExplanation"/>
+            <rdf:Description rdf:about="&analysis;TradeStudy"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -354,20 +355,9 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&analysis;CostEstimate"/>
-            <rdf:Description rdf:about="&analysis;DrivingRequirementsExplanation"/>
-            <rdf:Description rdf:about="&analysis;KeyRequirementsExplanation"/>
-            <rdf:Description rdf:about="&analysis;TradeStudy"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&fse;FunctionDescription"/>
-            <rdf:Description rdf:about="&analysis;Assumption"/>
-            <rdf:Description rdf:about="&analysis;Explanation"/>
-            <rdf:Description rdf:about="&analysis;Quantity"/>
-            <rdf:Description rdf:about="&project;DevelopmentState"/>
+            <rdf:Description rdf:about="&project;Program"/>
+            <rdf:Description rdf:about="&project;Project"/>
+            <rdf:Description rdf:about="&project;WorkPackage"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -457,6 +447,16 @@
                     <rdf:Description rdf:about="&project;Deliverable"/>
                 </owl:unionOf>
             </owl:Class>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&fse;FunctionDescription"/>
+            <rdf:Description rdf:about="&analysis;Assumption"/>
+            <rdf:Description rdf:about="&analysis;Explanation"/>
+            <rdf:Description rdf:about="&analysis;Quantity"/>
+            <rdf:Description rdf:about="&project;DevelopmentState"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
