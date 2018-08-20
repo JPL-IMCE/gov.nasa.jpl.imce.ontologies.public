@@ -342,11 +342,18 @@ This software may be subject to U.S. export control laws. By accepting this soft
     
 
 
+    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topDataProperty -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#topDataProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </rdf:Description>
+    
+
+
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasAssemblyAcronym -->
 
     <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasAssemblyAcronym">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#hasIdentifier"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Assembly"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -363,6 +370,18 @@ This software may be subject to U.S. export control laws. By accepting this soft
         <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Assembly"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has assembly reference designator</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasBehavior -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasBehavior">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerSwitchBank"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has behavior</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1106,6 +1125,27 @@ Interface EMI Characteristics &amp; Redundancy
     
 
 
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasInputBus -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasInputBus">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerSwitchBank"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has input bus</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasMaxCurrent -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasMaxCurrent">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasReferenceDesignator -->
 
     <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasReferenceDesignator">
@@ -1166,6 +1206,18 @@ Interface EMI Characteristics &amp; Redundancy
         <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerSwitchBank"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has switch bank identifer</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#isGanged -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#isGanged">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerSwitchBank"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is ganged</rdfs:label>
     </owl:DatatypeProperty>
     
 
