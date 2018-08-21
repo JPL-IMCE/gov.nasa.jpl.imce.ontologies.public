@@ -295,6 +295,74 @@ This software may be subject to U.S. export control laws. By accepting this soft
     
 
 
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasConnectsSubsystem1Source -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasConnectsSubsystem1Source">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasConnectsSubsystemSource"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ConnectsSubsystem1"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasConnectsSubsystem1Target -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasConnectsSubsystem1Target">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasConnectsSubsystemTarget"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ConnectsSubsystem1"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Subsystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasConnectsSubsystem2Source -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasConnectsSubsystem2Source">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasConnectsSubsystemSource"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ConnectsSubsystem2"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasConnectsSubsystem2Target -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasConnectsSubsystem2Target">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasConnectsSubsystemTarget"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ConnectsSubsystem2"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Subsystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasConnectsSubsystemSource -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasConnectsSubsystemSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topReifiedObjectPropertySource"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ConnectsSubsystem"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasConnectsSubsystemTarget -->
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasConnectsSubsystemTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#topReifiedObjectPropertyTarget"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ConnectsSubsystem"/>
+        <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Subsystem"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsPowerInSource -->
 
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsPowerInSource">
@@ -1313,6 +1381,33 @@ Interface EMI Characteristics &amp; Redundancy
     
 
 
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#ConnectsSubsystem -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#ConnectsSubsystem">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#ReifiedObjectProperty"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connects Subsystem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#ConnectsSubsystem1 -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#ConnectsSubsystem1">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ConnectsSubsystem"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#ConnectsSubsystem2 -->
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#ConnectsSubsystem2">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#ConnectsSubsystem"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connects Subsystem 1</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#EndCircuit -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#EndCircuit">
@@ -1561,6 +1656,96 @@ Interface EMI Characteristics &amp; Redundancy
     </rdf:Description>
     <rdf:Description rdf:about="urn:swrl#t">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">joinsPowerIn reification rule</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsPowerInSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsPowerInTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsPowerIn"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">joinsPowerOut reification rule</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsPowerOutSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsPowerOutTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsPowerOut"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
     </rdf:Description>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
@@ -1997,7 +2182,7 @@ Interface EMI Characteristics &amp; Redundancy
         </swrl:head>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">joinsPowerIn reification rule</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">connectsSubsystem1 reification rule</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -2005,7 +2190,7 @@ Interface EMI Characteristics &amp; Redundancy
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsPowerInSource"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasConnectsSubsystem1Source"/>
                         <swrl:argument1 rdf:resource="urn:swrl#r"/>
                         <swrl:argument2 rdf:resource="urn:swrl#s"/>
                     </rdf:Description>
@@ -2016,7 +2201,7 @@ Interface EMI Characteristics &amp; Redundancy
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsPowerInTarget"/>
+                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasConnectsSubsystem1Target"/>
                                 <swrl:argument1 rdf:resource="urn:swrl#r"/>
                                 <swrl:argument2 rdf:resource="urn:swrl#t"/>
                             </rdf:Description>
@@ -2032,7 +2217,7 @@ Interface EMI Characteristics &amp; Redundancy
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsPowerIn"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#connectsSubsystem1"/>
                         <swrl:argument1 rdf:resource="urn:swrl#s"/>
                         <swrl:argument2 rdf:resource="urn:swrl#t"/>
                     </rdf:Description>
@@ -2042,7 +2227,7 @@ Interface EMI Characteristics &amp; Redundancy
         </swrl:head>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">joinsPowerOut reification rule</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">connectsSubsystem2 reification rule</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -2050,7 +2235,7 @@ Interface EMI Characteristics &amp; Redundancy
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsPowerOutSource"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasConnectsSubsystem2Source"/>
                         <swrl:argument1 rdf:resource="urn:swrl#r"/>
                         <swrl:argument2 rdf:resource="urn:swrl#s"/>
                     </rdf:Description>
@@ -2061,7 +2246,7 @@ Interface EMI Characteristics &amp; Redundancy
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasJoinsPowerOutTarget"/>
+                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasConnectsSubsystem2Target"/>
                                 <swrl:argument1 rdf:resource="urn:swrl#r"/>
                                 <swrl:argument2 rdf:resource="urn:swrl#t"/>
                             </rdf:Description>
@@ -2077,7 +2262,52 @@ Interface EMI Characteristics &amp; Redundancy
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#joinsPowerOut"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#connectsSubsystem2"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">connectsSubsystem reification rule</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasConnectsSubsystemSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#hasConnectsSubsystemTarget"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#connectsSubsystem"/>
                         <swrl:argument1 rdf:resource="urn:swrl#s"/>
                         <swrl:argument2 rdf:resource="urn:swrl#t"/>
                     </rdf:Description>

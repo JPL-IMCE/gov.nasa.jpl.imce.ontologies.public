@@ -11,6 +11,7 @@
      xmlns:timeline-embedding="http://imce.jpl.nasa.gov/timeline/timeline-embedding#"
      xmlns:mission-embedding="http://imce.jpl.nasa.gov/foundation/mission/mission-embedding#"
      xmlns:architectural-description-embedding="http://imce.jpl.nasa.gov/architectural-description/architectural-description-embedding#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:QUDV="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#"
      xmlns:state-analysis-functional-design="http://imce.jpl.nasa.gov/state-analysis-functional-design/state-analysis-functional-design#"
      xmlns:owl2-mof2="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#"
@@ -148,6 +149,30 @@
     
 
 
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#connectsSubsystem -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#connectsSubsystem">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasConnectsSubsystemSource -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasConnectsSubsystemSource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasConnectsSubsystemTarget -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasConnectsSubsystemTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
+    </rdf:Description>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -215,6 +240,14 @@
         <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
         <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#ConnectsSubsystem -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#ConnectsSubsystem">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependency"/>
+    </rdf:Description>
     
 
 
