@@ -1,0 +1,52 @@
+@dc:date="""
+   $Date$
+  """
+@owl:versionInfo="""
+   $Revision$
+  """
+@dc:rights="""Copyright 2010-2017, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
+
+This software may be subject to U.S. export control laws. By accepting this software, the user agrees to comply with all applicable U.S. export laws and regulations. User has the responsibility to obtain export licenses,a or other export authority as may be required before exporting such information to foreign countries or providing access to foreign persons."""
+open terminology <http://imce.jpl.nasa.gov/foundation/scenario/scenario-embedding> {
+
+	extends <http://imce.jpl.nasa.gov/foundation/behavior/behavior-embedding>
+
+	extends <http://imce.jpl.nasa.gov/foundation/scenario/scenario>
+
+	scenario:Scenario extendsConcept SysML-metamodel:Component.Block
+
+	scenario:TemporalConstraint extendsConcept SysML-metamodel:Component.Block
+
+	scenario:TimePoint extendsConcept SysML-metamodel:Component.Block
+
+	scenario:BeginsAt extendsRelationship owl2-mof2:BinaryDependency
+
+	scenario:Constrains extendsRelationship owl2-mof2:BinaryDependency
+
+	scenario:EndsAt extendsRelationship owl2-mof2:BinaryDependency
+
+	scenario:Incorporates extendsRelationship owl2-mof2:BinaryDependency
+
+	scenario:BeginsAt extendsAspect analysis:AnalyzedElement
+
+	scenario:BeginsAt extendsAspect analysis:CharacterizedElement
+
+	scenario:Constrains extendsAspect analysis:AnalyzedElement
+
+	scenario:Constrains extendsAspect analysis:CharacterizedElement
+
+	scenario:EndsAt extendsAspect analysis:AnalyzedElement
+
+	scenario:EndsAt extendsAspect analysis:CharacterizedElement
+
+	scenario:Incorporates extendsAspect analysis:AnalyzedElement
+
+	scenario:Incorporates extendsAspect analysis:CharacterizedElement
+
+	scenario:Scenario extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	scenario:TemporalConstraint extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	scenario:TimePoint extendsAspect owl2-mof2:BinaryDependencyEndType
+
+}

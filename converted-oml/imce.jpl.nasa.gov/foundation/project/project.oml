@@ -1,0 +1,764 @@
+@owl:versionInfo="""$Revision$"""
+@dc:date="""$Date$"""
+@dc:creator="""Systems Engineering & Formulation Division"""
+@dc:title="""Project Ontology"""
+@dc:rights="""Copyright 2010-2014, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
+
+This software may be subject to U.S. export control laws. By accepting this software, the user agrees to comply with all applicable U.S. export laws and regulations. User has the responsibility to obtain export licenses, or other export authority as may be required before exporting such information to foreign countries or providing access to foreign persons."""
+@dc:description="""The Project Ontology defines concepts and properties for describing a project in terms of its stakeholders, concerns, work breakdown, and deliverables. It provides a basis for specialization by domain experts."""
+@dc:type="""Foundation"""
+open terminology <http://imce.jpl.nasa.gov/foundation/project/project> {
+
+	extends <http://imce.jpl.nasa.gov/foundation/analysis/analysis>
+
+	@dc:description="""An <classname>AssignedElement</classname> is any model element that can have the <property>isAssignedTo</property> relationship with a <classname>Role</classname>."""
+	@rdfs:label="""Assigned Element"""
+	aspect AssignedElement
+
+	@dc:description="""A <classname>DevelopedElement</classname> is any model element that manifests <classname>DevelopmentState</classname>s. Example <classname>DevelopedElement</classname>s include spacecraft, thermal test facility, and requirements document."""
+	@rdfs:label="""Developed Element"""
+	aspect DevelopedElement
+
+	@dc:description="""A <classname>RealizedElement</classname> is any element that <property>realizes</property> or <property>isRealizedBy</property> another element."""
+	@rdfs:label="""Realized Element"""
+	aspect RealizedElement
+
+	@dc:description="""A <classname>SuppliedElement</classname> is any model element that an <classname>Authority</classname> properly <property>supplies</property>. Example <classname>SuppliedElement</classname>s include <classname>Mission</classname> and <classname>Component</classname>."""
+	@rdfs:label="""Supplied Element"""
+	aspect SuppliedElement
+
+	@dc:description="""An <classname>Authority</classname> is any entity that asserts a fact in a model. Example <classname>Authority</classname>s include
+<classname>Program</classname>,
+<classname>Project</classname>, and
+<classname>WorkPackage</classname>. (The association of an <classname>Authority</classname> with its asserted facts requires mechanisms outside the vocabulary of OWL itself, e.g., named graphs. For this reason, there is no object property <property>authorizes</property>. Authorization is conveyed by the organization of statements in a repository.)"""
+	@rdfs:label="""Authority"""
+	concept Authority
+
+	@dc:description="""<para>A <classname>Concern</classname> represents a specific interest that one or more stakeholders have in the successful completion of a <classname>Project</classname> or <classname>Program</classname> and its <classname>Mission</classname>s. </para>"""
+	@rdfs:label="""Concern"""
+	concept Concern
+
+	@dc:description="""A <classname>Deliverable</classname> is the result of successful execution of a <classname>Process</classname>. It may be an input to or prerequisite for another <classname>Process</classname>."""
+	@rdfs:label="""Deliverable"""
+	concept Deliverable
+
+	@dc:description="""A <classname>DevelopmentState</classname> is a kind of
+<classname>Deliverable</classname> that represents a defined condition for a <classname>DevelopedElement</classname>. <classname>DevelopmentState</classname>s may be unique to the <classname>DevelopedElement</classname>; example <classname>DevelopmentState</classname>s for a <classname>Product</classname> include Preliminary, Draft, and Final."""
+	@rdfs:label="""Development State"""
+	concept DevelopmentState
+
+	@dc:description="""A <classname>Facility</classname> is any asset (e.g., laboratory, assembly facility, test facility, etc.) whose <classname>DevelopmentState</classname> may be a <classname>Deliverable</classname> for a project process."""
+	@rdfs:label="""Facility"""
+	concept Facility
+
+	@dc:description="""An <classname>Interchange</classname> represents the intended joint behavior of a pair of <classname>Process</classname>es. It indicates that a <classname>Deliverable</classname> may be delivered by one <classname>Process</classname> and received by the other <classname>Process</classname>."""
+	@rdfs:label="""Interchange"""
+	concept Interchange
+
+	@rdfs:label="""Interchange Point"""
+	concept InterchangePoint
+
+	@dc:description="""An <classname>Organization</classname> is any entity that <property>isResponsibleFor</property> a <classname>Authority</classname>."""
+	@rdfs:label="""Organization"""
+	concept Organization
+
+	@dc:description="""A <classname>Person</classname> corresponds to an individual named person. A <classname>Person</classname> <property>belongsTo</property> zero or more <classname>Organization</classname>s."""
+	@rdfs:label="""Person"""
+	concept Person
+
+	@dc:description="""A <classname>Policy</classname> represents a specific exercise of authority that <property>binds</property> one or more model elements."""
+	@rdfs:label="""Policy"""
+	concept Policy
+
+	@dc:description="""A <classname>Process</classname> is an activity authorized by a <classname>WorkPackage</classname> in support of delivering a <classname>Component</classname> or producing a <classname>Product</classname>. Examples include <emphasis>design trajectory</emphasis>, <emphasis>conduct trade study</emphasis>, and <emphasis>review subsystem design</emphasis>."""
+	@rdfs:label="""Process"""
+	concept Process
+
+	@dc:description="""A <classname>Product</classname> is a document or other artifact supplied by a <classname>WorkPackage</classname>. Example <classname>Product</classname>s include trade study reports, design documents, and inspection reports."""
+	@rdfs:label="""Product"""
+	concept Product
+
+	@rdfs:label="""Program"""
+	concept Program
+
+	@dc:description="""A <classname>Project</classname> is a kind of <classname>Authority</classname> that <property>supplies</property> a related set of <classname>Mission</classname>s in pursuit of a set of <classname>Objective</classname>s."""
+	@rdfs:label="""Project"""
+	concept Project
+
+	@dc:description="""A <classname>Role</classname> corresponds to a set of assignments meant to be filled by a single <classname>Person</classname>."""
+	@rdfs:label="""Role"""
+	concept Role
+
+	@dc:description="""A <classname>Stakeholder</classname> is a person or organization with a recognized interest in the successful completion of a <classname>Project</classname> or <classname>Program</classname>. Example <classname>Stakeholder</classname>s include scientists, NASA Directorates, nuclear safety advocates, and the general public."""
+	@rdfs:label="""Stakeholder"""
+	concept Stakeholder
+
+	@dc:description="""A <classname>WorkPackage</classname> represents a discrete unit of <classname>Project</classname> cost, schedule, and activity. <classname>WorkPackage</classname>s form a hierarchy called the Work Breakdown Structure."""
+	@rdfs:label="""Work Package"""
+	concept WorkPackage
+
+	mission:Objective extendsConcept Concern
+
+	Authority extendsConcept base:Package
+
+	DevelopmentState extendsConcept analysis:Characterization
+
+	DevelopmentState extendsConcept Deliverable
+
+	Program extendsConcept Authority
+
+	Project extendsConcept Authority
+
+	WorkPackage extendsConcept base:Package
+
+	WorkPackage extendsConcept Authority
+
+	@oml:hasInverseLabel="""is approved by"""
+	@oml:hasPropertyLabel="""approves"""
+	@oml:hasReificationLabel="""Approves"""
+	reifiedRelationship Approves {
+		asymmetric
+		irreflexive
+		unreified = approves
+		inverse = isApprovedBy
+		source = Role
+		target = Product }
+
+	@oml:hasPropertyLabel="""authorizes"""
+	@oml:hasReificationLabel="""Authorizes"""
+	reifiedRelationship Authorizes {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = authorizes
+		source = Authority
+		target = Authority }
+
+	@dc:description="""A <classname>Person</classname> <property>belongsTo</property> zero or more <classname>Organization</classname>s."""
+	@oml:hasPropertyLabel="""belongs to"""
+	@oml:hasReificationLabel="""Belongs To"""
+	reifiedRelationship BelongsTo {
+		unreified = belongsTo
+		source = Person
+		target = Organization }
+
+	@dc:description="""See <property>binds</property>."""
+	@dc:description="""A <classname>Policy</classname>
+<replaceable>p</replaceable>
+<property>binds</property>
+a <classname>SpecifiedElement</classname>
+<replaceable>e</replaceable>
+if and only if the course of action embodied in
+<replaceable>p</replaceable>
+governs the design, analysis, implementation, operation, or other applicable aspects of
+<replaceable>e</replaceable>."""
+	@oml:hasInverseLabel="""is bound by"""
+	@oml:hasPropertyLabel="""binds"""
+	@oml:hasReificationLabel="""Binds"""
+	reifiedRelationship Binds {
+		asymmetric
+		irreflexive
+		unreified = binds
+		inverse = isBoundBy
+		source = Policy
+		target = mission:SpecifiedElement }
+
+	@oml:hasInverseLabel="""is concurred by"""
+	@oml:hasPropertyLabel="""concurs"""
+	@oml:hasReificationLabel="""Concurs"""
+	reifiedRelationship Concurs {
+		asymmetric
+		irreflexive
+		unreified = concurs
+		inverse = isConcurredBy
+		source = Role
+		target = Product }
+
+	@dc:description="""See <property>delegatesTo</property>."""
+	@dc:description="""A <classname>Role</classname>
+<replaceable>r<subscript>1</subscript></replaceable>
+<property>delegatesTo</property>
+a <classname>Role</classname>
+<replaceable>r<subscript>2</subscript></replaceable>
+if and only if 
+<replaceable>r<subscript>1</subscript></replaceable>
+gives direction or otherwise exercises authority over
+<replaceable>r<subscript>2</subscript></replaceable>."""
+	@oml:hasInverseLabel="""is delegate of"""
+	@oml:hasPropertyLabel="""delegates to"""
+	@oml:hasReificationLabel="""Delegates To"""
+	reifiedRelationship DelegatesTo {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = delegatesTo
+		inverse = isDelegateOf
+		source = Role
+		target = Role }
+
+	@dc:description="""See <property>delivers</property>."""
+	@dc:description="""A <classname>Process</classname> <replaceable>p</replaceable> <property>delivers</property> a <classname>Deliverable</classname> <replaceable>r</replaceable>if and only if the successful execution of <replaceable>p</replaceable> results in availability of <replaceable>r</replaceable>."""
+	@oml:hasInverseLabel="""is delivered by"""
+	@oml:hasPropertyLabel="""delivers"""
+	@oml:hasReificationLabel="""Delivers"""
+	reifiedRelationship Delivers {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = delivers
+		inverse = isDeliveredBy
+		source = InterchangePoint
+		target = Deliverable }
+
+	@dc:description="""See <property>describes</property>."""
+	@dc:description="""A <classname>Product</classname>
+<replaceable>p</replaceable>
+<property>describes</property>
+a <classname>DevelopmentElement</classname>
+<replaceable>e</replaceable>
+if and only if
+<replaceable>p</replaceable>
+contains design, analysis, operations, or other information about
+<replaceable>e</replaceable>."""
+	@oml:hasInverseLabel="""is described by"""
+	@oml:hasPropertyLabel="""describes"""
+	@oml:hasReificationLabel="""Describes"""
+	reifiedRelationship Describes {
+		asymmetric
+		irreflexive
+		unreified = describes
+		inverse = isDescribedBy
+		source = Product
+		target = DevelopedElement }
+
+	@dc:description="""See <property>executes</property>."""
+	@dc:description="""An <classname>Authority</classname> <replaceable>a</replaceable> <property>executes</property> a <classname>Process</classname> <replaceable>p</replaceable> if and only if <replaceable>a</replaceable> carries out any actions required for successful completion of <replaceable>p</replaceable> ."""
+	@oml:hasInverseLabel="""is executed by"""
+	@oml:hasPropertyLabel="""executes"""
+	@oml:hasReificationLabel="""Executes"""
+	reifiedRelationship Executes {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = executes
+		inverse = isExecutedBy
+		source = Authority
+		target = Process }
+
+	@dc:description="""A <classname>Role</classname>
+<replaceable>r</replaceable>
+<property>hasAssignment</property>
+some <classname>AssignedElement</classname>
+<replaceable>e</replaceable>
+if and only if 
+<replaceable>r</replaceable>
+has specific cognizance and/or responsibility for
+<replaceable>e</replaceable>."""
+	@dc:description="""See <property>hasAssignment</property>."""
+	@oml:hasInverseLabel="""is assigned to"""
+	@oml:hasPropertyLabel="""has assignment"""
+	@oml:hasReificationLabel="""Has Assignment"""
+	reifiedRelationship HasAssignment {
+		asymmetric
+		irreflexive
+		unreified = hasAssignment
+		inverse = isAssignedTo
+		source = Role
+		target = AssignedElement }
+
+	@oml:hasInverseLabel="""participates in"""
+	@oml:hasPropertyLabel="""has participant"""
+	@oml:hasReificationLabel="""Has Participant"""
+	reifiedRelationship HasParticipant {
+		asymmetric
+		irreflexive
+		unreified = hasParticipant
+		inverse = participatesIn
+		source = Interchange
+		target = Deliverable }
+
+	@dc:description="""An <classname>Organization</classname>
+<replaceable>o</replaceable>
+<property>hasResponsibilityFor</property>
+some <classname>Authority</classname>
+<replaceable>a</replaceable>
+if and only if 
+<replaceable>o</replaceable>
+provides the actual workforce and execution of the work embodied in
+<replaceable>a</replaceable>. An example is the relation between a "doing" <classname>Organization</classname> and a <classname>WorkPackage</classname>."""
+	@dc:description="""See <property>hasResponsibilityFor</property>."""
+	@oml:hasInverseLabel="""is responsibility of"""
+	@oml:hasPropertyLabel="""has responsibility for"""
+	@oml:hasReificationLabel="""Has Responsibility For"""
+	reifiedRelationship HasResponsibilityFor {
+		inverseFunctional
+		unreified = hasResponsibilityFor
+		inverse = isResponsibilityOf
+		source = Organization
+		target = Authority }
+
+	@dc:description="""See <property>hasRole</property>."""
+	@dc:description="""A <classname>Person</classname>
+<replaceable>p</replaceable>
+<property>hasRole</property>
+<classname>Role</classname>
+<replaceable>r</replaceable>
+if and only if 
+<replaceable>p</replaceable>
+acts to execute the assignments of
+<replaceable>r</replaceable>."""
+	@oml:hasInverseLabel="""is role of"""
+	@oml:hasPropertyLabel="""has role"""
+	@oml:hasReificationLabel="""Has Role"""
+	reifiedRelationship HasRole {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = hasRole
+		inverse = isRoleOf
+		source = Person
+		target = Role }
+
+	@oml:hasInverseLabel="""is interchange point for"""
+	@oml:hasPropertyLabel="""interchanges through"""
+	@oml:hasReificationLabel="""Interchanges Through"""
+	@rdfs:comment="""interchanges through"""
+	reifiedRelationship InterchangesThrough {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = interchangesThrough
+		inverse = isInterchangePointFor
+		source = Process
+		target = InterchangePoint }
+
+	@dc:description="""A <classname>PerformedElement</classname> <replaceable>p</replaceable> <property>invokes</property> a <classname>PerformedElement</classname> <replaceable>c</replaceable> if and only if the execution of <replaceable>c</replaceable> may be triggered or caused by and within the execution of <replaceable>p</replaceable>."""
+	@dc:description="""See <property>invokes</property>."""
+	@oml:hasInverseLabel="""is invoked by"""
+	@oml:hasPropertyLabel="""invokes"""
+	@oml:hasReificationLabel="""Invokes"""
+	reifiedRelationship Invokes {
+		irreflexive
+		unreified = invokes
+		inverse = isInvokedBy
+		source = Process
+		target = Process }
+
+	@oml:hasInverseLabel="""is involved in"""
+	@oml:hasPropertyLabel="""involves"""
+	@oml:hasReificationLabel="""Involves"""
+	reifiedRelationship Involves {
+		asymmetric
+		irreflexive
+		unreified = involves
+		inverse = isInvolvedIn
+		source = Interchange
+		target = Process }
+
+	@oml:hasInverseLabel="""is involved in1"""
+	@oml:hasPropertyLabel="""involves1"""
+	@oml:hasReificationLabel="""Involves1"""
+	reifiedRelationship Involves1 {
+		functional
+		asymmetric
+		irreflexive
+		unreified = involves1
+		inverse = isInvolvedIn1
+		source = Interchange
+		target = Process }
+
+	@oml:hasInverseLabel="""is involved in2"""
+	@oml:hasPropertyLabel="""involves2"""
+	@oml:hasReificationLabel="""Involves2"""
+	reifiedRelationship Involves2 {
+		functional
+		asymmetric
+		irreflexive
+		unreified = involves2
+		inverse = isInvolvedIn2
+		source = Interchange
+		target = Process }
+
+	@dc:description="""A <classname>DevelopmentalElement</classname>
+<replaceable>e</replaceable>
+has <property>manifests</property>
+a <classname>DevelopmentState</classname>
+<replaceable>s</replaceable>
+if and only if
+<replaceable>e</replaceable>
+attains
+<replaceable>s</replaceable>
+during its development process."""
+	@dc:description="""See <property>manifests</property>."""
+	@oml:hasInverseLabel="""is manfested by"""
+	@oml:hasPropertyLabel="""manifests"""
+	@oml:hasReificationLabel="""Manifests"""
+	reifiedRelationship Manifests {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = manifests
+		inverse = isManfestedBy
+		source = DevelopedElement
+		target = DevelopmentState }
+
+	@oml:hasInverseLabel="""is prepared by"""
+	@oml:hasPropertyLabel="""prepares"""
+	@oml:hasReificationLabel="""Prepares"""
+	reifiedRelationship Prepares {
+		asymmetric
+		irreflexive
+		unreified = prepares
+		inverse = isPreparedBy
+		source = Role
+		target = Product }
+
+	@dc:description="""See <property>produces</property>."""
+	@dc:description="""A <classname>WorkPackage</classname> <replaceable>w</replaceable> <property>produces</property> a <classname>Product</classname> <replaceable>p</replaceable> if and only if <replaceable>w</replaceable> is responsible for creation and development of <replaceable>p</replaceable>."""
+	@oml:hasInverseLabel="""is produced by"""
+	@oml:hasPropertyLabel="""produces"""
+	@oml:hasReificationLabel="""Produces"""
+	@rdfs:comment="""Subproperty of <property>isSuppliedBy</property>. Candidate for deprecation."""
+	@rdfs:comment="""Subproperty of <property>supplies</property>. Candidate for deprecation."""
+	reifiedRelationship Produces {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = produces
+		inverse = isProducedBy
+		source = Authority
+		target = Product }
+
+	@dc:description="""A <classname>SpecifiedElement</classname>
+<replaceable>c<subscript>1</subscript></replaceable>
+<property>realizes</property>
+a <classname>SpecifiedElement</classname>
+<replaceable>c<subscript>2</subscript></replaceable>
+if and only if
+<replaceable>c<subscript>1</subscript></replaceable>
+is proffered by a supplier as a specification-compliant implementation of <replaceable>c<subscript>2</subscript></replaceable>."""
+	@dc:description="""See <property>realizes</property>."""
+	@oml:hasInverseLabel="""is realized by"""
+	@oml:hasPropertyLabel="""realizes"""
+	@oml:hasReificationLabel="""Realizes"""
+	reifiedRelationship Realizes {
+		asymmetric
+		irreflexive
+		unreified = realizes
+		inverse = isRealizedBy
+		source = RealizedElement
+		target = RealizedElement }
+
+	@dc:description="""A<classname>Process</classname> <replaceable>p</replaceable> <property>receives</property> a <classname>Deliverable</classname> <replaceable>r</replaceable> if and only if the successful execution of <replaceable>p</replaceable> is contingent on the receipt of <replaceable>r</replaceable>."""
+	@dc:description="""See <property>receives</property>."""
+	@oml:hasInverseLabel="""is received by"""
+	@oml:hasPropertyLabel="""receives"""
+	@oml:hasReificationLabel="""Receives"""
+	reifiedRelationship Receives {
+		asymmetric
+		irreflexive
+		unreified = receives
+		inverse = isReceivedBy
+		source = InterchangePoint
+		target = Deliverable }
+
+	@oml:hasInverseLabel="""is relied on by"""
+	@oml:hasPropertyLabel="""relies on"""
+	@oml:hasReificationLabel="""Relies On"""
+	reifiedRelationship ReliesOn {
+		asymmetric
+		irreflexive
+		unreified = reliesOn
+		inverse = isReliedOnBy
+		source = Authority
+		target = DevelopedElement }
+
+	@dc:description="""See <property>represents</property>."""
+	@dc:description="""A <classname>Stakeholder</classname> <replaceable>s</replaceable> <property>represents</property> <classname>Concern</classname> <replaceable>c</replaceable> if and only if <replaceable>s</replaceable> has a direct, legitimate, and recognized interest in <replaceable>c</replaceable> as it relates to a particular <classname>Project</classname> or <classname>Program</classname>."""
+	@oml:hasInverseLabel="""is represented by"""
+	@oml:hasPropertyLabel="""represents"""
+	@oml:hasReificationLabel="""Represents"""
+	reifiedRelationship Represents {
+		asymmetric
+		irreflexive
+		unreified = represents
+		inverse = isRepresentedBy
+		source = Stakeholder
+		target = Concern }
+
+	@dc:description="""A <classname>WorkPackage</classname> <replaceable>w</replaceable> <property>supplies</property> a <classname>Component</classname> <replaceable>c</replaceable> if and only if <replaceable>w</replaceable> is responsible for the acquisition and delivery of <replaceable>c</replaceable>."""
+	@dc:description="""See <property>supplies</property>."""
+	@oml:hasInverseLabel="""is supplied by"""
+	@oml:hasPropertyLabel="""supplies"""
+	@oml:hasReificationLabel="""Supplies"""
+	reifiedRelationship Supplies {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = supplies
+		inverse = isSuppliedBy
+		source = Authority
+		target = SuppliedElement }
+
+	Approves extendsRelationship HasAssignment
+
+	Concurs extendsRelationship HasAssignment
+
+	Involves1 extendsRelationship Involves
+
+	Involves2 extendsRelationship Involves
+
+	Prepares extendsRelationship HasAssignment
+
+	Produces extendsRelationship Supplies
+
+	mission:Component extendsAspect DevelopedElement
+
+	mission:Component extendsAspect RealizedElement
+
+	mission:Component extendsAspect SuppliedElement
+
+	mission:Function extendsAspect RealizedElement
+
+	mission:Interface extendsAspect DevelopedElement
+
+	mission:Interface extendsAspect RealizedElement
+
+	mission:Junction extendsAspect RealizedElement
+
+	mission:Mission extendsAspect RealizedElement
+
+	mission:Mission extendsAspect SuppliedElement
+
+	mission:Objective extendsAspect base:IdentifiedElement
+
+	Approves extendsAspect analysis:AnalyzedElement
+
+	Approves extendsAspect analysis:CharacterizedElement
+
+	AssignedElement extendsAspect analysis:AnalyzedElement
+
+	AssignedElement extendsAspect analysis:CharacterizedElement
+
+	Authorizes extendsAspect analysis:AnalyzedElement
+
+	Authorizes extendsAspect analysis:CharacterizedElement
+
+	BelongsTo extendsAspect analysis:AnalyzedElement
+
+	BelongsTo extendsAspect analysis:CharacterizedElement
+
+	Binds extendsAspect analysis:AnalyzedElement
+
+	Binds extendsAspect analysis:CharacterizedElement
+
+	Concern extendsAspect analysis:MeasuredElement
+
+	Concern extendsAspect base:AggregatedElement
+
+	Concern extendsAspect base:IdentifiedElement
+
+	Concurs extendsAspect analysis:AnalyzedElement
+
+	Concurs extendsAspect analysis:CharacterizedElement
+
+	DelegatesTo extendsAspect analysis:AnalyzedElement
+
+	DelegatesTo extendsAspect analysis:CharacterizedElement
+
+	Deliverable extendsAspect base:IdentifiedElement
+
+	Delivers extendsAspect analysis:AnalyzedElement
+
+	Delivers extendsAspect analysis:CharacterizedElement
+
+	Delivers extendsAspect AssignedElement
+
+	Describes extendsAspect analysis:AnalyzedElement
+
+	Describes extendsAspect analysis:CharacterizedElement
+
+	DevelopedElement extendsAspect analysis:AnalyzedElement
+
+	DevelopedElement extendsAspect analysis:CharacterizedElement
+
+	DevelopedElement extendsAspect AssignedElement
+
+	Executes extendsAspect mission:SpecifiedElement
+
+	Executes extendsAspect AssignedElement
+
+	Facility extendsAspect base:IdentifiedElement
+
+	Facility extendsAspect DevelopedElement
+
+	HasAssignment extendsAspect analysis:AnalyzedElement
+
+	HasAssignment extendsAspect analysis:CharacterizedElement
+
+	HasParticipant extendsAspect analysis:AnalyzedElement
+
+	HasParticipant extendsAspect analysis:CharacterizedElement
+
+	HasResponsibilityFor extendsAspect analysis:AnalyzedElement
+
+	HasResponsibilityFor extendsAspect analysis:CharacterizedElement
+
+	HasRole extendsAspect analysis:AnalyzedElement
+
+	HasRole extendsAspect analysis:CharacterizedElement
+
+	Interchange extendsAspect base:IdentifiedElement
+
+	InterchangePoint extendsAspect base:IdentifiedElement
+
+	InterchangesThrough extendsAspect analysis:AnalyzedElement
+
+	InterchangesThrough extendsAspect analysis:CharacterizedElement
+
+	Invokes extendsAspect analysis:AnalyzedElement
+
+	Invokes extendsAspect analysis:CharacterizedElement
+
+	Involves extendsAspect analysis:AnalyzedElement
+
+	Involves extendsAspect analysis:CharacterizedElement
+
+	Manifests extendsAspect analysis:AnalyzedElement
+
+	Manifests extendsAspect analysis:CharacterizedElement
+
+	Organization extendsAspect analysis:AnalyzedElement
+
+	Organization extendsAspect analysis:CharacterizedElement
+
+	Person extendsAspect base:IdentifiedElement
+
+	Policy extendsAspect analysis:AnalyzedElement
+
+	Policy extendsAspect analysis:CharacterizedElement
+
+	Prepares extendsAspect analysis:AnalyzedElement
+
+	Prepares extendsAspect analysis:CharacterizedElement
+
+	Process extendsAspect base:IdentifiedElement
+
+	Process extendsAspect AssignedElement
+
+	Process extendsAspect RealizedElement
+
+	Produces extendsAspect analysis:AnalyzedElement
+
+	Produces extendsAspect analysis:CharacterizedElement
+
+	Product extendsAspect base:AggregatedElement
+
+	Product extendsAspect base:IdentifiedElement
+
+	Product extendsAspect DevelopedElement
+
+	Product extendsAspect SuppliedElement
+
+	Project extendsAspect RealizedElement
+
+	RealizedElement extendsAspect analysis:AnalyzedElement
+
+	RealizedElement extendsAspect analysis:CharacterizedElement
+
+	Realizes extendsAspect analysis:AnalyzedElement
+
+	Realizes extendsAspect analysis:CharacterizedElement
+
+	Receives extendsAspect analysis:AnalyzedElement
+
+	Receives extendsAspect analysis:CharacterizedElement
+
+	Receives extendsAspect AssignedElement
+
+	ReliesOn extendsAspect analysis:AnalyzedElement
+
+	ReliesOn extendsAspect analysis:CharacterizedElement
+
+	ReliesOn extendsAspect AssignedElement
+
+	Represents extendsAspect analysis:AnalyzedElement
+
+	Represents extendsAspect analysis:CharacterizedElement
+
+	Role extendsAspect base:IdentifiedElement
+
+	Stakeholder extendsAspect base:IdentifiedElement
+
+	SuppliedElement extendsAspect analysis:AnalyzedElement
+
+	SuppliedElement extendsAspect analysis:CharacterizedElement
+
+	Supplies extendsAspect analysis:AnalyzedElement
+
+	Supplies extendsAspect analysis:CharacterizedElement
+
+	Supplies extendsAspect AssignedElement
+
+	WorkPackage extendsAspect RealizedElement
+
+	scalar date
+
+	@dc:description="""A <classname>ScheduledElement</classname> <replaceable>e</replaceable>  <property>isRequiredNotLaterThan</property> <replaceable>d</replaceable> if and only if <replaceable>e</replaceable> must be completed or achieved no later than <replaceable>d</replaceable>."""
+	@rdfs:label="""is required not later than"""
+	entityScalarDataProperty + isRequiredNotLaterThan {
+		domain Deliverable
+		range date
+	}
+
+	allEntities mission:Component . isRealizedBy in mission:Component
+
+	allEntities mission:Component . realizes in mission:Component
+
+	allEntities mission:Component . isSuppliedBy in WorkPackage
+
+	allEntities mission:Function . realizes in mission:Function
+
+	allEntities mission:Function . isRealizedBy in mission:Function
+
+	allEntities mission:Interface . isRealizedBy in mission:Interface
+
+	allEntities mission:Interface . realizes in mission:Interface
+
+	allEntities mission:Junction . isRealizedBy in mission:Junction
+
+	allEntities mission:Junction . realizes in mission:Junction
+
+	allEntities mission:Mission . realizes in mission:Mission
+
+	allEntities mission:Mission . isRealizedBy in mission:Mission
+
+	allEntities mission:Mission . isSuppliedBy in Project
+
+	allEntities Concern . base:isAggregatedIn in Concern
+
+	allEntities Concern . base:aggregates in Concern
+
+	allEntities DevelopmentState . analysis:characterizes in DevelopedElement
+
+	allEntities Process . isRealizedBy in Process
+
+	allEntities Process . realizes in Process
+
+	allEntities Product . base:aggregates in Product
+
+	allEntities Product . base:isAggregatedIn in Product
+
+	allEntities Project . realizes in Project
+
+	allEntities Project . isRealizedBy in Project
+
+	allEntities Project . supplies in mission:Mission
+
+	allEntities WorkPackage . realizes in WorkPackage
+
+	allEntities WorkPackage . isRealizedBy in WorkPackage
+
+	allEntities WorkPackage . supplies in mission:Component
+
+}

@@ -1,0 +1,145 @@
+@dc:date="""$Date$"""
+@owl:versionInfo="""$Revision$"""
+@dc:rights="""Copyright 2010-2014, by the California Institute of Technology. ALL RIGHTS
+   RESERVED. United States Government Sponsorship acknowledged. Any commercial
+   California Institute of Technology. This software may be subject to U.S.
+   export control laws. By accepting this software, the user agrees to comply
+   with all applicable U.S. export laws and regulations. User has the
+   responsibility to obtain export licenses, or other export authority as may be
+   required before exporting such information to foreign countries or providing
+   access to foreign persons."""
+open terminology <http://imce.jpl.nasa.gov/foundation/mission/mission-embedding> {
+
+	extends <http://imce.jpl.nasa.gov/foundation/base/base-embedding>
+
+	extends <http://imce.jpl.nasa.gov/foundation/mission/mission>
+
+	mission:Environment extendsConcept SysML-metamodel:Component.Block
+
+	mission:Flow extendsConcept SysML-metamodel:Class.Block
+
+	mission:Function extendsConcept SysML-metamodel:Component.Block
+
+	mission:InterchangePoint extendsConcept SysML-metamodel:Component.Block
+
+	mission:Interface extendsConcept SysML-metamodel:Class.Block.InterfaceBlock
+
+	mission:Item extendsConcept SysML-metamodel:Class.Block
+
+	mission:Objective extendsConcept SysML-metamodel:Component.Block
+
+	mission:Product extendsConcept SysML-metamodel:Component.Block
+
+	mission:Requirement extendsConcept SysML-metamodel:Component.Requirement
+
+	mission:Deploys extendsRelationship owl2-mof2:BinaryReferenceAssociation
+
+	mission:Emits extendsRelationship owl2-mof2:StructuralOutFlowPropertyRelationship
+
+	mission:HasParticipant extendsRelationship owl2-mof2:StructuralInOutFlowPropertyRelationship
+
+	mission:Induces extendsRelationship owl2-mof2:BinaryDependency
+
+	mission:Influences extendsRelationship owl2-mof2:BinaryDependency
+
+	mission:Ingests extendsRelationship owl2-mof2:StructuralInFlowPropertyRelationship
+
+	mission:InterchangesThrough extendsRelationship owl2-mof2:StructuralFullPortRelationship
+
+	mission:Invokes extendsRelationship owl2-mof2:BinaryCompositeAssociation
+
+	mission:Involves extendsRelationship owl2-mof2:BinaryAssociationBlockEnd
+
+	mission:Involves1 extendsRelationship owl2-mof2:BinaryAssociationBlockEnd1
+
+	mission:Involves2 extendsRelationship owl2-mof2:BinaryAssociationBlockEnd2
+
+	mission:IsTraversedBy extendsRelationship owl2-mof2:StructuralInOutFlowPropertyRelationship
+
+	mission:Joins extendsRelationship owl2-mof2:BinaryAssociationBlockEnd
+
+	mission:Joins1 extendsRelationship owl2-mof2:BinaryAssociationBlockEnd1
+
+	mission:Joins2 extendsRelationship owl2-mof2:BinaryAssociationBlockEnd2
+
+	mission:Performs extendsRelationship owl2-mof2:BinaryCompositeAssociation
+
+	mission:Presents extendsRelationship owl2-mof2:StructuralFullPortRelationship
+
+	mission:Produces extendsRelationship owl2-mof2:BinaryDependency
+
+	mission:Pursues extendsRelationship owl2-mof2:BinaryDependency
+
+	mission:Receives extendsRelationship owl2-mof2:StructuralInFlowPropertyRelationship
+
+	mission:Refines extendsRelationship owl2-mof2:BinaryDependency
+
+	mission:Sends extendsRelationship owl2-mof2:StructuralOutFlowPropertyRelationship
+
+	mission:Specifies extendsRelationship owl2-mof2:BinaryDependency
+
+	mission:Transfers extendsRelationship owl2-mof2:StructuralFlowPropertyRelationship
+
+	mission:TransfersIn extendsRelationship owl2-mof2:StructuralInFlowPropertyRelationship
+
+	mission:TransfersOut extendsRelationship owl2-mof2:StructuralOutFlowPropertyRelationship
+
+	mission:Environment extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	mission:Function extendsAspect owl2-mof2:BinaryAssociationEndType
+
+	mission:Function extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	mission:Function extendsAspect owl2-mof2:StructuralFullPortEncapsulatedClassifierType
+
+	mission:Interchange extendsAspect owl2-mof2:BinaryAssociationBlock
+
+	mission:Interchange extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	mission:Interchange extendsAspect owl2-mof2:StructuralFlowPropertyContainerType
+
+	mission:InterchangePoint extendsAspect owl2-mof2:BinaryAssociationEndType
+
+	mission:InterchangePoint extendsAspect owl2-mof2:StructuralFlowPropertyContainerType
+
+	mission:InterchangePoint extendsAspect owl2-mof2:StructuralFullPortType
+
+	mission:InterchangesThrough extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	mission:Interface extendsAspect owl2-mof2:BinaryAssociationEndType
+
+	mission:Interface extendsAspect owl2-mof2:StructuralFlowPropertyContainerType
+
+	mission:Interface extendsAspect owl2-mof2:StructuralFullPortType
+
+	mission:Junction extendsAspect owl2-mof2:BinaryAssociationBlock
+
+	mission:Junction extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	mission:Junction extendsAspect owl2-mof2:StructuralFlowPropertyContainerType
+
+	mission:Objective extendsAspect owl2-mof2:BinaryAssociationEndType
+
+	mission:Objective extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	mission:PerformingElement extendsAspect SysML:Block
+
+	mission:PerformingElement extendsAspect owl2-mof2:BinaryAssociationEndType
+
+	mission:PerformingElement extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	mission:PerformingElement extendsAspect owl2-mof2:StructuralFullPortEncapsulatedClassifierType
+
+	mission:PresentingElement extendsAspect owl2-mof2:StructuralFullPortEncapsulatedClassifierType
+
+	mission:Product extendsAspect owl2-mof2:BinaryAssociationEndType
+
+	mission:Product extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	mission:Requirement extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	mission:SpecifiedElement extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	mission:TraversingElement extendsAspect owl2-mof2:StructuralFlowPropertyType
+
+}

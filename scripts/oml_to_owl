@@ -1,0 +1,14 @@
+#!/bin/bash
+
+CONVERT=$HOME/Downloads/OMLConverters/bin/omlConverter
+INPUT_OML=converted-oml
+CONVERTED_OWL=converted-owl
+CATALOG=oml.catalog.xml
+
+if [ ! -f build.sbt ]
+then
+    echo "run in project root" 1>&2
+    exit 1
+fi
+
+$CONVERT text $INPUT_OML/$CATALOG --output $CONVERTED_OWL --owl --clear

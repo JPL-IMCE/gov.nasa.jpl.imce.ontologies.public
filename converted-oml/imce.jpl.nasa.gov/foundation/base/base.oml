@@ -1,0 +1,143 @@
+@dc:title="""Base Ontology"""
+@dc:type="""Foundation"""
+@dc:description="""The Base Ontology defines foundation concepts that are common to multiple specialized ontologies."""
+@dc:rights="""Copyright 2010-2014, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
+
+This software may be subject to U.S. export control laws. By accepting this software, the user agrees to comply with all applicable U.S. export laws and regulations. User has the responsibility to obtain export licenses, or other export authority as may be required before exporting such information to foreign countries or providing access to foreign persons."""
+@owl:versionInfo="""$Revision$"""
+@dc:creator="""Systems Engineering & Formulation Division"""
+@dc:date="""$Date$"""
+open terminology <http://imce.jpl.nasa.gov/foundation/base/base> {
+
+	extends <http://imce.jpl.nasa.gov/foundation/annotation/annotation>
+
+	@dc:description="""<para>An <classname>AggregatedElement</classname> is any model element that may have the <property>isAggregatedIn</property> property with some other model element.
+</para><para>
+Aggregation is a non-hierarchical relationship appropriate for elements such as <classname>mission:Environment</classname>s, <classname>mission:Objective</classname>s, and <classname>project:Product</classname>s.
+</para>"""
+	@rdfs:label="""Aggregated Element"""
+	aspect AggregatedElement
+
+	@dc:description="""A <classname>ContainedElement</classname> is an object that may be contained in a single <classname>Container</classname>."""
+	@rdfs:label="""Contained Element"""
+	aspect ContainedElement
+
+	@dc:description="""A <classname>Container</classname> is an element that may contain zero or more <classname>ContainedElement</classname>. The notion of <emphasis>containment</emphasis> is general; it is specialized for more particular applications in other ontologies."""
+	@rdfs:label="""Container"""
+	aspect Container
+
+	@dc:description="""A <classname>IdentifiedElement</classname> is an object that has a
+	    unique identifier and a canonical name. In addition, the object may have multiple alternate names, abbreviations, and index entries."""
+	@rdfs:label="""Identified Element"""
+	aspect IdentifiedElement
+
+	@dc:description="""A <classname>Package</classname> groups an arbitrary collection of model elements."""
+	@rdfs:label="""Package"""
+	concept Package
+
+	@dc:description="""An <classname>AggregatedElement</classname> <replaceable>e</replaceable> <property>aggregates</property> zero or more elements of compatible type if and only if <replaceable>e</replaceable> references or subsumes  those other elements."""
+	@dc:description="""See <property>aggregates</property>."""
+	@oml:hasInverseLabel="""is aggregated in"""
+	@oml:hasPropertyLabel="""aggregates"""
+	@oml:hasReificationLabel="""Aggregates"""
+	reifiedRelationship Aggregates {
+		asymmetric
+		irreflexive
+		unreified = aggregates
+		inverse = isAggregatedIn
+		source = AggregatedElement
+		target = AggregatedElement }
+
+	@dc:description="""The <property>isContainedIn</property> property is used to relate classes that can be composed into a strict hierarchy. An element <property>isContainedIn</property> at most one parent element."""
+	@dc:description="""A
+<classname>Container</classname>
+<replaceable>c<subscript>1</subscript></replaceable>
+<property>contains</property>
+another
+<classname>ContainedElement</classname>
+<replaceable>e<subscript>2</subscript></replaceable>
+if and only if
+<classname>ContainedElement</classname>
+<replaceable>e<subscript>2</subscript></replaceable>
+is incorporated within or otherwise a part of
+<classname>Container</classname>
+<replaceable>c<subscript>1</subscript></replaceable>
+and no (directly) any other <classname>Container</classname>."""
+	@oml:hasInverseLabel="""is contained in"""
+	@oml:hasPropertyLabel="""contains"""
+	@oml:hasReificationLabel="""Contains"""
+	reifiedRelationship Contains {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = contains
+		inverse = isContainedIn
+		source = Container
+		target = ContainedElement }
+
+	Package extendsAspect IdentifiedElement
+
+	@dc:description="""The <property>hasAlternateName</property> property relates an <classname>IdentifiedElement</classname> to zero or more alternate names. Alternate names need not be unique."""
+	@rdfs:label="""has alternate name"""
+	entityScalarDataProperty hasAlternateName {
+		domain IdentifiedElement
+		range XMLSchema:string
+	}
+
+	@dc:description="""The <property>hasCanonicalName</property> property relates an <classname>IdentifiedElement</classname> to zero or one canonical names. Canonical names need not be unique."""
+	@rdfs:label="""has canonical name"""
+	entityScalarDataProperty + hasCanonicalName {
+		domain IdentifiedElement
+		range XMLSchema:string
+	}
+
+	@dc:description="""The <property>hasContainmentIndex</property> indicates the unique position of a <classname>ContainedElement</classname> in a tree of <property>contains</property> relationships."""
+	@rdfs:label="""has containment index"""
+	entityScalarDataProperty + hasContainmentIndex {
+		domain ContainedElement
+		range XMLSchema:string
+	}
+
+	@dc:description="""The <property>hasDescription</property> property relates an <classname>IdentifiedElement</classname> to zero or one text descriptions."""
+	@rdfs:label="""has description"""
+	entityScalarDataProperty + hasDescription {
+		domain IdentifiedElement
+		range XMLSchema:string
+	}
+
+	@dc:description="""The <property>hasIdentifier</property> property relates an <classname>IdentifiedElement</classname> to zero or more identifiers. An identifier should belong uniquely to an <classname>IdentifiedElement</classname> in some context."""
+	@rdfs:label="""has identifier"""
+	entityScalarDataProperty hasIdentifier {
+		domain IdentifiedElement
+		range XMLSchema:string
+	}
+
+	@dc:description="""The <property>hasIndexEntry</property> property relates an <classname>IdentifiedElement</classname> to zero or one terms under which it would be indexed in a document."""
+	@rdfs:label="""has index entry"""
+	entityScalarDataProperty hasIndexEntry {
+		domain IdentifiedElement
+		range XMLSchema:string
+	}
+
+	@dc:description="""The <property>hasShortName</property> property relates an <classname>IdentifiedElement</classname> to zero or more short names. Short names need not be unique."""
+	@rdfs:label="""has short name"""
+	entityScalarDataProperty + hasShortName {
+		domain IdentifiedElement
+		range XMLSchema:string
+	}
+
+	@dc:description="""The <property>hasSortKey</property> property relates an <classname>IdentifiedElement</classname> to zero or one string-valued keys that may be used to establish its order in a sorted collection."""
+	@rdfs:label="""has sort key"""
+	entityScalarDataProperty + hasSortKey {
+		domain IdentifiedElement
+		range XMLSchema:string
+	}
+
+	@dc:description="""The <property>hasUuid</property> property relates an <classname>IdentifiedElement</classname> to zero or one Universally Unique Identifier as defined by RFC 4122, expressed as a string."""
+	@rdfs:label="""has uuid"""
+	entityScalarDataProperty + hasUuid {
+		domain IdentifiedElement
+		range XMLSchema:string
+	}
+
+}
