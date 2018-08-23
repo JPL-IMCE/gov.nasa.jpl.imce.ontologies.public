@@ -36,7 +36,7 @@
      xmlns:Metrology="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-bundle">
-        <owl:versionInfo rdf:datatype="&xsd;string">2018-08-21 15:00:15 -0700</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="&xsd;string">2018-07-23 08:00:51 -0700</owl:versionInfo>
         <rdfs:comment rdf:datatype="&xsd;string">created by close-tbox-bundle</rdfs:comment>
         <owl:imports rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes"/>
         <owl:imports rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/PrimitiveTypes/20110701/PrimitiveTypes-metamodel"/>
@@ -1504,49 +1504,44 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#BroadcastSignalAction.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#BroadcastSignalAction.InvocationOnNestedPortAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#BroadcastSignalAction.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeExpression.MeasurementUncertainty"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeExpression.QuantityValueSpecification"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#TimeExpression.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#TimeExpression.RequirementRelated"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#StateMachine.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#StateMachine.Block"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#StateMachine.ControlOperator"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#StateMachine.RequirementRelated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#StateMachine.TestCase"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#StateMachine.Viewpoint"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#StateMachine.Auxiliary"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#StateMachine.Focus"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#StateMachine.ImplementationClass"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#StateMachine.Metaclass"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#StateMachine.Realization"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#StateMachine.Specification"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#StateMachine.Type"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#StateMachine.Utility"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#OpaqueExpression.MeasurementUncertainty"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#OpaqueExpression.QuantityValueSpecification"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#OpaqueExpression.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#OpaqueExpression.RequirementRelated"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeInterval.MeasurementUncertainty"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeInterval.QuantityValueSpecification"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#TimeInterval.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#TimeInterval.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Substitution.Trace.Copy"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Substitution.Trace.DeriveReqt"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Substitution.Trace.Satisfy"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Substitution.Trace.Verify"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Substitution.Allocate"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Substitution.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Substitution.Conform"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Substitution.RequirementRelated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Substitution.Derive"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Substitution.Refine"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Substitution.Trace"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#AcceptCallAction.AcceptChangeStructuralFeatureEventAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#AcceptCallAction.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#AcceptCallAction.RequirementRelated"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Dependency.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Dependency.Conform"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Dependency.RequirementRelated"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -1557,47 +1552,6 @@
             <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InformationItem.RequirementRelated"/>
             <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#InformationItem.Realization"/>
             <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#InformationItem.Specification"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ActionInputPin.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ActionInputPin.NoBuffer"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ActionInputPin.Overwrite"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ActionInputPin.RequirementRelated"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Manifestation.Allocate"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Manifestation.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Manifestation.Conform"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Manifestation.RequirementRelated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Manifestation.Derive"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Manifestation.Refine"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Manifestation.Trace"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#SendObjectAction.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#SendObjectAction.InvocationOnNestedPortAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#SendObjectAction.RequirementRelated"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ComponentRealization.Allocate"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ComponentRealization.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ComponentRealization.Conform"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ComponentRealization.RequirementRelated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#ComponentRealization.Derive"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#ComponentRealization.Refine"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#ComponentRealization.Trace"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -1950,6 +1904,14 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#ConversionBasedUnit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#DerivedUnit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SimpleUnit"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InterfaceRealization.Allocate"/>
             <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InterfaceRealization.Allocated"/>
             <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InterfaceRealization.Conform"/>
@@ -1962,248 +1924,103 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#AcceptCallAction.AcceptChangeStructuralFeatureEventAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#AcceptCallAction.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#AcceptCallAction.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ActivityParameterNode.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ActivityParameterNode.NoBuffer"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ActivityParameterNode.Overwrite"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ActivityParameterNode.RequirementRelated"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Substitution.Trace.Copy"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Substitution.Trace.DeriveReqt"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Substitution.Trace.Satisfy"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Substitution.Trace.Verify"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#CallBehaviorAction.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#CallBehaviorAction.InvocationOnNestedPortAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#CallBehaviorAction.RequirementRelated"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#OpaqueExpression.MeasurementUncertainty"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#OpaqueExpression.QuantityValueSpecification"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#OpaqueExpression.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#OpaqueExpression.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ComponentRealization.Trace.Copy"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ComponentRealization.Trace.DeriveReqt"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ComponentRealization.Trace.Satisfy"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ComponentRealization.Trace.Verify"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Package.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Package.RequirementRelated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Package.View"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Package.Framework"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Package.ModelLibrary"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ControlFlow.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ControlFlow.Probability"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ControlFlow.Rate"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ControlFlow.RequirementRelated"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Realization.Allocate"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Realization.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Realization.Conform"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Realization.RequirementRelated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Realization.Derive"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Realization.Refine"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Realization.Trace"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#StateMachine.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#StateMachine.Block"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#StateMachine.ControlOperator"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#StateMachine.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#StateMachine.TestCase"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#StateMachine.Viewpoint"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#StateMachine.Auxiliary"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#StateMachine.Focus"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#StateMachine.ImplementationClass"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#StateMachine.Metaclass"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#StateMachine.Realization"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#StateMachine.Specification"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#StateMachine.Type"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#StateMachine.Utility"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ObjectFlow.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ObjectFlow.Probability"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ObjectFlow.Rate"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ObjectFlow.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Duration.MeasurementUncertainty"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Duration.QuantityValueSpecification"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Duration.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Duration.RequirementRelated"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Interval.MeasurementUncertainty"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Interval.QuantityValueSpecification"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Interval.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Interval.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#OpaqueBehavior.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#OpaqueBehavior.Block"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#OpaqueBehavior.ControlOperator"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#OpaqueBehavior.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#OpaqueBehavior.TestCase"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#OpaqueBehavior.Viewpoint"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#OpaqueBehavior.Auxiliary"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#OpaqueBehavior.Focus"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#OpaqueBehavior.ImplementationClass"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#OpaqueBehavior.Metaclass"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#OpaqueBehavior.Realization"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#OpaqueBehavior.Specification"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#OpaqueBehavior.Type"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#OpaqueBehavior.Utility"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Actor.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Actor.PropertySpecificType"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Actor.RequirementRelated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Actor.Realization"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Actor.Specification"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Signal.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Signal.PropertySpecificType"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Signal.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Signal.Realization"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Signal.Specification"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ExpansionNode.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ExpansionNode.NoBuffer"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ExpansionNode.Overwrite"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ExpansionNode.RequirementRelated"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_outputValue_opaqueAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_acceptEventAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_callAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_clearStructuralFeatureAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_createLinkObjectAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_createObjectAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_readExtentAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_readIsClassifiedObjectAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_readLinkAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_readLinkObjectEndAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_readLinkObjectEndQualifierAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_readSelfAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_readStructuralFeatureAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_readVariableAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_reduceAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_testIdentityAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_unmarshallAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_valueSpecificationAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_writeStructuralFeatureAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_returnInformation_acceptCallAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_structuredNodeOutput_structuredActivityNode"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Connector.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Connector.BindingConnector"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Connector.RequirementRelated"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#ElementValue.MeasurementUncertainty"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#ElementValue.QuantityValueSpecification"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ElementValue.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ElementValue.RequirementRelated"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_nestedPackage_nestingPackage"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_ownedStereotype_owningPackage"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_ownedType_package"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#StartObjectBehaviorAction.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#StartObjectBehaviorAction.InvocationOnNestedPortAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#StartObjectBehaviorAction.RequirementRelated"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#UseCase.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#UseCase.PropertySpecificType"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#UseCase.RequirementRelated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#UseCase.Realization"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#UseCase.Specification"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity.InfluenceQuantity"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity.InputQuantity"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity.Measurand"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Usage.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Usage.Conform"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Usage.RequirementRelated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Usage.Call"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Usage.Create"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Usage.Instantiate"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Usage.Responsibility"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Usage.Send"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Trigger.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Trigger.RequirementRelated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Trigger.TriggerOnNestedPort"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Manifestation.Trace.Copy"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Manifestation.Trace.DeriveReqt"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Manifestation.Trace.Satisfy"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Manifestation.Trace.Verify"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ChangeEvent.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ChangeEvent.ChangeStructuralFeatureEvent"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ChangeEvent.RequirementRelated"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeExpression.MeasurementUncertainty"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeExpression.QuantityValueSpecification"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#TimeExpression.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#TimeExpression.RequirementRelated"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Collaboration.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Collaboration.RequirementRelated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Collaboration.Realization"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Collaboration.Specification"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.Block"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.PropertySpecificType"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.Requirement"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.RequirementRelated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.Viewpoint"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Class.Auxiliary"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Class.Focus"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Class.ImplementationClass"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Class.Metaclass"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Class.Realization"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Class.Specification"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Class.Type"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Class.Utility"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Reception.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Reception.DirectedFeature"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Reception.RequirementRelated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Reception.Create"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Reception.Destroy"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_deployment_location"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_interfaceRealization_implementingClassifier"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_manifestation_artifact"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_realizingClassifier_componentRealization"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_substitution_substitutingClassifier"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -2228,17 +2045,31 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#InstanceSpecification.MeasurementResult"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InstanceSpecification.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InstanceSpecification.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InputPin.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InputPin.NoBuffer"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InputPin.Overwrite"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InputPin.RequirementRelated"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Deployment.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Deployment.Conform"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Deployment.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Substitution.Allocate"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Substitution.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Substitution.Conform"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Substitution.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Substitution.Derive"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Substitution.Refine"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Substitution.Trace"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#OutputPin.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#OutputPin.NoBuffer"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#OutputPin.Overwrite"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#OutputPin.RequirementRelated"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -2252,19 +2083,268 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Realization.Trace.Copy"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Realization.Trace.DeriveReqt"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Realization.Trace.Satisfy"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Realization.Trace.Verify"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#CommunicationPath.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#CommunicationPath.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#CommunicationPath.Realization"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#CommunicationPath.Specification"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#AffineConversionUnit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#GeneralConversionUnit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#LinearConversionUnit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#PrefixedUnit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Model.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Model.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Model.View"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Model.Framework"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Model.ModelLibrary"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Device.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Device.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Device.Viewpoint"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Device.Auxiliary"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Device.Focus"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Device.ImplementationClass"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Device.Metaclass"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Device.Realization"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Device.Specification"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Device.Type"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Device.Utility"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_bodyCondition_bodyContext"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_guard_transition"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_postCondition_owningTransition"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_postcondition_behavior"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_postcondition_postContext"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_precondition_behavior"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_precondition_preContext"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_stateInvariant_owningState"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Trigger.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Trigger.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Trigger.TriggerOnNestedPort"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#CentralBufferNode.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#CentralBufferNode.NoBuffer"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#CentralBufferNode.Overwrite"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#CentralBufferNode.RequirementRelated"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InformationFlow.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InformationFlow.ItemFlow"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InformationFlow.RequirementRelated"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#DurationInterval.MeasurementUncertainty"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#DurationInterval.QuantityValueSpecification"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#DurationInterval.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#DurationInterval.RequirementRelated"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#SendObjectAction.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#SendObjectAction.InvocationOnNestedPortAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#SendObjectAction.RequirementRelated"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Expression.MeasurementUncertainty"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Expression.QuantityValueSpecification"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Expression.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Expression.RequirementRelated"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ObjectFlow.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ObjectFlow.Probability"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ObjectFlow.Rate"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ObjectFlow.RequirementRelated"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#StringExpression.MeasurementUncertainty"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#StringExpression.QuantityValueSpecification"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#StringExpression.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#StringExpression.RequirementRelated"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeInterval.MeasurementUncertainty"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeInterval.QuantityValueSpecification"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#TimeInterval.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#TimeInterval.RequirementRelated"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Interface.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Interface.FlowSpecification"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Interface.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Interface.Realization"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Interface.Specification"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ValuePin.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ValuePin.NoBuffer"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ValuePin.Overwrite"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ValuePin.RequirementRelated"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Artifact.File.Document"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Artifact.File.Executable"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Artifact.File.Library"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Artifact.File.Script"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Artifact.File.Source"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity.InfluenceQuantity"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity.InputQuantity"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity.Measurand"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#DeploymentSpecification.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#DeploymentSpecification.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#DeploymentSpecification.Realization"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#DeploymentSpecification.Specification"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_nestedPackage_nestingPackage"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_ownedStereotype_owningPackage"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_ownedType_package"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Manifestation.Trace.Copy"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Manifestation.Trace.DeriveReqt"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Manifestation.Trace.Satisfy"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Manifestation.Trace.Verify"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Collaboration.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Collaboration.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Collaboration.Realization"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Collaboration.Specification"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Reception.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Reception.DirectedFeature"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Reception.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Reception.Create"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Reception.Destroy"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ActivityPartition.AllocateActivityPartition"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ActivityPartition.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ActivityPartition.RequirementRelated"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#AcceptEventAction.AcceptChangeStructuralFeatureEventAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#AcceptEventAction.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#AcceptEventAction.RequirementRelated"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_context_behavior"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_ownedTemplateSignature_classifier"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_redefinitionContext_region"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_redefinitionContext_state"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_redefinitionContext_transition"/>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_attribute_classifier"/>
+                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_memberEnd_association"/>
+                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_ownedMember_namespace"/>
+                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_role_structuredClassifier"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ExecutionEnvironment.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ExecutionEnvironment.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ExecutionEnvironment.Viewpoint"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#ExecutionEnvironment.Auxiliary"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#ExecutionEnvironment.Focus"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#ExecutionEnvironment.ImplementationClass"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#ExecutionEnvironment.Metaclass"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#ExecutionEnvironment.Realization"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#ExecutionEnvironment.Specification"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#ExecutionEnvironment.Type"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#ExecutionEnvironment.Utility"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ActionInputPin.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ActionInputPin.NoBuffer"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ActionInputPin.Overwrite"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ActionInputPin.RequirementRelated"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -2290,55 +2370,18 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#DataStoreNode.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#DataStoreNode.NoBuffer"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#DataStoreNode.Overwrite"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#DataStoreNode.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ChangeEvent.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ChangeEvent.ChangeStructuralFeatureEvent"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ChangeEvent.RequirementRelated"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#StringExpression.MeasurementUncertainty"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#StringExpression.QuantityValueSpecification"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#StringExpression.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#StringExpression.RequirementRelated"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_context_behavior"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_ownedTemplateSignature_classifier"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_redefinitionContext_region"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_redefinitionContext_state"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_redefinitionContext_transition"/>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_attribute_classifier"/>
-                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_memberEnd_association"/>
-                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_ownedMember_namespace"/>
-                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_role_structuredClassifier"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_contract_interfaceRealization"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_contract_substitution"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_deployedArtifact_deployment"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_realization_abstraction_component"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_utilizedElement_manifestation"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#ConversionBasedUnit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#DerivedUnit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SimpleUnit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#InstanceValue.MeasurementUncertainty"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#InstanceValue.QuantityValueSpecification"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InstanceValue.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InstanceValue.RequirementRelated"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -2361,122 +2404,44 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Dependency.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Dependency.Conform"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Dependency.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Component.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Component.Block"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Component.PropertySpecificType"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Component.Requirement"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Component.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Component.Viewpoint"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Component.Auxiliary"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Component.Entity"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Component.Focus"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Component.Implement"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Component.ImplementationClass"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Component.Metaclass"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Component.Process"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Component.Realization"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Component.Service"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Component.Specification"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Component.Subsystem"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Component.Type"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Component.Utility"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_extendedRegion_region"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_extendedSignature_redefinableTemplateSignature"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_redefinedClassifier_classifier"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_redefinedConnector_connector"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_redefinedEdge_activityEdge"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_redefinedNode_activityNode"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_redefinedOperation_operation"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_redefinedProperty_property"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_redefinedState_state"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_redefinedTransition_transition"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InterfaceRealization.Trace.Copy"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InterfaceRealization.Trace.DeriveReqt"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InterfaceRealization.Trace.Satisfy"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InterfaceRealization.Trace.Verify"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Device.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Device.RequirementRelated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Device.Viewpoint"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Device.Auxiliary"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Device.Focus"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Device.ImplementationClass"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Device.Metaclass"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Device.Realization"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Device.Specification"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Device.Type"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Device.Utility"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#DeploymentSpecification.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#DeploymentSpecification.RequirementRelated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#DeploymentSpecification.Realization"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#DeploymentSpecification.Specification"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_addition_include"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_appliedProfile_profileApplication"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_extendedCase_extend"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_generalMachine_protocolConformance"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_general_generalization"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_importedElement_elementImport"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_importedPackage_packageImport"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_informationTarget_informationFlow"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_mergedPackage_packageMerge"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_signature_templateBinding"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_supplier_supplierDependency"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#AcceptEventAction.AcceptChangeStructuralFeatureEventAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#AcceptEventAction.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#AcceptEventAction.RequirementRelated"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity.InfluenceQuantity"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity.InputQuantity"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity.Measurand"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ExecutionEnvironment.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ExecutionEnvironment.RequirementRelated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ExecutionEnvironment.Viewpoint"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#ExecutionEnvironment.Auxiliary"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#ExecutionEnvironment.Focus"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#ExecutionEnvironment.ImplementationClass"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#ExecutionEnvironment.Metaclass"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#ExecutionEnvironment.Realization"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#ExecutionEnvironment.Specification"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#ExecutionEnvironment.Type"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#ExecutionEnvironment.Utility"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ActivityPartition.AllocateActivityPartition"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ActivityPartition.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ActivityPartition.RequirementRelated"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#CallBehaviorAction.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#CallBehaviorAction.InvocationOnNestedPortAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#CallBehaviorAction.RequirementRelated"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#CommunicationPath.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#CommunicationPath.RequirementRelated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#CommunicationPath.Realization"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#CommunicationPath.Specification"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#UseCase.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#UseCase.PropertySpecificType"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#UseCase.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#UseCase.Realization"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#UseCase.Specification"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -2496,6 +2461,77 @@
             <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#FunctionBehavior.Specification"/>
             <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#FunctionBehavior.Type"/>
             <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#FunctionBehavior.Utility"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Manifestation.Allocate"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Manifestation.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Manifestation.Conform"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Manifestation.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Manifestation.Derive"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Manifestation.Refine"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Manifestation.Trace"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Abstraction.Trace.Copy"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Abstraction.Trace.DeriveReqt"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Abstraction.Trace.Satisfy"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Abstraction.Trace.Verify"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Activity.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Activity.Block"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Activity.ControlOperator"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Activity.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Activity.TestCase"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Activity.Viewpoint"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Activity.Auxiliary"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Activity.Focus"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Activity.ImplementationClass"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Activity.Metaclass"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Activity.Realization"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Activity.Specification"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Activity.Type"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Activity.Utility"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#InstanceSpecification.MeasurementResult"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InstanceSpecification.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InstanceSpecification.RequirementRelated"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ExpansionNode.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ExpansionNode.NoBuffer"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ExpansionNode.Overwrite"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ExpansionNode.RequirementRelated"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Property.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Property.ConnectorProperty"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Property.ConstraintProperty"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Property.DirectedFeature"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Property.DistributedProperty"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Property.FlowProperty"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Property.ParticipantProperty"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Property.RequirementRelated"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -2549,163 +2585,177 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Duration.MeasurementUncertainty"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Duration.QuantityValueSpecification"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Duration.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Duration.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#ElementValue.MeasurementUncertainty"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#ElementValue.QuantityValueSpecification"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ElementValue.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ElementValue.RequirementRelated"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ComponentRealization.Trace.Copy"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ComponentRealization.Trace.DeriveReqt"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ComponentRealization.Trace.Satisfy"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ComponentRealization.Trace.Verify"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Actor.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Actor.PropertySpecificType"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Actor.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Actor.Realization"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Actor.Specification"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_bodyCondition_bodyContext"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_guard_transition"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_postCondition_owningTransition"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_postcondition_behavior"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_postcondition_postContext"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_precondition_behavior"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_precondition_preContext"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_stateInvariant_owningState"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Parameter.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Parameter.Optional"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Parameter.Rate"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Parameter.RequirementRelated"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Property.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Property.ConnectorProperty"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Property.ConstraintProperty"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Property.DirectedFeature"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Property.DistributedProperty"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Property.FlowProperty"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Property.ParticipantProperty"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Property.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Abstraction.Allocate"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Abstraction.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Abstraction.Conform"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Abstraction.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Abstraction.Derive"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Abstraction.Refine"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Abstraction.Trace"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ControlFlow.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ControlFlow.Probability"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ControlFlow.Rate"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ControlFlow.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Dimension"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Prefix"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#QuantityKindFactor"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SystemOfQuantities"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SystemOfUnits"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#UnitFactor"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#QuantityKind"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Unit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.Block.ConstraintBlock"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.Block.InterfaceBlock"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Node.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Node.RequirementRelated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Node.Viewpoint"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Node.Auxiliary"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Node.Focus"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Node.ImplementationClass"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Node.Metaclass"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Node.Realization"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Node.Specification"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Node.Type"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Node.Utility"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#BroadcastSignalAction.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#BroadcastSignalAction.InvocationOnNestedPortAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#BroadcastSignalAction.RequirementRelated"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InformationFlow.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InformationFlow.ItemFlow"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InformationFlow.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.Block"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.PropertySpecificType"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.Requirement"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.Viewpoint"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Class.Auxiliary"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Class.Focus"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Class.ImplementationClass"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Class.Metaclass"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Class.Realization"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Class.Specification"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Class.Type"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Class.Utility"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Component.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Component.Block"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Component.PropertySpecificType"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Component.Requirement"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Component.RequirementRelated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Component.Viewpoint"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Component.Auxiliary"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Component.Entity"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Component.Focus"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Component.Implement"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Component.ImplementationClass"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Component.Metaclass"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Component.Process"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Component.Realization"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Component.Service"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Component.Specification"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Component.Subsystem"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Component.Type"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Component.Utility"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#SendSignalAction.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#SendSignalAction.InvocationOnNestedPortAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#SendSignalAction.RequirementRelated"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_argument_invocationAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_collection_reduceAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_exception_raiseExceptionAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_first_testIdentityAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_inputValue_linkAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_inputValue_opaqueAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_insertAt_addStructuralFeatureValueAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_insertAt_addVariableValueAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_object_clearAssociationAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_object_readIsClassifiedObjectAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_object_readLinkObjectEndAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_object_readLinkObjectEndQualifierAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_object_reclassifyObjectAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_object_startClassifierBehaviorAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_object_startObjectBehaviorAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_object_structuralFeatureAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_object_unmarshallAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_removeAt_removeStructuralFeatureValueAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_removeAt_removeVariableValueAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_replyValue_replyAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_returnInformation_replyAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_second_testIdentityAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_structuredNodeInput_structuredActivityNode"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_target_callOperationAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_target_destroyObjectAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_target_sendObjectAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_target_sendSignalAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_value_writeStructuralFeatureAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_value_writeVariableAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Operation.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Operation.ControlOperator"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Operation.DirectedFeature"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Operation.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Operation.TestCase"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Operation.Create"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Operation.Destroy"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#OutputPin.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#OutputPin.NoBuffer"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#OutputPin.Overwrite"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#OutputPin.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Usage.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Usage.Conform"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Usage.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Usage.Call"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Usage.Create"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Usage.Instantiate"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Usage.Responsibility"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Usage.Send"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ParameterSet.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ParameterSet.Probability"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ParameterSet.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity.InfluenceQuantity"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity.InputQuantity"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity.Measurand"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#InstanceValue.MeasurementUncertainty"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#InstanceValue.QuantityValueSpecification"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InstanceValue.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InstanceValue.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_outputValue_opaqueAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_acceptEventAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_callAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_clearStructuralFeatureAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_createLinkObjectAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_createObjectAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_readExtentAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_readIsClassifiedObjectAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_readLinkAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_readLinkObjectEndAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_readLinkObjectEndQualifierAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_readSelfAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_readStructuralFeatureAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_readVariableAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_reduceAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_testIdentityAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_unmarshallAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_valueSpecificationAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_result_writeStructuralFeatureAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_returnInformation_acceptCallAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_structuredNodeOutput_structuredActivityNode"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Association.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Association.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Association.Realization"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Association.Specification"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#StartObjectBehaviorAction.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#StartObjectBehaviorAction.InvocationOnNestedPortAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#StartObjectBehaviorAction.RequirementRelated"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_contract_interfaceRealization"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_contract_substitution"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_deployedArtifact_deployment"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_realization_abstraction_component"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_utilizedElement_manifestation"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -2728,101 +2778,36 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Abstraction.Trace.Copy"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Abstraction.Trace.DeriveReqt"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Abstraction.Trace.Satisfy"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Abstraction.Trace.Verify"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Interval.MeasurementUncertainty"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Interval.QuantityValueSpecification"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Interval.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Interval.RequirementRelated"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Association.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Association.RequirementRelated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Association.Realization"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Association.Specification"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Node.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Node.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Node.Viewpoint"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Node.Auxiliary"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Node.Focus"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Node.ImplementationClass"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Node.Metaclass"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Node.Realization"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Node.Specification"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Node.Type"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Node.Utility"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#CentralBufferNode.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#CentralBufferNode.NoBuffer"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#CentralBufferNode.Overwrite"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#CentralBufferNode.RequirementRelated"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Dimension"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Prefix"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#QuantityKindFactor"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SystemOfQuantities"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SystemOfUnits"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#UnitFactor"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#QuantityKind"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#Unit"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.Block.ConstraintBlock"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.Block.InterfaceBlock"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ValuePin.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ValuePin.NoBuffer"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ValuePin.Overwrite"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ValuePin.RequirementRelated"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InterfaceRealization.Trace.Copy"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InterfaceRealization.Trace.DeriveReqt"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InterfaceRealization.Trace.Satisfy"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InterfaceRealization.Trace.Verify"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#OpaqueBehavior.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#OpaqueBehavior.Block"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#OpaqueBehavior.ControlOperator"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#OpaqueBehavior.RequirementRelated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#OpaqueBehavior.TestCase"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#OpaqueBehavior.Viewpoint"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#OpaqueBehavior.Auxiliary"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#OpaqueBehavior.Focus"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#OpaqueBehavior.ImplementationClass"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#OpaqueBehavior.Metaclass"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#OpaqueBehavior.Realization"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#OpaqueBehavior.Specification"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#OpaqueBehavior.Type"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#OpaqueBehavior.Utility"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Operation.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Operation.ControlOperator"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Operation.DirectedFeature"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Operation.RequirementRelated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Operation.TestCase"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Operation.Create"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Operation.Destroy"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Parameter.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Parameter.Optional"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Parameter.Rate"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Parameter.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Artifact.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Artifact.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Artifact.File"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Artifact.Realization"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Artifact.Specification"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -2946,21 +2931,13 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Model.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Model.RequirementRelated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Model.View"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Model.Framework"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Model.ModelLibrary"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Artifact.File.Document"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Artifact.File.Executable"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Artifact.File.Library"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Artifact.File.Script"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Artifact.File.Source"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Realization.Allocate"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Realization.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Realization.Conform"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Realization.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Realization.Derive"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Realization.Refine"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Realization.Trace"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -2976,20 +2953,95 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Expression.MeasurementUncertainty"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Expression.QuantityValueSpecification"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Expression.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Expression.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_addition_include"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_appliedProfile_profileApplication"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_extendedCase_extend"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_generalMachine_protocolConformance"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_general_generalization"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_importedElement_elementImport"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_importedPackage_packageImport"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_informationTarget_informationFlow"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_mergedPackage_packageMerge"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_signature_templateBinding"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_supplier_supplierDependency"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_deployment_location"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_interfaceRealization_implementingClassifier"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_manifestation_artifact"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_realizingClassifier_componentRealization"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_substitution_substitutingClassifier"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Connector.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Connector.BindingConnector"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Connector.RequirementRelated"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Realization.Trace.Copy"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Realization.Trace.DeriveReqt"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Realization.Trace.Satisfy"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Realization.Trace.Verify"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_argument_invocationAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_collection_reduceAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_exception_raiseExceptionAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_first_testIdentityAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_inputValue_linkAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_inputValue_opaqueAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_insertAt_addStructuralFeatureValueAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_insertAt_addVariableValueAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_object_clearAssociationAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_object_readIsClassifiedObjectAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_object_readLinkObjectEndAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_object_readLinkObjectEndQualifierAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_object_reclassifyObjectAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_object_startClassifierBehaviorAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_object_startObjectBehaviorAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_object_structuralFeatureAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_object_unmarshallAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_removeAt_removeStructuralFeatureValueAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_removeAt_removeVariableValueAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_replyValue_replyAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_returnInformation_replyAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_second_testIdentityAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_structuredNodeInput_structuredActivityNode"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_target_callOperationAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_target_destroyObjectAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_target_sendObjectAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_target_sendSignalAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_value_writeStructuralFeatureAction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_value_writeVariableAction"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#DataStoreNode.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#DataStoreNode.NoBuffer"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#DataStoreNode.Overwrite"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#DataStoreNode.RequirementRelated"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Package.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Package.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Package.View"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Package.Framework"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Package.ModelLibrary"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ParameterSet.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ParameterSet.Probability"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ParameterSet.RequirementRelated"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -3014,97 +3066,45 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#SendSignalAction.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#SendSignalAction.InvocationOnNestedPortAction"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#SendSignalAction.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Deployment.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Deployment.Conform"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Deployment.RequirementRelated"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Activity.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Activity.Block"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Activity.ControlOperator"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Activity.RequirementRelated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Activity.TestCase"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Activity.Viewpoint"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Activity.Auxiliary"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Activity.Focus"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Activity.ImplementationClass"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Activity.Metaclass"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Activity.Realization"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Activity.Specification"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Activity.Type"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Activity.Utility"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_extendedRegion_region"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_extendedSignature_redefinableTemplateSignature"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_redefinedClassifier_classifier"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_redefinedConnector_connector"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_redefinedEdge_activityEdge"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_redefinedNode_activityNode"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_redefinedOperation_operation"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_redefinedProperty_property"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_redefinedState_state"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#A_redefinedTransition_transition"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Signal.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Signal.PropertySpecificType"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Signal.RequirementRelated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Signal.Realization"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Signal.Specification"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ComponentRealization.Allocate"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ComponentRealization.Allocated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ComponentRealization.Conform"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ComponentRealization.RequirementRelated"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#ComponentRealization.Derive"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#ComponentRealization.Refine"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#ComponentRealization.Trace"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Interface.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Interface.FlowSpecification"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Interface.RequirementRelated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Interface.Realization"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Interface.Specification"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InputPin.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InputPin.NoBuffer"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InputPin.Overwrite"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#InputPin.RequirementRelated"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Artifact.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Artifact.RequirementRelated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Artifact.File"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Artifact.Realization"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Artifact.Specification"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#DurationInterval.MeasurementUncertainty"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#DurationInterval.QuantityValueSpecification"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#DurationInterval.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#DurationInterval.RequirementRelated"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ActivityParameterNode.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ActivityParameterNode.NoBuffer"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ActivityParameterNode.Overwrite"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#ActivityParameterNode.RequirementRelated"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Abstraction.Allocate"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Abstraction.Allocated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Abstraction.Conform"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Abstraction.RequirementRelated"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Abstraction.Derive"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Abstraction.Refine"/>
-            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#Abstraction.Trace"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#AffineConversionUnit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#GeneralConversionUnit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#LinearConversionUnit"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#PrefixedUnit"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
