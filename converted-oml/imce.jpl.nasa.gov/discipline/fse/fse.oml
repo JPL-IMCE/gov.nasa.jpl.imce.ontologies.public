@@ -21,9 +21,6 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""Assembly"""
 	concept Assembly
 
-	@rdfs:label="""Bi-Directional Power Function"""
-	concept BiDirectionalPowerFunction
-
 	@rdfs:label="""Circuit"""
 	concept EndCircuit
 
@@ -36,30 +33,13 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""Function Description"""
 	concept FunctionDescription
 
-	@rdfs:label="""Power End Circuit"""
-	concept PowerEndCircuit
-
-	@rdfs:label="""Power Function"""
-	concept PowerFunction
-
-	@rdfs:label="""Power In End Circuit"""
-	concept PowerInEndCircuit
-
-	@rdfs:label="""Power Out End Circuit"""
-	concept PowerOutEndCircuit
-
 	@rdfs:label="""Power Switch Bank"""
 	concept PowerSwitchBank
 
 	@rdfs:label="""Subsystem"""
 	concept Subsystem
 
-	@rdfs:label="""Uni-Directional Power Function"""
-	concept UniDirectionalPowerFunction
-
 	Assembly extendsConcept mission:Component
-
-	BiDirectionalPowerFunction extendsConcept PowerFunction
 
 	EndCircuit extendsConcept mission:Interface
 
@@ -69,19 +49,9 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	FunctionDescription extendsConcept analysis:Characterization
 
-	PowerEndCircuit extendsConcept EndCircuit
-
-	PowerFunction extendsConcept Function
-
-	PowerInEndCircuit extendsConcept PowerEndCircuit
-
-	PowerOutEndCircuit extendsConcept PowerEndCircuit
-
 	PowerSwitchBank extendsConcept EndCircuitGroup
 
 	Subsystem extendsConcept mission:Component
-
-	UniDirectionalPowerFunction extendsConcept PowerFunction
 
 	@oml:hasPropertyLabel="""connects subsystem"""
 	@oml:hasReificationLabel="""Connects Subsystem"""
@@ -112,31 +82,9 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 		source = Function
 		target = Subsystem }
 
-	@oml:hasPropertyLabel="""joins Power In"""
-	@oml:hasReificationLabel="""Joins Power In"""
-	reifiedRelationship JoinsPowerIn {
-		asymmetric
-		irreflexive
-		unreified = joinsPowerIn
-		source = PowerFunction
-		target = PowerInEndCircuit }
-
-	@oml:hasPropertyLabel="""joins Power Out"""
-	@oml:hasReificationLabel="""Joins Power Out"""
-	reifiedRelationship JoinsPowerOut {
-		asymmetric
-		irreflexive
-		unreified = joinsPowerOut
-		source = PowerFunction
-		target = PowerOutEndCircuit }
-
 	ConnectsSubsystem1 extendsRelationship ConnectsSubsystem
 
 	ConnectsSubsystem2 extendsRelationship ConnectsSubsystem
-
-	JoinsPowerIn extendsRelationship mission:Joins2
-
-	JoinsPowerOut extendsRelationship mission:Joins1
 
 	Assembly extendsAspect EndCircuitPresentingElement
 
@@ -626,17 +574,7 @@ Interface EMI Characteristics & Redundancy
 
 	allEntities FunctionDescription . analysis:characterizes in Function
 
-	allEntities PowerEndCircuit . mission:isJoinedIn in PowerFunction
-
-	allEntities PowerFunction . mission:joins in PowerEndCircuit
-
-	allEntities PowerSwitchBank . mission:presents in PowerOutEndCircuit
-
 	allEntities Subsystem . base:aggregates in Assembly
-
-	allEntities UniDirectionalPowerFunction . mission:joins1 in PowerOutEndCircuit
-
-	allEntities UniDirectionalPowerFunction . mission:joins2 in PowerInEndCircuit
 
 	hasAssemblyAcronym subDataPropertyOf base:hasIdentifier
 
