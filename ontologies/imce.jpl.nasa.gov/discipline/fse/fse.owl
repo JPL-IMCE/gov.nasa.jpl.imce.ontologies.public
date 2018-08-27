@@ -467,6 +467,17 @@ This software may be subject to U.S. export control laws. By accepting this soft
     
 
 
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasEndCircuitLocalName -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasEndCircuitLocalName">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#hasAlternateName"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#EndCircuit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdAssembly1 -->
 
     <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdAssembly1">
@@ -1265,6 +1276,17 @@ Interface EMI Characteristics &amp; Redundancy
         <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerSwitchBank"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has switch bank identifer</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasSwitchBankLocalName -->
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasSwitchBankLocalName">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#hasAlternateName"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#PowerSwitchBank"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
