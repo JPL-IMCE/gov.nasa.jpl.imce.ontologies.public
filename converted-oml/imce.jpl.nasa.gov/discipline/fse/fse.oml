@@ -128,6 +128,12 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 		range XMLSchema:string
 	}
 
+	@rdfs:label="""has end circuit local name"""
+	entityScalarDataProperty + hasEndCircuitLocalName {
+		domain EndCircuit
+		range XMLSchema:string
+	}
+
 	@fse:hasFdColumnLabel="""Assembly 1"""
 	@rdfs:label="""has Fd Assembly1"""
 	entityScalarDataProperty + hasFdAssembly1 {
@@ -560,6 +566,12 @@ Interface EMI Characteristics & Redundancy
 		range XMLSchema:string
 	}
 
+	@rdfs:label="""has switch bank local name"""
+	entityScalarDataProperty + hasSwitchBankLocalName {
+		domain PowerSwitchBank
+		range XMLSchema:string
+	}
+
 	allEntities Assembly . base:isAggregatedIn in Subsystem
 
 	allEntities EndCircuit . mission:isJoinedIn in Function
@@ -575,6 +587,10 @@ Interface EMI Characteristics & Redundancy
 	allEntities FunctionDescription . analysis:characterizes in Function
 
 	allEntities Subsystem . base:aggregates in Assembly
+
+	hasEndCircuitLocalName subDataPropertyOf base:hasAlternateName
+
+	hasSwitchBankLocalName subDataPropertyOf base:hasAlternateName
 
 	hasAssemblyAcronym subDataPropertyOf base:hasIdentifier
 
