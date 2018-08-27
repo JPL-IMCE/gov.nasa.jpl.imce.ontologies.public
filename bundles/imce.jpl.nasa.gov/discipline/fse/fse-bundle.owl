@@ -170,7 +170,7 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:base="http://imce.jpl.nasa.gov/foundation/base/base#">
     <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse-bundle">
-        <owl:versionInfo rdf:datatype="&xsd;string">2018-08-27 09:41:41 -0700</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="&xsd;string">2018-08-27 15:47:31 -0700</owl:versionInfo>
         <rdfs:comment rdf:datatype="&xsd;string">created by close-tbox-bundle</rdfs:comment>
         <owl:imports rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse"/>
         <owl:imports rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project-bundle"/>
@@ -186,6 +186,34 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#BlockRedundancyExplanation -->
+
+    <rdf:Description rdf:about="&fault-management;BlockRedundancyExplanation">
+        <owl:disjointWith rdf:resource="&fault-management;FunctionalRedundancyExplanation"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#FaultContainmentRegion -->
+
+    <rdf:Description rdf:about="&fault-management;FaultContainmentRegion">
+        <owl:disjointWith rdf:resource="&fault-management;ProtectedRegion"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#FunctionalRedundancyExplanation -->
+
+    <rdf:Description rdf:about="&fault-management;FunctionalRedundancyExplanation"/>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#ProtectedRegion -->
+
+    <rdf:Description rdf:about="&fault-management;ProtectedRegion"/>
     
 
 
@@ -242,6 +270,76 @@
     <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#Limits -->
 
     <rdf:Description rdf:about="&analysis;Limits"/>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#Attribute -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Attribute">
+        <owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeConstraintParticipant"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeConstraintParticipant -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeConstraintParticipant"/>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#Parameter -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Parameter">
+        <owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#StateVariable"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#ParameterConstraintParticipant -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ParameterConstraintParticipant">
+        <owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#StateVariableConstraintParticipant"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#ParameterSurrogate -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ParameterSurrogate">
+        <owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#StateVariableSurrogate"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#Property -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Property">
+        <owl:disjointWith rdf:resource="http://imce.jpl.nasa.gov/foundation/behavior/behavior#PropertySurrogate"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#PropertySurrogate -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#PropertySurrogate"/>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#StateVariable -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#StateVariable"/>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#StateVariableConstraintParticipant -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#StateVariableConstraintParticipant"/>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#StateVariableSurrogate -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#StateVariableSurrogate"/>
     
 
 
@@ -326,9 +424,80 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&fault-management;CauseExplanation"/>
+            <rdf:Description rdf:about="&fault-management;InterconnectionExplanation"/>
+            <rdf:Description rdf:about="&fault-management;Likelihood"/>
+            <rdf:Description rdf:about="&fault-management;MissionImpact"/>
+            <rdf:Description rdf:about="&fault-management;RedundancyExplanation"/>
+            <rdf:Description rdf:about="&fault-management;Region"/>
+            <rdf:Description rdf:about="&fault-management;ViolationExplanation"/>
+            <rdf:Description rdf:about="&analysis;Analysis"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorRegion"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorState"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorTransition"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehaviorRegion"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehaviorState"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehaviorTransition"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&fse;FunctionDescription"/>
+            <rdf:Description rdf:about="&analysis;Assumption"/>
+            <rdf:Description rdf:about="&analysis;Explanation"/>
+            <rdf:Description rdf:about="&analysis;Quantity"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorCharacterization"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#PropertyGroup"/>
+            <rdf:Description rdf:about="&project;DevelopmentState"/>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeAutomaton"/>
+                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeConstraint"/>
+                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorClass"/>
+                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehaviorClass"/>
+                </owl:unionOf>
+            </owl:Class>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AutomatonRegion"/>
+                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AutomatonState"/>
+                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AutomatonTransition"/>
+                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorAutomatonElement"/>
+                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehaviorAutomatonElement"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&fault-management;PerformanceConstraint"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorAutomaton"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehaviorConstraint"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehaviorAutomaton"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehaviorConstraint"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="&project;Approves"/>
             <rdf:Description rdf:about="&project;Concurs"/>
             <rdf:Description rdf:about="&project;Prepares"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&project;Program"/>
+            <rdf:Description rdf:about="&project;Project"/>
+            <rdf:Description rdf:about="&project;WorkPackage"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -343,6 +512,19 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&fault-management;AppliesIn"/>
+            <rdf:Description rdf:about="&fault-management;Avoids"/>
+            <rdf:Description rdf:about="&fault-management;DetectionMechanism"/>
+            <rdf:Description rdf:about="&fault-management;Detects"/>
+            <rdf:Description rdf:about="&fault-management;Encompasses"/>
+            <rdf:Description rdf:about="&fault-management;IsAccomplishedBy"/>
+            <rdf:Description rdf:about="&fault-management;IsAssociatedWith"/>
+            <rdf:Description rdf:about="&fault-management;IsPerformedBy"/>
+            <rdf:Description rdf:about="&fault-management;IsValidFor"/>
+            <rdf:Description rdf:about="&fault-management;Mitigates"/>
+            <rdf:Description rdf:about="&fault-management;Mitigation"/>
+            <rdf:Description rdf:about="&fault-management;ModeContext"/>
+            <rdf:Description rdf:about="&fault-management;Prevention"/>
             <rdf:Description rdf:about="&fse;ConnectsSubsystem"/>
             <rdf:Description rdf:about="&analysis;Analyzes"/>
             <rdf:Description rdf:about="&analysis;Characterizes"/>
@@ -359,6 +541,22 @@
             <rdf:Description rdf:about="&base;Aggregates"/>
             <rdf:Description rdf:about="&base;Contains"/>
             <rdf:Description rdf:about="&base;Package"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AbstractValueTypedAttribute"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Constrains"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Exposes"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasAttribute"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasElementBehaviorClass"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasInteractionBehaviorClass"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasRegion"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasState"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#HasTransition"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Interaction"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionRole"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionTerminal"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#PlaysRoleOf"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Presents"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#References"/>
+            <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Uses"/>
             <rdf:Description rdf:about="&mission;Component"/>
             <rdf:Description rdf:about="&mission;Deploys"/>
             <rdf:Description rdf:about="&mission;Emits"/>
@@ -425,27 +623,11 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&analysis;Characterization"/>
+                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#ElementBehavior"/>
+                    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#InteractionBehavior"/>
                     <rdf:Description rdf:about="&project;Deliverable"/>
                 </owl:unionOf>
             </owl:Class>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&project;Program"/>
-            <rdf:Description rdf:about="&project;Project"/>
-            <rdf:Description rdf:about="&project;WorkPackage"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&fse;FunctionDescription"/>
-            <rdf:Description rdf:about="&analysis;Assumption"/>
-            <rdf:Description rdf:about="&analysis;Explanation"/>
-            <rdf:Description rdf:about="&analysis;Quantity"/>
-            <rdf:Description rdf:about="&project;DevelopmentState"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>

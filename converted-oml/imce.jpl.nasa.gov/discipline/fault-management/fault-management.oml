@@ -17,12 +17,6 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fault-management/fault-man
 	@rdfs:label="""Mode Dependent Item"""
 	aspect ModeDependentItem
 
-	@rdfs:label="""Redundancy Explanation"""
-	aspect RedundancyExplanation
-
-	@rdfs:label="""Region"""
-	aspect Region
-
 	@rdfs:label="""Block Redundancy Explanation"""
 	concept BlockRedundancyExplanation
 
@@ -64,10 +58,22 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fault-management/fault-man
 	@rdfs:label="""Protected Region"""
 	concept ProtectedRegion
 
+	@rdfs:label="""Redundancy Explanation"""
+	concept RedundancyExplanation
+
+	@rdfs:label="""Region"""
+	concept Region
+
 	@rdfs:label="""Violation Explanation"""
 	concept ViolationExplanation
 
+	BlockRedundancyExplanation extendsConcept RedundancyExplanation
+
 	CauseExplanation extendsConcept analysis:Explanation
+
+	FaultContainmentRegion extendsConcept Region
+
+	FunctionalRedundancyExplanation extendsConcept RedundancyExplanation
 
 	InterconnectionExplanation extendsConcept analysis:Explanation
 
@@ -78,6 +84,12 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fault-management/fault-man
 	PerformanceConstraint extendsConcept analysis:Characterization
 
 	PerformanceConstraint extendsConcept behavior:AttributeConstraint
+
+	ProtectedRegion extendsConcept Region
+
+	RedundancyExplanation extendsConcept analysis:Explanation
+
+	Region extendsConcept analysis:Explanation
 
 	ViolationExplanation extendsConcept analysis:Explanation
 
@@ -152,8 +164,6 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fault-management/fault-man
 
 	Avoids extendsAspect analysis:CharacterizedElement
 
-	BlockRedundancyExplanation extendsAspect RedundancyExplanation
-
 	CauseDependentItem extendsAspect analysis:AnalyzedElement
 
 	CauseDependentItem extendsAspect analysis:CharacterizedElement
@@ -173,10 +183,6 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fault-management/fault-man
 	FaultContainmentRegion extendsAspect base:ContainedElement
 
 	FaultContainmentRegion extendsAspect base:Container
-
-	FaultContainmentRegion extendsAspect Region
-
-	FunctionalRedundancyExplanation extendsAspect RedundancyExplanation
 
 	IsAccomplishedBy extendsAspect analysis:AnalyzedElement
 
@@ -214,8 +220,6 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fault-management/fault-man
 
 	Prevention extendsAspect ModeDependentItem
 
-	ProtectedRegion extendsAspect Region
-
 	unreifiedRelationship causes {
 		source = behavior:ElementBehavior
 		target = behavior:ElementBehavior }
@@ -230,7 +234,7 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fault-management/fault-man
 		source = behavior:ElementBehavior
 		target = PerformanceConstraint }
 
-	rule R19439 infers impairs
+	rule R48082 infers impairs
 	if behavior:ElementBehavior
 	&& analysis:isExplainedBy
 	&& ViolationExplanation
@@ -239,14 +243,14 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fault-management/fault-man
 	&& analysis:characterizes
 	&& mission:Function
 
-	rule R23065 infers violates
+	rule R79179 infers violates
 	if behavior:ElementBehavior
 	&& analysis:isExplainedBy
 	&& ViolationExplanation
 	&& analysis:analyzes
 	&& PerformanceConstraint
 
-	rule R51880 infers causes
+	rule R80924 infers causes
 	if behavior:ElementBehavior
 	&& analysis:isExplainedBy
 	&& CauseExplanation

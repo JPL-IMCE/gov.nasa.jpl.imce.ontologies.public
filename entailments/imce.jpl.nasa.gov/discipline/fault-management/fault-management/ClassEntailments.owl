@@ -8,6 +8,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#BlockRedundancyExplanation">
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#Aspect"/>
+    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fault-management/fault-management#Entity"/>
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fault-management/fault-management#Thing"/>
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#AnalyzedElement"/>
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#Aspect"/>
@@ -17,7 +18,6 @@
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#IdentifiedElement"/>
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#AggregatedElement"/>
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Explanation"/>
-    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fault-management/fault-management#Aspect"/>
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#Thing"/>
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#Entity"/>
@@ -45,6 +45,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#FunctionalRedundancyExplanation">
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#IdentifiedElement"/>
+    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fault-management/fault-management#Entity"/>
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#Thing"/>
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#Aspect"/>
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#Aspect"/>
@@ -57,7 +58,6 @@
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#FunctionalRedundancyExplanation"/>
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#Thing"/>
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Characterization"/>
-    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fault-management/fault-management#Aspect"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#CauseDependentItem">
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fault-management/fault-management#Thing"/>
@@ -170,10 +170,10 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#ProtectedRegion">
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#CharacterizedElement"/>
-    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#Entity"/>
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Explanation"/>
-    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fault-management/fault-management#Aspect"/>
+    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#Entity"/>
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Characterization"/>
+    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fault-management/fault-management#Entity"/>
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#Thing"/>
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#Thing"/>
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fault-management/fault-management#Thing"/>
@@ -214,7 +214,7 @@
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fault-management/fault-management#Thing"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management/ClassEntailments">
-    <owl:versionInfo>2018-08-23 16:29:29 -0700</owl:versionInfo>
+    <owl:versionInfo>2018-08-27 16:19:11 -0700</owl:versionInfo>
     <rdfs:comment>generated by entail</rdfs:comment>
     <owl:imports rdf:resource="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
@@ -253,7 +253,6 @@
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/base/base#AggregatedElement"/>
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#Thing"/>
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fault-management/fault-management#Thing"/>
-    <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fault-management/fault-management#Aspect"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fault-management/fault-management#IsValidFor">
     <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/analysis/analysis#Thing"/>
