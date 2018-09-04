@@ -53,6 +53,35 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	Subsystem extendsConcept mission:Component
 
+	@oml:hasPropertyLabel="""connects assembly"""
+	@oml:hasReificationLabel="""Connects Assembly"""
+	reifiedRelationship ConnectsAssembly {
+		asymmetric
+		irreflexive
+		unreified = connectsAssembly
+		source = Function
+		target = Assembly }
+
+	@oml:hasPropertyLabel="""connects assembly 1"""
+	@oml:hasReificationLabel="""Connects Assembly1"""
+	reifiedRelationship ConnectsAssembly1 {
+		functional
+		asymmetric
+		irreflexive
+		unreified = connectsAssembly1
+		source = Function
+		target = Assembly }
+
+	@oml:hasPropertyLabel="""connects assembly 2"""
+	@oml:hasReificationLabel="""Connects Assembly2"""
+	reifiedRelationship ConnectsAssembly2 {
+		functional
+		asymmetric
+		irreflexive
+		unreified = connectsAssembly2
+		source = Function
+		target = Assembly }
+
 	@oml:hasPropertyLabel="""connects subsystem"""
 	@oml:hasReificationLabel="""Connects Subsystem"""
 	reifiedRelationship ConnectsSubsystem {
@@ -81,6 +110,10 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 		unreified = connectsSubsystem2
 		source = Function
 		target = Subsystem }
+
+	ConnectsAssembly1 extendsRelationship ConnectsAssembly
+
+	ConnectsAssembly2 extendsRelationship ConnectsAssembly
 
 	ConnectsSubsystem1 extendsRelationship ConnectsSubsystem
 
