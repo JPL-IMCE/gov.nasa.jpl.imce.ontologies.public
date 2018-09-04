@@ -149,10 +149,34 @@
     
 
 
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#connectsAssembly -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#connectsAssembly">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+    </rdf:Description>
+    
+
+
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#connectsSubsystem -->
 
     <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#connectsSubsystem">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasConnectsAssemblySource -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasConnectsAssemblySource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#hasConnectsAssemblyTarget -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#hasConnectsAssemblyTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
     </rdf:Description>
     
 
@@ -240,6 +264,14 @@
         <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
         <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#ConnectsAssembly -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#ConnectsAssembly">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependency"/>
+    </rdf:Description>
     
 
 
