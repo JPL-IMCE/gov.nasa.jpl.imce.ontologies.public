@@ -459,14 +459,7 @@ When <property>constrain</property>ed by an <classname>ElementBehaviorConstraint
 		source = Interaction
 		target = AttributeGroup }
 
-	rule R21777 infers hasInteractionBehavior
-	if Interaction
-	&& hasInteractionBehaviorClass
-	&& InteractionBehaviorAutomaton
-	&& hasRegion
-	&& InteractionBehaviorRegion
-
-	rule R26994 infers hasElementBehavior
+	rule R11071 infers hasElementBehavior
 	if ElementBehaviorOwner
 	&& hasElementBehaviorClass
 	&& AttributeAutomaton
@@ -475,23 +468,21 @@ When <property>constrain</property>ed by an <classname>ElementBehaviorConstraint
 	&& hasTransition
 	&& ElementBehaviorTransition
 
-	rule R46210 infers hasElementBehavior
+	rule R11486 infers hasElementBehavior
 	if ElementBehaviorOwner
 	&& hasElementBehaviorClass
 	&& ElementBehaviorAutomaton
 	&& hasRegion
 	&& ElementBehaviorRegion
 
-	rule R53799 infers hasInteractionBehavior
+	rule R38727 infers joins
 	if Interaction
-	&& hasInteractionBehaviorClass
-	&& AttributeAutomaton
-	&& hasRegion
-	&& AutomatonRegion
-	&& hasTransition
-	&& InteractionBehaviorTransition
+	&& hasInteractionRole
+	&& InteractionRole
+	&& hasAttributeGroup
+	&& AttributeGroup
 
-	rule R69115 infers hasElementBehavior
+	rule R44538 infers hasElementBehavior
 	if ElementBehaviorOwner
 	&& hasElementBehaviorClass
 	&& AttributeAutomaton
@@ -500,14 +491,23 @@ When <property>constrain</property>ed by an <classname>ElementBehaviorConstraint
 	&& hasState
 	&& ElementBehaviorState
 
-	rule R87541 infers joins
+	rule R56293 infers hasInteractionBehavior
 	if Interaction
-	&& hasInteractionRole
-	&& InteractionRole
-	&& hasAttributeGroup
-	&& AttributeGroup
+	&& hasInteractionBehaviorClass
+	&& InteractionBehaviorAutomaton
+	&& hasRegion
+	&& InteractionBehaviorRegion
 
-	rule R99547 infers hasInteractionBehavior
+	rule R67837 infers hasInteractionBehavior
+	if Interaction
+	&& hasInteractionBehaviorClass
+	&& AttributeAutomaton
+	&& hasRegion
+	&& AutomatonRegion
+	&& hasTransition
+	&& InteractionBehaviorTransition
+
+	rule R68187 infers hasInteractionBehavior
 	if Interaction
 	&& hasInteractionBehaviorClass
 	&& AttributeAutomaton
