@@ -638,6 +638,13 @@
     
 
 
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#performs -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#performs">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryCompositeAssociation"/>
+    </rdf:Description>
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1092,14 +1099,6 @@
 
     <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#TraversingElement">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#StructuralFlowPropertyType"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#StructuralFlowPropertyContainerType -->
-
-    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#StructuralFlowPropertyContainerType">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Entity"/>
     </rdf:Description>
 </rdf:RDF>
 
