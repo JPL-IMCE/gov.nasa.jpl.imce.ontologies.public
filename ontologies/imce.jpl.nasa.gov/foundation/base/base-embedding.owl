@@ -310,39 +310,6 @@ This software may be subject to U.S. export control laws. By accepting this soft
     
 
 
-    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#Entity -->
-
-    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#Entity">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependencyEndType"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#ReifiedObjectProperty -->
-
-    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#ReifiedObjectProperty">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependencyEndType"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#ReifiedStructuredDataProperty -->
-
-    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#ReifiedStructuredDataProperty">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependencyEndType"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#StructuredDatatype -->
-
-    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#StructuredDatatype">
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryAssociationEndType"/>
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML#ValueType"/>
-    </rdf:Description>
-    
-
-
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base-embedding#Aspect -->
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base-embedding#Aspect">
@@ -400,6 +367,7 @@ This software may be subject to U.S. export control laws. By accepting this soft
     <!-- http://imce.jpl.nasa.gov/foundation/base/base#Aggregates -->
 
     <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/base/base#Aggregates">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependencyEndType"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryReferenceAssociation"/>
     </rdf:Description>
     
@@ -425,6 +393,7 @@ This software may be subject to U.S. export control laws. By accepting this soft
 
     <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/base/base#Contains">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryCompositeAssociation"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependencyEndType"/>
     </rdf:Description>
     
 
@@ -440,6 +409,7 @@ This software may be subject to U.S. export control laws. By accepting this soft
     <!-- http://imce.jpl.nasa.gov/foundation/base/base#Package -->
 
     <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/base/base#Package">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#BinaryDependencyEndType"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#Package"/>
     </rdf:Description>
 </rdf:RDF>
