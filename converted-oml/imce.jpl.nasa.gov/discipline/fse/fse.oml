@@ -109,6 +109,58 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 		source = Function
 		target = Subsystem }
 
+	@dc:description="""is joined in in"""
+	@dc:description="""joins in"""
+	@oml:hasInverseLabel="""is Joined In In"""
+	@oml:hasPropertyLabel="""joins In"""
+	@oml:hasReificationLabel="""Joins In"""
+	reifiedRelationship JoinsIn {
+		asymmetric
+		irreflexive
+		unreified = joinsIn
+		inverse = isJoinedInIn
+		source = Function
+		target = EndCircuit }
+
+	@dc:description="""joins left"""
+	@dc:description="""is joined in left"""
+	@oml:hasInverseLabel="""is Joined In Left"""
+	@oml:hasPropertyLabel="""joins Left"""
+	@oml:hasReificationLabel="""Joins Left"""
+	reifiedRelationship JoinsLeft {
+		asymmetric
+		irreflexive
+		unreified = joinsLeft
+		inverse = isJoinedInLeft
+		source = Function
+		target = EndCircuit }
+
+	@dc:description="""is joined in out"""
+	@dc:description="""joins out"""
+	@oml:hasInverseLabel="""is Joined In Out"""
+	@oml:hasPropertyLabel="""joins Out"""
+	@oml:hasReificationLabel="""JoinsOut"""
+	reifiedRelationship JoinsOut {
+		asymmetric
+		irreflexive
+		unreified = joinsOut
+		inverse = isJoinedInOut
+		source = Function
+		target = EndCircuit }
+
+	@dc:description="""joins right"""
+	@dc:description="""is joined in right"""
+	@oml:hasInverseLabel="""is Joined In Right"""
+	@oml:hasPropertyLabel="""joins Right"""
+	@oml:hasReificationLabel="""Joins Right"""
+	reifiedRelationship JoinsRight {
+		asymmetric
+		irreflexive
+		unreified = joinsRight
+		inverse = isJoinedInRight
+		source = Function
+		target = EndCircuit }
+
 	ConnectsAssembly1 extendsRelationship ConnectsAssembly
 
 	ConnectsAssembly2 extendsRelationship ConnectsAssembly
@@ -116,6 +168,14 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	ConnectsSubsystem1 extendsRelationship ConnectsSubsystem
 
 	ConnectsSubsystem2 extendsRelationship ConnectsSubsystem
+
+	JoinsIn extendsRelationship mission:Joins
+
+	JoinsLeft extendsRelationship mission:Joins1
+
+	JoinsOut extendsRelationship mission:Joins
+
+	JoinsRight extendsRelationship mission:Joins2
 
 	Assembly extendsAspect EndCircuitPresentingElement
 
