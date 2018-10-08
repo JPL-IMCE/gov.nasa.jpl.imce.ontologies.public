@@ -545,7 +545,6 @@ This software may be subject to U.S. export control laws. By accepting this soft
         <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/vandv/vandv#Milestone"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Should reconcile with temporal ordering constraints from Project Ontology (not yet final).</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">finishes before</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">finshes before</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -754,6 +753,7 @@ This software may be subject to U.S. export control laws. By accepting this soft
 
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasFinishesBeforeSource">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/vandv/vandv#topReifiedObjectPropertySource"/>
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project#hasDeliversSource"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/vandv/vandv#FinishesBefore"/>
         <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project#InterchangePoint"/>
@@ -765,6 +765,7 @@ This software may be subject to U.S. export control laws. By accepting this soft
 
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasFinishesBeforeTarget">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/vandv/vandv#topReifiedObjectPropertyTarget"/>
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project#hasDeliversTarget"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/vandv/vandv#FinishesBefore"/>
         <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/vandv/vandv#Milestone"/>
@@ -1103,7 +1104,6 @@ This software may be subject to U.S. export control laws. By accepting this soft
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://imce.jpl.nasa.gov/discipline/vandv/vandv#Activity"/>
         <rdfs:range rdf:resource="http://imce.jpl.nasa.gov/discipline/vandv/vandv#Venue"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has location</rdfs:label>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">occurs in</rdfs:label>
     </owl:ObjectProperty>
     
