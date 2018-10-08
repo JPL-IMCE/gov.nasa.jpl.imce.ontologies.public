@@ -222,6 +222,46 @@
     
 
 
+    <!-- http://imce.jpl.nasa.gov/foundation/base/base#isAggregatedIn -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/base/base#isAggregatedIn">
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryReferenceAssociation"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/base/base#isContainedIn -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/base/base#isContainedIn">
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryCompositeAssociation"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#deploys -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#deploys">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryReferenceAssociation"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#emits -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#emits">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#structuralOutFlowPropertyRelationship"/>
+    </rdf:Description>
+    
+
+
     <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#hasDeploysSource -->
 
     <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#hasDeploysSource">
@@ -462,6 +502,14 @@
     
 
 
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#hasParticipant -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#hasParticipant">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#structuralInOutFlowPropertyRelationship"/>
+    </rdf:Description>
+    
+
+
     <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#hasPerformsSource -->
 
     <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#hasPerformsSource">
@@ -634,6 +682,466 @@
 
     <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#hasTransfersTarget">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasStructuralFlowPropertyRelationshipTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#induces -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#induces">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#influences -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#influences">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#ingests -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#ingests">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#structuralInFlowPropertyRelationship"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#interchangesThrough -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#interchangesThrough">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#structuralFullPortRelationship"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#invokes -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#invokes">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryCompositeAssociation"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#involves -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#involves">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryAssociationBlockEnd"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#involves1 -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#involves1">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryAssociationBlockEnd1"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#involves2 -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#involves2">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryAssociationBlockEnd2"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#isDeployedBy -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#isDeployedBy">
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryReferenceAssociation"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#isEmittedBy -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#isEmittedBy">
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#structuralOutFlowPropertyRelationship"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#isInducedBy -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#isInducedBy">
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#isInfluencedBy -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#isInfluencedBy">
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#isIngestedBy -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#isIngestedBy">
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#structuralInFlowPropertyRelationship"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#isInterchangePointFor -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#isInterchangePointFor">
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#structuralFullPortRelationship"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#isInvokedBy -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#isInvokedBy">
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryCompositeAssociation"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#isInvolvedIn -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#isInvolvedIn">
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryAssociationBlockEnd"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#isInvolvedIn1 -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#isInvolvedIn1">
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryAssociationBlockEnd1"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#isInvolvedIn2 -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#isInvolvedIn2">
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryAssociationBlockEnd2"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#isJoinedIn -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#isJoinedIn">
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryAssociationBlockEnd"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#isJoinedIn1 -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#isJoinedIn1">
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryAssociationBlockEnd1"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#isJoinedIn2 -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#isJoinedIn2">
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryAssociationBlockEnd2"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#isPerformedBy -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#isPerformedBy">
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryCompositeAssociation"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#isPresentedBy -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#isPresentedBy">
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#structuralFullPortRelationship"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#isProducedBy -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#isProducedBy">
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#isPursuedBy -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#isPursuedBy">
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#isReceivedBy -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#isReceivedBy">
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#structuralInFlowPropertyRelationship"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#isRefinedBy -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#isRefinedBy">
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#isSentBy -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#isSentBy">
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#structuralOutFlowPropertyRelationship"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#isSpecifiedBy -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#isSpecifiedBy">
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#isTraversedBy -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#isTraversedBy">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#structuralInOutFlowPropertyRelationship"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#joins -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#joins">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryAssociationBlockEnd"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#joins1 -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#joins1">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryAssociationBlockEnd1"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#joins2 -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#joins2">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryAssociationBlockEnd2"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#participatesIn -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#participatesIn">
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#structuralInOutFlowPropertyRelationship"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#performs -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#performs">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryCompositeAssociation"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#presents -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#presents">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#structuralFullPortRelationship"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#produces -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#produces">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#pursues -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#pursues">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#receives -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#receives">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#structuralInFlowPropertyRelationship"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#refines -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#refines">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#sends -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#sends">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#structuralOutFlowPropertyRelationship"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#specifies -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#specifies">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#transfers -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#transfers">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#structuralFlowPropertyRelationship"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#transfersIn -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#transfersIn">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#structuralInFlowPropertyRelationship"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#transfersOut -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#transfersOut">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#structuralOutFlowPropertyRelationship"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#traverses -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#traverses">
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#structuralInOutFlowPropertyRelationship"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
     </rdf:Description>
     
 

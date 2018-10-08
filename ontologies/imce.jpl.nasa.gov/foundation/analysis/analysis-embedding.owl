@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#"
-     xml:base="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2"
+<rdf:RDF xmlns="http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding#"
+     xml:base="http://imce.jpl.nasa.gov/foundation/analysis/analysis-embedding"
      xmlns:base-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/base/base#"
      xmlns:Blocks-embedding="http://imce.jpl.nasa.gov/Blocks/Blocks-embedding#"
      xmlns:StandardProfileL2-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2-metamodel#"
@@ -163,6 +163,30 @@
     
 
 
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#analyzes -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#analyzes">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#characterizes -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#characterizes">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#constrains -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#constrains">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+    </rdf:Description>
+    
+
+
     <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasAnalyzesSource -->
 
     <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasAnalyzesSource">
@@ -207,6 +231,14 @@
 
     <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasConstrainsTarget">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasCriterion -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasCriterion">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
     </rdf:Description>
     
 
@@ -275,6 +307,14 @@
     
 
 
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasMetric -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasMetric">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+    </rdf:Description>
+    
+
+
     <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasQuantifiesSource -->
 
     <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasQuantifiesSource">
@@ -287,6 +327,70 @@
 
     <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasQuantifiesTarget">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasValue -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#hasValue">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#isAnalyzedBy -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#isAnalyzedBy">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#isCharacterizedBy -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#isCharacterizedBy">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#isCriterionFor -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#isCriterionFor">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#isMeasuredBy -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#isMeasuredBy">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#isQuantifiedBy -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#isQuantifiedBy">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#measures -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#measures">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/foundation/analysis/analysis#quantifies -->
+
+    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/analysis/analysis#quantifies">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
     </rdf:Description>
     
 
