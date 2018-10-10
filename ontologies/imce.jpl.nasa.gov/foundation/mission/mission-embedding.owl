@@ -168,12 +168,6 @@
     
 
 
-    <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#topReifiedObjectProperty -->
-
-    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#topReifiedObjectProperty"/>
-    
-
-
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#topReifiedObjectPropertySource -->
 
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/mission/mission-embedding#topReifiedObjectPropertySource">
@@ -1049,11 +1043,7 @@
     <!-- http://imce.jpl.nasa.gov/foundation/mission/mission#traverses -->
 
     <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#traverses">
-        <rdfs:subPropertyOf>
-            <rdf:Description>
-                <owl:inverseOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#structuralInOutFlowPropertyRelationship"/>
-            </rdf:Description>
-        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#inverseStructuralInOutFlowPropertyRelationship"/>
     </rdf:Description>
     
 
