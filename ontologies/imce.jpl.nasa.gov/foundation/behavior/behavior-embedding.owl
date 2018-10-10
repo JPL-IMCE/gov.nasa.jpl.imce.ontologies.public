@@ -111,10 +111,12 @@ providing access to foreign persons.</dc:rights>
 
     <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasAttributeGroup -->
 
+    <!--
+    Pending unreified property specialization
     <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasAttributeGroup">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#nAryRoleBinding"/>
     </rdf:Description>
-    
+    -->
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasConstrainsSource -->
@@ -262,10 +264,12 @@ providing access to foreign persons.</dc:rights>
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasInteractionRole -->
-
+    <!--
+    Pending unreified relationship specialization
     <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasInteractionRole">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#nAryRelationshipRole"/>
     </rdf:Description>
+    -->
     
 
 
@@ -274,7 +278,7 @@ providing access to foreign persons.</dc:rights>
     <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasPlaysRoleOfSource">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasStructuralBindingRelationshipSource"/>
     </rdf:Description>
-    
+
 
 
     <!-- http://imce.jpl.nasa.gov/foundation/behavior/behavior#hasPlaysRoleOfTarget -->
@@ -449,7 +453,6 @@ providing access to foreign persons.</dc:rights>
     <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#AttributeConstraintParticipant">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#StructuralBindingEndType"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#StructuralConnectionEndType"/>
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#StructuralConstraintParameter"/>
     </rdf:Description>
     
 
@@ -526,7 +529,6 @@ providing access to foreign persons.</dc:rights>
 
     <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/behavior/behavior#Exposes">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#StructuralBindingRelationship"/>
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Connector.BindingConnector"/>
     </rdf:Description>
     
 
