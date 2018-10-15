@@ -84,6 +84,12 @@ open terminology <http://imce.jpl.nasa.gov/foundation/mission/mission-embedding>
 
 	mission:TransfersOut extendsRelationship owl2-mof2:StructuralOutFlowPropertyRelationship
 
+	mission:Component extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	mission:Deploys extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	mission:Emits extendsAspect owl2-mof2:BinaryDependencyEndType
+
 	mission:Environment extendsAspect owl2-mof2:BinaryDependencyEndType
 
 	mission:Function extendsAspect owl2-mof2:BinaryAssociationEndType
@@ -91,6 +97,14 @@ open terminology <http://imce.jpl.nasa.gov/foundation/mission/mission-embedding>
 	mission:Function extendsAspect owl2-mof2:BinaryDependencyEndType
 
 	mission:Function extendsAspect owl2-mof2:StructuralFullPortEncapsulatedClassifierType
+
+	mission:HasParticipant extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	mission:Induces extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	mission:Influences extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	mission:Ingests extendsAspect owl2-mof2:BinaryDependencyEndType
 
 	mission:Interchange extendsAspect owl2-mof2:BinaryAssociationBlock
 
@@ -100,6 +114,8 @@ open terminology <http://imce.jpl.nasa.gov/foundation/mission/mission-embedding>
 
 	mission:InterchangePoint extendsAspect owl2-mof2:BinaryAssociationEndType
 
+	mission:InterchangePoint extendsAspect owl2-mof2:BinaryDependencyEndType
+
 	mission:InterchangePoint extendsAspect owl2-mof2:StructuralFlowPropertyContainerType
 
 	mission:InterchangePoint extendsAspect owl2-mof2:StructuralFullPortType
@@ -108,15 +124,37 @@ open terminology <http://imce.jpl.nasa.gov/foundation/mission/mission-embedding>
 
 	mission:Interface extendsAspect owl2-mof2:BinaryAssociationEndType
 
+	mission:Interface extendsAspect owl2-mof2:BinaryDependencyEndType
+
 	mission:Interface extendsAspect owl2-mof2:StructuralFlowPropertyContainerType
 
 	mission:Interface extendsAspect owl2-mof2:StructuralFullPortType
+
+	mission:Invokes extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	mission:Involves extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	mission:Involves1 extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	mission:Involves2 extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	mission:IsTraversedBy extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	mission:Item extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	mission:Joins extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	mission:Joins1 extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	mission:Joins2 extendsAspect owl2-mof2:BinaryDependencyEndType
 
 	mission:Junction extendsAspect owl2-mof2:BinaryAssociationBlock
 
 	mission:Junction extendsAspect owl2-mof2:BinaryDependencyEndType
 
 	mission:Junction extendsAspect owl2-mof2:StructuralFlowPropertyContainerType
+
+	mission:Mission extendsAspect owl2-mof2:BinaryDependencyEndType
 
 	mission:Objective extendsAspect owl2-mof2:BinaryAssociationEndType
 
@@ -130,15 +168,37 @@ open terminology <http://imce.jpl.nasa.gov/foundation/mission/mission-embedding>
 
 	mission:PerformingElement extendsAspect owl2-mof2:StructuralFullPortEncapsulatedClassifierType
 
+	mission:Performs extendsAspect owl2-mof2:BinaryDependencyEndType
+
 	mission:PresentingElement extendsAspect owl2-mof2:StructuralFullPortEncapsulatedClassifierType
+
+	mission:Presents extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	mission:Produces extendsAspect owl2-mof2:BinaryDependencyEndType
 
 	mission:Product extendsAspect owl2-mof2:BinaryAssociationEndType
 
 	mission:Product extendsAspect owl2-mof2:BinaryDependencyEndType
 
+	mission:Pursues extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	mission:Receives extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	mission:Refines extendsAspect owl2-mof2:BinaryDependencyEndType
+
 	mission:Requirement extendsAspect owl2-mof2:BinaryDependencyEndType
 
+	mission:Sends extendsAspect owl2-mof2:BinaryDependencyEndType
+
 	mission:SpecifiedElement extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	mission:Specifies extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	mission:Transfers extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	mission:TransfersIn extendsAspect owl2-mof2:BinaryDependencyEndType
+
+	mission:TransfersOut extendsAspect owl2-mof2:BinaryDependencyEndType
 
 	mission:TraversingElement extendsAspect owl2-mof2:StructuralFlowPropertyType
 

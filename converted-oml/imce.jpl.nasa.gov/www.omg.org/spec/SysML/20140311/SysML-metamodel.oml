@@ -1650,6 +1650,8 @@ open terminology <http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML
 
 	Pseudostate.RequirementRelated extendsConcept UML-metamodel:Pseudostate
 
+	QuantityKind extendsConcept SysML:QuantityKind
+
 	RaiseExceptionAction.Allocated extendsConcept UML-metamodel:RaiseExceptionAction
 
 	RaiseExceptionAction.RequirementRelated extendsConcept UML-metamodel:RaiseExceptionAction
@@ -1850,6 +1852,8 @@ open terminology <http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML
 
 	Trigger.TriggerOnNestedPort extendsConcept UML-metamodel:Trigger
 
+	Unit extendsConcept SysML:Unit
+
 	UnmarshallAction.Allocated extendsConcept UML-metamodel:UnmarshallAction
 
 	UnmarshallAction.RequirementRelated extendsConcept UML-metamodel:UnmarshallAction
@@ -1881,6 +1885,10 @@ open terminology <http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML
 	Variable.Allocated extendsConcept UML-metamodel:Variable
 
 	Variable.RequirementRelated extendsConcept UML-metamodel:Variable
+
+	SysML:QuantityKind extendsConcept Class.Block
+
+	SysML:Unit extendsConcept Class.Block
 
 	Abstraction.Allocate extendsAspect SysML:Abstraction.Allocate
 
@@ -2584,8 +2592,6 @@ open terminology <http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML
 
 	Pseudostate.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
 
-	QuantityKind extendsAspect SysML:QuantityKind
-
 	RaiseExceptionAction.Allocated extendsAspect SysML:NamedElement.Allocated
 
 	RaiseExceptionAction.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
@@ -2789,8 +2795,6 @@ open terminology <http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML
 	Trigger.RequirementRelated extendsAspect SysML:NamedElement.RequirementRelated
 
 	Trigger.TriggerOnNestedPort extendsAspect SysML:Trigger.TriggerOnNestedPort
-
-	Unit extendsAspect SysML:Unit
 
 	UnmarshallAction.Allocated extendsAspect SysML:NamedElement.Allocated
 

@@ -299,7 +299,6 @@ open terminology <http://imce.jpl.nasa.gov/discipline/vandv/vandv> {
 		target = EvidenceExpected }
 
 	@oml:hasPropertyLabel="""finishes before"""
-	@oml:hasPropertyLabel="""finshes before"""
 	@oml:hasReificationLabel="""Finishes Before"""
 	@rdfs:comment="""Should reconcile with temporal ordering constraints from Project Ontology (not yet final)."""
 	reifiedRelationship FinishesBefore {
@@ -349,7 +348,6 @@ open terminology <http://imce.jpl.nasa.gov/discipline/vandv/vandv> {
 		source = ExecutionRecord
 		target = Activity }
 
-	@oml:hasPropertyLabel="""has location"""
 	@oml:hasPropertyLabel="""occurs in"""
 	@oml:hasReificationLabel="""Occurs In"""
 	reifiedRelationship OccursIn {
@@ -631,7 +629,7 @@ open terminology <http://imce.jpl.nasa.gov/discipline/vandv/vandv> {
 	@rdfs:label="""has closure date"""
 	entityScalarDataProperty + hasClosureDate {
 		domain ItemReviewAndClosure
-		range project:date
+		range XMLSchema:date
 	}
 
 	@rdfs:label="""has closure description"""
@@ -643,7 +641,7 @@ open terminology <http://imce.jpl.nasa.gov/discipline/vandv/vandv> {
 	@rdfs:label="""has completion date"""
 	entityScalarDataProperty hasCompletionDate {
 		domain ActivityCompletionData
-		range project:date
+		range XMLSchema:date
 	}
 
 	@rdfs:label="""has completion status"""
@@ -655,7 +653,7 @@ open terminology <http://imce.jpl.nasa.gov/discipline/vandv/vandv> {
 	@rdfs:label="""has end date"""
 	entityScalarDataProperty + hasEndDate {
 		domain ExecutionRecord
-		range project:date
+		range XMLSchema:date
 	}
 
 	@rdfs:label="""has execution sub record status"""
@@ -685,7 +683,7 @@ open terminology <http://imce.jpl.nasa.gov/discipline/vandv/vandv> {
 	@rdfs:label="""has start date"""
 	entityScalarDataProperty + hasStartDate {
 		domain ExecutionRecord
-		range project:date
+		range XMLSchema:date
 	}
 
 	@rdfs:label="""has user name"""

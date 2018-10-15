@@ -322,7 +322,6 @@ acts to execute the assignments of
 	@oml:hasInverseLabel="""is interchange point for"""
 	@oml:hasPropertyLabel="""interchanges through"""
 	@oml:hasReificationLabel="""Interchanges Through"""
-	@rdfs:comment="""interchanges through"""
 	reifiedRelationship InterchangesThrough {
 		inverseFunctional
 		asymmetric
@@ -717,33 +716,33 @@ is proffered by a supplier as a specification-compliant implementation of <repla
 
 	allEntities mission:Component . isSuppliedBy in WorkPackage
 
-	allEntities mission:Function . realizes in mission:Function
-
 	allEntities mission:Function . isRealizedBy in mission:Function
+
+	allEntities mission:Function . realizes in mission:Function
 
 	allEntities mission:Interface . isRealizedBy in mission:Interface
 
 	allEntities mission:Interface . realizes in mission:Interface
 
-	allEntities mission:Junction . isRealizedBy in mission:Junction
-
 	allEntities mission:Junction . realizes in mission:Junction
 
-	allEntities mission:Mission . realizes in mission:Mission
+	allEntities mission:Junction . isRealizedBy in mission:Junction
 
 	allEntities mission:Mission . isRealizedBy in mission:Mission
 
-	allEntities mission:Mission . isSuppliedBy in Project
+	allEntities mission:Mission . realizes in mission:Mission
 
-	allEntities Concern . base:isAggregatedIn in Concern
+	allEntities mission:Mission . isSuppliedBy in Project
 
 	allEntities Concern . base:aggregates in Concern
 
+	allEntities Concern . base:isAggregatedIn in Concern
+
 	allEntities DevelopmentState . analysis:characterizes in DevelopedElement
 
-	allEntities Process . isRealizedBy in Process
-
 	allEntities Process . realizes in Process
+
+	allEntities Process . isRealizedBy in Process
 
 	allEntities Product . base:aggregates in Product
 
@@ -755,9 +754,9 @@ is proffered by a supplier as a specification-compliant implementation of <repla
 
 	allEntities Project . supplies in mission:Mission
 
-	allEntities WorkPackage . realizes in WorkPackage
-
 	allEntities WorkPackage . isRealizedBy in WorkPackage
+
+	allEntities WorkPackage . realizes in WorkPackage
 
 	allEntities WorkPackage . supplies in mission:Component
 
