@@ -20,7 +20,6 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fault-management/fault-man
 	@rdfs:label="""Block Redundancy Explanation"""
 	concept BlockRedundancyExplanation
 
-	@rdfs:label="""CauseExplanation"""
 	@rdfs:label="""Cause Explanation"""
 	concept CauseExplanation
 
@@ -30,7 +29,6 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fault-management/fault-man
 	@rdfs:label="""Fault Containment Region"""
 	concept FaultContainmentRegion
 
-	@rdfs:label="""Functional_Redundancy_Explanation"""
 	@rdfs:label="""Functional Redundancy Explanation"""
 	concept FunctionalRedundancyExplanation
 
@@ -234,14 +232,7 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fault-management/fault-man
 		source = behavior:ElementBehavior
 		target = PerformanceConstraint }
 
-	rule R20449 infers violates
-	if behavior:ElementBehavior
-	&& analysis:isExplainedBy
-	&& ViolationExplanation
-	&& analysis:analyzes
-	&& PerformanceConstraint
-
-	rule R45729 infers impairs
+	rule R25181 infers impairs
 	if behavior:ElementBehavior
 	&& analysis:isExplainedBy
 	&& ViolationExplanation
@@ -250,16 +241,23 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fault-management/fault-man
 	&& analysis:characterizes
 	&& mission:Function
 
-	rule R77920 infers causes
+	rule R55011 infers violates
+	if behavior:ElementBehavior
+	&& analysis:isExplainedBy
+	&& ViolationExplanation
+	&& analysis:analyzes
+	&& PerformanceConstraint
+
+	rule R55978 infers causes
 	if behavior:ElementBehavior
 	&& analysis:isExplainedBy
 	&& CauseExplanation
 	&& analysis:analyzes
 	&& behavior:ElementBehavior
 
-	someEntities CauseExplanation . analysis:analyzes in ModeContext
-
 	someEntities CauseExplanation . analysis:analyzes in behavior:ElementBehavior
+
+	someEntities CauseExplanation . analysis:analyzes in ModeContext
 
 	allEntities CauseExplanation . analysis:explains in behavior:ElementBehavior
 
@@ -267,9 +265,9 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fault-management/fault-man
 
 	allEntities InterconnectionExplanation . analysis:explains in FaultContainmentRegion
 
-	someEntities Likelihood . analysis:analyzes in CauseExplanation
-
 	someEntities Likelihood . analysis:analyzes in Prevention
+
+	someEntities Likelihood . analysis:analyzes in CauseExplanation
 
 	allEntities Likelihood . analysis:characterizes in ViolationExplanation
 

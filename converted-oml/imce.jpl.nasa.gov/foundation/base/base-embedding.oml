@@ -17,10 +17,16 @@ open terminology <http://imce.jpl.nasa.gov/foundation/base/base-embedding> {
 
 	base:AggregatedElement extendsAspect owl2-mof2:BinaryAssociationEndType
 
+	base:Aggregates extendsAspect owl2-mof2:BinaryDependencyEndType
+
 	base:ContainedElement extendsAspect owl2-mof2:BinaryAssociationEndType
 
 	base:Container extendsAspect owl2-mof2:BinaryAssociationEndType
 
+	base:Contains extendsAspect owl2-mof2:BinaryDependencyEndType
+
 	base:IdentifiedElement extendsAspect UML:NamedElement
+
+	base:Package extendsAspect owl2-mof2:BinaryDependencyEndType
 
 }

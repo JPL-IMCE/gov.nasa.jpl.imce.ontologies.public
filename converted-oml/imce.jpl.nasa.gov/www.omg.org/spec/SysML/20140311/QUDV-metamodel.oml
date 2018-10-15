@@ -32,32 +32,44 @@ open terminology <http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-
 
 	concept UnitFactor
 
-	AffineConversionUnit extendsAspect QUDV:AffineConversionUnit
+	AffineConversionUnit extendsConcept QUDV:AffineConversionUnit
 
-	DerivedQuantityKind extendsAspect QUDV:DerivedQuantityKind
+	DerivedQuantityKind extendsConcept QUDV:DerivedQuantityKind
 
-	DerivedUnit extendsAspect QUDV:DerivedUnit
+	DerivedUnit extendsConcept QUDV:DerivedUnit
 
-	Dimension extendsAspect QUDV:Dimension
+	Dimension extendsConcept QUDV:Dimension
 
-	GeneralConversionUnit extendsAspect QUDV:GeneralConversionUnit
+	GeneralConversionUnit extendsConcept QUDV:GeneralConversionUnit
 
-	LinearConversionUnit extendsAspect QUDV:LinearConversionUnit
+	LinearConversionUnit extendsConcept QUDV:LinearConversionUnit
 
-	Prefix extendsAspect QUDV:Prefix
+	Prefix extendsConcept QUDV:Prefix
 
-	PrefixedUnit extendsAspect QUDV:PrefixedUnit
+	PrefixedUnit extendsConcept QUDV:PrefixedUnit
 
-	QuantityKindFactor extendsAspect QUDV:QuantityKindFactor
+	QuantityKindFactor extendsConcept QUDV:QuantityKindFactor
 
-	SimpleQuantityKind extendsAspect QUDV:SimpleQuantityKind
+	SimpleQuantityKind extendsConcept QUDV:SimpleQuantityKind
 
-	SimpleUnit extendsAspect QUDV:SimpleUnit
+	SimpleUnit extendsConcept QUDV:SimpleUnit
 
-	SystemOfQuantities extendsAspect QUDV:SystemOfQuantities
+	SystemOfQuantities extendsConcept QUDV:SystemOfQuantities
 
-	SystemOfUnits extendsAspect QUDV:SystemOfUnits
+	SystemOfUnits extendsConcept QUDV:SystemOfUnits
 
-	UnitFactor extendsAspect QUDV:UnitFactor
+	UnitFactor extendsConcept QUDV:UnitFactor
+
+	QUDV:Dimension extendsConcept SysML-metamodel:Class.Block
+
+	QUDV:Prefix extendsConcept SysML-metamodel:Class.Block
+
+	QUDV:QuantityKindFactor extendsConcept SysML-metamodel:Class.Block
+
+	QUDV:SystemOfQuantities extendsConcept SysML-metamodel:Class.Block
+
+	QUDV:SystemOfUnits extendsConcept SysML-metamodel:Class.Block
+
+	QUDV:UnitFactor extendsConcept SysML-metamodel:Class.Block
 
 }

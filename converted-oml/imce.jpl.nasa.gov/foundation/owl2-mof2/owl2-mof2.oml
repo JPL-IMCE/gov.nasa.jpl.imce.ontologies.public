@@ -19,8 +19,6 @@ open terminology <http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2> {
 
 	aspect ClosedWorldMetaClass
 
-	aspect ComponentConstraintBlock
-
 	aspect GroupViewDiagram
 
 	aspect NAryRelationship
@@ -61,29 +59,36 @@ open terminology <http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2> {
 
 	aspect Transition
 
+	concept ComponentConstraintBlock
+
 	reifiedRelationship BinaryAssociation {
 		unreified = binaryAssociation
+		inverse = inverseBinaryAssociation
 		source = BinaryAssociationEndType
 		target = BinaryAssociationEndType }
 
 	reifiedRelationship BinaryAssociationBlockEnd {
 		unreified = binaryAssociationBlockEnd
+		inverse = inverseBinaryAssociationBlockEnd
 		source = BinaryAssociationBlock
 		target = BinaryAssociationEndType }
 
 	reifiedRelationship BinaryAssociationBlockEnd1 {
 		unreified = binaryAssociationBlockEnd1
+		inverse = inverseBinaryAssociationBlockEnd1
 		source = BinaryAssociationBlock
 		target = BinaryAssociationEndType }
 
 	reifiedRelationship BinaryAssociationBlockEnd2 {
 		unreified = binaryAssociationBlockEnd2
+		inverse = inverseBinaryAssociationBlockEnd2
 		source = BinaryAssociationBlock
 		target = BinaryAssociationEndType }
 
 	reifiedRelationship BinaryCompositeAssociation {
 		inverseFunctional
 		unreified = binaryCompositeAssociation
+		inverse = inverseBinaryCompositeAssociation
 		source = BinaryAssociationEndType
 		target = BinaryAssociationEndType }
 
@@ -94,11 +99,13 @@ open terminology <http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2> {
 
 	reifiedRelationship BinaryDependency {
 		unreified = binaryDependency
+		inverse = inverseBinaryDependency
 		source = BinaryDependencyEndType
 		target = BinaryDependencyEndType }
 
 	reifiedRelationship BinaryReferenceAssociation {
 		unreified = binaryReferenceAssociation
+		inverse = inverseBinaryReferenceAssociation
 		source = BinaryAssociationEndType
 		target = BinaryAssociationEndType }
 
@@ -141,24 +148,28 @@ open terminology <http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2> {
 	reifiedRelationship StructuralFlowPropertyRelationship {
 		inverseFunctional
 		unreified = structuralFlowPropertyRelationship
+		inverse = inverseStructuralFlowPropertyRelationship
 		source = StructuralFlowPropertyContainerType
 		target = StructuralFlowPropertyType }
 
 	reifiedRelationship StructuralFullPortRelationship {
 		inverseFunctional
 		unreified = structuralFullPortRelationship
+		inverse = inverseStructuralFullPortRelationship
 		source = StructuralFullPortEncapsulatedClassifierType
 		target = StructuralFullPortType }
 
 	reifiedRelationship StructuralInFlowPropertyRelationship {
 		inverseFunctional
 		unreified = structuralInFlowPropertyRelationship
+		inverse = inverseStructuralInFlowPropertyRelationship
 		source = StructuralFlowPropertyContainerType
 		target = StructuralFlowPropertyType }
 
 	reifiedRelationship StructuralInOutFlowPropertyRelationship {
 		inverseFunctional
 		unreified = structuralInOutFlowPropertyRelationship
+		inverse = inverseStructuralInOutFlowPropertyRelationship
 		source = StructuralFlowPropertyContainerType
 		target = StructuralFlowPropertyType }
 
@@ -171,6 +182,7 @@ open terminology <http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2> {
 	reifiedRelationship StructuralOutFlowPropertyRelationship {
 		inverseFunctional
 		unreified = structuralOutFlowPropertyRelationship
+		inverse = inverseStructuralOutFlowPropertyRelationship
 		source = StructuralFlowPropertyContainerType
 		target = StructuralFlowPropertyType }
 

@@ -17,6 +17,8 @@ open terminology <http://imce.jpl.nasa.gov/foundation/behavior/behavior-embeddin
 
 	behavior:AttributeAutomaton extendsConcept UML-metamodel:StateMachine
 
+	behavior:AttributeConstraint extendsConcept owl2-mof2:ComponentConstraintBlock
+
 	behavior:AutomatonRegion extendsConcept UML-metamodel:Region
 
 	behavior:AutomatonState extendsConcept UML-metamodel:State
@@ -63,8 +65,6 @@ open terminology <http://imce.jpl.nasa.gov/foundation/behavior/behavior-embeddin
 
 	behavior:AttributeAutomaton extendsAspect owl2-mof2:StateMachine
 
-	behavior:AttributeConstraint extendsAspect owl2-mof2:ComponentConstraintBlock
-
 	behavior:AttributeConstraintParticipant extendsAspect owl2-mof2:StructuralBindingEndType
 
 	behavior:AttributeConstraintParticipant extendsAspect owl2-mof2:StructuralConnectionEndType
@@ -100,9 +100,5 @@ open terminology <http://imce.jpl.nasa.gov/foundation/behavior/behavior-embeddin
 	behavior:InteractionTerminal extendsAspect owl2-mof2:StructuralFullPortType
 
 	behavior:PropertyGroup extendsAspect owl2-mof2:StructuralFullPortEncapsulatedClassifierType
-
-	behavior:hasInteractionRole subObjectPropertyOf owl2-mof2:nAryRelationshipRole
-
-	behavior:hasAttributeGroup subObjectPropertyOf owl2-mof2:nAryRoleBinding
 
 }

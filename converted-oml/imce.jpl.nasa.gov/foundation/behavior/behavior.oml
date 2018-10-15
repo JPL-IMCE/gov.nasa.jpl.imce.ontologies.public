@@ -264,7 +264,6 @@ When <property>constrain</property>ed by an <classname>ElementBehaviorConstraint
 		target = Attribute }
 
 	@oml:hasPropertyLabel="""has element behavior class"""
-	@oml:hasPropertyLabel="""has Element Behavior Class"""
 	@oml:hasReificationLabel="""Has Element Behavior Class"""
 	reifiedRelationship HasElementBehaviorClass {
 		inverseFunctional
@@ -273,7 +272,6 @@ When <property>constrain</property>ed by an <classname>ElementBehaviorConstraint
 		target = ElementBehaviorClass }
 
 	@oml:hasPropertyLabel="""has interaction behavior class"""
-	@oml:hasPropertyLabel="""has Interaction Behavior Class"""
 	@oml:hasReificationLabel="""Has Interaction Behavior Class"""
 	reifiedRelationship HasInteractionBehaviorClass {
 		unreified = hasInteractionBehaviorClass
@@ -459,39 +457,7 @@ When <property>constrain</property>ed by an <classname>ElementBehaviorConstraint
 		source = Interaction
 		target = AttributeGroup }
 
-	rule R12345 infers hasElementBehavior
-	if ElementBehaviorOwner
-	&& hasElementBehaviorClass
-	&& AttributeAutomaton
-	&& hasRegion
-	&& AutomatonRegion
-	&& hasTransition
-	&& ElementBehaviorTransition
-
-	rule R55180 infers joins
-	if Interaction
-	&& hasInteractionRole
-	&& InteractionRole
-	&& hasAttributeGroup
-	&& AttributeGroup
-
-	rule R62348 infers hasInteractionBehavior
-	if Interaction
-	&& hasInteractionBehaviorClass
-	&& InteractionBehaviorAutomaton
-	&& hasRegion
-	&& InteractionBehaviorRegion
-
-	rule R6471 infers hasInteractionBehavior
-	if Interaction
-	&& hasInteractionBehaviorClass
-	&& AttributeAutomaton
-	&& hasRegion
-	&& AutomatonRegion
-	&& hasTransition
-	&& InteractionBehaviorTransition
-
-	rule R75344 infers hasInteractionBehavior
+	rule R13103 infers hasInteractionBehavior
 	if Interaction
 	&& hasInteractionBehaviorClass
 	&& AttributeAutomaton
@@ -500,7 +466,39 @@ When <property>constrain</property>ed by an <classname>ElementBehaviorConstraint
 	&& hasState
 	&& InteractionBehaviorState
 
-	rule R76163 infers hasElementBehavior
+	rule R32167 infers hasElementBehavior
+	if ElementBehaviorOwner
+	&& hasElementBehaviorClass
+	&& AttributeAutomaton
+	&& hasRegion
+	&& AutomatonRegion
+	&& hasTransition
+	&& ElementBehaviorTransition
+
+	rule R45244 infers hasInteractionBehavior
+	if Interaction
+	&& hasInteractionBehaviorClass
+	&& InteractionBehaviorAutomaton
+	&& hasRegion
+	&& InteractionBehaviorRegion
+
+	rule R51301 infers hasElementBehavior
+	if ElementBehaviorOwner
+	&& hasElementBehaviorClass
+	&& ElementBehaviorAutomaton
+	&& hasRegion
+	&& ElementBehaviorRegion
+
+	rule R56184 infers hasInteractionBehavior
+	if Interaction
+	&& hasInteractionBehaviorClass
+	&& AttributeAutomaton
+	&& hasRegion
+	&& AutomatonRegion
+	&& hasTransition
+	&& InteractionBehaviorTransition
+
+	rule R57987 infers hasElementBehavior
 	if ElementBehaviorOwner
 	&& hasElementBehaviorClass
 	&& AttributeAutomaton
@@ -509,12 +507,12 @@ When <property>constrain</property>ed by an <classname>ElementBehaviorConstraint
 	&& hasState
 	&& ElementBehaviorState
 
-	rule R96032 infers hasElementBehavior
-	if ElementBehaviorOwner
-	&& hasElementBehaviorClass
-	&& ElementBehaviorAutomaton
-	&& hasRegion
-	&& ElementBehaviorRegion
+	rule R86379 infers joins
+	if Interaction
+	&& hasInteractionRole
+	&& InteractionRole
+	&& hasAttributeGroup
+	&& AttributeGroup
 
 	synonymScalarRestriction AbstractValueType {
 		restrictedRange XMLSchema:string
@@ -530,7 +528,6 @@ When <property>constrain</property>ed by an <classname>ElementBehaviorConstraint
 	}
 
 	@rdfs:label="""has configuration"""
-	@rdfs:label="""has Configuration"""
 	entityScalarDataProperty hasConfiguration {
 		domain AttributeAutomaton
 		range AttributeAutomatonConfigurationValueType

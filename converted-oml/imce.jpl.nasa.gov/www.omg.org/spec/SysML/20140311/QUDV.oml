@@ -2,39 +2,61 @@ open terminology <http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV>
 
 	extends <http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML>
 
-	aspect AffineConversionUnit
+	concept AffineConversionUnit
 
-	aspect ConversionBasedUnit
+	concept ConversionBasedUnit
 
-	aspect DerivedQuantityKind
+	concept DerivedQuantityKind
 
-	aspect DerivedUnit
+	concept DerivedUnit
 
-	aspect Dimension
+	concept Dimension
 
-	aspect GeneralConversionUnit
+	concept GeneralConversionUnit
 
-	aspect LinearConversionUnit
+	concept LinearConversionUnit
 
-	aspect Prefix
+	concept Prefix
 
-	aspect PrefixedUnit
+	concept PrefixedUnit
 
-	aspect QuantityKind
+	concept QuantityKind
 
-	aspect QuantityKindFactor
+	concept QuantityKindFactor
 
-	aspect SimpleQuantityKind
+	concept SimpleQuantityKind
 
-	aspect SimpleUnit
+	concept SimpleUnit
 
-	aspect SystemOfQuantities
+	concept SystemOfQuantities
 
-	aspect SystemOfUnits
+	concept SystemOfUnits
 
-	aspect Unit
+	concept Unit
 
-	aspect UnitFactor
+	concept UnitFactor
+
+	AffineConversionUnit extendsConcept ConversionBasedUnit
+
+	ConversionBasedUnit extendsConcept Unit
+
+	DerivedQuantityKind extendsConcept QuantityKind
+
+	DerivedUnit extendsConcept Unit
+
+	GeneralConversionUnit extendsConcept ConversionBasedUnit
+
+	LinearConversionUnit extendsConcept ConversionBasedUnit
+
+	PrefixedUnit extendsConcept ConversionBasedUnit
+
+	QuantityKind extendsConcept SysML:QuantityKind
+
+	SimpleQuantityKind extendsConcept QuantityKind
+
+	SimpleUnit extendsConcept Unit
+
+	Unit extendsConcept SysML:Unit
 
 	reifiedRelationship A_conversionBasedUnit_referenceUnit {
 		functional
@@ -159,28 +181,6 @@ open terminology <http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV>
 	A_systemOfQuantities_baseQuantityKind extendsRelationship A_systemOfQuantities_quantityKind
 
 	A_systemOfUnits_baseUnit extendsRelationship A_systemOfUnits_unit
-
-	AffineConversionUnit extendsAspect ConversionBasedUnit
-
-	ConversionBasedUnit extendsAspect Unit
-
-	DerivedQuantityKind extendsAspect QuantityKind
-
-	DerivedUnit extendsAspect Unit
-
-	GeneralConversionUnit extendsAspect ConversionBasedUnit
-
-	LinearConversionUnit extendsAspect ConversionBasedUnit
-
-	PrefixedUnit extendsAspect ConversionBasedUnit
-
-	QuantityKind extendsAspect SysML:QuantityKind
-
-	SimpleQuantityKind extendsAspect QuantityKind
-
-	SimpleUnit extendsAspect Unit
-
-	Unit extendsAspect SysML:Unit
 
 	entityScalarDataProperty + AffineConversionUnit.factor {
 		domain AffineConversionUnit

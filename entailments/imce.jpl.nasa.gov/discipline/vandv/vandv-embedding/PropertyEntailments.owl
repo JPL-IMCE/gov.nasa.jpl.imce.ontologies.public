@@ -3,15 +3,157 @@
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasIsExecutionSubRecordOfSource">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertySource"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#owns">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasDescribesTarget">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertyTarget"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasSummarizesSource">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertySource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#approves">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasIsRecordOfSource">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertySource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#audits">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#expects">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#occursIn">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasAssessesSource">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertySource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasIsExecutionSubRecordOfTarget">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertyTarget"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#affects">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasSatisfiesTarget">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertyTarget"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasApprovesSource">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertySource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasOccursInTarget">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertyTarget"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#satisfies">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasIncludesTarget">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertyTarget"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasVerifiesTarget">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertyTarget"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasValidatesTarget">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertyTarget"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasReviewsTarget">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertyTarget"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#summarizes">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasOwnsTarget">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertyTarget"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasVerifiesSource">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertySource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#groups">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasGroupsTarget">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertyTarget"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasOwnsSource">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertySource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasAffectsTarget">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertyTarget"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasCorroboratesTarget">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertyTarget"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasDescribesSource">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertySource"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasIncludesSource">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertySource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#finishesBefore">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#structuralOutFlowPropertyRelationship"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#structuralFlowPropertyRelationship"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#reviews">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#binaryDependency"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasStartsAfterTarget">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasStructuralFlowPropertyRelationshipTarget"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasStructuralInFlowPropertyRelationshipTarget"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertyTarget"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#isRecordOf">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasContainsSource">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertySource"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasAuditsSource">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
@@ -23,41 +165,47 @@
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasFinishesBeforeSource">
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertySource"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasStructuralFlowPropertyRelationshipSource"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#topReifiedObjectPropertySource"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasStructuralOutFlowPropertyRelationshipSource"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#topObjectProperty"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasFinishesBeforeTarget">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertyTarget"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#topReifiedObjectPropertyTarget"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasStructuralOutFlowPropertyRelationshipTarget"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/project/project#topObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasStructuralFlowPropertyRelationshipTarget"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#contains">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasAffectsSource">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertySource"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasReviewsSource">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertySource"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv-embedding/PropertyEntailments">
-    <owl:versionInfo>2018-09-06 16:30:54 -0700</owl:versionInfo>
-    <rdfs:comment>generated by entail</rdfs:comment>
-    <owl:imports rdf:resource="http://imce.jpl.nasa.gov/discipline/vandv/vandv-embedding"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasContainsTarget">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertyTarget"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasOwnsSource">
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasExpectsTarget">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertyTarget"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#includes">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasValidatesSource">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertySource"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasApprovesSource">
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#describes">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencySource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasGroupsSource">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertySource"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasStartsAfterSource">
@@ -66,15 +214,75 @@
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasStructuralInFlowPropertyRelationshipSource"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertySource"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#assesses">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasCorroboratesSource">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertySource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#startsAfter">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#structuralInFlowPropertyRelationship"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#structuralFlowPropertyRelationship"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#isExecutionSubRecordOf">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#corroborates">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasSatisfiesSource">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertySource"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasAssessesTarget">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertyTarget"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasFinishesBeforeSource">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertySource"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasStructuralFlowPropertyRelationshipSource"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasStructuralOutFlowPropertyRelationshipSource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasSummarizesTarget">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertyTarget"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasOccursInSource">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertySource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv-embedding/PropertyEntailments">
+    <owl:versionInfo>2018-10-10 09:16:52 -0700</owl:versionInfo>
+    <rdfs:comment>generated by entail</rdfs:comment>
+    <owl:imports rdf:resource="http://imce.jpl.nasa.gov/discipline/vandv/vandv-embedding"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#verifies">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasIsRecordOfTarget">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertyTarget"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasExpectsSource">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertySource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#validates">
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasApprovesTarget">
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasBinaryDependencyTarget"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertyTarget"/>
     <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://imce.jpl.nasa.gov/discipline/vandv/vandv#hasStartsAfterTarget">
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasStructuralFlowPropertyRelationshipTarget"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#hasStructuralInFlowPropertyRelationshipTarget"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/foundation/owl2-mof2/owl2-mof2#topReifiedObjectPropertyTarget"/>
   </rdf:Description>
 </rdf:RDF>

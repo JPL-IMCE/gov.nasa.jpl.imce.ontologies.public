@@ -1,5 +1,7 @@
 annotationProperty fse:hasFdColumnLabel=<http://imce.jpl.nasa.gov/discipline/fse/fse#hasFdColumnLabel>
 
+annotationProperty fse:hasProvenance=<http://imce.jpl.nasa.gov/discipline/fse/fse#hasProvenance>
+
 @dc:description="""The Flight System Electrical Ontology defines concepts and properties for flight system electrical engineering."""
 @dc:rights="""Copyright 2010-2017, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
 
@@ -133,6 +135,10 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 		restrictedRange XMLSchema:string
 	}
 
+	scalarOneOfRestriction provenance {
+		restrictedRange XMLSchema:string
+	}
+
 	oneOf functionDirection = """1to2""" ^^ XMLSchema:string
 
 	oneOf functionDirection = """2to1""" ^^ XMLSchema:string
@@ -140,6 +146,12 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	oneOf functionDirection = """Bidirectional""" ^^ XMLSchema:string
 
 	oneOf functionDirection = """Undefined""" ^^ XMLSchema:string
+
+	oneOf provenance = """baseline""" ^^ XMLSchema:string
+
+	oneOf provenance = """proposed""" ^^ XMLSchema:string
+
+	oneOf provenance = """retracted""" ^^ XMLSchema:string
 
 	@rdfs:label="""has assembly acronym"""
 	entityScalarDataProperty + hasAssemblyAcronym {
@@ -609,9 +621,9 @@ Interface EMI Characteristics & Redundancy
 
 	allEntities EndCircuit . mission:isPresentedBy in EndCircuitPresentingElement
 
-	allEntities EndCircuitGroup . mission:presents in EndCircuit
-
 	allEntities EndCircuitGroup . mission:isPresentedBy in Assembly
+
+	allEntities EndCircuitGroup . mission:presents in EndCircuit
 
 	allEntities Function . mission:joins in EndCircuit
 
