@@ -131,6 +131,10 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	Subsystem extendsAspect ReferenceDesignatedElement
 
+	scalarOneOfRestriction endCircuitDirection {
+		restrictedRange XMLSchema:string
+	}
+
 	scalarOneOfRestriction functionDirection {
 		restrictedRange XMLSchema:string
 	}
@@ -138,6 +142,12 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	scalarOneOfRestriction provenance {
 		restrictedRange XMLSchema:string
 	}
+
+	oneOf endCircuitDirection = """in""" ^^ XMLSchema:string
+
+	oneOf endCircuitDirection = """inout""" ^^ XMLSchema:string
+
+	oneOf endCircuitDirection = """out""" ^^ XMLSchema:string
 
 	oneOf functionDirection = """1to2""" ^^ XMLSchema:string
 
@@ -163,6 +173,12 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	entityScalarDataProperty + hasAssemblyReferenceDesignator {
 		domain Assembly
 		range XMLSchema:string
+	}
+
+	@dc:description="""has end circuit direction"""
+	entityScalarDataProperty + hasEndCircuitDirection {
+		domain EndCircuit
+		range endCircuitDirection
 	}
 
 	@rdfs:label="""has end circuit identifier"""
