@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CONVERT=$HOME/Downloads/OMLConverters/bin/omlConverter
+CONVERT=${CONVERT:-$HOME/Downloads/OMLConverters/bin/omlConverter}
 INPUT_OML=converted-oml
 CONVERTED_OWL=converted-owl
 CATALOG=oml.catalog.xml

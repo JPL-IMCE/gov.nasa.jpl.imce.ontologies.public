@@ -18,9 +18,6 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""End Circuit Presenting Element"""
 	aspect EndCircuitPresentingElement
 	
-	@rdfs:label="""Power Switch Presenting Element"""
-	aspect PowerSwitchPresentingElement
-
 	@rdfs:label="""Reference Designated Element"""
 	aspect ReferenceDesignatedElement
 
@@ -172,10 +169,6 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	EndCircuitGroup extendsAspect EndCircuitPresentingElement
 	
-	PowerSwitchPresentingElement extendsAspect EndCircuitPresentingElement
-	
-	PowerSwitchBank extendsAspect PowerSwitchPresentingElement
-
 	EndCircuitPresentingElement extendsAspect mission:PresentingElement
 
 	ReferenceDesignatedElement extendsAspect base:IdentifiedElement
@@ -694,7 +687,7 @@ Interface EMI Characteristics & Redundancy
 
 	allEntities PowerSwitchBank . mission:presents in PowerSwitch
 	
-	allEntities PowerSwitch . mission:isPresentedBy in PowerSwitchPresentingElement
+	allEntities PowerSwitch . mission:isPresentedBy in PowerSwitchBank
 	
 	allEntities Function . mission:joins in EndCircuit
 
