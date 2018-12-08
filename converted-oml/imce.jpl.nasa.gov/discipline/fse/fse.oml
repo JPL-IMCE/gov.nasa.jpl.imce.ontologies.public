@@ -15,18 +15,22 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	extends <http://imce.jpl.nasa.gov/foundation/project/project>
 
+	@rdfs:label="""End Circuit Presenting Element"""
 	aspect EndCircuitPresentingElement
-
+	
 	@rdfs:label="""Reference Designated Element"""
 	aspect ReferenceDesignatedElement
 
 	@rdfs:label="""Assembly"""
 	concept Assembly
 
-	@rdfs:label="""Circuit"""
+	@rdfs:label="""End Circuit"""
 	concept EndCircuit
 
-	@rdfs:label="""Switch Group"""
+	@rdfs:label="""PowerSwitch"""
+	concept PowerSwitch
+	
+	@rdfs:label="""End Circuit Group"""
 	concept EndCircuitGroup
 
 	@rdfs:label="""Function"""
@@ -41,10 +45,15 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""Subsystem"""
 	concept Subsystem
 
+	@rdfs:label="""GangConfiguration"""
+	concept GangConfiguration
+	
 	Assembly extendsConcept mission:Component
 
 	EndCircuit extendsConcept mission:Interface
 
+	PowerSwitch extendsConcept EndCircuit
+	
 	EndCircuitGroup extendsConcept mission:Interface
 
 	Function extendsConcept mission:Junction
@@ -55,6 +64,8 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	Subsystem extendsConcept mission:Component
 
+	GangConfiguration extendsConcept analysis:Explanation
+	
 	@oml:hasPropertyLabel="""connects assembly"""
 	@oml:hasReificationLabel="""Connects Assembly"""
 	reifiedRelationship ConnectsAssembly {
@@ -111,6 +122,35 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 		source = Function
 		target = Subsystem }
 
+	@oml:hasPropertyLabel="""has gang member"""
+	@oml:hasReificationLabel="""Has Gang Member"""
+	reifiedRelationship HasGangMember {
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = hasGangMember
+		inverse = isMemberOfGang
+		source = GangConfiguration
+		target = PowerSwitch }
+
+	@oml:hasPropertyLabel="""has gang aggregate"""
+	@oml:hasReificationLabel="""Has Gang Aggregate"""
+	reifiedRelationship HasGangAggregate {
+		functional
+		inverseFunctional
+		asymmetric
+		irreflexive
+		unreified = hasGangAggregate
+		inverse = isAggregateOfGang
+		source = GangConfiguration
+		target = PowerSwitch }
+
+	rule gangMemberFromAggregate infers mission:joins if
+		Function && mission:joins && isAggregateOfGang && hasGangMember
+		
+	rule gangAggregateFromMember infers mission:joins if
+		Function && mission:joins && isMemberOfGang && hasGangAggregate
+		
 	ConnectsAssembly1 extendsRelationship ConnectsAssembly
 
 	ConnectsAssembly2 extendsRelationship ConnectsAssembly
@@ -119,12 +159,16 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	ConnectsSubsystem2 extendsRelationship ConnectsSubsystem
 
+	HasGangMember extendsRelationship analysis:Analyzes
+	
+	HasGangAggregate extendsRelationship analysis:Explains
+	
 	Assembly extendsAspect EndCircuitPresentingElement
 
 	Assembly extendsAspect ReferenceDesignatedElement
 
 	EndCircuitGroup extendsAspect EndCircuitPresentingElement
-
+	
 	EndCircuitPresentingElement extendsAspect mission:PresentingElement
 
 	ReferenceDesignatedElement extendsAspect base:IdentifiedElement
@@ -641,6 +685,10 @@ Interface EMI Characteristics & Redundancy
 
 	allEntities EndCircuitGroup . mission:presents in EndCircuit
 
+	allEntities PowerSwitchBank . mission:presents in PowerSwitch
+	
+	allEntities PowerSwitch . mission:isPresentedBy in PowerSwitchBank
+	
 	allEntities Function . mission:joins in EndCircuit
 
 	allEntities FunctionDescription . analysis:characterizes in Function

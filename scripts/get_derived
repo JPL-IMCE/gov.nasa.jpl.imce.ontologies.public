@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CONVERT=$HOME/Downloads/OMLConverters/bin/omlConverter
+CONVERT=${CONVERT:-$HOME/Downloads/OMLConverters/bin/omlConverter}
 CONVERTED=converted-oml
 INPUT=$HOME/git/gov.nasa.jpl.imce.ontologies.workflow/target/workflow/artifacts
 BUNDLES=bundles
