@@ -27,9 +27,6 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""End Circuit"""
 	concept EndCircuit
 
-	@rdfs:label="""PowerSwitch"""
-	concept PowerSwitch
-	
 	@rdfs:label="""End Circuit Group"""
 	concept EndCircuitGroup
 
@@ -52,8 +49,6 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	EndCircuit extendsConcept mission:Interface
 
-	PowerSwitch extendsConcept EndCircuit
-	
 	EndCircuitGroup extendsConcept mission:Interface
 
 	Function extendsConcept mission:Junction
@@ -131,7 +126,7 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 		unreified = hasGangMember
 		inverse = isMemberOfGang
 		source = GangConfiguration
-		target = PowerSwitch }
+		target = EndCircuit }
 
 	@oml:hasPropertyLabel="""has gang aggregate"""
 	@oml:hasReificationLabel="""Has Gang Aggregate"""
@@ -143,7 +138,7 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 		unreified = hasGangAggregate
 		inverse = isAggregateOfGang
 		source = GangConfiguration
-		target = PowerSwitch }
+		target = EndCircuit }
 
 	rule gangMemberFromAggregate infers mission:joins if
 		Function && mission:joins && isAggregateOfGang && hasGangMember
@@ -686,8 +681,6 @@ Interface EMI Characteristics & Redundancy
 	allEntities EndCircuitGroup . mission:presents in EndCircuit
 
 	allEntities PowerSwitchBank . mission:presents in PowerSwitch
-	
-	allEntities PowerSwitch . mission:isPresentedBy in PowerSwitchBank
 	
 	allEntities Function . mission:joins in EndCircuit
 
