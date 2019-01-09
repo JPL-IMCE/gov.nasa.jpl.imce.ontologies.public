@@ -30,6 +30,9 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""End Circuit Group"""
 	concept EndCircuitGroup
 
+	@rdfs:label="""Engineering Change Request"""
+	concept EngineeringChangeRequest
+	
 	@rdfs:label="""Function"""
 	concept Function
 
@@ -51,6 +54,8 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	EndCircuitGroup extendsConcept mission:Interface
 
+	EngineeringChangeRequest extendsConcept analysis:Characterization
+	
 	Function extendsConcept mission:Junction
 
 	FunctionDescription extendsConcept analysis:Characterization
@@ -679,6 +684,8 @@ Interface EMI Characteristics & Redundancy
 	allEntities EndCircuitGroup . mission:isPresentedBy in Assembly
 
 	allEntities EndCircuitGroup . mission:presents in EndCircuit
+	
+	allEntities EngineeringChangeRequest . analysis:characterizes in Function
 	
 	allEntities Function . mission:joins in EndCircuit
 
