@@ -675,6 +675,12 @@ Interface EMI Characteristics & Redundancy
 		range XMLSchema:string
 	}
 
+	@rdfs:label="""has ECR identifier"""
+	entityScalarDataProperty + hasEcrIdentifier {
+		domain EngineeringChangeRequest
+		range XMLSchema:string
+	}
+
 	allEntities Assembly . base:isAggregatedIn in Subsystem
 
 	allEntities EndCircuit . mission:isJoinedIn in Function
@@ -698,6 +704,8 @@ Interface EMI Characteristics & Redundancy
 	hasSwitchBankLocalName subDataPropertyOf base:hasAlternateName
 
 	hasAssemblyAcronym subDataPropertyOf base:hasIdentifier
+	
+	hasEcrIdentifier subDataPropertyOf base:hasIdentifier
 
 	hasEndCircuitIdentifier subDataPropertyOf base:hasIdentifier
 
