@@ -36,6 +36,12 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""Function"""
 	concept Function
 
+	@rdfs:label="""Net"""
+	concept Net
+	
+	@rdfs:label="""Wire"""
+	concept Wire
+
 	@rdfs:label="""Function Description"""
 	concept FunctionDescription
 
@@ -57,6 +63,10 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	EngineeringChangeRequest extendsConcept analysis:Characterization
 	
 	Function extendsConcept mission:Junction
+	
+	Net extendsConcept mission:Junction
+	
+	Wire extendsConcept mission:Junction
 
 	FunctionDescription extendsConcept analysis:Characterization
 
@@ -145,6 +155,37 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 		source = GangConfiguration
 		target = EndCircuit }
 
+	@oml:hasPropertyLabel="""implements"""
+	@oml:hasReificationLabel="""Implements"""
+	reifiedRelationship Implements {
+		functional
+		asymmetric
+		irreflexive
+		unreified = implements
+		inverse = isImplementedBy
+		source = mission:Interface
+		target = mission:Interface }
+
+	@oml:hasPropertyLabel="""implements net"""
+	@oml:hasReificationLabel="""ImplementsNet"""
+	reifiedRelationship ImplementsNet {
+		functional
+		asymmetric
+		irreflexive
+		unreified = implementsNet
+		source = Wire
+		target = Net }
+
+	@oml:hasPropertyLabel="""implements function"""
+	@oml:hasReificationLabel="""ImplementsFunction"""
+	reifiedRelationship ImplementsFunction {
+		functional
+		asymmetric
+		irreflexive
+		unreified = implementsFunction
+		source = Net
+		target = Function }
+
 	rule gangMemberFromAggregate infers mission:joins if
 		Function && mission:joins && isAggregateOfGang && hasGangMember
 		
@@ -162,6 +203,10 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	HasGangMember extendsRelationship analysis:Analyzes
 	
 	HasGangAggregate extendsRelationship analysis:Explains
+	
+	ImplementsNet extendsRelationship Implements
+	
+	ImplementsFunction extendsRelationship Implements
 	
 	Assembly extendsAspect EndCircuitPresentingElement
 
