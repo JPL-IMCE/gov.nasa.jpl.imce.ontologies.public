@@ -1,31 +1,19 @@
 <?xml version="1.0"?>
-
-
-<!DOCTYPE rdf:RDF [
-    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY annotation "http://imce.jpl.nasa.gov/foundation/annotation/annotation#" >
-    <!ENTITY QUDV-metamodel "http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#" >
-    <!ENTITY QUDV-metamodel-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#" >
-]>
-
-
 <rdf:RDF xmlns="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#"
      xml:base="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel"
-     xmlns:annotation="http://imce.jpl.nasa.gov/foundation/annotation/annotation#"
-     xmlns:QUDV-metamodel-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://imce.jpl.nasa.gov/oml/oml#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:QUDV-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#"
-     xmlns:dc="http://purl.org/dc/elements/1.1/">
+     xmlns:annotation="http://imce.jpl.nasa.gov/foundation/annotation/annotation#">
     <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel">
         <owl:imports rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV"/>
         <owl:imports rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel"/>
+        <oml:isOMLTerminologyBoxOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</oml:isOMLTerminologyBoxOpen>
+        <oml:isOMLTerminologyGraph rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</oml:isOMLTerminologyGraph>
     </owl:Ontology>
     
 
@@ -38,86 +26,80 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topObjectProperty -->
 
-    <owl:ObjectProperty rdf:about="&QUDV-metamodel-backbone;topObjectProperty">
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topObjectProperty"/>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topReifiedObjectProperty -->
 
-    <owl:ObjectProperty rdf:about="&QUDV-metamodel-backbone;topReifiedObjectProperty">
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-metamodel-backbone;topObjectProperty"/>
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topReifiedObjectProperty">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topObjectProperty"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topReifiedObjectPropertySource -->
 
-    <owl:ObjectProperty rdf:about="&QUDV-metamodel-backbone;topReifiedObjectPropertySource">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-metamodel-backbone;topObjectProperty"/>
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topReifiedObjectPropertySource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topReifiedObjectPropertyTarget -->
 
-    <owl:ObjectProperty rdf:about="&QUDV-metamodel-backbone;topReifiedObjectPropertyTarget">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-metamodel-backbone;topObjectProperty"/>
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topReifiedObjectPropertyTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topReifiedStructuredDataProperty -->
 
-    <owl:ObjectProperty rdf:about="&QUDV-metamodel-backbone;topReifiedStructuredDataProperty">
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-metamodel-backbone;topObjectProperty"/>
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topReifiedStructuredDataProperty">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topObjectProperty"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topReifiedStructuredDataPropertySource -->
 
-    <owl:ObjectProperty rdf:about="&QUDV-metamodel-backbone;topReifiedStructuredDataPropertySource">
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-metamodel-backbone;topObjectProperty"/>
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topReifiedStructuredDataPropertySource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topReifiedStructuredDataPropertyTarget -->
 
-    <owl:ObjectProperty rdf:about="&QUDV-metamodel-backbone;topReifiedStructuredDataPropertyTarget">
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-metamodel-backbone;topObjectProperty"/>
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topReifiedStructuredDataPropertyTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topUnreifiedObjectProperty -->
 
-    <owl:ObjectProperty rdf:about="&QUDV-metamodel-backbone;topUnreifiedObjectProperty">
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <rdfs:subPropertyOf rdf:resource="&QUDV-metamodel-backbone;topObjectProperty"/>
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topUnreifiedObjectProperty">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topObjectProperty"/>
     </owl:ObjectProperty>
     
 
@@ -130,15 +112,14 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topDataProperty -->
 
-    <owl:DatatypeProperty rdf:about="&QUDV-metamodel-backbone;topDataProperty">
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#topDataProperty"/>
     
 
 
@@ -150,253 +131,545 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Aspect -->
 
-    <owl:Class rdf:about="&QUDV-metamodel-backbone;Aspect">
-        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Thing"/>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Aspect">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Thing"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Entity -->
 
-    <owl:Class rdf:about="&QUDV-metamodel-backbone;Entity">
-        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Thing"/>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Entity">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Thing"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#ReifiedObjectProperty -->
 
-    <owl:Class rdf:about="&QUDV-metamodel-backbone;ReifiedObjectProperty">
-        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Thing"/>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#ReifiedObjectProperty">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Thing"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#ReifiedStructuredDataProperty -->
 
-    <owl:Class rdf:about="&QUDV-metamodel-backbone;ReifiedStructuredDataProperty">
-        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Thing"/>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#ReifiedStructuredDataProperty">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Thing"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#StructuredDatatype -->
 
-    <owl:Class rdf:about="&QUDV-metamodel-backbone;StructuredDatatype">
-        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Thing"/>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#StructuredDatatype">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Thing"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Thing -->
 
-    <owl:Class rdf:about="&QUDV-metamodel-backbone;Thing">
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-    </owl:Class>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Thing"/>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Dimension -->
 
+
     <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Dimension">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.Block"/>
     </rdf:Description>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Dimension"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.Block"/>
+        <oml:omlElementUUID>207a1dc2-5e7a-5570-bba0-5998d207c995</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Prefix -->
 
+
     <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Prefix">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.Block"/>
     </rdf:Description>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Prefix"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.Block"/>
+        <oml:omlElementUUID>4ea06549-07e0-5365-89c5-efd5f3b193e1</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#QuantityKindFactor -->
 
+
     <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#QuantityKindFactor">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.Block"/>
     </rdf:Description>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#QuantityKindFactor"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.Block"/>
+        <oml:omlElementUUID>870a0e11-238e-5c85-8a4f-9a249d528d7e</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SystemOfQuantities -->
 
+
     <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SystemOfQuantities">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.Block"/>
     </rdf:Description>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SystemOfQuantities"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.Block"/>
+        <oml:omlElementUUID>36d26dba-6b59-5fb3-a41c-15e26ab1800b</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SystemOfUnits -->
 
+
     <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SystemOfUnits">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.Block"/>
     </rdf:Description>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SystemOfUnits"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.Block"/>
+        <oml:omlElementUUID>d2e8a56f-bb7d-540f-8d4f-916c5ca88671</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#UnitFactor -->
 
+
     <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#UnitFactor">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.Block"/>
     </rdf:Description>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#UnitFactor"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/SysML-metamodel#Class.Block"/>
+        <oml:omlElementUUID>d9be4214-ef7a-5a40-bd44-d1af255c3397</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#AffineConversionUnit -->
 
-    <owl:Class rdf:about="&QUDV-metamodel;AffineConversionUnit">
-        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Entity"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#AffineConversionUnit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#AffineConversionUnit"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#AffineConversionUnit"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>cf136b67-7313-5940-ad61-12093f0025fd</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#AffineConversionUnit"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Entity"/>
+        <oml:omlElementUUID>cf136b67-7313-5940-ad61-12093f0025fd</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#AffineConversionUnit"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#AffineConversionUnit"/>
+        <oml:omlElementUUID>f2c1dc48-e1d6-5c45-a688-d14800da9413</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#DerivedQuantityKind -->
 
-    <owl:Class rdf:about="&QUDV-metamodel;DerivedQuantityKind">
-        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Entity"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#DerivedQuantityKind">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#DerivedQuantityKind"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#DerivedQuantityKind"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>62c873d1-836a-53f5-873c-d1368d5adb53</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#DerivedQuantityKind"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Entity"/>
+        <oml:omlElementUUID>62c873d1-836a-53f5-873c-d1368d5adb53</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#DerivedQuantityKind"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#DerivedQuantityKind"/>
+        <oml:omlElementUUID>fcfcfbf6-7b94-52d8-9b67-b6e25e566046</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#DerivedUnit -->
 
-    <owl:Class rdf:about="&QUDV-metamodel;DerivedUnit">
-        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Entity"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#DerivedUnit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#DerivedUnit"/>
-        <annotation:isLibrary rdf:datatype="&xsd;boolean">true</annotation:isLibrary>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#DerivedUnit"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>367f689e-0215-5466-bdc5-d7b8db5f9c09</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#DerivedUnit"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Entity"/>
+        <oml:omlElementUUID>367f689e-0215-5466-bdc5-d7b8db5f9c09</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#DerivedUnit"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#DerivedUnit"/>
+        <oml:omlElementUUID>159b525d-db4f-5498-b782-531aa74b1f06</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Dimension -->
 
-    <owl:Class rdf:about="&QUDV-metamodel;Dimension">
-        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Entity"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Dimension">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Dimension"/>
-        <annotation:isLibrary rdf:datatype="&xsd;boolean">true</annotation:isLibrary>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Dimension"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>9911bee8-868d-51ac-a2cd-0f3959e9cfbc</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Dimension"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Entity"/>
+        <oml:omlElementUUID>9911bee8-868d-51ac-a2cd-0f3959e9cfbc</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Dimension"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Dimension"/>
+        <oml:omlElementUUID>3cba7ff4-83cd-54da-8ed4-64b04122f6f2</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#GeneralConversionUnit -->
 
-    <owl:Class rdf:about="&QUDV-metamodel;GeneralConversionUnit">
-        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Entity"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#GeneralConversionUnit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#GeneralConversionUnit"/>
-        <annotation:isLibrary rdf:datatype="&xsd;boolean">true</annotation:isLibrary>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#GeneralConversionUnit"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>6615a1d2-2d24-5165-8322-4e1023e6206e</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#GeneralConversionUnit"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Entity"/>
+        <oml:omlElementUUID>6615a1d2-2d24-5165-8322-4e1023e6206e</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#GeneralConversionUnit"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#GeneralConversionUnit"/>
+        <oml:omlElementUUID>c5230843-3a2d-5bec-bb7b-ecc27b1d0d05</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#LinearConversionUnit -->
 
-    <owl:Class rdf:about="&QUDV-metamodel;LinearConversionUnit">
-        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Entity"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#LinearConversionUnit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#LinearConversionUnit"/>
-        <annotation:isLibrary rdf:datatype="&xsd;boolean">true</annotation:isLibrary>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#LinearConversionUnit"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>392049b0-e629-5ed2-b720-bd09b688df56</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#LinearConversionUnit"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Entity"/>
+        <oml:omlElementUUID>392049b0-e629-5ed2-b720-bd09b688df56</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#LinearConversionUnit"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#LinearConversionUnit"/>
+        <oml:omlElementUUID>9e84bcb2-99c9-5781-af7c-a33524cd0fc5</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Prefix -->
 
-    <owl:Class rdf:about="&QUDV-metamodel;Prefix">
-        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Entity"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Prefix">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Prefix"/>
-        <annotation:isLibrary rdf:datatype="&xsd;boolean">true</annotation:isLibrary>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Prefix"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>3c2172e3-bf43-5d8a-b809-e31eadb409a1</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Prefix"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Entity"/>
+        <oml:omlElementUUID>3c2172e3-bf43-5d8a-b809-e31eadb409a1</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Prefix"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#Prefix"/>
+        <oml:omlElementUUID>d974ceb5-8003-5457-b6ff-a4ce64eb7955</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#PrefixedUnit -->
 
-    <owl:Class rdf:about="&QUDV-metamodel;PrefixedUnit">
-        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Entity"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#PrefixedUnit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#PrefixedUnit"/>
-        <annotation:isLibrary rdf:datatype="&xsd;boolean">true</annotation:isLibrary>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#PrefixedUnit"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>591b9e4d-5522-5875-88fd-699897599f9a</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#PrefixedUnit"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Entity"/>
+        <oml:omlElementUUID>591b9e4d-5522-5875-88fd-699897599f9a</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#PrefixedUnit"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#PrefixedUnit"/>
+        <oml:omlElementUUID>68a0ddf4-73d1-5263-9478-8e1f955b7bd5</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#QuantityKindFactor -->
 
-    <owl:Class rdf:about="&QUDV-metamodel;QuantityKindFactor">
-        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Entity"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#QuantityKindFactor">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#QuantityKindFactor"/>
-        <annotation:isLibrary rdf:datatype="&xsd;boolean">true</annotation:isLibrary>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#QuantityKindFactor"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>e2bd2fe0-1700-5160-8441-24cb4314aeed</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#QuantityKindFactor"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Entity"/>
+        <oml:omlElementUUID>e2bd2fe0-1700-5160-8441-24cb4314aeed</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#QuantityKindFactor"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#QuantityKindFactor"/>
+        <oml:omlElementUUID>49c14b41-a4c3-5209-a1a6-af1f119f9144</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#SimpleQuantityKind -->
 
-    <owl:Class rdf:about="&QUDV-metamodel;SimpleQuantityKind">
-        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Entity"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#SimpleQuantityKind">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SimpleQuantityKind"/>
-        <annotation:isLibrary rdf:datatype="&xsd;boolean">true</annotation:isLibrary>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#SimpleQuantityKind"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>7761c662-2863-5add-b71f-7472f33ff4a6</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#SimpleQuantityKind"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Entity"/>
+        <oml:omlElementUUID>7761c662-2863-5add-b71f-7472f33ff4a6</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#SimpleQuantityKind"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SimpleQuantityKind"/>
+        <oml:omlElementUUID>5ebdb6fc-41dd-50b2-8f54-db8cf06aaad8</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#SimpleUnit -->
 
-    <owl:Class rdf:about="&QUDV-metamodel;SimpleUnit">
-        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Entity"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#SimpleUnit">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SimpleUnit"/>
-        <annotation:isLibrary rdf:datatype="&xsd;boolean">true</annotation:isLibrary>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#SimpleUnit"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>09bba40c-ac75-5905-a97d-0c708bb95957</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#SimpleUnit"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Entity"/>
+        <oml:omlElementUUID>09bba40c-ac75-5905-a97d-0c708bb95957</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#SimpleUnit"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SimpleUnit"/>
+        <oml:omlElementUUID>f1c15310-75b4-5692-bc8d-cc2b3b63b389</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#SystemOfQuantities -->
 
-    <owl:Class rdf:about="&QUDV-metamodel;SystemOfQuantities">
-        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Entity"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#SystemOfQuantities">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SystemOfQuantities"/>
-        <annotation:isLibrary rdf:datatype="&xsd;boolean">true</annotation:isLibrary>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#SystemOfQuantities"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>f749de13-0ce1-5158-a7b9-a7993d99c5e4</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#SystemOfQuantities"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Entity"/>
+        <oml:omlElementUUID>f749de13-0ce1-5158-a7b9-a7993d99c5e4</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#SystemOfQuantities"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SystemOfQuantities"/>
+        <oml:omlElementUUID>86702ab9-e82d-5ec4-9df3-a7f3f9f6662c</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#SystemOfUnits -->
 
-    <owl:Class rdf:about="&QUDV-metamodel;SystemOfUnits">
-        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Entity"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#SystemOfUnits">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SystemOfUnits"/>
-        <annotation:isLibrary rdf:datatype="&xsd;boolean">true</annotation:isLibrary>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#SystemOfUnits"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>8662fb85-5f1d-5ce1-8d96-2d40aa43a828</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#SystemOfUnits"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Entity"/>
+        <oml:omlElementUUID>8662fb85-5f1d-5ce1-8d96-2d40aa43a828</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#SystemOfUnits"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#SystemOfUnits"/>
+        <oml:omlElementUUID>79ff7ce2-12db-50eb-a96e-2a10918dccf9</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#UnitFactor -->
 
-    <owl:Class rdf:about="&QUDV-metamodel;UnitFactor">
-        <rdfs:subClassOf rdf:resource="&QUDV-metamodel-backbone;Entity"/>
-        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#UnitFactor"/>
-        <annotation:isLibrary rdf:datatype="&xsd;boolean">true</annotation:isLibrary>
-    </owl:Class>
 
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#UnitFactor">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#UnitFactor"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#UnitFactor"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>cefb362f-f222-5df1-a402-9f6d7ede4c94</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#UnitFactor"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#Entity"/>
+        <oml:omlElementUUID>cefb362f-f222-5df1-a402-9f6d7ede4c94</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel#UnitFactor"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV#UnitFactor"/>
+        <oml:omlElementUUID>e7543910-97e9-5f55-8ade-199e7f1ac9f0</oml:omlElementUUID>
+    </owl:Axiom>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 3.4.5-SNAPSHOT) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 5.1.2) https://github.com/owlcs/owlapi/ -->
+
 

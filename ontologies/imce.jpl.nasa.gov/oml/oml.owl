@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://imce.jpl.nasa.gov/oml/oml#"
      xml:base="http://imce.jpl.nasa.gov/oml/oml"
-     xmlns:oml-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://imce.jpl.nasa.gov/oml/oml#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:oml="http://imce.jpl.nasa.gov/oml/oml#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/oml/oml">
-        <owl:versionIRI rdf:resource="http://imce.jpl.nasa.gov/oml/oml/9.0.0"/>
         <owl:imports rdf:resource="http://purl.org/dc/elements/1.1/"/>
-        <rdfs:comment xml:lang="en">This ontology has no logical axioms. It serves two purposes:
+        <isOMLTerminologyBoxOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isOMLTerminologyBoxOpen>
+        <isOMLTerminologyGraph rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isOMLTerminologyGraph>
+        <rdfs:comment>This ontology has no logical axioms. It serves two purposes:
 1) Provide a vocabulary of OWL AnnotationProperties to disambiguate the interpretation of an OML module represented in OWL2-DL + SWRL rules
 2) Separate built-in OML modules that do not have an explicit OWL2-DL + SWRL representation from OML modules that have an explicit OWL2-DL + SWRL rules representation.</rdfs:comment>
     </owl:Ontology>
@@ -27,96 +27,137 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://imce.jpl.nasa.gov/oml/oml#hasInverseLabel -->
 
-    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/oml/oml#hasInverseLabel">
-        <rdfs:comment xml:lang="en">Corresponds to rdfs:label on the OWL ObjectProperty corresponding to the inverse entity reified property, when defined.</rdfs:comment>
-    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/oml/oml#hasInverseLabel"/>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/oml/oml#hasInverseLabel"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+        <omlElementUUID>c854745e-1220-5511-9ceb-7990dac45f57</omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/oml/oml#hasPropertyLabel -->
 
-    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/oml/oml#hasPropertyLabel">
-        <rdfs:comment xml:lang="en">Corresponds to rdfs:label on the OWL ObjectProperty corresponding to an entity reified property.</rdfs:comment>
-    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/oml/oml#hasPropertyLabel"/>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/oml/oml#hasPropertyLabel"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+        <omlElementUUID>b9a0960f-6c68-51f1-8617-72c42b913976</omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/oml/oml#hasReificationLabel -->
 
-    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/oml/oml#hasReificationLabel">
-        <rdfs:comment xml:lang="en">Corresponds to rdfs:label on the OWL Class corresponding to entity reified property.</rdfs:comment>
-    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/oml/oml#hasReificationLabel"/>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/oml/oml#hasReificationLabel"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+        <omlElementUUID>43178eff-57f5-5ab2-8efa-fbff76654535</omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/oml/oml#isOMLBundle -->
 
-    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/oml/oml#isOMLBundle">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/oml/oml#isOMLModule"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/oml/oml#isOMLBundle"/>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/oml/oml#isOMLBundle"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+        <omlElementUUID>926e68bd-a012-5158-8db6-d8781e692df0</omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/oml/oml#isOMLDescriptionBox -->
 
-    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/oml/oml#isOMLDescriptionBox">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/oml/oml#isOMLModule"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/oml/oml#isOMLDescriptionBox"/>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/oml/oml#isOMLDescriptionBox"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+        <omlElementUUID>8f087693-8e65-5381-9250-eb6341ba5289</omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/oml/oml#isOMLDescriptionBoxRefinable -->
 
-    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/oml/oml#isOMLDescriptionBoxRefinable">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/oml/oml#isOMLDescriptionBoxRefinable"/>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/oml/oml#isOMLDescriptionBoxRefinable"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+        <omlElementUUID>8f2e2152-44e9-5fd5-9453-8217e2c7d27a</omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/oml/oml#isOMLModule -->
 
-    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/oml/oml#isOMLModule">
-        <rdfs:comment xml:lang="en">True indicates that the annotated ontology is the OWL2-DL representation of an OML Module of some kind (TerminologyGraph, Bundle, DescriptionBox)</rdfs:comment>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/oml/oml#isOMLModule"/>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/oml/oml#isOMLModule"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+        <omlElementUUID>10584cae-f9aa-5acc-873a-8150ee95d05b</omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/oml/oml#isOMLTerminologyBoxOpen -->
 
-    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/oml/oml#isOMLTerminologyBoxOpen">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/oml/oml#isOMLTerminologyBoxOpen"/>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/oml/oml#isOMLTerminologyBoxOpen"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+        <omlElementUUID>61039d8b-d135-5d03-8f62-d661dfe79ecb</omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/oml/oml#isOMLTerminologyGraph -->
 
-    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/oml/oml#isOMLTerminologyGraph">
-        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/oml/oml#isOMLModule"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/oml/oml#isOMLTerminologyGraph"/>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/oml/oml#isOMLTerminologyGraph"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+        <omlElementUUID>c8a8581e-2811-535a-b203-a5991a8668b4</omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/oml/oml#omlElementUUID -->
 
-    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/oml/oml#omlElementUUID">
-        <rdfs:comment xml:lang="en">Specifies the UUID of the OML Element from which the annotated OWL/SWRL element comes from.</rdfs:comment>
-    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/oml/oml#omlElementUUID"/>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/oml/oml#omlElementUUID"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+        <omlElementUUID>3d02944c-11d8-5445-a21a-3387bf9ed586</omlElementUUID>
+    </owl:Axiom>
     
 
 
@@ -128,16 +169,19 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#topObjectProperty -->
+
 
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#topObjectProperty"/>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#topReifiedObjectProperty -->
+
 
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#topReifiedObjectProperty">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#topObjectProperty"/>
@@ -147,21 +191,26 @@
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#topReifiedObjectPropertySource -->
 
+
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#topReifiedObjectPropertySource">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#topReifiedObjectPropertyTarget -->
 
+
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#topReifiedObjectPropertyTarget">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#topReifiedStructuredDataProperty -->
+
 
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#topReifiedStructuredDataProperty">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#topObjectProperty"/>
@@ -171,21 +220,26 @@
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#topReifiedStructuredDataPropertySource -->
 
+
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#topReifiedStructuredDataPropertySource">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#topReifiedStructuredDataPropertyTarget -->
 
+
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#topReifiedStructuredDataPropertyTarget">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#topUnreifiedObjectProperty -->
+
 
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#topUnreifiedObjectProperty">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#topObjectProperty"/>
@@ -201,10 +255,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#topDataProperty -->
+
 
     <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#topDataProperty"/>
     
@@ -218,10 +274,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#Aspect -->
+
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#Aspect">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#Thing"/>
@@ -231,6 +289,7 @@
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#Entity -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#Entity">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#Thing"/>
     </owl:Class>
@@ -238,6 +297,7 @@
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#ReifiedObjectProperty -->
+
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#ReifiedObjectProperty">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#Thing"/>
@@ -247,6 +307,7 @@
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#ReifiedStructuredDataProperty -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#ReifiedStructuredDataProperty">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#Thing"/>
     </owl:Class>
@@ -254,6 +315,7 @@
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#StructuredDatatype -->
+
 
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#StructuredDatatype">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#Thing"/>
@@ -263,10 +325,12 @@
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#Thing -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/oml/oml#Thing"/>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 5.1.2) https://github.com/owlcs/owlapi/ -->
+
 

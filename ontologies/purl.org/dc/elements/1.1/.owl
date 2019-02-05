@@ -1,214 +1,404 @@
-<rdf:RDF xml:base="http://purl.org/dc/elements/1.1/"
-         xmlns:dcterms="http://purl.org/dc/terms/" 
-         xmlns="http://purl.org/dc/elements/1.1/" 
-         xmlns:dc="http://purl.org/dc/elements/1.1/" 
-         xmlns:owl="http://www.w3.org/2002/07/owl#"
-         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
-         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  
- <owl:Ontology rdf:about="http://purl.org/dc/elements/1.1/" />
- 
-    <!-- Title -->
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/dc/elements/1.1/"
+     xml:base="http://purl.org/dc/elements/1.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://imce.jpl.nasa.gov/oml/oml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://purl.org/dc/elements/1.1/">
+        <oml:isOMLTerminologyBoxOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</oml:isOMLTerminologyBoxOpen>
+        <oml:isOMLTerminologyGraph rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</oml:isOMLTerminologyGraph>
+    </owl:Ontology>
     
- <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title">
-    <rdfs:label xml:lang="en-US">Title</rdfs:label>
-    <rdfs:comment xml:lang="en-US">A name given to the resource.</rdfs:comment>
-    <dc:description xml:lang="en-US">
-        Typically, a Title will be a name by which the resource is
-         formally known.
-    </dc:description>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
- </owl:AnnotationProperty>
- 
-    <!-- Creator -->
- 
- <owl:AnnotationProperty  rdf:about="http://purl.org/dc/elements/1.1/creator">
-    <rdfs:label xml:lang="en-US">Creator</rdfs:label>
-    <rdfs:comment xml:lang="en-US">An entity primarily responsible for making the content 
-         of the resource.</rdfs:comment>
-    <dc:description xml:lang="en-US">Examples of a Creator include a person, an organisation,
-         or a service.  Typically, the name of a Creator should 
-         be used to indicate the entity.</dc:description>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
- </owl:AnnotationProperty>
- 
-    <!-- Subject -->
- 
- <owl:AnnotationProperty  rdf:about="http://purl.org/dc/elements/1.1/subject">
-    <rdfs:label xml:lang="en-US">Subject and Keywords</rdfs:label>
-    <rdfs:comment xml:lang="en-US">The topic of the content of the resource.</rdfs:comment>
-    <dc:description xml:lang="en-US">Typically, a Subject will be expressed as keywords,
-         key phrases or classification codes that describe a topic
-         of the resource.  Recommended best practice is to select 
-         a value from a controlled vocabulary or formal 
-         classification scheme.</dc:description>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
- </owl:AnnotationProperty>
- 
-    <!-- Description -->
- 
- <owl:AnnotationProperty  rdf:about="http://purl.org/dc/elements/1.1/description">
-    <rdfs:label xml:lang="en-US">Description</rdfs:label>
-    <rdfs:comment xml:lang="en-US">An account of the content of the resource.</rdfs:comment>
-    <dc:description xml:lang="en-US">Description may include but is not limited to: an abstract,
-         table of contents, reference to a graphical representation
-         of content or a free-text account of the content.</dc:description>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
- </owl:AnnotationProperty>
- 
-    <!-- Publisher -->
- 
- <owl:AnnotationProperty  rdf:about="http://purl.org/dc/elements/1.1/publisher">
-    <rdfs:label xml:lang="en-US">Publisher</rdfs:label>
-    <rdfs:comment xml:lang="en-US">An entity responsible for making the resource available</rdfs:comment>
-    <dc:description xml:lang="en-US">Examples of a Publisher include a person, an organisation,
-         or a service.
-         Typically, the name of a Publisher should be used to
-         indicate the entity.</dc:description>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
- </owl:AnnotationProperty>
-    
-    <!-- Contributor -->
- 
- <owl:AnnotationProperty  rdf:about="http://purl.org/dc/elements/1.1/contributor">
-    <rdfs:label xml:lang="en-US">Contributor</rdfs:label>
-    <rdfs:comment xml:lang="en-US">An entity responsible for making contributions to the
-         content of the resource.</rdfs:comment>
-    <dc:description xml:lang="en-US">Examples of a Contributor include a person, an 
-         organisation, or a service.  Typically, the name of a 
-         Contributor should be used to indicate the entity.</dc:description>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
- </owl:AnnotationProperty>
- 
-    <!-- Date -->
- 
- <owl:AnnotationProperty  rdf:about="http://purl.org/dc/elements/1.1/date">
-    <rdfs:label xml:lang="en-US">Date</rdfs:label>
-    <rdfs:comment xml:lang="en-US">A date associated with an event in the life cycle of the
-         resource.</rdfs:comment>
-    <dc:description xml:lang="en-US">Typically, Date will be associated with the creation or
-         availability of the resource.  Recommended best practice
-         for encoding the date value is defined in a profile of
-         ISO 8601 [W3CDTF] and follows the YYYY-MM-DD format.</dc:description>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
- </owl:AnnotationProperty>
- 
-    <!-- Type -->
- 
- <owl:AnnotationProperty  rdf:about="http://purl.org/dc/elements/1.1/type">
-    <rdfs:label xml:lang="en-US">Resource Type</rdfs:label>
-    <rdfs:comment xml:lang="en-US">The nature or genre of the content of the resource.</rdfs:comment>
-    <dc:description xml:lang="en-US">Type includes terms describing general categories, functions,
-         genres, or aggregation levels for content. Recommended best
-         practice is to select a value from a controlled vocabulary
-         (for example, the DCMI Type Vocabulary [DCMITYPE]). To 
-         describe the physical or digital manifestation of the 
-         resource, use the Format element.</dc:description>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
- </owl:AnnotationProperty>
- 
-    <!-- Format -->
-    
- <owl:AnnotationProperty  rdf:about="http://purl.org/dc/elements/1.1/format">
-    <rdfs:label xml:lang="en-US">Format</rdfs:label>
-    <rdfs:comment xml:lang="en-US">The physical or digital manifestation of the resource.</rdfs:comment>
-    <dc:description xml:lang="en-US">Typically, Format may include the media-type or dimensions of
-         the resource. Format may be used to determine the software,
-         hardware or other equipment needed to display or operate the
-         resource. Examples of dimensions include size and duration.
-         Recommended best practice is to select a value from a
-         controlled vocabulary (for example, the list of Internet Media
-         Types [MIME] defining computer media formats).</dc:description>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
- </owl:AnnotationProperty>
 
-    <!-- Identifier -->
 
- <owl:AnnotationProperty  rdf:about="http://purl.org/dc/elements/1.1/identifier">
-    <rdfs:label xml:lang="en-US">Resource Identifier</rdfs:label>
-    <rdfs:comment xml:lang="en-US">An unambiguous reference to the resource within a given context.</rdfs:comment>
-    <dc:description xml:lang="en-US">Recommended best practice is to identify the resource by means
-         of a string or number conforming to a formal identification
-         system.
-         Example formal identification systems include the Uniform
-         Resource Identifier (URI) (including the Uniform Resource
-         Locator (URL)), the Digital Object Identifier (DOI) and the
-         International Standard Book Number (ISBN).</dc:description>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
- </owl:AnnotationProperty>
- 
-    <!-- Source -->
- 
- <owl:AnnotationProperty  rdf:about="http://purl.org/dc/elements/1.1/source">
-    <rdfs:label xml:lang="en-US">Source</rdfs:label>
-    <rdfs:comment xml:lang="en-US">A reference to a resource from which the present resource
-         is derived.</rdfs:comment>
-    <dc:description xml:lang="en-US">The present resource may be derived from the Source resource
-         in whole or in part.  Recommended best practice is to reference
-         the resource by means of a string or number conforming to a
-         formal identification system.</dc:description>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
- </owl:AnnotationProperty>
- 
-    <!-- Language -->
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
     
- <owl:AnnotationProperty  rdf:about="http://purl.org/dc/elements/1.1/language">
-    <rdfs:label xml:lang="en-US">Language</rdfs:label>
-    <rdfs:comment xml:lang="en-US">A language of the intellectual content of the resource.</rdfs:comment>
-    <dc:description xml:lang="en-US">Recommended best practice is to use RFC 3066 [RFC3066],
-         which, in conjunction with ISO 639 [ISO639], defines two-
-         and three-letter primary language tags with optional
-         subtags.  Examples include "en" or "eng" for English,
-         "akk" for Akkadian, and "en-GB" for English used in the
-         United Kingdom.</dc:description>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
- </owl:AnnotationProperty>
- 
-    <!-- Relation -->
+
+
+    <!-- http://imce.jpl.nasa.gov/oml/oml#omlElementUUID -->
+
+
+    <owl:AnnotationProperty rdf:about="http://imce.jpl.nasa.gov/oml/oml#omlElementUUID"/>
     
- <owl:AnnotationProperty  rdf:about="http://purl.org/dc/elements/1.1/relation">
-    <rdfs:label xml:lang="en-US">Relation</rdfs:label>
-    <rdfs:comment xml:lang="en-US">A reference to a related resource.</rdfs:comment>
-    <dc:description xml:lang="en-US">
-         Recommended best practice is to reference the resource by means
-         of a string or number conforming to a formal identification
-         system.
-    </dc:description>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
- </owl:AnnotationProperty>
- 
-    <!-- Coverage -->
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/dc/elements/1.1/contributor"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+        <oml:omlElementUUID>65db3e67-614c-5467-8338-61778bb0c03f</oml:omlElementUUID>
+    </owl:Axiom>
     
- <owl:AnnotationProperty  rdf:about="http://purl.org/dc/elements/1.1/coverage">
-    <rdfs:label xml:lang="en-US">Coverage</rdfs:label>
-    <rdfs:comment xml:lang="en-US">The extent or scope of the content of the resource.</rdfs:comment>
-    <dc:description xml:lang="en-US">Coverage will typically include spatial location (a place name
-         or geographic coordinates), temporal period (a period label,
-         date, or date range) or jurisdiction (such as a named
-         administrative entity).
-         Recommended best practice is to select a value from a
-         controlled vocabulary (for example, the Thesaurus of Geographic
-         Names [TGN]) and that, where appropriate, named places or time
-         periods be used in preference to numeric identifiers such as
-         sets of coordinates or date ranges.</dc:description>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
- </owl:AnnotationProperty>
- 
-    <!-- Rights -->
+
+
+    <!-- http://purl.org/dc/elements/1.1/coverage -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/coverage"/>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/dc/elements/1.1/coverage"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+        <oml:omlElementUUID>11183371-dee2-5111-8d61-db2d94aa7701</oml:omlElementUUID>
+    </owl:Axiom>
     
- <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights">
-    <rdfs:label xml:lang="en-US">Rights Management</rdfs:label> 
-    <rdfs:comment xml:lang="en-US">Information about rights held in and over the resource.</rdfs:comment> 
-    <dc:description xml:lang="en-US">
-          Typically, a Rights element will contain a rights 
-          management statement for the resource, or reference 
-          a service providing such information. Rights information 
-          often encompasses Intellectual Property Rights (IPR), 
-          Copyright, and various Property Rights. 
-          If the Rights element is absent, no assumptions can be made 
-          about the status of these and other rights with respect to 
-          the resource.
-    </dc:description> 
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/> 
- </owl:AnnotationProperty>
- </rdf:RDF>
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/dc/elements/1.1/creator"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+        <oml:omlElementUUID>a63d99ab-9ff4-58e1-9f15-bea35fb643cf</oml:omlElementUUID>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+        <oml:omlElementUUID>b46685e7-abaa-5a8e-b6b8-cf7b2a51b5de</oml:omlElementUUID>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+        <oml:omlElementUUID>4465a328-9fc4-5556-8d73-48c062a2645e</oml:omlElementUUID>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/format -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/format"/>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/dc/elements/1.1/format"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+        <oml:omlElementUUID>bf8139f5-cda8-5ed1-8fc8-da7742249512</oml:omlElementUUID>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/identifier -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/identifier"/>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+        <oml:omlElementUUID>566cdbd4-486f-5ce1-914c-eb2a2131e04f</oml:omlElementUUID>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/language -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/language"/>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/dc/elements/1.1/language"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+        <oml:omlElementUUID>685f8d50-b9c3-5407-baf5-b8b23af87a45</oml:omlElementUUID>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/publisher -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/publisher"/>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/dc/elements/1.1/publisher"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+        <oml:omlElementUUID>3f066dd9-6bf0-5150-85c9-02b9e779d554</oml:omlElementUUID>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/relation -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/relation"/>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+        <oml:omlElementUUID>26951f5c-7114-561b-9176-a603fede9732</oml:omlElementUUID>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/dc/elements/1.1/rights"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+        <oml:omlElementUUID>40fa06a0-807e-52af-a479-e066381bda7e</oml:omlElementUUID>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/dc/elements/1.1/source"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+        <oml:omlElementUUID>6b79c850-837c-5174-ac34-83f1ac6be68c</oml:omlElementUUID>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/subject -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/subject"/>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/dc/elements/1.1/subject"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+        <oml:omlElementUUID>e6990dd3-0480-5663-a589-d52e447f3eb2</oml:omlElementUUID>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+        <oml:omlElementUUID>de47ef62-c3be-5246-98d5-ed6e481d149e</oml:omlElementUUID>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/type -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/type"/>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/dc/elements/1.1/type"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+        <oml:omlElementUUID>956b8a42-523e-54e1-b19a-304c5fc7fff3</oml:omlElementUUID>
+    </owl:Axiom>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#topObjectProperty -->
+
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#topObjectProperty"/>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#topReifiedObjectProperty -->
+
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#topReifiedObjectProperty">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#topReifiedObjectPropertySource -->
+
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#topReifiedObjectPropertySource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#topReifiedObjectPropertyTarget -->
+
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#topReifiedObjectPropertyTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#topReifiedStructuredDataProperty -->
+
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#topReifiedStructuredDataProperty">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#topReifiedStructuredDataPropertySource -->
+
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#topReifiedStructuredDataPropertySource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#topReifiedStructuredDataPropertyTarget -->
+
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#topReifiedStructuredDataPropertyTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#topUnreifiedObjectProperty -->
+
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#topUnreifiedObjectProperty">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#topDataProperty -->
+
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#topDataProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#Aspect -->
+
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#Aspect">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#Entity -->
+
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#Entity">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#ReifiedObjectProperty -->
+
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#ReifiedObjectProperty">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#ReifiedStructuredDataProperty -->
+
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#ReifiedStructuredDataProperty">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#StructuredDatatype -->
+
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#StructuredDatatype">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#Thing -->
+
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/purl.org/dc/elements/1.1/#Thing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.2) https://github.com/owlcs/owlapi/ -->
+
+

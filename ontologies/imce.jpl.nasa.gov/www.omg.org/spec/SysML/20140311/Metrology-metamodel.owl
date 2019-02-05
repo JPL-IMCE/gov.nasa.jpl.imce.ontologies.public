@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#"
      xml:base="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel"
-     xmlns:annotation="http://imce.jpl.nasa.gov/foundation/annotation/annotation#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://imce.jpl.nasa.gov/oml/oml#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:metrology-metamodel="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:Metrology-metamodel-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:oml="http://imce.jpl.nasa.gov/oml/oml#">
+     xmlns:annotation="http://imce.jpl.nasa.gov/foundation/annotation/annotation#">
     <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel">
         <owl:imports rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology"/>
         <owl:imports rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/QUDV-metamodel"/>
+        <oml:isOMLTerminologyBoxOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</oml:isOMLTerminologyBoxOpen>
+        <oml:isOMLTerminologyGraph rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</oml:isOMLTerminologyGraph>
     </owl:Ontology>
     
 
@@ -26,86 +26,80 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topObjectProperty -->
 
-    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topObjectProperty">
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
-    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topObjectProperty"/>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topReifiedObjectProperty -->
 
+
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topReifiedObjectProperty">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topObjectProperty"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topReifiedObjectPropertySource -->
 
+
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topReifiedObjectPropertySource">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topReifiedObjectPropertyTarget -->
 
+
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topReifiedObjectPropertyTarget">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topReifiedStructuredDataProperty -->
 
+
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topReifiedStructuredDataProperty">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topObjectProperty"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topReifiedStructuredDataPropertySource -->
 
+
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topReifiedStructuredDataPropertySource">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topObjectProperty"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topReifiedStructuredDataPropertyTarget -->
 
+
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topReifiedStructuredDataPropertyTarget">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topObjectProperty"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topUnreifiedObjectProperty -->
 
+
     <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topUnreifiedObjectProperty">
         <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topObjectProperty"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:ObjectProperty>
     
 
@@ -118,15 +112,14 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topDataProperty -->
 
-    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topDataProperty">
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
-    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#topDataProperty"/>
     
 
 
@@ -138,544 +131,1078 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Aspect -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Aspect">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Thing"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Thing"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#ReifiedObjectProperty -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#ReifiedObjectProperty">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Thing"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#ReifiedStructuredDataProperty -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#ReifiedStructuredDataProperty">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Thing"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#StructuredDatatype -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#StructuredDatatype">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Thing"/>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Thing -->
 
-    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Thing">
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
-    </owl:Class>
-    
 
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#InstanceSpecification.MeasurementResult -->
-
-    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#InstanceSpecification.MeasurementResult">
-        <annotation:implementationElementId>_Metrology4MD__5-MeasurementResult</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isMetaclassSpecificExtension rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isMetaclassSpecificExtension>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
-    </rdf:Description>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Property.Quantity -->
-
-    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Property.Quantity">
-        <annotation:implementationElementId>_Metrology4MD__5-Quantity</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isMetaclassSpecificExtension rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isMetaclassSpecificExtension>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
-    </rdf:Description>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Quantity.InfluenceQuantity -->
-
-    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Quantity.InfluenceQuantity">
-        <annotation:implementationElementId>_Metrology4MD__5-InfluenceQuantity</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isMetaclassSpecificExtension rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isMetaclassSpecificExtension>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
-    </rdf:Description>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Quantity.InputQuantity -->
-
-    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Quantity.InputQuantity">
-        <annotation:implementationElementId>_Metrology4MD__5-InputQuantity</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isMetaclassSpecificExtension rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isMetaclassSpecificExtension>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
-    </rdf:Description>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Quantity.Measurand -->
-
-    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Quantity.Measurand">
-        <annotation:implementationElementId>_Metrology4MD__5-Measurand</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isMetaclassSpecificExtension rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isMetaclassSpecificExtension>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
-    </rdf:Description>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty -->
-
-    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty">
-        <annotation:implementationElementId>_Metrology4MD__5-MeasurementUncertainty</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isMetaclassSpecificExtension rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isMetaclassSpecificExtension>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
-    </rdf:Description>
-    
-
-
-    <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification -->
-
-    <rdf:Description rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification">
-        <annotation:implementationElementId>_Metrology4MD__5-QuantityValueSpecification</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isMetaclassSpecificExtension rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isMetaclassSpecificExtension>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
-    </rdf:Description>
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Thing"/>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Duration.MeasurementUncertainty -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Duration.MeasurementUncertainty">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#Duration"/>
-        <annotation:implementationElementId>_Metrology4MD__5-MeasurementUncertainty</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isStereotypeMetaclass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isStereotypeMetaclass>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Duration.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>78f7df26-2b12-5e4e-b2cf-bbc1a94aee72</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Duration.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
+        <oml:omlElementUUID>78f7df26-2b12-5e4e-b2cf-bbc1a94aee72</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Duration.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
+        <oml:omlElementUUID>f5e550b8-4988-5830-8230-e70dc833e2e6</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Duration.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#Duration"/>
+        <oml:omlElementUUID>a102e15b-3d90-51c4-a9c8-a8333f404274</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Duration.QuantityValueSpecification -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Duration.QuantityValueSpecification">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#Duration"/>
-        <annotation:implementationElementId>_Metrology4MD__5-QuantityValueSpecification</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isStereotypeMetaclass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isStereotypeMetaclass>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Duration.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>a0e867ed-007b-50f8-b7f2-f303410fb977</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Duration.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
+        <oml:omlElementUUID>a0e867ed-007b-50f8-b7f2-f303410fb977</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Duration.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
+        <oml:omlElementUUID>deb1f966-c82d-59ac-98b3-f2e5fe27920a</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Duration.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#Duration"/>
+        <oml:omlElementUUID>39133b48-da64-50d7-ba3c-97b0d079ed0e</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#DurationInterval.MeasurementUncertainty -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#DurationInterval.MeasurementUncertainty">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#DurationInterval"/>
-        <annotation:implementationElementId>_Metrology4MD__5-MeasurementUncertainty</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isStereotypeMetaclass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isStereotypeMetaclass>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#DurationInterval.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
+        <oml:omlElementUUID>42517202-faf3-5fb4-8d72-e8d151066678</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#DurationInterval.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
+        <oml:omlElementUUID>3f5bc1d4-b7b3-5d97-8ab4-c00f660afb5e</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#DurationInterval.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#DurationInterval"/>
+        <oml:omlElementUUID>793e320c-7c58-5204-88ce-dec7a04e7890</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#DurationInterval.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>42517202-faf3-5fb4-8d72-e8d151066678</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#DurationInterval.QuantityValueSpecification -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#DurationInterval.QuantityValueSpecification">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#DurationInterval"/>
-        <annotation:implementationElementId>_Metrology4MD__5-QuantityValueSpecification</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isStereotypeMetaclass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isStereotypeMetaclass>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#DurationInterval.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>affa344d-c32d-5c8f-a1d8-d268fff65702</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#DurationInterval.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
+        <oml:omlElementUUID>affa344d-c32d-5c8f-a1d8-d268fff65702</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#DurationInterval.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
+        <oml:omlElementUUID>81ea4428-0e3d-5c55-b6cb-4d01feac0c1c</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#DurationInterval.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#DurationInterval"/>
+        <oml:omlElementUUID>a235dc2d-c198-5c1b-8889-5dff3f0f144f</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#ElementValue.MeasurementUncertainty -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#ElementValue.MeasurementUncertainty">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#ElementValue"/>
-        <annotation:implementationElementId>_Metrology4MD__5-MeasurementUncertainty</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isStereotypeMetaclass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isStereotypeMetaclass>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#ElementValue.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>75772a0f-872a-5d7e-a032-f1a097c0d170</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#ElementValue.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
+        <oml:omlElementUUID>75772a0f-872a-5d7e-a032-f1a097c0d170</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#ElementValue.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
+        <oml:omlElementUUID>60097f56-10e9-5436-8208-2c53c899a777</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#ElementValue.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#ElementValue"/>
+        <oml:omlElementUUID>cc6173a8-bba9-5e42-8dee-01d8b0571e68</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#ElementValue.QuantityValueSpecification -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#ElementValue.QuantityValueSpecification">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#ElementValue"/>
-        <annotation:implementationElementId>_Metrology4MD__5-QuantityValueSpecification</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isStereotypeMetaclass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isStereotypeMetaclass>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#ElementValue.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>95823e15-ec04-5666-96c1-db1f579966c9</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#ElementValue.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
+        <oml:omlElementUUID>95823e15-ec04-5666-96c1-db1f579966c9</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#ElementValue.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
+        <oml:omlElementUUID>ca9935cf-4005-53b4-8c8d-94f28c974b0d</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#ElementValue.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#ElementValue"/>
+        <oml:omlElementUUID>e6dfdd27-2f7a-550b-93c1-d6ba2c7ac78c</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Expression.MeasurementUncertainty -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Expression.MeasurementUncertainty">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#Expression"/>
-        <annotation:implementationElementId>_Metrology4MD__5-MeasurementUncertainty</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isStereotypeMetaclass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isStereotypeMetaclass>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Expression.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>9f0c8fd7-fe19-59c5-b410-e2388fde008b</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Expression.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
+        <oml:omlElementUUID>9f0c8fd7-fe19-59c5-b410-e2388fde008b</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Expression.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
+        <oml:omlElementUUID>f9445310-6779-5315-8b38-9d3536693bea</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Expression.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#Expression"/>
+        <oml:omlElementUUID>96438e41-7562-509f-a52f-37da35c41d8e</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Expression.QuantityValueSpecification -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Expression.QuantityValueSpecification">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#Expression"/>
-        <annotation:implementationElementId>_Metrology4MD__5-QuantityValueSpecification</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isStereotypeMetaclass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isStereotypeMetaclass>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Expression.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>8e436136-b7c0-5ac1-ae0a-2f6995f3d529</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Expression.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
+        <oml:omlElementUUID>8e436136-b7c0-5ac1-ae0a-2f6995f3d529</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Expression.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
+        <oml:omlElementUUID>0f1c61e3-2a46-5163-baaa-872efc39ecd6</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Expression.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#Expression"/>
+        <oml:omlElementUUID>a4dbd04f-45b3-5bae-bba4-a64538971972</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#InstanceSpecification.MeasurementResult -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#InstanceSpecification.MeasurementResult">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#InstanceSpecification.MeasurementResult"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#InstanceSpecification"/>
-        <annotation:implementationElementId>_Metrology4MD__5-MeasurementResult</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isStereotypeMetaclass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isStereotypeMetaclass>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#InstanceSpecification.MeasurementResult"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>cac8bd25-ba5c-5665-85b8-c6a4053ee07e</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#InstanceSpecification.MeasurementResult"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
+        <oml:omlElementUUID>cac8bd25-ba5c-5665-85b8-c6a4053ee07e</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#InstanceSpecification.MeasurementResult"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#InstanceSpecification.MeasurementResult"/>
+        <oml:omlElementUUID>3a89031e-14f4-5b2b-a2f4-c2e77e5964d1</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#InstanceSpecification.MeasurementResult"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#InstanceSpecification"/>
+        <oml:omlElementUUID>c186dfc4-406d-5ee2-aeaa-b4460dfecfd5</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#InstanceValue.MeasurementUncertainty -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#InstanceValue.MeasurementUncertainty">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#InstanceValue"/>
-        <annotation:implementationElementId>_Metrology4MD__5-MeasurementUncertainty</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isStereotypeMetaclass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isStereotypeMetaclass>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#InstanceValue.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>e570f1ba-f4ca-5672-ab8f-21ea7a11f19e</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#InstanceValue.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
+        <oml:omlElementUUID>e570f1ba-f4ca-5672-ab8f-21ea7a11f19e</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#InstanceValue.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
+        <oml:omlElementUUID>1bb962be-1590-591a-aa15-4a00c16c310d</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#InstanceValue.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#InstanceValue"/>
+        <oml:omlElementUUID>29bc5d3a-6f96-5189-9f63-d45fec4c4332</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#InstanceValue.QuantityValueSpecification -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#InstanceValue.QuantityValueSpecification">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#InstanceValue"/>
-        <annotation:implementationElementId>_Metrology4MD__5-QuantityValueSpecification</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isStereotypeMetaclass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isStereotypeMetaclass>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#InstanceValue.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>d8e77f80-9905-5c12-a203-c3b4956aeb95</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#InstanceValue.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
+        <oml:omlElementUUID>d8e77f80-9905-5c12-a203-c3b4956aeb95</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#InstanceValue.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
+        <oml:omlElementUUID>474609f0-575f-5990-84c1-5f8e56cffbf1</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#InstanceValue.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#InstanceValue"/>
+        <oml:omlElementUUID>1f757fda-1aa3-54a0-afb0-2d4e2ee2d1e1</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Interval.MeasurementUncertainty -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Interval.MeasurementUncertainty">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#Interval"/>
-        <annotation:implementationElementId>_Metrology4MD__5-MeasurementUncertainty</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isStereotypeMetaclass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isStereotypeMetaclass>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Interval.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>8e07e8ef-74b9-5152-9c3c-4367ab4c3d35</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Interval.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
+        <oml:omlElementUUID>8e07e8ef-74b9-5152-9c3c-4367ab4c3d35</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Interval.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
+        <oml:omlElementUUID>e4b564ee-df3a-5421-9216-9934214ad665</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Interval.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#Interval"/>
+        <oml:omlElementUUID>05a1b384-bf5a-5ab6-ad6b-e4b856672a72</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Interval.QuantityValueSpecification -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Interval.QuantityValueSpecification">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#Interval"/>
-        <annotation:implementationElementId>_Metrology4MD__5-QuantityValueSpecification</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isStereotypeMetaclass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isStereotypeMetaclass>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Interval.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>b788f562-cb0f-5b55-b41b-a402f85e171a</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Interval.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
+        <oml:omlElementUUID>b788f562-cb0f-5b55-b41b-a402f85e171a</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Interval.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
+        <oml:omlElementUUID>a7d41f00-f3fd-58ad-b03e-bc397708517c</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Interval.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#Interval"/>
+        <oml:omlElementUUID>5855a1f5-5324-5d6d-bd49-faa4d29fa9af</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#OpaqueExpression.MeasurementUncertainty -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#OpaqueExpression.MeasurementUncertainty">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#OpaqueExpression"/>
-        <annotation:implementationElementId>_Metrology4MD__5-MeasurementUncertainty</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isStereotypeMetaclass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isStereotypeMetaclass>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#OpaqueExpression.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>d5b755ad-72bf-55da-bb19-414fc749ce70</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#OpaqueExpression.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
+        <oml:omlElementUUID>d5b755ad-72bf-55da-bb19-414fc749ce70</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#OpaqueExpression.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
+        <oml:omlElementUUID>bc64bcc0-afc3-5f3f-8799-f55686203ce6</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#OpaqueExpression.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#OpaqueExpression"/>
+        <oml:omlElementUUID>e5e3b9f2-4ae7-5708-8d93-bb6132fd1185</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#OpaqueExpression.QuantityValueSpecification -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#OpaqueExpression.QuantityValueSpecification">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#OpaqueExpression"/>
-        <annotation:implementationElementId>_Metrology4MD__5-QuantityValueSpecification</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isStereotypeMetaclass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isStereotypeMetaclass>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#OpaqueExpression.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>affde08c-3ed3-5b49-b688-2ee3c70cc6ad</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#OpaqueExpression.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
+        <oml:omlElementUUID>affde08c-3ed3-5b49-b688-2ee3c70cc6ad</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#OpaqueExpression.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
+        <oml:omlElementUUID>d681e231-c8fe-51a1-8ddc-62afd6334b5c</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#OpaqueExpression.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#OpaqueExpression"/>
+        <oml:omlElementUUID>dabdb4b2-0eb8-502c-a4a7-aa4f1e6d7c71</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Property.Quantity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#Port"/>
-        <annotation:implementationElementId>_Metrology4MD__5-Quantity</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isStereotypeMetaclass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isStereotypeMetaclass>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>3cee22fe-0001-5999-8bae-9d4da8c3c633</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
+        <oml:omlElementUUID>3cee22fe-0001-5999-8bae-9d4da8c3c633</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Property.Quantity"/>
+        <oml:omlElementUUID>a95e12eb-6478-5d32-b347-16180d4e572b</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#Port"/>
+        <oml:omlElementUUID>4c0ebf6e-0a27-50e4-954f-da2e1d7ba4d5</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity.InfluenceQuantity -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity.InfluenceQuantity">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Quantity.InfluenceQuantity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity"/>
-        <annotation:implementationElementId>_Metrology4MD__5-InfluenceQuantity</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isStereotypeMetaclass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isStereotypeMetaclass>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity.InfluenceQuantity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>2d4fb2a7-de79-507c-80cf-0d0db22818df</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity.InfluenceQuantity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
+        <oml:omlElementUUID>2d4fb2a7-de79-507c-80cf-0d0db22818df</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity.InfluenceQuantity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Quantity.InfluenceQuantity"/>
+        <oml:omlElementUUID>4d17b417-d7c9-5e2d-a369-5d6f6d47d0cc</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity.InfluenceQuantity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity"/>
+        <oml:omlElementUUID>72e9768f-6ad7-5ba0-a996-89c146090fca</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity.InputQuantity -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity.InputQuantity">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Quantity.InputQuantity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity"/>
-        <annotation:implementationElementId>_Metrology4MD__5-InputQuantity</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isStereotypeMetaclass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isStereotypeMetaclass>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity.InputQuantity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>7f40884e-46c1-589a-a414-4ae732acb356</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity.InputQuantity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
+        <oml:omlElementUUID>7f40884e-46c1-589a-a414-4ae732acb356</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity.InputQuantity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Quantity.InputQuantity"/>
+        <oml:omlElementUUID>1912478a-6544-53af-a266-5a642f014a2b</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity.InputQuantity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity"/>
+        <oml:omlElementUUID>717e577b-9a86-518e-9ca2-b8fc84eb7a5e</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity.Measurand -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity.Measurand">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Quantity.Measurand"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity"/>
-        <annotation:implementationElementId>_Metrology4MD__5-Measurand</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isStereotypeMetaclass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isStereotypeMetaclass>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity.Measurand"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>a8431847-a919-5aee-92e7-8d6408f2c3aa</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity.Measurand"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
+        <oml:omlElementUUID>a8431847-a919-5aee-92e7-8d6408f2c3aa</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity.Measurand"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Quantity.Measurand"/>
+        <oml:omlElementUUID>3dffb320-8993-58de-915f-93d0cdca6cec</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity.Measurand"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Port.Quantity"/>
+        <oml:omlElementUUID>6b2e331b-75da-5b3b-95c1-75a51d240d47</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Property.Quantity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#Property"/>
-        <annotation:implementationElementId>_Metrology4MD__5-Quantity</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isStereotypeMetaclass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isStereotypeMetaclass>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>59848aa1-e8f2-5143-afd9-989135fa563a</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
+        <oml:omlElementUUID>59848aa1-e8f2-5143-afd9-989135fa563a</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Property.Quantity"/>
+        <oml:omlElementUUID>57af5b90-75cc-5f0d-af3f-c16cafd8f726</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#Property"/>
+        <oml:omlElementUUID>a1380761-1e0c-5bd0-a042-f59af3f9f5c8</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity.InfluenceQuantity -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity.InfluenceQuantity">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Quantity.InfluenceQuantity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity"/>
-        <annotation:implementationElementId>_Metrology4MD__5-InfluenceQuantity</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isStereotypeMetaclass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isStereotypeMetaclass>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity.InfluenceQuantity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>adebbaf0-5447-52cf-b994-966934e77b8d</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity.InfluenceQuantity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
+        <oml:omlElementUUID>adebbaf0-5447-52cf-b994-966934e77b8d</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity.InfluenceQuantity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Quantity.InfluenceQuantity"/>
+        <oml:omlElementUUID>5b75cfb2-b720-5e4a-82b4-149504f3b4b3</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity.InfluenceQuantity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity"/>
+        <oml:omlElementUUID>7f3a64ac-5643-5c5e-a552-4e913aba288d</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity.InputQuantity -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity.InputQuantity">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Quantity.InputQuantity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity"/>
-        <annotation:implementationElementId>_Metrology4MD__5-InputQuantity</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isStereotypeMetaclass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isStereotypeMetaclass>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity.InputQuantity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>ad38915b-16d6-5c01-9324-32ac08e54753</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity.InputQuantity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
+        <oml:omlElementUUID>ad38915b-16d6-5c01-9324-32ac08e54753</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity.InputQuantity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Quantity.InputQuantity"/>
+        <oml:omlElementUUID>a7988aab-95fc-5024-aa75-0dff6cf56eb8</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity.InputQuantity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity"/>
+        <oml:omlElementUUID>5489221c-0918-529b-84fc-df3c32982b6d</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity.Measurand -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity.Measurand">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Quantity.Measurand"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity"/>
-        <annotation:implementationElementId>_Metrology4MD__5-Measurand</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isStereotypeMetaclass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isStereotypeMetaclass>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity.Measurand"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>6e0b26e0-877d-53b7-8eeb-25d992f312a0</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity.Measurand"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
+        <oml:omlElementUUID>6e0b26e0-877d-53b7-8eeb-25d992f312a0</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity.Measurand"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#Quantity.Measurand"/>
+        <oml:omlElementUUID>1cabb972-0758-50df-8e3e-07a7910fc3a5</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity.Measurand"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Property.Quantity"/>
+        <oml:omlElementUUID>a7f5ab4d-7215-5fba-99e2-b3f66926bf19</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#StringExpression.MeasurementUncertainty -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#StringExpression.MeasurementUncertainty">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#StringExpression"/>
-        <annotation:implementationElementId>_Metrology4MD__5-MeasurementUncertainty</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isStereotypeMetaclass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isStereotypeMetaclass>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#StringExpression.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>37e9d49d-1a0a-5dc1-a747-8361cc72f0f0</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#StringExpression.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
+        <oml:omlElementUUID>37e9d49d-1a0a-5dc1-a747-8361cc72f0f0</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#StringExpression.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
+        <oml:omlElementUUID>76ada143-8e11-5a29-8f64-fd57ec862403</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#StringExpression.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#StringExpression"/>
+        <oml:omlElementUUID>10c62a2b-ce04-52a6-8b29-c9ac2708f059</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#StringExpression.QuantityValueSpecification -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#StringExpression.QuantityValueSpecification">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#StringExpression"/>
-        <annotation:implementationElementId>_Metrology4MD__5-QuantityValueSpecification</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isStereotypeMetaclass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isStereotypeMetaclass>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#StringExpression.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#StringExpression"/>
+        <oml:omlElementUUID>fa813eaa-159a-51c6-a777-859b2f3d0412</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#StringExpression.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>70e19eee-e6b4-542d-9a30-abf7a341a9b3</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#StringExpression.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
+        <oml:omlElementUUID>70e19eee-e6b4-542d-9a30-abf7a341a9b3</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#StringExpression.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
+        <oml:omlElementUUID>5d8246de-bb61-50e0-8687-19d5cb9ae457</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeExpression.MeasurementUncertainty -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeExpression.MeasurementUncertainty">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#TimeExpression"/>
-        <annotation:implementationElementId>_Metrology4MD__5-MeasurementUncertainty</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isStereotypeMetaclass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isStereotypeMetaclass>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeExpression.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>b3be1819-9ef0-525e-972c-3ffe141ded86</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeExpression.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
+        <oml:omlElementUUID>b3be1819-9ef0-525e-972c-3ffe141ded86</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeExpression.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
+        <oml:omlElementUUID>dad592c7-e5a3-5861-8323-1c70920c7c70</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeExpression.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#TimeExpression"/>
+        <oml:omlElementUUID>4810419a-9b1d-57c6-a41c-37a41e77a243</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeExpression.QuantityValueSpecification -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeExpression.QuantityValueSpecification">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#TimeExpression"/>
-        <annotation:implementationElementId>_Metrology4MD__5-QuantityValueSpecification</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isStereotypeMetaclass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isStereotypeMetaclass>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeExpression.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>dec24de3-bc0f-5cf8-86d6-1968127c15c3</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeExpression.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
+        <oml:omlElementUUID>dec24de3-bc0f-5cf8-86d6-1968127c15c3</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeExpression.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
+        <oml:omlElementUUID>90384fe6-edab-5c23-b7e7-b72c15cd7cd9</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeExpression.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#TimeExpression"/>
+        <oml:omlElementUUID>74dc2d14-ca8a-5764-a6a5-04d2823019c3</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeInterval.MeasurementUncertainty -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeInterval.MeasurementUncertainty">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#TimeInterval"/>
-        <annotation:implementationElementId>_Metrology4MD__5-MeasurementUncertainty</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isStereotypeMetaclass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isStereotypeMetaclass>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeInterval.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>86d1b80f-6fbe-5fc7-ae9c-8f1979166251</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeInterval.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
+        <oml:omlElementUUID>86d1b80f-6fbe-5fc7-ae9c-8f1979166251</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeInterval.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.MeasurementUncertainty"/>
+        <oml:omlElementUUID>26244dbc-bd34-5577-99fb-3c0ecb1c4496</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeInterval.MeasurementUncertainty"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#TimeInterval"/>
+        <oml:omlElementUUID>a3a3fd1d-44e0-5e14-826f-3c1351d9d0b0</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeInterval.QuantityValueSpecification -->
 
+
     <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeInterval.QuantityValueSpecification">
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#TimeInterval"/>
-        <annotation:implementationElementId>_Metrology4MD__5-QuantityValueSpecification</annotation:implementationElementId>
-        <annotation:isAbstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isAbstract>
-        <annotation:isStereotypeMetaclass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:isStereotypeMetaclass>
-        <annotation:noMapping rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</annotation:noMapping>
     </owl:Class>
-
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeInterval.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>c4d5a528-989e-5350-b80e-1c2026f01b72</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeInterval.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#Entity"/>
+        <oml:omlElementUUID>c4d5a528-989e-5350-b80e-1c2026f01b72</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeInterval.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology#ValueSpecification.QuantityValueSpecification"/>
+        <oml:omlElementUUID>f3d71a56-1ba4-550b-9c40-f45fa0a80ac8</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/SysML/20140311/Metrology-metamodel#TimeInterval.QuantityValueSpecification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML-metamodel#TimeInterval"/>
+        <oml:omlElementUUID>aba6ae20-b663-5a43-bd52-6718a1fd1391</oml:omlElementUUID>
+    </owl:Axiom>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 5.1.2) https://github.com/owlcs/owlapi/ -->
+
 
