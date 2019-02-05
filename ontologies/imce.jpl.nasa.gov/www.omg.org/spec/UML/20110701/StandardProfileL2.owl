@@ -1,28 +1,18 @@
 <?xml version="1.0"?>
-
-
-<!DOCTYPE rdf:RDF [
-    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY annotation "http://imce.jpl.nasa.gov/foundation/annotation/annotation#" >
-    <!ENTITY StandardProfileL2 "http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#" >
-    <!ENTITY StandardProfileL2-backbone "http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#" >
-]>
-
-
 <rdf:RDF xmlns="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#"
      xml:base="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2"
-     xmlns:annotation="http://imce.jpl.nasa.gov/foundation/annotation/annotation#"
-     xmlns:StandardProfileL2="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://imce.jpl.nasa.gov/oml/oml#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:StandardProfileL2-backbone="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:annotation="http://imce.jpl.nasa.gov/foundation/annotation/annotation#">
     <owl:Ontology rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2">
         <owl:imports rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML"/>
+        <oml:isOMLTerminologyBoxOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</oml:isOMLTerminologyBoxOpen>
+        <oml:isOMLTerminologyGraph rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</oml:isOMLTerminologyGraph>
     </owl:Ontology>
     
 
@@ -35,86 +25,80 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#topObjectProperty -->
 
-    <owl:ObjectProperty rdf:about="&StandardProfileL2-backbone;topObjectProperty">
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#topObjectProperty"/>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#topReifiedObjectProperty -->
 
-    <owl:ObjectProperty rdf:about="&StandardProfileL2-backbone;topReifiedObjectProperty">
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <rdfs:subPropertyOf rdf:resource="&StandardProfileL2-backbone;topObjectProperty"/>
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#topReifiedObjectProperty">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#topObjectProperty"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#topReifiedObjectPropertySource -->
 
-    <owl:ObjectProperty rdf:about="&StandardProfileL2-backbone;topReifiedObjectPropertySource">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <rdfs:subPropertyOf rdf:resource="&StandardProfileL2-backbone;topObjectProperty"/>
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#topReifiedObjectPropertySource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#topReifiedObjectPropertyTarget -->
 
-    <owl:ObjectProperty rdf:about="&StandardProfileL2-backbone;topReifiedObjectPropertyTarget">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <rdfs:subPropertyOf rdf:resource="&StandardProfileL2-backbone;topObjectProperty"/>
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#topReifiedObjectPropertyTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#topReifiedStructuredDataProperty -->
 
-    <owl:ObjectProperty rdf:about="&StandardProfileL2-backbone;topReifiedStructuredDataProperty">
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <rdfs:subPropertyOf rdf:resource="&StandardProfileL2-backbone;topObjectProperty"/>
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#topReifiedStructuredDataProperty">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#topObjectProperty"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#topReifiedStructuredDataPropertySource -->
 
-    <owl:ObjectProperty rdf:about="&StandardProfileL2-backbone;topReifiedStructuredDataPropertySource">
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <rdfs:subPropertyOf rdf:resource="&StandardProfileL2-backbone;topObjectProperty"/>
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#topReifiedStructuredDataPropertySource">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#topReifiedStructuredDataPropertyTarget -->
 
-    <owl:ObjectProperty rdf:about="&StandardProfileL2-backbone;topReifiedStructuredDataPropertyTarget">
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <rdfs:subPropertyOf rdf:resource="&StandardProfileL2-backbone;topObjectProperty"/>
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#topReifiedStructuredDataPropertyTarget">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#topUnreifiedObjectProperty -->
 
-    <owl:ObjectProperty rdf:about="&StandardProfileL2-backbone;topUnreifiedObjectProperty">
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <rdfs:subPropertyOf rdf:resource="&StandardProfileL2-backbone;topObjectProperty"/>
+
+    <owl:ObjectProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#topUnreifiedObjectProperty">
+        <rdfs:subPropertyOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#topObjectProperty"/>
     </owl:ObjectProperty>
     
 
@@ -127,15 +111,14 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#topDataProperty -->
 
-    <owl:DatatypeProperty rdf:about="&StandardProfileL2-backbone;topDataProperty">
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#topDataProperty"/>
     
 
 
@@ -147,582 +130,1778 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect -->
 
-    <owl:Class rdf:about="&StandardProfileL2-backbone;Aspect">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2-backbone;Thing"/>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Thing"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Entity -->
 
-    <owl:Class rdf:about="&StandardProfileL2-backbone;Entity">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2-backbone;Thing"/>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Entity">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Thing"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#ReifiedObjectProperty -->
 
-    <owl:Class rdf:about="&StandardProfileL2-backbone;ReifiedObjectProperty">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2-backbone;Thing"/>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#ReifiedObjectProperty">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Thing"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#ReifiedStructuredDataProperty -->
 
-    <owl:Class rdf:about="&StandardProfileL2-backbone;ReifiedStructuredDataProperty">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2-backbone;Thing"/>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#ReifiedStructuredDataProperty">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Thing"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#StructuredDatatype -->
 
-    <owl:Class rdf:about="&StandardProfileL2-backbone;StructuredDatatype">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2-backbone;Thing"/>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#StructuredDatatype">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Thing"/>
     </owl:Class>
     
 
 
     <!-- http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Thing -->
 
-    <owl:Class rdf:about="&StandardProfileL2-backbone;Thing">
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-    </owl:Class>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Thing"/>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Abstraction.Derive -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Abstraction.Derive">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;Derive"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Abstraction.Derive">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Derive"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Abstraction"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Abstraction.Derive"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>5b31112d-2d44-581d-a6ca-e20dd3211ca2</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Abstraction.Derive"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>5b31112d-2d44-581d-a6ca-e20dd3211ca2</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Abstraction.Derive"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Derive"/>
+        <oml:omlElementUUID>1e7b44eb-b441-5ee7-b915-f72634b23914</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Abstraction.Derive"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Abstraction"/>
+        <oml:omlElementUUID>3dff7373-b61c-50a1-b8ad-87b1251fe603</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Abstraction.Refine -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Abstraction.Refine">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;Refine"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Abstraction.Refine">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Refine"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Abstraction"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Abstraction.Refine"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>96f1d8ad-48a3-5cba-9ff7-e90635bfeeca</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Abstraction.Refine"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>96f1d8ad-48a3-5cba-9ff7-e90635bfeeca</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Abstraction.Refine"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Refine"/>
+        <oml:omlElementUUID>29c3fc4f-dbe1-5213-bd14-41d43dccecef</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Abstraction.Refine"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Abstraction"/>
+        <oml:omlElementUUID>92b52337-2a94-5541-b6d4-a40d32b252d3</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Abstraction.Trace -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Abstraction.Trace">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;Trace"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Abstraction.Trace">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Trace"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Abstraction"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Abstraction.Trace"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>6efd32df-d1df-5afc-98dd-91609b974161</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Abstraction.Trace"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Trace"/>
+        <oml:omlElementUUID>e20e7b50-b3ee-5d38-a680-e76a88701f09</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Abstraction.Trace"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Abstraction"/>
+        <oml:omlElementUUID>4838256f-7da8-5ae4-ad0e-21d65c9a4847</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Abstraction.Trace"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>6efd32df-d1df-5afc-98dd-91609b974161</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Artifact.File -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Artifact.File">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;File"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Artifact.File">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Artifact"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Artifact.File"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>ceb83d49-8d0a-57ad-b1d5-a44ee7b11658</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Artifact.File"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>ceb83d49-8d0a-57ad-b1d5-a44ee7b11658</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Artifact.File"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File"/>
+        <oml:omlElementUUID>a55472b2-1e47-5297-9e31-20a283ce616a</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Artifact.File"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Artifact"/>
+        <oml:omlElementUUID>7e8c79b7-a827-53a6-8286-39bd965157d9</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Auxiliary -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Auxiliary">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2-backbone;Aspect"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Auxiliary">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Auxiliary"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>428dddc4-f917-5791-927f-98a07abe6ff2</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Auxiliary"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>428dddc4-f917-5791-927f-98a07abe6ff2</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#BehavioralFeature.Create -->
 
-    <owl:Class rdf:about="&StandardProfileL2;BehavioralFeature.Create">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;Create"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#BehavioralFeature.Create">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Create"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#BehavioralFeature"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#BehavioralFeature.Create"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>bc69884f-1cd9-5e8f-8209-31887b68d811</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#BehavioralFeature.Create"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>bc69884f-1cd9-5e8f-8209-31887b68d811</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#BehavioralFeature.Create"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Create"/>
+        <oml:omlElementUUID>a7b347da-59a6-50e7-8566-fdaad6e18d11</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#BehavioralFeature.Create"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#BehavioralFeature"/>
+        <oml:omlElementUUID>ee7b9f04-35f4-5c05-a508-2ede7b656ce3</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#BehavioralFeature.Destroy -->
 
-    <owl:Class rdf:about="&StandardProfileL2;BehavioralFeature.Destroy">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;Destroy"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#BehavioralFeature.Destroy">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Destroy"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#BehavioralFeature"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#BehavioralFeature.Destroy"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>5cba33d6-47cc-5828-860b-169cb1443dbc</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#BehavioralFeature.Destroy"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>5cba33d6-47cc-5828-860b-169cb1443dbc</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#BehavioralFeature.Destroy"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Destroy"/>
+        <oml:omlElementUUID>b9be6055-6b7e-58e4-adae-2a69deb04ec6</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#BehavioralFeature.Destroy"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#BehavioralFeature"/>
+        <oml:omlElementUUID>fadda0e5-4cc8-55d2-830f-7fadae52d4ba</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Call -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Call">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2-backbone;Aspect"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Call">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Call"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>61f000ef-cecf-5c2e-89a6-1afb9df8ab96</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Call"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>61f000ef-cecf-5c2e-89a6-1afb9df8ab96</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.Auxiliary -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Class.Auxiliary">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;Auxiliary"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.Auxiliary">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Auxiliary"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Class"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.Auxiliary"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>b855ff7e-12c1-5df2-aceb-9ebbf9b12cb1</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.Auxiliary"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>b855ff7e-12c1-5df2-aceb-9ebbf9b12cb1</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.Auxiliary"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Auxiliary"/>
+        <oml:omlElementUUID>67d8728c-8b2e-5185-a857-a6a189aff24e</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.Auxiliary"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Class"/>
+        <oml:omlElementUUID>5b735a8d-744f-5819-9eb9-0d8caf24dbda</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.Focus -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Class.Focus">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;Focus"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.Focus">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Focus"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Class"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.Focus"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>a7f2d149-57e9-5765-8e4c-f17124e566c7</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.Focus"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>a7f2d149-57e9-5765-8e4c-f17124e566c7</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.Focus"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Focus"/>
+        <oml:omlElementUUID>0e4b2c20-f062-595d-acc4-86a7cba2fcbe</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.Focus"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Class"/>
+        <oml:omlElementUUID>daa475bb-1e14-5cea-97ef-4a1233fbd8c6</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.ImplementationClass -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Class.ImplementationClass">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;ImplementationClass"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.ImplementationClass">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#ImplementationClass"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Class"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.ImplementationClass"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>7400bc59-b40f-5ca9-a872-9c20186d512f</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.ImplementationClass"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>7400bc59-b40f-5ca9-a872-9c20186d512f</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.ImplementationClass"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#ImplementationClass"/>
+        <oml:omlElementUUID>57de5b2e-8925-566f-9310-b2dfadd131de</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.ImplementationClass"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Class"/>
+        <oml:omlElementUUID>9444c35c-8229-54cf-9275-f789188b71f3</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.Metaclass -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Class.Metaclass">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;Metaclass"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.Metaclass">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Metaclass"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Class"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.Metaclass"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>925d5441-4ce7-5bf2-aaa8-b8105e024cfd</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.Metaclass"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>925d5441-4ce7-5bf2-aaa8-b8105e024cfd</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.Metaclass"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Metaclass"/>
+        <oml:omlElementUUID>3c3e41be-e9d8-523c-98a3-2e68e6660fa9</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.Metaclass"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Class"/>
+        <oml:omlElementUUID>eb7bc907-c191-57b8-9580-b792242f676a</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.Type -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Class.Type">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;Type"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.Type">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Type"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Class"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.Type"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>643e8487-d80e-5e33-b188-b26c4f4499d8</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.Type"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>643e8487-d80e-5e33-b188-b26c4f4499d8</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.Type"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Type"/>
+        <oml:omlElementUUID>4ce780da-94f3-50eb-9709-a2715b128b9d</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.Type"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Class"/>
+        <oml:omlElementUUID>c60c17b0-ecb6-56f8-9f62-7d58159a8709</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.Utility -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Class.Utility">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;Utility"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.Utility">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Utility"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Class"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.Utility"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>eee3ec29-c7f2-5161-af60-d89ec7c9bf69</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.Utility"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>eee3ec29-c7f2-5161-af60-d89ec7c9bf69</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.Utility"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Utility"/>
+        <oml:omlElementUUID>3e8c3ef8-4b01-54a1-abbd-644f0d07f580</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Class.Utility"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Class"/>
+        <oml:omlElementUUID>9ced7a19-4af3-5b5f-9b70-756abf8c8a52</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Classifier.Realization -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Classifier.Realization">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;Realization"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Classifier.Realization">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Realization"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Classifier"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Classifier.Realization"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>82a609ff-6c25-53fb-ac92-3ac6d9fa49e2</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Classifier.Realization"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>82a609ff-6c25-53fb-ac92-3ac6d9fa49e2</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Classifier.Realization"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Realization"/>
+        <oml:omlElementUUID>d468874f-2022-51e6-9013-de4266f0f063</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Classifier.Realization"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Classifier"/>
+        <oml:omlElementUUID>03b1800f-e4b1-5125-b6c9-773d3712a9b9</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Classifier.Specification -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Classifier.Specification">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;Specification"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Classifier.Specification">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Specification"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Classifier"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Classifier.Specification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>01e43dcd-384d-5754-b424-2c1ecfd28213</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Classifier.Specification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>01e43dcd-384d-5754-b424-2c1ecfd28213</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Classifier.Specification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Specification"/>
+        <oml:omlElementUUID>d04944ad-8f96-5bb3-ba7c-9dacc3038243</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Classifier.Specification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Classifier"/>
+        <oml:omlElementUUID>9dbd3945-6813-556c-be37-7552bd732283</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Component.Entity -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Component.Entity">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;Entity"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Component.Entity">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Entity"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Component"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Component.Entity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>102bb920-2d95-5a6d-9430-5cf08e6eac80</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Component.Entity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>102bb920-2d95-5a6d-9430-5cf08e6eac80</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Component.Entity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Entity"/>
+        <oml:omlElementUUID>79769dcd-945c-55a9-9f9b-364163c47ee3</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Component.Entity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Component"/>
+        <oml:omlElementUUID>55ae1257-6bd5-58d1-a5a3-62c38e0cc71d</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Component.Implement -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Component.Implement">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;Implement"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Component.Implement">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Implement"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Component"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Component.Implement"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>c3fb3094-25a0-5318-a2bc-c60bb680eb95</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Component.Implement"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>c3fb3094-25a0-5318-a2bc-c60bb680eb95</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Component.Implement"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Implement"/>
+        <oml:omlElementUUID>4108998e-9b35-5046-af4e-d4990ec87602</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Component.Implement"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Component"/>
+        <oml:omlElementUUID>157cec03-5950-5666-ba7e-61ca1db00653</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Component.Process -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Component.Process">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;Process"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Component.Process">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Process"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Component"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Component.Process"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>f15945fc-26db-5889-94a4-611bfdf06053</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Component.Process"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>f15945fc-26db-5889-94a4-611bfdf06053</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Component.Process"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Process"/>
+        <oml:omlElementUUID>64bd15c9-85f5-54a1-bc48-eb15ddc54576</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Component.Process"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Component"/>
+        <oml:omlElementUUID>779ff9e4-8749-5ae1-9eb4-04f22f43fd43</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Component.Service -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Component.Service">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;Service"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Component.Service">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Service"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Component"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Component.Service"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>b4b00ede-e698-5d8c-ad50-0924f823ce35</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Component.Service"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>b4b00ede-e698-5d8c-ad50-0924f823ce35</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Component.Service"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Service"/>
+        <oml:omlElementUUID>174c42a5-c396-5955-b829-20e8059986c7</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Component.Service"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Component"/>
+        <oml:omlElementUUID>2d15a512-ba4c-5d60-8854-81bb1c4d87d9</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Component.Subsystem -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Component.Subsystem">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;Subsystem"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Component.Subsystem">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Subsystem"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Component"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Component.Subsystem"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>f552c37a-3a60-55d1-8801-9ed28bcf52ba</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Component.Subsystem"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>f552c37a-3a60-55d1-8801-9ed28bcf52ba</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Component.Subsystem"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Subsystem"/>
+        <oml:omlElementUUID>9f69f381-a54e-5591-81a0-e836f8bb575b</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Component.Subsystem"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Component"/>
+        <oml:omlElementUUID>c8243e88-95e4-50b0-8b60-45c706e4fdb0</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Create -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Create">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2-backbone;Aspect"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Create">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Create"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>a7b16a39-b555-565e-a500-2d72b15d8b6f</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Create"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>a7b16a39-b555-565e-a500-2d72b15d8b6f</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Derive -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Derive">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2-backbone;Aspect"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Derive">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Derive"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>270bcb50-a038-50eb-9e8f-6dc4c8af843a</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Derive"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>270bcb50-a038-50eb-9e8f-6dc4c8af843a</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Destroy -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Destroy">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2-backbone;Aspect"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Destroy">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Destroy"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>092cad01-f9f0-55cc-b79c-3d8220177df8</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Destroy"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>092cad01-f9f0-55cc-b79c-3d8220177df8</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Document -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Document">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;File"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Document">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Document"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>bd4f026d-0cc5-552f-aeab-f3ed05144df8</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Document"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>bd4f026d-0cc5-552f-aeab-f3ed05144df8</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Document"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File"/>
+        <oml:omlElementUUID>70854836-c2e7-586c-8bb6-73e9d44ef71e</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Entity -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Entity">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2-backbone;Aspect"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Entity">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Entity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>de400be1-6af8-5365-b44e-e13ed86d2b0e</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Entity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>de400be1-6af8-5365-b44e-e13ed86d2b0e</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Executable -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Executable">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;File"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Executable">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Executable"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>7152733b-0a6a-560b-ba1c-4b8a87197d52</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Executable"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>7152733b-0a6a-560b-ba1c-4b8a87197d52</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Executable"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File"/>
+        <oml:omlElementUUID>21f464e1-5bde-5486-8220-8aa742acda02</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File -->
 
-    <owl:Class rdf:about="&StandardProfileL2;File">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2-backbone;Aspect"/>
-        <annotation:noMapping rdf:datatype="&xsd;boolean">true</annotation:noMapping>
-        <annotation:isAbstract rdf:datatype="&xsd;boolean">true</annotation:isAbstract>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>fcc67315-a75b-57a2-bab1-f9e626c42f90</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>fcc67315-a75b-57a2-bab1-f9e626c42f90</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File.Document -->
 
-    <owl:Class rdf:about="&StandardProfileL2;File.Document">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;Document"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File.Document">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Document"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File.Document"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>a3f929c7-7b69-568d-8b08-2907b287fcca</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File.Document"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>a3f929c7-7b69-568d-8b08-2907b287fcca</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File.Document"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Document"/>
+        <oml:omlElementUUID>3ecbc5b9-bbb2-5c68-bf0b-a03f535de780</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File.Executable -->
 
-    <owl:Class rdf:about="&StandardProfileL2;File.Executable">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;Executable"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File.Executable">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Executable"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File.Executable"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>f00bb8cb-8e06-5a79-ab7a-dc5dc90d533c</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File.Executable"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>f00bb8cb-8e06-5a79-ab7a-dc5dc90d533c</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File.Executable"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Executable"/>
+        <oml:omlElementUUID>bfbdff1f-803f-59ee-a2a0-84f62938f147</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File.Library -->
 
-    <owl:Class rdf:about="&StandardProfileL2;File.Library">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;Library"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File.Library">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Library"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File.Library"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>bb758d6a-7450-51fa-b868-2b0753e90cc2</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File.Library"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>bb758d6a-7450-51fa-b868-2b0753e90cc2</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File.Library"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Library"/>
+        <oml:omlElementUUID>8eb3d98e-7deb-5bb4-b04c-57c2d3b97a23</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File.Script -->
 
-    <owl:Class rdf:about="&StandardProfileL2;File.Script">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;Script"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File.Script">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Script"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File.Script"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>7bc50368-0471-534e-8a81-8968b2730c37</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File.Script"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>7bc50368-0471-534e-8a81-8968b2730c37</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File.Script"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Script"/>
+        <oml:omlElementUUID>f9d4e0ee-bd67-5e41-9c26-936eaee9ecad</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File.Source -->
 
-    <owl:Class rdf:about="&StandardProfileL2;File.Source">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;Source"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File.Source">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Source"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File.Source"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>eaf7b73a-70f6-5289-91cf-c3c14a0a9ea9</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File.Source"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>eaf7b73a-70f6-5289-91cf-c3c14a0a9ea9</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File.Source"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Source"/>
+        <oml:omlElementUUID>be9169ae-10a1-5382-9e29-aa521c55663c</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Focus -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Focus">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2-backbone;Aspect"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Focus">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Focus"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>3703f534-79de-5d05-b4a2-cacd271c8e1c</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Focus"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>3703f534-79de-5d05-b4a2-cacd271c8e1c</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Framework -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Framework">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2-backbone;Aspect"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Framework">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Framework"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>1835bc59-f311-583c-8fc8-f4aa04cf5f9d</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Framework"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>1835bc59-f311-583c-8fc8-f4aa04cf5f9d</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Implement -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Implement">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2-backbone;Aspect"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Implement">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Implement"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>4d84257a-dc2e-587d-b62d-a8c5c5555431</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Implement"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>4d84257a-dc2e-587d-b62d-a8c5c5555431</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#ImplementationClass -->
 
-    <owl:Class rdf:about="&StandardProfileL2;ImplementationClass">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2-backbone;Aspect"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#ImplementationClass">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#ImplementationClass"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>3da8296c-76fc-5226-9acb-90aedc6e1d52</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#ImplementationClass"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>3da8296c-76fc-5226-9acb-90aedc6e1d52</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Instantiate -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Instantiate">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2-backbone;Aspect"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Instantiate">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Instantiate"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>0811fe3e-8d99-5253-8b83-47119f883e27</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Instantiate"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>0811fe3e-8d99-5253-8b83-47119f883e27</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Library -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Library">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;File"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Library">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Library"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>a1c94b6c-d4d8-5918-b512-fa7688f982ac</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Library"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>a1c94b6c-d4d8-5918-b512-fa7688f982ac</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Library"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File"/>
+        <oml:omlElementUUID>330c0656-bb9e-5c6e-bcc1-72096fcdef55</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Metaclass -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Metaclass">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2-backbone;Aspect"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Metaclass">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Metaclass"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>a1675a5f-8cfe-57ca-a5ae-cdd58cb7d46a</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Metaclass"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>a1675a5f-8cfe-57ca-a5ae-cdd58cb7d46a</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#ModelLibrary -->
 
-    <owl:Class rdf:about="&StandardProfileL2;ModelLibrary">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2-backbone;Aspect"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#ModelLibrary">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#ModelLibrary"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>cfb3ea0e-54d2-54c3-9564-79bd51540bb4</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#ModelLibrary"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>cfb3ea0e-54d2-54c3-9564-79bd51540bb4</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Package.Framework -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Package.Framework">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;Framework"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Package.Framework">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Framework"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Package"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Package.Framework"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>b9619dae-baff-5dbd-b4d5-8cdfe8179bf0</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Package.Framework"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>b9619dae-baff-5dbd-b4d5-8cdfe8179bf0</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Package.Framework"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Framework"/>
+        <oml:omlElementUUID>6e26d39f-68dd-55b2-98b2-3f350082c13a</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Package.Framework"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Package"/>
+        <oml:omlElementUUID>fe96fb02-6fe9-58c7-afdf-9604b668ad72</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Package.ModelLibrary -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Package.ModelLibrary">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;ModelLibrary"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Package.ModelLibrary">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#ModelLibrary"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Package"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Package.ModelLibrary"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>cb67b575-aaeb-56b0-8d70-183b985ab830</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Package.ModelLibrary"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>cb67b575-aaeb-56b0-8d70-183b985ab830</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Package.ModelLibrary"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#ModelLibrary"/>
+        <oml:omlElementUUID>c8bd4b42-b058-58be-90b1-dfdb67ba2b32</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Package.ModelLibrary"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Package"/>
+        <oml:omlElementUUID>f91baeab-6b7e-5e12-bb32-22ddff7f621f</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Process -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Process">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2-backbone;Aspect"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Process">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Process"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>997f0db4-0579-516a-a719-808ca9263afb</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Process"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>997f0db4-0579-516a-a719-808ca9263afb</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Realization -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Realization">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2-backbone;Aspect"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Realization">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Realization"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>26ae957b-f519-5209-a399-77521e10f3b6</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Realization"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>26ae957b-f519-5209-a399-77521e10f3b6</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Refine -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Refine">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2-backbone;Aspect"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Refine">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Refine"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>ecf6b66d-81c6-57de-ac56-a39da9a77108</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Refine"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>ecf6b66d-81c6-57de-ac56-a39da9a77108</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Responsibility -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Responsibility">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2-backbone;Aspect"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Responsibility">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Responsibility"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>937e6a41-22f1-5b6d-911c-01e024926fa2</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Responsibility"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>937e6a41-22f1-5b6d-911c-01e024926fa2</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Script -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Script">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;File"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Script">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Script"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>81fb8998-27c6-58eb-a74e-41c05b48da0a</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Script"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>81fb8998-27c6-58eb-a74e-41c05b48da0a</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Script"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File"/>
+        <oml:omlElementUUID>aed107c1-d0c3-5a46-b709-903d3ddc1bc2</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Send -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Send">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2-backbone;Aspect"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Send">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Send"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>e1ed87ec-2f97-5608-9c3f-e6a70603b8cd</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Send"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>e1ed87ec-2f97-5608-9c3f-e6a70603b8cd</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Service -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Service">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2-backbone;Aspect"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Service">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Service"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>70a2481d-55d4-572d-b21c-42523c5ba43f</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Service"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>70a2481d-55d4-572d-b21c-42523c5ba43f</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Source -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Source">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;File"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Source">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Source"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>25ab488a-071a-5d9e-b45f-1666796a0aa6</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Source"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>25ab488a-071a-5d9e-b45f-1666796a0aa6</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Source"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#File"/>
+        <oml:omlElementUUID>14357112-3c6e-5238-b01e-eba1cf452af1</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Specification -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Specification">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2-backbone;Aspect"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Specification">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Specification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>02262ed9-e38b-5b4f-afd5-8bb04899f5e7</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Specification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>02262ed9-e38b-5b4f-afd5-8bb04899f5e7</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Subsystem -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Subsystem">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2-backbone;Aspect"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Subsystem">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Subsystem"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>21899d8e-3d60-5b99-bc50-10a07f92e93e</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Subsystem"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>21899d8e-3d60-5b99-bc50-10a07f92e93e</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Trace -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Trace">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2-backbone;Aspect"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Trace">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Trace"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>303f0267-c22b-5e45-b800-d3264a0120d2</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Trace"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>303f0267-c22b-5e45-b800-d3264a0120d2</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Type -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Type">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2-backbone;Aspect"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Type">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Type"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>f75aa8ab-a7de-5e50-8459-debb2305efcf</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Type"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>f75aa8ab-a7de-5e50-8459-debb2305efcf</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Usage.Call -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Usage.Call">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;Call"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Usage.Call">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Call"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Usage"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Usage.Call"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>8b4b154c-65b6-5293-8c2e-0f288c867bf7</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Usage.Call"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>8b4b154c-65b6-5293-8c2e-0f288c867bf7</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Usage.Call"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Call"/>
+        <oml:omlElementUUID>497bee4c-0cfa-5534-9664-b6e9e843c01d</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Usage.Call"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Usage"/>
+        <oml:omlElementUUID>724d17d3-b69e-56ff-9503-5b730b25847d</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Usage.Create -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Usage.Create">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;Create"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Usage.Create">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Create"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Usage"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Usage.Create"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>d1c4aac2-8d22-57d5-bb49-c1643a2bd877</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Usage.Create"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>d1c4aac2-8d22-57d5-bb49-c1643a2bd877</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Usage.Create"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Create"/>
+        <oml:omlElementUUID>4a2332fb-b311-54f4-9fb4-b38dc76ec80a</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Usage.Create"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Usage"/>
+        <oml:omlElementUUID>5930447e-b7c3-56d5-bed7-e5aead6782c7</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Usage.Instantiate -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Usage.Instantiate">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;Instantiate"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Usage.Instantiate">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Instantiate"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Usage"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Usage.Instantiate"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>f0fc1666-076c-5c43-b6ca-907f22341abb</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Usage.Instantiate"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>f0fc1666-076c-5c43-b6ca-907f22341abb</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Usage.Instantiate"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Instantiate"/>
+        <oml:omlElementUUID>d144ca52-027a-5bba-9387-2487f61837e7</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Usage.Instantiate"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Usage"/>
+        <oml:omlElementUUID>8cfb8f04-918b-5ab5-9998-7c228f91cf1a</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Usage.Responsibility -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Usage.Responsibility">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;Responsibility"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Usage.Responsibility">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Responsibility"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Usage"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Usage.Responsibility"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>019681cd-b96a-5cdc-ad7f-81e9ab30c585</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Usage.Responsibility"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>019681cd-b96a-5cdc-ad7f-81e9ab30c585</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Usage.Responsibility"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Responsibility"/>
+        <oml:omlElementUUID>cfb7c641-c0be-5e0c-b691-29acd6c57da7</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Usage.Responsibility"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Usage"/>
+        <oml:omlElementUUID>35f8662a-cbc0-5d7c-982a-518949007e65</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Usage.Send -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Usage.Send">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2;Send"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Usage.Send">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Send"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Usage"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Usage.Send"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>a6c66d9e-b89a-5781-aeba-61df14005231</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Usage.Send"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>a6c66d9e-b89a-5781-aeba-61df14005231</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Usage.Send"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Send"/>
+        <oml:omlElementUUID>7ce4ff21-1a7d-53a6-82cf-eb91f15ddf17</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Usage.Send"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/UML#Usage"/>
+        <oml:omlElementUUID>dbd85d08-eaa5-5eed-9543-05e85962fe57</oml:omlElementUUID>
+    </owl:Axiom>
     
 
 
     <!-- http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Utility -->
 
-    <owl:Class rdf:about="&StandardProfileL2;Utility">
-        <rdfs:subClassOf rdf:resource="&StandardProfileL2-backbone;Aspect"/>
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Utility">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Utility"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>604f3e7f-1306-5517-99c5-563233d956b7</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Utility"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/www.omg.org/spec/UML/20110701/StandardProfileL2#Aspect"/>
+        <oml:omlElementUUID>604f3e7f-1306-5517-99c5-563233d956b7</oml:omlElementUUID>
+    </owl:Axiom>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 3.4.5-SNAPSHOT) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 5.1.2) https://github.com/owlcs/owlapi/ -->
+
 
