@@ -6001,6 +6001,7 @@ is proffered by a supplier as a specification-compliant implementation of &lt;re
 
 
     <rdf:Description rdf:about="http://imce.jpl.nasa.gov/foundation/mission/mission#Junction">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project#DevelopedElement"/>
         <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project#RealizedElement"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -6015,6 +6016,12 @@ is proffered by a supplier as a specification-compliant implementation of &lt;re
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Junction"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/foundation/project/project#DevelopedElement"/>
+        <oml:omlElementUUID>96713ffd-0aed-5483-a3f9-789973277927</oml:omlElementUUID>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/foundation/mission/mission#Junction"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
