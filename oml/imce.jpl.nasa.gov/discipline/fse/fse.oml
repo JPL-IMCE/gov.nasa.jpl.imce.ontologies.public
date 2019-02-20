@@ -24,6 +24,9 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""Assembly"""
 	concept Assembly
 
+	@rdfs:label="""Drawing"""
+	concept Drawing
+
 	@rdfs:label="""End Circuit"""
 	concept EndCircuit
 
@@ -55,6 +58,8 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	concept GangConfiguration
 	
 	Assembly extendsConcept mission:Component
+	
+	Drawing extendsConcept project:Product
 
 	EndCircuit extendsConcept mission:Interface
 
@@ -219,6 +224,26 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	ReferenceDesignatedElement extendsAspect base:IdentifiedElement
 
 	Subsystem extendsAspect ReferenceDesignatedElement
+
+	ConnectsAssembly extendsAspect analysis:AnalyzedElement
+
+	ConnectsAssembly extendsAspect analysis:CharacterizedElement
+
+	ConnectsSubsystem extendsAspect analysis:AnalyzedElement
+
+	ConnectsSubsystem extendsAspect analysis:CharacterizedElement
+
+	HasGangMember extendsAspect analysis:AnalyzedElement
+
+	HasGangMember extendsAspect analysis:CharacterizedElement
+
+	HasGangAggregate extendsAspect analysis:AnalyzedElement
+
+	HasGangAggregate extendsAspect analysis:CharacterizedElement
+
+	Implements extendsAspect analysis:AnalyzedElement
+
+	Implements extendsAspect analysis:CharacterizedElement
 
 	scalarOneOfRestriction endCircuitDirection {
 		restrictedRange XMLSchema:string
@@ -754,7 +779,15 @@ Interface EMI Characteristics & Redundancy
 		range XMLSchema:string
 	}
 
+	@rdfs:label="""has drawing number"""
+	entityScalarDataProperty + hasDrawingNumber {
+		domain Drawing
+		range XMLSchema:string
+	}
+
 	allEntities Assembly . base:isAggregatedIn in Subsystem
+	
+	allEntities Drawing . project:describes in Function
 
 	allEntities EndCircuit . mission:isJoinedIn in Function
 
@@ -777,6 +810,8 @@ Interface EMI Characteristics & Redundancy
 	hasSwitchBankLocalName subDataPropertyOf base:hasAlternateName
 
 	hasAssemblyAcronym subDataPropertyOf base:hasIdentifier
+	
+	hasDrawingNumber subDataPropertyOf base:hasIdentifier
 	
 	hasEcrIdentifier subDataPropertyOf base:hasIdentifier
 
