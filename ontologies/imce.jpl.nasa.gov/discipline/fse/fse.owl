@@ -6767,6 +6767,52 @@ Interface EMI Characteristics &amp; Redundancy
     
 
 
+    <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Implementer -->
+
+
+    <owl:Class rdf:about="http://imce.jpl.nasa.gov/discipline/fse/fse#Implementer">
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Characterization"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#characterizes"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Implementer</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Implementer"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <oml:omlElementUUID>453e967a-0b97-5f94-9ebf-004695f52c3c</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Implementer"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/backbone/imce.jpl.nasa.gov/discipline/fse/fse#Entity"/>
+        <oml:omlElementUUID>453e967a-0b97-5f94-9ebf-004695f52c3c</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Implementer"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#Characterization"/>
+        <oml:omlElementUUID>471637df-0f5f-51ca-b559-a52fdff22ff4</oml:omlElementUUID>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Implementer"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://imce.jpl.nasa.gov/foundation/analysis/analysis#characterizes"/>
+                <owl:allValuesFrom rdf:resource="http://imce.jpl.nasa.gov/discipline/fse/fse#Function"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <oml:omlElementUUID>e0a8bd17-206e-5d6b-9465-0f30fa30490e</oml:omlElementUUID>
+    </owl:Axiom>
+    
+
+
     <!-- http://imce.jpl.nasa.gov/discipline/fse/fse#Implements -->
 
 

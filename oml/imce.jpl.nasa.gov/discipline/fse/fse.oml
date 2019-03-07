@@ -39,6 +39,9 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""Function"""
 	concept Function
 
+	@rdfs:label="""Implementer"""
+	concept Implementer
+
 	@rdfs:label="""Net"""
 	concept Net
 	
@@ -69,6 +72,8 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	
 	Function extendsConcept mission:Junction
 	
+	Implementer extendsConcept analysis:Characterization
+
 	Net extendsConcept mission:Junction
 	
 	Wire extendsConcept mission:Junction
@@ -800,6 +805,8 @@ Interface EMI Characteristics & Redundancy
 	allEntities EngineeringChangeRequest . analysis:characterizes in Function
 	
 	allEntities Function . mission:joins in EndCircuit
+
+	allEntities Implementer . analysis:characterizes in Function
 
 	allEntities FunctionDescription . analysis:characterizes in Function
 
