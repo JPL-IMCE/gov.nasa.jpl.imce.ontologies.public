@@ -39,6 +39,9 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""Function"""
 	concept Function
 
+	@rdfs:label="""Function Annotation"""
+	concept FunctionAnnotation
+
 	@rdfs:label="""Implementer"""
 	concept Implementer
 
@@ -71,6 +74,8 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	EngineeringChangeRequest extendsConcept analysis:Characterization
 	
 	Function extendsConcept mission:Junction
+	
+	FunctionAnnotation extendsConcept analysis:Characterization
 	
 	Implementer extendsConcept analysis:Characterization
 
@@ -298,6 +303,18 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	entityScalarDataProperty + hasEndCircuitDirection {
 		domain EndCircuit
 		range endCircuitDirection
+	}
+
+	@dc:description="""has annotation key"""
+	entityScalarDataProperty + hasAnnotationKey {
+		domain FunctionAnnotation
+		range XMLSchema:string
+	}
+
+	@dc:description="""has annotation value"""
+	entityScalarDataProperty + hasAnnotationValue {
+		domain FunctionAnnotation
+		range XMLSchema:string
 	}
 
 	@rdfs:label="""has end circuit identifier"""
@@ -807,11 +824,17 @@ Interface EMI Characteristics & Redundancy
 	allEntities Function . mission:joins in EndCircuit
 
 	allEntities Implementer . analysis:characterizes in Function
+	
+	allEntities FunctionAnnotation . analysis:characterizes in Function
 
 	allEntities FunctionDescription . analysis:characterizes in Function
 
 	allEntities Subsystem . base:aggregates in Assembly
 
+	hasAnnotationKey subDataPropertyOf base:hasAlternateName
+	
+	hasAnnotationValue subDataPropertyOf base:hasDescription
+	
 	hasEndCircuitLocalName subDataPropertyOf base:hasAlternateName
 
 	hasSwitchBankLocalName subDataPropertyOf base:hasAlternateName
