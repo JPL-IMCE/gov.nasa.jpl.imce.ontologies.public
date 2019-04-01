@@ -410,6 +410,36 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 		range XMLSchema:string
 	}
 
+	@rdfs:label="""has wire code"""
+	entityScalarDataProperty + hasWireCode {
+		domain Net
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has wire gauge"""
+	entityScalarDataProperty + hasWireGauge {
+		domain Net
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has wire treatment"""
+	entityScalarDataProperty + hasWireTreatment {
+		domain Net
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has cable treatment"""
+	entityScalarDataProperty + hasCableTreatment {
+		domain Net
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has cable impedance"""
+	entityScalarDataProperty + hasCableImpedance {
+		domain Net
+		range XMLSchema:string
+	}
+
 	allEntities Assembly . base:isAggregatedIn in Subsystem
 	
 	allEntities Drawing . project:describes in Function
