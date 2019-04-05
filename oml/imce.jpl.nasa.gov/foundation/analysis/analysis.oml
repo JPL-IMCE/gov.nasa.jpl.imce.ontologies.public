@@ -76,6 +76,10 @@ open terminology <http://imce.jpl.nasa.gov/foundation/analysis/analysis> {
 	@rdfs:label="""Key Requirements Analysis"""
 	concept KeyRequirementsAnalysis
 
+	@dc:description="""<classname>GlossaryEntry</classname> is a <classname>Characterization</classname> that associates a term with a definition."""
+	@rdfs:label="""GlossaryEntry"""
+	concept GlossaryEntry
+
 	@dc:description="""A <classname>KeyRequirementsAnalysis</classname> provides the rationale for designating a set of <classname>Requirement</classname>s as <emphasis>key</emphasis>, and makes the designation via the <property>explains</property> property."""
 	@rdfs:label="""Key Requirements Explanation"""
 	concept KeyRequirementsExplanation
@@ -121,6 +125,8 @@ open terminology <http://imce.jpl.nasa.gov/foundation/analysis/analysis> {
 	Explanation extendsConcept Characterization
 
 	Fact extendsConcept Assumption
+	
+	GlossaryEntry extendsConcept Characterization
 
 	KeyRequirementsAnalysis extendsConcept KeyRequirementsExplanation
 
@@ -571,6 +577,22 @@ for <replaceable>e</replaceable>.</para>"""
 
 	mission:TraversingElement extendsAspect CharacterizedElement
 
+	@rdfs:label="""has glossary definition"""
+	entityScalarDataProperty hasGlossaryDefinition {
+		domain GlossaryEntry
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has glossary term"""
+	entityScalarDataProperty hasGlossaryTerm {
+		domain GlossaryEntry
+		range XMLSchema:string
+	}
+
+	hasGlossaryDefinition subDataPropertyOf base:hasDescription
+	
+	hasGlossaryTerm subDataPropertyOf base:hasCanonicalName
+	
 	allEntities DrivingRequirementsExplanation . explains in mission:Requirement
 
 	allEntities KeyRequirementsExplanation . explains in mission:Requirement
