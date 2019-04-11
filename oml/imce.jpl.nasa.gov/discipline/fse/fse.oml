@@ -440,6 +440,12 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 		range XMLSchema:string
 	}
 
+	@rdfs:label="""has cable length (m)"""
+	entityScalarDataProperty + hasCableLength {
+		domain Net
+		range XMLSchema:string
+	}
+
 	allEntities Assembly . base:isAggregatedIn in Subsystem
 	
 	allEntities Drawing . project:describes in Function
