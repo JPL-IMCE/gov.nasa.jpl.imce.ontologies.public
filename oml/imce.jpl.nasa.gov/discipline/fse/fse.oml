@@ -367,6 +367,12 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 		range XMLSchema:string
 	}
 
+	@rdfs:label="""has conductor count"""
+	entityScalarDataProperty + hasConductorCount {
+		domain Function
+		range XMLSchema:integer
+	}
+
 	@rdfs:label="""has reference designator"""
 	entityScalarDataProperty + hasReferenceDesignator {
 		domain ReferenceDesignatedElement
@@ -415,6 +421,12 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 		range XMLSchema:string
 	}
 
+	@rdfs:label="""has net index"""
+	entityScalarDataProperty + hasNetIndex {
+		domain Net
+		range XMLSchema:integer
+	}
+
 	@rdfs:label="""has wire code"""
 	entityScalarDataProperty + hasWireCode {
 		domain Net
@@ -424,7 +436,7 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""has wire gauge"""
 	entityScalarDataProperty + hasWireGauge {
 		domain Net
-		range XMLSchema:string
+		range XMLSchema:integer
 	}
 
 	@rdfs:label="""has wire treatment"""
@@ -442,13 +454,13 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""has cable impedance"""
 	entityScalarDataProperty + hasCableImpedance {
 		domain Net
-		range XMLSchema:string
+		range XMLSchema:decimal
 	}
 
 	@rdfs:label="""has cable length (m)"""
 	entityScalarDataProperty + hasCableLength {
 		domain Net
-		range XMLSchema:string
+		range XMLSchema:decimal
 	}
 
 	allEntities Assembly . base:isAggregatedIn in Subsystem
