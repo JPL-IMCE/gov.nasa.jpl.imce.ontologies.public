@@ -361,6 +361,11 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 		range XMLSchema:string
 	}
 
+	@rdfs:label="""has channel name"""
+	entityScalarDataProperty + hasChannelName {
+		domain Function
+		range XMLSchema:string
+	}
 
 	@rdfs:label="""has reference designator"""
 	entityScalarDataProperty + hasReferenceDesignator {
