@@ -46,6 +46,33 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""Net"""
 	concept Net
 	
+	@rdfs:label="""Mass Constraint"""
+	concept MassConstraint
+	
+	@rdfs:label="""CBE Mass Constraint"""
+	concept CBEMassConstraint
+	
+	@rdfs:label="""MEV Mass Constraint"""
+	concept MEVMassConstraint
+	
+	@rdfs:label="""MGA Mass Constraint"""
+	concept MGAMassConstraint
+	
+	@rdfs:label="""Mass Allocation Constraint"""
+	concept MassAllocationConstraint
+	
+	@rdfs:label="""Mass Limit Constraint"""
+	concept MassLimitConstraint
+	
+	@rdfs:label="""Mass Reserve Constraint"""
+	concept MassReserveConstraint
+	
+	@rdfs:label="""Placeholder Mass"""
+	concept PlaceholderMass
+	
+	@rdfs:label="""Consumable Mass"""
+	concept ConsumableMass
+	
 	@rdfs:label="""Wire"""
 	concept Wire
 
@@ -74,7 +101,25 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	
 	Implementer extendsConcept analysis:Characterization
 
+	MassConstraint extendsConcept analysis:Characterization
+	
+	CBEMassConstraint extendsConcept MassConstraint
+	
+	MEVMassConstraint extendsConcept MassConstraint
+	
+	MGAMassConstraint extendsConcept MassConstraint
+	
+	MassAllocationConstraint extendsConcept MassConstraint
+	
+	MassLimitConstraint extendsConcept MassConstraint
+	
+	MassReserveConstraint extendsConcept MassConstraint
+	
 	Net extendsConcept mission:Junction
+	
+	PlaceholderMass extendsConcept mission:Component
+	
+	ConsumableMass extendsConcept mission:Component
 	
 	Wire extendsConcept mission:Junction
 
@@ -463,6 +508,12 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 		range XMLSchema:decimal
 	}
 
+	@rdfs:label="""has mass constraint value"""
+	entityScalarDataProperty + hasMassConstraintValue {
+		domain MassConstraint
+		range XMLSchema:decimal
+	}
+
 	allEntities Assembly . base:isAggregatedIn in Subsystem
 	
 	allEntities Drawing . project:describes in Function
@@ -484,6 +535,8 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	allEntities FunctionAnnotation . analysis:characterizes in Function
 
 	allEntities Subsystem . base:aggregates in Assembly
+	
+	allEntities MassConstraint . analysis:characterizes in mission:Component
 
 	hasAnnotationKey subDataPropertyOf base:hasAlternateName
 	
