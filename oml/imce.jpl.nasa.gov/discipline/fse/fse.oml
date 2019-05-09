@@ -52,9 +52,6 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""CBE Mass Constraint"""
 	concept CBEMassConstraint
 	
-	@rdfs:label="""MEV Mass Constraint"""
-	concept MEVMassConstraint
-	
 	@rdfs:label="""MGA Mass Constraint"""
 	concept MGAMassConstraint
 	
@@ -104,8 +101,6 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	MassConstraint extendsConcept analysis:Characterization
 	
 	CBEMassConstraint extendsConcept MassConstraint
-	
-	MEVMassConstraint extendsConcept MassConstraint
 	
 	MGAMassConstraint extendsConcept MassConstraint
 	
@@ -325,6 +320,15 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	oneOf provenance = """retracted""" ^^ XMLSchema:string
 
+	numericScalarRestriction nonNegativeDouble {
+		minInclusive 0.0
+		restrictedRange XMLSchema:double
+	}
+	
+	synonymScalarRestriction kg { restrictedRange nonNegativeDouble }
+	synonymScalarRestriction m { restrictedRange nonNegativeDouble }
+	synonymScalarRestriction ohm { restrictedRange nonNegativeDouble }
+	
 	@rdfs:label="""has assembly acronym"""
 	entityScalarDataProperty + hasAssemblyAcronym {
 		domain Assembly
@@ -499,19 +503,19 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""has cable impedance"""
 	entityScalarDataProperty + hasCableImpedance {
 		domain Net
-		range XMLSchema:decimal
+		range ohm
 	}
 
 	@rdfs:label="""has cable length (m)"""
 	entityScalarDataProperty + hasCableLength {
 		domain Net
-		range XMLSchema:decimal
+		range m
 	}
 
 	@rdfs:label="""has mass constraint value"""
 	entityScalarDataProperty + hasMassConstraintValue {
 		domain MassConstraint
-		range XMLSchema:decimal
+		range kg
 	}
 
 	allEntities Assembly . base:isAggregatedIn in Subsystem
