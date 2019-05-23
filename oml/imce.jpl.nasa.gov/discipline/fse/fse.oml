@@ -292,6 +292,12 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 		range XMLSchema:string
 	}
 
+	@dc:description="""has cognizant engineer"""
+	entityScalarDataProperty + hasCogE {
+		domain Assembly
+		range XMLSchema:string
+	}
+
 	@dc:description="""has end circuit direction"""
 	entityScalarDataProperty + hasEndCircuitDirection {
 		domain EndCircuit
@@ -322,6 +328,42 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 		range XMLSchema:string
 	}
 
+	@rdfs:label="""has assembly 1 board schematic signal names"""
+	entityScalarDataProperty + hasAssembly1BoardSchematicSignalNames {
+		domain Function
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has assembly 2 board schematic signal names"""
+	entityScalarDataProperty + hasAssembly2BoardSchematicSignalNames {
+		domain Function
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has comments"""
+	entityScalarDataProperty + hasComments {
+		domain Function
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has end circuit type"""
+	entityScalarDataProperty + hasEndCircuitType {
+		domain Function
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has end circuit1"""
+	entityScalarDataProperty + hasEndCircuit1 {
+		domain Function
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has end circuit2"""
+	entityScalarDataProperty + hasEndCircuit2 {
+		domain Function
+		range XMLSchema:string
+	}
+
 	@rdfs:label="""has function direction"""
 	entityScalarDataProperty + hasFunctionDirection {
 		domain Function
@@ -330,6 +372,12 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	@rdfs:label="""has function number"""
 	entityScalarDataProperty + hasFunctionNumber {
+		domain Function
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has functions per page"""
+	entityScalarDataProperty + hasFunctionsPerPage {
 		domain Function
 		range XMLSchema:string
 	}
@@ -367,10 +415,118 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 		range XMLSchema:string
 	}
 
+	@rdfs:label="""has cross-strapped"""
+	entityScalarDataProperty + hasCrossStrapped {
+		domain Function
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has end connector 1 type/part number"""
+	entityScalarDataProperty + hasEndConnector1TypePartNumber {
+		domain Function
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has end connector 2 type/part number"""
+	entityScalarDataProperty + hasEndConnector2TypePartNumber {
+		domain Function
+		range XMLSchema:string
+	}
+
 	@rdfs:label="""has conductor count"""
 	entityScalarDataProperty + hasConductorCount {
 		domain Function
 		range XMLSchema:integer
+	}
+
+	@rdfs:label="""has end circuit 1 part number"""
+	entityScalarDataProperty + hasEndCircuit1PartNumber {
+		domain Function
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has end circuit 2 part number"""
+	entityScalarDataProperty + hasEndCircuit2PartNumber {
+		domain Function
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has ground tree ref 1"""
+	entityScalarDataProperty + hasGroundTreeRef1 {
+		domain Function
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has ground tree ref 2"""
+	entityScalarDataProperty + hasGroundTreeRef2 {
+		domain Function
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has note 1"""
+	entityScalarDataProperty + hasNote1 {
+		domain Function
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has note 2"""
+	entityScalarDataProperty + hasNote2 {
+		domain Function
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has note 3"""
+	entityScalarDataProperty + hasNote3 {
+		domain Function
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has note 4"""
+	entityScalarDataProperty + hasNote4 {
+		domain Function
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has note 5"""
+	entityScalarDataProperty + hasNote5 {
+		domain Function
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has note 6"""
+	entityScalarDataProperty + hasNote6 {
+		domain Function
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has function rev"""
+	entityScalarDataProperty + hasFunctionRev {
+		domain Function
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has view 1"""
+	entityScalarDataProperty + hasView1 {
+		domain Function
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has view 2"""
+	entityScalarDataProperty + hasView2 {
+		domain Function
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has view 3"""
+	entityScalarDataProperty + hasView3 {
+		domain Function
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has wprop"""
+	entityScalarDataProperty + hasWProp {
+		domain Function
+		range XMLSchema:string
 	}
 
 	@rdfs:label="""has reference designator"""
