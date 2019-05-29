@@ -352,18 +352,6 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 		range XMLSchema:string
 	}
 
-	@rdfs:label="""has end circuit1"""
-	entityScalarDataProperty + hasEndCircuit1 {
-		domain Function
-		range XMLSchema:string
-	}
-
-	@rdfs:label="""has end circuit2"""
-	entityScalarDataProperty + hasEndCircuit2 {
-		domain Function
-		range XMLSchema:string
-	}
-
 	@rdfs:label="""has function direction"""
 	entityScalarDataProperty + hasFunctionDirection {
 		domain Function
@@ -523,8 +511,8 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 		range XMLSchema:string
 	}
 
-	@rdfs:label="""has wprop"""
-	entityScalarDataProperty + hasWProp {
+	@rdfs:label="""has Cable Impedence (formerly wprop)"""
+	entityScalarDataProperty + hasCableImpedence {
 		domain Function
 		range XMLSchema:string
 	}
