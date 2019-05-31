@@ -352,6 +352,18 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 		range XMLSchema:string
 	}
 
+	@rdfs:label="""has end circuit named role 1"""
+	entityScalarDataProperty + hasEndCircuitNamedRole1 {
+		domain Function
+		range XMLSchema:string
+	}
+
+	@rdfs:label="""has end circuit named role 2"""
+	entityScalarDataProperty + hasEndCircuitNamedRole2 {
+		domain Function
+		range XMLSchema:string
+	}
+
 	@rdfs:label="""has function direction"""
 	entityScalarDataProperty + hasFunctionDirection {
 		domain Function
