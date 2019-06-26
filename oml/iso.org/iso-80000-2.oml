@@ -6,10 +6,5 @@ open terminology <http://iso.org/iso-80000-2> {
 
 	extends <http://imce.jpl.nasa.gov/foundation/annotation/annotation>
 
-	numericScalarRestriction nonNegativeDouble {
-		minInclusive 0.0
-		restrictedRange XMLSchema:double
-	}
-	
 	synonymScalarRestriction one { restrictedRange XMLSchema:double }
 }
