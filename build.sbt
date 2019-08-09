@@ -2,6 +2,7 @@
 import java.io.File
 import sbt.Keys._
 import sbt._
+import Path.relativeTo
 
 licenses in GlobalScope += "Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0.html")
 
@@ -75,7 +76,7 @@ lazy val imce_ontologies_public =
       mappings in Universal in packageBin ++= {
 
         val ontologyFiles =
-          (baseDirectory.value / "ontologies" ***).pair(relativeTo(baseDirectory.value)).sortBy(_._2)
+          (baseDirectory.value / "ontologies" ** "*").pair(relativeTo(baseDirectory.value)).sortBy(_._2)
 
         ontologyFiles
 
@@ -83,11 +84,11 @@ lazy val imce_ontologies_public =
 
       artifacts += {
         val n = (name in Universal).value
-        Artifact(n, "zip", "zip", Some("resource"), Seq(), None, Map())
+        Artifact(n, "zip", "zip", Some("resource"), Vector(), None, Map(), None)
       },
       packagedArtifacts += {
         val p = (packageBin in Universal).value
         val n = (name in Universal).value
-        Artifact(n, "zip", "zip", Some("resource"), Seq(), None, Map()) -> p
+        Artifact(n, "zip", "zip", Some("resource"), Vector(), None, Map(), None) -> p
       }
     )
