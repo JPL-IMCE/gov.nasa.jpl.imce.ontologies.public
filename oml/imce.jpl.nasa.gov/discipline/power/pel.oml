@@ -1,0 +1,113 @@
+@dc:rights="""Copyright 2010-2019, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
+
+This software may be subject to U.S. export control laws. By accepting this software, the user agrees to comply with all applicable U.S. export laws and regulations. User has the responsibility to obtain export licenses,a or other export authority as may be required before exporting such information to foreign countries or providing access to foreign persons."""
+@owl:versionInfo="""$Revision$"""
+@dc:creator="""Flight Systems Engineering, Integration, & Test Section"""
+@dc:date="""$Date$"""
+@dc:type="""Discipline"""
+@dc:title="""PEL Ontology"""
+@dc:description="""The PEL Ontology defines concepts and properties for describing power equipment lists."""
+open terminology <http://imce.jpl.nasa.gov/discipline/power/pel> {
+	
+	extends <http://imce.jpl.nasa.gov/foundation/behavior3/behavior>
+	
+	extends <http://iso.org/iso-80000-2>
+	
+	extends <http://iso.org/iso-80000-4>
+	
+	@dc:description="""TBD"""
+	@rdfs:label="""Watt Parameter"""
+	concept WattParameter
+	
+	@dc:description="""TBD"""
+	@rdfs:label="""Percent Parameter"""
+	concept ContingencyParameter
+	
+	// TODO Move to a power ontology?
+	@dc:description="""TBD"""
+	@rdfs:label="""Watt Codomain"""
+	concept WattCodomain
+	
+	@dc:description="""TBD"""
+	@rdfs:label="""Percent Codomain"""
+	concept PowerContingencyCodomain
+	
+	@dc:description="""TBD"""
+	@rdfs:label="""Constant Value Constraint"""
+	concept ConstantValueConstraint
+	
+	@dc:description="""TBD"""
+	@rdfs:label="""MEV Constraint"""
+	concept MEVConstraint
+	
+	WattParameter extendsConcept behavior:Parameter
+	
+	ContingencyParameter extendsConcept behavior:Parameter
+	
+	WattCodomain extendsConcept behavior:ScalarCodomain
+	
+	PowerContingencyCodomain extendsConcept behavior:ScalarCodomain
+	
+	ConstantValueConstraint extendsConcept behavior:Constraint
+	
+	MEVConstraint extendsConcept behavior:Constraint
+	
+	@dc:description="""TBD"""
+	@oml:hasPropertyLabel="""constrainsCBEValue"""
+	@oml:hasReificationLabel="""ConstrainsCBEValue"""
+	reifiedRelationship ConstrainsCBEValue {
+		functional
+		essential
+		unreified = constrainsCBEValue
+		source = MEVConstraint
+		target = behavior:StateVariable }
+		
+	@dc:description="""TBD"""
+	@oml:hasPropertyLabel="""constrainsMEVValue"""
+	@oml:hasReificationLabel="""ConstrainsMEVValue"""
+	reifiedRelationship ConstrainsMEVValue {
+		functional
+		essential
+		unreified = constrainsMEVValue
+		source = MEVConstraint
+		target = behavior:StateVariable }
+		
+	@dc:description="""TBD"""
+	@oml:hasPropertyLabel="""constrainsContingencyValue"""
+	@oml:hasReificationLabel="""ConstrainsContingencyValue"""
+	reifiedRelationship ConstrainsContingencyValue {
+		functional
+		essential
+		unreified = constrainsContingencyValue
+		source = MEVConstraint
+		target = behavior:StateVariable }
+		
+	ConstrainsCBEValue extendsRelationship behavior:Constrains
+	
+	ConstrainsMEVValue extendsRelationship behavior:Constrains
+	
+	ConstrainsContingencyValue extendsRelationship behavior:Constrains
+	
+	@rdfs:label="""has value"""
+	entityScalarDataProperty + hasWattValue {
+		domain WattParameter
+		range iso-80000-4:watt
+	}
+	
+	@rdfs:label="""has percent value"""
+	entityScalarDataProperty + hasContingencyValue {
+		domain ContingencyParameter
+		range powerOverPower
+	}
+	
+	@dc:description="""Dimensionless quantity power over power"""
+	@rdfs:label="""power / power"""
+	synonymScalarRestriction powerOverPower {
+		restrictedRange iso-80000-2:one
+	}
+	
+	hasWattValue subDataPropertyOf behavior:hasValue
+	
+	hasContingencyValue subDataPropertyOf behavior:hasValue
+	
+}
