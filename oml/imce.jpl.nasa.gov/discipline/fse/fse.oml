@@ -337,25 +337,25 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 		range XMLSchema:string
 	}
 
-	@dc:description="""has cognizant engineer"""
+	@rdfs:label="""has cognizant engineer"""
 	entityScalarDataProperty + hasCogE {
 		domain Assembly
 		range XMLSchema:string
 	}
 
-	@dc:description="""has end circuit direction"""
+	@rdfs:label="""has end circuit direction"""
 	entityScalarDataProperty + hasEndCircuitDirection {
 		domain EndCircuit
 		range endCircuitDirection
 	}
 
-	@dc:description="""has annotation key"""
+	@rdfs:label="""has annotation key"""
 	entityScalarDataProperty + hasAnnotationKey {
 		domain FunctionAnnotation
 		range XMLSchema:string
 	}
 
-	@dc:description="""has annotation value"""
+	@rdfs:label="""has annotation value"""
 	entityScalarDataProperty + hasAnnotationValue {
 		domain FunctionAnnotation
 		range XMLSchema:string
