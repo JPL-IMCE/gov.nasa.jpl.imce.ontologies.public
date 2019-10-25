@@ -15,78 +15,88 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	@rdfs:label="""End Circuit Presenting Element"""
 	aspect EndCircuitPresentingElement
-	
+
 	@rdfs:label="""Reference Designated Element"""
 	aspect ReferenceDesignatedElement
 
+	@dc:description="""A physical Component that presents electrical interfaces"""
 	@rdfs:label="""Assembly"""
 	concept Assembly
 
+	@dc:description="""References the design drawing that implements a Function"""
 	@rdfs:label="""Drawing"""
 	concept Drawing
 
+	@dc:description="""Represents an inner electrical resource as an Interface"""
 	@rdfs:label="""End Circuit"""
 	concept EndCircuit
 
+	@dc:description="""A grouping of EndCircuits that have common properties"""
 	@rdfs:label="""End Circuit Group"""
 	concept EndCircuitGroup
 
 	@rdfs:label="""Engineering Change Request"""
 	concept EngineeringChangeRequest
-	
+
+	@dc:description="""Am electrical Function represents a requirement to join some Interfaces, specifically to conduct a signal"""
 	@rdfs:label="""Function"""
 	concept Function
 
 	@rdfs:label="""Function Annotation"""
 	concept FunctionAnnotation
 
+	@dc:description=""" same as project:suppliedBy ? """
 	@rdfs:label="""Implementer"""
 	concept Implementer
 
+	@dc:description="""An Assembly-to-Assembly logical signal path"""
 	@rdfs:label="""Net"""
 	concept Net
-	
+
 	@rdfs:label="""Mass Constraint"""
 	concept MassConstraint
-	
+
 	@rdfs:label="""CBE Mass Constraint"""
 	concept CBEMassConstraint
-	
+
 	@rdfs:label="""MGA Mass Constraint"""
 	concept MGAMassConstraint
-	
+
 	@rdfs:label="""Mass Allocation Constraint"""
 	concept MassAllocationConstraint
-	
+
 	@rdfs:label="""Mass Limit Constraint"""
 	concept MassLimitConstraint
-	
+
 	@rdfs:label="""Mass Reserve Constraint"""
 	concept MassReserveConstraint
-	
+
 	@rdfs:label="""Placeholder Mass"""
 	concept PlaceholderMass
-	
+
 	@rdfs:label="""Consumable Mass"""
 	concept ConsumableMass
-	
+
+	@dc:description="""A physical conductor segment. A Net may be implemented by one or more Wires"""
 	@rdfs:label="""Wire"""
 	concept Wire
 
 	@rdfs:label="""Power Switch Bank"""
 	concept PowerSwitchBank
 
+	@dc:description="""An aggregation of Components supplied by a common work package authority."""
 	@rdfs:label="""Subsystem"""
 	concept Subsystem
 
+	@dc:description="""Some electrical switches can be ganged to switch a larger current. A GengConfiguration composes a set of switches into a new logical switch."""
 	@rdfs:label="""GangConfiguration"""
 	concept GangConfiguration
-	
+
 	@rdfs:label="""Telemetry"""
 	concept Telemetry
-	
+
 	Assembly extendsConcept mission:Component
-	
+
 	Drawing extendsConcept project:Product
 
 	EndCircuit extendsConcept mission:Interface
@@ -94,31 +104,31 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	EndCircuitGroup extendsConcept mission:Interface
 
 	EngineeringChangeRequest extendsConcept analysis:Characterization
-	
+
 	Function extendsConcept mission:Junction
-	
+
 	FunctionAnnotation extendsConcept analysis:Characterization
-	
+
 	Implementer extendsConcept analysis:Characterization
 
 	MassConstraint extendsConcept analysis:Characterization
-	
+
 	CBEMassConstraint extendsConcept MassConstraint
-	
+
 	MGAMassConstraint extendsConcept MassConstraint
-	
+
 	MassAllocationConstraint extendsConcept MassConstraint
-	
+
 	MassLimitConstraint extendsConcept MassConstraint
-	
+
 	MassReserveConstraint extendsConcept MassConstraint
-	
+
 	Net extendsConcept mission:Junction
-	
+
 	PlaceholderMass extendsConcept mission:Component
-	
+
 	ConsumableMass extendsConcept mission:Component
-	
+
 	Wire extendsConcept mission:Junction
 
 	PowerSwitchBank extendsConcept EndCircuitGroup
@@ -126,9 +136,9 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	Subsystem extendsConcept mission:Component
 
 	GangConfiguration extendsConcept analysis:Explanation
-	
+
 	Telemetry extendsConcept mission:Flow
-	
+
 	@oml:hasPropertyLabel="""connects assembly"""
 	@oml:hasReificationLabel="""Connects Assembly"""
 	reifiedRelationship ConnectsAssembly {
@@ -241,10 +251,10 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	rule gangMemberFromAggregate infers mission:joins if
 		Function && mission:joins && isAggregateOfGang && hasGangMember
-		
+
 	rule gangAggregateFromMember infers mission:joins if
 		Function && mission:joins && isMemberOfGang && hasGangAggregate
-		
+
 	ConnectsAssembly1 extendsRelationship ConnectsAssembly
 
 	ConnectsAssembly2 extendsRelationship ConnectsAssembly
@@ -254,19 +264,19 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	ConnectsSubsystem2 extendsRelationship ConnectsSubsystem
 
 	HasGangMember extendsRelationship analysis:Analyzes
-	
+
 	HasGangAggregate extendsRelationship analysis:Explains
-	
+
 	ImplementsNet extendsRelationship Implements
-	
+
 	ImplementsFunction extendsRelationship Implements
-	
+
 	Assembly extendsAspect EndCircuitPresentingElement
 
 	Assembly extendsAspect ReferenceDesignatedElement
 
 	EndCircuitGroup extendsAspect EndCircuitPresentingElement
-	
+
 	EndCircuitPresentingElement extendsAspect mission:PresentingElement
 
 	ReferenceDesignatedElement extendsAspect base:IdentifiedElement
@@ -683,7 +693,7 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	}
 
 	allEntities Assembly . base:isAggregatedIn in Subsystem
-	
+
 	allEntities Drawing . project:describes in Function
 
 	allEntities EndCircuit . mission:isJoinedIn in Function
@@ -693,31 +703,31 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	allEntities EndCircuitGroup . mission:isPresentedBy in Assembly
 
 	allEntities EndCircuitGroup . mission:presents in EndCircuit
-	
+
 	allEntities EngineeringChangeRequest . analysis:characterizes in Function
-	
+
 	allEntities Function . mission:joins in EndCircuit
 
 	allEntities Implementer . analysis:characterizes in Function
-	
+
 	allEntities FunctionAnnotation . analysis:characterizes in Function
 
 	allEntities Subsystem . base:aggregates in Assembly
-	
+
 	allEntities MassConstraint . analysis:characterizes in mission:Component
 
 	hasAnnotationKey subDataPropertyOf base:hasAlternateName
-	
+
 	hasAnnotationValue subDataPropertyOf base:hasDescription
-	
+
 	hasEndCircuitLocalName subDataPropertyOf base:hasAlternateName
 
 	hasSwitchBankLocalName subDataPropertyOf base:hasAlternateName
 
 	hasAssemblyAcronym subDataPropertyOf base:hasIdentifier
-	
+
 	hasDrawingNumber subDataPropertyOf base:hasIdentifier
-	
+
 	hasEcrIdentifier subDataPropertyOf base:hasIdentifier
 
 	hasEndCircuitIdentifier subDataPropertyOf base:hasIdentifier
