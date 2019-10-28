@@ -1,5 +1,6 @@
 @owl:versionInfo="""$Revision$"""
 @dc:creator="""Systems Engineering & Formulation Division"""
+@dc:creator="""California Institute of Technology Jet Propulsion Laboratory"""
 @dc:description="""The Mission Ontology defines concepts and properties for describing missions in terms of their objectives, their constituent components, the functions those components perform, and the requirements that specify them."""
 @dc:rights="""Copyright 2010-2014, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
 
@@ -10,7 +11,7 @@ This software may be subject to U.S. export control laws. By accepting this soft
 open terminology <http://imce.jpl.nasa.gov/foundation/mission/mission> {
 
 	extends <http://imce.jpl.nasa.gov/foundation/base/base>
-	
+
 	extends <http://iso.org/iso-80000-5>
 	extends <http://iso.org/iso-80000-6>
 
@@ -161,7 +162,7 @@ A <classname>Mission</classname> may
 	Message extendsConcept Item
 
 	@dc:description="""A
-a <classname>Mission</classname> <replaceable>m</replaceable> 
+a <classname>Mission</classname> <replaceable>m</replaceable>
 <property>deploys</property>
 <classname>Component</classname> <replaceable>c</replaceable>
 if and only if <replaceable>m</replaceable> exploits or utilizes <replaceable>c</replaceable> in pursuit of  <classname>Objective</classname>s. Note that a given <classname>Mission</classname> may not <emphasis>own</emphasis> all the <classname>Component</classname>s it <property>deploys</property>; some <classname>Component</classname>s (e.g., ground system assets) may be shared with multiple missions."""
@@ -292,7 +293,7 @@ consumes or is otherwise the recipient of
 a
 <classname>Function</classname>
 <replaceable>f<subscript>2</subscript></replaceable>
-if and only if execution of 
+if and only if execution of
 <replaceable>f<subscript>1</subscript></replaceable>
 may directly cause execution of
 <replaceable>f<subscript>2</subscript></replaceable>."""
@@ -315,11 +316,11 @@ a pair of
 and
 {<replaceable>f<subscript>2</subscript></replaceable>}
 if and only if
-{<replaceable>f<subscript>1</subscript></replaceable>} 
+{<replaceable>f<subscript>1</subscript></replaceable>}
 <property>emits</property> a <classname>Flow</classname> or
 <property>sends</property> an <classname>Item</classname>
 that
-{<replaceable>f<subscript>2</subscript></replaceable>} 
+{<replaceable>f<subscript>2</subscript></replaceable>}
 <property>ingests</property> or
 <property>receives</property>,
 </para>"""

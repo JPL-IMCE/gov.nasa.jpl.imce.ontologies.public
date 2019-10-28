@@ -1,12 +1,11 @@
+@dc:title="""Analysis Ontology"""
+@dc:creator="""California Institute of Technology Jet Propulsion Laboratory"""
 @dc:rights="""Copyright 2010-2014, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
-
 This software may be subject to U.S. export control laws. By accepting this software, the user agrees to comply with all applicable U.S. export laws and regulations. User has the responsibility to obtain export licenses, or other export authority as may be required before exporting such information to foreign countries or providing access to foreign persons."""
-@dc:creator="""Systems Engineering & Formulation Division"""
 @dc:type="""Foundation"""
 @dc:date="""$Date$"""
 @dc:description="""The Analysis Ontology defines general concepts and properties for analyses (e.g., trade studies, driving requirements analysis, etc.). It provides a basis for specialization by domain experts."""
 @owl:versionInfo="""$Revision$"""
-@dc:title="""Analysis Ontology"""
 open terminology <http://imce.jpl.nasa.gov/foundation/analysis/analysis> {
 
 	extends <http://imce.jpl.nasa.gov/foundation/mission/mission>
@@ -125,7 +124,7 @@ open terminology <http://imce.jpl.nasa.gov/foundation/analysis/analysis> {
 	Explanation extendsConcept Characterization
 
 	Fact extendsConcept Assumption
-	
+
 	GlossaryEntry extendsConcept Characterization
 
 	KeyRequirementsAnalysis extendsConcept KeyRequirementsExplanation
@@ -590,9 +589,9 @@ for <replaceable>e</replaceable>.</para>"""
 	}
 
 	hasGlossaryDefinition subDataPropertyOf base:hasDescription
-	
+
 	hasGlossaryTerm subDataPropertyOf base:hasCanonicalName
-	
+
 	allEntities DrivingRequirementsExplanation . explains in mission:Requirement
 
 	allEntities KeyRequirementsExplanation . explains in mission:Requirement
