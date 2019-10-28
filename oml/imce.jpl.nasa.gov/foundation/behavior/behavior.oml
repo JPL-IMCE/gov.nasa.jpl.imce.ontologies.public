@@ -11,9 +11,9 @@ open terminology <http://imce.jpl.nasa.gov/foundation/behavior/behavior> {
 
 	extends <http://imce.jpl.nasa.gov/foundation/analysis/analysis>
 	
-	// TEMPORARY, FOR COMPATIBILITY WITH FAULT MANAGEMENT ONTOLOGY //////
+	@dc:description="""TBD"""
+	@rdfs:label="""Element Behavior"""
 	concept ElementBehavior
-	/////////////////////////////////////////////////////////////////////
 
 	@dc:description="""TBD"""
 	@rdfs:label="""Aspect"""
@@ -55,6 +55,8 @@ It is the Cartesian product of its <classname>TimeDomain</classname> and <classn
 	CompoundCodomain extendsConcept Codomain
 	
 	State extendsConcept CompoundedElement
+	
+	ElementBehavior extendsConcept analysis:Characterization
 	
 	StateVariable extendsConcept analysis:Characterization
 	

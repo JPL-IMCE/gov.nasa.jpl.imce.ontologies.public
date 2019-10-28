@@ -16,6 +16,10 @@ open terminology <http://imce.jpl.nasa.gov/discipline/power/pel> {
 	extends <http://iso.org/iso-80000-4>
 	
 	@dc:description="""TBD"""
+	@rdfs:label="""Volt Parameter"""
+	concept VoltParameter
+	
+	@dc:description="""TBD"""
 	@rdfs:label="""Watt Parameter"""
 	concept WattParameter
 	
@@ -23,7 +27,15 @@ open terminology <http://imce.jpl.nasa.gov/discipline/power/pel> {
 	@rdfs:label="""Percent Parameter"""
 	concept ContingencyParameter
 	
+	@dc:description="""TBD"""
+	@rdfs:label="""Waste Heat Factor Parameter"""
+	concept WasteHeatFactorParameter
+	
 	// TODO Move to a power ontology?
+	@dc:description="""TBD"""
+	@rdfs:label="""Watt Codomain"""
+	concept VoltCodomain
+	
 	@dc:description="""TBD"""
 	@rdfs:label="""Watt Codomain"""
 	concept WattCodomain
@@ -33,6 +45,10 @@ open terminology <http://imce.jpl.nasa.gov/discipline/power/pel> {
 	concept PowerContingencyCodomain
 	
 	@dc:description="""TBD"""
+	@rdfs:label="""Waste Heat Factor Codomain"""
+	concept WasteHeatFactorCodomain
+	
+	@dc:description="""TBD"""
 	@rdfs:label="""Constant Value Constraint"""
 	concept ConstantValueConstraint
 	
@@ -40,17 +56,31 @@ open terminology <http://imce.jpl.nasa.gov/discipline/power/pel> {
 	@rdfs:label="""MEV Constraint"""
 	concept MEVConstraint
 	
+	@dc:description="""TBD"""
+	@rdfs:label="""MEV Constraint"""
+	concept ScaledValueConstraint
+	
+	VoltParameter extendsConcept behavior:Parameter
+	
 	WattParameter extendsConcept behavior:Parameter
 	
 	ContingencyParameter extendsConcept behavior:Parameter
+	
+	WasteHeatFactorParameter extendsConcept behavior:Parameter
+	
+	VoltCodomain extendsConcept behavior:ScalarCodomain
 	
 	WattCodomain extendsConcept behavior:ScalarCodomain
 	
 	PowerContingencyCodomain extendsConcept behavior:ScalarCodomain
 	
+	WasteHeatFactorCodomain extendsConcept behavior:ScalarCodomain
+	
 	ConstantValueConstraint extendsConcept behavior:Constraint
 	
 	MEVConstraint extendsConcept behavior:Constraint
+	
+	ScaledValueConstraint extendsConcept behavior:Constraint
 	
 	@dc:description="""TBD"""
 	@oml:hasPropertyLabel="""constrainsCBEValue"""
@@ -82,21 +112,63 @@ open terminology <http://imce.jpl.nasa.gov/discipline/power/pel> {
 		source = MEVConstraint
 		target = behavior:StateVariable }
 		
+	@dc:description="""TBD"""
+	@oml:hasPropertyLabel="""constrainsScaledValue"""
+	@oml:hasReificationLabel="""ConstrainsScaledValue"""
+	reifiedRelationship ConstrainsScaledValue {
+		functional
+		essential
+		unreified = constrainsScaledValue
+		source = ScaledValueConstraint
+		target = behavior:StateVariable }
+		
+	@dc:description="""TBD"""
+	@oml:hasPropertyLabel="""constrainsScalingFactor"""
+	@oml:hasReificationLabel="""ConstrainsScalingFactor"""
+	reifiedRelationship ConstrainsScalingFactor {
+		functional
+		essential
+		unreified = constrainsScalingFactor
+		source = ScaledValueConstraint
+		target = behavior:StateVariable }
+		
+	@dc:description="""TBD"""
+	@oml:hasPropertyLabel="""constrainsValueToBeScaled"""
+	@oml:hasReificationLabel="""ConstrainsValueToBeScaled"""
+	reifiedRelationship ConstrainsValueToBeScaled {
+		functional
+		essential
+		unreified = constrainsValueToBeScaled
+		source = ScaledValueConstraint
+		target = behavior:StateVariable }
+		
 	ConstrainsCBEValue extendsRelationship behavior:Constrains
 	
 	ConstrainsMEVValue extendsRelationship behavior:Constrains
 	
 	ConstrainsContingencyValue extendsRelationship behavior:Constrains
 	
-	@rdfs:label="""has value"""
+	@rdfs:label="""has volt value"""
+	entityScalarDataProperty + hasVoltValue {
+		domain WattParameter
+		range iso-80000-4:volt
+	}
+	
+	@rdfs:label="""has watt value"""
 	entityScalarDataProperty + hasWattValue {
 		domain WattParameter
 		range iso-80000-4:watt
 	}
 	
-	@rdfs:label="""has percent value"""
+	@rdfs:label="""has contingency value"""
 	entityScalarDataProperty + hasContingencyValue {
 		domain ContingencyParameter
+		range powerOverPower
+	}
+	
+	@rdfs:label="""has waste heat factor value"""
+	entityScalarDataProperty + hasWasteHeatFactorValue {
+		domain WasteHeatFactorParameter
 		range powerOverPower
 	}
 	
@@ -106,8 +178,12 @@ open terminology <http://imce.jpl.nasa.gov/discipline/power/pel> {
 		restrictedRange iso-80000-2:one
 	}
 	
+	hasVoltValue subDataPropertyOf behavior:hasValue
+	
 	hasWattValue subDataPropertyOf behavior:hasValue
 	
 	hasContingencyValue subDataPropertyOf behavior:hasValue
+	
+	hasWasteHeatFactorValue subDataPropertyOf behavior:hasValue
 	
 }
