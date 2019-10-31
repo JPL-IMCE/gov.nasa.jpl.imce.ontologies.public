@@ -16,6 +16,15 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""End Circuit Presenting Element"""
 	aspect EndCircuitPresentingElement
 	
+	@rdfs:label="""Mass Constrained Element"""
+	aspect MassConstrainedElement
+	
+	@rdfs:label="""Mass Estimated Element"""
+	aspect MassEstimatedElement
+	
+	@rdfs:label="""Mass Allocated Element"""
+	aspect MassAllocatedElement
+	
 	@rdfs:label="""Reference Designated Element"""
 	aspect ReferenceDesignatedElement
 
@@ -34,6 +43,9 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""Engineering Change Request"""
 	concept EngineeringChangeRequest
 	
+	@rdfs:label="""Flight Hardware Component"""
+	concept FlightHardwareComponent
+	
 	@rdfs:label="""Function"""
 	concept Function
 
@@ -49,8 +61,14 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""Mass Constraint"""
 	concept MassConstraint
 	
+	@rdfs:label="""Mass Estimation Constraint"""
+	concept MassEstimationConstraint
+	
 	@rdfs:label="""CBE Mass Constraint"""
 	concept CBEMassConstraint
+	
+	@rdfs:label="""MEV Mass Constraint"""
+	concept MEVMassConstraint
 	
 	@rdfs:label="""MGA Mass Constraint"""
 	concept MGAMassConstraint
@@ -63,6 +81,9 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	
 	@rdfs:label="""Mass Reserve Constraint"""
 	concept MassReserveConstraint
+	
+	@rdfs:label="""Mass Proxy"""
+	aspect MassProxy
 	
 	@rdfs:label="""Placeholder Mass"""
 	concept PlaceholderMass
@@ -85,7 +106,11 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""Telemetry"""
 	concept Telemetry
 	
-	Assembly extendsConcept mission:Component
+	Assembly extendsConcept FlightHardwareComponent
+	
+	MassEstimatedElement extendsAspect MassConstrainedElement
+	
+	MassAllocatedElement extendsAspect MassConstrainedElement
 	
 	Drawing extendsConcept project:Product
 
@@ -95,6 +120,8 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	EngineeringChangeRequest extendsConcept analysis:Characterization
 	
+	FlightHardwareComponent extendsConcept mission:Component
+	
 	Function extendsConcept mission:Junction
 	
 	FunctionAnnotation extendsConcept analysis:Characterization
@@ -103,31 +130,43 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	MassConstraint extendsConcept analysis:Characterization
 	
-	CBEMassConstraint extendsConcept MassConstraint
+	MassEstimationConstraint extendsConcept MassConstraint
 	
-	MGAMassConstraint extendsConcept MassConstraint
+	CBEMassConstraint extendsConcept MassEstimationConstraint
+	
+	MEVMassConstraint extendsConcept MassEstimationConstraint
+	
+	MGAMassConstraint extendsConcept MassEstimationConstraint
 	
 	MassAllocationConstraint extendsConcept MassConstraint
 	
-	MassLimitConstraint extendsConcept MassConstraint
+	MassLimitConstraint extendsConcept MassAllocationConstraint
 	
-	MassReserveConstraint extendsConcept MassConstraint
+	MassProxy extendsAspect MassEstimatedElement 
+	
+	MassReserveConstraint extendsConcept MassAllocationConstraint
 	
 	Net extendsConcept mission:Junction
 	
-	PlaceholderMass extendsConcept mission:Component
+	PlaceholderMass extendsAspect MassProxy
 	
-	ConsumableMass extendsConcept mission:Component
+	ConsumableMass extendsAspect MassProxy
 	
 	Wire extendsConcept mission:Junction
 
 	PowerSwitchBank extendsConcept EndCircuitGroup
 
-	Subsystem extendsConcept mission:Component
+	Subsystem extendsConcept FlightHardwareComponent
 
 	GangConfiguration extendsConcept analysis:Explanation
 	
 	Telemetry extendsConcept mission:Flow
+	
+	FlightHardwareComponent extendsAspect MassEstimatedElement
+	
+	project:WorkPackage extendsAspect MassEstimatedElement
+
+	project:WorkPackage extendsAspect MassAllocatedElement
 	
 	@oml:hasPropertyLabel="""connects assembly"""
 	@oml:hasReificationLabel="""Connects Assembly"""
@@ -682,6 +721,12 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 		range XMLSchema:string
 	}
 
+	@rdfs:label="""has multiplicity"""
+	entityScalarDataProperty + hasMultiplicity {
+		domain MassProxy
+		range XMLSchema:integer
+	}
+
 	allEntities Assembly . base:isAggregatedIn in Subsystem
 	
 	allEntities Drawing . project:describes in Function
@@ -704,7 +749,11 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 
 	allEntities Subsystem . base:aggregates in Assembly
 	
-	allEntities MassConstraint . analysis:characterizes in mission:Component
+	allEntities MassConstraint . analysis:characterizes in MassConstrainedElement
+
+	allEntities MassEstimationConstraint . analysis:characterizes in MassEstimatedElement
+
+	allEntities MassAllocationConstraint . analysis:characterizes in MassAllocatedElement
 
 	hasAnnotationKey subDataPropertyOf base:hasAlternateName
 	
