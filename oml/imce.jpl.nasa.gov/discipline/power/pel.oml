@@ -27,10 +27,6 @@ open terminology <http://imce.jpl.nasa.gov/discipline/power/pel> {
 	@rdfs:label="""Percent Parameter"""
 	concept ContingencyParameter
 	
-	@dc:description="""TBD"""
-	@rdfs:label="""Waste Heat Factor Parameter"""
-	concept WasteHeatFactorParameter
-	
 	// TODO Move to a power ontology?
 	@dc:description="""TBD"""
 	@rdfs:label="""Watt Codomain"""
@@ -45,10 +41,6 @@ open terminology <http://imce.jpl.nasa.gov/discipline/power/pel> {
 	concept PowerContingencyCodomain
 	
 	@dc:description="""TBD"""
-	@rdfs:label="""Waste Heat Factor Codomain"""
-	concept WasteHeatFactorCodomain
-	
-	@dc:description="""TBD"""
 	@rdfs:label="""Constant Value Constraint"""
 	concept ConstantValueConstraint
 	
@@ -56,17 +48,11 @@ open terminology <http://imce.jpl.nasa.gov/discipline/power/pel> {
 	@rdfs:label="""MEV Constraint"""
 	concept MEVConstraint
 	
-	@dc:description="""TBD"""
-	@rdfs:label="""MEV Constraint"""
-	concept ScaledValueConstraint
-	
 	VoltParameter extendsConcept behavior:Parameter
 	
 	WattParameter extendsConcept behavior:Parameter
 	
 	ContingencyParameter extendsConcept behavior:Parameter
-	
-	WasteHeatFactorParameter extendsConcept behavior:Parameter
 	
 	VoltCodomain extendsConcept behavior:ScalarCodomain
 	
@@ -74,13 +60,9 @@ open terminology <http://imce.jpl.nasa.gov/discipline/power/pel> {
 	
 	PowerContingencyCodomain extendsConcept behavior:ScalarCodomain
 	
-	WasteHeatFactorCodomain extendsConcept behavior:ScalarCodomain
-	
 	ConstantValueConstraint extendsConcept behavior:Constraint
 	
 	MEVConstraint extendsConcept behavior:Constraint
-	
-	ScaledValueConstraint extendsConcept behavior:Constraint
 	
 	@dc:description="""TBD"""
 	@oml:hasPropertyLabel="""constrainsCBEValue"""
@@ -112,36 +94,6 @@ open terminology <http://imce.jpl.nasa.gov/discipline/power/pel> {
 		source = MEVConstraint
 		target = behavior:StateVariable }
 		
-	@dc:description="""TBD"""
-	@oml:hasPropertyLabel="""constrainsScaledValue"""
-	@oml:hasReificationLabel="""ConstrainsScaledValue"""
-	reifiedRelationship ConstrainsScaledValue {
-		functional
-		essential
-		unreified = constrainsScaledValue
-		source = ScaledValueConstraint
-		target = behavior:StateVariable }
-		
-	@dc:description="""TBD"""
-	@oml:hasPropertyLabel="""constrainsScalingFactor"""
-	@oml:hasReificationLabel="""ConstrainsScalingFactor"""
-	reifiedRelationship ConstrainsScalingFactor {
-		functional
-		essential
-		unreified = constrainsScalingFactor
-		source = ScaledValueConstraint
-		target = behavior:StateVariable }
-		
-	@dc:description="""TBD"""
-	@oml:hasPropertyLabel="""constrainsValueToBeScaled"""
-	@oml:hasReificationLabel="""ConstrainsValueToBeScaled"""
-	reifiedRelationship ConstrainsValueToBeScaled {
-		functional
-		essential
-		unreified = constrainsValueToBeScaled
-		source = ScaledValueConstraint
-		target = behavior:StateVariable }
-		
 	ConstrainsCBEValue extendsRelationship behavior:Constrains
 	
 	ConstrainsMEVValue extendsRelationship behavior:Constrains
@@ -166,12 +118,6 @@ open terminology <http://imce.jpl.nasa.gov/discipline/power/pel> {
 		range powerOverPower
 	}
 	
-	@rdfs:label="""has waste heat factor value"""
-	entityScalarDataProperty + hasWasteHeatFactorValue {
-		domain WasteHeatFactorParameter
-		range powerOverPower
-	}
-	
 	@dc:description="""Dimensionless quantity power over power"""
 	@rdfs:label="""power / power"""
 	synonymScalarRestriction powerOverPower {
@@ -183,7 +129,5 @@ open terminology <http://imce.jpl.nasa.gov/discipline/power/pel> {
 	hasWattValue subDataPropertyOf behavior:hasValue
 	
 	hasContingencyValue subDataPropertyOf behavior:hasValue
-	
-	hasWasteHeatFactorValue subDataPropertyOf behavior:hasValue
 	
 }
