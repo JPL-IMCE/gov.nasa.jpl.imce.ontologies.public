@@ -46,7 +46,11 @@ open terminology <http://imce.jpl.nasa.gov/discipline/power/pel> {
 	
 	@dc:description="""TBD"""
 	@rdfs:label="""MEV Constraint"""
-	concept MEVConstraint
+	concept MEVCBEContingencyConstraint
+	
+	@dc:description="""An analysis:Explanation that explains MEV, given CBE and contingency"""
+	@rdfs:label="""MEV Explanation"""
+	concept MEVExplanation
 	
 	VoltParameter extendsConcept behavior:Parameter
 	
@@ -62,7 +66,9 @@ open terminology <http://imce.jpl.nasa.gov/discipline/power/pel> {
 	
 	ConstantValueConstraint extendsConcept behavior:Constraint
 	
-	MEVConstraint extendsConcept behavior:Constraint
+	MEVCBEContingencyConstraint extendsConcept behavior:Constraint
+	
+	MEVExplanation extendsConcept analysis:Explanation
 	
 	@dc:description="""TBD"""
 	@oml:hasPropertyLabel="""constrainsCBEValue"""
@@ -71,7 +77,7 @@ open terminology <http://imce.jpl.nasa.gov/discipline/power/pel> {
 		functional
 		essential
 		unreified = constrainsCBEValue
-		source = MEVConstraint
+		source = MEVCBEContingencyConstraint
 		target = behavior:StateVariable }
 		
 	@dc:description="""TBD"""
@@ -81,7 +87,7 @@ open terminology <http://imce.jpl.nasa.gov/discipline/power/pel> {
 		functional
 		essential
 		unreified = constrainsMEVValue
-		source = MEVConstraint
+		source = MEVCBEContingencyConstraint
 		target = behavior:StateVariable }
 		
 	@dc:description="""TBD"""
@@ -91,14 +97,38 @@ open terminology <http://imce.jpl.nasa.gov/discipline/power/pel> {
 		functional
 		essential
 		unreified = constrainsContingencyValue
-		source = MEVConstraint
+		source = MEVCBEContingencyConstraint
 		target = behavior:StateVariable }
+		
+	@dc:description="""TBD"""
+	@oml:hasPropertyLabel="""analyzesCBEValue"""
+	@oml:hasReificationLabel="""AnalyzesCBEValue"""
+	reifiedRelationship AnalyzesCBEValue {
+		functional
+		essential
+		unreified = analyzesCBEValue
+		source = MEVExplanation
+		target = behavior:Constraint}
+		
+	@dc:description="""TBD"""
+	@oml:hasPropertyLabel="""analyzesContingencyValue"""
+	@oml:hasReificationLabel="""AnalyzesContingencyValue"""
+	reifiedRelationship AnalyzesContingencyValue {
+		functional
+		essential
+		unreified = analyzesContingencyValue
+		source = MEVExplanation
+		target = behavior:Constraint }
 		
 	ConstrainsCBEValue extendsRelationship behavior:Constrains
 	
 	ConstrainsMEVValue extendsRelationship behavior:Constrains
 	
 	ConstrainsContingencyValue extendsRelationship behavior:Constrains
+	
+	AnalyzesCBEValue extendsRelationship analysis:Analyzes
+	
+	AnalyzesContingencyValue extendsRelationship analysis:Analyzes
 	
 	@rdfs:label="""has volt value"""
 	entityScalarDataProperty + hasVoltValue {
