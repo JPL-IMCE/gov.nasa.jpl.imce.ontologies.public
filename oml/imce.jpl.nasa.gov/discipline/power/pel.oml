@@ -1,0 +1,163 @@
+@dc:rights="""Copyright 2010-2019, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged. Any commercial use must be negotiated with the Office of Technology Transfer at the California Institute of Technology.
+
+This software may be subject to U.S. export control laws. By accepting this software, the user agrees to comply with all applicable U.S. export laws and regulations. User has the responsibility to obtain export licenses,a or other export authority as may be required before exporting such information to foreign countries or providing access to foreign persons."""
+@owl:versionInfo="""$Revision$"""
+@dc:creator="""Flight Systems Engineering, Integration, & Test Section"""
+@dc:date="""$Date$"""
+@dc:type="""Discipline"""
+@dc:title="""PEL Ontology"""
+@dc:description="""The PEL Ontology defines concepts and properties for describing power equipment lists."""
+open terminology <http://imce.jpl.nasa.gov/discipline/power/pel> {
+	
+	extends <http://imce.jpl.nasa.gov/foundation/behavior/behavior>
+	
+	extends <http://iso.org/iso-80000-2>
+	
+	extends <http://iso.org/iso-80000-4>
+	
+	@dc:description="""TBD"""
+	@rdfs:label="""Volt Parameter"""
+	concept VoltParameter
+	
+	@dc:description="""TBD"""
+	@rdfs:label="""Watt Parameter"""
+	concept WattParameter
+	
+	@dc:description="""TBD"""
+	@rdfs:label="""Percent Parameter"""
+	concept ContingencyParameter
+	
+	// TODO Move to a power ontology?
+	@dc:description="""TBD"""
+	@rdfs:label="""Watt Codomain"""
+	concept VoltCodomain
+	
+	@dc:description="""TBD"""
+	@rdfs:label="""Watt Codomain"""
+	concept WattCodomain
+	
+	@dc:description="""TBD"""
+	@rdfs:label="""Percent Codomain"""
+	concept PowerContingencyCodomain
+	
+	@dc:description="""TBD"""
+	@rdfs:label="""Constant Value Constraint"""
+	concept ConstantValueConstraint
+	
+	@dc:description="""TBD"""
+	@rdfs:label="""MEV Constraint"""
+	concept MEVCBEContingencyConstraint
+	
+	@dc:description="""An analysis:Explanation that explains MEV, given CBE and contingency"""
+	@rdfs:label="""MEV Explanation"""
+	concept MEVExplanation
+	
+	VoltParameter extendsConcept behavior:Parameter
+	
+	WattParameter extendsConcept behavior:Parameter
+	
+	ContingencyParameter extendsConcept behavior:Parameter
+	
+	VoltCodomain extendsConcept behavior:ScalarCodomain
+	
+	WattCodomain extendsConcept behavior:ScalarCodomain
+	
+	PowerContingencyCodomain extendsConcept behavior:ScalarCodomain
+	
+	ConstantValueConstraint extendsConcept behavior:Constraint
+	
+	MEVCBEContingencyConstraint extendsConcept behavior:Constraint
+	
+	MEVExplanation extendsConcept analysis:Explanation
+	
+	@dc:description="""TBD"""
+	@oml:hasPropertyLabel="""constrainsCBEValue"""
+	@oml:hasReificationLabel="""ConstrainsCBEValue"""
+	reifiedRelationship ConstrainsCBEValue {
+		functional
+		essential
+		unreified = constrainsCBEValue
+		source = MEVCBEContingencyConstraint
+		target = behavior:StateVariable }
+		
+	@dc:description="""TBD"""
+	@oml:hasPropertyLabel="""constrainsMEVValue"""
+	@oml:hasReificationLabel="""ConstrainsMEVValue"""
+	reifiedRelationship ConstrainsMEVValue {
+		functional
+		essential
+		unreified = constrainsMEVValue
+		source = MEVCBEContingencyConstraint
+		target = behavior:StateVariable }
+		
+	@dc:description="""TBD"""
+	@oml:hasPropertyLabel="""constrainsContingencyValue"""
+	@oml:hasReificationLabel="""ConstrainsContingencyValue"""
+	reifiedRelationship ConstrainsContingencyValue {
+		functional
+		essential
+		unreified = constrainsContingencyValue
+		source = MEVCBEContingencyConstraint
+		target = behavior:StateVariable }
+		
+	@dc:description="""TBD"""
+	@oml:hasPropertyLabel="""analyzesCBEValue"""
+	@oml:hasReificationLabel="""AnalyzesCBEValue"""
+	reifiedRelationship AnalyzesCBEValue {
+		functional
+		essential
+		unreified = analyzesCBEValue
+		source = MEVExplanation
+		target = behavior:Constraint}
+		
+	@dc:description="""TBD"""
+	@oml:hasPropertyLabel="""analyzesContingencyValue"""
+	@oml:hasReificationLabel="""AnalyzesContingencyValue"""
+	reifiedRelationship AnalyzesContingencyValue {
+		functional
+		essential
+		unreified = analyzesContingencyValue
+		source = MEVExplanation
+		target = behavior:Constraint }
+		
+	ConstrainsCBEValue extendsRelationship behavior:Constrains
+	
+	ConstrainsMEVValue extendsRelationship behavior:Constrains
+	
+	ConstrainsContingencyValue extendsRelationship behavior:Constrains
+	
+	AnalyzesCBEValue extendsRelationship analysis:Analyzes
+	
+	AnalyzesContingencyValue extendsRelationship analysis:Analyzes
+	
+	@rdfs:label="""has volt value"""
+	entityScalarDataProperty + hasVoltValue {
+		domain WattParameter
+		range iso-80000-4:volt
+	}
+	
+	@rdfs:label="""has watt value"""
+	entityScalarDataProperty + hasWattValue {
+		domain WattParameter
+		range iso-80000-4:watt
+	}
+	
+	@rdfs:label="""has contingency value"""
+	entityScalarDataProperty + hasContingencyValue {
+		domain ContingencyParameter
+		range powerOverPower
+	}
+	
+	@dc:description="""Dimensionless quantity power over power"""
+	@rdfs:label="""power / power"""
+	synonymScalarRestriction powerOverPower {
+		restrictedRange iso-80000-2:one
+	}
+	
+	hasVoltValue subDataPropertyOf behavior:hasValue
+	
+	hasWattValue subDataPropertyOf behavior:hasValue
+	
+	hasContingencyValue subDataPropertyOf behavior:hasValue
+	
+}
