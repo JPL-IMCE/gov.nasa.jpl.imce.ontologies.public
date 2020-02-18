@@ -106,11 +106,7 @@ It is the Cartesian product of its <classname>TimeDomain</classname> and <classn
 	@rdfs:label="""has value"""
 	entityScalarDataProperty + hasValue {
 		domain Parameter
-		range AbstractValueType
-	}
-	
-	synonymScalarRestriction AbstractValueType {
-		restrictedRange XMLSchema:double
+		range XMLSchema:double
 	}
 	
 	// Uncertain about hasValue for ScalarCodomain - how can we best represent the fact that it could be a string, double, unitized value, etc?
