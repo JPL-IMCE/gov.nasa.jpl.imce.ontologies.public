@@ -688,19 +688,19 @@ open terminology <http://imce.jpl.nasa.gov/discipline/fse/fse> {
 	@rdfs:label="""has cable impedance"""
 	entityScalarDataProperty hasCableImpedance {
 		domain Net
-		range iso-80000-6:ohm
+		range XMLSchema:double
 	}
 
 	@rdfs:label="""has cable length (m)"""
 	entityScalarDataProperty hasCableLength {
 		domain Net
-		range iso-80000-3:metre
+		range XMLSchema:double
 	}
 
 	@rdfs:label="""has mass constraint value"""
 	entityScalarDataProperty hasMassConstraintValue {
 		domain MassConstraint
-		range iso-80000-4:kilogram
+		range XMLSchema:double
 	}
 
 	@rdfs:label="""has device identifer"""

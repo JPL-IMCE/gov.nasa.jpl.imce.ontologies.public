@@ -11,9 +11,6 @@ open terminology <http://imce.jpl.nasa.gov/discipline/power/pel> {
 	
 	extends <http://imce.jpl.nasa.gov/foundation/behavior/behavior>
 	
-	extends <http://iso.org/iso-80000-2>
-	
-	extends <http://iso.org/iso-80000-4>
 	
 	@dc:description="""TBD"""
 	@rdfs:label="""Volt Parameter"""
@@ -52,6 +49,50 @@ open terminology <http://imce.jpl.nasa.gov/discipline/power/pel> {
 	@rdfs:label="""MEV Explanation"""
 	concept MEVExplanation
 	
+	@dc:description="""A behavior:ElementBehavior characterization for power"""
+	@rdfs:label="""Element Power Behavior"""
+	concept ElementPowerBehavior
+	
+	@dc:description="""A state variable for discrete power states"""
+	@rdfs:label="""Power State State Variable"""
+	concept PowerStateStateVariable
+	
+	@dc:description="""A state variable for power usage"""
+	@rdfs:label="""Power State Usage Variable"""
+	concept PowerUsageStateVariable
+	
+	@dc:description="""A state variable assumed voltage"""
+	@rdfs:label="""Assumed Voltage State Variable"""
+	concept AssumedVoltageStateVariable
+	
+	@dc:description="""A discrete power state"""
+	@rdfs:label="""Power State"""
+	concept PowerState
+	
+	@dc:description="""A state variable for power usage CBE"""
+	@rdfs:label="""Power Usage CBE State Variable"""
+	concept PowerUsageCBEStateVariable
+	
+	@dc:description="""A state variable for power usage MEV"""
+	@rdfs:label="""Power Usage MEV State Variable"""
+	concept PowerUsageMEVStateVariable
+	
+	@dc:description="""A state variable for power usage contingency"""
+	@rdfs:label="""Power Usage Contingency State Variable"""
+	concept PowerUsageContingencyStateVariable
+	
+	@dc:description="""A constant value constraint on power usage CBE"""
+	@rdfs:label="""Power Usage CBE Constant Value Constraint"""
+	concept PowerUsageCBEConstantValueConstraint
+	
+	@dc:description="""A constant value constraint on power usage MEV"""
+	@rdfs:label="""Power Usage MEV Constant Value Constraint"""
+	concept PowerUsageMEVConstantValueConstraint
+	
+	@dc:description="""A constant value constraint on power usage contingency"""
+	@rdfs:label="""Power Usage Contingency Constant Value Constraint"""
+	concept PowerUsageContingencyConstantValueConstraint
+	
 	VoltParameter extendsConcept behavior:Parameter
 	
 	WattParameter extendsConcept behavior:Parameter
@@ -70,6 +111,35 @@ open terminology <http://imce.jpl.nasa.gov/discipline/power/pel> {
 	
 	MEVExplanation extendsConcept analysis:Explanation
 	
+	ElementPowerBehavior extendsConcept behavior:ElementBehavior
+	
+	PowerStateStateVariable extendsConcept behavior:StateVariable
+	PowerUsageStateVariable extendsConcept behavior:StateVariable
+	AssumedVoltageStateVariable extendsConcept behavior:StateVariable
+		
+	PowerState extendsConcept behavior:State
+	
+	PowerUsageCBEStateVariable extendsConcept PowerUsageStateVariable	
+	PowerUsageMEVStateVariable extendsConcept PowerUsageStateVariable
+	PowerUsageContingencyStateVariable extendsConcept PowerUsageStateVariable
+	
+	PowerUsageCBEConstantValueConstraint extendsConcept ConstantValueConstraint
+	PowerUsageMEVConstantValueConstraint extendsConcept ConstantValueConstraint
+	PowerUsageContingencyConstantValueConstraint extendsConcept ConstantValueConstraint
+	
+	allEntities PowerUsageStateVariable . analysis:characterizes in ElementPowerBehavior
+	allEntities PowerUsageStateVariable . behavior:hasCodomain in WattCodomain
+
+	allEntities AssumedVoltageStateVariable . analysis:characterizes in ElementPowerBehavior
+	allEntities AssumedVoltageStateVariable . behavior:hasCodomain in VoltCodomain
+	
+	allEntities PowerStateStateVariable . analysis:characterizes in ElementPowerBehavior
+	allEntities PowerStateStateVariable . behavior:hasCodomain in behavior:CompoundCodomain
+	
+	allEntities PowerUsageCBEConstantValueConstraint . behavior:constrains in PowerUsageCBEStateVariable
+	allEntities PowerUsageMEVConstantValueConstraint . behavior:constrains in PowerUsageMEVStateVariable
+	allEntities PowerUsageContingencyConstantValueConstraint . behavior:constrains in PowerUsageContingencyStateVariable
+	
 	@dc:description="""TBD"""
 	@oml:hasPropertyLabel="""constrainsCBEValue"""
 	@oml:hasReificationLabel="""ConstrainsCBEValue"""
@@ -78,7 +148,7 @@ open terminology <http://imce.jpl.nasa.gov/discipline/power/pel> {
 		essential
 		unreified = constrainsCBEValue
 		source = MEVCBEContingencyConstraint
-		target = behavior:StateVariable }
+		target = PowerUsageCBEStateVariable }
 		
 	@dc:description="""TBD"""
 	@oml:hasPropertyLabel="""constrainsMEVValue"""
@@ -88,7 +158,7 @@ open terminology <http://imce.jpl.nasa.gov/discipline/power/pel> {
 		essential
 		unreified = constrainsMEVValue
 		source = MEVCBEContingencyConstraint
-		target = behavior:StateVariable }
+		target = PowerUsageMEVStateVariable }
 		
 	@dc:description="""TBD"""
 	@oml:hasPropertyLabel="""constrainsContingencyValue"""
@@ -98,7 +168,7 @@ open terminology <http://imce.jpl.nasa.gov/discipline/power/pel> {
 		essential
 		unreified = constrainsContingencyValue
 		source = MEVCBEContingencyConstraint
-		target = behavior:StateVariable }
+		target = PowerUsageContingencyStateVariable }
 		
 	@dc:description="""TBD"""
 	@oml:hasPropertyLabel="""analyzesCBEValue"""
@@ -133,25 +203,19 @@ open terminology <http://imce.jpl.nasa.gov/discipline/power/pel> {
 	@rdfs:label="""has volt value"""
 	entityScalarDataProperty + hasVoltValue {
 		domain WattParameter
-		range iso-80000-4:volt
+		range XMLSchema:double
 	}
 	
 	@rdfs:label="""has watt value"""
 	entityScalarDataProperty + hasWattValue {
 		domain WattParameter
-		range iso-80000-4:watt
+		range XMLSchema:double
 	}
 	
 	@rdfs:label="""has contingency value"""
 	entityScalarDataProperty + hasContingencyValue {
 		domain ContingencyParameter
-		range powerOverPower
-	}
-	
-	@dc:description="""Dimensionless quantity power over power"""
-	@rdfs:label="""power / power"""
-	synonymScalarRestriction powerOverPower {
-		restrictedRange iso-80000-2:one
+		range XMLSchema:double
 	}
 	
 	hasVoltValue subDataPropertyOf behavior:hasValue
